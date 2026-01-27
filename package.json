@@ -1,0 +1,14 @@
+{
+  "name": "army-forge-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "scraper": "turbo run start --filter=scraper"
+  },
+  "devDependencies": {
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@10.12.4"
+}
