@@ -4,33 +4,38 @@ import {
   Param,
   Query,
   NotFoundException,
-} from '@nestjs/common';
-import { ArmiesService } from './armies.service';
+} from "@nestjs/common";
+import { ArmiesService } from "./armies.service";
 
-@Controller('armies')
+@Controller("armies")
 export class ArmiesController {
   constructor(private readonly armiesService: ArmiesService) {}
 
   @Get()
-  findAll() {
-    return this.armiesService.findAll();
+  findAll(@Query("gameSystem") gameSystem?: string) {
+    return this.armiesService.findAll(
+      gameSystem ? parseInt(gameSystem) : undefined,
+    );
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    const army = this.armiesService.findOne(id);
+  @Get(":id")
+  findOne(@Param("id") id: string, @Query("gameSystem") gameSystem?: string) {
+    const army = this.armiesService.findOne(
+      id,
+      gameSystem ? parseInt(gameSystem) : undefined,
+    );
     if (!army) {
       throw new NotFoundException(`Army with ID ${id} not found`);
     }
     return army;
   }
 
-  @Get(':id/units')
+  @Get(":id/units")
   findUnits(
-    @Param('id') id: string,
-    @Query('minCost') minCost?: string,
-    @Query('maxCost') maxCost?: string,
-    @Query('quality') quality?: string,
+    @Param("id") id: string,
+    @Query("minCost") minCost?: string,
+    @Query("maxCost") maxCost?: string,
+    @Query("quality") quality?: string,
   ) {
     const units = this.armiesService.queryUnits(id, {
       minCost: minCost ? parseInt(minCost) : undefined,

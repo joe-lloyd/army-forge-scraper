@@ -5,7 +5,7 @@ import * as path from "path";
 
 @Injectable()
 export class ArmiesService implements OnModuleInit {
-  private armies: ArmyBook[] = [];
+  private armies: (ArmyBook & { systemContextId: number })[] = [];
   private readonly dataPath = path.join(
     __dirname,
     "..",
@@ -14,6 +14,13 @@ export class ArmiesService implements OnModuleInit {
     "..",
     "data",
   );
+
+  private readonly SLUG_TO_ID: Record<string, number> = {
+    "grimdark-future": 2,
+    "grimdark-future-firefight": 3,
+    "age-of-fantasy": 4,
+    "age-of-fantasy-skirmish": 5,
+  };
 
   async onModuleInit() {
     await this.loadArmies();
@@ -26,54 +33,71 @@ export class ArmiesService implements OnModuleInit {
         return;
       }
 
-      const getJsonFiles = async (dir: string): Promise<string[]> => {
-        const items = await fs.readdir(dir);
-        let files: string[] = [];
-        for (const item of items) {
-          const res = path.resolve(dir, item);
-          const stats = await fs.stat(res);
-          if (stats.isDirectory()) {
-            files = files.concat(await getJsonFiles(res));
-          } else if (res.endsWith(".json")) {
-            files.push(res);
-          }
-        }
-        return files;
-      };
+      this.armies = [];
+      const systems = await fs.readdir(this.dataPath);
 
-      const jsonFiles = await getJsonFiles(this.dataPath);
+      for (const systemSlug of systems) {
+        const systemId = this.SLUG_TO_ID[systemSlug];
+        if (!systemId) continue;
 
-      const loadedArmies: ArmyBook[] = [];
-      for (const filePath of jsonFiles) {
-        try {
-          const data = (await fs.readJson(filePath)) as ArmyBook;
-          if (data && data.uid) {
-            loadedArmies.push(data);
+        const systemPath = path.join(this.dataPath, systemSlug);
+        const versions = await fs.readdir(systemPath);
+
+        for (const version of versions) {
+          const versionPath = path.join(systemPath, version);
+          if (!(await fs.stat(versionPath)).isDirectory()) continue;
+
+          const files = await fs.readdir(versionPath);
+          for (const file of files) {
+            if (!file.endsWith(".json")) continue;
+
+            try {
+              const filePath = path.join(versionPath, file);
+              const data = (await fs.readJson(filePath)) as ArmyBook;
+              if (data && data.uid) {
+                this.armies.push({
+                  ...data,
+                  systemContextId: systemId,
+                });
+              }
+            } catch (e: unknown) {
+              const msg = e instanceof Error ? e.message : String(e);
+              console.error(`Failed to parse ${file}:`, msg);
+            }
           }
-        } catch (e) {
-          console.error(`Failed to parse ${filePath}:`, e.message);
         }
       }
 
-      this.armies = loadedArmies;
       console.log(
-        `Loaded ${this.armies.length} armies from ${jsonFiles.length} files.`,
+        `Loaded ${this.armies.length} army books across all systems.`,
       );
-    } catch (error: any) {
-      console.error("Failed to load armies:", error.message);
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : String(error);
+      console.error("Failed to load armies:", message);
     }
   }
 
-  findAll() {
-    return this.armies.map((a) => ({
+  findAll(gameSystemId?: number) {
+    let filtered = this.armies;
+    if (gameSystemId) {
+      filtered = this.armies.filter((a) => a.systemContextId === gameSystemId);
+    }
+    return filtered.map((a) => ({
       uid: a.uid,
       name: a.name,
       genericName: a.genericName,
       unitsCount: a.units?.length || 0,
+      enabledGameSystems: a.enabledGameSystems,
+      systemId: a.systemContextId,
     }));
   }
 
-  findOne(id: string): ArmyBook | undefined {
+  findOne(id: string, gameSystemId?: number): ArmyBook | undefined {
+    if (gameSystemId) {
+      return this.armies.find(
+        (a) => a.uid === id && a.systemContextId === gameSystemId,
+      );
+    }
     return this.armies.find((a) => a.uid === id);
   }
 
