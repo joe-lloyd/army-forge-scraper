@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { diffWords } from "diff";
+import { diffWords, diffArrays } from "diff";
 
 interface Unit {
   id: string;
@@ -355,12 +355,12 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
 
     const wA = uA.weapons.map(serializeW);
     const wB = uB.weapons.map(serializeW);
-    const uniqueW = Array.from(new Set([...wA, ...wB]));
+    const wDiffs = diffArrays(wA, wB);
 
     // Rules Diff Logic
     const rA = uA.rules.map((r) => r.name || r.label);
     const rB = uB.rules.map((r) => r.name || r.label);
-    const uniqueR = Array.from(new Set([...rA, ...rB]));
+    const rDiffs = diffArrays(rA, rB);
 
     // Upgrade Details (Using B as base, highlighting new)
     const upgradeDetailsB = getUpgradeDetails(uB, dataB);
@@ -403,15 +403,43 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
           <div className="unit-detail-label mb-2 text-xs uppercase text-slate-500 font-semibold">
             Equipment Changes
           </div>
-          {uniqueW.map((wJson, idx) => {
-            const { name, count, details } = JSON.parse(wJson);
-            const inA = wA.includes(wJson);
-            const inB = wB.includes(wJson);
-            const countStr = count > 1 ? `${count}x ` : "";
+          {wDiffs.map((part, partIdx) => {
+            return part.value.map((wJson, itemIdx) => {
+              const { name, count, details } = JSON.parse(wJson);
+              const countStr = count > 1 ? `${count}x ` : "";
+              const key = `${partIdx}-${itemIdx}`;
 
-            if (inA && inB)
+              if (part.added) {
+                return (
+                  <div
+                    key={key}
+                    className="text-sm mb-1 text-lime-400 bg-lime-400/10 px-1 py-0.5 rounded inline-block w-full"
+                  >
+                    <span className="font-semibold">
+                      + {countStr}
+                      {name}
+                    </span>{" "}
+                    <span className="text-lime-400/80">{details}</span>
+                  </div>
+                );
+              }
+              if (part.removed) {
+                return (
+                  <div
+                    key={key}
+                    className="text-sm mb-1 text-red-500 bg-red-500/10 px-1 py-0.5 rounded inline-block w-full line-through decoration-red-500/50"
+                  >
+                    <span className="font-semibold opacity-75">
+                      - {countStr}
+                      {name}
+                    </span>{" "}
+                    <span className="opacity-60">{details}</span>
+                  </div>
+                );
+              }
+              // Unchanged
               return (
-                <div key={idx} className="text-sm mb-1">
+                <div key={key} className="text-sm mb-1">
                   <span className="text-slate-100 font-medium">
                     {countStr}
                     {name}
@@ -419,33 +447,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                   <span className="text-slate-400"> {details}</span>
                 </div>
               );
-            if (inB)
-              return (
-                <div
-                  key={idx}
-                  className="text-sm mb-1 text-lime-400 bg-lime-400/10 px-1 py-0.5 rounded inline-block w-full"
-                >
-                  <span className="font-semibold">
-                    + {countStr}
-                    {name}
-                  </span>{" "}
-                  <span className="text-lime-400/80">{details}</span>
-                </div>
-              );
-            if (inA)
-              return (
-                <div
-                  key={idx}
-                  className="text-sm mb-1 text-red-500 bg-red-500/10 px-1 py-0.5 rounded inline-block w-full line-through decoration-red-500/50"
-                >
-                  <span className="font-semibold opacity-75">
-                    - {countStr}
-                    {name}
-                  </span>{" "}
-                  <span className="opacity-60">{details}</span>
-                </div>
-              );
-            return null;
+            });
           })}
         </div>
 
@@ -455,40 +457,38 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
             Rules Changes
           </div>
           <div className="text-sm leading-relaxed">
-            {uniqueR.map((r, idx) => {
-              const inA = rA.includes(r);
-              const inB = rB.includes(r);
-              // Calculate trailing comma/space based on index if we wanted to be perfect,
-              // but for now just replicating existing logic without the specific mr-2 margin
-              // and using a standard space.
-              const isLast = idx === uniqueR.length - 1;
-              const suffix = isLast ? "" : ", ";
+            {rDiffs.map((part, partIdx) => {
+              return part.value.map((ruleName, itemIdx) => {
+                const key = `${partIdx}-${itemIdx}`;
+                // We'll just separate with spaces/commas visually or just spans
+                const suffix = " ";
 
-              if (inA && inB)
+                if (part.added) {
+                  return (
+                    <span key={key} className="text-lime-400 font-bold">
+                      + {ruleName}
+                      {suffix}
+                    </span>
+                  );
+                }
+                if (part.removed) {
+                  return (
+                    <span
+                      key={key}
+                      className="text-red-500 line-through opacity-80"
+                    >
+                      - {ruleName}
+                      {suffix}
+                    </span>
+                  );
+                }
                 return (
-                  <span key={idx} className="text-slate-400">
-                    {r}
+                  <span key={key} className="text-slate-400">
+                    {ruleName}
                     {suffix}
                   </span>
                 );
-              if (inB)
-                return (
-                  <span key={idx} className="text-lime-400 font-bold">
-                    + {r}
-                    {suffix}
-                  </span>
-                );
-              if (inA)
-                return (
-                  <span
-                    key={idx}
-                    className="text-red-500 line-through opacity-80"
-                  >
-                    - {r}
-                    {suffix}
-                  </span>
-                );
-              return null;
+              });
             })}
           </div>
         </div>
@@ -614,9 +614,9 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
           Description Status
         </h4>
         {isSame ? (
-          <span className="text-slate-500 font-bold tracking-widest">
-            NO CHANGE
-          </span>
+          <div className="text-left text-sm whitespace-pre-wrap leading-relaxed opacity-50">
+            {textA || "No description."}
+          </div>
         ) : (
           <div className="text-left text-sm whitespace-pre-wrap leading-relaxed">
             <TextDiff textA={textA} textB={textB} />
@@ -663,7 +663,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
     // Simple diff by name match
     const namesA = spellsA.map((s) => s.name);
     const namesB = spellsB.map((s) => s.name);
-    const allNames = Array.from(new Set([...namesA, ...namesB])).sort();
+    const allNames = Array.from(new Set([...namesA, ...namesB]));
 
     const renderDiffItem = (name: string) => {
       const sA = spellsA.find((s) => s.name === name);
@@ -742,7 +742,13 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
             key={name}
             className="p-3 rounded-lg border border-transparent w-full text-left opacity-30"
           >
-            <span className="text-sm font-medium text-slate-500">{name}</span>
+            <div className="flex justify-between items-center mb-1">
+              <span className="font-bold text-slate-500">{name}</span>
+              <span className="text-xs bg-slate-500/20 text-slate-500 px-2 py-0.5 rounded border border-slate-500/30">
+                {sB.threshold}+
+              </span>
+            </div>
+            <p className="text-xs text-slate-500 leading-snug">{sB.effect}</p>
           </div>
         );
       }
@@ -799,7 +805,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
   ) => {
     const namesA = rulesA.map((r) => r.name);
     const namesB = rulesB.map((r) => r.name);
-    const allNames = Array.from(new Set([...namesA, ...namesB])).sort();
+    const allNames = Array.from(new Set([...namesA, ...namesB]));
 
     const renderDiffItem = (name: string) => {
       const rA = rulesA.find((r) => r.name === name);
@@ -851,7 +857,10 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
             key={name}
             className="p-3 rounded-lg border border-transparent w-full text-left opacity-30"
           >
-            <span className="text-sm font-medium text-slate-500">{name}</span>
+            <span className="font-bold text-slate-500 block mb-1">{name}</span>
+            <p className="text-xs text-slate-500 leading-snug">
+              {rB.description}
+            </p>
           </div>
         );
       }
@@ -894,42 +903,60 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
           isOpen={!collapsed["Description"]}
           onToggle={() => toggle("Description")}
         >
-          <div className="grid grid-cols-3 gap-6 px-4">
-            {renderDescription(dataA.background, "A")}
-            {renderDescriptionDiff()}
-            {renderDescription(dataB.background, "B")}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+            <div className="hidden md:block">
+              {renderDescription(dataA.background, "A")}
+            </div>
+            <div>{renderDescriptionDiff()}</div>
+            <div className="hidden md:block">
+              {renderDescription(dataB.background, "B")}
+            </div>
           </div>
         </CollapsibleSection>
 
         {/* Spells */}
-        <CollapsibleSection
-          title="Spells"
-          isOpen={!collapsed["Spells"]}
-          onToggle={() => toggle("Spells")}
-        >
-          <div className="grid grid-cols-3 gap-6 px-4">
-            {renderSpells(dataA.spells, "Val")}
-            {renderSpellsDiff()}
-            {renderSpells(dataB.spells, "Val")}
-          </div>
-        </CollapsibleSection>
+        <div className="my-8">
+          <CollapsibleSection
+            title="Spells"
+            isOpen={!collapsed["Spells"]}
+            onToggle={() => toggle("Spells")}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+              <div className="hidden md:block">
+                {renderSpells(dataA.spells, "A")}
+              </div>
+              <div>{renderSpellsDiff()}</div>
+              <div className="hidden md:block">
+                {renderSpells(dataB.spells, "B")}
+              </div>
+            </div>
+          </CollapsibleSection>
+        </div>
 
         {/* Special Rules */}
-        <CollapsibleSection
-          title="Special Rules"
-          isOpen={!collapsed["Special Rules"]}
-          onToggle={() => toggle("Special Rules")}
-        >
-          <div className="grid grid-cols-3 gap-6 px-4">
-            {renderRefSection("Special Rules", dataA.specialRules, "A")}
-            {renderRefDiff(
-              "Special Rules",
-              dataA.specialRules,
-              dataB.specialRules,
-            )}
-            {renderRefSection("Special Rules", dataB.specialRules, "B")}
-          </div>
-        </CollapsibleSection>
+        <div className="my-8">
+          <CollapsibleSection
+            title="Special Rules"
+            isOpen={!collapsed["Special Rules"]}
+            onToggle={() => toggle("Special Rules")}
+          >
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+              <div className="hidden md:block">
+                {renderRefSection("Special Rules", dataA.specialRules, "A")}
+              </div>
+              <div>
+                {renderRefDiff(
+                  "Special Rules",
+                  dataA.specialRules,
+                  dataB.specialRules,
+                )}
+              </div>
+              <div className="hidden md:block">
+                {renderRefSection("Special Rules", dataB.specialRules, "B")}
+              </div>
+            </div>
+          </CollapsibleSection>
+        </div>
       </div>
 
       <CollapsibleSection
@@ -941,9 +968,11 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
           {unitRows.map((row) => (
             <div
               key={row.id}
-              className="grid grid-cols-3 gap-6 mb-8 items-stretch border-b border-white/5 pb-8 last:border-0"
+              className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 items-stretch border-b border-white/5 pb-8 last:border-0"
             >
-              <div>{renderUnitCard(row.uA, dataA, "Ver A")}</div>
+              <div className="hidden md:block">
+                {renderUnitCard(row.uA, dataA, "Ver A")}
+              </div>
 
               <div className="flex flex-col h-full">
                 {row.status === "SAME" && (
@@ -971,7 +1000,9 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                   )}
               </div>
 
-              <div>{renderUnitCard(row.uB, dataB, "Ver B")}</div>
+              <div className="hidden md:block">
+                {renderUnitCard(row.uB, dataB, "Ver B")}
+              </div>
             </div>
           ))}
         </div>

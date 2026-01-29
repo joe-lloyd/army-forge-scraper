@@ -108,7 +108,9 @@ export default function ComparisonPage() {
           } else {
             // Try match by Name inside the JSON? We don't have it yet.
             // Match by filename prefix? "Beastmen (..."
-            const namePrefix = selectedArmyId.split("(")[0].trim();
+            const namePrefix = selectedArmyId
+              ? selectedArmyId.split("(")[0].trim()
+              : "";
             const fuzzyMatch = armiesB.find((a) =>
               a.name.startsWith(namePrefix),
             );
