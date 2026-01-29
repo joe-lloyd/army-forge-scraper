@@ -25,8 +25,8 @@ export default function ComparisonPage() {
       .then((res) => res.json())
       .then((data) => {
         setSystems(data);
-        if (data.includes("age-of-fantasy-skirmish")) {
-          setSelectedSystem("age-of-fantasy-skirmish");
+        if (data.includes("grimdark-future")) {
+          setSelectedSystem("grimdark-future");
         } else if (data.length > 0) {
           setSelectedSystem(data[0]);
         }

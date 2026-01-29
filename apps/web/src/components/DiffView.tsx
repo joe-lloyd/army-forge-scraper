@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import { diffWords } from "diff";
 
 interface Unit {
   id: string;
@@ -17,11 +18,27 @@ interface UpgradePackage {
   sections: any[];
 }
 
+interface Spell {
+  id: string;
+  name: string;
+  threshold: number;
+  effect: string;
+}
+
+interface SpecialRule {
+  id: string;
+  name: string;
+  description: string;
+}
+
 interface ArmyData {
   name: string;
   units: Unit[];
   upgradePackages: UpgradePackage[];
   rules?: any[];
+  spells?: Spell[];
+  specialRules?: SpecialRule[];
+  background?: string;
 }
 
 interface DiffViewProps {
@@ -29,7 +46,108 @@ interface DiffViewProps {
   dataB: ArmyData;
 }
 
+const CollapsibleSection = ({
+  title,
+  isOpen,
+  onToggle,
+  children,
+  headerClass = "text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-indigo-500",
+}: {
+  title: React.ReactNode;
+  isOpen: boolean;
+  onToggle: () => void;
+  children: React.ReactNode;
+  headerClass?: string;
+}) => {
+  return (
+    <div className="mb-8 border-b border-white/5 pb-8 last:border-0 last:pb-0">
+      <button
+        onClick={onToggle}
+        className="w-full flex justify-between items-center group focus:outline-none mb-4 px-4"
+      >
+        <div className={headerClass}>{title}</div>
+        <div
+          className={`transition-transform duration-300 ${
+            isOpen ? "rotate-180" : "rotate-0"
+          }`}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="text-slate-500 group-hover:text-sky-400"
+          >
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+      </button>
+
+      <div
+        className={`transition-all duration-500 overflow-hidden ${
+          isOpen ? "max-h-[50000px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        {children}
+      </div>
+    </div>
+  );
+};
+
+const TextDiff = ({ textA, textB }: { textA: string; textB: string }) => {
+  const diffs = diffWords(textA, textB);
+
+  return (
+    <span>
+      {diffs.map((part, index) => {
+        if (part.added) {
+          return (
+            <span
+              key={index}
+              className="bg-lime-400/20 text-lime-400 font-bold"
+            >
+              {part.value}
+            </span>
+          );
+        }
+        if (part.removed) {
+          return (
+            <span
+              key={index}
+              className="bg-red-500/20 text-red-500 line-through opacity-70"
+            >
+              {part.value}
+            </span>
+          );
+        }
+        return (
+          <span key={index} className="text-slate-300">
+            {part.value}
+          </span>
+        );
+      })}
+    </span>
+  );
+};
+
 export default function DiffView({ dataA, dataB }: DiffViewProps) {
+  // Collapsed state map. If a key is true, it is CLOSED.
+  // Wait, better to be explicit about OPEN state?
+  // The request says "special rules collapsed by default".
+  // Let's store "collapsed" state, true = collapsed.
+  const [collapsed, setCollapsed] = useState<Record<string, boolean>>({
+    "Special Rules": true,
+  });
+
+  const toggle = (section: string) => {
+    setCollapsed((prev) => ({ ...prev, [section]: !prev[section] }));
+  };
+
   // Helpers for dynamic colors (still using style for dynamic values)
   const getCostColor = (valA: number, valB: number) => {
     if (valA === valB) return "var(--text-muted)";
@@ -201,6 +319,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
     uB: Unit,
     dataA: ArmyData,
     dataB: ArmyData,
+    upgradeUidsA: string[],
   ) => {
     // Cost Diff
     const costDiff = uB.cost - uA.cost;
@@ -245,7 +364,6 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
 
     // Upgrade Details (Using B as base, highlighting new)
     const upgradeDetailsB = getUpgradeDetails(uB, dataB);
-    const upgradeUidsA = uA.upgrades || [];
 
     return (
       <div className="glass-card h-full p-6 relative border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)] overflow-hidden">
@@ -470,47 +588,394 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
     return score(b.status) - score(a.status);
   });
 
+  // --- New Army Wide Renderers ---
+
+  const renderDescription = (text: string | undefined, version: string) => (
+    <div className="glass-card p-6 h-full">
+      <h4 className="text-xl font-bold text-white mb-2 underline decoration-sky-500/50 decoration-2 underline-offset-4">
+        Description ({version})
+      </h4>
+      <p className="text-sm text-slate-400 whitespace-pre-wrap leading-relaxed">
+        {text || "No description available."}
+      </p>
+    </div>
+  );
+
+  const renderDescriptionDiff = () => {
+    const textA = dataA.background || "";
+    const textB = dataB.background || "";
+    const isSame = textA === textB;
+
+    return (
+      <div
+        className={`glass-card p-6 h-full flex flex-col items-center justify-center text-center ${isSame ? "opacity-50" : "border-lime-400/30"}`}
+      >
+        <h4 className="text-xl font-bold text-white mb-2">
+          Description Status
+        </h4>
+        {isSame ? (
+          <span className="text-slate-500 font-bold tracking-widest">
+            NO CHANGE
+          </span>
+        ) : (
+          <div className="text-left text-sm whitespace-pre-wrap leading-relaxed">
+            <TextDiff textA={textA} textB={textB} />
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  const renderSpells = (spells: Spell[] | undefined, version: string) => (
+    <div className="glass-card p-6 h-full">
+      <h4 className="text-xl font-bold text-white mb-4 underline decoration-purple-500/50 decoration-2 underline-offset-4">
+        Spells ({version})
+      </h4>
+      {!spells?.length ? (
+        <span className="text-slate-500 italic">No spells.</span>
+      ) : (
+        <div className="flex flex-col gap-3">
+          {spells.map((spell) => (
+            <div
+              key={spell.id}
+              className="bg-white/5 p-3 rounded-lg border border-white/5"
+            >
+              <div className="flex justify-between items-center mb-1">
+                <span className="font-bold text-slate-200">{spell.name}</span>
+                <span className="text-xs bg-purple-500/20 text-purple-300 px-2 py-0.5 rounded border border-purple-500/30">
+                  {spell.threshold}+
+                </span>
+              </div>
+              <p className="text-xs text-slate-400 leading-snug">
+                {spell.effect}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+
+  const renderSpellsDiff = () => {
+    const spellsA = dataA.spells || [];
+    const spellsB = dataB.spells || [];
+
+    // Simple diff by name match
+    const namesA = spellsA.map((s) => s.name);
+    const namesB = spellsB.map((s) => s.name);
+    const allNames = Array.from(new Set([...namesA, ...namesB])).sort();
+
+    const renderDiffItem = (name: string) => {
+      const sA = spellsA.find((s) => s.name === name);
+      const sB = spellsB.find((s) => s.name === name);
+
+      if (sA && !sB)
+        return (
+          <div
+            key={name}
+            className="bg-red-500/10 p-3 rounded-lg border border-red-500/30 w-full text-left"
+          >
+            <div className="flex justify-between items-center mb-1">
+              <span className="font-bold text-red-500 line-through">
+                {name}
+              </span>
+              {sA.threshold && (
+                <span className="text-xs text-red-500 opacity-60">
+                  {sA.threshold}+
+                </span>
+              )}
+            </div>
+            <p className="text-xs text-red-500/60 leading-snug line-through">
+              {sA.effect}
+            </p>
+          </div>
+        );
+      if (!sA && sB)
+        return (
+          <div
+            key={name}
+            className="bg-lime-400/10 p-3 rounded-lg border border-lime-400/30 w-full text-left"
+          >
+            <div className="flex justify-between items-center mb-1">
+              <span className="font-bold text-lime-400">{name}</span>
+              {sB.threshold && (
+                <span className="text-xs bg-lime-400 text-black px-1.5 py-0.5 rounded font-bold">
+                  {sB.threshold}+
+                </span>
+              )}
+            </div>
+            <p className="text-xs text-slate-300 leading-snug">{sB.effect}</p>
+          </div>
+        );
+
+      // Check for changes (threshold or effect)
+      if (sA && sB) {
+        const thresholdChanged = sA.threshold !== sB.threshold;
+        const effectChanged = sA.effect !== sB.effect;
+
+        if (thresholdChanged || effectChanged) {
+          return (
+            <div
+              key={name}
+              className="bg-sky-500/10 p-3 rounded-lg border border-sky-500/30 w-full text-left"
+            >
+              <div className="flex justify-between items-center mb-1">
+                <span className="font-bold text-sky-400">{name}</span>
+                {thresholdChanged ? (
+                  <span className="text-xs font-bold text-sky-400">
+                    {sA.threshold}+ &rarr; {sB.threshold}+
+                  </span>
+                ) : (
+                  <span className="text-xs bg-sky-500/20 text-sky-300 px-2 py-0.5 rounded border border-sky-500/30">
+                    {sB.threshold}+
+                  </span>
+                )}
+              </div>
+              <p className="text-xs leading-snug">
+                <TextDiff textA={sA.effect} textB={sB.effect} />
+              </p>
+            </div>
+          );
+        }
+        return (
+          <div
+            key={name}
+            className="p-3 rounded-lg border border-transparent w-full text-left opacity-30"
+          >
+            <span className="text-sm font-medium text-slate-500">{name}</span>
+          </div>
+        );
+      }
+      return null;
+    };
+
+    return (
+      <div className="glass-card p-6 h-full border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
+        <h4 className="text-xl font-bold text-white mb-4 text-center">
+          Changes
+        </h4>
+        <div className="flex flex-col gap-3 items-center">
+          {allNames.map(renderDiffItem)}
+        </div>
+      </div>
+    );
+  };
+
+  const renderRefSection = (
+    title: string,
+    rules: SpecialRule[] | undefined,
+    version: string,
+  ) => (
+    <div className="glass-card p-6 h-full">
+      <h4 className="text-xl font-bold text-white mb-4 underline decoration-amber-500/50 decoration-2 underline-offset-4">
+        {title} ({version})
+      </h4>
+      {!rules?.length ? (
+        <span className="text-slate-500 italic">No rules.</span>
+      ) : (
+        <div className="flex flex-col gap-3">
+          {rules.map((rule) => (
+            <div
+              key={rule.id}
+              className="bg-white/5 p-3 rounded-lg border border-white/5"
+            >
+              <span className="font-bold text-slate-200 block mb-1">
+                {rule.name}
+              </span>
+              <p className="text-xs text-slate-400 leading-snug">
+                {rule.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+
+  const renderRefDiff = (
+    title: string,
+    rulesA: SpecialRule[] = [],
+    rulesB: SpecialRule[] = [],
+  ) => {
+    const namesA = rulesA.map((r) => r.name);
+    const namesB = rulesB.map((r) => r.name);
+    const allNames = Array.from(new Set([...namesA, ...namesB])).sort();
+
+    const renderDiffItem = (name: string) => {
+      const rA = rulesA.find((r) => r.name === name);
+      const rB = rulesB.find((r) => r.name === name);
+
+      if (rA && !rB)
+        return (
+          <div
+            key={name}
+            className="bg-red-500/10 p-3 rounded-lg border border-red-500/30 w-full text-left"
+          >
+            <span className="font-bold text-red-500 line-through block mb-1">
+              {name}
+            </span>
+            <p className="text-xs text-red-500/60 leading-snug line-through">
+              {rA.description}
+            </p>
+          </div>
+        );
+      if (!rA && rB)
+        return (
+          <div
+            key={name}
+            className="bg-lime-400/10 p-3 rounded-lg border border-lime-400/30 w-full text-left"
+          >
+            <span className="font-bold text-lime-400 block mb-1">{name}</span>
+            <p className="text-xs text-slate-300 leading-snug">
+              {rB.description}
+            </p>
+          </div>
+        );
+
+      if (rA && rB) {
+        if (rA.description !== rB.description) {
+          return (
+            <div
+              key={name}
+              className="bg-sky-500/10 p-3 rounded-lg border border-sky-500/30 w-full text-left"
+            >
+              <span className="font-bold text-sky-400 block mb-1">{name}</span>
+              <p className="text-xs leading-snug">
+                <TextDiff textA={rA.description} textB={rB.description} />
+              </p>
+            </div>
+          );
+        }
+        return (
+          <div
+            key={name}
+            className="p-3 rounded-lg border border-transparent w-full text-left opacity-30"
+          >
+            <span className="text-sm font-medium text-slate-500">{name}</span>
+          </div>
+        );
+      }
+      return null;
+    };
+
+    return (
+      <div className="glass-card p-6 h-full border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
+        <h4 className="text-xl font-bold text-white mb-4 text-center">
+          {title} Changes
+        </h4>
+        <div className="flex flex-col gap-3 items-center">
+          {allNames.map(renderDiffItem)}
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div className="animate-fade-in pb-16">
-      <div className="grid grid-cols-3 gap-6 mb-4 px-4">
-        <h3 className="text-center text-slate-400 font-semibold">
-          {dataA.name}
+      <div className="grid grid-cols-3 gap-6 mb-4 px-4 sticky top-0 bg-slate-950/80 backdrop-blur-md z-10 py-4 border-b border-white/5">
+        <h3 className="text-center text-slate-400 font-semibold text-xl">
+          {dataA.name}{" "}
+          <span className="text-sm opacity-50 block">Version A</span>
         </h3>
-        <h3 className="text-center text-sky-400 font-bold tracking-widest">
-          COMPARISON
+        <h3 className="text-center text-sky-400 font-bold tracking-widest text-xl">
+          VS
         </h3>
-        <h3 className="text-center text-slate-400 font-semibold">
-          {dataB.name}
+        <h3 className="text-center text-slate-400 font-semibold text-xl">
+          {dataB.name}{" "}
+          <span className="text-sm opacity-50 block">Version B</span>
         </h3>
       </div>
 
-      {unitRows.map((row) => (
-        <div key={row.id} className="grid grid-cols-3 gap-6 mb-8 items-stretch">
-          <div>{renderUnitCard(row.uA, dataA, "Ver A")}</div>
-
-          <div className="flex flex-col h-full">
-            {row.status === "SAME" && (
-              <div className="glass-card h-full flex items-center justify-center text-slate-600 opacity-30 font-bold tracking-widest">
-                NO CHANGES
-              </div>
-            )}
-            {row.status === "NEW" && (
-              <div className="glass-card h-full flex items-center justify-center text-lime-400 font-bold border border-lime-400/50 bg-lime-400/5 tracking-wider">
-                NEW UNIT ADDED
-              </div>
-            )}
-            {row.status === "DELETED" && (
-              <div className="glass-card h-full flex items-center justify-center text-red-500 font-bold border border-red-500/50 bg-red-500/5 tracking-wider">
-                UNIT REMOVED
-              </div>
-            )}
-            {row.status === "CHANGED" &&
-              renderMergedCard(row.uA!, row.uB!, dataA, dataB)}
+      {/* Army Wide Section */}
+      <div className="space-y-4 mb-4">
+        {/* Description */}
+        <CollapsibleSection
+          title="Description"
+          isOpen={!collapsed["Description"]}
+          onToggle={() => toggle("Description")}
+        >
+          <div className="grid grid-cols-3 gap-6 px-4">
+            {renderDescription(dataA.background, "A")}
+            {renderDescriptionDiff()}
+            {renderDescription(dataB.background, "B")}
           </div>
+        </CollapsibleSection>
 
-          <div>{renderUnitCard(row.uB, dataB, "Ver B")}</div>
+        {/* Spells */}
+        <CollapsibleSection
+          title="Spells"
+          isOpen={!collapsed["Spells"]}
+          onToggle={() => toggle("Spells")}
+        >
+          <div className="grid grid-cols-3 gap-6 px-4">
+            {renderSpells(dataA.spells, "Val")}
+            {renderSpellsDiff()}
+            {renderSpells(dataB.spells, "Val")}
+          </div>
+        </CollapsibleSection>
+
+        {/* Special Rules */}
+        <CollapsibleSection
+          title="Special Rules"
+          isOpen={!collapsed["Special Rules"]}
+          onToggle={() => toggle("Special Rules")}
+        >
+          <div className="grid grid-cols-3 gap-6 px-4">
+            {renderRefSection("Special Rules", dataA.specialRules, "A")}
+            {renderRefDiff(
+              "Special Rules",
+              dataA.specialRules,
+              dataB.specialRules,
+            )}
+            {renderRefSection("Special Rules", dataB.specialRules, "B")}
+          </div>
+        </CollapsibleSection>
+      </div>
+
+      <CollapsibleSection
+        title="Unit Changes"
+        isOpen={!collapsed["Unit Changes"]}
+        onToggle={() => toggle("Unit Changes")}
+      >
+        <div className="px-4">
+          {unitRows.map((row) => (
+            <div
+              key={row.id}
+              className="grid grid-cols-3 gap-6 mb-8 items-stretch border-b border-white/5 pb-8 last:border-0"
+            >
+              <div>{renderUnitCard(row.uA, dataA, "Ver A")}</div>
+
+              <div className="flex flex-col h-full">
+                {row.status === "SAME" && (
+                  <div className="glass-card h-full flex items-center justify-center text-slate-600 opacity-30 font-bold tracking-widest">
+                    NO CHANGES
+                  </div>
+                )}
+                {row.status === "NEW" && (
+                  <div className="glass-card h-full flex items-center justify-center text-lime-400 font-bold border border-lime-400/50 bg-lime-400/5 tracking-wider">
+                    NEW UNIT ADDED
+                  </div>
+                )}
+                {row.status === "DELETED" && (
+                  <div className="glass-card h-full flex items-center justify-center text-red-500 font-bold border border-red-500/50 bg-red-500/5 tracking-wider">
+                    UNIT REMOVED
+                  </div>
+                )}
+                {row.status === "CHANGED" &&
+                  renderMergedCard(
+                    row.uA!,
+                    row.uB!,
+                    dataA,
+                    dataB,
+                    row.uA?.upgrades || [],
+                  )}
+              </div>
+
+              <div>{renderUnitCard(row.uB, dataB, "Ver B")}</div>
+            </div>
+          ))}
         </div>
-      ))}
+      </CollapsibleSection>
     </div>
   );
 }
