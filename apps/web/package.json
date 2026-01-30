@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run copy-data && tsc -b && vite build",
-    "copy-data": "node ../../scripts/generate-manifests.js && rm -rf public/data && mkdir -p public/data && cp -R ../../data/* public/data/",
+    "build": "tsc -b && vite build",
+    "update-data": "node ../../scripts/generate-manifests.js && rm -rf public/data && mkdir -p public/data && cp -R ../../data/* public/data/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
