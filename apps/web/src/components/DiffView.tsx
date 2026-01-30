@@ -317,15 +317,16 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
   const renderMergedCard = (
     uA: Unit,
     uB: Unit,
+    dataA: ArmyData,
     dataB: ArmyData,
-    upgradeUidsA: string[],
+    _upgradeUidsA: string[],
   ) => {
     // Cost Diff
     const costDiff = uB.cost - uA.cost;
     const costText =
       costDiff === 0
         ? `${uB.cost}pts`
-        : `${uA.cost} → ${uB.cost} (${costDiff > 0 ? "+" : ""}${costDiff})`;
+        : `${uA.cost} → ${uB.cost} (${costDiff > 0 ? "+" : ""}${costDiff})pts`;
     const costStyle =
       costDiff === 0
         ? {}
@@ -361,7 +362,8 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
     const rB = uB.rules.map((r) => r.name || r.label);
     const rDiffs = diffArrays(rA, rB);
 
-    // Upgrade Details (Using B as base, highlighting new)
+    // Upgrade Details Comparison
+    const upgradeDetailsA = getUpgradeDetails(uA, dataA);
     const upgradeDetailsB = getUpgradeDetails(uB, dataB);
 
     return (
@@ -459,7 +461,6 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
             {rDiffs.map((part, partIdx) => {
               return part.value.map((ruleName, itemIdx) => {
                 const key = `${partIdx}-${itemIdx}`;
-                // We'll just separate with spaces/commas visually or just spans
                 const suffix = " ";
 
                 if (part.added) {
@@ -492,21 +493,24 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
           </div>
         </div>
 
-        {/* Upgrade Details (With New Badge) */}
+        {/* Upgrade Details (With Comparison) */}
         {upgradeDetailsB.length > 0 && (
           <div>
             <div className="unit-detail-label mb-2 text-xs uppercase text-slate-500 font-semibold">
               Upgrades (Vs Version B)
             </div>
             <div className="flex flex-col gap-3">
-              {upgradeDetailsB.map((pkg: any) => {
-                const isNew = !upgradeUidsA.includes(pkg.uid);
+              {upgradeDetailsB.map((pkgB: any) => {
+                const pkgA = upgradeDetailsA.find(
+                  (p: any) => p?.uid === pkgB.uid,
+                );
+                const isNewPkg = !pkgA;
 
                 return (
                   <div
-                    key={pkg.uid}
+                    key={pkgB.uid}
                     className={`rounded-lg p-2 border ${
-                      isNew
+                      isNewPkg
                         ? "bg-lime-400/5 border-lime-400/50"
                         : "bg-white/5 border-white/5"
                     }`}
@@ -514,42 +518,140 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                     <div className="flex justify-between items-center mb-1 pb-1 border-b border-white/10">
                       <div
                         className={`text-sm font-bold ${
-                          isNew ? "text-lime-400" : "text-sky-400"
+                          isNewPkg ? "text-lime-400" : "text-sky-400"
                         }`}
                       >
-                        {pkg.hint}
+                        {pkgB.hint}
                       </div>
-                      {isNew && (
+                      {isNewPkg && (
                         <span className="text-[10px] bg-lime-400 text-black font-bold px-1 rounded">
                           NEW
                         </span>
                       )}
                     </div>
 
-                    {pkg.sections.map((section: any) => (
-                      <div key={section.id} className="mb-2 last:mb-0">
-                        <div className="text-xs text-slate-500 mb-1 italic">
-                          {section.label}
-                        </div>
-                        <div className="flex flex-wrap gap-1">
-                          {section.options.map((opt: any) => (
-                            <div
-                              key={opt.id}
-                              className="text-xs bg-black/30 px-2 py-0.5 rounded border border-white/10 flex items-center"
-                            >
-                              <span className="text-slate-200">
-                                {opt.label.split("(")[0].trim()}
-                              </span>
-                              {opt.finalCost !== undefined && (
-                                <span className="text-slate-500 ml-1">
-                                  {opt.finalCost}pts
+                    {pkgB.sections.map((sectionB: any) => {
+                      const sectionA = pkgA?.sections.find(
+                        (s: any) =>
+                          s.id === sectionB.id || s.label === sectionB.label,
+                      );
+                      const optsA = sectionA?.options || [];
+                      const optsB = sectionB.options || [];
+
+                      // Identify removed options (in A but not B match by label)
+                      const removedOptions = optsA.filter(
+                        (oA: any) =>
+                          !optsB.find((oB: any) => oB.label === oA.label),
+                      );
+
+                      return (
+                        <div key={sectionB.id} className="mb-2 last:mb-0">
+                          <div className="text-xs text-slate-500 mb-1 italic">
+                            {sectionB.label}
+                          </div>
+                          <div className="flex flex-wrap gap-1">
+                            {/* Render REMOVED items first */}
+                            {removedOptions.map((opt: any) => (
+                              <div
+                                key={`rm-${opt.id}`}
+                                className="text-xs bg-red-500/10 px-2 py-0.5 rounded border border-red-500/30 flex items-center opacity-70"
+                              >
+                                <span className="text-red-500 line-through">
+                                  {opt.label.split("(")[0].trim()}
                                 </span>
-                              )}
-                            </div>
-                          ))}
+                                {opt.finalCost !== undefined && (
+                                  <span className="text-red-500 ml-1 line-through">
+                                    {opt.finalCost}pts
+                                  </span>
+                                )}
+                              </div>
+                            ))}
+
+                            {/* Render B items (Checking for changes) */}
+                            {optsB.map((optB: any) => {
+                              const optA = optsA.find(
+                                (o: any) => o.label === optB.label,
+                              );
+
+                              let isChanged = false;
+                              const isAdded = !optA;
+
+                              if (
+                                !isAdded &&
+                                optA.finalCost !== undefined &&
+                                optB.finalCost !== undefined &&
+                                optA.finalCost !== optB.finalCost
+                              ) {
+                                isChanged = true;
+                              }
+
+                              // 1. Cost Changed: Show concise diff "A -> B (+Diff)"
+                              if (isChanged) {
+                                const diff = optB.finalCost - optA.finalCost;
+                                const color = getCostColor(
+                                  optA.finalCost,
+                                  optB.finalCost,
+                                );
+                                return (
+                                  <div
+                                    key={optB.id}
+                                    className="text-xs px-2 py-0.5 rounded border border-white/10 flex items-center bg-black/30"
+                                  >
+                                    <span className="text-slate-200">
+                                      {optB.label.split("(")[0].trim()}
+                                    </span>
+                                    <span
+                                      className="ml-1 font-bold"
+                                      style={{ color }}
+                                    >
+                                      {optA.finalCost} → {optB.finalCost} (
+                                      {diff > 0 ? "+" : ""}
+                                      {diff})pts
+                                    </span>
+                                  </div>
+                                );
+                              }
+
+                              // 2. Added: Show Green
+                              // 3. Unchanged: Show Neutral
+                              const highlight = isAdded;
+
+                              return (
+                                <div
+                                  key={optB.id}
+                                  className={`text-xs px-2 py-0.5 rounded border flex items-center ${
+                                    highlight
+                                      ? "bg-lime-400/10 border-lime-400/30"
+                                      : "bg-black/30 border-white/10"
+                                  }`}
+                                >
+                                  <span
+                                    className={
+                                      highlight
+                                        ? "text-lime-400"
+                                        : "text-slate-200"
+                                    }
+                                  >
+                                    {optB.label.split("(")[0].trim()}
+                                  </span>
+                                  {optB.finalCost !== undefined && (
+                                    <span
+                                      className={`ml-1 ${
+                                        highlight
+                                          ? "text-lime-400"
+                                          : "text-slate-500"
+                                      }`}
+                                    >
+                                      {optB.finalCost}pts
+                                    </span>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 );
               })}
@@ -993,6 +1095,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                   renderMergedCard(
                     row.uA!,
                     row.uB!,
+                    dataA,
                     dataB,
                     row.uA?.upgrades || [],
                   )}
