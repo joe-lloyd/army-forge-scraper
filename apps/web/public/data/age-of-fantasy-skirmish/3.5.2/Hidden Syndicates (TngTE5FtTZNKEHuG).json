@@ -1,0 +1,4717 @@
+{
+  "uid": "TngTE5FtTZNKEHuG",
+  "userId": "1is8a3JZYgw",
+  "enabledGameSystems": [
+    5,
+    7,
+    8
+  ],
+  "name": "Hidden Syndicates",
+  "genericName": "Secretive Guild",
+  "hint": "",
+  "background": "The Guilds of the Nexus are various factions of violent and deranged outlaws that wage eternal guild wars on the streets of the Nexus. These guilds are joined by mercenaries which are not bound to any particular guild, and which fight for anyone that can provide riches or a worthy cause.",
+  "backgroundFull": "More coming soon...",
+  "units": [
+    {
+      "id": "Vw3Vvws",
+      "key": "new-unit",
+      "cost": 35,
+      "name": "Syndicate Leader",
+      "size": 1,
+      "bases": {
+        "round": "32",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "additional": false,
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "additional": false,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "wfEHdWKY",
+          "name": "Heavy Throwing Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "xCrEtisv",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Heavy Throwing Weapon (12\", A1, AP(1))",
+          "originalCount": 1
+        },
+        {
+          "id": "jMhafwKk",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "C-fKFuUr",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Hand Weapon (A2)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "iHvPt",
+        "V3KsY"
+      ],
+      "genericName": "Veteran Warrior Hero",
+      "hasCustomRule": false,
+      "disabledSections": [
+        "TXGoU"
+      ],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "U8_wfrQ",
+      "key": "new-unit",
+      "cost": 25,
+      "name": "Syndicate Champion",
+      "size": 1,
+      "bases": {
+        "round": "32",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "additional": false,
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "additional": false,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "wfEHdWKY",
+          "name": "Throwing Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "i_dyolKh",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Throwing Weapon (12\", A1)",
+          "originalCount": 1
+        },
+        {
+          "id": "jMhafwKk",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "C-fKFuUr",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Hand Weapon (A2)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "PtI0W",
+        "gVfUw0v3"
+      ],
+      "genericName": "Warrior Hero",
+      "hasCustomRule": false,
+      "disabledSections": [
+        "TXGoU"
+      ],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "WFdlIdC",
+      "cost": 20,
+      "name": "Syndicate Stealth Master",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        },
+        {
+          "id": "0Z-OGtDpajc3",
+          "name": "Grounded Stealth",
+          "label": "Grounded Stealth"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "CeixC",
+          "name": "Throwing Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "i_dyolKh",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Throwing Weapon (12\", A1)",
+          "originalCount": 1
+        },
+        {
+          "id": "MzyFP",
+          "name": "Dagger",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "1Sjl-Rlb",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Dagger (A2)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "We0GA"
+      ],
+      "genericName": "Scouts",
+      "isNarrative": false,
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "-uY2tQ6",
+      "key": "new-unit",
+      "cost": 20,
+      "name": "Syndicate Veteran Shooter",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "lXOrCYv-",
+          "name": "Longbow",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 30,
+          "attacks": 1,
+          "weaponId": "jaFKspbM",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Longbow (30\", A1)",
+          "originalCount": 1
+        },
+        {
+          "id": "fAWkhPcL",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "SWnfRBdJ",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Hand Weapon (A1)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "1wwKp"
+      ],
+      "genericName": "Veteran Warriors",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "60B4xCR",
+      "cost": 20,
+      "name": "Syndicate Weapon Master",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "DEeVIJcfNfS6",
+          "name": "Unpredictable Fighter",
+          "label": "Unpredictable Fighter"
+        },
+        {
+          "id": "2atvlmICQSCV",
+          "name": "Fearless",
+          "label": "Fearless"
+        },
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "eiTxN",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "C-fKFuUr",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Hand Weapon (A2)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "OZL4Y"
+      ],
+      "genericName": "Weapon Masters",
+      "isNarrative": false,
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "ka_P8jM",
+      "key": "new-unit",
+      "cost": 30,
+      "name": "Syndicate Fighters",
+      "size": 3,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "g3Iy_",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 6,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "SWnfRBdJ",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "2x Hand Weapon (A1)",
+          "originalCount": 6
+        }
+      ],
+      "upgrades": [
+        "m78oQ"
+      ],
+      "genericName": "Assault Warriors",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "PLRIppr",
+      "key": "new-unit",
+      "cost": 35,
+      "name": "Syndicate Shooters",
+      "size": 3,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "fAWkhPcL",
+          "name": "Shortbow",
+          "type": "ArmyBookWeapon",
+          "count": 3,
+          "range": 18,
+          "attacks": 1,
+          "weaponId": "sc0sJybR",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Shortbow (18\", A1)",
+          "originalCount": 3
+        },
+        {
+          "id": "ar_e50-g",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 3,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "SWnfRBdJ",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Hand Weapon (A1)",
+          "originalCount": 3
+        }
+      ],
+      "upgrades": [
+        "i-RoY"
+      ],
+      "genericName": "Warriors",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "z7qDmJs",
+      "cost": 40,
+      "name": "Syndicate Familiars",
+      "size": 3,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "N0JRcI01vSBT",
+          "name": "Deathstrike",
+          "rating": 1,
+          "label": "Deathstrike(1)"
+        },
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "BBt_2",
+          "name": "Claws",
+          "type": "ArmyBookWeapon",
+          "count": 3,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "LZQtxZh5",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Claws (A2)",
+          "originalCount": 3
+        }
+      ],
+      "upgrades": [],
+      "genericName": "Beasts",
+      "isNarrative": false,
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "I2Syvun",
+      "key": "new-unit",
+      "cost": 40,
+      "name": "Syndicate Veteran Fighters",
+      "size": 3,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "au3VB",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 6,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "SWnfRBdJ",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "2x Hand Weapon (A1)",
+          "originalCount": 6
+        }
+      ],
+      "upgrades": [
+        "c7_d5"
+      ],
+      "genericName": "Veteran Assault Warriors",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "6S_hurc",
+      "cost": 45,
+      "name": "Syndicate Bird Rider",
+      "size": 1,
+      "bases": {
+        "round": "60x35",
+        "square": "50x25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "-QJdqJEKjIpE",
+          "name": "Flying",
+          "label": "Flying"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "sqa2-",
+          "name": "Shortbow",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 18,
+          "attacks": 1,
+          "weaponId": "sc0sJybR",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Shortbow (18\", A1)",
+          "originalCount": 1
+        },
+        {
+          "id": "yr2s1",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "SWnfRBdJ",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Hand Weapon (A1)",
+          "originalCount": 1
+        },
+        {
+          "id": "LRqnI",
+          "name": "Rending Claws",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "Lsw6qhTR",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Rending Claws (A2, Rending)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "LvNVr"
+      ],
+      "genericName": "Flying Beast Riders",
+      "isNarrative": false,
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "knAVwhs",
+      "cost": 65,
+      "name": "Syndicate Shifter Beast",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "LtPyHi_-DHf4",
+          "name": "Teleport",
+          "label": "Teleport"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "9NrhGurKS7I8",
+          "name": "Gloom-Mist",
+          "label": "Gloom-Mist"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "igrlq",
+          "name": "Rending Claws",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "PTSMfUpY",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Rending Claws (A3, Rending)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "yYURIgZi"
+      ],
+      "genericName": "Heavy Beasts",
+      "isNarrative": false,
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    }
+  ],
+  "upgradePackages": [
+    {
+      "uid": "iHvPt",
+      "hint": "Leader",
+      "sections": [
+        {
+          "id": "VB9fmtA",
+          "uid": "0j7ey",
+          "label": "Replace Heavy Throwing Weapon and Hand Weapon",
+          "options": [
+            {
+              "uid": "uvWdj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Hand Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": "02",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "C-fKFuUr",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "2x Hand Weapon (A2)"
+                }
+              ],
+              "label": "2x Hand Weapon (A2)",
+              "parentSectionId": "0j7ey",
+              "id": "uvWdj"
+            }
+          ],
+          "parentPackageUid": "iHvPt",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Heavy Throwing Weapon",
+            "Hand Weapon"
+          ]
+        },
+        {
+          "id": "pwS4iZe",
+          "uid": "r08ZQ",
+          "label": "Replace Heavy Throwing Weapon",
+          "options": [
+            {
+              "uid": "hWwN0",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Poison Darts",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "AE4g3LUE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Poison Darts (12\", A1, Bane)"
+                }
+              ],
+              "label": "Poison Darts (12\", A1, Bane)",
+              "parentPackageUid": "iHvPt",
+              "parentSectionUid": "r08ZQ",
+              "parentSectionId": "r08ZQ",
+              "id": "hWwN0"
+            },
+            {
+              "uid": "chusc",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Longbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 1,
+                  "weaponId": "jaFKspbM",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Longbow (30\", A1)"
+                }
+              ],
+              "label": "Longbow (30\", A1)",
+              "parentPackageUid": "iHvPt",
+              "parentSectionUid": "r08ZQ",
+              "parentSectionId": "r08ZQ",
+              "id": "chusc"
+            },
+            {
+              "uid": "FMuQy",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fire Bombs",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "hlBYwOY4",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Fire Bombs (12\", A1, AP(1), Rending)"
+                }
+              ],
+              "label": "Fire Bombs (12\", A1, AP(1), Rending)",
+              "parentPackageUid": "iHvPt",
+              "parentSectionUid": "r08ZQ",
+              "parentSectionId": "r08ZQ",
+              "id": "FMuQy"
+            },
+            {
+              "uid": "OBzZS",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxin Bow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "76jYirZ0",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Bow (18\", A1, Bane)"
+                }
+              ],
+              "label": "Toxin Bow (18\", A1, Bane)",
+              "parentSectionId": "r08ZQ",
+              "id": "OBzZS"
+            },
+            {
+              "uid": "vqRoO",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Bow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "9hipexu5",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Bow (24\", A1, AP(1))"
+                }
+              ],
+              "label": "Heavy Bow (24\", A1, AP(1))",
+              "parentSectionId": "r08ZQ",
+              "id": "vqRoO"
+            },
+            {
+              "uid": "kGfH8_vSMn",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Splinter Blowpipe",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "gLQEX3f-",
+                  "specialRules": [
+                    {
+                      "id": "Rjmkg_tuRv7C",
+                      "name": "Fragment"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Splinter Blowpipe (18\", A1, Fragment)"
+                }
+              ],
+              "label": "Splinter Blowpipe (18\", A1, Fragment)",
+              "parentSectionId": "r08ZQ",
+              "id": "kGfH8_vSMn"
+            },
+            {
+              "uid": "eqyHm",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Harpoon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "0rn_N0yM",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Harpoon (12\", A1, AP(2), Deadly(3))"
+                }
+              ],
+              "label": "Harpoon (12\", A1, AP(2), Deadly(3))",
+              "parentPackageUid": "iHvPt",
+              "parentSectionUid": "r08ZQ",
+              "parentSectionId": "r08ZQ",
+              "id": "eqyHm"
+            }
+          ],
+          "parentPackageUid": "iHvPt",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Heavy Throwing Weapon"
+          ]
+        },
+        {
+          "id": "pKdNNdf",
+          "uid": "PrBZ3",
+          "label": "Replace any Hand Weapon",
+          "options": [
+            {
+              "uid": "P-Uc-",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "ZLBl4ver",
+                  "specialRules": [
+                    {
+                      "id": "c45Fw0D2oGOk",
+                      "name": "Counter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spear (A2, Counter)"
+                }
+              ],
+              "label": "Spear (A2, Counter)",
+              "parentPackageUid": "iHvPt",
+              "parentSectionUid": "PrBZ3",
+              "parentSectionId": "PrBZ3",
+              "id": "P-Uc-"
+            },
+            {
+              "uid": "ZylGG",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "MirKNLkE",
+                  "name": "Toxin Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "MirKNLkE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Weapon (A2, Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Toxin Weapon (A2, Bane)",
+              "parentPackageUid": "iHvPt",
+              "parentSectionUid": "PrBZ3",
+              "parentSectionId": "PrBZ3",
+              "id": "ZylGG"
+            },
+            {
+              "uid": "dByH1ng",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "5X21-brQ",
+                  "name": "Blade Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "5X21-brQ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Blade Weapon (A2, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Blade Weapon (A2, AP(1), Rending)",
+              "parentPackageUid": "iHvPt",
+              "parentSectionUid": "PrBZ3",
+              "parentSectionId": "PrBZ3",
+              "id": "dByH1ng"
+            },
+            {
+              "uid": "OsSF0k7",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "fjMoPeFE",
+                  "name": "Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "fjMoPeFE",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Weapon (A2, AP(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Great Weapon (A2, AP(3))",
+              "parentPackageUid": "iHvPt",
+              "parentSectionUid": "PrBZ3",
+              "parentSectionId": "PrBZ3",
+              "id": "OsSF0k7"
+            }
+          ],
+          "parentPackageUid": "iHvPt",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "id": "V7XTbJ7",
+          "uid": "crB5p",
+          "label": "Upgrade with any",
+          "options": [
+            {
+              "uid": "f4m2Z",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Beast Companion",
+                  "type": "ArmyBookItem",
+                  "label": "Beast Companion (Repel Ambushers)",
+                  "content": [
+                    {
+                      "id": "C6MzEy1CnxTs",
+                      "name": "Repel Ambushers",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Beast Companion (Repel Ambushers)",
+              "parentPackageUid": "iHvPt",
+              "parentSectionUid": "crB5p",
+              "parentSectionId": "crB5p",
+              "id": "f4m2Z"
+            },
+            {
+              "uid": "1Fc5f",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Icon Bearer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Icon Bearer (Fear(3))",
+                  "content": [
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Icon Bearer (Fear(3))",
+              "parentSectionId": "crB5p",
+              "id": "1Fc5f"
+            }
+          ],
+          "parentPackageUid": "iHvPt",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "any"
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "c7_d5",
+      "hint": "Veteran Fighters",
+      "sections": [
+        {
+          "id": "c27rwdH",
+          "uid": "spZWF",
+          "label": "Replace any 2x Hand Weapon",
+          "options": [
+            {
+              "uid": "omvGnlu",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Throwing Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "xCrEtisv",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Throwing Weapon (12\", A1, AP(1))"
+                },
+                {
+                  "id": null,
+                  "name": "Dagger",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "1Sjl-Rlb",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Dagger (A2)"
+                }
+              ],
+              "label": "Heavy Throwing Weapon (12\", A1, AP(1)), Dagger (A2)",
+              "parentSectionId": "spZWF",
+              "id": "omvGnlu"
+            }
+          ],
+          "parentPackageUid": "c7_d5",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "2x Hand Weapon"
+          ]
+        },
+        {
+          "id": "8gHKPWq",
+          "uid": "-PdAR",
+          "label": "Replace any Heavy Throwing Weapon",
+          "options": [
+            {
+              "uid": "UfY9lHwLtb",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Splinter Throwing Stars",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "HaZwnQ27",
+                  "specialRules": [
+                    {
+                      "id": "Rjmkg_tuRv7C",
+                      "name": "Fragment"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Splinter Throwing Stars (12\", A1, Fragment)"
+                }
+              ],
+              "label": "Splinter Throwing Stars (12\", A1, Fragment)",
+              "parentSectionId": "-PdAR",
+              "id": "UfY9lHwLtb"
+            },
+            {
+              "uid": "yaG_X",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Poison Darts",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "AE4g3LUE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Poison Darts (12\", A1, Bane)"
+                }
+              ],
+              "label": "Poison Darts (12\", A1, Bane)",
+              "parentSectionId": "-PdAR",
+              "id": "yaG_X"
+            },
+            {
+              "uid": "v-KbV",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fire Bombs",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "hlBYwOY4",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Fire Bombs (12\", A1, AP(1), Rending)"
+                }
+              ],
+              "label": "Fire Bombs (12\", A1, AP(1), Rending)",
+              "parentSectionId": "-PdAR",
+              "id": "v-KbV"
+            }
+          ],
+          "parentPackageUid": "c7_d5",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Heavy Throwing Weapon"
+          ]
+        },
+        {
+          "id": "NBzb68S",
+          "uid": "oFAjZ",
+          "label": "Replace one Heavy Throwing Weapon",
+          "options": [
+            {
+              "uid": "-lkwj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Harpoon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "0rn_N0yM",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Harpoon (12\", A1, AP(2), Deadly(3))"
+                }
+              ],
+              "label": "Harpoon (12\", A1, AP(2), Deadly(3))",
+              "parentPackageUid": "c7_d5",
+              "parentSectionUid": "oFAjZ",
+              "parentSectionId": "oFAjZ",
+              "id": "-lkwj"
+            }
+          ],
+          "parentPackageUid": "c7_d5",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "exactly",
+            "value": 1
+          },
+          "targets": [
+            "Heavy Throwing Weapon"
+          ]
+        },
+        {
+          "id": "9nDWHuP",
+          "uid": "3iZWe",
+          "label": "Replace any Dagger",
+          "options": [
+            {
+              "uid": "a5xQn",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "ZLBl4ver",
+                  "specialRules": [
+                    {
+                      "id": "c45Fw0D2oGOk",
+                      "name": "Counter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spear (A2, Counter)"
+                }
+              ],
+              "label": "Spear (A2, Counter)",
+              "parentPackageUid": "c7_d5",
+              "parentSectionUid": "3iZWe",
+              "parentSectionId": "3iZWe",
+              "id": "a5xQn"
+            },
+            {
+              "uid": "-3y2r",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxin Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "MirKNLkE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Weapon (A2, Bane)"
+                }
+              ],
+              "label": "Toxin Weapon (A2, Bane)",
+              "parentPackageUid": "c7_d5",
+              "parentSectionUid": "3iZWe",
+              "parentSectionId": "3iZWe",
+              "id": "-3y2r"
+            },
+            {
+              "uid": "BWITE",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Blade Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "5X21-brQ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Blade Weapon (A2, AP(1), Rending)"
+                }
+              ],
+              "label": "Blade Weapon (A2, AP(1), Rending)",
+              "parentPackageUid": "c7_d5",
+              "parentSectionUid": "3iZWe",
+              "parentSectionId": "3iZWe",
+              "id": "BWITE"
+            },
+            {
+              "uid": "goVSN",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "fjMoPeFE",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Weapon (A2, AP(3))"
+                }
+              ],
+              "label": "Great Weapon (A2, AP(3))",
+              "parentPackageUid": "c7_d5",
+              "parentSectionUid": "3iZWe",
+              "parentSectionId": "3iZWe",
+              "id": "goVSN"
+            }
+          ],
+          "parentPackageUid": "c7_d5",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Dagger"
+          ]
+        },
+        {
+          "id": "_4JSela",
+          "uid": "HKNxf",
+          "label": "Replace any Hand Weapon",
+          "options": [
+            {
+              "uid": "flhbTzM",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "bLCkB3cs",
+                  "name": "Blade Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "bLCkB3cs",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Blade Weapon (A1, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Blade Weapon (A1, AP(1), Rending)",
+              "parentPackageUid": "c7_d5",
+              "parentSectionUid": "HKNxf",
+              "parentSectionId": "HKNxf",
+              "id": "flhbTzM"
+            },
+            {
+              "uid": "On42Mji",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "H5UywwCB",
+                  "name": "Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "H5UywwCB",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Weapon (A1, AP(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Great Weapon (A1, AP(3))",
+              "parentPackageUid": "c7_d5",
+              "parentSectionUid": "HKNxf",
+              "parentSectionId": "HKNxf",
+              "id": "On42Mji"
+            },
+            {
+              "uid": "DDRa8",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxin Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "lEqlbfta",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Weapon (A1, Bane)"
+                }
+              ],
+              "label": "Toxin Weapon (A1, Bane)",
+              "parentPackageUid": "c7_d5",
+              "parentSectionUid": "HKNxf",
+              "parentSectionId": "HKNxf",
+              "id": "DDRa8"
+            },
+            {
+              "uid": "_r7RC",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "nXIDrB4U",
+                  "specialRules": [
+                    {
+                      "id": "c45Fw0D2oGOk",
+                      "name": "Counter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spear (A1, Counter)"
+                }
+              ],
+              "label": "Spear (A1, Counter)",
+              "parentPackageUid": "c7_d5",
+              "parentSectionUid": "HKNxf",
+              "parentSectionId": "HKNxf",
+              "id": "_r7RC"
+            }
+          ],
+          "parentPackageUid": "c7_d5",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Hand Weapon"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "1wwKp",
+      "hint": "Veteran Shooters",
+      "sections": [
+        {
+          "id": "HpcUApc",
+          "uid": "F37T4",
+          "label": "Replace any Longbow",
+          "options": [
+            {
+              "uid": "WwXQmxpbiw",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "-uY2tQ6",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Splinter Blowpipe",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "gLQEX3f-",
+                  "specialRules": [
+                    {
+                      "id": "Rjmkg_tuRv7C",
+                      "name": "Fragment"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Splinter Blowpipe (18\", A1, Fragment)"
+                }
+              ],
+              "label": "Splinter Blowpipe (18\", A1, Fragment)",
+              "parentSectionId": "F37T4",
+              "id": "WwXQmxpbiw"
+            },
+            {
+              "uid": "7Ipns",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "-uY2tQ6",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxin Bow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "76jYirZ0",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Bow (18\", A1, Bane)"
+                }
+              ],
+              "label": "Toxin Bow (18\", A1, Bane)",
+              "parentSectionId": "F37T4",
+              "id": "7Ipns"
+            },
+            {
+              "uid": "Cu6dM",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "-uY2tQ6",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Bow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "9hipexu5",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Bow (24\", A1, AP(1))"
+                }
+              ],
+              "label": "Heavy Bow (24\", A1, AP(1))",
+              "parentPackageUid": "1wwKp",
+              "parentSectionUid": "F37T4",
+              "parentSectionId": "F37T4",
+              "id": "Cu6dM"
+            }
+          ],
+          "parentPackageUid": "1wwKp",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Longbow"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "m78oQ",
+      "hint": "Fighters",
+      "sections": [
+        {
+          "id": "GWG6s3T",
+          "uid": "XyVnQ",
+          "label": "Replace any 2x Hand Weapon",
+          "options": [
+            {
+              "uid": "b3kqY",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Throwing Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "i_dyolKh",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Throwing Weapon (12\", A1)"
+                },
+                {
+                  "id": null,
+                  "name": "Dagger",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "1Sjl-Rlb",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Dagger (A2)"
+                }
+              ],
+              "label": "Throwing Weapon (12\", A1), Dagger (A2)",
+              "parentSectionId": "XyVnQ",
+              "id": "b3kqY"
+            }
+          ],
+          "parentPackageUid": "m78oQ",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "2x Hand Weapon"
+          ]
+        },
+        {
+          "id": "QjgZswZ",
+          "uid": "kdAV2",
+          "label": "Replace one Throwing Weapons",
+          "options": [
+            {
+              "uid": "WjsfS",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Poison Darts",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "AE4g3LUE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Poison Darts (12\", A1, Bane)"
+                }
+              ],
+              "label": "Poison Darts (12\", A1, Bane)",
+              "parentSectionId": "kdAV2",
+              "id": "WjsfS"
+            },
+            {
+              "uid": "Il2Dj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fire Bombs",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "hlBYwOY4",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Fire Bombs (12\", A1, AP(1), Rending)"
+                }
+              ],
+              "label": "Fire Bombs (12\", A1, AP(1), Rending)",
+              "parentSectionId": "kdAV2",
+              "id": "Il2Dj"
+            },
+            {
+              "uid": "jNNDmExsvu",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Splinter Throwing Stars",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "HaZwnQ27",
+                  "specialRules": [
+                    {
+                      "id": "Rjmkg_tuRv7C",
+                      "name": "Fragment"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Splinter Throwing Stars (12\", A1, Fragment)"
+                }
+              ],
+              "label": "Splinter Throwing Stars (12\", A1, Fragment)",
+              "parentSectionId": "kdAV2",
+              "id": "jNNDmExsvu"
+            }
+          ],
+          "parentPackageUid": "m78oQ",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "exactly",
+            "value": 1
+          },
+          "targets": [
+            "Throwing Weapons"
+          ]
+        },
+        {
+          "id": "Ffj5QJo",
+          "uid": "b_a8d",
+          "label": "Replace any Dagger",
+          "options": [
+            {
+              "uid": "gHtrv",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "fjMoPeFE",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Weapon (A2, AP(3))"
+                }
+              ],
+              "label": "Great Weapon (A2, AP(3))",
+              "parentSectionId": "b_a8d",
+              "id": "gHtrv"
+            },
+            {
+              "uid": "D1xV3",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxin Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "MirKNLkE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Weapon (A2, Bane)"
+                }
+              ],
+              "label": "Toxin Weapon (A2, Bane)",
+              "parentPackageUid": "m78oQ",
+              "parentSectionUid": "b_a8d",
+              "parentSectionId": "b_a8d",
+              "id": "D1xV3"
+            },
+            {
+              "uid": "z4LCc",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "ZLBl4ver",
+                  "specialRules": [
+                    {
+                      "id": "c45Fw0D2oGOk",
+                      "name": "Counter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spear (A2, Counter)"
+                }
+              ],
+              "label": "Spear (A2, Counter)",
+              "parentPackageUid": "m78oQ",
+              "parentSectionUid": "b_a8d",
+              "parentSectionId": "b_a8d",
+              "id": "z4LCc"
+            },
+            {
+              "uid": "qqw6k",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Blade Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "5X21-brQ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Blade Weapon (A2, AP(1), Rending)"
+                }
+              ],
+              "label": "Blade Weapon (A2, AP(1), Rending)",
+              "parentPackageUid": "m78oQ",
+              "parentSectionUid": "b_a8d",
+              "parentSectionId": "b_a8d",
+              "id": "qqw6k"
+            }
+          ],
+          "parentPackageUid": "m78oQ",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Dagger"
+          ]
+        },
+        {
+          "id": "4K4eNtX",
+          "uid": "XoOJw",
+          "label": "Replace any Hand Weapon",
+          "options": [
+            {
+              "uid": "cXCkY2v",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "bLCkB3cs",
+                  "name": "Blade Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "bLCkB3cs",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Blade Weapon (A1, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Blade Weapon (A1, AP(1), Rending)",
+              "parentPackageUid": "m78oQ",
+              "parentSectionUid": "XoOJw",
+              "parentSectionId": "XoOJw",
+              "id": "cXCkY2v"
+            },
+            {
+              "uid": "wGV7MkN",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "H5UywwCB",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Weapon (A1, AP(3))"
+                }
+              ],
+              "label": "Great Weapon (A1, AP(3))",
+              "parentSectionId": "XoOJw",
+              "id": "wGV7MkN"
+            },
+            {
+              "uid": "uzWQa",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxin Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "lEqlbfta",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Weapon (A1, Bane)"
+                }
+              ],
+              "label": "Toxin Weapon (A1, Bane)",
+              "parentPackageUid": "m78oQ",
+              "parentSectionUid": "XoOJw",
+              "parentSectionId": "XoOJw",
+              "id": "uzWQa"
+            },
+            {
+              "uid": "wkrCV",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ka_P8jM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "nXIDrB4U",
+                  "specialRules": [
+                    {
+                      "id": "c45Fw0D2oGOk",
+                      "name": "Counter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spear (A1, Counter)"
+                }
+              ],
+              "label": "Spear (A1, Counter)",
+              "parentPackageUid": "m78oQ",
+              "parentSectionUid": "XoOJw",
+              "parentSectionId": "XoOJw",
+              "id": "wkrCV"
+            }
+          ],
+          "parentPackageUid": "m78oQ",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Hand Weapon"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "i-RoY",
+      "hint": "Shooters",
+      "sections": [
+        {
+          "id": "bQ-1MYU",
+          "uid": "hcsQa",
+          "label": "Replace any Shortbows",
+          "options": [
+            {
+              "uid": "1_azp",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "PLRIppr",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxin Bow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "76jYirZ0",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Bow (18\", A1, Bane)"
+                }
+              ],
+              "label": "Toxin Bow (18\", A1, Bane)",
+              "parentPackageUid": "i-RoY",
+              "parentSectionUid": "hcsQa",
+              "parentSectionId": "hcsQa",
+              "id": "1_azp"
+            },
+            {
+              "uid": "dg3lDJtVEN",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "PLRIppr",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Splinter Blowpipe",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "gLQEX3f-",
+                  "specialRules": [
+                    {
+                      "id": "Rjmkg_tuRv7C",
+                      "name": "Fragment"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Splinter Blowpipe (18\", A1, Fragment)"
+                }
+              ],
+              "label": "Splinter Blowpipe (18\", A1, Fragment)",
+              "parentSectionId": "hcsQa",
+              "id": "dg3lDJtVEN"
+            }
+          ],
+          "parentPackageUid": "i-RoY",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Shortbows"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "PtI0W",
+      "hint": "Champion",
+      "sections": [
+        {
+          "id": "3inf7vR",
+          "uid": "oRjXn",
+          "label": "Replace Throwing Weapon and Hand Weapon",
+          "options": [
+            {
+              "uid": "8EpjL",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Hand Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": "02",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "C-fKFuUr",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "2x Hand Weapon (A2)"
+                }
+              ],
+              "label": "2x Hand Weapon (A2)",
+              "parentSectionId": "oRjXn",
+              "id": "8EpjL"
+            }
+          ],
+          "parentPackageUid": "PtI0W",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Throwing Weapon",
+            "Hand Weapon"
+          ]
+        },
+        {
+          "id": "wrU-K84",
+          "uid": "s3ghA",
+          "label": "Replace Throwing Weapon",
+          "options": [
+            {
+              "uid": "Tqdmw",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Poison Darts",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "AE4g3LUE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Poison Darts (12\", A1, Bane)"
+                }
+              ],
+              "label": "Poison Darts (12\", A1, Bane)",
+              "parentSectionId": "s3ghA",
+              "id": "Tqdmw"
+            },
+            {
+              "uid": "aBpO3",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Shortbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "sc0sJybR",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Shortbow (18\", A1)"
+                }
+              ],
+              "label": "Shortbow (18\", A1)",
+              "parentSectionId": "s3ghA",
+              "id": "aBpO3"
+            },
+            {
+              "uid": "BoQaw",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fire Bombs",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "hlBYwOY4",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Fire Bombs (12\", A1, AP(1), Rending)"
+                }
+              ],
+              "label": "Fire Bombs (12\", A1, AP(1), Rending)",
+              "parentSectionId": "s3ghA",
+              "id": "BoQaw"
+            },
+            {
+              "uid": "ecza8",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxin Bow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "76jYirZ0",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Bow (18\", A1, Bane)"
+                }
+              ],
+              "label": "Toxin Bow (18\", A1, Bane)",
+              "parentPackageUid": "PtI0W",
+              "parentSectionUid": "s3ghA",
+              "parentSectionId": "s3ghA",
+              "id": "ecza8"
+            },
+            {
+              "uid": "LcbCq5zZRD",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Splinter Throwing Stars",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "HaZwnQ27",
+                  "specialRules": [
+                    {
+                      "id": "Rjmkg_tuRv7C",
+                      "name": "Fragment"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Splinter Throwing Stars (12\", A1, Fragment)"
+                }
+              ],
+              "label": "Splinter Throwing Stars (12\", A1, Fragment)",
+              "parentSectionId": "s3ghA",
+              "id": "LcbCq5zZRD"
+            }
+          ],
+          "parentPackageUid": "PtI0W",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Throwing Weapon"
+          ]
+        },
+        {
+          "id": "8AfZz5E",
+          "uid": "-hFlY",
+          "label": "Replace any Hand Weapon",
+          "options": [
+            {
+              "uid": "O0pB9",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "RQ6RLLS2",
+                  "name": "Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "fjMoPeFE",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Weapon (A2, AP(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Great Weapon (A2, AP(3))",
+              "parentPackageUid": "PtI0W",
+              "parentSectionUid": "-hFlY",
+              "parentSectionId": "-hFlY",
+              "id": "O0pB9"
+            },
+            {
+              "uid": "fklMA",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxin Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "MirKNLkE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Weapon (A2, Bane)"
+                }
+              ],
+              "label": "Toxin Weapon (A2, Bane)",
+              "parentPackageUid": "PtI0W",
+              "parentSectionUid": "-hFlY",
+              "parentSectionId": "-hFlY",
+              "id": "fklMA"
+            },
+            {
+              "uid": "iZi9x",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "ZLBl4ver",
+                  "specialRules": [
+                    {
+                      "id": "c45Fw0D2oGOk",
+                      "name": "Counter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spear (A2, Counter)"
+                }
+              ],
+              "label": "Spear (A2, Counter)",
+              "parentPackageUid": "PtI0W",
+              "parentSectionUid": "-hFlY",
+              "parentSectionId": "-hFlY",
+              "id": "iZi9x"
+            },
+            {
+              "uid": "8od-6",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "wHDWE2A_",
+                  "name": "Blade Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "5X21-brQ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Blade Weapon (A2, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Blade Weapon (A2, AP(1), Rending)",
+              "parentPackageUid": "PtI0W",
+              "parentSectionUid": "-hFlY",
+              "parentSectionId": "-hFlY",
+              "id": "8od-6"
+            }
+          ],
+          "parentPackageUid": "PtI0W",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "id": "Wsahiag",
+          "uid": "Bf1h1",
+          "label": "Upgrade with any",
+          "options": [
+            {
+              "uid": "hT6Ul",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "wnzSXdjP",
+                  "name": "Beast Companion",
+                  "type": "ArmyBookItem",
+                  "label": "Beast Companion (Repel Ambushers)",
+                  "content": [
+                    {
+                      "id": "C6MzEy1CnxTs",
+                      "name": "Repel Ambushers",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Beast Companion (Repel Ambushers)",
+              "parentPackageUid": "PtI0W",
+              "parentSectionUid": "Bf1h1",
+              "parentSectionId": "Bf1h1",
+              "id": "hT6Ul"
+            }
+          ],
+          "parentPackageUid": "PtI0W",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "any"
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "V3KsY",
+      "hint": "Specialists - Leader",
+      "sections": [
+        {
+          "id": "e8m9ZQW",
+          "uid": "UUfBH",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "0mUV3lE6ev",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Shadowblade",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Shadowblade (Takedown Strike)",
+                  "content": [
+                    {
+                      "id": "eyMkgYDVrP7C",
+                      "name": "Takedown Strike",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Shadowblade (Takedown Strike)",
+              "parentSectionId": "UUfBH",
+              "id": "0mUV3lE6ev"
+            },
+            {
+              "uid": "F84DnTrLX3",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Syndicate Lord",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Syndicate Lord (Gloom-Mist Boost Aura)",
+                  "content": [
+                    {
+                      "id": "Qlz-D_4zfEEh",
+                      "name": "Gloom-Mist Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Syndicate Lord (Gloom-Mist Boost Aura)",
+              "parentSectionId": "UUfBH",
+              "id": "F84DnTrLX3"
+            },
+            {
+              "uid": "3Rglj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Infuser",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Infuser (Rending when Shooting Aura)",
+                  "content": [
+                    {
+                      "id": "AfGDQgn8r8O1",
+                      "name": "Rending when Shooting Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Infuser (Rending when Shooting Aura)",
+              "parentPackageUid": "V3KsY",
+              "parentSectionUid": "UUfBH",
+              "parentSectionId": "UUfBH",
+              "id": "3Rglj"
+            },
+            {
+              "uid": "JYGYW",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Hexer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Hexer (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Hexer (Caster(2))",
+              "parentSectionId": "UUfBH",
+              "id": "JYGYW"
+            },
+            {
+              "uid": "yO_7FZuMRk",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Mindbinder",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Mindbinder (Teleport Aura)",
+                  "content": [
+                    {
+                      "id": "nr0R125ptwEZ",
+                      "name": "Teleport Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Mindbinder (Teleport Aura)",
+              "parentSectionId": "UUfBH",
+              "id": "yO_7FZuMRk"
+            },
+            {
+              "uid": "lPu1_",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Hexer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Master Hexer (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Hexer (Caster(3))",
+              "parentSectionId": "UUfBH",
+              "id": "lPu1_"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "V3KsY",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "OZL4Y",
+      "hint": "Weapon Masters",
+      "sections": [
+        {
+          "id": "vXVEmD9",
+          "uid": "qEE23",
+          "label": "Replace any Hand Weapon",
+          "options": [
+            {
+              "uid": "Ldxzn",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "60B4xCR",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "ZLBl4ver",
+                  "specialRules": [
+                    {
+                      "id": "c45Fw0D2oGOk",
+                      "name": "Counter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spear (A2, Counter)"
+                }
+              ],
+              "label": "Spear (A2, Counter)",
+              "parentSectionId": "qEE23",
+              "id": "Ldxzn"
+            },
+            {
+              "uid": "M4LmA",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "60B4xCR",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxin Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "MirKNLkE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Weapon (A2, Bane)"
+                }
+              ],
+              "label": "Toxin Weapon (A2, Bane)",
+              "parentSectionId": "qEE23",
+              "id": "M4LmA"
+            }
+          ],
+          "parentPackageUid": "OZL4Y",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Hand Weapon"
+          ]
+        },
+        {
+          "id": "v9irxIU",
+          "uid": "VYW8bZD5",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "mAO_puuv",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "60B4xCR",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Deadly Arts",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Deadly Arts (Versatile Attack Aura)",
+                  "content": [
+                    {
+                      "id": "ymrWMYEn2noy",
+                      "name": "Versatile Attack Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Deadly Arts (Versatile Attack Aura)",
+              "parentSectionId": "VYW8bZD5",
+              "parentPackageUid": "Fh2BxPBg",
+              "id": "mAO_puuv"
+            }
+          ],
+          "parentPackageUid": "Fh2BxPBg",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "We0GA",
+      "hint": "Stealth Masters",
+      "sections": [
+        {
+          "id": "PLKe8Hb",
+          "uid": "4knDx",
+          "label": "Replace any Throwing Weapon",
+          "options": [
+            {
+              "uid": "ouJxR",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WFdlIdC",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "-aRSE3OJ",
+                  "name": "Poison Darts",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "AE4g3LUE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Poison Darts (12\", A1, Bane)"
+                }
+              ],
+              "label": "Poison Darts (12\", A1, Bane)",
+              "parentPackageUid": "We0GA",
+              "parentSectionUid": "4knDx",
+              "parentSectionId": "4knDx",
+              "id": "ouJxR"
+            },
+            {
+              "uid": "uV480",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WFdlIdC",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "ofYW8dxT",
+                  "name": "Fire Bombs",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "hlBYwOY4",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Fire Bombs (12\", A1, AP(1), Rending)"
+                }
+              ],
+              "label": "Fire Bombs (12\", A1, AP(1), Rending)",
+              "parentPackageUid": "We0GA",
+              "parentSectionUid": "4knDx",
+              "parentSectionId": "4knDx",
+              "id": "uV480"
+            },
+            {
+              "uid": "XaUTvMjcJb",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WFdlIdC",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Splinter Throwing Stars",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "HaZwnQ27",
+                  "specialRules": [
+                    {
+                      "id": "Rjmkg_tuRv7C",
+                      "name": "Fragment"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Splinter Throwing Stars (12\", A1, Fragment)"
+                }
+              ],
+              "label": "Splinter Throwing Stars (12\", A1, Fragment)",
+              "parentSectionId": "4knDx",
+              "id": "XaUTvMjcJb"
+            }
+          ],
+          "parentPackageUid": "We0GA",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Throwing Weapon"
+          ]
+        },
+        {
+          "id": "GV5OfAW",
+          "uid": "jGDXS",
+          "label": "Replace any Dagger",
+          "options": [
+            {
+              "uid": "jYfYa",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WFdlIdC",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "MgLp07lL",
+                  "name": "Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "ZLBl4ver",
+                  "specialRules": [
+                    {
+                      "id": "c45Fw0D2oGOk",
+                      "name": "Counter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spear (A2, Counter)"
+                }
+              ],
+              "label": "Spear (A2, Counter)",
+              "parentPackageUid": "We0GA",
+              "parentSectionUid": "jGDXS",
+              "parentSectionId": "jGDXS",
+              "id": "jYfYa"
+            },
+            {
+              "uid": "A2SIs",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WFdlIdC",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "sIGl5lLj",
+                  "name": "Toxin Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "MirKNLkE",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Weapon (A2, Bane)"
+                }
+              ],
+              "label": "Toxin Weapon (A2, Bane)",
+              "parentPackageUid": "We0GA",
+              "parentSectionUid": "jGDXS",
+              "parentSectionId": "jGDXS",
+              "id": "A2SIs"
+            },
+            {
+              "uid": "BBYHw",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WFdlIdC",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "JXqA4wlh",
+                  "name": "Blade Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "5X21-brQ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Blade Weapon (A2, AP(1), Rending)"
+                }
+              ],
+              "label": "Blade Weapon (A2, AP(1), Rending)",
+              "parentPackageUid": "We0GA",
+              "parentSectionUid": "jGDXS",
+              "parentSectionId": "jGDXS",
+              "id": "BBYHw"
+            },
+            {
+              "uid": "lZwMX",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WFdlIdC",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "rfeyMKck",
+                  "name": "Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "fjMoPeFE",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Weapon (A2, AP(3))"
+                }
+              ],
+              "label": "Great Weapon (A2, AP(3))",
+              "parentPackageUid": "We0GA",
+              "parentSectionUid": "jGDXS",
+              "parentSectionId": "jGDXS",
+              "id": "lZwMX"
+            }
+          ],
+          "parentPackageUid": "We0GA",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Dagger"
+          ]
+        },
+        {
+          "id": "p_yeSV8",
+          "uid": "by59NIC0",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "yVjBgK9o",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WFdlIdC",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Deadly Arts",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Deadly Arts (Versatile Attack Aura)",
+                  "content": [
+                    {
+                      "id": "ymrWMYEn2noy",
+                      "name": "Versatile Attack Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Deadly Arts (Versatile Attack Aura)",
+              "parentSectionId": "by59NIC0",
+              "parentPackageUid": "gQ7T3OS1",
+              "id": "yVjBgK9o"
+            }
+          ],
+          "parentPackageUid": "gQ7T3OS1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "LvNVr",
+      "hint": "Bird Riders",
+      "sections": [
+        {
+          "id": "A_bwz0c",
+          "uid": "edqHG",
+          "label": "Replace any Shortbow",
+          "options": [
+            {
+              "uid": "da_c1",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6S_hurc",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "waLMh92w",
+                  "name": "Toxin Bow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "76jYirZ0",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Toxin Bow (18\", A1, Bane)"
+                }
+              ],
+              "label": "Toxin Bow (18\", A1, Bane)",
+              "parentPackageUid": "LvNVr",
+              "parentSectionUid": "edqHG",
+              "parentSectionId": "edqHG",
+              "id": "da_c1"
+            },
+            {
+              "uid": "ATLhnxZ69u",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6S_hurc",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Splinter Blowpipe",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "gLQEX3f-",
+                  "specialRules": [
+                    {
+                      "id": "Rjmkg_tuRv7C",
+                      "name": "Fragment"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Splinter Blowpipe (18\", A1, Fragment)"
+                }
+              ],
+              "label": "Splinter Blowpipe (18\", A1, Fragment)",
+              "parentSectionId": "edqHG",
+              "id": "ATLhnxZ69u"
+            }
+          ],
+          "parentPackageUid": "LvNVr",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Shortbow"
+          ]
+        },
+        {
+          "id": "sSEV7Ac",
+          "uid": "Kn70Td1y",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "CuoX8Wao",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6S_hurc",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Deadly Arts",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Deadly Arts (Versatile Attack Aura)",
+                  "content": [
+                    {
+                      "id": "ymrWMYEn2noy",
+                      "name": "Versatile Attack Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Deadly Arts (Versatile Attack Aura)",
+              "parentSectionId": "Kn70Td1y",
+              "parentPackageUid": "AN0brRb_",
+              "id": "CuoX8Wao"
+            }
+          ],
+          "parentPackageUid": "AN0brRb_",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "yYURIgZi",
+      "hint": "Shifter Beasts",
+      "sections": [
+        {
+          "id": "FFPO8zI",
+          "uid": "WMGDH9OKz6",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "rmYSvxHcsK",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "knAVwhs",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Cypher of Doom",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Cypher of Doom (Slayer Mark)",
+                  "content": [
+                    {
+                      "id": "KTetx0KIX3i-",
+                      "name": "Slayer Mark",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Cypher of Doom (Slayer Mark)",
+              "parentSectionId": "WMGDH9OKz6",
+              "id": "rmYSvxHcsK"
+            }
+          ],
+          "parentPackageUid": "yYURIgZi",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "gVfUw0v3",
+      "hint": "Specialists - Champion",
+      "sections": [
+        {
+          "id": "61vXK9H",
+          "uid": "17_jWPEh",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "V5We120b",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Elusive Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Elusive Master (Melee Shrouding Aura)",
+                  "content": [
+                    {
+                      "id": "0dZak5jae8F0",
+                      "name": "Melee Shrouding Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Elusive Master (Melee Shrouding Aura)",
+              "parentSectionId": "17_jWPEh",
+              "parentPackageUid": "yxvxGs3t",
+              "id": "V5We120b"
+            },
+            {
+              "uid": "kzT_px3v4G",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Shadowblade",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Shadowblade (Takedown Strike)",
+                  "content": [
+                    {
+                      "id": "eyMkgYDVrP7C",
+                      "name": "Takedown Strike",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Shadowblade (Takedown Strike)",
+              "parentSectionId": "17_jWPEh",
+              "id": "kzT_px3v4G"
+            },
+            {
+              "uid": "v1Mz1u0N",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Infuser",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Infuser (Rending when Shooting Aura)",
+                  "content": [
+                    {
+                      "id": "AfGDQgn8r8O1",
+                      "name": "Rending when Shooting Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Infuser (Rending when Shooting Aura)",
+              "parentSectionId": "17_jWPEh",
+              "parentPackageUid": "yxvxGs3t",
+              "parentSectionUid": "UUfBH",
+              "id": "v1Mz1u0N"
+            },
+            {
+              "uid": "Nd4y28P2",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Hexer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Hexer (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Hexer (Caster(2))",
+              "parentSectionId": "17_jWPEh",
+              "parentPackageUid": "yxvxGs3t",
+              "id": "Nd4y28P2"
+            },
+            {
+              "uid": "1Det2lnb",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Mindbinder",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Mindbinder (Teleport Aura)",
+                  "content": [
+                    {
+                      "id": "nr0R125ptwEZ",
+                      "name": "Teleport Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Mindbinder (Teleport Aura)",
+              "parentSectionId": "17_jWPEh",
+              "parentPackageUid": "yxvxGs3t",
+              "id": "1Det2lnb"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "yxvxGs3t",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    }
+  ],
+  "customRules": [],
+  "customWeapons": [],
+  "spells": [
+    {
+      "id": "mDQC1",
+      "name": "Acrobatic Defense",
+      "type": 1,
+      "effect": "Pick up to two friendly units within 12\", which get Counter-Attack once (next time the effect would apply).",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "5Wpo74lRNhqB",
+                "name": "Counter-Attack"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "{ name: params.effect.unitRule.name, rating: params.effect.unitRule.rating, multiplier: params.multiplier * (params.aura ? this.AuraSize : 1), avgUnit: !params.thisUnit }",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "5Wpo74lRNhqB",
+                "name": "Counter-Attack"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 1
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "0PTkA",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "E_13N",
+      "name": "Mirror-Blade",
+      "type": 0,
+      "effect": "Pick one enemy unit within 6\", which takes 1 hit with AP(2) and Deadly(3).",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "1"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "_mrPya5SXSqW",
+                "name": "Deadly",
+                "rating": 3,
+                "hideModifier": true
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 6\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 1
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "_mrPya5SXSqW",
+                "name": "Deadly",
+                "rating": 3,
+                "hideModifier": true
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 6\"",
+                "value": 6
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 0.9
+          },
+          "multiplier": 0.9
+        }
+      ],
+      "spellbookId": "cJZ_-",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "ogSJI",
+      "name": "Shadow Mist",
+      "type": 1,
+      "effect": "Pick up to four friendly units within 12\", which get Gloom-Mist Boost once (next time the effect would apply).",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "lwze7IEEFK8Q",
+                "name": "Gloom-Mist Boost"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "{ name: params.effect.unitRule.name, rating: params.effect.unitRule.rating, multiplier: params.multiplier * (params.aura ? this.AuraSize : 1), avgUnit: !params.thisUnit }",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "lwze7IEEFK8Q",
+                "name": "Gloom-Mist Boost"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 2
+          },
+          "multiplier": 2
+        }
+      ],
+      "spellbookId": "sbSJb",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "I3TPt",
+      "name": "Shatter-Darts",
+      "type": 0,
+      "effect": "Pick up to two enemy units within 12\", which take 2 hits with AP(1) and Fragment each.",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "Rjmkg_tuRv7C",
+                "name": "Fragment"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 4
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "Rjmkg_tuRv7C",
+                "name": "Fragment"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "tNVWP",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "iwF2-",
+      "name": "Fatal Assault",
+      "type": 2,
+      "effect": "Pick up to six enemy units within 18\", which friendly units gets Slayer against once (next time the effect would apply).",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "1yTPcanTyckX",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "27DHOeVHMwrj",
+                "name": "Slayer"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to three"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "{ name: params.effect.unitRule.name, rating: params.effect.unitRule.rating, multiplier: params.multiplier * (this._skirmish ? 1 : this.AuraSize), avgUnit: true }",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "27DHOeVHMwrj",
+                "name": "Slayer"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 3.3000000000000003
+          },
+          "multiplier": 3.3000000000000003
+        }
+      ],
+      "spellbookId": "qel4I",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "zzJRc",
+      "name": "Sorrow-Globe",
+      "type": 0,
+      "effect": "Pick up to three enemy units within 18\", which take 2 hits each.",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 6
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1.1
+          },
+          "multiplier": 1.1
+        }
+      ],
+      "spellbookId": "_fl49",
+      "effectSkirmish": ""
+    }
+  ],
+  "modifiedAt": "2026-01-28T21:38:40.460Z",
+  "editedAt": "2025-12-13T15:25:49.693Z",
+  "official": true,
+  "versionString": "3.5.2",
+  "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/TngTE5FtTZNKEHuG/motW-48OvfG7Oa1MFX2EY.jpg",
+  "coverImageCredit": null,
+  "bannerImagePath": null,
+  "visibility": 1,
+  "factionId": null,
+  "factionName": "Guilds of the Nexus",
+  "factionRelation": "Guild",
+  "popularity": 0,
+  "downvotes": 0,
+  "partnerSettings": {
+    "storeLinks": [
+      "https://www.myminifactory.com/users/onepagerules",
+      "https://www.etsy.com/shop/onepagerules"
+    ]
+  },
+  "balanceValid": true,
+  "balanceValidReason": 0,
+  "loreUrl": null,
+  "voted": null,
+  "specialRules": [
+    {
+      "id": "N0JRcI01vSBT",
+      "name": "Deathstrike",
+      "aliasedRuleId": null,
+      "description": "If this model is killed in melee, the attacking unit takes X hits.",
+      "hasRating": true,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "LtPyHi_-DHf4",
+      "name": "Teleport",
+      "aliasedRuleId": null,
+      "description": "Once per activation, before attacking, place this model anywhere fully within 6\" of its position.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "0dZak5jae8F0",
+      "name": "Melee Shrouding Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Melee Shrouding. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "DEeVIJcfNfS6",
+      "name": "Unpredictable Fighter",
+      "aliasedRuleId": null,
+      "description": "When in melee, roll one die and apply one effect to all models with this rule: on a 1-3 they get AP(+1), and on a 4-6 they get +1 to hit rolls instead.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "eyMkgYDVrP7C",
+      "name": "Takedown Strike",
+      "aliasedRuleId": null,
+      "description": "Once per game, when it's this model's turn to attack in melee, you may pick one model in the unit as its target, and make one attack at Quality 2+ with AP(2) and Deadly(3), which is resolved as if it's a unit of 1.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "C6MzEy1CnxTs",
+      "name": "Repel Ambushers",
+      "aliasedRuleId": null,
+      "description": "Enemy units using Ambush must be set up over 12\" away from this model's unit.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "0Z-OGtDpajc3",
+      "name": "Grounded Stealth",
+      "aliasedRuleId": null,
+      "description": "If a unit where all models have this rule has most of them within 1\" of terrain, enemies get -1 to hit rolls when attacking them.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "9NrhGurKS7I8",
+      "name": "Gloom-Mist",
+      "aliasedRuleId": "_tP0jExjizvc",
+      "description": "When units where all models have this rule are shot or charged from over 9\" away, enemy units get -1 to hit rolls.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "Qlz-D_4zfEEh",
+      "name": "Gloom-Mist Boost Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Gloom-Mist Boost. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "AfGDQgn8r8O1",
+      "name": "Rending when Shooting Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Rending when shooting. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "nr0R125ptwEZ",
+      "name": "Teleport Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Teleport. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "KTetx0KIX3i-",
+      "name": "Slayer Mark",
+      "aliasedRuleId": null,
+      "description": "Once per activation, before attacking, pick up to 4 enemy units within 18\", which friendly units gets Slayer against once (next time the effect would apply).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "ymrWMYEn2noy",
+      "name": "Versatile Attack Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Versatile Attack. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "Rjmkg_tuRv7C",
+      "name": "Fragment",
+      "aliasedRuleId": null,
+      "description": "Ignores Cover, and against units where most models have Defense 2+ to Defense 4+, this weapon gets AP(+1).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "1TMBPe40kx2b",
+      "name": "Melee Shrouding",
+      "aliasedRuleId": null,
+      "description": "Enemies get -3\" movement when trying to charge units where all models have this rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "_mrPya5SXSqW",
+      "name": "Deadly",
+      "aliasedRuleId": null,
+      "description": "Assign each wound to one model, and multiply it by X. Hits from Deadly must be resolved first, and these wounds don’t carry over to other models if the original target is killed.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "6mJw5IdqSqNC",
+      "name": "Ambush",
+      "aliasedRuleId": null,
+      "description": "May be set aside before deployment. At the start of any round after the first, may be deployed anywhere over 9” away from enemy units. Players alternate in placing Ambush units, starting with the player that activates next. Units that deploy via Ambush can’t seize or contest objectives on the round they deploy.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "lwze7IEEFK8Q",
+      "name": "Gloom-Mist Boost",
+      "aliasedRuleId": null,
+      "description": "If all models in this unit have Gloom-Mist, enemies attacking them always get -1 to hit rolls from Gloom-Mist (instead of only when being shot/charged from over 9\" away).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "cavWDboL4ubs",
+      "name": "Rending",
+      "aliasedRuleId": null,
+      "description": "Ignores Regeneration, and on unmodified results of 6 to hit, those hits get AP(+4).",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "27DHOeVHMwrj",
+      "name": "Slayer",
+      "aliasedRuleId": null,
+      "description": "This model's weapons get AP(+2) against units where most models have Tough(3) or higher.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "9Te72f48wJyw",
+      "name": "Versatile Attack",
+      "aliasedRuleId": null,
+      "description": "When this unit is activated, pick one effect: until the end of the activation all models with this rule in it either get AP(+1) when attacking, or get +1 to hit rolls when attacking.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "efmjJPTe0Yzd",
+      "name": "Ignores Cover",
+      "aliasedRuleId": null,
+      "description": "This weapon ignores cover.",
+      "hasRating": false,
+      "coreType": 5,
+      "targetType": 2
+    },
+    {
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
+      "aliasedRuleId": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
+      "id": "5Wpo74lRNhqB",
+      "name": "Counter-Attack",
+      "aliasedRuleId": null,
+      "description": "Strikes first when charged.",
+      "hasRating": null,
+      "coreType": null,
+      "targetType": 1
+    }
+  ],
+  "username": "onepagerules",
+  "creator": false,
+  "isCreator": false,
+  "gameSystemId": 5,
+  "gameSystemSlug": "age-of-fantasy-skirmish",
+  "aberration": "AOFS",
+  "gameSystemKey": "AOFS",
+  "flavouredUid": "TngTE5FtTZNKEHuG~5"
+}

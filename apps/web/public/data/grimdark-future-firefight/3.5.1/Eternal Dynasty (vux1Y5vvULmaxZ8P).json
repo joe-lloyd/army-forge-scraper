@@ -1,0 +1,4977 @@
+{
+  "uid": "vux1Y5vvULmaxZ8P",
+  "userId": "1is8a3JZYgw",
+  "enabledGameSystems": [
+    2,
+    3,
+    9,
+    10
+  ],
+  "name": "Eternal Dynasty",
+  "genericName": "Shogun Aliens",
+  "hint": "",
+  "background": "The Eternal Dynasty are a faction of advanced aliens from the Kusari sector. Their forces consist of well armed infantry and drones, supported by high tech robots and vehicles.\n\nOriginally, they emerged from a world long divided into a patchwork society of warring clans. The royal house became adept at manipulating clans, leading potential rivals into a series of destructive wars before imposing their laws over survivors and forming a ruling Dynasty. The Eternal Dynasty will go to any length to maintain this fragile unity as they expand out into the stars. ",
+  "backgroundFull": "The Eternal Dynasty come from the Kusari Sector, where they lived peacefully for millennia, and their home system became known as “stars of calm”, due to the enduring peace that the faction enjoyed. However, as the population continued to grow and spread through their system, a number of different philosophies began to flourish and diverge with each other. In order to maintain peace, a ruling system was established where regions were divided into clans under the nominal control of a Royal Dynasty. The Royal Dynasty was intended to serve as a mediator, and the title was intended to circulate amongst the ruling families of the various clans.\n\nThe dynastic system preserved peace for a time, but gradually the authority of the ruling dynasty began to wane as the clans continued to push for their own individual interests. Eventually, the Royal Dynasty were no longer able to mediate conflicts between clans, and conflict erupted. Over time, the Dynasty became a mere puppet of the most powerful clan, while rivalry between clans gave way to open hatred and xenophobia.\n\nThe Clan War era continued for over a century, as the clans struggled to maintain their rule over the system, until they were replaced by the next clan. Eventually, the title of Royal Dynasty fell to a family who held no specific clan allegiance. This family ceased intervening in conflicts but instead used their position to fuel conflict between the clans. \n\nThis resulted in a series of violent and extremely bloody conflicts, which devastated the Stars of Calms and greatly weakened the clans. Then, the Royal Dynasty intervened and united the remaining clans under an expanded royal army. The Dynasty refused to pass on their power as tradition required, instead declaring themselves the Eternal Dynasty.  \n\nThe Eternal Dynasty’s rule has led to an age of peace and prosperity, which has allowed them to expand into the stars and beyond the Kusari sector. Yet, bitterness remains between the clans even after centuries of peace. Much of their society still bears the scars of the clan wars, and many follow the rule of the Dynasty only reluctantly, due to their role in the final conflicts that ended the Clan War Era.\n\nHow will you bring your unity to the stars?",
+  "units": [
+    {
+      "id": "bEeuIws",
+      "cost": 50,
+      "name": "Dynasty Leader",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "7Y8OJpPc",
+          "name": "Dynasty Pistol",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 2,
+          "weaponId": "y8UX4wNg",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Dynasty Pistol (12\", A2, AP(1))",
+          "originalCount": 1
+        },
+        {
+          "id": "8xBvuk1r",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "83nhlNHF",
+          "specialRules": [],
+          "attacksMultiplier": null,
+          "label": "CCW (A2)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "B1",
+        "C1",
+        "P9Fks"
+      ],
+      "genericName": "Warrior Hero",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "Amkoitz",
+      "cost": 175,
+      "name": "Captain WuKaon",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "50",
+        "square": "50"
+      },
+      "items": [
+        {
+          "id": "g8frv",
+          "name": "Saryu Armour",
+          "type": "ArmyBookItem",
+          "bases": null,
+          "content": [
+            {
+              "id": "IyLY1212wacW",
+              "name": "Fortified",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "h9JsgD38BRjI",
+          "name": "Bounding",
+          "label": "Bounding"
+        },
+        {
+          "id": "JoOCVPx1xT1G",
+          "name": "Furious",
+          "label": "Furious"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "Ej1Lc",
+          "name": "The Banded-Stave",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 8,
+          "weaponId": "NIC1J6mR",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "IEJp3a4vE0CB",
+              "name": "Shred",
+              "label": "Shred"
+            }
+          ],
+          "label": "The Banded-Stave (A8, AP(1), Shred)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "UkOaKOI",
+      "cost": 115,
+      "name": "Syen & Xaotyan",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "75x46",
+        "square": "75x50"
+      },
+      "items": [
+        {
+          "id": "geOVfw7m",
+          "name": "Xaotyan",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "a0YtInGiUDd6",
+              "name": "Tough",
+              "type": "ArmyBookRule",
+              "rating": 3
+            },
+            {
+              "id": "WoQL2Ne_",
+              "name": "Leaping Tiger",
+              "type": "ArmyBookWeapon",
+              "count": 1,
+              "range": 0,
+              "attacks": 3,
+              "weaponId": "WODSNwtC",
+              "specialRules": [
+                {
+                  "type": "ArmyBookRule",
+                  "id": "17crjK7P6_w6",
+                  "name": "AP",
+                  "rating": 2
+                }
+              ],
+              "attacksMultiplier": null,
+              "label": "Leaping Tiger (A3, AP(2))"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "FAMbscK5vhSu",
+          "name": "Scout",
+          "label": "Scout"
+        },
+        {
+          "id": "9jyvRoBODD-O",
+          "name": "Stealth",
+          "label": "Stealth"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": false,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "8xBvuk1r",
+          "name": "Stun Staff",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "7D8CINKE",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "5v6oaGfrdf29",
+              "name": "Surge",
+              "label": "Surge"
+            }
+          ],
+          "label": "Stun Staff (A3, Surge)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": true,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "EjXfUOe",
+      "cost": 90,
+      "name": "Captain Lyao",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "25",
+        "square": "30"
+      },
+      "items": [
+        {
+          "id": "PuxUj",
+          "name": "Seasoned Leader",
+          "type": "ArmyBookItem",
+          "bases": null,
+          "content": [
+            {
+              "id": "Y37_ydVGvRqL",
+              "name": "Rapid Advance Aura",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "8xBvuk1r",
+          "name": "Twin Shotgun",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 4,
+          "weaponId": "h-xKuOt8",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "label": "Twin Shotgun (12\", A4, AP(1))",
+          "originalCount": 1
+        },
+        {
+          "id": "7Y8OJpPc",
+          "name": "Ironbane Swords",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "brDlZop5",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "label": "Ironbane Swords (A2, AP(1), Rending)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "5G92a0s",
+      "cost": 80,
+      "name": "Commander Xao",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "25",
+        "square": "30"
+      },
+      "items": [
+        {
+          "id": "LQunw",
+          "name": "Dynastic Banner",
+          "type": "ArmyBookItem",
+          "bases": null,
+          "content": [
+            {
+              "id": "B5RGOPajK6Lr",
+              "name": "Precision Fighter Aura",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        },
+        {
+          "id": "4elyA",
+          "name": "Myushu992",
+          "type": "ArmyBookItem",
+          "bases": null,
+          "content": [
+            {
+              "id": "C6MzEy1CnxTs",
+              "name": "Repel Ambushers",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "8xBvuk1r",
+          "name": "Dual Royal Swords",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "F9WXJdXX",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "label": "Dual Royal Swords (A4, AP(1), Rending)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "uS-DM9n",
+      "cost": 80,
+      "name": "Sage Myan",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [
+        {
+          "id": "pSOtb",
+          "name": "Golden Avatar",
+          "type": "ArmyBookItem",
+          "bases": null,
+          "content": [
+            {
+              "id": "nNh98rpX_sZv",
+              "name": "Casting Buff",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        },
+        {
+          "id": "8Sk3c",
+          "name": "Laughing Sage",
+          "type": "ArmyBookItem",
+          "bases": null,
+          "content": [
+            {
+              "id": "fOIa9S1t0q7S",
+              "name": "Melee Evasion Aura",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "47CAqf7ySlfc",
+          "name": "Caster",
+          "rating": 1,
+          "label": "Caster(1)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "7Y8OJpPc",
+          "name": "Spirit Blast",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "r0zad5RM",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "label": "Spirit Blast (12\", A1, Blast(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "8xBvuk1r",
+          "name": "Spirit Pulse",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "yAMg99Bt",
+          "specialRules": [],
+          "label": "Spirit Pulse (A3)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "9fAeLEX",
+      "cost": 110,
+      "name": "Sergeant Wou",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "32",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "6mJw5IdqSqNC",
+          "name": "Ambush",
+          "label": "Ambush"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "9jyvRoBODD-O",
+          "name": "Stealth",
+          "label": "Stealth"
+        },
+        {
+          "id": "LtPyHi_-DHf4",
+          "name": "Teleport",
+          "label": "Teleport"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "N8m-5",
+          "name": "Vine-Hook",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 9,
+          "attacks": 1,
+          "weaponId": "nurTXDaB",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "9042COVrLCsI",
+              "name": "Limited",
+              "label": "Limited"
+            }
+          ],
+          "label": "Vine-Hook (9\", A1, AP(2), Deadly(3), Limited)",
+          "originalCount": 1
+        },
+        {
+          "id": "8xBvuk1r",
+          "name": "Hwan Spear",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "jrOuDXzd",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "HmDYt1eQUL2f",
+              "name": "Puncture",
+              "label": "Puncture"
+            }
+          ],
+          "label": "Hwan Spear (A3, AP(1), Puncture)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "6LpK3Hi",
+      "cost": 20,
+      "name": "Cyber Lizard",
+      "size": 1,
+      "bases": {
+        "round": "60x35",
+        "square": "50x25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "ibbQfBhX",
+          "name": "Toxin Claws",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "-ih-zpr0",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "Naqc5mga9Uha",
+              "name": "Bane",
+              "label": "Bane"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Toxin Claws (A2, Bane)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "L1"
+      ],
+      "genericName": "Beasts",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "kBJrV-w",
+      "cost": 20,
+      "name": "Scout",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "FAMbscK5vhSu",
+          "name": "Scout",
+          "label": "Scout"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "7Y8OJpPc",
+          "name": "Long Rifle",
+          "type": "ArmyBookWeapon",
+          "range": 30,
+          "attacks": 1,
+          "weaponId": "7Y8OJpPc",
+          "specialRules": [],
+          "label": "Long Rifle (30\", A1)",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "8xBvuk1r",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "4o5CBBZC",
+          "specialRules": [],
+          "attacksMultiplier": null,
+          "label": "CCW (A1)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "E1",
+        "G1"
+      ],
+      "genericName": "Scouts",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "tBFpCN2",
+      "cost": 20,
+      "name": "Warrior",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "7Y8OJpPc",
+          "name": "Long Rifle",
+          "type": "ArmyBookWeapon",
+          "range": 30,
+          "attacks": 1,
+          "weaponId": "7Y8OJpPc",
+          "specialRules": [],
+          "label": "Long Rifle (30\", A1)",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "8xBvuk1r",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "4o5CBBZC",
+          "specialRules": [],
+          "attacksMultiplier": null,
+          "label": "CCW (A1)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "E1",
+        "F1",
+        "YyyxzNTk"
+      ],
+      "genericName": "Warriors",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "CdkWnvx",
+      "cost": 25,
+      "name": "Attack Drone",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "lE8QuIT9",
+          "name": "Laser Gun",
+          "type": "ArmyBookWeapon",
+          "range": 18,
+          "attacks": 1,
+          "weaponId": "lE8QuIT9",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "HmDYt1eQUL2f",
+              "name": "Puncture",
+              "label": "Puncture"
+            }
+          ],
+          "label": "Laser Gun (18\", A1, Puncture)",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "GBTlEwzi",
+          "name": "Taser",
+          "type": "ArmyBookWeapon",
+          "attacks": 1,
+          "weaponId": "GBTlEwzi",
+          "specialRules": [],
+          "label": "Taser (A1)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "J1"
+      ],
+      "genericName": "Drones",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "e54b888",
+      "cost": 30,
+      "name": "Cyber-Bird Swarm",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "-QJdqJEKjIpE",
+          "name": "Flying",
+          "label": "Flying"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 6,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "OLEvxYwW",
+          "name": "Swarm Attacks",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "bUQRotbI",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Swarm Attacks (A3, Rending)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "L1"
+      ],
+      "genericName": "Flying Swarm",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "6S-Xqit",
+      "cost": 35,
+      "name": "Ninja",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "6mJw5IdqSqNC",
+          "name": "Ambush",
+          "label": "Ambush"
+        },
+        {
+          "id": "LtPyHi_-DHf4",
+          "name": "Teleport",
+          "label": "Teleport"
+        },
+        {
+          "id": "9jyvRoBODD-O",
+          "name": "Stealth",
+          "label": "Stealth"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "WDwv_vcn",
+          "name": "Auto-Gun",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "rvnbHEZ0",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "label": "Auto-Gun (12\", A1, Rending)",
+          "originalCount": 1
+        },
+        {
+          "id": "rvnbHEZ0",
+          "name": "Sword",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "z_ATqspK",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Sword (A1, AP(1), Rending)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "H1"
+      ],
+      "genericName": "Assault Scouts",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "nT_lDKZ",
+      "cost": 40,
+      "name": "Royal Guard",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        },
+        {
+          "id": "9Te72f48wJyw",
+          "name": "Versatile Attack",
+          "label": "Versatile Attack"
+        },
+        {
+          "id": "8KujvrTG8k9p",
+          "name": "Regeneration",
+          "label": "Regeneration"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "pdUSnQbK",
+          "name": "Spear-Shot",
+          "type": "ArmyBookWeapon",
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "pdUSnQbK",
+          "specialRules": [],
+          "label": "Spear-Shot (12\", A1)",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "UVtoCSu0",
+          "name": "Spear",
+          "type": "ArmyBookWeapon",
+          "attacks": 2,
+          "weaponId": "UVtoCSu0",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "label": "Spear (A2, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "I1",
+        "YyyxzNTk"
+      ],
+      "genericName": "Elite Assault Warriors",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "bILTbNt",
+      "cost": 60,
+      "name": "ONI",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "21dbpSjSDeOY",
+          "name": "Clan Warrior",
+          "label": "Clan Warrior"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "0XVNl-z4",
+          "name": "Bash",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "_9QIOlsl",
+          "specialRules": [],
+          "attacksMultiplier": null,
+          "label": "Bash (A1)",
+          "originalCount": 1
+        },
+        {
+          "id": "NLMYJMA2",
+          "name": "Heavy Fists",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "OSqD-ycd",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "2x Heavy Fists (A1, AP(4))",
+          "originalCount": 2
+        }
+      ],
+      "upgrades": [
+        "K1",
+        "E1",
+        "YyyxzNTk"
+      ],
+      "genericName": "Heavy Robots",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    }
+  ],
+  "upgradePackages": [
+    {
+      "uid": "B1",
+      "hint": "Hero Drones",
+      "sections": [
+        {
+          "id": "V0Yml-E",
+          "uid": "WB_Fhj4",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "zDDOkvc",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Mini-Shield Drone",
+                  "type": "ArmyBookItem",
+                  "label": "Mini-Shield Drone (Stealth)",
+                  "content": [
+                    {
+                      "id": "9jyvRoBODD-O",
+                      "name": "Stealth",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Mini-Shield Drone (Stealth)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "WB_Fhj4",
+              "parentSectionId": "WB_Fhj4",
+              "id": "zDDOkvc"
+            },
+            {
+              "uid": "GDqeD2a",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Attack Drone",
+                  "type": "ArmyBookItem",
+                  "label": "Attack Drone (Drone Laser Gun (18\", A1, Limited, Puncture))",
+                  "content": [
+                    {
+                      "name": "Drone Laser Gun",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 18,
+                      "attacks": 1,
+                      "weaponId": "MRS3iIeM",
+                      "specialRules": [
+                        {
+                          "id": "9042COVrLCsI",
+                          "name": "Limited",
+                          "type": "ArmyBookRule"
+                        },
+                        {
+                          "id": "HmDYt1eQUL2f",
+                          "name": "Puncture",
+                          "type": "ArmyBookRule"
+                        }
+                      ],
+                      "label": "Drone Laser Gun (18\", A1, Limited, Puncture)"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Attack Drone (Drone Laser Gun (18\", A1, Limited, Puncture))",
+              "parentSectionId": "WB_Fhj4",
+              "id": "GDqeD2a"
+            },
+            {
+              "uid": "7LDvJ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Energy Drone",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Energy Drone (Ignores Cover Aura)",
+                  "content": [
+                    {
+                      "id": "4NiNnvh-brLp",
+                      "name": "Ignores Cover Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Energy Drone (Ignores Cover Aura)",
+              "parentSectionId": "WB_Fhj4",
+              "id": "7LDvJ"
+            }
+          ],
+          "parentPackageUid": "B1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "C1",
+      "hint": "Dynasty Leader",
+      "sections": [
+        {
+          "id": "fXE0B_R",
+          "uid": "jQR0Y_f",
+          "label": "Replace Dynasty Pistol and CCW",
+          "options": [
+            {
+              "uid": "sI-nC",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Leader Auto-Gun",
+                  "type": "ArmyBookWeapon",
+                  "count": 2,
+                  "range": 12,
+                  "attacks": 2,
+                  "weaponId": "qiGSc0f7",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "2x Leader Auto-Gun (12\", A2, Rending)"
+                },
+                {
+                  "name": "Martial Arts",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "attacks": 1,
+                  "weaponId": "b2_s-ifV",
+                  "specialRules": [],
+                  "label": "Martial Arts (A1)"
+                }
+              ],
+              "label": "2x Leader Auto-Gun (12\", A2, Rending), Martial Arts (A1)",
+              "parentSectionId": "jQR0Y_f",
+              "id": "sI-nC"
+            },
+            {
+              "uid": "crZ9P",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Royal Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": "02",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "gZWBZCw7",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "2x Royal Sword (A2, AP(1), Rending)"
+                }
+              ],
+              "label": "2x Royal Sword (A2, AP(1), Rending)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "jQR0Y_f",
+              "parentSectionId": "jQR0Y_f",
+              "id": "crZ9P"
+            },
+            {
+              "uid": "wD4-2",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Royal Sickle",
+                  "type": "ArmyBookWeapon",
+                  "count": "02",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "SFVvhcBE",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "label": "2x Royal Sickle (A2, AP(2))"
+                }
+              ],
+              "label": "2x Royal Sickle (A2, AP(2))",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "jQR0Y_f",
+              "parentSectionId": "jQR0Y_f",
+              "id": "wD4-2"
+            },
+            {
+              "uid": "gfuVZ",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "id": "14HPUoev",
+                  "name": "Spear-Shock",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 3,
+                  "weaponId": "14HPUoev",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "label": "Spear-Shock (18\", A3, AP(1))",
+                  "count": 1
+                },
+                {
+                  "id": "qJ0aEBH-",
+                  "name": "Spear",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "qJ0aEBH-",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "label": "Spear (A3, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Spear-Shock (18\", A3, AP(1)), Spear (A3, AP(1))",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "jQR0Y_f",
+              "parentSectionId": "jQR0Y_f",
+              "id": "gfuVZ"
+            }
+          ],
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Dynasty Pistol",
+            "CCW"
+          ]
+        },
+        {
+          "id": "ZvXOBVo",
+          "uid": "lxF3juN",
+          "label": "Replace Dynasty Pistol",
+          "options": [
+            {
+              "uid": "_tz4n",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Leader Shotgun",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 3,
+                  "weaponId": "ehLlCRV1",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Leader Shotgun (12\", A3, AP(1))"
+                }
+              ],
+              "label": "Leader Shotgun (12\", A3, AP(1))",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "lxF3juN",
+              "parentSectionId": "lxF3juN",
+              "id": "_tz4n"
+            },
+            {
+              "uid": "-rTQTwD",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Leader Carbine",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 3,
+                  "weaponId": "GmdDOK_v",
+                  "specialRules": [],
+                  "attacksMultiplier": null,
+                  "label": "Leader Carbine (18\", A3)"
+                }
+              ],
+              "label": "Leader Carbine (18\", A3)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "lxF3juN",
+              "parentSectionId": "lxF3juN",
+              "id": "-rTQTwD"
+            },
+            {
+              "uid": "_rw-P",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Leader Long Rifle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 2,
+                  "weaponId": "24vA6BIZ",
+                  "specialRules": [],
+                  "label": "Leader Long Rifle (30\", A2)"
+                }
+              ],
+              "label": "Leader Long Rifle (30\", A2)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "lxF3juN",
+              "parentSectionId": "lxF3juN",
+              "id": "_rw-P"
+            }
+          ],
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Dynasty Pistol"
+          ]
+        },
+        {
+          "id": "BYFJne-",
+          "uid": "-PA55",
+          "label": "Replace CCW",
+          "options": [
+            {
+              "uid": "jXiwN",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Royal Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "gZWBZCw7",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Royal Sword (A2, AP(1), Rending)"
+                }
+              ],
+              "label": "Royal Sword (A2, AP(1), Rending)",
+              "parentSectionId": "-PA55",
+              "id": "jXiwN"
+            },
+            {
+              "uid": "-rDhY",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Royal Sickle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "SFVvhcBE",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "label": "Royal Sickle (A2, AP(2))"
+                }
+              ],
+              "label": "Royal Sickle (A2, AP(2))",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "-PA55",
+              "parentSectionId": "-PA55",
+              "id": "-rDhY"
+            },
+            {
+              "uid": "9GWPz",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Hook Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "TNS3EvoY",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Hook Sword (A1, AP(2), Deadly(3))"
+                }
+              ],
+              "label": "Hook Sword (A1, AP(2), Deadly(3))",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "-PA55",
+              "parentSectionId": "-PA55",
+              "id": "9GWPz"
+            }
+          ],
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "CCW"
+          ]
+        },
+        {
+          "id": "4jmQllo",
+          "uid": "u7ORTDCW",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "NLQDyq-V",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Honor-Bound",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Honor-Bound (Vengeance)",
+                  "content": [
+                    {
+                      "id": "C5t3oLnEpNtX",
+                      "name": "Vengeance",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Honor-Bound (Vengeance)",
+              "parentSectionId": "u7ORTDCW",
+              "parentPackageUid": "EstHZkiM",
+              "id": "NLQDyq-V"
+            }
+          ],
+          "parentPackageUid": "EstHZkiM",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        },
+        {
+          "id": "lIBPdsK",
+          "uid": "rLm4qM3",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "pfGozCg",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Hover Alert-Drone",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "32",
+                    "square": "25"
+                  },
+                  "label": "Hover Alert-Drone (Repel Ambushers)",
+                  "content": [
+                    {
+                      "id": "C6MzEy1CnxTs",
+                      "name": "Repel Ambushers",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Hover Alert-Drone (Repel Ambushers)",
+              "parentSectionId": "rLm4qM3",
+              "id": "pfGozCg"
+            },
+            {
+              "uid": "NhLWmJuVsQ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Royal Guard Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Royal Guard Master (Regeneration, Versatile Attack)",
+                  "content": [
+                    {
+                      "id": "8KujvrTG8k9p",
+                      "name": "Regeneration",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "9Te72f48wJyw",
+                      "name": "Versatile Attack",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Royal Guard Master (Regeneration, Versatile Attack)",
+              "parentSectionId": "rLm4qM3",
+              "id": "NhLWmJuVsQ"
+            },
+            {
+              "uid": "tACrG",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Ninja Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Ninja Master (Ambush, Stealth, Teleport)",
+                  "content": [
+                    {
+                      "id": "6mJw5IdqSqNC",
+                      "name": "Ambush",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "9jyvRoBODD-O",
+                      "name": "Stealth",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "LtPyHi_-DHf4",
+                      "name": "Teleport",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Ninja Master (Ambush, Stealth, Teleport)",
+              "parentSectionId": "rLm4qM3",
+              "id": "tACrG"
+            }
+          ],
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "E1",
+      "hint": "Support Drones",
+      "sections": [
+        {
+          "id": "tY0IBbR",
+          "uid": "5IxC_7E",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "xiu4bVs",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "kBJrV-w",
+                  "cost": 5
+                },
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 5
+                },
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Attack Drone",
+                  "type": "ArmyBookItem",
+                  "label": "Attack Drone (Drone Laser Gun (18\", A1, Limited, Puncture))",
+                  "content": [
+                    {
+                      "name": "Drone Laser Gun",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 18,
+                      "attacks": 1,
+                      "weaponId": "MRS3iIeM",
+                      "specialRules": [
+                        {
+                          "id": "9042COVrLCsI",
+                          "name": "Limited",
+                          "type": "ArmyBookRule"
+                        },
+                        {
+                          "id": "HmDYt1eQUL2f",
+                          "name": "Puncture",
+                          "type": "ArmyBookRule"
+                        }
+                      ],
+                      "label": "Drone Laser Gun (18\", A1, Limited, Puncture)"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Attack Drone (Drone Laser Gun (18\", A1, Limited, Puncture))",
+              "parentSectionId": "5IxC_7E",
+              "id": "xiu4bVs"
+            },
+            {
+              "uid": "LA6wLd5",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "kBJrV-w",
+                  "cost": 10
+                },
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 10
+                },
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Energy Drone",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Energy Drone (Ignores Cover Aura)",
+                  "content": [
+                    {
+                      "id": "4NiNnvh-brLp",
+                      "name": "Ignores Cover Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Energy Drone (Ignores Cover Aura)",
+              "parentSectionId": "5IxC_7E",
+              "id": "LA6wLd5"
+            },
+            {
+              "uid": "US-KuV2",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "kBJrV-w",
+                  "cost": 15
+                },
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 15
+                },
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Shield Drone",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Shield Drone (Stealth Aura)",
+                  "content": [
+                    {
+                      "id": "8haZ36fXvnzn",
+                      "name": "Stealth Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Shield Drone (Stealth Aura)",
+              "parentSectionId": "5IxC_7E",
+              "id": "US-KuV2"
+            }
+          ],
+          "parentPackageUid": "E1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "F1",
+      "hint": "Warriors",
+      "sections": [
+        {
+          "id": "R4BZMeA",
+          "uid": "XNbIM2s",
+          "label": "Replace Long Rifle",
+          "options": [
+            {
+              "uid": "prDG6tH",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "Lnlu85A_",
+                  "name": "Shotgun",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 2,
+                  "weaponId": "Lnlu85A_",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Shotgun (12\", A2, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Shotgun (12\", A2, AP(1))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "XNbIM2s",
+              "parentSectionId": "XNbIM2s",
+              "id": "prDG6tH"
+            },
+            {
+              "uid": "otFL3q7",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "JxLx21Jx",
+                  "name": "Carbine",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "JxLx21Jx",
+                  "specialRules": [],
+                  "attacksMultiplier": null,
+                  "label": "Carbine (18\", A2)",
+                  "count": 1
+                }
+              ],
+              "label": "Carbine (18\", A2)",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "XNbIM2s",
+              "parentSectionId": "XNbIM2s",
+              "id": "otFL3q7"
+            },
+            {
+              "uid": "4qMNiYP",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "Mkr6ZkoQ",
+                  "name": "Shred Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "Mkr6ZkoQ",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Shred Rifle (18\", A2, Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Shred Rifle (18\", A2, Rending)",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "1lkVLBV",
+              "parentSectionId": "XNbIM2s",
+              "id": "4qMNiYP"
+            },
+            {
+              "uid": "gkw6bMI",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "-_T9wTAv",
+                  "name": "Flamer",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "-_T9wTAv",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Flamer (12\", A1, Blast(3), Reliable)",
+                  "count": 1
+                }
+              ],
+              "label": "Flamer (12\", A1, Blast(3), Reliable)",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "1lkVLBV",
+              "parentSectionId": "XNbIM2s",
+              "id": "gkw6bMI"
+            },
+            {
+              "uid": "SG_Ukxc",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gN1LAzCn",
+                  "name": "Plasma Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "gN1LAzCn",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Plasma Rifle (24\", A1, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Plasma Rifle (24\", A1, AP(4))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "1lkVLBV",
+              "parentSectionId": "XNbIM2s",
+              "id": "SG_Ukxc"
+            },
+            {
+              "uid": "D38XYVt",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "rWpAIWbo",
+                  "name": "Fusion Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "rWpAIWbo",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Fusion Rifle (12\", A1, AP(4), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Fusion Rifle (12\", A1, AP(4), Deadly(3))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "1lkVLBV",
+              "parentSectionId": "XNbIM2s",
+              "id": "D38XYVt"
+            },
+            {
+              "uid": "qstLI",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Shishi Turret",
+                  "type": "ArmyBookItem",
+                  "label": "Shishi Turret (Rocket (24\", A1, Blast(3), Indirect))",
+                  "content": [
+                    {
+                      "name": "Rocket",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 24,
+                      "attacks": 1,
+                      "weaponId": "PymqtDc0",
+                      "specialRules": [
+                        {
+                          "id": "w_vX0mi58KKt",
+                          "name": "Blast",
+                          "type": "ArmyBookRule",
+                          "rating": 3
+                        },
+                        {
+                          "id": "8Ck9GAwUK824",
+                          "name": "Indirect",
+                          "type": "ArmyBookRule"
+                        }
+                      ],
+                      "label": "Rocket (24\", A1, Blast(3), Indirect)"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Shishi Turret (Rocket (24\", A1, Blast(3), Indirect))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "1lkVLBV",
+              "parentSectionId": "XNbIM2s",
+              "id": "qstLI"
+            },
+            {
+              "uid": "hN_rU",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Shishi Turret",
+                  "type": "ArmyBookItem",
+                  "label": "Shishi Turret (Missiles (30\", A2, AP(3), Unstoppable))",
+                  "content": [
+                    {
+                      "name": "Missiles",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 30,
+                      "attacks": 2,
+                      "weaponId": "DlyOhNAd",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 3
+                        },
+                        {
+                          "id": "QXyt-zV_bjpg",
+                          "name": "Unstoppable"
+                        }
+                      ],
+                      "label": "Missiles (30\", A2, AP(3), Unstoppable)"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Shishi Turret (Missiles (30\", A2, AP(3), Unstoppable))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "1lkVLBV",
+              "parentSectionId": "XNbIM2s",
+              "id": "hN_rU"
+            }
+          ],
+          "parentPackageUid": "F1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Long Rifle"
+          ]
+        },
+        {
+          "id": "LIBO6Ev",
+          "uid": "DrAvvDnP",
+          "label": "Replace Long Rifle and CCW",
+          "options": [
+            {
+              "uid": "JPPHfen9",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Twin Heavy Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 2,
+                  "weaponId": "suFL1MBm",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "label": "Twin Heavy Pistol (12\", A2, AP(1))"
+                },
+                {
+                  "name": "CCW",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "4o5CBBZC",
+                  "specialRules": [],
+                  "attacksMultiplier": null,
+                  "label": "CCW (A1)"
+                }
+              ],
+              "label": "Twin Heavy Pistol (12\", A2, AP(1)), CCW (A1)",
+              "parentSectionId": "DrAvvDnP",
+              "parentPackageUid": "Dt4prH5P",
+              "parentSectionUid": "hmAb5x1",
+              "id": "JPPHfen9"
+            },
+            {
+              "uid": "GjCgpsV7",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "wfEHdWKY",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Heavy Pistol (12\", A1, AP(1))"
+                },
+                {
+                  "id": null,
+                  "name": "Royal Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "gZWBZCw7",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Royal Sword (A2, AP(1), Rending)"
+                }
+              ],
+              "label": "Heavy Pistol (12\", A1, AP(1)), Royal Sword (A2, AP(1), Rending)",
+              "parentSectionId": "DrAvvDnP",
+              "parentPackageUid": "Dt4prH5P",
+              "parentSectionUid": "hmAb5x1",
+              "id": "GjCgpsV7"
+            }
+          ],
+          "parentPackageUid": "Dt4prH5P",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Long Rifle",
+            "CCW"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "G1",
+      "hint": "Scouts",
+      "sections": [
+        {
+          "id": "LvMHV-q",
+          "uid": "s-evu7d",
+          "label": "Replace any Long Rifle",
+          "options": [
+            {
+              "uid": "xIaJd",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "kBJrV-w",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "JxLx21Jx",
+                  "name": "Carbine",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "JxLx21Jx",
+                  "specialRules": [],
+                  "attacksMultiplier": null,
+                  "label": "Carbine (18\", A2)",
+                  "count": 1
+                }
+              ],
+              "label": "Carbine (18\", A2)",
+              "parentPackageUid": "G1",
+              "parentSectionUid": "s-evu7d",
+              "parentSectionId": "s-evu7d",
+              "id": "xIaJd"
+            },
+            {
+              "uid": "piDSZzn",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "kBJrV-w",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "2Ox5FTEq",
+                  "name": "Sniper Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 1,
+                  "weaponId": "2Ox5FTEq",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Sniper Rifle (30\", A1, AP(1), Reliable)",
+                  "count": 1
+                }
+              ],
+              "label": "Sniper Rifle (30\", A1, AP(1), Reliable)",
+              "parentPackageUid": "G1",
+              "parentSectionUid": "_JowWxq",
+              "parentSectionId": "s-evu7d",
+              "id": "piDSZzn"
+            },
+            {
+              "uid": "gTZ_Mmv",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "kBJrV-w",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "wErBONL2",
+                  "name": "Energy Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 36,
+                  "attacks": 1,
+                  "weaponId": "wErBONL2",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "label": "Energy Rifle (36\", A1, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Energy Rifle (36\", A1, AP(4))",
+              "parentPackageUid": "G1",
+              "parentSectionUid": "_JowWxq",
+              "parentSectionId": "s-evu7d",
+              "id": "gTZ_Mmv"
+            }
+          ],
+          "parentPackageUid": "G1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Long Rifle"
+          ]
+        },
+        {
+          "id": "dTeUrvn",
+          "uid": "1bpXjZk",
+          "label": "Upgrade with any",
+          "options": [
+            {
+              "uid": "HdF_Tbl",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "kBJrV-w",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Dynastic Triangulator",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Dynastic Triangulator (Ambush Beacon)",
+                  "content": [
+                    {
+                      "id": "rJSSHbaRMID4",
+                      "name": "Ambush Beacon",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Dynastic Triangulator (Ambush Beacon)",
+              "parentSectionId": "1bpXjZk",
+              "id": "HdF_Tbl"
+            },
+            {
+              "uid": "w5uEHhl1nS",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "kBJrV-w",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "zQ_I59D",
+                  "name": "Targeting Beam",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Targeting Beam (Increased Shooting Range Mark)",
+                  "content": [
+                    {
+                      "id": "SzljHEX27s-v",
+                      "name": "Increased Shooting Range Mark",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Targeting Beam (Increased Shooting Range Mark)",
+              "parentSectionId": "1bpXjZk",
+              "parentPackageUid": "8TBYylr5",
+              "id": "w5uEHhl1nS"
+            }
+          ],
+          "parentPackageUid": "G1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "any"
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "H1",
+      "hint": "Ninja",
+      "sections": [
+        {
+          "id": "ttxVOrs",
+          "uid": "c8oSc",
+          "label": "Replace any Auto-Gun and Sword",
+          "options": [
+            {
+              "uid": "BwYgH",
+              "cost": 0,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6S-Xqit",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 2,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "z_ATqspK",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "2x Sword (A1, AP(1), Rending)"
+                }
+              ],
+              "label": "2x Sword (A1, AP(1), Rending)",
+              "parentPackageUid": "H1",
+              "parentSectionUid": "c8oSc",
+              "parentSectionId": "c8oSc",
+              "id": "BwYgH"
+            },
+            {
+              "uid": "I6JwNYkW-4",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6S-Xqit",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Sickle",
+                  "type": "ArmyBookWeapon",
+                  "count": 2,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "0uiKC2MD",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "label": "2x Sickle (A1, AP(2))"
+                }
+              ],
+              "label": "2x Sickle (A1, AP(2))",
+              "parentSectionId": "c8oSc",
+              "id": "I6JwNYkW-4"
+            },
+            {
+              "uid": "-iI0H_1-k5",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6S-Xqit",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Auto-Gun",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "rvnbHEZ0",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "label": "Auto-Gun (12\", A1, Rending)"
+                },
+                {
+                  "id": null,
+                  "name": "Sickle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "0uiKC2MD",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "label": "Sickle (A1, AP(2))"
+                }
+              ],
+              "label": "Auto-Gun (12\", A1, Rending), Sickle (A1, AP(2))",
+              "parentSectionId": "c8oSc",
+              "id": "-iI0H_1-k5"
+            },
+            {
+              "uid": "Y5M4AZtMUW",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6S-Xqit",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Auto-Gun",
+                  "type": "ArmyBookWeapon",
+                  "count": 2,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "rvnbHEZ0",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "label": "2x Auto-Gun (12\", A1, Rending)"
+                },
+                {
+                  "id": null,
+                  "name": "Martial Arts",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "attacks": 1,
+                  "weaponId": "b2_s-ifV",
+                  "specialRules": [],
+                  "label": "Martial Arts (A1)"
+                }
+              ],
+              "label": "2x Auto-Gun (12\", A1, Rending), Martial Arts (A1)",
+              "parentSectionId": "c8oSc",
+              "id": "Y5M4AZtMUW"
+            }
+          ],
+          "parentPackageUid": "H1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Auto-Gun",
+            "Sword"
+          ]
+        },
+        {
+          "id": "pXFYvVs",
+          "uid": "Wn0Mx73o",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "EiW6oHV8",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6S-Xqit",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Targeting Beam",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Targeting Beam (Increased Shooting Range Mark)",
+                  "content": [
+                    {
+                      "id": "SzljHEX27s-v",
+                      "name": "Increased Shooting Range Mark",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Targeting Beam (Increased Shooting Range Mark)",
+              "parentSectionId": "Wn0Mx73o",
+              "parentPackageUid": "Asx3b6EC",
+              "id": "EiW6oHV8"
+            }
+          ],
+          "parentPackageUid": "Asx3b6EC",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "I1",
+      "hint": "Royal Guard",
+      "sections": [
+        {
+          "id": "QBfHAxW",
+          "uid": "zlJVFkl",
+          "label": "Replace Spear-Shot",
+          "options": [
+            {
+              "uid": "bZSmr7t",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "nT_lDKZ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "uy2eOtgk",
+                  "name": "Spear-Flame",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "uy2eOtgk",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Spear-Flame (12\", A1, Blast(3), Limited, Reliable)",
+                  "count": 1
+                }
+              ],
+              "label": "Spear-Flame (12\", A1, Blast(3), Limited, Reliable)",
+              "parentPackageUid": "I1",
+              "parentSectionUid": "zlJVFkl",
+              "parentSectionId": "zlJVFkl",
+              "id": "bZSmr7t"
+            },
+            {
+              "uid": "_8-zMw2",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "nT_lDKZ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "UZU24rSd",
+                  "name": "Spear-Plasma",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "UZU24rSd",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Spear-Plasma (24\", A1, AP(4), Limited)",
+                  "count": 1
+                }
+              ],
+              "label": "Spear-Plasma (24\", A1, AP(4), Limited)",
+              "parentPackageUid": "I1",
+              "parentSectionUid": "zlJVFkl",
+              "parentSectionId": "zlJVFkl",
+              "id": "_8-zMw2"
+            },
+            {
+              "uid": "WU6bxcp",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "nT_lDKZ",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "0rI-3zp3",
+                  "name": "Spear-Fuse",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "0rI-3zp3",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Spear-Fuse (12\", A1, AP(4), Deadly(3), Limited)",
+                  "count": 1
+                }
+              ],
+              "label": "Spear-Fuse (12\", A1, AP(4), Deadly(3), Limited)",
+              "parentPackageUid": "I1",
+              "parentSectionUid": "zlJVFkl",
+              "parentSectionId": "zlJVFkl",
+              "id": "WU6bxcp"
+            },
+            {
+              "uid": "q9VAaXE",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "nT_lDKZ",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "FXXVPi97",
+                  "name": "Spear-Shred",
+                  "type": "ArmyBookWeapon",
+                  "range": 9,
+                  "attacks": 3,
+                  "weaponId": "FXXVPi97",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Spear-Shred (9\", A3, Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Spear-Shred (9\", A3, Rending)",
+              "parentPackageUid": "I1",
+              "parentSectionUid": "zlJVFkl",
+              "parentSectionId": "zlJVFkl",
+              "id": "q9VAaXE"
+            }
+          ],
+          "parentPackageUid": "I1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Spear-Shot"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "J1",
+      "hint": "Attack Drones",
+      "sections": [
+        {
+          "id": "3tdDLJM",
+          "uid": "GE5vX3p",
+          "label": "Replace Laser Gun",
+          "options": [
+            {
+              "uid": "h1PYOOy",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdkWnvx",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "id": "uE-TDOjZ",
+                  "name": "Heavy Laser Gun",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "uE-TDOjZ",
+                  "specialRules": [
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "HmDYt1eQUL2f",
+                      "name": "Puncture",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Heavy Laser Gun (24\", A1, Deadly(3), Puncture)",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Laser Gun (24\", A1, Deadly(3), Puncture)",
+              "parentPackageUid": "J1",
+              "parentSectionUid": "GE5vX3p",
+              "parentSectionId": "GE5vX3p",
+              "id": "h1PYOOy"
+            }
+          ],
+          "parentPackageUid": "J1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Laser Gun"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "K1",
+      "hint": "ONIs",
+      "sections": [
+        {
+          "id": "6PnqVA7",
+          "uid": "hyaMu1I",
+          "label": "Replace any Heavy Fist",
+          "options": [
+            {
+              "uid": "M_627RW",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "5oAZn9ZG",
+                  "name": "Gun-Fist",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "5oAZn9ZG",
+                  "specialRules": [],
+                  "label": "Gun-Fist (24\", A2)",
+                  "count": 1
+                }
+              ],
+              "label": "Gun-Fist (24\", A2)",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "hyaMu1I",
+              "parentSectionId": "hyaMu1I",
+              "id": "M_627RW"
+            },
+            {
+              "uid": "IGin4xV",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "WvoM54zC",
+                  "name": "Shred-Fist",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "WvoM54zC",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Shred-Fist (18\", A2, Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Shred-Fist (18\", A2, Rending)",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "hyaMu1I",
+              "parentSectionId": "hyaMu1I",
+              "id": "IGin4xV"
+            },
+            {
+              "uid": "5v30Yp_",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gBtzhISH",
+                  "name": "Plasma-Fist",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "gBtzhISH",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "label": "Plasma-Fist (24\", A2, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Plasma-Fist (24\", A2, AP(4))",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "hyaMu1I",
+              "parentSectionId": "hyaMu1I",
+              "id": "5v30Yp_"
+            }
+          ],
+          "parentPackageUid": "K1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Heavy Fist"
+          ]
+        },
+        {
+          "id": "ftb-zRq",
+          "uid": "GZvYj",
+          "label": "Replace Heavy Fist",
+          "options": [
+            {
+              "uid": "Gjv3O",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Flame-Fist",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "W-PoSGI7",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Flame-Fist (12\", A1, Blast(3), Reliable)"
+                }
+              ],
+              "label": "Flame-Fist (12\", A1, Blast(3), Reliable)",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "GZvYj",
+              "parentSectionId": "GZvYj",
+              "id": "Gjv3O"
+            },
+            {
+              "uid": "2r1w6",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fusion-Fist",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "v_Uk5CKp",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "label": "Fusion-Fist (12\", A1, AP(4), Deadly(3))"
+                }
+              ],
+              "label": "Fusion-Fist (12\", A1, AP(4), Deadly(3))",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "GZvYj",
+              "parentSectionId": "GZvYj",
+              "id": "2r1w6"
+            },
+            {
+              "uid": "XR9DY",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Rocket-Fist",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "YAHWmCdo",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "8Ck9GAwUK824",
+                      "name": "Indirect",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Rocket-Fist (24\", A1, Blast(3), Indirect)"
+                }
+              ],
+              "label": "Rocket-Fist (24\", A1, Blast(3), Indirect)",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "GZvYj",
+              "parentSectionId": "GZvYj",
+              "id": "XR9DY"
+            },
+            {
+              "uid": "99TW4",
+              "cost": 50,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 50
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Missile-Fist",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 2,
+                  "weaponId": "AzjUSd9q",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "QXyt-zV_bjpg",
+                      "name": "Unstoppable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Missile-Fist (30\", A2, AP(3), Unstoppable)"
+                }
+              ],
+              "label": "Missile-Fist (30\", A2, AP(3), Unstoppable)",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "GZvYj",
+              "parentSectionId": "GZvYj",
+              "id": "99TW4"
+            }
+          ],
+          "parentPackageUid": "K1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Heavy Fist"
+          ]
+        },
+        {
+          "id": "bDJ9M_A",
+          "uid": "1hTR1G1",
+          "label": "Replace 2x Heavy Fist",
+          "options": [
+            {
+              "uid": "_FX3A",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "CE2lMHyv",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Sword (A2, AP(1), Rending)"
+                },
+                {
+                  "name": "Combat Shield",
+                  "type": "ArmyBookItem",
+                  "label": "Combat Shield (Shielded)",
+                  "content": [
+                    {
+                      "id": "wsqfB0fq69eG",
+                      "name": "Shielded",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sword (A2, AP(1), Rending), Combat Shield (Shielded)",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "1hTR1G1",
+              "parentSectionId": "1hTR1G1",
+              "id": "_FX3A"
+            },
+            {
+              "uid": "7TIhtQ1",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Glaive",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "NLMYJMA2",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Heavy Glaive (A3, AP(2))"
+                }
+              ],
+              "label": "Heavy Glaive (A3, AP(2))",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "1hTR1G1",
+              "parentSectionId": "1hTR1G1",
+              "id": "7TIhtQ1"
+            }
+          ],
+          "parentPackageUid": "K1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "2x Heavy Fist"
+          ]
+        },
+        {
+          "id": "VA0rIln",
+          "uid": "uG8GK-u",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "LGBieIm",
+              "cost": 50,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Jetpacks",
+                  "type": "ArmyBookItem",
+                  "label": "Jetpacks (Ambush, Flying)",
+                  "content": [
+                    {
+                      "id": "6mJw5IdqSqNC",
+                      "name": "Ambush",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Jetpacks (Ambush, Flying)",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "uG8GK-u",
+              "parentSectionId": "uG8GK-u",
+              "id": "LGBieIm"
+            }
+          ],
+          "parentPackageUid": "K1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "L1",
+      "hint": "Hunting Pack",
+      "sections": [
+        {
+          "id": "eDXTyQJ",
+          "uid": "c6uNEzr",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "8pkC9NI3fY",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6LpK3Hi",
+                  "cost": 5
+                },
+                {
+                  "unitId": "e54b888",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Vanguard Hunt Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Vanguard Hunt Master (Scout)",
+                  "content": [
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Vanguard Hunt Master (Scout)",
+              "parentSectionId": "c6uNEzr",
+              "id": "8pkC9NI3fY"
+            },
+            {
+              "uid": "EE3I2k_",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6LpK3Hi",
+                  "cost": 5
+                },
+                {
+                  "unitId": "e54b888",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Combat Hunt Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Combat Hunt Master (Unpredictable Fighter)",
+                  "content": [
+                    {
+                      "id": "DEeVIJcfNfS6",
+                      "name": "Unpredictable Fighter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Combat Hunt Master (Unpredictable Fighter)",
+              "parentSectionId": "c6uNEzr",
+              "id": "EE3I2k_"
+            }
+          ],
+          "parentPackageUid": "L1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "P9Fks",
+      "hint": "Specialists - Leader",
+      "sections": [
+        {
+          "id": "f0Chazk",
+          "uid": "UwHEi",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "c2hPm",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Warlord",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Warlord (Counter-Attack Aura)",
+                  "content": [
+                    {
+                      "id": "Aw2kbPkBywee",
+                      "name": "Counter-Attack Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Warlord (Counter-Attack Aura)",
+              "parentSectionId": "UwHEi",
+              "id": "c2hPm"
+            },
+            {
+              "uid": "5g_uQuGyY8",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sentinel",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sentinel (Fearless Aura)",
+                  "content": [
+                    {
+                      "id": "C0UHMLhvoXXj",
+                      "name": "Fearless Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sentinel (Fearless Aura)",
+              "parentSectionId": "UwHEi",
+              "id": "5g_uQuGyY8"
+            },
+            {
+              "uid": "WHfDf",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Captain",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Captain (Clan Warrior Boost Aura)",
+                  "content": [
+                    {
+                      "id": "WdkGC1Q6_nHY",
+                      "name": "Clan Warrior Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Captain (Clan Warrior Boost Aura)",
+              "parentPackageUid": "P9Fks",
+              "parentSectionUid": "UwHEi",
+              "parentSectionId": "UwHEi",
+              "id": "WHfDf"
+            },
+            {
+              "uid": "mKMzc",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sergeant",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sergeant (Piercing Hunter Aura)",
+                  "content": [
+                    {
+                      "id": "1m7a9ADI-D_g",
+                      "name": "Piercing Hunter Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sergeant (Piercing Hunter Aura)",
+              "parentPackageUid": "P9Fks",
+              "parentSectionUid": "UwHEi",
+              "parentSectionId": "UwHEi",
+              "id": "mKMzc"
+            },
+            {
+              "uid": "ttrp9",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bEeuIws",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sage",
+                  "type": "ArmyBookItem",
+                  "label": "Sage (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sage (Caster(2))",
+              "parentPackageUid": "P9Fks",
+              "parentSectionUid": "UwHEi",
+              "parentSectionId": "UwHEi",
+              "id": "ttrp9"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "P9Fks",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "YyyxzNTk",
+      "hint": "Honor-Bound",
+      "sections": [
+        {
+          "id": "pGN9Jm_",
+          "uid": "ic94wqkncn",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "8_8b0uLdkr",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tBFpCN2",
+                  "cost": 10
+                },
+                {
+                  "unitId": "nT_lDKZ",
+                  "cost": 10
+                },
+                {
+                  "unitId": "bILTbNt",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Honor-Bound",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Honor-Bound (Vengeance)",
+                  "content": [
+                    {
+                      "id": "C5t3oLnEpNtX",
+                      "name": "Vengeance",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Honor-Bound (Vengeance)",
+              "parentSectionId": "ic94wqkncn",
+              "id": "8_8b0uLdkr"
+            }
+          ],
+          "parentPackageUid": "YyyxzNTk",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    }
+  ],
+  "customRules": [],
+  "customWeapons": [],
+  "spells": [
+    {
+      "id": "cxXYp",
+      "cost": 30,
+      "name": "Spirit Power",
+      "type": 1,
+      "effect": "Pick up to two friendly units within 12\", which get Flying once (next time the effect would apply).",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "-QJdqJEKjIpE",
+                "name": "Flying"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "{ name: params.effect.unitRule.name, rating: params.effect.unitRule.rating, multiplier: params.multiplier * (params.aura ? this.AuraSize : 1), avgUnit: !params.thisUnit }",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "-QJdqJEKjIpE",
+                "name": "Flying"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 1
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "SyKfB",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "pgW4u",
+      "cost": 15,
+      "name": "Soul Spear",
+      "type": 0,
+      "effect": "Pick one enemy model within 24\", which takes 1 hit with Puncture.",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "1"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "HmDYt1eQUL2f",
+                "name": "Puncture"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "model"
+            },
+            {
+              "name": "inRange",
+              "value": "within 24\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 1
+              },
+              "weaponRule1": {
+                "id": "HmDYt1eQUL2f",
+                "name": "Puncture"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "inRange": {
+                "name": "within 24\"",
+                "value": 24
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1.2
+          },
+          "multiplier": 1.2
+        }
+      ],
+      "spellbookId": "yMHSw",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "G-gJZ",
+      "cost": 5,
+      "name": "Spirit Resolve",
+      "type": 1,
+      "effect": "Pick up to four friendly units within 12\", which get Clan Warrior Boost once (next time the effect would apply).",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "TYEJ10EP0Xq9",
+                "name": "Clan Warrior Boost"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "{ name: params.effect.unitRule.name, rating: params.effect.unitRule.rating, multiplier: params.multiplier * (params.aura ? this.AuraSize : 1), avgUnit: !params.thisUnit }",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "TYEJ10EP0Xq9",
+                "name": "Clan Warrior Boost"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 2
+          },
+          "multiplier": 2
+        }
+      ],
+      "spellbookId": "-jeR8",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "_hB0l",
+      "cost": 20,
+      "name": "Mind Vortex",
+      "type": 0,
+      "effect": "Pick up to four enemy units within 12\", which take 1 hit with AP(2) each.",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "1"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 2
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2
+          },
+          "multiplier": 2
+        }
+      ],
+      "spellbookId": "CF09A",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "W-9aP",
+      "cost": 5,
+      "name": "Eternal Guidance",
+      "type": 2,
+      "effect": "Pick up to six enemy units within 18\", which friendly units get +6\" range when shooting against once (next time the effect would apply).",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "LixCCuyRq4-_",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "rangeModifier",
+              "value": "+6\""
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to three"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "this.getWeaponCostDiff(this.avgRangedWeapon, { quality: 4 }, ruleName, { range: this.avgRangedWeapon.range + params.effect.rangeModifier.value })",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rangeModifier": {
+                "name": "+6\"",
+                "value": 6
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 3.3000000000000003
+          },
+          "multiplier": 3.3000000000000003
+        }
+      ],
+      "spellbookId": "fHGB_",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "trKS8",
+      "cost": 15,
+      "name": "Dragon Breath",
+      "type": 0,
+      "effect": "Pick up to three enemy units within 12\", which take 3 hits each.",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "3"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "spellHitRoll",
+              "value": ""
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 9
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "YvUYn",
+      "effectSkirmish": ""
+    }
+  ],
+  "modifiedAt": "2026-01-26T15:41:06.609Z",
+  "editedAt": "2025-12-05T00:57:42.974Z",
+  "official": true,
+  "versionString": "3.5.1",
+  "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/vux1Y5vvULmaxZ8P/681xpdu23Sm1Y2uhaqmNq.jpg",
+  "coverImageCredit": "",
+  "bannerImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/banners/vux1Y5vvULmaxZ8P/qM4Unv7wMUFAlNcXc2rJ2.jpg",
+  "visibility": 1,
+  "factionId": null,
+  "factionName": null,
+  "factionRelation": null,
+  "popularity": 0,
+  "downvotes": 0,
+  "partnerSettings": {
+    "images": [
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/vux1Y5vvULmaxZ8P/S8tXs1W1a47QNGlbydsnj.jpg",
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/vux1Y5vvULmaxZ8P/KrrITNuU3wdchorQWHwZP.jpg",
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/vux1Y5vvULmaxZ8P/NnxyHljJqYVTRnsORmDfT.jpg",
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/vux1Y5vvULmaxZ8P/UU8kMwMG-g8L83jnIpQUO.jpg",
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/vux1Y5vvULmaxZ8P/tzTEvZgapOGzU6Sg52-dp.jpg"
+    ],
+    "storeLinks": [
+      "https://www.myminifactory.com/users/onepagerules",
+      "https://www.etsy.com/shop/onepagerules"
+    ]
+  },
+  "balanceValid": false,
+  "balanceValidReason": 1,
+  "loreUrl": "https://www.onepagerules.com/factions/eternal-dynasty",
+  "voted": null,
+  "specialRules": [
+    {
+      "id": "IyLY1212wacW",
+      "name": "Fortified",
+      "aliasedRuleId": null,
+      "description": "When units where all models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "8haZ36fXvnzn",
+      "name": "Stealth Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "LtPyHi_-DHf4",
+      "name": "Teleport",
+      "aliasedRuleId": null,
+      "description": "Once per activation, before attacking, place this model anywhere fully within 6\" of its position.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "DEeVIJcfNfS6",
+      "name": "Unpredictable Fighter",
+      "aliasedRuleId": null,
+      "description": "When in melee, roll one die and apply one effect to all models with this rule: on a 1-3 they get AP(+1), and on a 4-6 they get +1 to hit rolls instead.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "rqBYj1yANC3J",
+      "name": "Unique",
+      "aliasedRuleId": null,
+      "description": "This unit may only be taken once per army.",
+      "hasRating": false,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
+      "id": "C6MzEy1CnxTs",
+      "name": "Repel Ambushers",
+      "aliasedRuleId": null,
+      "description": "Enemy units using Ambush must be set up over 12\" away from this model's unit.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "wsqfB0fq69eG",
+      "name": "Shielded",
+      "aliasedRuleId": null,
+      "description": "Units where all models have this rule get +1 to defense rolls against hits that are not from spells.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "IEJp3a4vE0CB",
+      "name": "Shred",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 1 to block hits, this weapon deals 1 extra wound.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "B5RGOPajK6Lr",
+      "name": "Precision Fighter Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get +1 to hit rolls in melee. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "1m7a9ADI-D_g",
+      "name": "Piercing Hunter Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Piercing Hunter. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "21dbpSjSDeOY",
+      "name": "Clan Warrior",
+      "aliasedRuleId": "aiYEmCuDPUcM",
+      "description": "For each unmodified roll of 6 to hit when attacking, this model may roll +1 attack with that weapon. This rule doesn’t apply to newly generated attacks.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "9Te72f48wJyw",
+      "name": "Versatile Attack",
+      "aliasedRuleId": null,
+      "description": "When this unit is activated, pick one effect: until the end of the activation all models with this rule in it either get AP(+1) when attacking, or get +1 to hit rolls when attacking.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "Aw2kbPkBywee",
+      "name": "Counter-Attack Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Counter-Attack. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "4NiNnvh-brLp",
+      "name": "Ignores Cover Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Ignores Cover when shooting. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "C0UHMLhvoXXj",
+      "name": "Fearless Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Fearless. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "fOIa9S1t0q7S",
+      "name": "Melee Evasion Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Melee Evasion. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "h9JsgD38BRjI",
+      "name": "Bounding",
+      "aliasedRuleId": null,
+      "description": "When this unit is activated, you may place all models with this rule in it anywhere fully within D3+1\" of their position.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "5v6oaGfrdf29",
+      "name": "Surge",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "HmDYt1eQUL2f",
+      "name": "Puncture",
+      "aliasedRuleId": null,
+      "description": "Ignores Regeneration, and against non-Hero units with Tough(3) or more, this weapon gets AP(+4).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "C5t3oLnEpNtX",
+      "name": "Vengeance",
+      "aliasedRuleId": null,
+      "description": "When this unit is fully destroyed, place as many Vengeance markers on the unit that destroyed it as models with this rule in this unit at the beginning of the game. Friendly units get +X to hit rolls with their weapons when attacking that unit, where X is the number of markers on it.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "WdkGC1Q6_nHY",
+      "name": "Clan Warrior Boost Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Clan Warrior Boost. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "SzljHEX27s-v",
+      "name": "Increased Shooting Range Mark",
+      "aliasedRuleId": null,
+      "description": "Once per activation, before attacking, pick up to 4 enemy units within 18\", which friendly units get +6\" range when shooting against once (next time the effect would apply).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "rJSSHbaRMID4",
+      "name": "Ambush Beacon",
+      "aliasedRuleId": null,
+      "description": "Friendly units using Ambush may ignore distance restrictions from enemies if they are deployed within 6\" of this model.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "nNh98rpX_sZv",
+      "name": "Casting Buff",
+      "aliasedRuleId": null,
+      "description": "Once per activation, before attacking, pick one friendly model within 12\" with Caster, which gets +1 to casting rolls once (next time the effect would apply).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "Y37_ydVGvRqL",
+      "name": "Rapid Advance Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Rapid Advance. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "9jyvRoBODD-O",
+      "name": "Stealth",
+      "aliasedRuleId": null,
+      "description": "When units where all models have this rule are shot from over 9\" away, enemy units get -1 to hit rolls.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "6mJw5IdqSqNC",
+      "name": "Ambush",
+      "aliasedRuleId": null,
+      "description": "May be set aside before deployment. At the start of any round after the first, may be deployed anywhere over 9” away from enemy units. Players alternate in placing Ambush units, starting with the player that activates next. Units that deploy via Ambush can’t seize or contest objectives on the round they deploy.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "dlk9Q7howUDr",
+      "name": "Piercing Hunter",
+      "aliasedRuleId": null,
+      "description": "When this model shoots at enemies over 9\" away, its weapons get AP(+1).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "5Wpo74lRNhqB",
+      "name": "Counter-Attack",
+      "aliasedRuleId": null,
+      "description": "Strikes first when charged.",
+      "hasRating": null,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "c45Fw0D2oGOk",
+      "name": "Counter",
+      "aliasedRuleId": null,
+      "description": "Strikes first with this weapon when charged, and the charging unit gets -1 total Impact rolls per model with Counter.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "efmjJPTe0Yzd",
+      "name": "Ignores Cover",
+      "aliasedRuleId": null,
+      "description": "This weapon ignores cover.",
+      "hasRating": false,
+      "coreType": 5,
+      "targetType": 2
+    },
+    {
+      "id": "2atvlmICQSCV",
+      "name": "Fearless",
+      "aliasedRuleId": null,
+      "description": "When a unit where all models have this rule fails a morale test, roll one die. On a 4+ it counts as passed instead.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "dIQ3SGl2J2Ew",
+      "name": "Fear",
+      "aliasedRuleId": null,
+      "description": "This model counts as having dealt +X wounds when checking wound effects in melee (must deal at least one wound).",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "EgdF_3MSddXR",
+      "name": "Melee Evasion",
+      "aliasedRuleId": null,
+      "description": "Enemies get -1 to hit rolls in melee when attacking units where all models have this rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "8KujvrTG8k9p",
+      "name": "Regeneration",
+      "aliasedRuleId": null,
+      "description": "When a unit where all models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "0TfnG5G4JEv0",
+      "name": "Ignores Regeneration",
+      "aliasedRuleId": null,
+      "description": "This weapon ignores Regeneration.",
+      "hasRating": null,
+      "coreType": 5,
+      "targetType": 2
+    },
+    {
+      "id": "a0YtInGiUDd6",
+      "name": "Tough",
+      "aliasedRuleId": null,
+      "description": "This model only rolls to check wound effects once it has taken at least X wounds, and is only Knocked Out on rolls of 5+X or more.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "TYEJ10EP0Xq9",
+      "name": "Clan Warrior Boost",
+      "aliasedRuleId": null,
+      "description": "If this model has Clan Warrior, it gets extra attacks on successful unmodified hit results of 5-6 from Clan Warrior (instead of only on 6).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "47CAqf7ySlfc",
+      "name": "Caster",
+      "aliasedRuleId": null,
+      "description": "Gets X spell tokens at the start of each round, but can’t hold more than 6 tokens at once. At any point before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). Roll one die, on 4+ resolve the effect on a target in line of sight. Models within 18” in line of sight of the caster’s unit may spend any number of spell tokens at the same time before rolling, to give the caster +1/-1 to the roll per token.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "HmxkJq_My-Ub",
+      "name": "Rapid Advance",
+      "aliasedRuleId": null,
+      "description": "This model moves +4\" when using Advance actions.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "-QJdqJEKjIpE",
+      "name": "Flying",
+      "aliasedRuleId": null,
+      "description": "May move through units and terrain, and ignores terrain effects whilst moving, and automatically passes jumping rolls.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    }
+  ],
+  "username": "onepagerules",
+  "creator": false,
+  "isCreator": false,
+  "gameSystemId": 3,
+  "gameSystemSlug": "grimdark-future-firefight",
+  "aberration": "GFF",
+  "gameSystemKey": "GFF",
+  "flavouredUid": "vux1Y5vvULmaxZ8P~3"
+}

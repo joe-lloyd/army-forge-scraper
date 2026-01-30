@@ -1,0 +1,4810 @@
+{
+  "uid": "3j10zage1lddt6sr",
+  "userId": "1is8a3JZYgw",
+  "enabledGameSystems": [
+    2,
+    9,
+    10
+  ],
+  "name": "Titan Lords",
+  "genericName": "Mech Lords",
+  "hint": "",
+  "background": "The Titan Lords are massive robotic walkers commanded by the idle rich. These bored members of the upper classes wage war from mobile fortresses and view the battlefield as their playground.\n\nFew in number, the Titan Lords usually offer their services as mercenaries, but on the rare occasions when they fight together, their armies of massive walkers are a spectacle to behold.  With little fear of consequences for their actions, Titan Lords often wander from one battlefield to the next, seeking some sort of thrill or purpose that is lacking in their pampered lives.",
+  "backgroundFull": "Within a relatively short time, humanity has managed to build up a large industrial base in their colonies throughout the Sirius Sector, and most of these are owned by a handful of powerful companies. This has created a class with wealth far beyond that of Earth prior to the civil war. Some amongst this elite class began to grow restless in their comfortable lives, and these elites formed mercenary corps. Many however became discontent with the risks involved and the discipline of mercenary life, even from the relative comfort of leadership.\n\nA few of the most powerful military companies collaborated to create a new weapon of war which would allow the operators to remain in relative comfort and safety. These mobile fortresses were called Titans. A number of wealthy colonists began to commission these Titans privately, and the owners of these new super-weapons began to style themselves as Titan Lords. The Titan Lords are able to go into battle in relative comfort, eager to claim glory and victory. They view war as sport and lend their services to anyone who could afford their demands for unique luxuries, contracts and valuables.\n\nA sort of code of honour has developed amongst Titan Lords, detailing how one must act in every interaction. These range from expectations of how a Titan Lord ought to dress, to how they ought to spend their earnings. Using the earnings of battle to enrich oneself further is seen as vulgar and a sign of insufficient wealth and nobility. Perhaps most importantly to the Lords, a complicated system of heraldry has been developed to ensure that pilots and their Titans are easily recognized. \n\nSome Titan Lords seek to be acclaimed for their heroism, taking on dangerous jobs for relatively little pay in hopes of gaining fame and love for their valour. Of course, these noble heroes rarely deal well with those who refuse to recognize their selfless heroism. Other Titan Lords view this as a childish desire for praise and care far less for the rabble. These Lords are content to take any work, so long as they can experience the thrill of battle.\n\nHow will you use your supremacy over the battlefield?",
+  "units": [
+    {
+      "id": "bcpqzan",
+      "cost": 190,
+      "name": "Vassal Micro-Titan",
+      "size": 1,
+      "bases": {
+        "round": "105x70",
+        "square": "100x60"
+      },
+      "items": [
+        {
+          "id": "dCYrSkzY",
+          "name": "Titan Shield",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "IyLY1212wacW",
+              "name": "Fortified",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "RSVMS71PNbZF",
+          "name": "Honor Code",
+          "label": "Honor Code"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 9,
+          "label": "Tough(9)"
+        }
+      ],
+      "valid": true,
+      "defense": 2,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "52F88IRQ",
+          "name": "Heavy Hammer",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "VC1EHPxI",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "label": "Heavy Hammer (A1, AP(1), Blast(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "VdDxfB5j",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "-iQKsJot",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Stomp (A3, AP(1))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "2yNbr",
+        "V4LzS8wg",
+        "1TksVWNd",
+        "Dt4jA0yd"
+      ],
+      "genericName": "Light Walker",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "v_CUjRs",
+      "cost": 300,
+      "name": "Errant Mini-Titan",
+      "size": 1,
+      "bases": {
+        "round": "120x92",
+        "square": "100x60"
+      },
+      "items": [
+        {
+          "id": "j8YxDShv",
+          "name": "Titan Shield",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "IyLY1212wacW",
+              "name": "Fortified",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 2,
+          "label": "Fear(2)"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 12,
+          "label": "Tough(12)"
+        },
+        {
+          "id": "JoOCVPx1xT1G",
+          "name": "Furious",
+          "label": "Furious"
+        },
+        {
+          "id": "RSVMS71PNbZF",
+          "name": "Honor Code",
+          "label": "Honor Code"
+        }
+      ],
+      "valid": true,
+      "defense": 2,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "52F88IRQ",
+          "name": "Heavy Hammer",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "52F88IRQ",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Heavy Hammer (A2, AP(1), Blast(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "VdDxfB5j",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "l9ncuAr5",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Stomp (A4, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "A1",
+        "FkW7e",
+        "2yNbr"
+      ],
+      "genericName": "Assault Walker",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "doBdEas",
+      "cost": 350,
+      "name": "Pilgrim Mini-Titan",
+      "size": 1,
+      "bases": {
+        "round": "120x92",
+        "square": "100x60"
+      },
+      "items": [
+        {
+          "id": "i0gdppS9",
+          "name": "Titan Shield",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "IyLY1212wacW",
+              "name": "Fortified",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 2,
+          "label": "Fear(2)"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 12,
+          "label": "Tough(12)"
+        },
+        {
+          "id": "RSVMS71PNbZF",
+          "name": "Honor Code",
+          "label": "Honor Code"
+        }
+      ],
+      "valid": true,
+      "defense": 2,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "kqN0nGRT",
+          "name": "Fusion Blaster",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 24,
+          "attacks": 1,
+          "weaponId": "58HiM3DN",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 6,
+              "label": "Deadly(6)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Fusion Blaster (24\", A1, AP(4), Deadly(6))",
+          "originalCount": 1
+        },
+        {
+          "id": "VdDxfB5j",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "l9ncuAr5",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Stomp (A4, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "A1",
+        "FkW7e",
+        "dW3hJ",
+        "2yNbr"
+      ],
+      "genericName": "Walker",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "yxEPpE-",
+      "cost": 495,
+      "name": "Yeoman Mini-Titan",
+      "size": 1,
+      "bases": {
+        "round": "120x92",
+        "square": "100x60"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 2,
+          "label": "Fear(2)"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 12,
+          "label": "Tough(12)"
+        },
+        {
+          "id": "H9E9PIWpGRdw",
+          "name": "Relentless",
+          "label": "Relentless"
+        },
+        {
+          "id": "RSVMS71PNbZF",
+          "name": "Honor Code",
+          "label": "Honor Code"
+        }
+      ],
+      "valid": true,
+      "defense": 2,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "VXuhvWvp",
+          "name": "Fusion Blaster",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 24,
+          "attacks": 1,
+          "weaponId": "58HiM3DN",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 6,
+              "label": "Deadly(6)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "2x Fusion Blaster (24\", A1, AP(4), Deadly(6))",
+          "originalCount": 2
+        },
+        {
+          "id": "VdDxfB5j",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "l9ncuAr5",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Stomp (A4, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "A1",
+        "dW3hJ",
+        "2yNbr"
+      ],
+      "genericName": "Support Walker",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "69MeS1T",
+      "cost": 705,
+      "name": "Questor Titan",
+      "size": 1,
+      "bases": {
+        "round": "160x122",
+        "square": "150x100"
+      },
+      "items": [
+        {
+          "id": "wmbrAH8c",
+          "name": "Titan Shield",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "IyLY1212wacW",
+              "name": "Fortified",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 4,
+          "label": "Fear(4)"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 24,
+          "label": "Tough(24)"
+        },
+        {
+          "id": "JoOCVPx1xT1G",
+          "name": "Furious",
+          "label": "Furious"
+        },
+        {
+          "id": "RSVMS71PNbZF",
+          "name": "Honor Code",
+          "label": "Honor Code"
+        }
+      ],
+      "valid": true,
+      "defense": 2,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "udLsEjqo",
+          "name": "Hull-Fuser",
+          "type": "ArmyBookWeapon",
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "udLsEjqo",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Hull-Fuser (12\", A1, AP(4), Deadly(3))",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "cFkDuiRX",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 8,
+          "weaponId": "OjIL2pMY",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Stomp (A8, AP(2))",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "NLFek90k",
+          "name": "Titan Hammer",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "j9cuVLoe",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "label": "Titan Hammer (A4, AP(1), Blast(3))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "B1",
+        "N0XqA",
+        "2yNbr"
+      ],
+      "genericName": "Assault Titan Walker",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "blwKVKT",
+      "cost": 810,
+      "name": "Knight Titan",
+      "size": 1,
+      "bases": {
+        "round": "160x122",
+        "square": "150x100"
+      },
+      "items": [
+        {
+          "id": "MGGqv3fN",
+          "name": "Titan Shield",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "IyLY1212wacW",
+              "name": "Fortified",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 4,
+          "label": "Fear(4)"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 24,
+          "label": "Tough(24)"
+        },
+        {
+          "id": "RSVMS71PNbZF",
+          "name": "Honor Code",
+          "label": "Honor Code"
+        }
+      ],
+      "valid": true,
+      "defense": 2,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "Y4A9w-iH",
+          "name": "Titan Fusion Cannon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 24,
+          "attacks": 2,
+          "weaponId": "ZyncYal2",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 6,
+              "label": "Deadly(6)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Titan Fusion Cannon (24\", A2, AP(4), Deadly(6))",
+          "originalCount": 1
+        },
+        {
+          "id": "udLsEjqo",
+          "name": "Hull-Fuser",
+          "type": "ArmyBookWeapon",
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "udLsEjqo",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Hull-Fuser (12\", A1, AP(4), Deadly(3))",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "cFkDuiRX",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 8,
+          "weaponId": "OjIL2pMY",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Stomp (A8, AP(2))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "B1",
+        "N0XqA",
+        "-bOjE",
+        "2yNbr"
+      ],
+      "genericName": "Titan Walker",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "4iPKrlj",
+      "cost": 1105,
+      "name": "Duke Titan",
+      "size": 1,
+      "bases": {
+        "round": "160x122",
+        "square": "150x100"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 4,
+          "label": "Fear(4)"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 24,
+          "label": "Tough(24)"
+        },
+        {
+          "id": "H9E9PIWpGRdw",
+          "name": "Relentless",
+          "label": "Relentless"
+        },
+        {
+          "id": "RSVMS71PNbZF",
+          "name": "Honor Code",
+          "label": "Honor Code"
+        }
+      ],
+      "valid": true,
+      "defense": 2,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "Xo60EOP5",
+          "name": "Titan Fusion Cannon",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 24,
+          "attacks": 2,
+          "weaponId": "ZyncYal2",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 6,
+              "label": "Deadly(6)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "2x Titan Fusion Cannon (24\", A2, AP(4), Deadly(6))",
+          "originalCount": 2
+        },
+        {
+          "id": "lzIbk",
+          "name": "Hull-Fuser",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "udLsEjqo",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Hull-Fuser (12\", A1, AP(4), Deadly(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "cFkDuiRX",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 8,
+          "weaponId": "OjIL2pMY",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Stomp (A8, AP(2))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "B1",
+        "-bOjE",
+        "2yNbr"
+      ],
+      "genericName": "Support Titan Walker",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "LMdHc9e",
+      "cost": 1080,
+      "name": "King Heavy Titan",
+      "size": 1,
+      "bases": {
+        "round": "160x122",
+        "square": "150x100"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 4,
+          "label": "Fear(4)"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 30,
+          "additional": false,
+          "label": "Tough(30)"
+        },
+        {
+          "id": "RSVMS71PNbZF",
+          "name": "Honor Code",
+          "label": "Honor Code"
+        }
+      ],
+      "valid": true,
+      "defense": 2,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "dwAm-mwG",
+          "name": "Twin Shoulder-Cannon",
+          "type": "ArmyBookWeapon",
+          "range": 24,
+          "attacks": 2,
+          "weaponId": "dwAm-mwG",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "label": "Twin Shoulder-Cannon (24\", A2, AP(1), Blast(3))",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "66jUGNJR",
+          "name": "Titan Harpoon Cannon",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 18,
+          "attacks": 1,
+          "weaponId": "66jUGNJR",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 9,
+              "label": "Deadly(9)"
+            }
+          ],
+          "label": "2x Titan Harpoon Cannon (18\", A1, AP(4), Deadly(9))",
+          "originalCount": 2
+        },
+        {
+          "id": "x35M24ki",
+          "name": "Twin Hull-Fuser",
+          "type": "ArmyBookWeapon",
+          "range": 12,
+          "attacks": 2,
+          "weaponId": "x35M24ki",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Twin Hull-Fuser (12\", A2, AP(4), Deadly(3))",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "rhnQactJ",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 10,
+          "weaponId": "TAjQsyWI",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 3,
+              "label": "AP(3)"
+            }
+          ],
+          "attacksMultiplier": null,
+          "label": "Stomp (A10, AP(3))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "F1",
+        "2yNbr"
+      ],
+      "genericName": "Heavy Titan Walker",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    }
+  ],
+  "upgradePackages": [
+    {
+      "uid": "A1",
+      "hint": "Mini-Titan Upgrades",
+      "sections": [
+        {
+          "id": "fJxIpC-",
+          "uid": "mwtk5oT",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "YQiHb",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 35,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 35,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 40,
+                  "unitId": "yxEPpE-"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "2Ih1KiQc",
+                  "name": "Top-Fuser",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "2Ih1KiQc",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Top-Fuser (12\", A1, AP(4), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Top-Fuser (12\", A1, AP(4), Deadly(3))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "mwtk5oT",
+              "parentSectionId": "mwtk5oT",
+              "id": "YQiHb"
+            },
+            {
+              "uid": "3qBGx",
+              "cost": 55,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 50,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 50,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 65,
+                  "unitId": "yxEPpE-"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "fUV7Mj19",
+                  "name": "Top-Machinegun",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 3,
+                  "weaponId": "fUV7Mj19",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Top-Machinegun (30\", A3, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Top-Machinegun (30\", A3, AP(1))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "mwtk5oT",
+              "parentSectionId": "mwtk5oT",
+              "id": "3qBGx"
+            },
+            {
+              "uid": "HSqlb",
+              "cost": 60,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 60,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 60,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 75,
+                  "unitId": "yxEPpE-"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "g-aZbqn9",
+                  "name": "Top-Launcher",
+                  "type": "ArmyBookWeapon",
+                  "range": 36,
+                  "attacks": 1,
+                  "weaponId": "g-aZbqn9",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "8Ck9GAwUK824",
+                      "name": "Indirect",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Top-Launcher (36\", A1, Blast(3), Indirect)",
+                  "count": 1
+                }
+              ],
+              "label": "Top-Launcher (36\", A1, Blast(3), Indirect)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "mwtk5oT",
+              "parentSectionId": "mwtk5oT",
+              "id": "HSqlb"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        },
+        {
+          "id": "u_6S42f",
+          "uid": "qwPhMIc",
+          "label": "Upgrade with any",
+          "options": [
+            {
+              "uid": "jk6Wr",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 20,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "yxEPpE-"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Titan Core",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Titan Core (Delayed Action)",
+                  "content": [
+                    {
+                      "id": "SKzm-kqi1h2Q",
+                      "name": "Delayed Action",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Titan Core (Delayed Action)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "qwPhMIc",
+              "parentSectionId": "qwPhMIc",
+              "id": "jk6Wr"
+            },
+            {
+              "uid": "1BABw5X-in",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 40,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 40,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 40,
+                  "unitId": "yxEPpE-"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Psychic Lord",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Psychic Lord (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Psychic Lord (Caster(2))",
+              "parentSectionId": "qwPhMIc",
+              "id": "1BABw5X-in"
+            },
+            {
+              "uid": "aG4SOBv",
+              "cost": 50,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 40,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 40,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 40,
+                  "unitId": "yxEPpE-"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Energy Field",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Energy Field (Regeneration)",
+                  "content": [
+                    {
+                      "id": "8KujvrTG8k9p",
+                      "name": "Regeneration",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Energy Field (Regeneration)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "qwPhMIc",
+              "parentSectionId": "qwPhMIc",
+              "id": "aG4SOBv"
+            },
+            {
+              "uid": "3SA99wHR0S",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 45,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 45,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 45,
+                  "unitId": "yxEPpE-"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Assault Config",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Assault Config (Fast, Strider)",
+                  "content": [
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Assault Config (Fast, Strider)",
+              "parentSectionId": "qwPhMIc",
+              "id": "3SA99wHR0S"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "any"
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "B1",
+      "hint": "Titan Upgrades",
+      "sections": [
+        {
+          "id": "yNt-AZn",
+          "uid": "-8TYPq3",
+          "label": "Replace any Hull-Fuser",
+          "options": [
+            {
+              "uid": "8lys0",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 15,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "N4b5NMmB",
+                  "name": "Hull-Machinegun",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 3,
+                  "weaponId": "N4b5NMmB",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Hull-Machinegun (30\", A3, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Hull-Machinegun (30\", A3, AP(1))",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "-8TYPq3",
+              "parentSectionId": "-8TYPq3",
+              "id": "8lys0"
+            }
+          ],
+          "parentPackageUid": "B1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Hull-Fuser"
+          ]
+        },
+        {
+          "id": "cLMJOdc",
+          "uid": "RP1p4",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "ljbaU4G",
+              "cost": 60,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 60,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 60,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 75,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "tbw-4PTr",
+                  "name": "Top-Rocket",
+                  "type": "ArmyBookWeapon",
+                  "range": 36,
+                  "attacks": 1,
+                  "weaponId": "tbw-4PTr",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "8Ck9GAwUK824",
+                      "name": "Indirect",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Top-Rocket (36\", A1, Blast(3), Indirect)",
+                  "count": 1
+                }
+              ],
+              "label": "Top-Rocket (36\", A1, Blast(3), Indirect)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "RP1p4",
+              "parentSectionId": "RP1p4",
+              "id": "ljbaU4G"
+            },
+            {
+              "uid": "39m0E",
+              "cost": 65,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 60,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 60,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 75,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "3tBPsLf5",
+                  "name": "Top-Missile",
+                  "type": "ArmyBookWeapon",
+                  "range": 36,
+                  "attacks": 1,
+                  "weaponId": "3tBPsLf5",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "label": "Top-Missile (36\", A1, AP(2), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Top-Missile (36\", A1, AP(2), Deadly(3))",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "RP1p4",
+              "parentSectionId": "RP1p4",
+              "id": "39m0E"
+            },
+            {
+              "uid": "V3Q7Q",
+              "cost": 75,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 65,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 65,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 90,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "dKLMURjJ",
+                  "name": "Top-Anti-Air",
+                  "type": "ArmyBookWeapon",
+                  "range": 36,
+                  "attacks": 3,
+                  "weaponId": "dKLMURjJ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "QXyt-zV_bjpg",
+                      "name": "Unstoppable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Top-Anti-Air (36\", A3, AP(1), Unstoppable)",
+                  "count": 1
+                }
+              ],
+              "label": "Top-Anti-Air (36\", A3, AP(1), Unstoppable)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "RP1p4",
+              "parentSectionId": "RP1p4",
+              "id": "V3Q7Q"
+            }
+          ],
+          "parentPackageUid": "B1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        },
+        {
+          "id": "FQfnrY9",
+          "uid": "qAqTz8z",
+          "label": "Upgrade with any",
+          "options": [
+            {
+              "uid": "4P7xg",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 20,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Titan Core",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Titan Core (Delayed Action)",
+                  "content": [
+                    {
+                      "id": "SKzm-kqi1h2Q",
+                      "name": "Delayed Action",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Titan Core (Delayed Action)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "qAqTz8z",
+              "parentSectionId": "qAqTz8z",
+              "id": "4P7xg"
+            },
+            {
+              "uid": "T-Q93JL55O",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 30,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 30,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 30,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Exploration Config",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Exploration Config (Strider)",
+                  "content": [
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Exploration Config (Strider)",
+              "parentSectionId": "qAqTz8z",
+              "id": "T-Q93JL55O"
+            },
+            {
+              "uid": "RhG2EvmQps",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 65,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 65,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 65,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Psychic Lord",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Psychic Lord (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Psychic Lord (Caster(3))",
+              "parentSectionId": "qAqTz8z",
+              "id": "RhG2EvmQps"
+            },
+            {
+              "uid": "r2-9d7S",
+              "cost": 120,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 90,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 90,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 90,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Energy Field",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Energy Field (Regeneration)",
+                  "content": [
+                    {
+                      "id": "8KujvrTG8k9p",
+                      "name": "Regeneration",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Energy Field (Regeneration)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "qAqTz8z",
+              "parentSectionId": "qAqTz8z",
+              "id": "r2-9d7S"
+            }
+          ],
+          "parentPackageUid": "B1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "any"
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "F1",
+      "hint": "Heavy Titan Upgrades",
+      "sections": [
+        {
+          "id": "xe5eiOn",
+          "uid": "8aKZr",
+          "label": "Replace any Titan Harpoon Cannon",
+          "options": [
+            {
+              "uid": "5ciWa",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 25,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Titan Triple Flamer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 3,
+                  "weaponId": "O4pL4vzr",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Titan Triple Flamer (18\", A3, AP(1), Blast(3), Reliable)"
+                }
+              ],
+              "label": "Titan Triple Flamer (18\", A3, AP(1), Blast(3), Reliable)",
+              "parentSectionId": "8aKZr",
+              "id": "5ciWa"
+            },
+            {
+              "uid": "luvx-",
+              "cost": 65,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 85,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "hMGCaFWO",
+                  "name": "Titan Volcano Cannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 3,
+                  "weaponId": "hMGCaFWO",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "label": "Titan Volcano Cannon (30\", A3, AP(3), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Titan Volcano Cannon (30\", A3, AP(3), Deadly(3))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "8aKZr",
+              "parentSectionId": "8aKZr",
+              "id": "luvx-"
+            },
+            {
+              "uid": "UgjZm",
+              "cost": 80,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 125,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "FHOhqKKZ",
+                  "name": "Plasma Battle Cannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 3,
+                  "weaponId": "FHOhqKKZ",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "label": "Plasma Battle Cannon (30\", A3, AP(4), Blast(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Plasma Battle Cannon (30\", A3, AP(4), Blast(3))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "8aKZr",
+              "parentSectionId": "8aKZr",
+              "id": "UgjZm"
+            }
+          ],
+          "parentPackageUid": "F1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Titan Harpoon Cannon"
+          ]
+        },
+        {
+          "id": "3yflLyG",
+          "uid": "U8Jid8v",
+          "label": "Replace any Twin Shoulder-Cannons",
+          "options": [
+            {
+              "uid": "qMEUN",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 35,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "3jOC4TzD",
+                  "name": "Twin Shoulder-Missile",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "3jOC4TzD",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "label": "Twin Shoulder-Missile (24\", A2, AP(3), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Twin Shoulder-Missile (24\", A2, AP(3), Deadly(3))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "U8Jid8v",
+              "parentSectionId": "U8Jid8v",
+              "id": "qMEUN"
+            }
+          ],
+          "parentPackageUid": "F1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Twin Shoulder-Cannons"
+          ]
+        },
+        {
+          "id": "JliTDBg",
+          "uid": "QzoW2jQ",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "SEnXIC9",
+              "cost": 75,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 80,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "9uPNHg_z",
+                  "name": "Top-Cannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "9uPNHg_z",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "label": "Top-Cannon (24\", A2, AP(1), Blast(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Top-Cannon (24\", A2, AP(1), Blast(3))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "QzoW2jQ",
+              "parentSectionId": "QzoW2jQ",
+              "id": "SEnXIC9"
+            },
+            {
+              "uid": "NZMpyHy",
+              "cost": 110,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 120,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "iQjVcZ-q",
+                  "name": "Top-Missile",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "iQjVcZ-q",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "label": "Top-Missile (24\", A2, AP(3), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Top-Missile (24\", A2, AP(3), Deadly(3))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "QzoW2jQ",
+              "parentSectionId": "QzoW2jQ",
+              "id": "NZMpyHy"
+            }
+          ],
+          "parentPackageUid": "F1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        },
+        {
+          "id": "1b4KiBh",
+          "uid": "nl7LwjE",
+          "label": "Upgrade with any",
+          "options": [
+            {
+              "uid": "R5YEL",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 20,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Titan Core",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Titan Core (Delayed Action)",
+                  "content": [
+                    {
+                      "id": "SKzm-kqi1h2Q",
+                      "name": "Delayed Action",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Titan Core (Delayed Action)",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "nl7LwjE",
+              "parentSectionId": "nl7LwjE",
+              "id": "R5YEL"
+            },
+            {
+              "uid": "Z4unLQizd8",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 35,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Exploration Config",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Exploration Config (Strider)",
+                  "content": [
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Exploration Config (Strider)",
+              "parentSectionId": "nl7LwjE",
+              "id": "Z4unLQizd8"
+            },
+            {
+              "uid": "qHr-BSnLq5",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 65,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Psychic Lord",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Psychic Lord (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Psychic Lord (Caster(3))",
+              "parentSectionId": "nl7LwjE",
+              "id": "qHr-BSnLq5"
+            },
+            {
+              "uid": "7a4uz",
+              "cost": 160,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 120,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Energy Field",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Energy Field (Regeneration)",
+                  "content": [
+                    {
+                      "id": "8KujvrTG8k9p",
+                      "name": "Regeneration",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Energy Field (Regeneration)",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "nl7LwjE",
+              "parentSectionId": "nl7LwjE",
+              "id": "7a4uz"
+            }
+          ],
+          "parentPackageUid": "F1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "any"
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "FkW7e",
+      "hint": "Mini-Titans Melee",
+      "sections": [
+        {
+          "id": "ZmHylqK",
+          "uid": "9f2pT",
+          "label": "Replace any Heavy Hammer",
+          "options": [
+            {
+              "uid": "UnQgw",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 10,
+                  "unitId": "doBdEas"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Lance",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "YwjVl4QQ",
+                  "specialRules": [
+                    {
+                      "id": "umbiz4tnEyF8",
+                      "name": "Thrust",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Heavy Lance (A6, Thrust)"
+                }
+              ],
+              "label": "Heavy Lance (A6, Thrust)",
+              "parentPackageUid": "FkW7e",
+              "parentSectionUid": "9f2pT",
+              "parentSectionId": "9f2pT",
+              "id": "UnQgw"
+            },
+            {
+              "uid": "fgUpF",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 10,
+                  "unitId": "doBdEas"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "4cdgf5bI",
+                  "name": "Heavy Chainsaw",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "4cdgf5bI",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Heavy Chainsaw (A2, AP(2), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Chainsaw (A2, AP(2), Deadly(3))",
+              "parentPackageUid": "FkW7e",
+              "parentSectionUid": "9f2pT",
+              "parentSectionId": "9f2pT",
+              "id": "fgUpF"
+            },
+            {
+              "uid": "z-vHs",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 20,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 15,
+                  "unitId": "doBdEas"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "dM7pPJDX",
+                  "name": "Heavy Fist",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "dM7pPJDX",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "label": "Heavy Fist (A4, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Fist (A4, AP(4))",
+              "parentPackageUid": "FkW7e",
+              "parentSectionUid": "9f2pT",
+              "parentSectionId": "9f2pT",
+              "id": "z-vHs"
+            },
+            {
+              "uid": "OwfwV",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 25,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "doBdEas"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gvvyV__6",
+                  "name": "Heavy Sword",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "gvvyV__6",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Heavy Sword (A6, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Sword (A6, AP(1), Rending)",
+              "parentPackageUid": "FkW7e",
+              "parentSectionUid": "9f2pT",
+              "parentSectionId": "9f2pT",
+              "id": "OwfwV"
+            },
+            {
+              "uid": "ocLg_",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 30,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 25,
+                  "unitId": "doBdEas"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "bNxpaidk",
+                  "name": "Heavy Flail",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "bNxpaidk",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Heavy Flail (A6, Reliable, Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Flail (A6, Reliable, Rending)",
+              "parentPackageUid": "FkW7e",
+              "parentSectionUid": "9f2pT",
+              "parentSectionId": "9f2pT",
+              "id": "ocLg_"
+            },
+            {
+              "uid": "WYPox",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 30,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 30,
+                  "unitId": "doBdEas"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "6pFkuPXK",
+                  "name": "Heavy Claw",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "6pFkuPXK",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Heavy Claw (A6, AP(1), Reliable)",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Claw (A6, AP(1), Reliable)",
+              "parentPackageUid": "FkW7e",
+              "parentSectionUid": "9f2pT",
+              "parentSectionId": "9f2pT",
+              "id": "WYPox"
+            }
+          ],
+          "parentPackageUid": "FkW7e",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Heavy Hammer"
+          ]
+        },
+        {
+          "id": "T-JOol5",
+          "uid": "sfpHi",
+          "label": "Replace Titan Shield",
+          "options": [
+            {
+              "uid": "5EFD5sbMpr",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 30,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "doBdEas"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Hammer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "52F88IRQ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Heavy Hammer (A2, AP(1), Blast(3))"
+                }
+              ],
+              "label": "Heavy Hammer (A2, AP(1), Blast(3))",
+              "parentSectionId": "sfpHi",
+              "id": "5EFD5sbMpr"
+            }
+          ],
+          "parentPackageUid": "FkW7e",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Titan Shield"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "dW3hJ",
+      "hint": "Mini-Titans Ranged",
+      "sections": [
+        {
+          "id": "v8cI4uQ",
+          "uid": "qYV-K",
+          "label": "Replace any Fusion Blaster",
+          "options": [
+            {
+              "uid": "L89A3",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 30,
+                  "unitId": "yxEPpE-"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "DpYRaIOP",
+                  "name": "Gatling Cannon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 6,
+                  "weaponId": "DpYRaIOP",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Gatling Cannon (30\", A6, AP(1), Rending)"
+                }
+              ],
+              "label": "Gatling Cannon (30\", A6, AP(1), Rending)",
+              "parentPackageUid": "dW3hJ",
+              "parentSectionUid": "qYV-K",
+              "parentSectionId": "qYV-K",
+              "id": "L89A3"
+            },
+            {
+              "uid": "T3Nug",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 40,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 50,
+                  "unitId": "yxEPpE-"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "YlFTBQKj",
+                  "name": "Hell Autocannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 36,
+                  "attacks": 6,
+                  "weaponId": "YlFTBQKj",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Hell Autocannon (36\", A6, AP(2))",
+                  "count": 1
+                }
+              ],
+              "label": "Hell Autocannon (36\", A6, AP(2))",
+              "parentPackageUid": "dW3hJ",
+              "parentSectionUid": "qYV-K",
+              "parentSectionId": "qYV-K",
+              "id": "T3Nug"
+            }
+          ],
+          "parentPackageUid": "dW3hJ",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Fusion Blaster"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "N0XqA",
+      "hint": "Titan Melee",
+      "sections": [
+        {
+          "id": "u_tTuHe",
+          "uid": "2c80N",
+          "label": "Replace any Titan Hammer",
+          "options": [
+            {
+              "uid": "nPT2F",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 25,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "blwKVKT"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Titan Lance",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 12,
+                  "weaponId": "M_xT7aIq",
+                  "specialRules": [
+                    {
+                      "id": "umbiz4tnEyF8",
+                      "name": "Thrust",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Titan Lance (A12, Thrust)"
+                }
+              ],
+              "label": "Titan Lance (A12, Thrust)",
+              "parentPackageUid": "N0XqA",
+              "parentSectionUid": "2c80N",
+              "parentSectionId": "2c80N",
+              "id": "nPT2F"
+            },
+            {
+              "uid": "gjcQ_",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 30,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 25,
+                  "unitId": "blwKVKT"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "RkhxrRpX",
+                  "name": "Titan Chainsaw",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "RkhxrRpX",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "label": "Titan Chainsaw (A4, AP(2), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Titan Chainsaw (A4, AP(2), Deadly(3))",
+              "parentPackageUid": "N0XqA",
+              "parentSectionUid": "2c80N",
+              "parentSectionId": "2c80N",
+              "id": "gjcQ_"
+            },
+            {
+              "uid": "dWnSF",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 55,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 35,
+                  "unitId": "blwKVKT"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "ltnK7l6D",
+                  "name": "Titan Sword",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 12,
+                  "weaponId": "ltnK7l6D",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Titan Sword (A12, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Titan Sword (A12, AP(1), Rending)",
+              "parentPackageUid": "N0XqA",
+              "parentSectionUid": "2c80N",
+              "parentSectionId": "2c80N",
+              "id": "dWnSF"
+            },
+            {
+              "uid": "09w2O",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 55,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 45,
+                  "unitId": "blwKVKT"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "pZqQBU6V",
+                  "name": "Titan Fist",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 9,
+                  "weaponId": "pZqQBU6V",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "label": "Titan Fist (A9, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Titan Fist (A9, AP(4))",
+              "parentPackageUid": "N0XqA",
+              "parentSectionUid": "2c80N",
+              "parentSectionId": "2c80N",
+              "id": "09w2O"
+            },
+            {
+              "uid": "rb2TQ",
+              "cost": 50,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 60,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 45,
+                  "unitId": "blwKVKT"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "2D_CzvSu",
+                  "name": "Titan Flail",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 12,
+                  "weaponId": "2D_CzvSu",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Titan Flail (A12, Reliable, Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Titan Flail (A12, Reliable, Rending)",
+              "parentPackageUid": "N0XqA",
+              "parentSectionUid": "2c80N",
+              "parentSectionId": "2c80N",
+              "id": "rb2TQ"
+            },
+            {
+              "uid": "sg0CG",
+              "cost": 60,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 65,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 60,
+                  "unitId": "blwKVKT"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "ZsoZ4OsZ",
+                  "name": "Titan Claw",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 12,
+                  "weaponId": "ZsoZ4OsZ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Titan Claw (A12, AP(1), Reliable)",
+                  "count": 1
+                }
+              ],
+              "label": "Titan Claw (A12, AP(1), Reliable)",
+              "parentPackageUid": "N0XqA",
+              "parentSectionUid": "2c80N",
+              "parentSectionId": "2c80N",
+              "id": "sg0CG"
+            }
+          ],
+          "parentPackageUid": "N0XqA",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Titan Hammer"
+          ]
+        },
+        {
+          "id": "syegiaC",
+          "uid": "2Ff7H",
+          "label": "Replace Titan Shield",
+          "options": [
+            {
+              "uid": "Osop2",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 60,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 40,
+                  "unitId": "blwKVKT"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Titan Hammer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "j9cuVLoe",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "label": "Titan Hammer (A4, AP(1), Blast(3))"
+                }
+              ],
+              "label": "Titan Hammer (A4, AP(1), Blast(3))",
+              "parentPackageUid": "N0XqA",
+              "parentSectionUid": "2Ff7H",
+              "parentSectionId": "2Ff7H",
+              "id": "Osop2"
+            }
+          ],
+          "parentPackageUid": "N0XqA",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Titan Shield"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "-bOjE",
+      "hint": "Titan Ranged",
+      "sections": [
+        {
+          "id": "2jjeerf",
+          "uid": "BZ-ZR",
+          "label": "Replace any Titan Fusion Cannon",
+          "options": [
+            {
+              "uid": "NAT56",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 10,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Titan Laser Cannon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 36,
+                  "attacks": 3,
+                  "weaponId": "D2e0LXQZ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "label": "Titan Laser Cannon (36\", A3, AP(3), Deadly(3))"
+                }
+              ],
+              "label": "Titan Laser Cannon (36\", A3, AP(3), Deadly(3))",
+              "parentSectionId": "BZ-ZR",
+              "id": "NAT56"
+            },
+            {
+              "uid": "XoCgR",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 5,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 15,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Titan Gatling Cannon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 9,
+                  "weaponId": "JcQpzSt-",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Titan Gatling Cannon (30\", A9, AP(1), Rending)"
+                },
+                {
+                  "id": null,
+                  "name": "Heavy Flamer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "9KbQ3D9t",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Heavy Flamer (12\", A1, AP(1), Blast(3), Reliable)"
+                }
+              ],
+              "label": "Titan Gatling Cannon (30\", A9, AP(1), Rending), Heavy Flamer (12\", A1, AP(1), Blast(3), Reliable)",
+              "parentSectionId": "BZ-ZR",
+              "id": "XoCgR"
+            },
+            {
+              "uid": "09WrV",
+              "cost": 0,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "Afg_Hoty",
+                  "name": "Titan Battle Cannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 3,
+                  "weaponId": "Afg_Hoty",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "label": "Titan Battle Cannon (30\", A3, AP(2), Blast(3))",
+                  "count": 1
+                },
+                {
+                  "id": "_OuuPXyd",
+                  "name": "Heavy Machinegun",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 3,
+                  "weaponId": "_OuuPXyd",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Heavy Machinegun (30\", A3, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Machinegun (30\", A3, AP(1)), Titan Battle Cannon (30\", A3, AP(2), Blast(3))",
+              "parentPackageUid": "-bOjE",
+              "parentSectionUid": "BZ-ZR",
+              "parentSectionId": "BZ-ZR",
+              "id": "09WrV"
+            },
+            {
+              "uid": "O-hsw",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 25,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 35,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "JsMBN7TZ",
+                  "name": "Titan Pulse Laser",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 9,
+                  "weaponId": "JsMBN7TZ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "label": "Titan Pulse Laser (30\", A9, AP(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Titan Pulse Laser (30\", A9, AP(3))",
+              "parentPackageUid": "-bOjE",
+              "parentSectionUid": "BZ-ZR",
+              "parentSectionId": "BZ-ZR",
+              "id": "O-hsw"
+            },
+            {
+              "uid": "UBfuL",
+              "cost": -5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 30,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 35,
+                  "unitId": "4iPKrlj"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "CP5SAqCL",
+                  "name": "Titan Plasma Cannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 3,
+                  "weaponId": "CP5SAqCL",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "label": "Titan Plasma Cannon (30\", A3, AP(4), Blast(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Titan Plasma Cannon (30\", A3, AP(4), Blast(3))",
+              "parentPackageUid": "-bOjE",
+              "parentSectionUid": "BZ-ZR",
+              "parentSectionId": "BZ-ZR",
+              "id": "UBfuL"
+            }
+          ],
+          "parentPackageUid": "-bOjE",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Titan Fusion Cannon"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "2yNbr",
+      "hint": "Disciple of Havoc",
+      "sections": [
+        {
+          "id": "W8bUxxJ",
+          "uid": "NX_t9",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "bEwQ5",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 5,
+                  "unitId": "bcpqzan"
+                },
+                {
+                  "cost": 5,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 5,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 5,
+                  "unitId": "yxEPpE-"
+                },
+                {
+                  "cost": 5,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 5,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 5,
+                  "unitId": "4iPKrlj"
+                },
+                {
+                  "cost": 5,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Disciple of War",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Disciple of War (Warbound)",
+                  "content": [
+                    {
+                      "id": "jbhpErfecvEY",
+                      "name": "Warbound",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Disciple of War (Warbound)",
+              "parentPackageUid": "2yNbr",
+              "parentSectionUid": "NX_t9",
+              "parentSectionId": "NX_t9",
+              "id": "bEwQ5"
+            },
+            {
+              "uid": "CaAtx",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "bcpqzan"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 20,
+                  "unitId": "yxEPpE-"
+                },
+                {
+                  "cost": 35,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 35,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 35,
+                  "unitId": "4iPKrlj"
+                },
+                {
+                  "cost": 45,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Disciple of Lust",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Disciple of Lust (Lustbound)",
+                  "content": [
+                    {
+                      "id": "yis0utoPMclv",
+                      "name": "Lustbound",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Disciple of Lust (Lustbound)",
+              "parentPackageUid": "2yNbr",
+              "parentSectionUid": "NX_t9",
+              "parentSectionId": "NX_t9",
+              "id": "CaAtx"
+            },
+            {
+              "uid": "Ha7EL",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 20,
+                  "unitId": "bcpqzan"
+                },
+                {
+                  "cost": 25,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 25,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 25,
+                  "unitId": "yxEPpE-"
+                },
+                {
+                  "cost": 50,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 50,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 50,
+                  "unitId": "4iPKrlj"
+                },
+                {
+                  "cost": 65,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Disciple of Change",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Disciple of Change (Changebound)",
+                  "content": [
+                    {
+                      "id": "4mB0rwGnMVgJ",
+                      "name": "Changebound",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Disciple of Change (Changebound)",
+              "parentPackageUid": "2yNbr",
+              "parentSectionUid": "NX_t9",
+              "parentSectionId": "NX_t9",
+              "id": "Ha7EL"
+            },
+            {
+              "uid": "Xpa44",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 20,
+                  "unitId": "bcpqzan"
+                },
+                {
+                  "cost": 25,
+                  "unitId": "v_CUjRs"
+                },
+                {
+                  "cost": 25,
+                  "unitId": "doBdEas"
+                },
+                {
+                  "cost": 25,
+                  "unitId": "yxEPpE-"
+                },
+                {
+                  "cost": 55,
+                  "unitId": "69MeS1T"
+                },
+                {
+                  "cost": 55,
+                  "unitId": "blwKVKT"
+                },
+                {
+                  "cost": 55,
+                  "unitId": "4iPKrlj"
+                },
+                {
+                  "cost": 75,
+                  "unitId": "LMdHc9e"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Disciple of Plague",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Disciple of Plague (Plaguebound)",
+                  "content": [
+                    {
+                      "id": "O_wrvW7FiJWX",
+                      "name": "Plaguebound",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Disciple of Plague (Plaguebound)",
+              "parentPackageUid": "2yNbr",
+              "parentSectionUid": "NX_t9",
+              "parentSectionId": "NX_t9",
+              "id": "Xpa44"
+            }
+          ],
+          "parentPackageUid": "2yNbr",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "V4LzS8wg",
+      "hint": "Micro-Titan Upgrades",
+      "sections": [
+        {
+          "id": "Th4V_Xf",
+          "uid": "bhclT2Ai",
+          "label": "Upgrade with any",
+          "options": [
+            {
+              "uid": "At4ll3Sehm",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 20,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Titan Core",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Titan Core (Delayed Action)",
+                  "content": [
+                    {
+                      "id": "SKzm-kqi1h2Q",
+                      "name": "Delayed Action",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Titan Core (Delayed Action)",
+              "parentSectionId": "bhclT2Ai",
+              "id": "At4ll3Sehm"
+            },
+            {
+              "uid": "9Q2QZg0p",
+              "cost": 50,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 30,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Energy Field",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Energy Field (Regeneration)",
+                  "content": [
+                    {
+                      "id": "8KujvrTG8k9p",
+                      "name": "Regeneration",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Energy Field (Regeneration)",
+              "parentSectionId": "bhclT2Ai",
+              "parentPackageUid": "euY2lHzL",
+              "parentSectionUid": "qwPhMIc",
+              "id": "9Q2QZg0p"
+            },
+            {
+              "uid": "BMrLgDtZ6D",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 35,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Vanguard Config",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Vanguard Config (Scout, Strider)",
+                  "content": [
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Vanguard Config (Scout, Strider)",
+              "parentSectionId": "bhclT2Ai",
+              "id": "BMrLgDtZ6D"
+            },
+            {
+              "uid": "gBSzk3DdhQ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 40,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Psychic Lord",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Psychic Lord (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Psychic Lord (Caster(2))",
+              "parentSectionId": "bhclT2Ai",
+              "id": "gBSzk3DdhQ"
+            }
+          ],
+          "parentPackageUid": "euY2lHzL",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "any"
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "Dt4jA0yd",
+      "hint": "Micro-Titans Ranged",
+      "sections": [
+        {
+          "id": "dM6hGGX",
+          "uid": "3NM3QDut",
+          "label": "Replace one Heavy Hammer",
+          "options": [
+            {
+              "uid": "-M5WEujMpU",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 90,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Fusion Blaster",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "58HiM3DN",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Fusion Blaster (24\", A1, AP(4), Deadly(6))"
+                }
+              ],
+              "label": "Fusion Blaster (24\", A1, AP(4), Deadly(6))",
+              "parentSectionId": "3NM3QDut",
+              "id": "-M5WEujMpU"
+            },
+            {
+              "uid": "FK0DZOce",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 105,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "DpYRaIOP",
+                  "name": "Gatling Cannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 6,
+                  "weaponId": "DpYRaIOP",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Gatling Cannon (30\", A6, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Gatling Cannon (30\", A6, AP(1), Rending)",
+              "parentSectionId": "3NM3QDut",
+              "parentPackageUid": "iq9tvgf0",
+              "parentSectionUid": "qYV-K",
+              "id": "FK0DZOce"
+            },
+            {
+              "uid": "5NvAvFfU",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 130,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "YlFTBQKj",
+                  "name": "Hell Autocannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 36,
+                  "attacks": 6,
+                  "weaponId": "YlFTBQKj",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Hell Autocannon (36\", A6, AP(2))",
+                  "count": 1
+                }
+              ],
+              "label": "Hell Autocannon (36\", A6, AP(2))",
+              "parentSectionId": "3NM3QDut",
+              "parentPackageUid": "iq9tvgf0",
+              "parentSectionUid": "qYV-K",
+              "id": "5NvAvFfU"
+            }
+          ],
+          "parentPackageUid": "iq9tvgf0",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "exactly",
+            "value": 1
+          },
+          "targets": [
+            "Heavy Hammer"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "1TksVWNd",
+      "hint": "Micro-Titans Melee",
+      "sections": [
+        {
+          "id": "t3PJp0Q",
+          "uid": "HFr4mA-T",
+          "label": "Replace any Heavy Hammer",
+          "options": [
+            {
+              "uid": "9c6ii-kS",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 5,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Lance",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "Fo1zFXEI",
+                  "specialRules": [
+                    {
+                      "id": "umbiz4tnEyF8",
+                      "name": "Thrust"
+                    }
+                  ],
+                  "label": "Heavy Lance (A3, Thrust)"
+                }
+              ],
+              "label": "Heavy Lance (A3, Thrust)",
+              "parentSectionId": "HFr4mA-T",
+              "parentPackageUid": "pEmBQLYg",
+              "parentSectionUid": "9f2pT",
+              "id": "9c6ii-kS"
+            },
+            {
+              "uid": "iIhw0nGx",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 5,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "4cdgf5bI",
+                  "name": "Heavy Chainsaw",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "tPTiYlfF",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "label": "Heavy Chainsaw (A1, AP(2), Deadly(3))"
+                }
+              ],
+              "label": "Heavy Chainsaw (A1, AP(2), Deadly(3))",
+              "parentSectionId": "HFr4mA-T",
+              "parentPackageUid": "pEmBQLYg",
+              "parentSectionUid": "9f2pT",
+              "id": "iIhw0nGx"
+            },
+            {
+              "uid": "aJ_--Lcw",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "dM7pPJDX",
+                  "name": "Heavy Fist",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "tA8Wi5TI",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "label": "Heavy Fist (A2, AP(4))"
+                }
+              ],
+              "label": "Heavy Fist (A2, AP(4))",
+              "parentSectionId": "HFr4mA-T",
+              "parentPackageUid": "pEmBQLYg",
+              "parentSectionUid": "9f2pT",
+              "id": "aJ_--Lcw"
+            },
+            {
+              "uid": "8mC-j0uV",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gvvyV__6",
+                  "name": "Heavy Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "l5CNesPn",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "label": "Heavy Sword (A3, AP(1), Rending)"
+                }
+              ],
+              "label": "Heavy Sword (A3, AP(1), Rending)",
+              "parentSectionId": "HFr4mA-T",
+              "parentPackageUid": "pEmBQLYg",
+              "parentSectionUid": "9f2pT",
+              "id": "8mC-j0uV"
+            },
+            {
+              "uid": "AFH5go9S",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "bNxpaidk",
+                  "name": "Heavy Flail",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "ZBAEo2We",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable"
+                    }
+                  ],
+                  "label": "Heavy Flail (A3, Reliable, Rending)"
+                }
+              ],
+              "label": "Heavy Flail (A3, Reliable, Rending)",
+              "parentSectionId": "HFr4mA-T",
+              "parentPackageUid": "pEmBQLYg",
+              "parentSectionUid": "9f2pT",
+              "id": "AFH5go9S"
+            },
+            {
+              "uid": "IMYX_etu",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "6pFkuPXK",
+                  "name": "Heavy Claw",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "VLpz_SX-",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable"
+                    }
+                  ],
+                  "label": "Heavy Claw (A3, AP(1), Reliable)"
+                }
+              ],
+              "label": "Heavy Claw (A3, AP(1), Reliable)",
+              "parentSectionId": "HFr4mA-T",
+              "parentPackageUid": "pEmBQLYg",
+              "parentSectionUid": "9f2pT",
+              "id": "IMYX_etu"
+            }
+          ],
+          "parentPackageUid": "pEmBQLYg",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Heavy Hammer"
+          ]
+        },
+        {
+          "id": "5yRg87S",
+          "uid": "Rmao8bbtP_",
+          "label": "Replace Titan Shield",
+          "options": [
+            {
+              "uid": "CiEvHFeYC7",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "bcpqzan"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Hammer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "VC1EHPxI",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "label": "Heavy Hammer (A1, AP(1), Blast(3))"
+                }
+              ],
+              "label": "Heavy Hammer (A1, AP(1), Blast(3))",
+              "parentSectionId": "Rmao8bbtP_",
+              "id": "CiEvHFeYC7"
+            }
+          ],
+          "parentPackageUid": "1TksVWNd",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Titan Shield"
+          ]
+        }
+      ],
+      "calcErrors": false
+    }
+  ],
+  "customRules": [],
+  "customWeapons": [],
+  "spells": [
+    {
+      "id": "FyJX5mYR",
+      "name": "Psy-Injected Courage",
+      "type": 1,
+      "effect": "Pick one friendly unit within 12\", which gets +1 to morale test rolls once (next time the effect would apply).",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "nxIQS1UnUBL_",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "rollModifier",
+              "value": "+1"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? this.getMoraleCost({ ...unit, quality: Math.max(1, unit.quality - params.effect.rollModifier.value) }) - this.getMoraleCost(unit) : 0",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "+1",
+                "value": 1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 1
+          },
+          "multiplier": 1
+        },
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? 0 : this.getMoraleCost({ quality: 5 - params.effect.rollModifier.value }) - this.getMoraleCost({ quality: 5 })",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "+1",
+                "value": 1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 1
+          },
+          "multiplier": 1
+        }
+      ],
+      "effectSkirmish": ""
+    },
+    {
+      "id": "L2MLJCql",
+      "name": "Electric Tempest",
+      "type": 0,
+      "effect": "Pick one enemy unit within 12\", which takes 2 hit with AP(1) and Surge. Roll as many dice as hits to see if \"on rolls of 6\" effects trigger.",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "spellHitRoll",
+              "value": "Roll as many dice as hits to see if \"on rolls of 6\" effects trigger."
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "5v6oaGfrdf29",
+                "name": "Surge"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 2
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "5v6oaGfrdf29",
+                "name": "Surge"
+              },
+              "spellHitRoll": {
+                "name": "Roll as many dice as hits to see if \"on rolls of 6\" effects trigger."
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1
+          },
+          "multiplier": 1
+        }
+      ],
+      "effectSkirmish": ""
+    },
+    {
+      "id": "IMINHoAo",
+      "name": "Calculated Foresight",
+      "type": 2,
+      "effect": "Pick up to two enemy units within 18\", which friendly units gets Relentless against once (next time the effect would apply).",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "1yTPcanTyckX",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "H9E9PIWpGRdw",
+                "name": "Relentless"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "{ name: params.effect.unitRule.name, rating: params.effect.unitRule.rating, multiplier: params.multiplier * (this._skirmish ? 1 : this.AuraSize), avgUnit: true }",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "H9E9PIWpGRdw",
+                "name": "Relentless"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2.2
+          },
+          "multiplier": 2.2
+        }
+      ],
+      "effectSkirmish": ""
+    },
+    {
+      "id": "qvE1vtay",
+      "name": "Searing Burst",
+      "type": 0,
+      "effect": "Pick one enemy unit within 12\", which takes 6 hit.",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "3"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 6
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1
+          },
+          "multiplier": 1
+        }
+      ],
+      "effectSkirmish": ""
+    },
+    {
+      "id": "1ncY3-OY",
+      "name": "Shock Speed",
+      "type": 1,
+      "effect": "Pick up to three friendly units within 12\", which moves +2\" when using Advance actions and +4\" when using Rush/Charge actions once (next time the effect would apply).",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "rz0b1dShgnvg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "advanceSpeed",
+              "value": "+2\""
+            },
+            {
+              "name": "rushSpeed",
+              "value": "+4\""
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to three"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? this.getSpeed(unit, { advance: params.effect.advanceSpeed.value, rush: params.effect.rushSpeed.value }) : 0",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rushSpeed": {
+                "name": "+4\"",
+                "value": 4
+              },
+              "advanceSpeed": {
+                "name": "+2\"",
+                "value": 2
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 3
+          },
+          "multiplier": 3
+        },
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? 0 : this.getSpeed(this.AverageUnit, { advance: params.effect.advanceSpeed.value, rush: params.effect.rushSpeed.value })",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rushSpeed": {
+                "name": "+4\"",
+                "value": 4
+              },
+              "advanceSpeed": {
+                "name": "+2\"",
+                "value": 2
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 3
+          },
+          "multiplier": 3
+        }
+      ],
+      "effectSkirmish": ""
+    },
+    {
+      "id": "0_C3EPvs",
+      "name": "Expel Threat",
+      "type": 0,
+      "effect": "Pick one enemy model within 18\", which takes 6 hit with AP(1).",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "model"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 6
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1.1
+          },
+          "multiplier": 1.1
+        }
+      ],
+      "effectSkirmish": ""
+    }
+  ],
+  "modifiedAt": "2026-01-26T15:41:06.609Z",
+  "editedAt": "2025-12-05T01:59:33.912Z",
+  "official": true,
+  "versionString": "3.5.1",
+  "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/3j10zage1lddt6sr/Lv9hB3-CGN5-OHv1_rNHU.jpg",
+  "coverImageCredit": null,
+  "bannerImagePath": null,
+  "visibility": 1,
+  "factionId": null,
+  "factionName": null,
+  "factionRelation": null,
+  "popularity": 0,
+  "downvotes": 0,
+  "partnerSettings": {
+    "storeLinks": [
+      "https://www.myminifactory.com/users/onepagerules",
+      "https://www.etsy.com/shop/onepagerules"
+    ]
+  },
+  "balanceValid": true,
+  "balanceValidReason": 0,
+  "loreUrl": "https://www.onepagerules.com/factions/titan-lords",
+  "voted": null,
+  "specialRules": [
+    {
+      "id": "IyLY1212wacW",
+      "name": "Fortified",
+      "aliasedRuleId": null,
+      "description": "When units where all models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "RSVMS71PNbZF",
+      "name": "Honor Code",
+      "aliasedRuleId": "j93FkLXMCk8v",
+      "description": "If a unit where all models have this rule is Shaken at the beginning of the round, roll one die. On a 4+, it stops being Shaken.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "O_wrvW7FiJWX",
+      "name": "Plaguebound",
+      "aliasedRuleId": "AlIZbh-afBYi",
+      "description": "When a unit where all models have this rule takes wounds, roll one die for each. On a 6+ it is ignored.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "jbhpErfecvEY",
+      "name": "Warbound",
+      "aliasedRuleId": "WHJ8A7LzHUR6",
+      "description": "Enemies that roll to block hits from this model's weapons take 1 extra wound for each unmodified result of 1 that they roll.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "SKzm-kqi1h2Q",
+      "name": "Delayed Action",
+      "aliasedRuleId": null,
+      "description": "Once per round, if your opponent has more units left to activate than you, then this model's unit may pass its turn instead of activating (may still be activated later).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "4mB0rwGnMVgJ",
+      "name": "Changebound",
+      "aliasedRuleId": "_tP0jExjizvc",
+      "description": "When units where all models have this rule are shot or charged from over 9\" away, enemy units get -1 to hit rolls.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "yis0utoPMclv",
+      "name": "Lustbound",
+      "aliasedRuleId": "B-gdRytVFVay",
+      "description": "Moves +1\" when using Advance, and +3” when using Rush/Charge.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "H9E9PIWpGRdw",
+      "name": "Relentless",
+      "aliasedRuleId": null,
+      "description": "When this model shoots at enemies over 9\" away, unmodified results of 6 to hit deal 1 extra hit (only the original hit counts as a 6 for special rules).",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "5v6oaGfrdf29",
+      "name": "Surge",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    }
+  ],
+  "username": "onepagerules",
+  "creator": false,
+  "isCreator": false,
+  "gameSystemId": 2,
+  "gameSystemSlug": "grimdark-future",
+  "aberration": "GF",
+  "gameSystemKey": "GF",
+  "flavouredUid": "3j10zage1lddt6sr~2"
+}
