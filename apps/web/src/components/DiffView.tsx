@@ -208,7 +208,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
     const upgradeDetails = getUpgradeDetails(unit, data);
 
     return (
-      <div className="glass-card h-full p-6 relative overflow-hidden">
+      <div className="glass-card h-full p-2 relative overflow-hidden">
         {/* Header */}
         <div className="flex justify-between items-start mb-4">
           <h4 className="m-0 text-xl font-bold text-white">{unit.name}</h4>
@@ -281,30 +281,103 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                   <div className="text-sm text-sky-400 font-bold mb-1 pb-1 border-b border-white/10">
                     {pkg.hint}
                   </div>
-                  {pkg.sections.map((section: any) => (
-                    <div key={section.id} className="mb-2 last:mb-0">
-                      <div className="text-xs text-slate-500 mb-1 italic">
-                        {section.label}
+                  {pkg.sections.map((section: any) => {
+                    return (
+                      <div key={section.id} className="mb-2 last:mb-0">
+                        <div className="text-xs text-slate-500 mb-1 italic">
+                          {section.label}
+                        </div>
+                        <div className="w-full overflow-hidden rounded border border-white/10">
+                          <table className="w-full text-left border-collapse">
+                            <thead>
+                              <tr className="bg-white/5 text-slate-500 text-[10px] uppercase font-semibold">
+                                <th className="py-1 px-2">Option / Weapon</th>
+                                <th className="py-1 text-center w-12">Rng</th>
+                                <th className="py-1 text-center w-8">A</th>
+                                <th className="py-1 w-1/3">Special</th>
+                                <th className="py-1 px-2 text-right">Cost</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              {section.options.map((opt: any) => {
+                                const weapons = (opt.gains || []).filter(
+                                  (g: any) =>
+                                    g.attacks !== undefined ||
+                                    g.range !== undefined,
+                                );
+
+                                const rowClass =
+                                  "border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors";
+                                const textClass = "text-slate-300";
+                                const labelText = opt.label
+                                  .split("(")[0]
+                                  .trim();
+                                const costText = `${opt.finalCost}pts`;
+
+                                const weaponRows =
+                                  weapons.length > 0
+                                    ? weapons
+                                    : [{ name: labelText, isDummy: true }];
+
+                                return weaponRows.map((w: any, idx: number) => (
+                                  <tr
+                                    key={`${opt.id}-${idx}`}
+                                    className={`${rowClass} text-xs`}
+                                  >
+                                    <td
+                                      className={`py-1 px-2 ${textClass} font-medium`}
+                                    >
+                                      {idx === 0 ? labelText : ""}
+                                      {weapons.length > 1 && !w.isDummy && (
+                                        <div className="text-[10px] text-slate-400 pl-2">
+                                          - {w.name || w.label}
+                                        </div>
+                                      )}
+                                      {/* If simple replace, sometimes we want to show the weapon name if it differs? */}
+                                      {/* For now stick to strict label logic unless gains has distinct name. */}
+                                      {weapons.length === 1 &&
+                                        !w.isDummy &&
+                                        w.name !== labelText && (
+                                          <div className="text-[10px] text-slate-400 pl-2">
+                                            - {w.name || w.label}
+                                          </div>
+                                        )}
+                                    </td>
+                                    <td
+                                      className={`py-1 text-center ${textClass}`}
+                                    >
+                                      {w.range
+                                        ? `${w.range}"`
+                                        : w.isDummy
+                                          ? "-"
+                                          : "M"}
+                                    </td>
+                                    <td
+                                      className={`py-1 text-center ${textClass}`}
+                                    >
+                                      {w.attacks || (w.isDummy ? "-" : "")}
+                                    </td>
+                                    <td
+                                      className={`py-1 ${textClass} text-[10px]`}
+                                    >
+                                      {w.specialRules
+                                        ?.map((r: any) => r.name || r.label)
+                                        .join(", ") || "-"}
+                                    </td>
+                                    <td
+                                      className={`py-1 px-2 text-right ${textClass}`}
+                                    >
+                                      {idx === 0 ? costText : ""}
+                                    </td>
+                                  </tr>
+                                ));
+                              })}
+                            </tbody>
+                          </table>
+                        </div>
                       </div>
-                      <div className="flex flex-wrap gap-1">
-                        {section.options.map((opt: any) => (
-                          <div
-                            key={opt.id}
-                            className="text-xs bg-black/30 px-2 py-0.5 rounded border border-white/10 flex items-center"
-                          >
-                            <span className="text-slate-200">
-                              {opt.label.split("(")[0].trim()}
-                            </span>
-                            {opt.finalCost !== undefined && (
-                              <span className="text-slate-500 ml-1">
-                                {opt.finalCost}pts
-                              </span>
-                            )}
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               ))}
             </div>
@@ -367,7 +440,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
     const upgradeDetailsB = getUpgradeDetails(uB, dataB);
 
     return (
-      <div className="glass-card h-full p-6 relative border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)] overflow-hidden">
+      <div className="glass-card h-full p-2 relative border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)] overflow-hidden">
         {/* Top Accent Line */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 to-indigo-500"></div>
 
@@ -544,110 +617,133 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                           !optsB.find((oB: any) => oB.label === oA.label),
                       );
 
+                      const renderRow = (
+                        opt: any,
+                        type: "removed" | "added" | "changed" | "unchanged",
+                        optA?: any,
+                      ) => {
+                        const weapons = (opt.gains || []).filter(
+                          (g: any) =>
+                            g.attacks !== undefined || g.range !== undefined,
+                        );
+
+                        // Determine colors
+                        let rowClass = "border-b border-white/5 last:border-0";
+                        let textClass = "text-slate-300";
+                        let costText = `${opt.finalCost}pts`;
+                        let labelText = opt.label.split("(")[0].trim();
+
+                        if (type === "removed") {
+                          rowClass =
+                            "bg-red-500/10 border-red-500/30 opacity-70";
+                          textClass = "text-red-500 line-through";
+                          labelText = opt.label.split("(")[0].trim();
+                        } else if (type === "added") {
+                          rowClass = "bg-lime-400/10 border-lime-400/30";
+                          textClass = "text-lime-400";
+                        } else if (type === "changed") {
+                          rowClass = "bg-black/30 border-white/10";
+                          const diff = opt.finalCost - optA.finalCost;
+                          const color = getCostColor(
+                            optA.finalCost,
+                            opt.finalCost,
+                          );
+                          costText = (
+                            <span style={{ color }}>
+                              {optA.finalCost} → {opt.finalCost} (
+                              {diff > 0 ? "+" : ""}
+                              {diff})pts
+                            </span>
+                          ) as any;
+                          textClass = "text-slate-200";
+                        } else {
+                          // Unchanged
+                          rowClass = "bg-black/30 border-white/10";
+                          textClass = "text-slate-200";
+                        }
+
+                        // If option implies a weapon, use that name? usually label is good.
+                        // Weapons to render:
+                        const weaponRows =
+                          weapons.length > 0
+                            ? weapons
+                            : [{ name: labelText, isDummy: true }];
+
+                        return weaponRows.map((w: any, idx: number) => (
+                          <tr
+                            key={`${opt.id}-${idx}`}
+                            className={`${rowClass} text-xs`}
+                          >
+                            <td
+                              className={`py-1 px-2 ${textClass} font-medium`}
+                            >
+                              {idx === 0 ? labelText : ""}
+                              {/* If multiple weapons, maybe indent names? */}
+                              {weapons.length > 1 && !w.isDummy && (
+                                <div className="text-[10px] text-slate-400 pl-2">
+                                  - {w.name || w.label}
+                                </div>
+                              )}
+                            </td>
+                            <td className={`py-1 text-center ${textClass}`}>
+                              {w.range ? `${w.range}"` : w.isDummy ? "-" : "M"}
+                            </td>
+                            <td className={`py-1 text-center ${textClass}`}>
+                              {w.attacks || (w.isDummy ? "-" : "")}
+                            </td>
+                            <td className={`py-1 ${textClass} text-[10px]`}>
+                              {w.specialRules
+                                ?.map((r: any) => r.name || r.label)
+                                .join(", ") || "-"}
+                            </td>
+                            <td className={`py-1 px-2 text-right ${textClass}`}>
+                              {idx === 0 ? costText : ""}
+                            </td>
+                          </tr>
+                        ));
+                      };
+
                       return (
                         <div key={sectionB.id} className="mb-2 last:mb-0">
                           <div className="text-xs text-slate-500 mb-1 italic">
                             {sectionB.label}
                           </div>
-                          <div className="flex flex-wrap gap-1">
-                            {/* Render REMOVED items first */}
-                            {removedOptions.map((opt: any) => (
-                              <div
-                                key={`rm-${opt.id}`}
-                                className="text-xs bg-red-500/10 px-2 py-0.5 rounded border border-red-500/30 flex items-center opacity-70"
-                              >
-                                <span className="text-red-500 line-through">
-                                  {opt.label.split("(")[0].trim()}
-                                </span>
-                                {opt.finalCost !== undefined && (
-                                  <span className="text-red-500 ml-1 line-through">
-                                    {opt.finalCost}pts
-                                  </span>
+                          <div className="w-full overflow-hidden rounded border border-white/10">
+                            <table className="w-full text-left border-collapse">
+                              <thead>
+                                <tr className="bg-white/5 text-slate-500 text-[10px] uppercase font-semibold">
+                                  <th className="py-1 px-2">Option / Weapon</th>
+                                  <th className="py-1 text-center w-12">Rng</th>
+                                  <th className="py-1 text-center w-8">A</th>
+                                  <th className="py-1 w-1/3">Special</th>
+                                  <th className="py-1 px-2 text-right">Cost</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {removedOptions.map((opt: any) =>
+                                  renderRow(opt, "removed"),
                                 )}
-                              </div>
-                            ))}
-
-                            {/* Render B items (Checking for changes) */}
-                            {optsB.map((optB: any) => {
-                              const optA = optsA.find(
-                                (o: any) => o.label === optB.label,
-                              );
-
-                              let isChanged = false;
-                              const isAdded = !optA;
-
-                              if (
-                                !isAdded &&
-                                optA.finalCost !== undefined &&
-                                optB.finalCost !== undefined &&
-                                optA.finalCost !== optB.finalCost
-                              ) {
-                                isChanged = true;
-                              }
-
-                              // 1. Cost Changed: Show concise diff "A -> B (+Diff)"
-                              if (isChanged) {
-                                const diff = optB.finalCost - optA.finalCost;
-                                const color = getCostColor(
-                                  optA.finalCost,
-                                  optB.finalCost,
-                                );
-                                return (
-                                  <div
-                                    key={optB.id}
-                                    className="text-xs px-2 py-0.5 rounded border border-white/10 flex items-center bg-black/30"
-                                  >
-                                    <span className="text-slate-200">
-                                      {optB.label.split("(")[0].trim()}
-                                    </span>
-                                    <span
-                                      className="ml-1 font-bold"
-                                      style={{ color }}
-                                    >
-                                      {optA.finalCost} → {optB.finalCost} (
-                                      {diff > 0 ? "+" : ""}
-                                      {diff})pts
-                                    </span>
-                                  </div>
-                                );
-                              }
-
-                              // 2. Added: Show Green
-                              // 3. Unchanged: Show Neutral
-                              const highlight = isAdded;
-
-                              return (
-                                <div
-                                  key={optB.id}
-                                  className={`text-xs px-2 py-0.5 rounded border flex items-center ${
-                                    highlight
-                                      ? "bg-lime-400/10 border-lime-400/30"
-                                      : "bg-black/30 border-white/10"
-                                  }`}
-                                >
-                                  <span
-                                    className={
-                                      highlight
-                                        ? "text-lime-400"
-                                        : "text-slate-200"
+                                {optsB.map((optB: any) => {
+                                  const optA = optsA.find(
+                                    (o: any) => o.label === optB.label,
+                                  );
+                                  let type: "added" | "changed" | "unchanged" =
+                                    "added";
+                                  if (optA) {
+                                    if (
+                                      optA.finalCost !== undefined &&
+                                      optB.finalCost !== undefined &&
+                                      optA.finalCost !== optB.finalCost
+                                    ) {
+                                      type = "changed";
+                                    } else {
+                                      type = "unchanged";
                                     }
-                                  >
-                                    {optB.label.split("(")[0].trim()}
-                                  </span>
-                                  {optB.finalCost !== undefined && (
-                                    <span
-                                      className={`ml-1 ${
-                                        highlight
-                                          ? "text-lime-400"
-                                          : "text-slate-500"
-                                      }`}
-                                    >
-                                      {optB.finalCost}pts
-                                    </span>
-                                  )}
-                                </div>
-                              );
-                            })}
+                                  }
+                                  return renderRow(optB, type, optA);
+                                })}
+                              </tbody>
+                            </table>
                           </div>
                         </div>
                       );
