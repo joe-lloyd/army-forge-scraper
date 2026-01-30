@@ -135,6 +135,203 @@ const TextDiff = ({ textA, textB }: { textA: string; textB: string }) => {
   );
 };
 
+// Helpers for dynamic colors
+const getCostColor = (valA: number, valB: number) => {
+  if (valA === valB) return "var(--text-muted)";
+  return valB < valA ? "#bef264" : "#ef4444";
+};
+
+const getStatColor = (valA: number, valB: number) => {
+  if (valA === valB) return "var(--text-muted)";
+  // Lower is better for Q/D
+  return valB < valA ? "#bef264" : "#ef4444";
+};
+
+interface UpgradeSectionTableProps {
+  sectionB: any;
+  sectionA?: any;
+  isDiffMode?: boolean;
+}
+
+const UpgradeSectionTable = ({
+  sectionB,
+  sectionA,
+  isDiffMode = false,
+}: UpgradeSectionTableProps) => {
+  const optsA = sectionA?.options || [];
+  const optsB = sectionB.options || [];
+
+  // Robust Matching Logic
+  // 1. Calculate matches and leftovers
+  const availableOptsA = [...optsA];
+  const mappedB = optsB.map((optB: any) => {
+    if (!isDiffMode)
+      return { opt: optB, type: "standard" as const, optA: undefined };
+
+    // Try explicit ID match first
+    let matchIdx = availableOptsA.findIndex((a: any) => a.id === optB.id);
+
+    // Fallback to label match
+    if (matchIdx === -1) {
+      matchIdx = availableOptsA.findIndex((a: any) => a.label === optB.label);
+    }
+
+    if (matchIdx !== -1) {
+      const optA = availableOptsA[matchIdx];
+      availableOptsA.splice(matchIdx, 1); // Consume
+      // Detect change
+      const isChanged =
+        optA.finalCost !== undefined &&
+        optB.finalCost !== undefined &&
+        optA.finalCost !== optB.finalCost;
+      return {
+        opt: optB,
+        type: isChanged ? "changed" : "unchanged",
+        optA,
+      };
+    }
+    return { opt: optB, type: "added" as const, optA: undefined };
+  });
+
+  const removedOpts = isDiffMode ? availableOptsA : [];
+
+  const allSectionOptions = [...(isDiffMode ? optsA : []), ...optsB];
+  const hasWeapons = allSectionOptions.some((opt: any) =>
+    (opt.gains || []).some(
+      (g: any) => g.attacks !== undefined || g.range !== undefined,
+    ),
+  );
+  const hasSpecial = allSectionOptions.some((opt: any) =>
+    (opt.gains || []).some(
+      (g: any) => g.specialRules && g.specialRules.length > 0,
+    ),
+  );
+
+  const renderRow = (
+    opt: any,
+    type: "removed" | "added" | "changed" | "unchanged" | "standard",
+    outerIdx: number,
+    optA?: any,
+  ) => {
+    const weapons = (opt.gains || []).filter(
+      (g: any) => g.attacks !== undefined || g.range !== undefined,
+    );
+
+    let rowClass = "border-b border-white/5 last:border-0 transition-colors";
+    let textClass = "text-slate-300";
+    let costText: React.ReactNode = `${opt.finalCost}pts`;
+    let labelText = opt.label.split("(")[0].trim();
+
+    if (type === "removed") {
+      rowClass = "bg-red-500/40 border-red-500/50";
+      textClass = "text-red-500 line-through";
+      labelText = opt.label.split("(")[0].trim();
+    } else if (type === "added") {
+      rowClass = "bg-lime-400/40 border-lime-400/50";
+      textClass = "text-lime-400";
+    } else if (type === "changed") {
+      rowClass = "bg-black/30 border-white/10";
+      const diff = opt.finalCost - optA.finalCost;
+      const color = getCostColor(optA.finalCost, opt.finalCost);
+      costText = (
+        <span style={{ color, fontWeight: "bold" }}>
+          {optA.finalCost} → {opt.finalCost} ({diff > 0 ? "+" : ""}
+          {diff})pts
+        </span>
+      );
+      textClass = "text-slate-200";
+    } else if (type === "unchanged") {
+      rowClass = "bg-black/30 border-white/10";
+      textClass = "text-slate-200";
+    }
+
+    const weaponRows =
+      weapons.length > 0 ? weapons : [{ name: labelText, isDummy: true }];
+
+    // Format rule helper
+    const fmtRule = (r: any) => {
+      const name = r.name || r.label;
+      return r.rating ? `${name}(${r.rating})` : name;
+    };
+
+    return weaponRows.map((w: any, idx: number) => (
+      <tr
+        key={`${opt.id || "opt"}-${outerIdx}-${idx}`}
+        className={`${rowClass} text-xs`}
+      >
+        <td className={`py-1 px-2 ${textClass} font-medium`}>
+          {idx === 0 ? labelText : ""}
+          {/* Sub-weapons or indent logic */}
+          {weapons.length > 1 && !w.isDummy && (
+            <div className="text-[10px] text-slate-400 pl-2">
+              - {w.name || w.label}
+            </div>
+          )}
+          {weapons.length === 1 && !w.isDummy && w.name !== labelText && (
+            <div className="text-[10px] text-slate-400 pl-2">
+              - {w.name || w.label}
+            </div>
+          )}
+        </td>
+        {hasWeapons && (
+          <>
+            <td className={`py-1 text-center ${textClass}`}>
+              {w.range ? `${w.range}"` : w.isDummy ? "-" : "M"}
+            </td>
+            <td className={`py-1 text-center ${textClass}`}>
+              {w.attacks || (w.isDummy ? "-" : "")}
+            </td>
+            {hasSpecial && (
+              <td className={`py-1 ${textClass} text-[10px]`}>
+                {w.specialRules?.map(fmtRule).join(", ") || "-"}
+              </td>
+            )}
+          </>
+        )}
+        {!hasWeapons && hasSpecial && (
+          <td className={`py-1 ${textClass} text-[10px]`}>
+            {w.specialRules?.map(fmtRule).join(", ") || "-"}
+          </td>
+        )}
+        <td className={`py-1 px-2 text-right ${textClass}`}>
+          {idx === 0 ? costText : ""}
+        </td>
+      </tr>
+    ));
+  };
+
+  return (
+    <div className="mb-2 last:mb-0">
+      <div className="text-xs text-slate-500 mb-1 italic">{sectionB.label}</div>
+      <div className="w-full overflow-hidden rounded border border-white/10">
+        <table className="w-full text-left border-collapse">
+          <thead>
+            <tr className="bg-white/5 text-slate-500 text-[10px] uppercase font-semibold">
+              <th className="py-1 px-2">Option / Weapon</th>
+              {hasWeapons && (
+                <>
+                  <th className="py-1 text-center w-12">Rng</th>
+                  <th className="py-1 text-center w-8">A</th>
+                </>
+              )}
+              {hasSpecial && <th className="py-1 w-1/4">Special</th>}
+              <th className="py-1 px-2 text-right">Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            {removedOpts.map((opt: any, i: number) =>
+              renderRow(opt, "removed", i),
+            )}
+            {mappedB.map((item: any, i: number) =>
+              renderRow(item.opt, item.type, i + removedOpts.length, item.optA),
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
 export default function DiffView({ dataA, dataB }: DiffViewProps) {
   // Collapsed state map. If a key is true, it is CLOSED.
   // Wait, better to be explicit about OPEN state?
@@ -146,18 +343,6 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
 
   const toggle = (section: string) => {
     setCollapsed((prev) => ({ ...prev, [section]: !prev[section] }));
-  };
-
-  // Helpers for dynamic colors (still using style for dynamic values)
-  const getCostColor = (valA: number, valB: number) => {
-    if (valA === valB) return "var(--text-muted)";
-    return valB < valA ? "#bef264" : "#ef4444";
-  };
-
-  const getStatColor = (valA: number, valB: number) => {
-    if (valA === valB) return "var(--text-muted)";
-    // Lower is better for Q/D
-    return valB < valA ? "#bef264" : "#ef4444";
   };
 
   const getUpgradeDetails = (
@@ -248,7 +433,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                 {" "}
                 ({w.range ? `${w.range}"` : "Melee"}, A{w.attacks}
                 {w.specialRules?.length > 0
-                  ? `, ${w.specialRules.map((r: any) => r.name).join(", ")}`
+                  ? `, ${w.specialRules.map((r: any) => (r.rating ? `${r.name}(${r.rating})` : r.name)).join(", ")}`
                   : ""}
                 )
               </span>
@@ -281,103 +466,9 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                   <div className="text-sm text-sky-400 font-bold mb-1 pb-1 border-b border-white/10">
                     {pkg.hint}
                   </div>
-                  {pkg.sections.map((section: any) => {
-                    return (
-                      <div key={section.id} className="mb-2 last:mb-0">
-                        <div className="text-xs text-slate-500 mb-1 italic">
-                          {section.label}
-                        </div>
-                        <div className="w-full overflow-hidden rounded border border-white/10">
-                          <table className="w-full text-left border-collapse">
-                            <thead>
-                              <tr className="bg-white/5 text-slate-500 text-[10px] uppercase font-semibold">
-                                <th className="py-1 px-2">Option / Weapon</th>
-                                <th className="py-1 text-center w-12">Rng</th>
-                                <th className="py-1 text-center w-8">A</th>
-                                <th className="py-1 w-1/3">Special</th>
-                                <th className="py-1 px-2 text-right">Cost</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              {section.options.map((opt: any) => {
-                                const weapons = (opt.gains || []).filter(
-                                  (g: any) =>
-                                    g.attacks !== undefined ||
-                                    g.range !== undefined,
-                                );
-
-                                const rowClass =
-                                  "border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors";
-                                const textClass = "text-slate-300";
-                                const labelText = opt.label
-                                  .split("(")[0]
-                                  .trim();
-                                const costText = `${opt.finalCost}pts`;
-
-                                const weaponRows =
-                                  weapons.length > 0
-                                    ? weapons
-                                    : [{ name: labelText, isDummy: true }];
-
-                                return weaponRows.map((w: any, idx: number) => (
-                                  <tr
-                                    key={`${opt.id}-${idx}`}
-                                    className={`${rowClass} text-xs`}
-                                  >
-                                    <td
-                                      className={`py-1 px-2 ${textClass} font-medium`}
-                                    >
-                                      {idx === 0 ? labelText : ""}
-                                      {weapons.length > 1 && !w.isDummy && (
-                                        <div className="text-[10px] text-slate-400 pl-2">
-                                          - {w.name || w.label}
-                                        </div>
-                                      )}
-                                      {/* If simple replace, sometimes we want to show the weapon name if it differs? */}
-                                      {/* For now stick to strict label logic unless gains has distinct name. */}
-                                      {weapons.length === 1 &&
-                                        !w.isDummy &&
-                                        w.name !== labelText && (
-                                          <div className="text-[10px] text-slate-400 pl-2">
-                                            - {w.name || w.label}
-                                          </div>
-                                        )}
-                                    </td>
-                                    <td
-                                      className={`py-1 text-center ${textClass}`}
-                                    >
-                                      {w.range
-                                        ? `${w.range}"`
-                                        : w.isDummy
-                                          ? "-"
-                                          : "M"}
-                                    </td>
-                                    <td
-                                      className={`py-1 text-center ${textClass}`}
-                                    >
-                                      {w.attacks || (w.isDummy ? "-" : "")}
-                                    </td>
-                                    <td
-                                      className={`py-1 ${textClass} text-[10px]`}
-                                    >
-                                      {w.specialRules
-                                        ?.map((r: any) => r.name || r.label)
-                                        .join(", ") || "-"}
-                                    </td>
-                                    <td
-                                      className={`py-1 px-2 text-right ${textClass}`}
-                                    >
-                                      {idx === 0 ? costText : ""}
-                                    </td>
-                                  </tr>
-                                ));
-                              })}
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    );
-                  })}
+                  {pkg.sections.map((section: any) => (
+                    <UpgradeSectionTable key={section.id} sectionB={section} />
+                  ))}
                 </div>
               ))}
             </div>
@@ -417,7 +508,13 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
 
     // Weapons Diff Logic
     const formatWDetails = (w: any) =>
-      `(${w.range ? w.range + '"' : "Melee"}, A${w.attacks}${w.specialRules?.length > 0 ? `, ${w.specialRules.map((r: any) => r.name).join(", ")}` : ""})`;
+      `(${w.range ? w.range + '"' : "Melee"}, A${w.attacks}${
+        w.specialRules?.length > 0
+          ? `, ${w.specialRules
+              .map((r: any) => (r.rating ? `${r.name}(${r.rating})` : r.name))
+              .join(", ")}`
+          : ""
+      })`;
 
     const serializeW = (w: any) =>
       JSON.stringify({
@@ -431,8 +528,12 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
     const wDiffs = diffArrays(wA, wB);
 
     // Rules Diff Logic
-    const rA = uA.rules.map((r) => r.name || r.label);
-    const rB = uB.rules.map((r) => r.name || r.label);
+    const fmtRule = (r: any) => {
+      const name = r.name || r.label;
+      return r.rating ? `${name}(${r.rating})` : name;
+    };
+    const rA = uA.rules.map(fmtRule);
+    const rB = uB.rules.map(fmtRule);
     const rDiffs = diffArrays(rA, rB);
 
     // Upgrade Details Comparison
@@ -578,6 +679,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                   (p: any) => p?.uid === pkgB.uid,
                 );
                 const isNewPkg = !pkgA;
+                const usedSectionAIds = new Set<string>();
 
                 return (
                   <div
@@ -604,148 +706,36 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                     </div>
 
                     {pkgB.sections.map((sectionB: any) => {
-                      const sectionA = pkgA?.sections.find(
-                        (s: any) =>
-                          s.id === sectionB.id || s.label === sectionB.label,
-                      );
-                      const optsA = sectionA?.options || [];
-                      const optsB = sectionB.options || [];
-
-                      // Identify removed options (in A but not B match by label)
-                      const removedOptions = optsA.filter(
-                        (oA: any) =>
-                          !optsB.find((oB: any) => oB.label === oA.label),
+                      // Robust matching:
+                      // 1. Try exact ID match
+                      let sectionA = pkgA?.sections.find(
+                        (s: any) => s.id === sectionB.id,
                       );
 
-                      const renderRow = (
-                        opt: any,
-                        type: "removed" | "added" | "changed" | "unchanged",
-                        optA?: any,
-                      ) => {
-                        const weapons = (opt.gains || []).filter(
-                          (g: any) =>
-                            g.attacks !== undefined || g.range !== undefined,
+                      // 2. If no ID match or ID collision, try label match (skipping used IDs)
+                      if (sectionA && usedSectionAIds.has(sectionA.id)) {
+                        sectionA = undefined; // Force label search if ID consumed
+                      }
+
+                      if (!sectionA && pkgA) {
+                        sectionA = pkgA.sections.find(
+                          (s: any) =>
+                            s.label === sectionB.label &&
+                            !usedSectionAIds.has(s.id),
                         );
+                      }
 
-                        // Determine colors
-                        let rowClass = "border-b border-white/5 last:border-0";
-                        let textClass = "text-slate-300";
-                        let costText = `${opt.finalCost}pts`;
-                        let labelText = opt.label.split("(")[0].trim();
-
-                        if (type === "removed") {
-                          rowClass =
-                            "bg-red-500/10 border-red-500/30 opacity-70";
-                          textClass = "text-red-500 line-through";
-                          labelText = opt.label.split("(")[0].trim();
-                        } else if (type === "added") {
-                          rowClass = "bg-lime-400/10 border-lime-400/30";
-                          textClass = "text-lime-400";
-                        } else if (type === "changed") {
-                          rowClass = "bg-black/30 border-white/10";
-                          const diff = opt.finalCost - optA.finalCost;
-                          const color = getCostColor(
-                            optA.finalCost,
-                            opt.finalCost,
-                          );
-                          costText = (
-                            <span style={{ color }}>
-                              {optA.finalCost} → {opt.finalCost} (
-                              {diff > 0 ? "+" : ""}
-                              {diff})pts
-                            </span>
-                          ) as any;
-                          textClass = "text-slate-200";
-                        } else {
-                          // Unchanged
-                          rowClass = "bg-black/30 border-white/10";
-                          textClass = "text-slate-200";
-                        }
-
-                        // If option implies a weapon, use that name? usually label is good.
-                        // Weapons to render:
-                        const weaponRows =
-                          weapons.length > 0
-                            ? weapons
-                            : [{ name: labelText, isDummy: true }];
-
-                        return weaponRows.map((w: any, idx: number) => (
-                          <tr
-                            key={`${opt.id}-${idx}`}
-                            className={`${rowClass} text-xs`}
-                          >
-                            <td
-                              className={`py-1 px-2 ${textClass} font-medium`}
-                            >
-                              {idx === 0 ? labelText : ""}
-                              {/* If multiple weapons, maybe indent names? */}
-                              {weapons.length > 1 && !w.isDummy && (
-                                <div className="text-[10px] text-slate-400 pl-2">
-                                  - {w.name || w.label}
-                                </div>
-                              )}
-                            </td>
-                            <td className={`py-1 text-center ${textClass}`}>
-                              {w.range ? `${w.range}"` : w.isDummy ? "-" : "M"}
-                            </td>
-                            <td className={`py-1 text-center ${textClass}`}>
-                              {w.attacks || (w.isDummy ? "-" : "")}
-                            </td>
-                            <td className={`py-1 ${textClass} text-[10px]`}>
-                              {w.specialRules
-                                ?.map((r: any) => r.name || r.label)
-                                .join(", ") || "-"}
-                            </td>
-                            <td className={`py-1 px-2 text-right ${textClass}`}>
-                              {idx === 0 ? costText : ""}
-                            </td>
-                          </tr>
-                        ));
-                      };
+                      if (sectionA) {
+                        usedSectionAIds.add(sectionA.id);
+                      }
 
                       return (
-                        <div key={sectionB.id} className="mb-2 last:mb-0">
-                          <div className="text-xs text-slate-500 mb-1 italic">
-                            {sectionB.label}
-                          </div>
-                          <div className="w-full overflow-hidden rounded border border-white/10">
-                            <table className="w-full text-left border-collapse">
-                              <thead>
-                                <tr className="bg-white/5 text-slate-500 text-[10px] uppercase font-semibold">
-                                  <th className="py-1 px-2">Option / Weapon</th>
-                                  <th className="py-1 text-center w-12">Rng</th>
-                                  <th className="py-1 text-center w-8">A</th>
-                                  <th className="py-1 w-1/3">Special</th>
-                                  <th className="py-1 px-2 text-right">Cost</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                {removedOptions.map((opt: any) =>
-                                  renderRow(opt, "removed"),
-                                )}
-                                {optsB.map((optB: any) => {
-                                  const optA = optsA.find(
-                                    (o: any) => o.label === optB.label,
-                                  );
-                                  let type: "added" | "changed" | "unchanged" =
-                                    "added";
-                                  if (optA) {
-                                    if (
-                                      optA.finalCost !== undefined &&
-                                      optB.finalCost !== undefined &&
-                                      optA.finalCost !== optB.finalCost
-                                    ) {
-                                      type = "changed";
-                                    } else {
-                                      type = "unchanged";
-                                    }
-                                  }
-                                  return renderRow(optB, type, optA);
-                                })}
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
+                        <UpgradeSectionTable
+                          key={sectionB.id}
+                          sectionB={sectionB}
+                          sectionA={sectionA}
+                          isDiffMode={true}
+                        />
                       );
                     })}
                   </div>
