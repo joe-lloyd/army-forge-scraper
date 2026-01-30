@@ -143,7 +143,7 @@ export default function ComparisonPage() {
   }, [selectedSystem, versionA, versionB, selectedArmyId, armiesB]);
 
   return (
-    <div className="w-full max-w-[95vw] mx-auto p-4">
+    <div className="w-full md:max-w-[95vw] mx-auto p-2 md:p-4">
       <header className="mb-8 text-center pt-8">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-2 text-transparent bg-clip-text bg-gradient-to-br from-sky-400 to-indigo-500">
           Army Forge Compare
@@ -234,7 +234,11 @@ export default function ComparisonPage() {
       </div>
 
       {armyDataA && armyDataB && (
-        <DiffView dataA={armyDataA} dataB={armyDataB} />
+        <DiffView
+          dataA={armyDataA}
+          dataB={armyDataB}
+          versions={{ a: versionA, b: versionB }}
+        />
       )}
 
       {armyDataA && !armyDataB && (

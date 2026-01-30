@@ -44,6 +44,7 @@ interface ArmyData {
 interface DiffViewProps {
   dataA: ArmyData;
   dataB: ArmyData;
+  versions?: { a: string; b: string };
 }
 
 const CollapsibleSection = ({
@@ -332,7 +333,7 @@ const UpgradeSectionTable = ({
   );
 };
 
-export default function DiffView({ dataA, dataB }: DiffViewProps) {
+export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
   // Collapsed state map. If a key is true, it is CLOSED.
   // Wait, better to be explicit about OPEN state?
   // The request says "special rules collapsed by default".
@@ -795,7 +796,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
 
     return (
       <div
-        className={`glass-card p-6 h-full flex flex-col items-center justify-center text-center ${isSame ? "opacity-50" : "border-lime-400/30"}`}
+        className={`glass-card p-4 md:p-6 h-full flex flex-col items-center justify-center text-center ${isSame ? "opacity-50" : "border-lime-400/30"}`}
       >
         <h4 className="text-xl font-bold text-white mb-2">
           Description Status
@@ -943,7 +944,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
     };
 
     return (
-      <div className="glass-card p-6 h-full border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
+      <div className="glass-card p-4 md:p-6 h-full border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
         <h4 className="text-xl font-bold text-white mb-4 text-center">
           Changes
         </h4>
@@ -1055,7 +1056,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
     };
 
     return (
-      <div className="glass-card p-6 h-full border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
+      <div className="glass-card p-4 md:p-6 h-full border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
         <h4 className="text-xl font-bold text-white mb-4 text-center">
           {title} Changes
         </h4>
@@ -1071,14 +1072,18 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
       <div className="grid grid-cols-3 gap-6 mb-4 px-4 sticky top-0 bg-slate-950/80 backdrop-blur-md z-10 py-4 border-b border-white/5">
         <h3 className="text-center text-slate-400 font-semibold text-xl">
           {dataA.name}{" "}
-          <span className="text-sm opacity-50 block">Version A</span>
+          <span className="text-sm opacity-50 block">
+            {versions?.a || "Version A"}
+          </span>
         </h3>
         <h3 className="text-center text-sky-400 font-bold tracking-widest text-xl">
           VS
         </h3>
         <h3 className="text-center text-slate-400 font-semibold text-xl">
           {dataB.name}{" "}
-          <span className="text-sm opacity-50 block">Version B</span>
+          <span className="text-sm opacity-50 block">
+            {versions?.b || "Version B"}
+          </span>
         </h3>
       </div>
 
@@ -1090,13 +1095,13 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
           isOpen={!collapsed["Description"]}
           onToggle={() => toggle("Description")}
         >
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 md:px-4">
             <div className="hidden md:block">
-              {renderDescription(dataA.background, "A")}
+              {renderDescription(dataA.background, versions?.a || "A")}
             </div>
             <div>{renderDescriptionDiff()}</div>
             <div className="hidden md:block">
-              {renderDescription(dataB.background, "B")}
+              {renderDescription(dataB.background, versions?.b || "B")}
             </div>
           </div>
         </CollapsibleSection>
@@ -1108,13 +1113,13 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
             isOpen={!collapsed["Spells"]}
             onToggle={() => toggle("Spells")}
           >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 md:px-4">
               <div className="hidden md:block">
-                {renderSpells(dataA.spells, "A")}
+                {renderSpells(dataA.spells, versions?.a || "A")}
               </div>
               <div>{renderSpellsDiff()}</div>
               <div className="hidden md:block">
-                {renderSpells(dataB.spells, "B")}
+                {renderSpells(dataB.spells, versions?.b || "B")}
               </div>
             </div>
           </CollapsibleSection>
@@ -1127,9 +1132,13 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
             isOpen={!collapsed["Special Rules"]}
             onToggle={() => toggle("Special Rules")}
           >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-2 md:px-4">
               <div className="hidden md:block">
-                {renderRefSection("Special Rules", dataA.specialRules, "A")}
+                {renderRefSection(
+                  "Special Rules",
+                  dataA.specialRules,
+                  versions?.a || "A",
+                )}
               </div>
               <div>
                 {renderRefDiff(
@@ -1139,7 +1148,11 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                 )}
               </div>
               <div className="hidden md:block">
-                {renderRefSection("Special Rules", dataB.specialRules, "B")}
+                {renderRefSection(
+                  "Special Rules",
+                  dataB.specialRules,
+                  versions?.b || "B",
+                )}
               </div>
             </div>
           </CollapsibleSection>
@@ -1151,7 +1164,7 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
         isOpen={!collapsed["Unit Changes"]}
         onToggle={() => toggle("Unit Changes")}
       >
-        <div className="px-4">
+        <div className="px-2 md:px-4">
           {unitRows.map((row) => (
             <div
               key={row.id}
