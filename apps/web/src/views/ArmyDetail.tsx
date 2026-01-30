@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import type { ArmyBook, Unit, UpgradePackage } from "@opr-api/shared";
+import type { ArmyBook, Unit } from "@opr-api/shared";
 
 export default function ArmyDetail() {
   const { systemId, armyId } = useParams();

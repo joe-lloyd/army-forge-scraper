@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --filter=web",
     "lint": "turbo run lint",
     "scraper": "turbo run start --filter=scraper"
   },

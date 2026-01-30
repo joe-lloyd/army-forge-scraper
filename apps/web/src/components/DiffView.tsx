@@ -317,7 +317,6 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
   const renderMergedCard = (
     uA: Unit,
     uB: Unit,
-    dataA: ArmyData,
     dataB: ArmyData,
     upgradeUidsA: string[],
   ) => {
@@ -994,7 +993,6 @@ export default function DiffView({ dataA, dataB }: DiffViewProps) {
                   renderMergedCard(
                     row.uA!,
                     row.uB!,
-                    dataA,
                     dataB,
                     row.uA?.upgrades || [],
                   )}
