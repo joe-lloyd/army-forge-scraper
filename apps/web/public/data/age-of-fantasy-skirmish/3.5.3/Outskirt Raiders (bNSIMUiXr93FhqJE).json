@@ -1,0 +1,673 @@
+{
+  "uid": "bNSIMUiXr93FhqJE",
+  "userId": "1is8a3JZYgw",
+  "enabledGameSystems": [
+    5,
+    7,
+    8
+  ],
+  "name": "Outskirt Raiders",
+  "genericName": "Wild Guild",
+  "hint": "",
+  "background": "The Guilds of the Nexus are various factions of violent and deranged outlaws that wage eternal guild wars on the streets of the Nexus. These guilds are joined by mercenaries which are not bound to any particular guild, and which fight for anyone that can provide riches or a worthy cause.",
+  "backgroundFull": "More coming soon...",
+  "units": [],
+  "upgradePackages": [],
+  "customRules": [],
+  "customWeapons": [],
+  "spells": [
+    {
+      "id": "mDQC1",
+      "name": "Poison Blades",
+      "type": 1,
+      "effect": "Pick up to two friendly units within 12\", which get Raider Boost once (next time the effect would apply).",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "QQqj4j1oNaZ0",
+                "name": "Raider Boost"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "const { name, rating } = params.effect.unitRule;\nconst avgUnit = !params.thisUnit;\nconst auraSize = this.getAuraUnitSize(unit, params);\nconst multiplier = params.multiplier * auraSize;\nreturn { name, rating, multiplier, avgUnit };",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "QQqj4j1oNaZ0",
+                "name": "Raider Boost"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "0PTkA",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "E_13N",
+      "name": "Cracked Ground",
+      "type": 0,
+      "effect": "Pick one enemy unit within 12\", which takes 2 hits with AP(1) and Shred.",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "IEJp3a4vE0CB",
+                "name": "Shred"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 2
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "IEJp3a4vE0CB",
+                "name": "Shred"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "cJZ_-",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "ogSJI",
+      "name": "Armor Breaker",
+      "type": 2,
+      "effect": "Pick up to four enemy units within 18\", which get -1 to defense rolls once (next time the effect would apply).",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "txtrnRX2fPJJ",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "rollModifier",
+              "value": "-1"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "properties",
+          "value": "unit.defense -= params.thisUnit ? params.effect.rollModifier.value : 0",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "-1",
+                "value": -1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2.2,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 2.2
+        },
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? 0 : this.getUnitBaseCostDiff({ quality: 4, defense: 5, tough: 2, rules: [\"Tough\"] }, { defense: 5 - params.effect.rollModifier.value })",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "-1",
+                "value": -1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2.2,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 2.2
+        }
+      ],
+      "spellbookId": "sbSJb",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "I3TPt",
+      "name": "Earth Blast",
+      "type": 0,
+      "effect": "Pick up to two enemy units within 12\", which take 3 hits each.",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "3"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 6
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "tNVWP",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "iwF2-",
+      "name": "Wild Hunt",
+      "type": 1,
+      "effect": "Pick up to six friendly units within 12\", which get Ranged Slayer once (next time the effect would apply).",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "fB2hm0la8zl1",
+                "name": "Ranged Slayer"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to three"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "const { name, rating } = params.effect.unitRule;\nconst avgUnit = !params.thisUnit;\nconst auraSize = this.getAuraUnitSize(unit, params);\nconst multiplier = params.multiplier * auraSize;\nreturn { name, rating, multiplier, avgUnit };",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "fB2hm0la8zl1",
+                "name": "Ranged Slayer"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 3,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 3
+        }
+      ],
+      "spellbookId": "qel4I",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "zzJRc",
+      "name": "Cutting Whirlwind",
+      "type": 0,
+      "effect": "Pick up to three enemy units within 12\", which take 2 hits with Shatter each.",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "7F4391rzKx2g",
+                "name": "Shatter"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 6
+              },
+              "weaponRule1": {
+                "id": "7F4391rzKx2g",
+                "name": "Shatter"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "_fl49",
+      "effectSkirmish": ""
+    }
+  ],
+  "modifiedAt": "2026-04-29T15:54:05.217Z",
+  "editedAt": "2026-04-28T10:05:04.030Z",
+  "official": true,
+  "versionString": "3.5.3",
+  "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/bNSIMUiXr93FhqJE/mRXJ2d00m3umfR1-pef0V.jpg",
+  "bannerImagePath": null,
+  "visibility": 1,
+  "factionId": null,
+  "factionName": "Guilds of the Nexus",
+  "factionRelation": "Guild",
+  "popularity": 0,
+  "downvotes": 0,
+  "partnerSettings": {
+    "storeLinks": [
+      "https://www.myminifactory.com/users/onepagerules",
+      "https://www.etsy.com/shop/onepagerules"
+    ]
+  },
+  "balanceValid": true,
+  "balanceValidReason": 0,
+  "loreUrl": null,
+  "voted": null,
+  "specialRules": [
+    {
+      "id": "QQqj4j1oNaZ0",
+      "name": "Raider Boost",
+      "aliasedRuleId": null,
+      "description": "If this model has Raider, when it shoots or charges enemies over 9\" away, enemies taking hits from it must re-roll successful unmodified defense results of 5-6 from Raider (instead of only on 6).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "IEJp3a4vE0CB",
+      "name": "Shred",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 1 to block hits, this weapon deals 1 extra wound.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "fB2hm0la8zl1",
+      "name": "Ranged Slayer",
+      "aliasedRuleId": null,
+      "description": "When this model shoots at enemies over 9\" away, its weapons get AP(+2) if most models in the target have Tough(3) or higher.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "7F4391rzKx2g",
+      "name": "Shatter",
+      "aliasedRuleId": null,
+      "description": "Against non-Hero units with Tough(3) or more, this weapon gets AP(+2).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    }
+  ],
+  "username": "onepagerules",
+  "creator": false,
+  "isCreator": false,
+  "gameSystemId": 5,
+  "gameSystemSlug": "age-of-fantasy-skirmish",
+  "aberration": "AOFS",
+  "gameSystemKey": "AOFS",
+  "flavouredUid": "bNSIMUiXr93FhqJE~5"
+}

@@ -1,0 +1,1199 @@
+{
+  "uid": "BKi_hJaJflN8ZorH",
+  "userId": "1is8a3JZYgw",
+  "enabledGameSystems": [
+    2,
+    3,
+    9,
+    10
+  ],
+  "name": "Jackals",
+  "genericName": "Mercenary Carnivores||Jackal Scrappers||Jackal Scrap-Tribes",
+  "hint": "",
+  "background": "Jackals are species of aliens who resemble humanoid canids, and use technology built from salvaged scrap. Without access to advanced weapons or vehicles, they rely on ambush and ferocity in close combat to win. \n\nIn the beginning, they were a collection of nomadic tribes until they discovered the wreckage of alien ships on their planet. Soon after, they made contact with the other species of Sirius, and were suddenly thrust from tribal hunters into the space age. Now the Jackals’ way of life has been forever changed, as they have begun to migrate to the stars.",
+  "backgroundFull": "The Jackals’ home world was long left uncharted due to the unique properties of their home system’s sun. Radiation from their sun reflected from the atmosphere interfered with the electronic scanners of vessels passing nearby. At a distance, it caused the scanners to detect large stores of rare elements which are used to stabilize wormholes, but ships approaching closer have their scanners and electronic systems short out completely. This has resulted in a graveyard of ships floating above the Jackals’ home world, which occasionally fall out of orbit onto the planet’s surface.\n\nThe Jackals were, until recently, made up of tribes of hunter-gatherers who migrated from oasis to oasis after their prey. This changed when the Jackals began to discover wrecked ships on their home world. The first ships were from the Robot Legion, whose pilots had been deactivated along with their ships. These wrecks gradually became a network of trading posts and cities for the wandering Jackals, and the weapons and technology contained within were salvaged and traded. The Jackals began to chase falling ships, hoping to get to the salvage first.\n\nEventually, the Jackals began to meet and save survivors. These survivors were taken in with the tribes, and taught the Jackals about the wider galaxy. Eventually, jump gates were established on the planet, allowing safe travel to and from their world. Jackals began working with outsiders, who valued their survival skills, tenacity and inventiveness for use as scouts and mercenaries. Many Jackals view travelling off world as a continuation of their traditional nomadic life-style.\n\nWhile some might view the Jackals as backward for their traditions, these traditions have proven adaptable and continue to unite them even as they spread through the sector. The Jackals have proven their ability to quickly adapt both new ideas and technologies into their way of life, but only time will tell whether their culture will survive the shock of galactic life. \n\nHow will you find your way among the stars?",
+  "units": [
+    {
+      "id": "c5kGHLN",
+      "cost": 100000,
+      "name": "Tayra \"Shipspeaker\"",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "",
+        "square": ""
+      },
+      "items": [
+        {
+          "id": "wFMUrqI_",
+          "name": "Mechanical Whispers",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "a6Ze2uaBlNHX",
+              "name": "Mind Control",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "tidpe1mTXb9W",
+          "name": "Scrapper",
+          "label": "Scrapper"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        },
+        {
+          "id": "47CAqf7ySlfc",
+          "name": "Caster",
+          "rating": 1,
+          "label": "Caster(1)"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "wL8FYSI8",
+          "name": "Droideridoo",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 9,
+          "attacks": 3,
+          "weaponId": "nZ8r2lLm",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "QXyt-zV_bjpg",
+              "name": "Unstoppable",
+              "label": "Unstoppable"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Droideridoo (9\", A3, Unstoppable)",
+          "originalCount": 1
+        },
+        {
+          "id": "qwNR5OLf",
+          "name": "Strike",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "Lxf1DaC-",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Strike (A1)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "_eneM1Q",
+      "cost": 100000,
+      "name": "Ruyi \"Lonespear\"",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [
+        {
+          "id": "DktRmV24",
+          "name": "Advanced Bombs",
+          "type": "ArmyBookItem",
+          "bases": null,
+          "content": [
+            {
+              "id": "paOPFddMOffa",
+              "name": "Crossing Attack",
+              "type": "ArmyBookRule",
+              "rating": 3
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "6mJw5IdqSqNC",
+          "name": "Ambush",
+          "label": "Ambush"
+        },
+        {
+          "id": "-QJdqJEKjIpE",
+          "name": "Flying",
+          "label": "Flying"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        },
+        {
+          "id": "tidpe1mTXb9W",
+          "name": "Scrapper",
+          "label": "Scrapper"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "-_3nqjWh",
+          "name": "Gauss Pistol",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 2,
+          "weaponId": "9gcqQsNR",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "VI54cszY2BuG",
+              "name": "Destructive",
+              "label": "Destructive"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Gauss Pistol (12\", A2, Destructive)",
+          "originalCount": 1
+        },
+        {
+          "id": "dmUmRUjo",
+          "name": "Explosive Spear",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": null,
+          "attacks": 3,
+          "weaponId": "KzZuCHGS",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Explosive Spear (A3, AP(2))",
+          "originalCount": 1
+        },
+        {
+          "id": "_efV4hdU",
+          "name": "Vengeful Warhead",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "zFAbNTyh",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "9042COVrLCsI",
+              "name": "Limited",
+              "label": "Limited"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "Hdm9ry6kJvzb",
+              "name": "Strafing",
+              "label": "Strafing"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Vengeful Warhead (A1, AP(1), Blast(3), Limited, Strafing)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "qQiZ68s",
+      "cost": 100000,
+      "name": "Ranjo \"Swiftsnare\"",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "",
+        "square": ""
+      },
+      "items": [
+        {
+          "id": "wxo5Iq0_",
+          "name": "Dazzle Cloak",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "8haZ36fXvnzn",
+              "name": "Stealth Aura",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "tidpe1mTXb9W",
+          "name": "Scrapper",
+          "label": "Scrapper"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "DKFDCEP3",
+          "name": "Energy Pistol",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 9,
+          "attacks": 1,
+          "weaponId": "uxFXIosN",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "5v6oaGfrdf29",
+              "name": "Surge",
+              "label": "Surge"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Energy Pistol (9\", A1, AP(1), Surge)",
+          "originalCount": 1
+        },
+        {
+          "id": "WKAG7E_T",
+          "name": "Renegade Sword",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "Ojg_v-bE",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "IEJp3a4vE0CB",
+              "name": "Shred",
+              "label": "Shred"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Renegade Sword (A2, Shred)",
+          "originalCount": 1
+        },
+        {
+          "id": "JA2u-Ko2",
+          "name": "Salvaged Charge",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "GTJ19WFl",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "9042COVrLCsI",
+              "name": "Limited",
+              "label": "Limited"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Salvaged Charge (A1, AP(4), Deadly(3), Limited)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    }
+  ],
+  "upgradePackages": [],
+  "customRules": [],
+  "customWeapons": [],
+  "spells": [
+    {
+      "id": "JA8IE",
+      "cost": 23,
+      "name": "Psy-Hunter",
+      "type": 1,
+      "effect": "Pick up to two friendly units within 12\", which get Scrapper Boost once (next time the effect would apply).",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "1BZ5wsWUjYCd",
+                "name": "Scrapper Boost"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "const { name, rating } = params.effect.unitRule;\nconst avgUnit = !params.thisUnit;\nconst auraSize = this.getAuraUnitSize(unit, params);\nconst multiplier = params.multiplier * auraSize;\nreturn { name, rating, multiplier, avgUnit };",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "1BZ5wsWUjYCd",
+                "name": "Scrapper Boost"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "sAkcX",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "lJ385",
+      "cost": 15,
+      "name": "Power Maw",
+      "type": 0,
+      "effect": "Pick up to two enemy units within 12\", which take 1 hit with AP(2) each.",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "1"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 1
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 2
+        }
+      ],
+      "spellbookId": "CF09A",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "qmDvb",
+      "cost": 14,
+      "name": "Mind Shaper",
+      "type": 2,
+      "effect": "Pick up to four enemy units within 18\", which get -1 to morale test rolls once (next time the effect would apply).",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "nxIQS1UnUBL_",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "rollModifier",
+              "value": "-1"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? this.getMoraleCost({ ...unit, quality: clamp(unit.quality - params.effect.rollModifier.value, 1, 6) }) - this.getMoraleCost(unit) : 0",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "-1",
+                "value": -1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2.2,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 2.2
+        },
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? 0 : this.getMoraleCost({ quality: 5 - Math.abs(params.effect.rollModifier.value) }) - this.getMoraleCost({ quality: 5 })",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "-1",
+                "value": -1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2.2,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 2.2
+        }
+      ],
+      "spellbookId": "lz4dh",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "u7epQ",
+      "cost": 15,
+      "name": "Quill Blast",
+      "type": 0,
+      "effect": "Pick up to two enemy units within 12\", which take 2 hits with Shatter each.",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "7F4391rzKx2g",
+                "name": "Shatter"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 4
+              },
+              "weaponRule1": {
+                "id": "7F4391rzKx2g",
+                "name": "Shatter"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "27M5A",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "icwzh",
+      "cost": 5,
+      "name": "Power Field",
+      "type": 1,
+      "effect": "Pick up to six friendly units within 12\", which get Shielded once (next time the effect would apply).",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "wsqfB0fq69eG",
+                "name": "Shielded"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to three"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "const { name, rating } = params.effect.unitRule;\nconst avgUnit = !params.thisUnit;\nconst auraSize = this.getAuraUnitSize(unit, params);\nconst multiplier = params.multiplier * auraSize;\nreturn { name, rating, multiplier, avgUnit };",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "wsqfB0fq69eG",
+                "name": "Shielded"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 3,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 3
+        }
+      ],
+      "spellbookId": "6VcCn",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "-BUjo",
+      "cost": 20,
+      "name": "Feral Strike",
+      "type": 0,
+      "effect": "Pick up to three enemy units within 6\", which take 1 hit with AP(2) and Deadly(3) each.",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "1"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "spellHitRoll",
+              "value": ""
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "_mrPya5SXSqW",
+                "name": "Deadly",
+                "rating": 3,
+                "hideModifier": true
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 6\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 3
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "_mrPya5SXSqW",
+                "name": "Deadly",
+                "rating": 3,
+                "hideModifier": true
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 6\"",
+                "value": 6
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 0.9,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 0.9
+        }
+      ],
+      "spellbookId": "YvUYn",
+      "effectSkirmish": ""
+    }
+  ],
+  "modifiedAt": "2026-04-29T15:53:47.887Z",
+  "editedAt": "2026-04-28T08:48:57.239Z",
+  "official": true,
+  "versionString": "3.5.3",
+  "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/BKi_hJaJflN8ZorH/whWcjchNVxyz-meZRwdLw.jpg",
+  "bannerImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/banners/BKi_hJaJflN8ZorH/7vAAzRtJmmZmZWEs9v9hr.jpg",
+  "visibility": 1,
+  "factionId": null,
+  "factionName": null,
+  "factionRelation": null,
+  "popularity": 0,
+  "downvotes": 0,
+  "partnerSettings": {
+    "images": [
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/BKi_hJaJflN8ZorH/YmDgzdqXS2IjYWm36Wsf_.jpg",
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/BKi_hJaJflN8ZorH/n4nreq1enYtVQvIfNxQGx.jpg",
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/BKi_hJaJflN8ZorH/tZH-c9J6B-XMCsQGFsvyQ.jpg"
+    ],
+    "storeLinks": [
+      "https://www.myminifactory.com/users/onepagerules",
+      "https://www.etsy.com/shop/onepagerules"
+    ]
+  },
+  "balanceValid": false,
+  "balanceValidReason": 4,
+  "loreUrl": "https://www.onepagerules.com/factions/jackals",
+  "voted": null,
+  "specialRules": [
+    {
+      "id": "rqBYj1yANC3J",
+      "name": "Unique",
+      "aliasedRuleId": null,
+      "description": "This unit may only be taken once per army.",
+      "hasRating": false,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
+      "id": "VI54cszY2BuG",
+      "name": "Destructive",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 6 to hit, those hits get AP(+4).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "IEJp3a4vE0CB",
+      "name": "Shred",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 1 to block hits, this weapon deals 1 extra wound.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "5v6oaGfrdf29",
+      "name": "Surge",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "paOPFddMOffa",
+      "name": "Crossing Attack",
+      "aliasedRuleId": null,
+      "description": "Once per activation, when this model moves through enemy units, pick one of them and roll X dice. For each 6+ the target takes one wound.",
+      "hasRating": true,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "Hdm9ry6kJvzb",
+      "name": "Strafing",
+      "aliasedRuleId": null,
+      "description": "Once per activation, when this model moves through enemy units, pick one of them and attack it with this weapon as if it was shooting. This weapon may only be used in this way.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "a6Ze2uaBlNHX",
+      "name": "Mind Control",
+      "aliasedRuleId": null,
+      "description": "Once per activation, before attacking, pick up to 4 enemy units within 18\", which must take a morale test. If failed you may move it by up to 6\" in a straight line in any direction.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "tidpe1mTXb9W",
+      "name": "Scrapper",
+      "aliasedRuleId": "Lqk7bzR6k3xe",
+      "description": "When attacking, targets must re-roll unmodified Defense results of 6 when blocking hits from this model's weapons.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "8haZ36fXvnzn",
+      "name": "Stealth Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Stealth. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "9jyvRoBODD-O",
+      "name": "Stealth",
+      "aliasedRuleId": null,
+      "description": "When units where all models have this rule are shot from over 9\" away, enemy units get -1 to hit rolls.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "wsqfB0fq69eG",
+      "name": "Shielded",
+      "aliasedRuleId": null,
+      "description": "Units where all models have this rule get +1 to defense rolls against hits that are not from spells.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "_mrPya5SXSqW",
+      "name": "Deadly",
+      "aliasedRuleId": null,
+      "description": "Assign each wound to one model, and multiply it by X. Hits from Deadly must be resolved first, and these wounds don’t carry over to other models if the original target is killed.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "1BZ5wsWUjYCd",
+      "name": "Scrapper Boost",
+      "aliasedRuleId": null,
+      "description": "If this model has Scrapper, when it shoots or charges enemies over 9\" away, enemies taking hits from it must re-roll successful unmodified defense results of 5-6 from Scrapper (instead of only on 6).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "7F4391rzKx2g",
+      "name": "Shatter",
+      "aliasedRuleId": null,
+      "description": "Against non-Hero units with Tough(3) or more, this weapon gets AP(+2).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    }
+  ],
+  "username": "onepagerules",
+  "creator": false,
+  "isCreator": false,
+  "gameSystemId": 3,
+  "gameSystemSlug": "grimdark-future-firefight",
+  "aberration": "GFF",
+  "gameSystemKey": "GFF",
+  "flavouredUid": "BKi_hJaJflN8ZorH~3"
+}

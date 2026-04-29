@@ -1,0 +1,910 @@
+{
+  "uid": "k5T0f2XIfpmPO28h",
+  "userId": "1is8a3JZYgw",
+  "enabledGameSystems": [
+    2,
+    3,
+    9,
+    10
+  ],
+  "name": "Goblin Reclaimers",
+  "genericName": "Goblins||Goblin Reclaimers||Goblin Reclaimers",
+  "hint": "",
+  "background": "Goblins are diminutive creatures using salvaged technology, strange mutations, and sheer weight of numbers. Emerging from their remote planet in the wake of a devastating nuclear blast that wiped out the human colonists on the surface, the Goblins have wasted little time spreading out to nearby worlds and scavenging any technology they find.\n\nThey are forever seeking new and intriguing life forms and technology, but their penchant for destruction often results in them leaving their new homes every bit as irradiated as their first.",
+  "backgroundFull": "The Goblins long dwelt deep beneath the surface of their world, emerging to the surface only in times of desperation to forage and hunt what they could from the surface. None know for certain what initially drove them underground; some Goblin legends speak of a great war, but most claim that their ancestors have always lived this way. For much of their history, their world was ignored by the larger species until it came to be settled by a group of Human renegades seeking a world where they could operate outside of the confines of the Great Human Alliance.\n\nThe Goblins readily embraced their new neighbours, emerging at night to visit the ever-growing Human cities. The Humans and Goblins formed a strange friendship, with Goblins offering help and supplies to the newly settled colonists while the Humans gave them gadgets and tools. Close to a century of collaboration ended with a series of earth-shaking explosions that nearly sealed them forever inside of their caves.\n\nSeeking to escape their now crumbling homes, the Goblins fled onto the surface. There, they discovered that the Humans had disappeared but left behind a wealth of technology and infrastructure for them to use, though much of it was badly in need of their unique touch for repairs, and other parts seemed to bring on strange changes in the Goblins. Some saw this as another odd gift left by their former companions, while others exercised greater caution.\n\nRemembering that the Humans came from the stars, the Goblins wasted no time in seeking out and assembling space-worthy ships to seek out their companions. Eventually, they did encounter Humans among the stars, but these ones didn’t recognise the Goblins and had little time for their antics, treating them as annoyances rather than friends. Dejected but not unwilling to give up hope of reunion, the Goblins continue to seek out their old friends and new gadgets among the stars, even as many find their chaotic outlook to be more dangerous than endearing.\n\nWhat treasures will you find among the stars?",
+  "units": [
+    {
+      "id": "0oejS_N",
+      "cost": 100000,
+      "name": "Waskatsin",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "50",
+        "square": "50"
+      },
+      "items": [
+        {
+          "id": "_P0ojCZS",
+          "name": "Rad-Glow",
+          "type": "ArmyBookItem",
+          "bases": null,
+          "content": [
+            {
+              "id": "MK_o4HpuB-pL",
+              "name": "Dangerous Terrain Debuff",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        },
+        {
+          "id": "owYwYT2j",
+          "name": "Rad-Armor",
+          "type": "ArmyBookItem",
+          "bases": null,
+          "content": [
+            {
+              "id": "zCjAFXut7Gsg",
+              "name": "Retaliate",
+              "type": "ArmyBookRule",
+              "rating": 1
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "rblJ2IkYaFon",
+          "name": "Mischievous",
+          "label": "Mischievous"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "oY-8OBeM",
+          "name": "Rad-Machinegun",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 24,
+          "attacks": 6,
+          "weaponId": "sO_npfhV",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "IEJp3a4vE0CB",
+              "name": "Shred",
+              "label": "Shred"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Rad-Machinegun (24\", A6, Shred)",
+          "originalCount": 1
+        },
+        {
+          "id": "5HrEUnYw",
+          "name": "Ventslicer Chainsaw",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "JSD0mujS",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Ventslicer Chainsaw (A2, AP(2), Deadly(3))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "genericName": "",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    }
+  ],
+  "upgradePackages": [],
+  "customRules": [],
+  "customWeapons": [],
+  "spells": [
+    {
+      "id": "bBHHA",
+      "cost": 5,
+      "name": "Ammo Boost",
+      "type": 1,
+      "effect": "Pick up to two friendly units within 12\", which get Mischievous Boost once (next time the effect would apply).",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "pUt7fqbSTNWP",
+                "name": "Mischievous Boost"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "const { name, rating } = params.effect.unitRule;\nconst avgUnit = !params.thisUnit;\nconst auraSize = this.getAuraUnitSize(unit, params);\nconst multiplier = params.multiplier * auraSize;\nreturn { name, rating, multiplier, avgUnit };",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "pUt7fqbSTNWP",
+                "name": "Mischievous Boost"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "nwlue",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "x4Szf",
+      "cost": 16,
+      "name": "Zap!",
+      "type": 0,
+      "effect": "Pick one enemy unit within 12\", which takes 2 hits with AP(1) and Surge.",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "5v6oaGfrdf29",
+                "name": "Surge"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 2
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "5v6oaGfrdf29",
+                "name": "Surge"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "fOjx_",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "dm709",
+      "name": "Mob Frenzy",
+      "type": 2,
+      "effect": "Pick up to four enemy units within 18\", which friendly units gets Unpredictable Shooter against once (next time the effect would apply).",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "1yTPcanTyckX",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "eOGs64JpVsP3",
+                "name": "Unpredictable Shooter"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "{ name: params.effect.unitRule.name, rating: params.effect.unitRule.rating, multiplier: params.multiplier * this.getAuraUnitSize(unit, params), avgUnit: true }",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "eOGs64JpVsP3",
+                "name": "Unpredictable Shooter"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2.2,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 2.2
+        }
+      ],
+      "spellbookId": "7EjWr",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "pMFQu",
+      "cost": 13,
+      "name": "Boom!",
+      "type": 0,
+      "effect": "Pick up to two enemy units within 18\", which take 1 hit with Blast(3) each.",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "1"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "w_vX0mi58KKt",
+                "name": "Blast",
+                "rating": 3,
+                "hideModifier": true
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 2
+              },
+              "weaponRule1": {
+                "id": "w_vX0mi58KKt",
+                "name": "Blast",
+                "rating": 3,
+                "hideModifier": true
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1.1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1.1
+        }
+      ],
+      "spellbookId": "hMokg",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "mfx9y",
+      "cost": 14,
+      "name": "Shroud Field",
+      "type": 1,
+      "effect": "Pick up to six friendly units within 12\", which get +1 to defense rolls once (next time the effect would apply).",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "txtrnRX2fPJJ",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "rollModifier",
+              "value": "+1"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to three"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "properties",
+          "value": "unit.defense -= params.thisUnit ? params.effect.rollModifier.value : 0",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "+1",
+                "value": 1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 3,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 3
+        },
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? 0 : this.getUnitBaseCostDiff({ quality: 4, defense: 5, tough: 2, rules: [\"Tough\"] }, { defense: 5 - params.effect.rollModifier.value })",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "+1",
+                "value": 1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 3,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 3
+        }
+      ],
+      "spellbookId": "sbSJb",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "u5dTO",
+      "cost": 20,
+      "name": "Pow!",
+      "type": 0,
+      "effect": "Pick up to three enemy units within 6\", which take 1 hit with Deadly(3) and Tear each.",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "1"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "_mrPya5SXSqW",
+                "name": "Deadly",
+                "rating": 3,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "spellHitRoll",
+              "value": ""
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "xeJDKejG4QZN",
+                "name": "Tear"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 6\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 3
+              },
+              "weaponRule1": {
+                "id": "_mrPya5SXSqW",
+                "name": "Deadly",
+                "rating": 3,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "xeJDKejG4QZN",
+                "name": "Tear"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 6\"",
+                "value": 6
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 0.9,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 0.9
+        }
+      ],
+      "spellbookId": "H00BM",
+      "effectSkirmish": ""
+    }
+  ],
+  "modifiedAt": "2026-04-29T15:53:32.746Z",
+  "editedAt": "2026-04-27T17:30:09.072Z",
+  "official": true,
+  "versionString": "3.5.3",
+  "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/k5T0f2XIfpmPO28h/NUDBjr5oEQ4ACjRvrrbsF.jpg",
+  "bannerImagePath": null,
+  "visibility": 1,
+  "factionId": null,
+  "factionName": null,
+  "factionRelation": null,
+  "popularity": 0,
+  "downvotes": 0,
+  "partnerSettings": {
+    "images": [
+      "army-books/images/38FFdBKGCzx45YqpjBDD6.png",
+      "army-books/images/BmHv-4yh8_khMVLaDcwtn.png",
+      "army-books/images/OPhC28Z0QmMbfQm53FXX-.png",
+      "",
+      "",
+      ""
+    ],
+    "storeLinks": [
+      "https://www.myminifactory.com/users/onepagerules",
+      "https://www.etsy.com/shop/onepagerules"
+    ]
+  },
+  "balanceValid": false,
+  "balanceValidReason": 4,
+  "loreUrl": "https://www.onepagerules.com/factions/goblin-reclaimers",
+  "voted": null,
+  "specialRules": [
+    {
+      "id": "rblJ2IkYaFon",
+      "name": "Mischievous",
+      "aliasedRuleId": "Lqk7bzR6k3xe",
+      "description": "When attacking, targets must re-roll unmodified Defense results of 6 when blocking hits from this model's weapons.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "rqBYj1yANC3J",
+      "name": "Unique",
+      "aliasedRuleId": null,
+      "description": "This unit may only be taken once per army.",
+      "hasRating": false,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
+      "id": "IEJp3a4vE0CB",
+      "name": "Shred",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 1 to block hits, this weapon deals 1 extra wound.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "zCjAFXut7Gsg",
+      "name": "Retaliate",
+      "aliasedRuleId": null,
+      "description": "When this model takes wounds in melee, the attacker takes X hits per wound taken.",
+      "hasRating": true,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "MK_o4HpuB-pL",
+      "name": "Dangerous Terrain Debuff",
+      "aliasedRuleId": null,
+      "description": "Once per activation, before attacking, pick up to 4 enemy units within 18\" in line of sight, which counts as being in Dangerous Terrain once (next time the effect would apply).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "eOGs64JpVsP3",
+      "name": "Unpredictable Shooter",
+      "aliasedRuleId": null,
+      "description": "When shooting, roll one die and apply one effect to all models with this rule: on a 1-3 they get AP(+1), and on a 4-6 they get +1 to hit rolls instead.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "w_vX0mi58KKt",
+      "name": "Blast",
+      "aliasedRuleId": null,
+      "description": "Ignores cover, and after resolving other special rules, each hit is multiplied by X, where X is up to as many hits as enemy models in the target unit and within 3” of it. Hits must be split evenly between all enemy units within 3” of any model from the target (defender picks how).",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "pUt7fqbSTNWP",
+      "name": "Mischievous Boost",
+      "aliasedRuleId": null,
+      "description": "If this model has Mischievous, when it shoots or charges enemies over 9\" away, enemies taking hits from it must re-roll successful unmodified defense results of 5-6 from Mischievous (instead of only on 6).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "xeJDKejG4QZN",
+      "name": "Tear",
+      "aliasedRuleId": null,
+      "description": "Against non-Hero units with Tough(3) or more, this weapon gets AP(+4).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "_mrPya5SXSqW",
+      "name": "Deadly",
+      "aliasedRuleId": null,
+      "description": "Assign each wound to one model, and multiply it by X. Hits from Deadly must be resolved first, and these wounds don’t carry over to other models if the original target is killed.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "5v6oaGfrdf29",
+      "name": "Surge",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    }
+  ],
+  "username": "onepagerules",
+  "creator": false,
+  "isCreator": false,
+  "gameSystemId": 3,
+  "gameSystemSlug": "grimdark-future-firefight",
+  "aberration": "GFF",
+  "gameSystemKey": "GFF",
+  "flavouredUid": "k5T0f2XIfpmPO28h~3"
+}

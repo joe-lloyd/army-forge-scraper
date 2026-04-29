@@ -1,0 +1,823 @@
+{
+  "uid": "TciwNI3AOMXAM-dr",
+  "userId": "1is8a3JZYgw",
+  "enabledGameSystems": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "name": "Beastmen",
+  "genericName": "Beastmen||Beastmen Raiders||Beastmen Raid-Tribes",
+  "hint": "",
+  "background": "Beastmen are a coalition of different species of bestial humanoids, which rely on ambush tactics to overwhelm their enemies.\n\nOver the centuries, the Beastmen lived together in the southern savannah of Tyria, building great cities and trading prosperously. The opening of the Rift destroyed many of their cities, and Daemons drove them from their home. Most of the Beastmen have fled north, surviving by raiding and scavenging while they seek a new home.",
+  "backgroundFull": "The vast savannah in southern Tyria had been inhabited by wildlife since the beginning of time. At the center of the largest watering hole of the land, a giant lush tree provided shade and food, and from its roots a magical substance seeped into its fruit. Over many generations, the animals that ate the fruit of this tree slowly changed and became sentient, and came to see the tree as sacred, settling around it in peace.\n\nGradually, the different tribes of Ndoli, Waheni, Hapari, Ndwari, Kemba, and Silombi learned to co-exist and formed a confederacy of closely knit tribes. The Beastmen built a great civilization in the savannah, constructing a great capital city around the Holy Tree, and a network of smaller cities around, which expanded out through the grasslands and connected the watering holes around it. For centuries, the Beastmen tribes lived lives of peace and prosperity on the Savannah.\n\nThen, the Rift opened. It tore through the Savannah, damaging the Holy Tree and destroying many of their cities. When the Daemons began to emerge, most Beastmen were forced to abandon their homeland. The only thing that remains of their old civilization are the ruins of their cities, and the dried out remains of the Holy Tree, whose once crystalline waters have now turned black.\n\nSome Beastmen still call these ruins their home, but there is no hope that it will flourish once again in the future. Others have begun to wander along the edge of the Rift, towards the heart of Tyria. In order to survive, they raid settlements and burn forests to build equipment and camps. Each amongst the Beastmen has their own reason for this great migration. Some hope to find a new home, while others seek to understand the cause of the rift. There are others who have become accustomed to raiding and violence, and take any opportunity to destroy the homes of others, just as their own homes were destroyed.\n\nHow will you guide your tribe?",
+  "units": [
+    {
+      "id": "ctRPUzS",
+      "cost": 100000,
+      "name": "Hakemba",
+      "size": 1,
+      "type": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [
+        {
+          "id": "4ubPRsRv",
+          "name": "Buried Hatred",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "CK9TIa7vdehO",
+              "name": "Furious Aura",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "KEQ9ZE6RPJp7",
+          "name": "Bestial",
+          "label": "Bestial"
+        },
+        {
+          "id": "47CAqf7ySlfc",
+          "name": "Caster",
+          "rating": 2,
+          "label": "Caster(2)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "rqBYj1yANC3J",
+          "name": "Unique",
+          "label": "Unique"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "MXdeOkS-",
+          "name": "Mabalo Dual Staves",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "VY37brTN",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "5v6oaGfrdf29",
+              "name": "Surge",
+              "label": "Surge"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Mabalo Dual Staves (A4, Surge)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "genericName": "",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    }
+  ],
+  "upgradePackages": [],
+  "customRules": [],
+  "customWeapons": [],
+  "spells": [
+    {
+      "id": "QRKTG",
+      "cost": 15,
+      "name": "Surge of Power",
+      "type": 1,
+      "effect": "Pick up to two friendly units within 12\", which get Bestial Boost once (next time the effect would apply).",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "zUTRifMzhyrR",
+                "name": "Bestial Boost"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "const { name, rating } = params.effect.unitRule;\nconst avgUnit = !params.thisUnit;\nconst auraSize = this.getAuraUnitSize(unit, params);\nconst multiplier = params.multiplier * auraSize;\nreturn { name, rating, multiplier, avgUnit };",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "zUTRifMzhyrR",
+                "name": "Bestial Boost"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "COm4j",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "ewYll",
+      "cost": 20,
+      "name": "Flock Attack",
+      "type": 0,
+      "effect": "Pick one enemy unit within 12\", which takes 2 hits with AP(1) and Surge. Roll as many dice as hits to see if \"on rolls of 6\" effects trigger.",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "5v6oaGfrdf29",
+                "name": "Surge"
+              }
+            },
+            {
+              "name": "spellHitRoll",
+              "value": "Roll as many dice as hits to see if \"on rolls of 6\" effects trigger."
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 2
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "5v6oaGfrdf29",
+                "name": "Surge"
+              },
+              "spellHitRoll": {
+                "name": "Roll as many dice as hits to see if \"on rolls of 6\" effects trigger."
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "PAQ4w",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "96-eH",
+      "cost": 14,
+      "name": "Hunting Roar",
+      "type": 2,
+      "effect": "Pick up to four enemy units within 18\", which get -1 to morale test rolls once (next time the effect would apply).",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "nxIQS1UnUBL_",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "rollModifier",
+              "value": "-1"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? this.getMoraleCost({ ...unit, quality: clamp(unit.quality - params.effect.rollModifier.value, 1, 6) }) - this.getMoraleCost(unit) : 0",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "-1",
+                "value": -1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2.2,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 2.2
+        },
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? 0 : this.getMoraleCost({ quality: 5 - Math.abs(params.effect.rollModifier.value) }) - this.getMoraleCost({ quality: 5 })",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "-1",
+                "value": -1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2.2,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 2.2
+        }
+      ],
+      "spellbookId": "__kfJ",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "M7xRA",
+      "cost": 15,
+      "name": "Ancestral Wrath",
+      "type": 0,
+      "effect": "Pick up to two enemy models within 24\", which take 1 hit with Tear each. This effect is resolved as if the target was a unit of [1].",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "1"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "xeJDKejG4QZN",
+                "name": "Tear"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "model"
+            },
+            {
+              "name": "inRange",
+              "value": "within 24\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 2
+              },
+              "weaponRule1": {
+                "id": "xeJDKejG4QZN",
+                "name": "Tear"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "model",
+              "inRange": {
+                "name": "within 24\"",
+                "value": 24
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1.2,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1.2
+        }
+      ],
+      "spellbookId": "Cf2ny",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "OhSyw",
+      "cost": 23,
+      "name": "Spirit Mantle",
+      "type": 1,
+      "effect": "Pick up to six friendly units within 12\", which get Regeneration once (next time the effect would apply).",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "8KujvrTG8k9p",
+                "name": "Regeneration"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to three"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "const { name, rating } = params.effect.unitRule;\nconst avgUnit = !params.thisUnit;\nconst auraSize = this.getAuraUnitSize(unit, params);\nconst multiplier = params.multiplier * auraSize;\nreturn { name, rating, multiplier, avgUnit };",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "8KujvrTG8k9p",
+                "name": "Regeneration"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 3,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 3
+        }
+      ],
+      "spellbookId": "oqrSD",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "bXGRf",
+      "cost": 17,
+      "name": "Destructive Flame",
+      "type": 0,
+      "effect": "Pick up to three enemy units within 12\", which take 3 hits each.",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "3"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 9
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "FA9iQ",
+      "effectSkirmish": ""
+    }
+  ],
+  "modifiedAt": "2026-04-29T15:52:55.779Z",
+  "editedAt": "2026-04-27T16:20:14.638Z",
+  "official": true,
+  "versionString": "3.5.3",
+  "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/TciwNI3AOMXAM-dr/Dd4z9vGU3LQKlqPlk1WHf.jpg",
+  "bannerImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/banners/TciwNI3AOMXAM-dr/T2naI98952SpbD5P_isXs.jpg",
+  "visibility": 1,
+  "factionId": null,
+  "factionName": null,
+  "factionRelation": null,
+  "popularity": 0,
+  "downvotes": 0,
+  "partnerSettings": {
+    "images": [
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/TciwNI3AOMXAM-dr/yUUPG4pydV2VJ52w1fzmv.jpg",
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/TciwNI3AOMXAM-dr/dG9g8nNVVSBnlo-dxbBnN.jpg",
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/TciwNI3AOMXAM-dr/JnS-KNTmIUZ5l9c0DU4h6.jpg",
+      "https://af-images.s3.eu-north-1.amazonaws.com/army-books/images/TciwNI3AOMXAM-dr/8W5bzn8TqUnuyygtD7MUd.jpg"
+    ],
+    "storeLinks": [
+      "https://www.myminifactory.com/users/onepagerules",
+      "https://www.etsy.com/shop/onepagerules"
+    ]
+  },
+  "balanceValid": false,
+  "balanceValidReason": 4,
+  "loreUrl": "https://www.onepagerules.com/factions/beastmen",
+  "voted": null,
+  "specialRules": [
+    {
+      "id": "rqBYj1yANC3J",
+      "name": "Unique",
+      "aliasedRuleId": null,
+      "description": "This unit may only be taken once per army.",
+      "hasRating": false,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
+      "id": "KEQ9ZE6RPJp7",
+      "name": "Bestial",
+      "aliasedRuleId": "Lqk7bzR6k3xe",
+      "description": "When attacking, targets must re-roll unmodified Defense results of 6 when blocking hits from this model's weapons.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "CK9TIa7vdehO",
+      "name": "Furious Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Furious. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "5v6oaGfrdf29",
+      "name": "Surge",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "JoOCVPx1xT1G",
+      "name": "Furious",
+      "aliasedRuleId": null,
+      "description": "When charging, unmodified results of 6 to hit in melee deal 1 extra hit (only the original hit counts as a 6 for special rules).",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "8KujvrTG8k9p",
+      "name": "Regeneration",
+      "aliasedRuleId": null,
+      "description": "When a unit where all models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "xeJDKejG4QZN",
+      "name": "Tear",
+      "aliasedRuleId": null,
+      "description": "Against non-Hero units with Tough(3) or more, this weapon gets AP(+4).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "zUTRifMzhyrR",
+      "name": "Bestial Boost",
+      "aliasedRuleId": null,
+      "description": "If this model has Bestial, when it shoots or charges enemies over 9\" away, enemies taking hits from it must re-roll successful unmodified defense results of 5-6 from Bestial (instead of only on 6).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    }
+  ],
+  "username": "onepagerules",
+  "creator": false,
+  "isCreator": false,
+  "gameSystemId": 5,
+  "gameSystemSlug": "age-of-fantasy-skirmish",
+  "aberration": "AOFS",
+  "gameSystemKey": "AOFS",
+  "flavouredUid": "TciwNI3AOMXAM-dr~5"
+}

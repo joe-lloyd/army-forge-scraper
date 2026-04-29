@@ -1,0 +1,703 @@
+{
+  "uid": "q9BQlBp583ZuuOnQ",
+  "userId": "1is8a3JZYgw",
+  "enabledGameSystems": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "name": "Goblins",
+  "genericName": "Goblins||Goblin Clans||Goblin Clan Alliance",
+  "hint": "",
+  "background": "Goblins are small creatures who dwell in the dark corners of Tyria, making homes where big folk don’t care to go. They rely on numbers and trickery to defeat more powerful opponents. \n\nThese little creatures have long sought to carve out a place amongst the people of Tyria, only to be either ignored or treated as pests by the other species. The Havoc Wars forced the tribes to unite, and briefly saw them treated with respect by the Grand Alliance, but this respect quickly faded and now the Goblins once more struggle to find their place amongst the big folk. ",
+  "backgroundFull": "Goblins are one of the most widespread and adaptable species in Tyria, who refer to most other species in Tyria as “big folk”, tending to look at them warily. Many big folk tend to view Goblins as thieves and pests, hunting them on sight. Goblins avoid them, except to take what the big folk leave behind and to protect their homes. There are exceptions to this rule, as a Goblin’s friendship is won easily with a little respect, or even just food. \n\nWhile the tribes and nations of big folk claimed valuable lands and built nations throughout Tyria, the minute Goblins were pushed into whatever places remained. Goblins have adapted to live in these remote locations, like forests, caves and other hidden places. This has given rise to many Goblin clans with radically different cultures, outlooks, and even gods, all influenced by their homelands. These clans vary greatly, from the forest dwelling Spider Clan who allied with the beasts of their native forest, to the plains dwelling Wolf Clan, and the eccentric Bat Clan who made their homes throughout the caves and mountains of Tyria. For most of their history, the Goblins held loyalty only to their own clan and cared little for the others.\n\nThe Goblin clans were forced to come out of the shadows, however, when the Havoc Wars began. The Havoc Gods began to destroy caves and forests and rampage through the open plains, forcing many Goblins to flee. Many different clan leaders met together and agreed to unite against this common enemy. The Goblins sent envoys to the Empire and Elves, applying to join the Grand Alliance, but were initially ignored. Yet, as Grand Alliance armies were slowly being driven back, the Goblins were winning small victories and launching raids from behind enemy lines. Goblin troops proved their worth in the war, working as expert scouts, ambushers, and raiders. For a short time, Goblins were treated almost as equals by the big folk of Tyria. \n\nThe Goblin Clans soon lost their hard earned respect though, as once the Havoc Wars ended and the danger passed, few Humans or Elves were interested in the Goblins or their concerns. The Goblins were simply expected to return to their forgotten corners of Tyria, and they were once again treated as pests and thieves when they tried to take anything more. The Goblins, however, remained united even as they returned to their different homes, with clan leaders continuing to meet in order to exchange aid and trade goods. \n\nHow will you bring respect to your clan?",
+  "units": [],
+  "upgradePackages": [],
+  "customRules": [],
+  "customWeapons": [],
+  "spells": [
+    {
+      "id": "UWbT4",
+      "name": "Spider Might",
+      "type": 1,
+      "effect": "Pick up to two friendly units within 12\", which get Mischievous Boost once (next time the effect would apply).",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "pUt7fqbSTNWP",
+                "name": "Mischievous Boost"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "const { name, rating } = params.effect.unitRule;\nconst avgUnit = !params.thisUnit;\nconst auraSize = this.getAuraUnitSize(unit, params);\nconst multiplier = params.multiplier * auraSize;\nreturn { name, rating, multiplier, avgUnit };",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "pUt7fqbSTNWP",
+                "name": "Mischievous Boost"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "9aOrY",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "Nozru",
+      "name": "Stinging Spider",
+      "type": 0,
+      "effect": "Pick one enemy unit within 6\", which takes 3 hits with Bane.",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "3"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "Naqc5mga9Uha",
+                "name": "Bane"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 6\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 3
+              },
+              "weaponRule1": {
+                "id": "Naqc5mga9Uha",
+                "name": "Bane"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 6\"",
+                "value": 6
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 0.9,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 0.9
+        }
+      ],
+      "spellbookId": "_fl49",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "y2o4A",
+      "name": "Bat Thirst",
+      "type": 2,
+      "effect": "Pick up to four enemy units within 18\", which friendly units gets Piercing Fighter against once (next time the effect would apply).",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "1yTPcanTyckX",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "J5ybKXCkBgm8",
+                "name": "Piercing Fighter"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "{ name: params.effect.unitRule.name, rating: params.effect.unitRule.rating, multiplier: params.multiplier * this.getAuraUnitSize(unit, params), avgUnit: true }",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "J5ybKXCkBgm8",
+                "name": "Piercing Fighter"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2.2,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 2.2
+        }
+      ],
+      "spellbookId": "sbSJb",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "68b-0",
+      "name": "Pouncing Wolf",
+      "type": 0,
+      "effect": "Pick up to two enemy units within 12\", which take 2 hits with AP(2) each.",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 4
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "tNVWP",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "_tiWX",
+      "name": "Wolf Resiliance",
+      "type": 1,
+      "effect": "Pick up to six friendly units within 12\", which get +1 to defense rolls once (next time the effect would apply).",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "txtrnRX2fPJJ",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "rollModifier",
+              "value": "+1"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to three"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "properties",
+          "value": "unit.defense -= params.thisUnit ? params.effect.rollModifier.value : 0",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "+1",
+                "value": 1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 3,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 3
+        },
+        {
+          "type": "cost",
+          "value": "params.thisUnit ? 0 : this.getUnitBaseCostDiff({ quality: 4, defense: 5, tough: 2, rules: [\"Tough\"] }, { defense: 5 - params.effect.rollModifier.value })",
+          "params": {
+            "aura": true,
+            "effect": {
+              "rollModifier": {
+                "name": "+1",
+                "value": 1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 3,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 3
+        }
+      ],
+      "spellbookId": "qel4I",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "Wf7JI",
+      "name": "Biting Bat",
+      "type": 0,
+      "effect": "Pick up to three enemy units within 6\", which take 1 hit with Deadly(3) and Tear each.",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "1"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "_mrPya5SXSqW",
+                "name": "Deadly",
+                "rating": 3,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "spellHitRoll",
+              "value": ""
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "xeJDKejG4QZN",
+                "name": "Tear"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 6\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 3
+              },
+              "weaponRule1": {
+                "id": "_mrPya5SXSqW",
+                "name": "Deadly",
+                "rating": 3,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "xeJDKejG4QZN",
+                "name": "Tear"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 6\"",
+                "value": 6
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 0.9,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 0.9
+        }
+      ],
+      "spellbookId": "cJZ_-",
+      "effectSkirmish": ""
+    }
+  ],
+  "modifiedAt": "2026-04-29T15:53:33.684Z",
+  "editedAt": "2026-04-29T09:52:15.426Z",
+  "official": true,
+  "versionString": "3.5.3",
+  "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/q9BQlBp583ZuuOnQ/DOV_m6aaTYeaOdn5hWLSf.jpg",
+  "bannerImagePath": null,
+  "visibility": 1,
+  "factionId": null,
+  "factionName": null,
+  "factionRelation": null,
+  "popularity": 0,
+  "downvotes": 0,
+  "partnerSettings": {
+    "storeLinks": [
+      "https://www.myminifactory.com/users/onepagerules",
+      "https://www.etsy.com/shop/onepagerules"
+    ]
+  },
+  "balanceValid": false,
+  "balanceValidReason": 1,
+  "loreUrl": "https://www.onepagerules.com/factions/goblins",
+  "voted": null,
+  "specialRules": [
+    {
+      "id": "pUt7fqbSTNWP",
+      "name": "Mischievous Boost",
+      "aliasedRuleId": null,
+      "description": "If this model has Mischievous, when it shoots or charges enemies over 9\" away, enemies taking hits from it must re-roll successful unmodified defense results of 5-6 from Mischievous (instead of only on 6).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "J5ybKXCkBgm8",
+      "name": "Piercing Fighter",
+      "aliasedRuleId": null,
+      "description": "This model gets AP(+1) in melee.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "xeJDKejG4QZN",
+      "name": "Tear",
+      "aliasedRuleId": null,
+      "description": "Against non-Hero units with Tough(3) or more, this weapon gets AP(+4).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "_mrPya5SXSqW",
+      "name": "Deadly",
+      "aliasedRuleId": null,
+      "description": "Assign each wound to one model, and multiply it by X. Hits from Deadly must be resolved first, and these wounds don’t carry over to other models if the original target is killed.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "Naqc5mga9Uha",
+      "name": "Bane",
+      "aliasedRuleId": null,
+      "description": "Ignores Regeneration, and when attacking the target must re-roll unmodified Defense results of 6.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 2
+    }
+  ],
+  "username": "onepagerules",
+  "creator": false,
+  "isCreator": false,
+  "gameSystemId": 5,
+  "gameSystemSlug": "age-of-fantasy-skirmish",
+  "aberration": "AOFS",
+  "gameSystemKey": "AOFS",
+  "flavouredUid": "q9BQlBp583ZuuOnQ~5"
+}

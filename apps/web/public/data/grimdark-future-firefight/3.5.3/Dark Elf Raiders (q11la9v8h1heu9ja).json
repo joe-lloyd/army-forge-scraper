@@ -1,0 +1,2503 @@
+{
+  "uid": "q11la9v8h1heu9ja",
+  "userId": "1is8a3JZYgw",
+  "enabledGameSystems": [
+    2,
+    3,
+    9,
+    10
+  ],
+  "name": "Dark Elf Raiders",
+  "genericName": "Dark Elves||Dark-Edge Elves||Dark-Edge Raiders",
+  "hint": "",
+  "background": "The Dark Elf Raiders are disparate gangs formed by surviving members of the underclass after the Elven Empire collapsed. They rely on the mobility of their small raiding parties and advanced anti-gravity skimmers to make up for their lack of heavy armor.\n\nAbandoned by their ruling class during the Robot Legion uprising, handfuls of the Elvish lower classes managed to escape into space. These surviving Elves formed gangs, ready to do whatever it takes to survive. Bitter and distrustful of outsiders, the Gangs persist, taking what they need from outsiders to ensure that they can never be betrayed again.",
+  "backgroundFull": "The Elven Empire was once a dominant power within the Sirius Sector, possessing both advanced psychic abilities and highly advanced technology, and Elven society was strictly governed by a psychically-gifted nobility. As their society developed and spread, the Elven nobility began to develop Robots in order to fulfill more and more roles in their society, until most menial labour was performed by them. More and more Elvish commoners were dragged down into poverty, desperately struggling to survive, even as the Elven Empire itself continued to grow and prosper.\n\nAfter centuries of stability, the rule of the Elven nobility ended suddenly as their robotic servants developed sentience. Conflict broke out, and within hours, social order had collapsed completely as the Elven Empire began to evacuate their home worlds. The evacuation efforts focused on saving the wealthy and influential, whilst transportation within lower class districts were sabotaged, and anyone who attempted to reach an evacuation port without authorization was killed.\n\nDesperate to survive, the remaining Elves tried to find a means of escape, knowing they couldn't hide out long on their former home worlds. Some desperate raids led by criminal gangs managed to overpower space port guards and seize evacuation ships or cargo ships, whilst other Elves turned to smuggling rings and other groups that had vessels independent of the Elven military. Taking to the skies in stolen, salvaged and improvised vessels, these Elves would form new gangs and apply their skills to raiding and scavenging in order to survive. \n\nThe Dark Elves quickly adapted to life as raiders, honing their skills as warriors and scientists, applying the advanced technology of the old Elven Empire in dark and innovative ways. Their knowledge of toxins is almost unparalleled within the Sirius Sector, while their alchemists have also made some unique breakthroughs in reverse engineering the Battle Brother’s gene-mods.\n\nThose who receive these enhancements can be made even more powerful than a Prime Brother, though they will be irreparably damaged in mind and body during the process. These innovations have allowed the Dark Elves to survive and prosper in Sirius, even when faced with larger and more united enemies who would prefer to see them hunted down and destroyed. \n\nHow will your gang survive the dangers of Sirius?",
+  "units": [
+    {
+      "id": "CdDmTiY",
+      "cost": 45,
+      "name": "Gene-Tech Master",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "2xUH_d7T_Zfv",
+          "name": "Harassing",
+          "label": "Harassing"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "8KujvrTG8k9p",
+          "name": "Regeneration",
+          "label": "Regeneration"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "1ua2t",
+          "name": "Dual CCWs",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "aF5Ln6F2",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Dual CCWs (A4)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "D1",
+        "SX7U67cG"
+      ],
+      "genericName": "Fanatic Leader",
+      "hasCustomRule": false,
+      "disabledSections": [
+        "sWnWgZD"
+      ],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "9KZgNDC",
+      "cost": 15,
+      "name": "Gene-Warrior",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "8KujvrTG8k9p",
+          "name": "Regeneration",
+          "label": "Regeneration"
+        },
+        {
+          "id": "2xUH_d7T_Zfv",
+          "name": "Harassing",
+          "label": "Harassing"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "n5fRLyEm",
+          "name": "Dual CCWs",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "fAIX8rj2",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Dual CCWs (A2)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "genericName": "Fanatics",
+      "hasCustomRule": false,
+      "disabledSections": [
+        "sWnWgZD",
+        "OGHjbqK"
+      ],
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "ysAV--C",
+      "cost": 20,
+      "name": "Blood Hound",
+      "size": 1,
+      "bases": {
+        "round": "60x35",
+        "square": "50x25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "2xUH_d7T_Zfv",
+          "name": "Harassing",
+          "label": "Harassing"
+        },
+        {
+          "id": "KdgwlPb8LuD2",
+          "name": "Fast",
+          "label": "Fast"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "OSBbN9B6",
+          "name": "Toxin Claws",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "-ih-zpr0",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "Naqc5mga9Uha",
+              "name": "Bane",
+              "label": "Bane"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Toxin Claws (A2, Bane)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "O1"
+      ],
+      "genericName": "Combat Hounds",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "wYmbZMH",
+      "cost": 30,
+      "name": "Nightmare",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "2xUH_d7T_Zfv",
+          "name": "Harassing",
+          "label": "Harassing"
+        },
+        {
+          "id": "TTL5RNmwotoh",
+          "name": "Melee Slayer",
+          "label": "Melee Slayer"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "AIGVbjqi",
+          "name": "Energy Sword",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "0-erIAQg",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Energy Sword (A2, AP(1), Rending)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "genericName": "Weapon Masters",
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "z0y38Pu",
+      "cost": 35,
+      "name": "Crow Swarm",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "-QJdqJEKjIpE",
+          "name": "Flying",
+          "label": "Flying"
+        },
+        {
+          "id": "2xUH_d7T_Zfv",
+          "name": "Harassing",
+          "label": "Harassing"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        }
+      ],
+      "valid": true,
+      "defense": 6,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "MeAogHTl",
+          "name": "Swarm Attacks",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "bUQRotbI",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Swarm Attacks (A3, Rending)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "O1"
+      ],
+      "genericName": "Bird Swarms",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "Muarpbv",
+      "cost": 45,
+      "name": "Court Henchman",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "2xUH_d7T_Zfv",
+          "name": "Harassing",
+          "label": "Harassing"
+        },
+        {
+          "id": "FZLk0-3ci6jI",
+          "name": "Martial Prowess",
+          "label": "Martial Prowess"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "pikJyRKv",
+          "name": "Courtesan's Sword",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "tVRrzIrn",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "Naqc5mga9Uha",
+              "name": "Bane",
+              "label": "Bane"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Courtesan's Sword (A4, Bane)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "F1"
+      ],
+      "genericName": "Dark Court",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "rHODg7t",
+      "cost": 55,
+      "name": "Shadow Warrior",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "2xUH_d7T_Zfv",
+          "name": "Harassing",
+          "label": "Harassing"
+        },
+        {
+          "id": "djJahpu0Ciut",
+          "name": "Infiltrate",
+          "label": "Infiltrate"
+        },
+        {
+          "id": "9jyvRoBODD-O",
+          "name": "Stealth",
+          "label": "Stealth"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "rfw0o93z",
+          "name": "Dark Blast",
+          "type": "ArmyBookWeapon",
+          "range": 18,
+          "attacks": 2,
+          "weaponId": "rfw0o93z",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Dark Blast (18\", A2, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "_0BKhIuH",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "range": null,
+          "attacks": 2,
+          "weaponId": "_0BKhIuH",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "Naqc5mga9Uha",
+              "name": "Bane",
+              "label": "Bane"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "CCW (A2, Bane)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "genericName": "Shadow Warriors",
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "jfWbJax",
+      "cost": 85,
+      "name": "Gene-Brute",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "2xUH_d7T_Zfv",
+          "name": "Harassing",
+          "label": "Harassing"
+        },
+        {
+          "id": "8KujvrTG8k9p",
+          "name": "Regeneration",
+          "label": "Regeneration"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "yIymU5zZ",
+          "name": "Acid Gun",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "tfBGXxE6",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "Zx4mWN0SbmK8",
+              "name": "Reliable",
+              "label": "Reliable"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "Naqc5mga9Uha",
+              "name": "Bane",
+              "label": "Bane"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Acid Gun (12\", A1, Blast(3), Reliable, Bane)",
+          "originalCount": 1
+        },
+        {
+          "id": "jTYId",
+          "name": "Scissor Claw",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "n9_szfyq",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Scissor Claw (A2, AP(4))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "H1"
+      ],
+      "genericName": "Mutant Brutes",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    }
+  ],
+  "upgradePackages": [
+    {
+      "uid": "D1",
+      "hint": "Gene-Tech Master",
+      "sections": [
+        {
+          "id": "W6LRosR",
+          "uid": "hbkM5",
+          "label": "Replace Dual CCW",
+          "options": [
+            {
+              "uid": "aD8YT",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Syringe Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "EQ77kF9i",
+                  "specialRules": [
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Syringe Pistol (12\", A1, Deadly(3))"
+                },
+                {
+                  "id": null,
+                  "name": "CCW",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "83nhlNHF",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "CCW (A2)"
+                }
+              ],
+              "label": "Syringe Pistol (12\", A1, Deadly(3)), CCW (A2)",
+              "parentSectionId": "hbkM5",
+              "id": "aD8YT"
+            }
+          ],
+          "parentPackageUid": "D1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Dual CCW"
+          ]
+        },
+        {
+          "id": "aUCyGOd",
+          "uid": "0GGC-IF",
+          "label": "Replace Syringe Pistol",
+          "options": [
+            {
+              "uid": "kf-0jvH",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "tfBGXxE6",
+                  "name": "Acid Gun",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "tfBGXxE6",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Acid Gun (12\", A1, Blast(3), Reliable, Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Acid Gun (12\", A1, Blast(3), Reliable, Bane)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "0GGC-IF",
+              "parentSectionId": "0GGC-IF",
+              "id": "kf-0jvH"
+            },
+            {
+              "uid": "3FybPqM",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "eR-h_DML",
+                  "name": "Arcane Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 1,
+                  "weaponId": "eR-h_DML",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Arcane Rifle (30\", A1, AP(1), Reliable)",
+                  "count": 1
+                }
+              ],
+              "label": "Arcane Rifle (30\", A1, AP(1), Reliable)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "0GGC-IF",
+              "parentSectionId": "0GGC-IF",
+              "id": "3FybPqM"
+            }
+          ],
+          "parentPackageUid": "D1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Syringe Pistol"
+          ]
+        },
+        {
+          "id": "FmqpKwz",
+          "uid": "sWnWgZD",
+          "label": "Replace CCW",
+          "options": [
+            {
+              "uid": "f2t7tXY",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "8a4Bttzr",
+                  "name": "Agony Whip",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "8a4Bttzr",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Agony Whip (A1, Blast(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Agony Whip (A1, Blast(3))",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "sWnWgZD",
+              "parentSectionId": "sWnWgZD",
+              "id": "f2t7tXY"
+            },
+            {
+              "uid": "Ik3xBzU",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "81m_BoXV",
+                  "name": "Venom Sword",
+                  "type": "ArmyBookWeapon",
+                  "range": null,
+                  "attacks": 2,
+                  "weaponId": "81m_BoXV",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Venom Sword (A2, Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Venom Sword (A2, Bane)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "sWnWgZD",
+              "parentSectionId": "sWnWgZD",
+              "id": "Ik3xBzU"
+            },
+            {
+              "uid": "xW-lSFB",
+              "cost": 0,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "ncu2dnwX",
+                  "name": "Electro-Corroder",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "ncu2dnwX",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Electro-Corroder (A2, AP(1), Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Electro-Corroder (A2, AP(1), Bane)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "sWnWgZD",
+              "parentSectionId": "sWnWgZD",
+              "id": "xW-lSFB"
+            },
+            {
+              "uid": "Pev2125",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "wERpSW-4",
+                  "name": "Leech Claw",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "wERpSW-4",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Leech Claw (A2, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Leech Claw (A2, AP(1), Rending)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "sWnWgZD",
+              "parentSectionId": "sWnWgZD",
+              "id": "Pev2125"
+            },
+            {
+              "uid": "UDHYDS2",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "iF54rvPH",
+                  "name": "Syringe Claw",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "iF54rvPH",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Syringe Claw (A1, AP(2), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Syringe Claw (A1, AP(2), Deadly(3))",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "sWnWgZD",
+              "parentSectionId": "sWnWgZD",
+              "id": "UDHYDS2"
+            },
+            {
+              "uid": "_Ub5I5b",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "n9_szfyq",
+                  "name": "Scissor Claw",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "n9_szfyq",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Scissor Claw (A2, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Scissor Claw (A2, AP(4))",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "sWnWgZD",
+              "parentSectionId": "sWnWgZD",
+              "id": "_Ub5I5b"
+            }
+          ],
+          "parentPackageUid": "D1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "CCW"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "F1",
+      "hint": "Court Henchman",
+      "sections": [
+        {
+          "id": "m1u4k2Z",
+          "uid": "Ax1wK4L",
+          "label": "Replace any Courtesan's Sword",
+          "options": [
+            {
+              "uid": "m4bwF",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Muarpbv",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "tVRrzIrn",
+                  "name": "Ghoulish Claws",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 4,
+                  "weaponId": "pikJyRKv",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Ghoulish Claws (A4, Rending)"
+                }
+              ],
+              "label": "Ghoulish Claws (A4, Rending)",
+              "parentSectionId": "Ax1wK4L",
+              "id": "m4bwF"
+            }
+          ],
+          "parentPackageUid": "F1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Courtesan's Sword"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "H1",
+      "hint": "Gene-Brutes",
+      "sections": [
+        {
+          "id": "bZ8-xVZ",
+          "uid": "pBhUz_6",
+          "label": "Replace any Acid Gun and Scissor Claw",
+          "options": [
+            {
+              "uid": "0vdHm",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "jfWbJax",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Dual Scissor Claws",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 4,
+                  "weaponId": "yIymU5zZ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dual Scissor Claws (A4, AP(4))"
+                }
+              ],
+              "label": "Dual Scissor Claws (A4, AP(4))",
+              "parentPackageUid": "H1",
+              "parentSectionUid": "pBhUz_6",
+              "parentSectionId": "pBhUz_6",
+              "id": "0vdHm"
+            }
+          ],
+          "parentPackageUid": "H1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Acid Gun",
+            "Scissor Claw"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "O1",
+      "hint": "Beast Handler",
+      "sections": [
+        {
+          "id": "-iX4X0i",
+          "uid": "g-biHxm",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "z3Kcy3jFEd",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ysAV--C",
+                  "cost": 5
+                },
+                {
+                  "unitId": "z0y38Pu",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Pathfinder Beast Handler",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Pathfinder Beast Handler (Vanguard)",
+                  "content": [
+                    {
+                      "id": "r8OBuam8nRXP",
+                      "name": "Vanguard",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Pathfinder Beast Handler (Vanguard)",
+              "parentSectionId": "g-biHxm",
+              "id": "z3Kcy3jFEd"
+            },
+            {
+              "uid": "izIXABk",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ysAV--C",
+                  "cost": 5
+                },
+                {
+                  "unitId": "z0y38Pu",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Combat Beast Handler",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Combat Beast Handler (Unpredictable Fighter)",
+                  "content": [
+                    {
+                      "id": "DEeVIJcfNfS6",
+                      "name": "Unpredictable Fighter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Combat Beast Handler (Unpredictable Fighter)",
+              "parentSectionId": "g-biHxm",
+              "id": "izIXABk"
+            }
+          ],
+          "parentPackageUid": "O1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "Eosfz",
+      "hint": "Gene-Warriors",
+      "sections": [
+        {
+          "id": "y_8qE2O",
+          "uid": "jyrdb",
+          "label": "Replace Barb Pistol",
+          "options": [
+            {
+              "uid": "zVIDg",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "9KZgNDC",
+                  "cost": -99975
+                }
+              ],
+              "gains": [
+                {
+                  "id": "eeswNTBQ",
+                  "name": "Syringe Pistol",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "EQ77kF9i",
+                  "specialRules": [
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Syringe Pistol (12\", A1, Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Syringe Pistol (12\", A1, Deadly(3))",
+              "parentPackageUid": "Eosfz",
+              "parentSectionUid": "jyrdb",
+              "parentSectionId": "jyrdb",
+              "id": "zVIDg"
+            },
+            {
+              "uid": "rKAIw",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "9KZgNDC",
+                  "cost": -99965
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Bone Gun",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "qTcdFIgC",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Bone Gun (18\", A2, Rending)"
+                }
+              ],
+              "label": "Bone Gun (18\", A2, Rending)",
+              "parentPackageUid": "Eosfz",
+              "parentSectionUid": "hNcFg",
+              "parentSectionId": "jyrdb",
+              "id": "rKAIw"
+            },
+            {
+              "uid": "VHs1J",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "9KZgNDC",
+                  "cost": -99960
+                }
+              ],
+              "gains": [
+                {
+                  "id": "WQ86_uo_",
+                  "name": "Acid Gun",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "tfBGXxE6",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Acid Gun (12\", A1, Blast(3), Reliable, Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Acid Gun (12\", A1, Blast(3), Reliable, Bane)",
+              "parentPackageUid": "Eosfz",
+              "parentSectionUid": "jyrdb",
+              "parentSectionId": "jyrdb",
+              "id": "VHs1J"
+            },
+            {
+              "uid": "ipxUV",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "9KZgNDC",
+                  "cost": -99960
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Arcane Rifle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 1,
+                  "weaponId": "eR-h_DML",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Arcane Rifle (30\", A1, AP(1), Reliable)"
+                }
+              ],
+              "label": "Arcane Rifle (30\", A1, AP(1), Reliable)",
+              "parentPackageUid": "Eosfz",
+              "parentSectionUid": "hNcFg",
+              "parentSectionId": "jyrdb",
+              "id": "ipxUV"
+            }
+          ],
+          "parentPackageUid": "Eosfz",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Barb Pistol"
+          ]
+        },
+        {
+          "id": "rYZWloh",
+          "uid": "iT3-1",
+          "label": "Replace CCW",
+          "options": [
+            {
+              "uid": "aAjbK",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "9KZgNDC",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": "MJVAz2A2",
+                  "name": "Agony Whip",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "8a4Bttzr",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Agony Whip (A1, Blast(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Agony Whip (A1, Blast(3))",
+              "parentPackageUid": "Eosfz",
+              "parentSectionUid": "iT3-1",
+              "parentSectionId": "iT3-1",
+              "id": "aAjbK"
+            },
+            {
+              "uid": "0EIuD",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "9KZgNDC",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": "VsqtftVB",
+                  "name": "Venom Sword",
+                  "type": "ArmyBookWeapon",
+                  "range": null,
+                  "attacks": 2,
+                  "weaponId": "81m_BoXV",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Venom Sword (A2, Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Venom Sword (A2, Bane)",
+              "parentPackageUid": "Eosfz",
+              "parentSectionUid": "iT3-1",
+              "parentSectionId": "iT3-1",
+              "id": "0EIuD"
+            },
+            {
+              "uid": "DfO1C",
+              "cost": 0,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "9KZgNDC",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": "8GOHnVNE",
+                  "name": "Electro-Corroder",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "ncu2dnwX",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Electro-Corroder (A2, AP(1), Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Electro-Corroder (A2, AP(1), Bane)",
+              "parentPackageUid": "Eosfz",
+              "parentSectionUid": "iT3-1",
+              "parentSectionId": "iT3-1",
+              "id": "DfO1C"
+            },
+            {
+              "uid": "kRxsE",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "9KZgNDC",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": "w9tr2rIF",
+                  "name": "Leech Claw",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "wERpSW-4",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Leech Claw (A2, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Leech Claw (A2, AP(1), Rending)",
+              "parentPackageUid": "Eosfz",
+              "parentSectionUid": "iT3-1",
+              "parentSectionId": "iT3-1",
+              "id": "kRxsE"
+            },
+            {
+              "uid": "dqdjD",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "9KZgNDC",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": "Q96FJovm",
+                  "name": "Syringe Claw",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "iF54rvPH",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Syringe Claw (A1, AP(2), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Syringe Claw (A1, AP(2), Deadly(3))",
+              "parentPackageUid": "Eosfz",
+              "parentSectionUid": "iT3-1",
+              "parentSectionId": "iT3-1",
+              "id": "dqdjD"
+            },
+            {
+              "uid": "e6iOx",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "9KZgNDC",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gyhUz2wp",
+                  "name": "Scissor Claw",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "n9_szfyq",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Scissor Claw (A2, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Scissor Claw (A2, AP(4))",
+              "parentPackageUid": "Eosfz",
+              "parentSectionUid": "iT3-1",
+              "parentSectionId": "iT3-1",
+              "id": "e6iOx"
+            }
+          ],
+          "parentPackageUid": "Eosfz",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "CCW"
+          ]
+        }
+      ],
+      "calcErrors": true
+    },
+    {
+      "uid": "SX7U67cG",
+      "hint": "Specialists - Gene-Tech",
+      "sections": [
+        {
+          "id": "Njgg3mu",
+          "uid": "LCqbVas7",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "YZaA7WAn",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Alchemist",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Alchemist (Melee Shrouding Aura)",
+                  "content": [
+                    {
+                      "id": "0dZak5jae8F0",
+                      "name": "Melee Shrouding Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Alchemist (Melee Shrouding Aura)",
+              "parentSectionId": "LCqbVas7",
+              "parentPackageUid": "T_mpsAE6",
+              "parentSectionUid": "f3b7N",
+              "id": "YZaA7WAn"
+            },
+            {
+              "uid": "rF1vmNX7",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Dread Ruler",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Dread Ruler (Courage Aura)",
+                  "content": [
+                    {
+                      "id": "FRVSAjasmFSF",
+                      "name": "Courage Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Dread Ruler (Courage Aura)",
+              "parentSectionId": "LCqbVas7",
+              "parentPackageUid": "T_mpsAE6",
+              "parentSectionUid": "f3b7N",
+              "id": "rF1vmNX7"
+            },
+            {
+              "uid": "Sw86xIJG",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Agoniser",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Agoniser (Furious Aura)",
+                  "content": [
+                    {
+                      "id": "CK9TIa7vdehO",
+                      "name": "Furious Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Agoniser (Furious Aura)",
+              "parentSectionId": "LCqbVas7",
+              "parentPackageUid": "T_mpsAE6",
+              "id": "Sw86xIJG"
+            },
+            {
+              "uid": "rqpT_rM1Dj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CdDmTiY",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Raid Leader",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Raid Leader (Harassing Boost Aura)",
+                  "content": [
+                    {
+                      "id": "RUS7R0SwaBUj",
+                      "name": "Harassing Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Raid Leader (Harassing Boost Aura)",
+              "parentSectionId": "LCqbVas7",
+              "id": "rqpT_rM1Dj"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "T_mpsAE6",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    }
+  ],
+  "customRules": [],
+  "customWeapons": [],
+  "spells": [
+    {
+      "id": "j6oLQ",
+      "cost": 14,
+      "name": "Psy-Adrenaline",
+      "type": 1,
+      "effect": "Pick up to two friendly units within 12\", which get Harassing Boost once (next time the effect would apply).",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "UrbEF2kpIjYH",
+                "name": "Harassing Boost"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "const { name, rating } = params.effect.unitRule;\nconst avgUnit = !params.thisUnit;\nconst auraSize = this.getAuraUnitSize(unit, params);\nconst multiplier = params.multiplier * auraSize;\nreturn { name, rating, multiplier, avgUnit };",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "UrbEF2kpIjYH",
+                "name": "Harassing Boost"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "2VS4p",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "tcH3w",
+      "cost": 15,
+      "name": "Snake Bite",
+      "type": 0,
+      "effect": "Pick one enemy unit within 12\", which takes 2 hits with AP(1) and Lacerate.",
+      "threshold": 1,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "2"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "WcOMD7QgPYXZ",
+                "name": "Lacerate"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 2
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 1,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "WcOMD7QgPYXZ",
+                "name": "Lacerate"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 1,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "1NCBi",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "3ORBa",
+      "cost": 20,
+      "name": "Raiding Drugs",
+      "type": 2,
+      "effect": "Pick up to four enemy units within 18\", which friendly units get +1 to hit rolls in melee against once (next time the effect would apply).",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "YbOvC9oIIli9",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "rollModifier",
+              "value": "+1"
+            },
+            {
+              "name": "attackType",
+              "value": "in melee"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 18\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to two"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var range = params.effect.attackType?.value ?? 24;\nreturn (this.getWeaponCost({ attacks: 1.5, range }, { quality: 5 - params.effect.rollModifier.value }) - this.getWeaponCost({ attacks: 1.5, range }, { quality: 5 }))",
+          "params": {
+            "aura": true,
+            "effect": {
+              "attackType": {
+                "name": "in melee",
+                "value": 12
+              },
+              "rollModifier": {
+                "name": "+1",
+                "value": 1
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 18\"",
+                "value": 18
+              },
+              "numberText": {
+                "name": "up to two"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 2.2,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 2.2
+        }
+      ],
+      "spellbookId": "hYuQr",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "fgyPU",
+      "cost": 20,
+      "name": "Art of Pain",
+      "type": 0,
+      "effect": "Pick up to two enemy units within 6\", which take 1 hit with AP(2) and Deadly(3) each.",
+      "threshold": 2,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "1"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            },
+            {
+              "name": "weaponRule1",
+              "value": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              }
+            },
+            {
+              "name": "weaponRule2",
+              "value": {
+                "id": "_mrPya5SXSqW",
+                "name": "Deadly",
+                "rating": 3,
+                "hideModifier": true
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 6\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 2
+              },
+              "weaponRule1": {
+                "id": "17crjK7P6_w6",
+                "name": "AP",
+                "rating": 2,
+                "hideModifier": true
+              },
+              "weaponRule2": {
+                "id": "_mrPya5SXSqW",
+                "name": "Deadly",
+                "rating": 3,
+                "hideModifier": true
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 2,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 6\"",
+                "value": 6
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 0.9,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 0.9
+        }
+      ],
+      "spellbookId": "CF09A",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "cP2qf",
+      "cost": 15,
+      "name": "Fade in the Dark",
+      "type": 1,
+      "effect": "Pick up to six friendly units within 12\", which get Stealth once (next time the effect would apply).",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "RWnJrrMKAUbg",
+          "parameters": [
+            {
+              "name": "effectDuration",
+              "value": "once (next time the effect would apply)"
+            },
+            {
+              "name": "gets/loses/ignores",
+              "value": "gets"
+            },
+            {
+              "name": "unitRule",
+              "value": {
+                "id": "9jyvRoBODD-O",
+                "name": "Stealth"
+              }
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "friendly"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "up to three"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "ruleCostMultiplier",
+          "value": "const { name, rating } = params.effect.unitRule;\nconst avgUnit = !params.thisUnit;\nconst auraSize = this.getAuraUnitSize(unit, params);\nconst multiplier = params.multiplier * auraSize;\nreturn { name, rating, multiplier, avgUnit };",
+          "params": {
+            "aura": true,
+            "effect": {
+              "unitRule": {
+                "id": "9jyvRoBODD-O",
+                "name": "Stealth"
+              },
+              "effectDuration": {
+                "name": "once (next time the effect would apply)"
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "up to three"
+              },
+              "friendly-enemy": {
+                "name": "friendly"
+              }
+            },
+            "multiplier": 3,
+            "thisUnitAura": false,
+            "otherUnitAura": true
+          },
+          "multiplier": 3
+        }
+      ],
+      "spellbookId": "n-Hph",
+      "effectSkirmish": ""
+    },
+    {
+      "id": "z431N",
+      "cost": 13,
+      "name": "Holistic Suffering",
+      "type": 0,
+      "effect": "Pick up to three enemy units within 12\", which take 3 hits each.",
+      "threshold": 3,
+      "generation": {
+        "effect": {
+          "id": "QFjxWsOHTCSi",
+          "parameters": [
+            {
+              "name": "numberDigit",
+              "value": "3"
+            },
+            {
+              "name": "hits-wounds",
+              "value": "hits"
+            }
+          ]
+        },
+        "assignment": {
+          "id": "9o9ZgMk8pLf5",
+          "parameters": [
+            {
+              "name": "friendly-enemy",
+              "value": "enemy"
+            },
+            {
+              "name": "target",
+              "value": "unit"
+            },
+            {
+              "name": "inRange",
+              "value": "within 12\""
+            },
+            {
+              "name": "numberText",
+              "value": "one"
+            }
+          ]
+        }
+      },
+      "costFormula": [
+        {
+          "type": "cost",
+          "value": "var { weaponRule1, weaponRule2 } = params.effect;\nvar range = params.assignment.inRange?.value ?? 12;\nvar weapon = { attacks: params.effect.numberDigit.value, range, rules: [] };\nif (weaponRule1) {\n  weapon.rules.push(weaponRule1.name);\n  this.applyRating(weapon, weaponRule1);\n}\nif (weaponRule2) {\n  weapon.rules.push(weaponRule2.name);\n  this.applyRating(weapon, weaponRule2);\n}\nvar cost = this.getWeaponCost(weapon, { quality: 6 - (4 - params.threshold) })\nvar multiplier = params.assignment.target?.name === \"model\" ? this.SniperEffect : 1;\nreturn cost * multiplier;",
+          "params": {
+            "aura": false,
+            "effect": {
+              "numberDigit": {
+                "name": "numberDigit",
+                "value": 9
+              }
+            },
+            "avgUnit": true,
+            "thisUnit": false,
+            "threshold": 3,
+            "assignment": {
+              "target": "unit",
+              "inRange": {
+                "name": "within 12\"",
+                "value": 12
+              },
+              "numberText": {
+                "name": "one"
+              },
+              "friendly-enemy": {
+                "name": "enemy"
+              }
+            },
+            "multiplier": 1,
+            "thisUnitAura": false,
+            "otherUnitAura": false
+          },
+          "multiplier": 1
+        }
+      ],
+      "spellbookId": "hMokg",
+      "effectSkirmish": ""
+    }
+  ],
+  "modifiedAt": "2026-04-29T15:53:13.906Z",
+  "editedAt": "2026-04-27T16:55:56.062Z",
+  "official": true,
+  "versionString": "3.5.3",
+  "coverImagePath": "army-books/covers/VM2-l2mKt9n8tzciUWYiF.png",
+  "bannerImagePath": null,
+  "visibility": 1,
+  "factionId": null,
+  "factionName": null,
+  "factionRelation": null,
+  "popularity": 0,
+  "downvotes": 0,
+  "partnerSettings": {
+    "storeLinks": [
+      "https://www.myminifactory.com/users/onepagerules",
+      "https://www.etsy.com/shop/onepagerules"
+    ]
+  },
+  "balanceValid": false,
+  "balanceValidReason": 4,
+  "loreUrl": "https://www.onepagerules.com/factions/dark-elf-raiders",
+  "voted": null,
+  "specialRules": [
+    {
+      "id": "DEeVIJcfNfS6",
+      "name": "Unpredictable Fighter",
+      "aliasedRuleId": null,
+      "description": "When in melee, roll one die and apply one effect to all models with this rule: on a 1-3 they get AP(+1), and on a 4-6 they get +1 to hit rolls instead.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "2xUH_d7T_Zfv",
+      "name": "Harassing",
+      "aliasedRuleId": "ozCLWcof36wD",
+      "description": "Once per round, units where all models have this rule may move by up to 3\" after shooting or being in melee.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "djJahpu0Ciut",
+      "name": "Infiltrate",
+      "aliasedRuleId": null,
+      "description": "Counts as having Ambush, but may be deployed anywhere over 3” away from enemy unit.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "CK9TIa7vdehO",
+      "name": "Furious Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Furious. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "RUS7R0SwaBUj",
+      "name": "Harassing Boost Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Harassing Boost. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "FZLk0-3ci6jI",
+      "name": "Martial Prowess",
+      "aliasedRuleId": null,
+      "description": "Once per game, if all models in this unit have this rule, it may be activated even if it had already activated this round (stops being fatigued when activated for the second time). Only up to one third of the units in the army with this rule at the beginning of the game (rounding up) may use it in a single round.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "FRVSAjasmFSF",
+      "name": "Courage Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get +1 to morale test rolls. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "0dZak5jae8F0",
+      "name": "Melee Shrouding Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Melee Shrouding. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "r8OBuam8nRXP",
+      "name": "Vanguard",
+      "aliasedRuleId": null,
+      "description": "After this model is deployed, it may be placed anywhere fully within 9” of its position.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "TTL5RNmwotoh",
+      "name": "Melee Slayer",
+      "aliasedRuleId": null,
+      "description": "When this model charges, its weapons get AP(+2) if most models in the target have Tough(3) or higher.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "6mJw5IdqSqNC",
+      "name": "Ambush",
+      "aliasedRuleId": null,
+      "description": "May be set aside before deployment. At the start of any round after the first, may be deployed anywhere over 9” away from enemy units. Players alternate in placing Ambush units, starting with the player that activates next. Units that deploy via Ambush can’t seize or contest objectives on the round they deploy.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "JoOCVPx1xT1G",
+      "name": "Furious",
+      "aliasedRuleId": null,
+      "description": "When charging, unmodified results of 6 to hit in melee deal 1 extra hit (only the original hit counts as a 6 for special rules).",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "UrbEF2kpIjYH",
+      "name": "Harassing Boost",
+      "aliasedRuleId": null,
+      "description": "If most models in this unit have Harassing, they may move by up to 6\" from Harassing (instead of only 3\").",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "1TMBPe40kx2b",
+      "name": "Melee Shrouding",
+      "aliasedRuleId": null,
+      "description": "Enemies get -3\" movement when trying to charge units where all models have this rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "a0YtInGiUDd6",
+      "name": "Tough",
+      "aliasedRuleId": null,
+      "description": "This model only rolls to check wound effects once it has taken at least X wounds, and is only Knocked Out on rolls of 5+X or more.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "9jyvRoBODD-O",
+      "name": "Stealth",
+      "aliasedRuleId": null,
+      "description": "When units where all models have this rule are shot from over 9\" away, enemy units get -1 to hit rolls.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "_mrPya5SXSqW",
+      "name": "Deadly",
+      "aliasedRuleId": null,
+      "description": "Assign each wound to one model, and multiply it by X. Hits from Deadly must be resolved first, and these wounds don’t carry over to other models if the original target is killed.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
+      "id": "WcOMD7QgPYXZ",
+      "name": "Lacerate",
+      "aliasedRuleId": null,
+      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    }
+  ],
+  "username": "onepagerules",
+  "creator": false,
+  "isCreator": false,
+  "gameSystemId": 3,
+  "gameSystemSlug": "grimdark-future-firefight",
+  "aberration": "GFF",
+  "gameSystemKey": "GFF",
+  "flavouredUid": "q11la9v8h1heu9ja~3"
+}
