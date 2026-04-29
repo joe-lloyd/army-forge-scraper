@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { diffWords, diffArrays } from "diff";
+import { RuleList } from "./RuleText";
 
 interface Unit {
   id: string;
@@ -169,22 +170,36 @@ const UpgradeSectionTable = ({
     if (!isDiffMode)
       return { opt: optB, type: "standard" as const, optA: undefined };
 
-    // Try explicit ID match first
-    let matchIdx = availableOptsA.findIndex((a: any) => a.id === optB.id);
+    const getBase = (label: string) => (label || "").split("(")[0].trim();
+    const baseB = getBase(optB.label);
 
-    // Fallback to label match
+    // Try explicit ID or UID match first, but require base name to match
+    let matchIdx = availableOptsA.findIndex((a: any) => {
+      const isIdMatch = (a.uid && optB.uid && a.uid === optB.uid) || (a.id && optB.id && a.id === optB.id);
+      return isIdMatch && getBase(a.label) === baseB;
+    });
+
+    // Fallback to exact label match
     if (matchIdx === -1) {
       matchIdx = availableOptsA.findIndex((a: any) => a.label === optB.label);
+    }
+
+    // Fallback to base label match (ignoring stats in parentheses)
+    if (matchIdx === -1) {
+      matchIdx = availableOptsA.findIndex((a: any) => getBase(a.label) === baseB);
     }
 
     if (matchIdx !== -1) {
       const optA = availableOptsA[matchIdx];
       availableOptsA.splice(matchIdx, 1); // Consume
       // Detect change
-      const isChanged =
+      const isCostChanged =
         optA.finalCost !== undefined &&
         optB.finalCost !== undefined &&
         optA.finalCost !== optB.finalCost;
+      const isLabelChanged = optA.label !== optB.label;
+      const isChanged = isCostChanged || isLabelChanged;
+      
       return {
         opt: optB,
         type: isChanged ? "changed" : "unchanged",
@@ -249,11 +264,7 @@ const UpgradeSectionTable = ({
     const weaponRows =
       weapons.length > 0 ? weapons : [{ name: labelText, isDummy: true }];
 
-    // Format rule helper
-    const fmtRule = (r: any) => {
-      const name = r.name || r.label;
-      return r.rating ? `${name}(${r.rating})` : name;
-    };
+
 
     return weaponRows.map((w: any, idx: number) => (
       <tr
@@ -284,14 +295,14 @@ const UpgradeSectionTable = ({
             </td>
             {hasSpecial && (
               <td className={`py-1 ${textClass} text-[10px]`}>
-                {w.specialRules?.map(fmtRule).join(", ") || "-"}
+                {w.specialRules?.length ? <RuleList rules={w.specialRules} /> : "-"}
               </td>
             )}
           </>
         )}
         {!hasWeapons && hasSpecial && (
           <td className={`py-1 ${textClass} text-[10px]`}>
-            {w.specialRules?.map(fmtRule).join(", ") || "-"}
+            {w.specialRules?.length ? <RuleList rules={w.specialRules} /> : "-"}
           </td>
         )}
         <td className={`py-1 px-2 text-right ${textClass}`}>
@@ -433,9 +444,8 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
               <span className="text-slate-400">
                 {" "}
                 ({w.range ? `${w.range}"` : "Melee"}, A{w.attacks}
-                {w.specialRules?.length > 0
-                  ? `, ${w.specialRules.map((r: any) => (r.rating ? `${r.name}(${r.rating})` : r.name)).join(", ")}`
-                  : ""}
+                {w.specialRules?.length > 0 && ", "}
+                <RuleList rules={w.specialRules} />
                 )
               </span>
             </div>
@@ -448,7 +458,7 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
             Rules
           </div>
           <div className="text-sm text-slate-400 leading-relaxed">
-            {unit.rules.map((r) => r.name || r.label).join(", ")}
+            <RuleList rules={unit.rules} />
           </div>
         </div>
 
@@ -636,7 +646,10 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
             {rDiffs.map((part, partIdx) => {
               return part.value.map((ruleName, itemIdx) => {
                 const key = `${partIdx}-${itemIdx}`;
-                const suffix = " ";
+                const isLastPart = partIdx === rDiffs.length - 1;
+                const isLastItemInPart = itemIdx === part.value.length - 1;
+                const isLastOverall = isLastPart && isLastItemInPart;
+                const suffix = isLastOverall ? "" : ", ";
 
                 if (part.added) {
                   return (
@@ -708,13 +721,15 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
 
                     {pkgB.sections.map((sectionB: any) => {
                       // Robust matching:
-                      // 1. Try exact ID match
+                      // 1. Try exact UID or ID match
                       let sectionA = pkgA?.sections.find(
-                        (s: any) => s.id === sectionB.id,
+                        (s: any) => (s.uid && sectionB.uid && s.uid === sectionB.uid) || (s.id && sectionB.id && s.id === sectionB.id),
                       );
 
-                      // 2. If no ID match or ID collision, try label match (skipping used IDs)
-                      if (sectionA && usedSectionAIds.has(sectionA.id)) {
+                      const getSid = (s: any) => s.uid || s.id;
+
+                      // 2. If no match or collision, try label match (skipping used IDs)
+                      if (sectionA && usedSectionAIds.has(getSid(sectionA))) {
                         sectionA = undefined; // Force label search if ID consumed
                       }
 
@@ -722,12 +737,12 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
                         sectionA = pkgA.sections.find(
                           (s: any) =>
                             s.label === sectionB.label &&
-                            !usedSectionAIds.has(s.id),
+                            !usedSectionAIds.has(getSid(s)),
                         );
                       }
 
                       if (sectionA) {
-                        usedSectionAIds.add(sectionA.id);
+                        usedSectionAIds.add(getSid(sectionA));
                       }
 
                       return (
