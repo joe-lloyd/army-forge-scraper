@@ -138,7 +138,7 @@
     },
     {
       "id": "6yC90go",
-      "cost": 200,
+      "cost": 205,
       "name": "Gereppetto",
       "size": 1,
       "type": 1,
@@ -595,7 +595,7 @@
     },
     {
       "id": "NaqcZmt",
-      "cost": 70,
+      "cost": 85,
       "name": "Zairetia",
       "size": 1,
       "type": 1,
@@ -702,7 +702,7 @@
     },
     {
       "id": "0Is_TGd",
-      "cost": 35,
+      "cost": 45,
       "name": "Ignatio",
       "size": 1,
       "type": 1,
@@ -835,76 +835,6 @@
         "H1"
       ],
       "genericName": "Marksmen",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 5,
-      "disabledUpgradeSections": []
-    },
-    {
-      "id": "OciwHsc",
-      "cost": 15,
-      "name": "Scout",
-      "size": 1,
-      "bases": {
-        "round": "25",
-        "square": "25"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "FAMbscK5vhSu",
-          "name": "Scout",
-          "label": "Scout"
-        },
-        {
-          "id": "2Ut-u9mj5a2t",
-          "name": "Vinci Tech",
-          "label": "Vinci Tech"
-        }
-      ],
-      "valid": true,
-      "defense": 5,
-      "quality": 5,
-      "weapons": [
-        {
-          "id": "hF7C2gqP",
-          "name": "Rapid Handbow",
-          "type": "ArmyBookWeapon",
-          "range": 9,
-          "attacks": 2,
-          "weaponId": "hF7C2gqP",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "cavWDboL4ubs",
-              "name": "Rending",
-              "label": "Rending"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Rapid Handbow (9\", A2, Rending)",
-          "count": 1,
-          "originalCount": 1
-        },
-        {
-          "id": "aBbYEN76",
-          "name": "Hand Weapon",
-          "type": "ArmyBookWeapon",
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "SWnfRBdJ",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "Hand Weapon (A1)",
-          "count": 1,
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [
-        "I1"
-      ],
-      "genericName": "Scouts",
       "hasCustomRule": false,
       "disabledSections": [],
       "hasBalanceInvalid": false,
@@ -1147,6 +1077,76 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "OciwHsc",
+      "cost": 20,
+      "name": "Scout",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "FAMbscK5vhSu",
+          "name": "Scout",
+          "label": "Scout"
+        },
+        {
+          "id": "2Ut-u9mj5a2t",
+          "name": "Vinci Tech",
+          "label": "Vinci Tech"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "hF7C2gqP",
+          "name": "Rapid Handbow",
+          "type": "ArmyBookWeapon",
+          "range": 9,
+          "attacks": 2,
+          "weaponId": "hF7C2gqP",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Rapid Handbow (9\", A2, Rending)",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "aBbYEN76",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "SWnfRBdJ",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Hand Weapon (A1)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "I1"
+      ],
+      "genericName": "Scouts",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "pRfAhrc",
       "cost": 25,
       "name": "Automa Cavalry",
@@ -1211,7 +1211,7 @@
     },
     {
       "id": "MAIEJ2g",
-      "cost": 30,
+      "cost": 35,
       "name": "Sniper",
       "size": 1,
       "bases": {
@@ -1490,90 +1490,6 @@
       "hasBalanceInvalid": false,
       "originalSize": 3,
       "disabledUpgradeSections": []
-    },
-    {
-      "id": "Cfl-Phe",
-      "cost": 95,
-      "name": "Automa Brute",
-      "size": 1,
-      "bases": {
-        "round": "40",
-        "square": "40"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "a0YtInGiUDd6",
-          "name": "Tough",
-          "rating": 3,
-          "label": "Tough(3)"
-        },
-        {
-          "id": "2Ut-u9mj5a2t",
-          "name": "Vinci Tech",
-          "label": "Vinci Tech"
-        },
-        {
-          "id": "2atvlmICQSCV",
-          "name": "Fearless",
-          "label": "Fearless"
-        }
-      ],
-      "valid": true,
-      "defense": 3,
-      "quality": 4,
-      "weapons": [
-        {
-          "id": "R60eunqV",
-          "name": "Heavy Handbow",
-          "type": "ArmyBookWeapon",
-          "range": 18,
-          "attacks": 4,
-          "weaponId": "R60eunqV",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "cavWDboL4ubs",
-              "name": "Rending",
-              "label": "Rending"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Heavy Handbow (18\", A4, Rending)",
-          "count": 1,
-          "originalCount": 1
-        },
-        {
-          "id": "XxJQ5ZVT",
-          "name": "Brute Lance",
-          "type": "ArmyBookWeapon",
-          "range": null,
-          "attacks": 3,
-          "weaponId": "XxJQ5ZVT",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "17crjK7P6_w6",
-              "name": "AP",
-              "rating": 1,
-              "label": "AP(1)"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Brute Lance (A3, AP(1))",
-          "count": 1,
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [
-        "L1"
-      ],
-      "genericName": "Heavy Robots",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 3,
-      "disabledUpgradeSections": []
     }
   ],
   "upgradePackages": [
@@ -1582,7 +1498,7 @@
       "hint": "Vinci Leader",
       "sections": [
         {
-          "id": "T3839BN",
+          "id": "MrGWb3w",
           "uid": "QvkCayk",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1672,7 +1588,7 @@
           ]
         },
         {
-          "id": "R5vSx1_",
+          "id": "cqFacAY",
           "uid": "C4X0ZxT",
           "label": "Upgrade with one",
           "options": [
@@ -1786,7 +1702,7 @@
           }
         },
         {
-          "id": "_vBxrh8",
+          "id": "4Ty4h3t",
           "uid": "evfGrzA",
           "label": "Upgrade with one",
           "options": [
@@ -1797,7 +1713,7 @@
               "costs": [
                 {
                   "unitId": "4xFAaqz",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1972,7 +1888,7 @@
           }
         },
         {
-          "id": "HmrpLXQ",
+          "id": "dk6yokU",
           "uid": "LlFvM0v1",
           "label": "Upgrade with one",
           "options": [
@@ -2076,7 +1992,7 @@
       "hint": "Vinci Scholar",
       "sections": [
         {
-          "id": "U3VkNvP",
+          "id": "u5A0gFA",
           "uid": "oVyyXe-",
           "label": "Upgrade with one",
           "options": [
@@ -2162,7 +2078,7 @@
           }
         },
         {
-          "id": "GQ_LIkw",
+          "id": "8JFJlzR",
           "uid": "yEliPsU",
           "label": "Upgrade with one",
           "options": [
@@ -2240,7 +2156,7 @@
               "costs": [
                 {
                   "unitId": "-9F1FDu",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -2275,7 +2191,7 @@
           }
         },
         {
-          "id": "sPWEctR",
+          "id": "5yUm2pX",
           "uid": "DpnvaVHz",
           "label": "Upgrade with one",
           "options": [
@@ -2379,7 +2295,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "xGvZ5eQ",
+          "id": "iYGl9_O",
           "uid": "QmLjsVI",
           "label": "Upgrade one model with one",
           "options": [
@@ -2480,7 +2396,7 @@
       "hint": "Militia",
       "sections": [
         {
-          "id": "wBdsJQ0",
+          "id": "62Vk5m_",
           "uid": "2VpkPl1",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2564,7 +2480,7 @@
           ]
         },
         {
-          "id": "jVVjvuE",
+          "id": "qF4s_17",
           "uid": "f6nDqHZG",
           "label": "Upgrade up to two models with one",
           "options": [
@@ -2703,7 +2619,7 @@
       "hint": "Automa Guard",
       "sections": [
         {
-          "id": "4sz3kvf",
+          "id": "x3zfrAF",
           "uid": "NPjF3S3",
           "label": "Upgrade with",
           "options": [
@@ -2751,7 +2667,7 @@
       "hint": "Harlequins",
       "sections": [
         {
-          "id": "_Y_4HnN",
+          "id": "IXRkxcK",
           "uid": "me5pz6m",
           "label": "Replace all Juggler Bombs and Knives",
           "options": [
@@ -2807,7 +2723,7 @@
       "hint": "Assassins",
       "sections": [
         {
-          "id": "O0aAIIl",
+          "id": "1Z-RJ0g",
           "uid": "IR-uXDc",
           "label": "Upgrade with any",
           "options": [
@@ -2889,7 +2805,7 @@
       "hint": "City Guard",
       "sections": [
         {
-          "id": "clA4DUE",
+          "id": "4fFhXOC",
           "uid": "oYBeBoS",
           "label": "Replace any Slayerbolt Crossbow",
           "options": [
@@ -2977,7 +2893,7 @@
           ]
         },
         {
-          "id": "Pedh1zP",
+          "id": "E5F_I4V",
           "uid": "oUH0xyT",
           "label": "Upgrade all Crossbows with one",
           "options": [
@@ -3019,7 +2935,7 @@
               "costs": [
                 {
                   "unitId": "s2QC06M",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3060,7 +2976,7 @@
           ]
         },
         {
-          "id": "qWnUOw9",
+          "id": "aKmOe-2",
           "uid": "W8u17l_n",
           "label": "Upgrade with one",
           "options": [
@@ -3194,7 +3110,7 @@
       "hint": "Scouts",
       "sections": [
         {
-          "id": "FQ6oD82",
+          "id": "wBvRWCB",
           "uid": "QEYYPUG",
           "label": "Upgrade with any",
           "options": [
@@ -3275,7 +3191,7 @@
           }
         },
         {
-          "id": "7yca_Sa",
+          "id": "mCCF4PF",
           "uid": "gDvTu9c7",
           "label": "Replace Hand Weapon",
           "options": [
@@ -3357,7 +3273,7 @@
           ]
         },
         {
-          "id": "CGESFuY",
+          "id": "X-psGlp",
           "uid": "GVpWJpHy",
           "label": "Upgrade with one",
           "options": [
@@ -3491,7 +3407,7 @@
       "hint": "Automa Drones",
       "sections": [
         {
-          "id": "GUnra6X",
+          "id": "_VDkM6E",
           "uid": "Q8ekmWq",
           "label": "Replace Bot-Sawblade",
           "options": [
@@ -3558,7 +3474,7 @@
       "hint": "Aerea Guard",
       "sections": [
         {
-          "id": "vmv0l_w",
+          "id": "Mv3YsAl",
           "uid": "uLIcX",
           "label": "Replace Dual Heavy Claws",
           "options": [
@@ -3615,7 +3531,7 @@
           ]
         },
         {
-          "id": "M9xu5At",
+          "id": "HwjW4_A",
           "uid": "87jZfgm",
           "label": "Replace any Heavy Slayerbolt Crossbow",
           "options": [
@@ -3658,7 +3574,7 @@
               "costs": [
                 {
                   "unitId": "2I2swvL",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3703,7 +3619,7 @@
           ]
         },
         {
-          "id": "vDkemoO",
+          "id": "2GbQHPG",
           "uid": "HDgRUNm",
           "label": "Upgrade all Heavy Crossbows with one",
           "options": [
@@ -3789,59 +3705,11 @@
       "calcErrors": false
     },
     {
-      "uid": "L1",
-      "hint": "Automa Brutes",
-      "sections": [
-        {
-          "id": "8e_wTHN",
-          "uid": "nH1BGwB",
-          "label": "Upgrade with",
-          "options": [
-            {
-              "uid": "9V-1GCI",
-              "cost": 30,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "Cfl-Phe",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Self-Repairing",
-                  "type": "ArmyBookItem",
-                  "label": "Self-Repairing (Regeneration)",
-                  "content": [
-                    {
-                      "id": "8KujvrTG8k9p",
-                      "name": "Regeneration",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Self-Repairing (Regeneration)",
-              "parentPackageUid": "L1",
-              "parentSectionUid": "nH1BGwB",
-              "parentSectionId": "nH1BGwB",
-              "id": "9V-1GCI"
-            }
-          ],
-          "parentPackageUid": "L1",
-          "type": "ArmyBookUpgradeSection",
-          "variant": "upgrade"
-        }
-      ],
-      "calcErrors": false
-    },
-    {
       "uid": "M1",
       "hint": "Automa Cavalry",
       "sections": [
         {
-          "id": "EDzmAij",
+          "id": "BIHol8I",
           "uid": "LZcQJHj",
           "label": "Replace Lance",
           "options": [
@@ -3909,7 +3777,7 @@
       "hint": "Snipers",
       "sections": [
         {
-          "id": "K-jfvIq",
+          "id": "_3iNGFj",
           "uid": "1bJaatzvgA",
           "label": "Replace any Slayerbolt Snipebow",
           "options": [
@@ -3963,7 +3831,7 @@
           ]
         },
         {
-          "id": "Ar9IzEO",
+          "id": "LtMiTX7",
           "uid": "l3hLNDcYf_",
           "label": "Upgrade with",
           "options": [
@@ -4043,7 +3911,7 @@
       "hint": "Specialists - Scholar",
       "sections": [
         {
-          "id": "8ASc9lA",
+          "id": "yDf3sCj",
           "uid": "hSIm0ulB",
           "label": "Upgrade with one",
           "options": [
@@ -4082,7 +3950,7 @@
               "costs": [
                 {
                   "unitId": "-9F1FDu",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -4112,7 +3980,7 @@
               "costs": [
                 {
                   "unitId": "-9F1FDu",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -4143,7 +4011,7 @@
               "costs": [
                 {
                   "unitId": "-9F1FDu",
-                  "cost": 15
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -4173,7 +4041,7 @@
               "costs": [
                 {
                   "unitId": "-9F1FDu",
-                  "cost": 30
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -4216,7 +4084,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "m_Y0YEm",
+          "id": "A9Zje1A",
           "uid": "SvgUWPAQ",
           "label": "Upgrade with one",
           "options": [
@@ -4281,68 +4149,6 @@
               "id": "AyhbPMCJ"
             },
             {
-              "uid": "7Jm39IZt",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "4xFAaqz",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Captain",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Captain (Rapid Advance Aura)",
-                  "content": [
-                    {
-                      "id": "Y37_ydVGvRqL",
-                      "name": "Rapid Advance Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Captain (Rapid Advance Aura)",
-              "parentSectionId": "SvgUWPAQ",
-              "parentPackageUid": "b1xuye-h",
-              "id": "7Jm39IZt"
-            },
-            {
-              "uid": "zxYQmtn2",
-              "cost": 60,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "4xFAaqz",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Munitioner",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Munitioner (Ranged Slayer Aura)",
-                  "content": [
-                    {
-                      "id": "sScPMcGqrk5Q",
-                      "name": "Ranged Slayer Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Munitioner (Ranged Slayer Aura)",
-              "parentSectionId": "SvgUWPAQ",
-              "parentPackageUid": "b1xuye-h",
-              "parentSectionUid": "dEyoAYw",
-              "id": "zxYQmtn2"
-            },
-            {
               "uid": "xDsGsYp4dh",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -4370,6 +4176,36 @@
               "label": "Master Assassin (Takedown Strike)",
               "parentSectionId": "SvgUWPAQ",
               "id": "xDsGsYp4dh"
+            },
+            {
+              "uid": "7Jm39IZt",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4xFAaqz",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Captain",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Captain (Rapid Advance Aura)",
+                  "content": [
+                    {
+                      "id": "Y37_ydVGvRqL",
+                      "name": "Rapid Advance Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Captain (Rapid Advance Aura)",
+              "parentSectionId": "SvgUWPAQ",
+              "parentPackageUid": "b1xuye-h",
+              "id": "7Jm39IZt"
             },
             {
               "uid": "OGhMu91j",
@@ -4402,6 +4238,38 @@
               "parentPackageUid": "b1xuye-h",
               "parentSectionUid": "dEyoAYw",
               "id": "OGhMu91j"
+            },
+            {
+              "uid": "zxYQmtn2",
+              "cost": 60,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4xFAaqz",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Munitioner",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Munitioner (Ranged Slayer Aura)",
+                  "content": [
+                    {
+                      "id": "sScPMcGqrk5Q",
+                      "name": "Ranged Slayer Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Munitioner (Ranged Slayer Aura)",
+              "parentSectionId": "SvgUWPAQ",
+              "parentPackageUid": "b1xuye-h",
+              "parentSectionUid": "dEyoAYw",
+              "id": "zxYQmtn2"
             }
           ],
           "isHeroUpgrade": true,
@@ -4965,7 +4833,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:19.848Z",
+  "modifiedAt": "2026-04-30T09:21:33.990Z",
   "editedAt": "2026-04-02T23:14:16.933Z",
   "official": true,
   "versionString": "3.5.3",

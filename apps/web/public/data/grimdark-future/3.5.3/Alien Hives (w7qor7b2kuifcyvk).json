@@ -15,7 +15,7 @@
   "units": [
     {
       "id": "lmZtl0E",
-      "cost": 355,
+      "cost": 360,
       "name": "Hive Lord",
       "size": 1,
       "bases": {
@@ -210,7 +210,7 @@
     },
     {
       "id": "qpW1fhD",
-      "cost": 80,
+      "cost": 85,
       "name": "Snatcher Lord",
       "size": 1,
       "bases": {
@@ -541,7 +541,7 @@
     },
     {
       "id": "vuuKwqD",
-      "cost": 140,
+      "cost": 125,
       "name": "Winged Grunts",
       "size": 10,
       "bases": {
@@ -550,11 +550,6 @@
       },
       "items": [],
       "rules": [
-        {
-          "id": "6mJw5IdqSqNC",
-          "name": "Ambush",
-          "label": "Ambush"
-        },
         {
           "id": "-QJdqJEKjIpE",
           "name": "Flying",
@@ -606,8 +601,8 @@
         }
       ],
       "upgrades": [
-        "D1",
-        "E1"
+        "E1",
+        "D5SEXIeM"
       ],
       "genericName": "Winged Grunts",
       "hasCustomRule": false,
@@ -617,7 +612,7 @@
     },
     {
       "id": "_c1518l",
-      "cost": 130,
+      "cost": 145,
       "name": "Support Grunts",
       "size": 3,
       "bases": {
@@ -705,7 +700,7 @@
     },
     {
       "id": "19W7XoU",
-      "cost": 155,
+      "cost": 160,
       "name": "Soul-Snatchers",
       "size": 5,
       "bases": {
@@ -1447,7 +1442,7 @@
     },
     {
       "id": "CXEkpHT",
-      "cost": 150,
+      "cost": 155,
       "name": "Mortar Beast",
       "size": 1,
       "bases": {
@@ -1567,7 +1562,7 @@
     },
     {
       "id": "go9isSI",
-      "cost": 185,
+      "cost": 190,
       "name": "Synapse Tyrant",
       "size": 1,
       "bases": {
@@ -1611,12 +1606,11 @@
       "weapons": [
         {
           "id": "zvvApBrG",
-          "name": "Heavy Psy-Stinger",
-          "type": "ArmyBookWeapon",
+          "name": "Heavy Psy-Torrent",
           "count": 1,
-          "range": 18,
-          "attacks": 4,
-          "weaponId": "j1qbkF8o",
+          "range": 9,
+          "attacks": 2,
+          "weaponId": "IS0vq6jU",
           "specialRules": [
             {
               "type": "ArmyBookRule",
@@ -1627,14 +1621,21 @@
             },
             {
               "type": "ArmyBookRule",
-              "id": "VI54cszY2BuG",
-              "name": "Destructive",
-              "label": "Destructive"
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "Zx4mWN0SbmK8",
+              "name": "Reliable",
+              "label": "Reliable"
             }
           ],
-          "attacksMultiplier": 1,
-          "label": "Heavy Psy-Stinger (18\", A4, AP(1), Destructive)",
-          "originalCount": 1
+          "label": "Heavy Psy-Torrent (9\", A2, AP(1), Blast(3), Reliable)",
+          "originalCount": 1,
+          "type": "ArmyBookWeapon"
         },
         {
           "id": "O_6k1",
@@ -1782,7 +1783,7 @@
     },
     {
       "id": "YbEEu7h",
-      "cost": 290,
+      "cost": 295,
       "name": "Carnivo-Rex",
       "size": 1,
       "bases": {
@@ -2000,7 +2001,7 @@
     },
     {
       "id": "X1N2nRX",
-      "cost": 415,
+      "cost": 420,
       "name": "Psycho-Rex",
       "size": 1,
       "bases": {
@@ -2049,12 +2050,11 @@
       "weapons": [
         {
           "id": "C9_mYqo2",
-          "name": "Heavy Psy-Stinger",
-          "type": "ArmyBookWeapon",
+          "name": "Heavy Psy-Torrent",
           "count": 1,
-          "range": 18,
-          "attacks": 4,
-          "weaponId": "j1qbkF8o",
+          "range": 9,
+          "attacks": 2,
+          "weaponId": "IS0vq6jU",
           "specialRules": [
             {
               "type": "ArmyBookRule",
@@ -2065,14 +2065,21 @@
             },
             {
               "type": "ArmyBookRule",
-              "id": "VI54cszY2BuG",
-              "name": "Destructive",
-              "label": "Destructive"
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "Zx4mWN0SbmK8",
+              "name": "Reliable",
+              "label": "Reliable"
             }
           ],
-          "attacksMultiplier": 1,
-          "label": "Heavy Psy-Stinger (18\", A4, AP(1), Destructive)",
-          "originalCount": 1
+          "label": "Heavy Psy-Torrent (9\", A2, AP(1), Blast(3), Reliable)",
+          "originalCount": 1,
+          "type": "ArmyBookWeapon"
         },
         {
           "id": "PIp7xyja",
@@ -2129,7 +2136,7 @@
     },
     {
       "id": "laQL0iJ",
-      "cost": 415,
+      "cost": 420,
       "name": "Hive Burrower",
       "size": 1,
       "bases": {
@@ -2234,7 +2241,7 @@
     },
     {
       "id": "XXealbA",
-      "cost": 465,
+      "cost": 470,
       "name": "Tyrant Great Beast",
       "size": 1,
       "bases": {
@@ -2337,7 +2344,7 @@
     },
     {
       "id": "KzCu3EC",
-      "cost": 490,
+      "cost": 505,
       "name": "Spawning Great Beast",
       "size": 1,
       "bases": {
@@ -2448,7 +2455,7 @@
     },
     {
       "id": "ntetDg-",
-      "cost": 440,
+      "cost": 445,
       "name": "Devourer Great Beast",
       "size": 1,
       "bases": {
@@ -2572,7 +2579,7 @@
     },
     {
       "id": "efiZafu",
-      "cost": 525,
+      "cost": 550,
       "name": "Artillery Great Beast",
       "size": 1,
       "bases": {
@@ -2834,7 +2841,7 @@
     },
     {
       "id": "kQgZckF",
-      "cost": 230,
+      "cost": 215,
       "name": "Rapacious Beast",
       "size": 1,
       "bases": {
@@ -2929,7 +2936,7 @@
     },
     {
       "id": "GiIM1wN",
-      "cost": 660,
+      "cost": 685,
       "name": "Hive Titan",
       "size": 1,
       "bases": {
@@ -3041,7 +3048,7 @@
     },
     {
       "id": "nF35PH4",
-      "cost": 495,
+      "cost": 510,
       "name": "Drekhor the Vengeful",
       "size": 1,
       "type": 1,
@@ -3198,7 +3205,7 @@
     },
     {
       "id": "X3tCKAU",
-      "cost": 275,
+      "cost": 280,
       "name": "Ksi'adoz Smokeborn",
       "size": 1,
       "type": 1,
@@ -3355,7 +3362,7 @@
     },
     {
       "id": "dMuWjpJ",
-      "cost": 110,
+      "cost": 115,
       "name": "Druzhak",
       "size": 1,
       "type": 1,
@@ -3696,7 +3703,7 @@
     },
     {
       "id": "lkLtZ_j",
-      "cost": 105,
+      "cost": 110,
       "name": "Vradhez",
       "size": 1,
       "type": 1,
@@ -3812,7 +3819,7 @@
       "hint": "Hive Lord",
       "sections": [
         {
-          "id": "65jq9_1",
+          "id": "t4xmNqY",
           "uid": "IQd7evV",
           "label": "Replace any Heavy Razor Claw",
           "options": [
@@ -3984,7 +3991,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 20,
                   "unitId": "lmZtl0E"
                 }
               ],
@@ -4027,7 +4034,7 @@
           ]
         },
         {
-          "id": "BQ4-mB1",
+          "id": "s3Kdc5l",
           "uid": "9ZOE5",
           "label": "Replace Shredder Cannon",
           "options": [
@@ -4070,7 +4077,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "lmZtl0E"
                 }
               ],
@@ -4238,7 +4245,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 40,
                   "unitId": "lmZtl0E"
                 }
               ],
@@ -4278,7 +4285,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 40,
                   "unitId": "lmZtl0E"
                 }
               ],
@@ -4370,7 +4377,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 65,
+                  "cost": 75,
                   "unitId": "lmZtl0E"
                 }
               ],
@@ -4413,7 +4420,7 @@
           ]
         },
         {
-          "id": "Ueptg3Y",
+          "id": "yhSBJY-",
           "uid": "HawCg",
           "label": "Upgrade with",
           "options": [
@@ -4467,7 +4474,7 @@
       "hint": "Prime Warrior",
       "sections": [
         {
-          "id": "FzdpbEL",
+          "id": "JLAAX9P",
           "uid": "A_Ko4Rk",
           "label": "Replace one Heavy Razor Claws",
           "options": [
@@ -4714,7 +4721,7 @@
           ]
         },
         {
-          "id": "Kw5ppKd",
+          "id": "qDsXpMV",
           "uid": "ijbm7zF",
           "label": "Upgrade with",
           "options": [
@@ -4767,7 +4774,7 @@
       "hint": "Grunt Upgrades",
       "sections": [
         {
-          "id": "12VvgrY",
+          "id": "wiUNpg4",
           "uid": "3wJarRx",
           "label": "Upgrade all models with one",
           "options": [
@@ -4786,10 +4793,6 @@
                 {
                   "cost": 15,
                   "unitId": "6oOZMAA"
-                },
-                {
-                  "cost": 15,
-                  "unitId": "vuuKwqD"
                 },
                 {
                   "cost": 5,
@@ -4825,16 +4828,12 @@
                   "unitId": "_LXFoO9"
                 },
                 {
-                  "cost": 20,
+                  "cost": 25,
                   "unitId": "CMADHYi"
                 },
                 {
                   "cost": 15,
                   "unitId": "6oOZMAA"
-                },
-                {
-                  "cost": 20,
-                  "unitId": "vuuKwqD"
                 },
                 {
                   "cost": 30,
@@ -4875,12 +4874,8 @@
                   "unitId": "CMADHYi"
                 },
                 {
-                  "cost": 35,
+                  "cost": 40,
                   "unitId": "6oOZMAA"
-                },
-                {
-                  "cost": 10,
-                  "unitId": "vuuKwqD"
                 },
                 {
                   "cost": 5,
@@ -4910,6 +4905,7 @@
               "id": "Kz0oZ4M"
             }
           ],
+          "isLowPrio": true,
           "parentPackageUid": "D1",
           "type": "ArmyBookUpgradeSection",
           "variant": "upgrade",
@@ -4930,7 +4926,7 @@
       "hint": "Grunt Ranged Upgrades",
       "sections": [
         {
-          "id": "3L51S30",
+          "id": "4fLQMLl",
           "uid": "QyRz7ED",
           "label": "Replace all Bio-Spiners",
           "options": [
@@ -5016,7 +5012,7 @@
           ]
         },
         {
-          "id": "7arDv3c",
+          "id": "jp_9viV",
           "uid": "0yYhyhC",
           "label": "Replace up to two Bio-Spiners",
           "options": [
@@ -5263,7 +5259,7 @@
       "hint": "Assault Grunts",
       "sections": [
         {
-          "id": "RQ6BIfx",
+          "id": "2KsuUzB",
           "uid": "xwVYFo1",
           "label": "Replace up to two Razor Claws",
           "options": [
@@ -5389,7 +5385,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "_LXFoO9"
                 }
               ],
@@ -5437,7 +5433,7 @@
       "hint": "Soul-Snatchers",
       "sections": [
         {
-          "id": "oy5JcLE",
+          "id": "79yKXTA",
           "uid": "_7uCIC6beY",
           "label": "Replace all Adrenaline Fueleds",
           "options": [
@@ -5482,7 +5478,7 @@
           ]
         },
         {
-          "id": "sm_pBSM",
+          "id": "aWZrOZ7",
           "uid": "An_cSbk",
           "label": "Upgrade one model with",
           "options": [
@@ -5537,7 +5533,7 @@
       "hint": "Hive Swarm",
       "sections": [
         {
-          "id": "-J_YFOc",
+          "id": "BNz3UdL",
           "uid": "3CsAitE",
           "label": "Upgrade all models with",
           "options": [
@@ -5594,7 +5590,7 @@
       "hint": "Melee Upgrades",
       "sections": [
         {
-          "id": "AkWjfxq",
+          "id": "H113t7O",
           "uid": "HcgSsOq",
           "label": "Replace any Razor Claws",
           "options": [
@@ -5604,11 +5600,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "Fvllq03"
                 },
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "tLoLwnZ"
                 },
                 {
@@ -5708,11 +5704,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "Fvllq03"
                 },
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "tLoLwnZ"
                 },
                 {
@@ -5762,7 +5758,7 @@
           ]
         },
         {
-          "id": "x6GayeL",
+          "id": "BGSknDU",
           "uid": "9G4I1",
           "label": "Replace one Razor Claws",
           "options": [
@@ -5892,7 +5888,7 @@
       "hint": "Hive Warriors",
       "sections": [
         {
-          "id": "DMn5zoV",
+          "id": "q3dtL04",
           "uid": "S3YuiRt",
           "label": "Any model may replace one Razor Claws",
           "options": [
@@ -6015,7 +6011,7 @@
           ]
         },
         {
-          "id": "I0ude_l",
+          "id": "-VRj9Xv",
           "uid": "fQBmVR8",
           "label": "Replace one Ravager Gun",
           "options": [
@@ -6193,7 +6189,7 @@
           ]
         },
         {
-          "id": "ZwvZiH8",
+          "id": "Fubc3du",
           "uid": "OFogXML",
           "label": "Upgrade all models with",
           "options": [
@@ -6250,7 +6246,7 @@
       "hint": "Ravenous Beasts",
       "sections": [
         {
-          "id": "CU_I1SB",
+          "id": "J5Cig71",
           "uid": "-H2Ty6q",
           "label": "Replace all Adrenaline Fueleds",
           "options": [
@@ -6305,7 +6301,7 @@
       "hint": "Hive Guardians",
       "sections": [
         {
-          "id": "cTKRg1z",
+          "id": "IJjxbGN",
           "uid": "MjXargB",
           "label": "Any model may replace one Razor Claws",
           "options": [
@@ -6315,7 +6311,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 35,
                   "unitId": "LYBGBaU"
                 }
               ],
@@ -6396,7 +6392,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 50,
+                  "cost": 60,
                   "unitId": "LYBGBaU"
                 }
               ],
@@ -6454,7 +6450,7 @@
       "hint": "Monster Melee Upgrades",
       "sections": [
         {
-          "id": "HWuEXCs",
+          "id": "oiNrGz1",
           "uid": "jGBmYru",
           "label": "Replace any Heavy Razor Claws",
           "options": [
@@ -6609,51 +6605,6 @@
               "id": "rDfQvDB"
             },
             {
-              "uid": "43qrfkW",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 10,
-                  "unitId": "YbEEu7h"
-                },
-                {
-                  "cost": 10,
-                  "unitId": "laQL0iJ"
-                },
-                {
-                  "cost": 10,
-                  "unitId": "ntetDg-"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "wMcngRig",
-                  "name": "Serrated Claws",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 3,
-                  "weaponId": "wMcngRig",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Serrated Claws (A3, AP(4))"
-                }
-              ],
-              "label": "Serrated Claws (A3, AP(4))",
-              "parentPackageUid": "A2",
-              "parentSectionUid": "jGBmYru",
-              "parentSectionId": "jGBmYru",
-              "id": "43qrfkW"
-            },
-            {
               "uid": "P1CRz",
               "cost": 20,
               "type": "ArmyBookUpgradeOption",
@@ -6698,6 +6649,51 @@
               "parentSectionUid": "jGBmYru",
               "parentSectionId": "jGBmYru",
               "id": "P1CRz"
+            },
+            {
+              "uid": "43qrfkW",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "YbEEu7h"
+                },
+                {
+                  "cost": 15,
+                  "unitId": "laQL0iJ"
+                },
+                {
+                  "cost": 15,
+                  "unitId": "ntetDg-"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "wMcngRig",
+                  "name": "Serrated Claws",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "wMcngRig",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Serrated Claws (A3, AP(4))"
+                }
+              ],
+              "label": "Serrated Claws (A3, AP(4))",
+              "parentPackageUid": "A2",
+              "parentSectionUid": "jGBmYru",
+              "parentSectionId": "jGBmYru",
+              "id": "43qrfkW"
             }
           ],
           "parentPackageUid": "A2",
@@ -6718,7 +6714,7 @@
       "hint": "Carnivo-Rex",
       "sections": [
         {
-          "id": "or5D-89",
+          "id": "AaILgrv",
           "uid": "rr7LRjf",
           "label": "Replace 3x Heavy Razor Claws",
           "options": [
@@ -6728,7 +6724,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 25,
                   "unitId": "YbEEu7h"
                 }
               ],
@@ -6793,7 +6789,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 70,
+                  "cost": 75,
                   "unitId": "YbEEu7h"
                 }
               ],
@@ -6831,7 +6827,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 70,
+                  "cost": 85,
                   "unitId": "YbEEu7h"
                 }
               ],
@@ -6868,7 +6864,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 85,
+                  "cost": 90,
                   "unitId": "YbEEu7h"
                 }
               ],
@@ -6913,7 +6909,7 @@
           ]
         },
         {
-          "id": "SJx0E7U",
+          "id": "UNubLWI",
           "uid": "OMH5U",
           "label": "Replace one Heavy Razor Claw",
           "options": [
@@ -6922,7 +6918,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 0,
+                  "cost": 5,
                   "unitId": "YbEEu7h"
                 }
               ],
@@ -6968,7 +6964,7 @@
       "hint": "Tyrant Great Beast",
       "sections": [
         {
-          "id": "8jT1n7H",
+          "id": "VqctSTl",
           "uid": "52VfpiV",
           "label": "Replace Bio-Pod",
           "options": [
@@ -7010,7 +7006,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 50,
+                  "cost": 60,
                   "unitId": "XXealbA"
                 }
               ],
@@ -7061,7 +7057,7 @@
       "hint": "Artillery Great Beast",
       "sections": [
         {
-          "id": "l-Dt_U9",
+          "id": "h52TtS4",
           "uid": "tkBr8-k",
           "label": "Replace Shredder Bio-Artillery",
           "options": [
@@ -7071,7 +7067,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 80,
+                  "cost": 60,
                   "unitId": "efiZafu"
                 }
               ],
@@ -7109,51 +7105,6 @@
               "parentSectionUid": "tkBr8-k",
               "parentSectionId": "tkBr8-k",
               "id": "YTn2_bV"
-            },
-            {
-              "uid": "fX8c0oo",
-              "cost": 170,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 115,
-                  "unitId": "efiZafu"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "o8ZNV7hP",
-                  "name": "Plasma Bio-Artillery",
-                  "type": "ArmyBookWeapon",
-                  "range": 36,
-                  "attacks": 3,
-                  "weaponId": "o8ZNV7hP",
-                  "specialRules": [
-                    {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "rating": 6
-                    },
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 4
-                    },
-                    {
-                      "id": "8Ck9GAwUK824",
-                      "name": "Indirect"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Plasma Bio-Artillery (36\", A3, AP(4), Blast(6), Indirect)",
-                  "count": 1
-                }
-              ],
-              "label": "Plasma Bio-Artillery (36\", A3, AP(4), Blast(6), Indirect)",
-              "parentPackageUid": "G2",
-              "parentSectionUid": "tkBr8-k",
-              "parentSectionId": "tkBr8-k",
-              "id": "fX8c0oo"
             },
             {
               "uid": "b2tHbDv",
@@ -7199,6 +7150,51 @@
               "parentSectionUid": "tkBr8-k",
               "parentSectionId": "tkBr8-k",
               "id": "b2tHbDv"
+            },
+            {
+              "uid": "fX8c0oo",
+              "cost": 170,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 155,
+                  "unitId": "efiZafu"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "o8ZNV7hP",
+                  "name": "Plasma Bio-Artillery",
+                  "type": "ArmyBookWeapon",
+                  "range": 36,
+                  "attacks": 3,
+                  "weaponId": "o8ZNV7hP",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 6
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    },
+                    {
+                      "id": "8Ck9GAwUK824",
+                      "name": "Indirect"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Plasma Bio-Artillery (36\", A3, AP(4), Blast(6), Indirect)",
+                  "count": 1
+                }
+              ],
+              "label": "Plasma Bio-Artillery (36\", A3, AP(4), Blast(6), Indirect)",
+              "parentPackageUid": "G2",
+              "parentSectionUid": "tkBr8-k",
+              "parentSectionId": "tkBr8-k",
+              "id": "fX8c0oo"
             }
           ],
           "parentPackageUid": "G2",
@@ -7216,7 +7212,7 @@
       "hint": "Invasion Spores",
       "sections": [
         {
-          "id": "ICoTZDY",
+          "id": "n9RC0Mp",
           "uid": "RO6Knn5",
           "label": "Upgrade with one",
           "options": [
@@ -7352,11 +7348,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 80,
+                  "cost": 85,
                   "unitId": "18VuWgg"
                 },
                 {
-                  "cost": 100,
+                  "cost": 105,
                   "unitId": "Jwz4vyd"
                 }
               ],
@@ -7415,7 +7411,7 @@
       "hint": "Rapacious Beast",
       "sections": [
         {
-          "id": "asnMi41",
+          "id": "PyBaW3b",
           "uid": "4Tn-Mgp",
           "label": "Replace Caustic Cannon",
           "options": [
@@ -7425,7 +7421,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 40,
                   "unitId": "kQgZckF"
                 }
               ],
@@ -7466,7 +7462,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 50,
+                  "cost": 60,
                   "unitId": "kQgZckF"
                 }
               ],
@@ -7514,7 +7510,7 @@
           ]
         },
         {
-          "id": "qMWBJHv",
+          "id": "ltDqc6S",
           "uid": "GlJSCqR",
           "label": "Replace Stinger Spitter",
           "options": [
@@ -7523,7 +7519,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "kQgZckF"
                 }
               ],
@@ -7627,7 +7623,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 80,
+                  "cost": 85,
                   "unitId": "kQgZckF"
                 }
               ],
@@ -7661,7 +7657,7 @@
       "hint": "Shadow Hunter",
       "sections": [
         {
-          "id": "yiCmJ0z",
+          "id": "DndBZfX",
           "uid": "dsnYX",
           "label": "Upgrade with one",
           "options": [
@@ -7744,7 +7740,7 @@
       "hint": "Elite Melee Upgrades",
       "sections": [
         {
-          "id": "9CyOf1c",
+          "id": "LcdMMYJ",
           "uid": "cRc_X",
           "label": "Replace any Heavy Razor Claw",
           "options": [
@@ -7971,7 +7967,7 @@
       "hint": "Mortar Beast",
       "sections": [
         {
-          "id": "zfVYLEa",
+          "id": "awB7uF3",
           "uid": "3mbdv",
           "label": "Replace Spore Gun",
           "options": [
@@ -8021,7 +8017,7 @@
       "hint": "Venom Beasts",
       "sections": [
         {
-          "id": "NisoSCD",
+          "id": "yTFivyR",
           "uid": "16-0ikiTpx",
           "label": "Replace all Poison Spurts and Toxin Claws",
           "options": [
@@ -8074,7 +8070,7 @@
           ]
         },
         {
-          "id": "0nyaeAT",
+          "id": "D94GpcI",
           "uid": "gbJtb",
           "label": "Upgrade one model with",
           "options": [
@@ -8125,7 +8121,7 @@
       "hint": "Spawning Great Beast",
       "sections": [
         {
-          "id": "PhK3h7l",
+          "id": "s9N14SF",
           "uid": "LQKtC",
           "label": "Upgrade with one",
           "options": [
@@ -8236,7 +8232,7 @@
       "hint": "Invasion Artillery Spore",
       "sections": [
         {
-          "id": "OBeH3Pc",
+          "id": "9s-2v5C",
           "uid": "A2j-0",
           "label": "Replace Spore Carrier",
           "options": [
@@ -8327,55 +8323,12 @@
       "hint": "Replace Heavy Psy-Torrent",
       "sections": [
         {
-          "id": "ztXZEc_",
+          "id": "NWcOq5n",
           "uid": "Ffzwz",
-          "label": "Replace Heavy Psy-Stinger",
+          "label": "Replace Heavy Psy-Torrent",
           "options": [
             {
-              "uid": "xMLIE",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 0,
-                  "unitId": "go9isSI"
-                },
-                {
-                  "cost": 0,
-                  "unitId": "X1N2nRX"
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Heavy Psy-Blast",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 18,
-                  "attacks": 2,
-                  "weaponId": "WSkJKBlp",
-                  "specialRules": [
-                    {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "rating": 3
-                    },
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 1
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Heavy Psy-Blast (18\", A2, AP(1), Blast(3))"
-                }
-              ],
-              "label": "Heavy Psy-Blast (18\", A2, AP(1), Blast(3))",
-              "parentPackageUid": "r1AkY",
-              "parentSectionUid": "Ffzwz",
-              "parentSectionId": "Ffzwz",
-              "id": "xMLIE"
-            },
-            {
-              "uid": "B-hV4APr5W",
+              "uid": "WlIQ3a7xOx",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
@@ -8390,12 +8343,56 @@
               "gains": [
                 {
                   "id": null,
-                  "name": "Heavy Psy-Torrent",
+                  "name": "Heavy Psy-Blast",
                   "type": "ArmyBookWeapon",
                   "count": 1,
-                  "range": 9,
+                  "range": 18,
                   "attacks": 2,
-                  "weaponId": "IS0vq6jU",
+                  "weaponId": "WSkJKBlp",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Psy-Blast (18\", A2, AP(1), Blast(3))"
+                }
+              ],
+              "label": "Heavy Psy-Blast (18\", A2, AP(1), Blast(3))",
+              "parentSectionId": "Ffzwz",
+              "id": "WlIQ3a7xOx"
+            },
+            {
+              "uid": "YOgBavQQGL",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 5,
+                  "unitId": "go9isSI"
+                },
+                {
+                  "cost": 5,
+                  "unitId": "X1N2nRX"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Psy-Stinger",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 4,
+                  "weaponId": "j1qbkF8o",
                   "specialRules": [
                     {
                       "id": "17crjK7P6_w6",
@@ -8403,29 +8400,24 @@
                       "rating": 1
                     },
                     {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "rating": 3
-                    },
-                    {
-                      "id": "Zx4mWN0SbmK8",
-                      "name": "Reliable"
+                      "id": "VI54cszY2BuG",
+                      "name": "Destructive"
                     }
                   ],
                   "attacksMultiplier": 1,
-                  "label": "Heavy Psy-Torrent (9\", A2, AP(1), Blast(3), Reliable)"
+                  "label": "Heavy Psy-Stinger (18\", A4, AP(1), Destructive)"
                 }
               ],
-              "label": "Heavy Psy-Torrent (9\", A2, AP(1), Blast(3), Reliable)",
+              "label": "Heavy Psy-Stinger (18\", A4, AP(1), Destructive)",
               "parentSectionId": "Ffzwz",
-              "id": "B-hV4APr5W"
+              "id": "YOgBavQQGL"
             }
           ],
           "parentPackageUid": "r1AkY",
           "type": "ArmyBookUpgradeSection",
           "variant": "replace",
           "targets": [
-            "Heavy Psy-Stinger"
+            "Heavy Psy-Torrent"
           ]
         }
       ],
@@ -8436,7 +8428,7 @@
       "hint": "Support Grunts",
       "sections": [
         {
-          "id": "UuA5s_e",
+          "id": "3Pb6WyB",
           "uid": "QZxwb",
           "label": "Replace all Bio-Cannons",
           "options": [
@@ -8445,7 +8437,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 20,
                   "unitId": "_c1518l"
                 }
               ],
@@ -8495,7 +8487,7 @@
       "hint": "Toxico-Rex",
       "sections": [
         {
-          "id": "XuYkX8C",
+          "id": "BdfFf08",
           "uid": "j59IX",
           "label": "Upgrade with one",
           "options": [
@@ -8584,7 +8576,7 @@
       "hint": "Hive Titan",
       "sections": [
         {
-          "id": "laF1VXz",
+          "id": "EDYRnMY",
           "uid": "wNeyAfIqvD",
           "label": "Replace Titanic Heavy Claws",
           "options": [
@@ -8593,7 +8585,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "GiIM1wN"
                 }
               ],
@@ -8657,7 +8649,7 @@
           ]
         },
         {
-          "id": "vvzQj81",
+          "id": "7er80tZ",
           "uid": "y1ZM9",
           "label": "Replace Warrior Emissary",
           "options": [
@@ -8728,11 +8720,46 @@
               "id": "q8s8YwBjtN"
             },
             {
-              "uid": "_PKKN",
+              "uid": "ZOQ5w",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "cost": 210,
+                  "unitId": "GiIM1wN"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Winged Titan",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Winged Titan (Flying, Tough(6))",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Winged Titan (Flying, Tough(6))",
+              "parentSectionId": "y1ZM9",
+              "id": "ZOQ5w"
+            },
+            {
+              "uid": "_PKKN",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 225,
                   "unitId": "GiIM1wN"
                 }
               ],
@@ -8786,46 +8813,11 @@
               "id": "_PKKN"
             },
             {
-              "uid": "ZOQ5w",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 215,
-                  "unitId": "GiIM1wN"
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Winged Titan",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Winged Titan (Flying, Tough(6))",
-                  "content": [
-                    {
-                      "id": "-QJdqJEKjIpE",
-                      "name": "Flying",
-                      "type": "ArmyBookRule"
-                    },
-                    {
-                      "id": "a0YtInGiUDd6",
-                      "name": "Tough",
-                      "type": "ArmyBookRule",
-                      "rating": 6
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Winged Titan (Flying, Tough(6))",
-              "parentSectionId": "y1ZM9",
-              "id": "ZOQ5w"
-            },
-            {
               "uid": "jbDHr",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 290,
+                  "cost": 285,
                   "unitId": "GiIM1wN"
                 }
               ],
@@ -8888,7 +8880,7 @@
       "hint": "Grunt Veteran",
       "sections": [
         {
-          "id": "DCBEbix",
+          "id": "_tSeYnL",
           "uid": "hm7yH",
           "label": "Replace Razor Claw",
           "options": [
@@ -9011,7 +9003,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "lezKVcK"
                 }
               ],
@@ -9050,7 +9042,7 @@
           ]
         },
         {
-          "id": "BBqBzV_",
+          "id": "_quGizt",
           "uid": "BNIOW",
           "label": "Upgrade with one",
           "options": [
@@ -9163,7 +9155,7 @@
           }
         },
         {
-          "id": "lOy6vwa",
+          "id": "xTqWSBe",
           "uid": "Ryewg",
           "label": "Upgrade with one",
           "options": [
@@ -9244,7 +9236,7 @@
           }
         },
         {
-          "id": "gBxNMk9",
+          "id": "NALR7yO",
           "uid": "ss1ssKfV",
           "label": "Upgrade with one",
           "options": [
@@ -9356,7 +9348,7 @@
       "hint": "Hive Burrower",
       "sections": [
         {
-          "id": "qCQSIEr",
+          "id": "IzlbvhX",
           "uid": "z3ruXQqpdC",
           "label": "Replace 3x Heavy Razor Claw",
           "options": [
@@ -9427,7 +9419,7 @@
           ]
         },
         {
-          "id": "BCJIe4x",
+          "id": "auNlzRr",
           "uid": "g9p2yVKZhE",
           "label": "Replace Deep Deployment",
           "options": [
@@ -9470,7 +9462,7 @@
           ]
         },
         {
-          "id": "lQ4bMQN",
+          "id": "X1Zki7v",
           "uid": "XeH6Qr_JFI",
           "label": "Upgrade with one",
           "options": [
@@ -9560,7 +9552,7 @@
       "hint": "Psycho-Grunts",
       "sections": [
         {
-          "id": "KILqlZD",
+          "id": "rbwr3Bi",
           "uid": "Izv8-ZjmRa",
           "label": "Upgrade one model with",
           "options": [
@@ -9611,7 +9603,7 @@
       "hint": "Replace Stinger Launcher",
       "sections": [
         {
-          "id": "oe1tiin",
+          "id": "w_4o2a-",
           "uid": "l4mzSTKb",
           "label": "Replace any Stinger Launcher",
           "options": [
@@ -9620,11 +9612,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 0,
                   "unitId": "XXealbA"
                 },
                 {
-                  "cost": 5,
+                  "cost": 0,
                   "unitId": "KzCu3EC"
                 }
               ],
@@ -9725,7 +9717,7 @@
       "hint": "Specialists - Prime",
       "sections": [
         {
-          "id": "cbBGO7E",
+          "id": "-y7xfg1",
           "uid": "nxseWutH",
           "label": "Upgrade with one",
           "options": [
@@ -9901,7 +9893,7 @@
       "hint": "Specialists - Snatcher",
       "sections": [
         {
-          "id": "VSapKXl",
+          "id": "fHeqYNZ",
           "uid": "4CX0mlsU",
           "label": "Upgrade with one",
           "options": [
@@ -10039,7 +10031,7 @@
           }
         },
         {
-          "id": "gei0t_F",
+          "id": "E7FSbTq",
           "uid": "kSX9S-bPt1",
           "label": "Replace Adrenaline Fueled",
           "options": [
@@ -10088,7 +10080,7 @@
       "hint": "Specialists - Grunt",
       "sections": [
         {
-          "id": "vY4YO-v",
+          "id": "RRT_Q5T",
           "uid": "Yew-UyFs",
           "label": "Upgrade with one",
           "options": [
@@ -10234,7 +10226,7 @@
       "hint": "Specialists - Hive Lord",
       "sections": [
         {
-          "id": "vB0OAVO",
+          "id": "YmMOmDd",
           "uid": "KmpaBEsW",
           "label": "Upgrade with one",
           "options": [
@@ -10274,7 +10266,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 5,
                   "unitId": "lmZtl0E"
                 }
               ],
@@ -10410,7 +10402,7 @@
       "hint": "Psycho-Rex",
       "sections": [
         {
-          "id": "qaUShg8",
+          "id": "2g_ujYa",
           "uid": "x7RXbRaZ",
           "label": "Replace Heavy Psy-Torrent",
           "options": [
@@ -10419,7 +10411,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 20,
                   "unitId": "X1N2nRX"
                 }
               ],
@@ -10478,7 +10470,7 @@
       "hint": "Battle Pheromones",
       "sections": [
         {
-          "id": "jxHmlgi",
+          "id": "di1xL5i",
           "uid": "p4VUCuS1",
           "label": "Upgrade with",
           "options": [
@@ -10525,6 +10517,153 @@
           "parentPackageUid": "-69FjLjg",
           "type": "ArmyBookUpgradeSection",
           "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "D5SEXIeM",
+      "hint": "Winged Grunts",
+      "sections": [
+        {
+          "id": "rKPXst1",
+          "uid": "hLW1XLBw",
+          "label": "Upgrade all models with one",
+          "options": [
+            {
+              "uid": "DH6CCXyV",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "vuuKwqD"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxic Cysts",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Toxic Cysts (Bane in Melee)",
+                  "content": [
+                    {
+                      "id": "7d9yvTiP6UR5",
+                      "name": "Bane in Melee",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Toxic Cysts (Bane in Melee)",
+              "parentSectionId": "hLW1XLBw",
+              "parentPackageUid": "D8_3J7ND",
+              "parentSectionUid": "3wJarRx",
+              "id": "DH6CCXyV"
+            },
+            {
+              "uid": "U_gc_WN9",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "vuuKwqD"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Adrenaline Fueled",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Adrenaline Fueled (Fast)",
+                  "content": [
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Adrenaline Fueled (Fast)",
+              "parentSectionId": "hLW1XLBw",
+              "parentPackageUid": "D8_3J7ND",
+              "id": "U_gc_WN9"
+            },
+            {
+              "uid": "Mwcu1Nk76O",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 20,
+                  "unitId": "vuuKwqD"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Aerial Drop",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Aerial Drop (Ambush)",
+                  "content": [
+                    {
+                      "id": "6mJw5IdqSqNC",
+                      "name": "Ambush",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Aerial Drop (Ambush)",
+              "parentSectionId": "hLW1XLBw",
+              "id": "Mwcu1Nk76O"
+            },
+            {
+              "uid": "ccGN8q9x",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 25,
+                  "unitId": "vuuKwqD"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Combat Mutations",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Combat Mutations (Piercing Growth)",
+                  "content": [
+                    {
+                      "id": "s4lagBUlnsUE",
+                      "name": "Piercing Growth",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Combat Mutations (Piercing Growth)",
+              "parentSectionId": "hLW1XLBw",
+              "parentPackageUid": "D8_3J7ND",
+              "id": "ccGN8q9x"
+            }
+          ],
+          "isLowPrio": true,
+          "parentPackageUid": "D8_3J7ND",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "model": true,
+          "affects": {
+            "type": "all"
+          },
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
         }
       ],
       "calcErrors": false
@@ -11113,8 +11252,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:52:52.387Z",
-  "editedAt": "2026-04-28T09:34:42.647Z",
+  "modifiedAt": "2026-04-30T11:21:42.366Z",
+  "editedAt": "2026-04-30T11:21:42.365Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/w7qor7b2kuifcyvk/e8NxW83dK3XOt-ULQYz9D.jpg",

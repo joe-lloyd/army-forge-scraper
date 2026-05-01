@@ -161,7 +161,7 @@
     },
     {
       "id": "80L-Rbh",
-      "cost": 105,
+      "cost": 110,
       "name": "Trasara Ioncrinius",
       "size": 1,
       "type": 1,
@@ -578,7 +578,7 @@
     },
     {
       "id": "VM7l-RU",
-      "cost": 35,
+      "cost": 40,
       "name": "Revenant",
       "size": 1,
       "bases": {
@@ -918,82 +918,6 @@
       "disabledUpgradeSections": []
     },
     {
-      "id": "vQBMFLU",
-      "cost": 45,
-      "name": "Shifter",
-      "size": 1,
-      "bases": {
-        "round": "25",
-        "square": "25"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "6mJw5IdqSqNC",
-          "name": "Ambush",
-          "label": "Ambush"
-        },
-        {
-          "id": "LtPyHi_-DHf4",
-          "name": "Teleport",
-          "label": "Teleport"
-        },
-        {
-          "id": "5bc5xNmd5M14",
-          "name": "Highborn",
-          "label": "Highborn"
-        }
-      ],
-      "valid": true,
-      "defense": 4,
-      "quality": 3,
-      "weapons": [
-        {
-          "id": "bWRkDyIN",
-          "name": "Web Spinner",
-          "type": "ArmyBookWeapon",
-          "range": 12,
-          "attacks": 2,
-          "weaponId": "bWRkDyIN",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "17crjK7P6_w6",
-              "name": "AP",
-              "rating": 4,
-              "label": "AP(4)"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Web Spinner (12\", A2, AP(4))",
-          "count": 1,
-          "originalCount": 1
-        },
-        {
-          "id": "WPM5pFS4",
-          "name": "CCW",
-          "type": "ArmyBookWeapon",
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "4o5CBBZC",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "CCW (A1)",
-          "count": 1,
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [
-        "M1"
-      ],
-      "genericName": "Teleport Warriors",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 5,
-      "disabledUpgradeSections": []
-    },
-    {
       "id": "FmIGYwF",
       "cost": 45,
       "name": "Sniper",
@@ -1077,6 +1001,82 @@
       "hasCustomRule": false,
       "hasBalanceInvalid": false,
       "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "vQBMFLU",
+      "cost": 50,
+      "name": "Shifter",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "6mJw5IdqSqNC",
+          "name": "Ambush",
+          "label": "Ambush"
+        },
+        {
+          "id": "LtPyHi_-DHf4",
+          "name": "Teleport",
+          "label": "Teleport"
+        },
+        {
+          "id": "5bc5xNmd5M14",
+          "name": "Highborn",
+          "label": "Highborn"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "bWRkDyIN",
+          "name": "Web Spinner",
+          "type": "ArmyBookWeapon",
+          "range": 12,
+          "attacks": 2,
+          "weaponId": "bWRkDyIN",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Web Spinner (12\", A2, AP(4))",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "WPM5pFS4",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "4o5CBBZC",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "CCW (A1)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "M1"
+      ],
+      "genericName": "Teleport Warriors",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
       "disabledUpgradeSections": []
     },
     {
@@ -1439,7 +1439,7 @@
     },
     {
       "id": "c2SKcZS",
-      "cost": 80,
+      "cost": 85,
       "name": "Jetbike Striker",
       "size": 1,
       "bases": {
@@ -1551,7 +1551,7 @@
       "hint": "Leader Upgrades",
       "sections": [
         {
-          "id": "BV_oVrM",
+          "id": "dr6W73L",
           "uid": "5uRpV",
           "label": "Replace CCW and Combat Shield",
           "options": [
@@ -1613,7 +1613,7 @@
           ]
         },
         {
-          "id": "1bDeVQs",
+          "id": "-vc_wDP",
           "uid": "ktRRVSU",
           "label": "Replace Master Shard Pistol",
           "options": [
@@ -1830,11 +1830,11 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 25
+                  "cost": 30
                 },
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1976,7 +1976,7 @@
                 },
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 40
+                  "cost": 45
                 }
               ],
               "gains": [
@@ -2033,7 +2033,7 @@
           ]
         },
         {
-          "id": "2xJM0DI",
+          "id": "6Jf9tvs",
           "uid": "oUwyFGw",
           "label": "Replace CCW",
           "options": [
@@ -2088,7 +2088,7 @@
                 },
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2179,7 +2179,7 @@
                 },
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2258,7 +2258,7 @@
           ]
         },
         {
-          "id": "dZ-JBA4",
+          "id": "rkmbRVq",
           "uid": "jJdE6",
           "label": "Upgrade with",
           "options": [
@@ -2268,11 +2268,11 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 10
+                  "cost": 20
                 },
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2308,7 +2308,7 @@
       "hint": "Elven Noble",
       "sections": [
         {
-          "id": "Jo7yYrK",
+          "id": "26DQ6gE",
           "uid": "L_sFgCY",
           "label": "Upgrade with one",
           "options": [
@@ -2383,7 +2383,7 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 20
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -2567,7 +2567,7 @@
       "hint": "Elite Protector",
       "sections": [
         {
-          "id": "QUDnOqi",
+          "id": "hT_GRT0",
           "uid": "8kVUEOs",
           "label": "Upgrade with one",
           "options": [
@@ -2713,7 +2713,7 @@
       "hint": "Specialists - Noble",
       "sections": [
         {
-          "id": "Vk9iP0O",
+          "id": "qvMO91C",
           "uid": "Zzcey9Q",
           "label": "Upgrade with one",
           "options": [
@@ -2723,7 +2723,7 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2752,7 +2752,7 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2781,7 +2781,7 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2812,7 +2812,7 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2842,7 +2842,7 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 35
+                  "cost": 45
                 }
               ],
               "gains": [
@@ -2872,7 +2872,7 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 55
+                  "cost": 70
                 }
               ],
               "gains": [
@@ -2913,7 +2913,7 @@
       "hint": "Acolytes",
       "sections": [
         {
-          "id": "5kqaBcU",
+          "id": "qEnOb8Z",
           "uid": "bvENwsA",
           "label": "Replace any Energy Sword",
           "options": [
@@ -2966,7 +2966,7 @@
           ]
         },
         {
-          "id": "FhCL1vy",
+          "id": "p0Fccx6",
           "uid": "PbveOcZ",
           "label": "Upgrade with",
           "options": [
@@ -3040,7 +3040,7 @@
       "hint": "Strikers",
       "sections": [
         {
-          "id": "Rv0R9Zp",
+          "id": "y7bZp7v",
           "uid": "O4pBdhd",
           "label": "Replace Shard Pistol",
           "options": [
@@ -3093,7 +3093,7 @@
               "costs": [
                 {
                   "unitId": "BPcH3j1",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -3136,7 +3136,7 @@
           ]
         },
         {
-          "id": "a3qKYNC",
+          "id": "NWCoot8",
           "uid": "4s0iNv2",
           "label": "Replace CCW",
           "options": [
@@ -3147,7 +3147,7 @@
               "costs": [
                 {
                   "unitId": "BPcH3j1",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3191,7 +3191,7 @@
           ]
         },
         {
-          "id": "uhl9t1E",
+          "id": "llpz6I6",
           "uid": "0dh-l",
           "label": "Upgrade with",
           "options": [
@@ -3202,7 +3202,7 @@
               "costs": [
                 {
                   "unitId": "BPcH3j1",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -3240,7 +3240,7 @@
       "hint": "Protectors",
       "sections": [
         {
-          "id": "S9l-btZ",
+          "id": "5Q_5CMX",
           "uid": "lyOVNn3",
           "label": "Replace Shardgun",
           "options": [
@@ -3393,7 +3393,7 @@
               "costs": [
                 {
                   "unitId": "qfnk-JU",
-                  "cost": 40
+                  "cost": 45
                 }
               ],
               "gains": [
@@ -3441,7 +3441,7 @@
               "costs": [
                 {
                   "unitId": "qfnk-JU",
-                  "cost": 45
+                  "cost": 50
                 }
               ],
               "gains": [
@@ -3497,7 +3497,7 @@
       "hint": "Retributors",
       "sections": [
         {
-          "id": "lrpT-uD",
+          "id": "2lJXj-T",
           "uid": "0qfO7",
           "label": "Replace Energy Swords and Combat Shield",
           "options": [
@@ -3557,7 +3557,7 @@
           ]
         },
         {
-          "id": "g4oib1r",
+          "id": "XY3u9lY",
           "uid": "ftwEp12",
           "label": "Replace Shard Carbine",
           "options": [
@@ -3605,7 +3605,7 @@
           ]
         },
         {
-          "id": "iTtLMs9",
+          "id": "8mnrPwx",
           "uid": "lxdIc1d",
           "label": "Replace Energy Sword and Combat Shield",
           "options": [
@@ -3759,7 +3759,7 @@
           ]
         },
         {
-          "id": "jN69cYn",
+          "id": "woK_pVS",
           "uid": "EpwNwvH",
           "label": "Replace Shard Pistol",
           "options": [
@@ -3769,7 +3769,7 @@
               "costs": [
                 {
                   "unitId": "b-mChYC",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3801,7 +3801,7 @@
           ]
         },
         {
-          "id": "DQE38Ld",
+          "id": "aTMrEXJ",
           "uid": "Y4Gv4ws6",
           "label": "Upgrade with",
           "options": [
@@ -3849,7 +3849,7 @@
       "hint": "Revenants",
       "sections": [
         {
-          "id": "RKpyOI5",
+          "id": "Thb5dse",
           "uid": "A6T88TC",
           "label": "Replace Shard Pistol and Energy Sword",
           "options": [
@@ -4003,7 +4003,7 @@
           ]
         },
         {
-          "id": "j9aQzW_",
+          "id": "r-e7p2H",
           "uid": "4qyNVHD",
           "label": "Replace Sgt. Energy Sword",
           "options": [
@@ -4056,7 +4056,7 @@
           ]
         },
         {
-          "id": "rvmDP8j",
+          "id": "baTfmzy",
           "uid": "Ki9nGoj",
           "label": "Upgrade with",
           "options": [
@@ -4106,7 +4106,7 @@
       "hint": "Vanquishers",
       "sections": [
         {
-          "id": "5PgFTag",
+          "id": "mUi7TbW",
           "uid": "5VbZE3r",
           "label": "Replace any Surge Rocket",
           "options": [
@@ -4117,7 +4117,7 @@
               "costs": [
                 {
                   "unitId": "25J4jTN",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -4163,7 +4163,7 @@
           ]
         },
         {
-          "id": "j1aDC5d",
+          "id": "nUmoTGE",
           "uid": "PLS6wbG",
           "label": "Replace Surge Rocket",
           "options": [
@@ -4261,7 +4261,7 @@
           ]
         },
         {
-          "id": "LR1v39G",
+          "id": "nmd0Azm",
           "uid": "Lhq9p-6U",
           "label": "Upgrade with",
           "options": [
@@ -4309,7 +4309,7 @@
       "hint": "Scorchers",
       "sections": [
         {
-          "id": "L1okkQD",
+          "id": "C9BTYZS",
           "uid": "FbsV-6x",
           "label": "Replace Heavy Flamer",
           "options": [
@@ -4358,7 +4358,7 @@
               "costs": [
                 {
                   "unitId": "yVZh2Ch",
-                  "cost": 20
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -4408,7 +4408,7 @@
       "hint": "Stingers",
       "sections": [
         {
-          "id": "F6d-mw1",
+          "id": "85ykcCD",
           "uid": "ILQaMF0",
           "label": "Replace Shard Pistol and Stinger Blade",
           "options": [
@@ -4473,7 +4473,7 @@
               "costs": [
                 {
                   "unitId": "G02X_NY",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -4518,7 +4518,7 @@
           ]
         },
         {
-          "id": "1mThCbE",
+          "id": "IUnTECp",
           "uid": "uMHKeid",
           "label": "Replace Sgt. Shard Pistol",
           "options": [
@@ -4566,7 +4566,7 @@
           ]
         },
         {
-          "id": "v5TDaH3",
+          "id": "KSR1mei",
           "uid": "2tcxY16",
           "label": "Replace Sgt. Stinger Blade",
           "options": [
@@ -4630,7 +4630,7 @@
       "hint": "Shifters",
       "sections": [
         {
-          "id": "nIYMJRs",
+          "id": "rHyBaCS",
           "uid": "jiLxnoG",
           "label": "Replace Web Spinner",
           "options": [
@@ -4641,7 +4641,7 @@
               "costs": [
                 {
                   "unitId": "vQBMFLU",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -4715,7 +4715,7 @@
           ]
         },
         {
-          "id": "EwH_xZ0",
+          "id": "0QWe9QW",
           "uid": "Arznc4j",
           "label": "Replace CCW",
           "options": [
@@ -4770,7 +4770,7 @@
       "hint": "Gliders",
       "sections": [
         {
-          "id": "DuaZG7c",
+          "id": "ZRwH28N",
           "uid": "63G9k",
           "label": "Replace Laser Pistols and CCW",
           "options": [
@@ -4829,7 +4829,7 @@
           ]
         },
         {
-          "id": "BIgJzxL",
+          "id": "lctxiuL",
           "uid": "hYkS-Cf",
           "label": "Replace Laser Pistol and CCW",
           "options": [
@@ -4956,7 +4956,7 @@
           ]
         },
         {
-          "id": "710MDiO",
+          "id": "M9Du44i",
           "uid": "UGRSh",
           "label": "Replace Laser Pistol",
           "options": [
@@ -5038,7 +5038,7 @@
           ]
         },
         {
-          "id": "mrxAEVZ",
+          "id": "qO64ljw",
           "uid": "iEBvKix",
           "label": "Upgrade with",
           "options": [
@@ -5116,7 +5116,7 @@
       "hint": "Elemental Protectors",
       "sections": [
         {
-          "id": "UEUoj2m",
+          "id": "--z3zHs",
           "uid": "cteC-",
           "label": "Replace Distortion Gun",
           "options": [
@@ -5127,7 +5127,7 @@
               "costs": [
                 {
                   "unitId": "p50sgkI",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -5172,7 +5172,7 @@
       "hint": "Jetbike Protectors",
       "sections": [
         {
-          "id": "q4l_qMv",
+          "id": "eAGNSlj",
           "uid": "HX4N5DlyB_",
           "label": "Upgrade with",
           "options": [
@@ -5220,7 +5220,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "2Wa1MO4",
+          "id": "L55O6nX",
           "uid": "OA2fkfm",
           "label": "Replace any Mounted Shardgun and Sniper Rifle",
           "options": [
@@ -5271,7 +5271,7 @@
               "costs": [
                 {
                   "unitId": "aMQa9nT",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -5313,7 +5313,7 @@
           ]
         },
         {
-          "id": "K-8CcOp",
+          "id": "Ufp6Fny",
           "uid": "IXCqc",
           "label": "Upgrade with one",
           "options": [
@@ -5323,7 +5323,7 @@
               "costs": [
                 {
                   "unitId": "aMQa9nT",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -5353,7 +5353,7 @@
               "costs": [
                 {
                   "unitId": "aMQa9nT",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -5395,7 +5395,7 @@
       "hint": "Jetbike Strikers",
       "sections": [
         {
-          "id": "RNVP-Mp",
+          "id": "S5osANi",
           "uid": "ctGS5",
           "label": "Replace Shard Pistols and CCW",
           "options": [
@@ -5448,7 +5448,7 @@
           ]
         },
         {
-          "id": "8ALjzr1",
+          "id": "-4q9WEL",
           "uid": "UoZDM",
           "label": "Replace Energy Lance",
           "options": [
@@ -5576,46 +5576,17 @@
           ]
         },
         {
-          "id": "486dw1T",
+          "id": "IwyfWLf",
           "uid": "pd5NA",
           "label": "Upgrade with one",
           "options": [
-            {
-              "uid": "KARJkX2gbv",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "c2SKcZS",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Hologram Field",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Hologram Field (Stealth Aura)",
-                  "content": [
-                    {
-                      "id": "8haZ36fXvnzn",
-                      "name": "Stealth Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Hologram Field (Stealth Aura)",
-              "parentSectionId": "pd5NA",
-              "id": "KARJkX2gbv"
-            },
             {
               "uid": "AJ-fA",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "c2SKcZS",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -5637,6 +5608,35 @@
               "label": "Master-Crafted Engines (Scout Aura)",
               "parentSectionId": "pd5NA",
               "id": "AJ-fA"
+            },
+            {
+              "uid": "KARJkX2gbv",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "c2SKcZS",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Hologram Field",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Hologram Field (Stealth Aura)",
+                  "content": [
+                    {
+                      "id": "8haZ36fXvnzn",
+                      "name": "Stealth Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Hologram Field (Stealth Aura)",
+              "parentSectionId": "pd5NA",
+              "id": "KARJkX2gbv"
             }
           ],
           "parentPackageUid": "XLPem",
@@ -5655,7 +5655,7 @@
       "hint": "Elemental Strikers",
       "sections": [
         {
-          "id": "kJbRTP2",
+          "id": "IXtQV5X",
           "uid": "ayah8",
           "label": "Replace Killing Axes and Combat Shield",
           "options": [
@@ -5708,7 +5708,7 @@
           ]
         },
         {
-          "id": "IeOpqVT",
+          "id": "RwzVzOk",
           "uid": "9RA5s",
           "label": "Replace any Killing Axe",
           "options": [
@@ -5806,7 +5806,7 @@
       "hint": "Snipers",
       "sections": [
         {
-          "id": "M20ijHW",
+          "id": "k4PrOsv",
           "uid": "gG8d_",
           "label": "Upgrade with",
           "options": [
@@ -5854,7 +5854,7 @@
       "hint": "Specialists - Protector",
       "sections": [
         {
-          "id": "OLi9wpM",
+          "id": "fwkb7YP",
           "uid": "BCL5NyjN",
           "label": "Upgrade with one",
           "options": [
@@ -5864,7 +5864,7 @@
               "costs": [
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -5889,12 +5889,41 @@
               "id": "H32jSODl"
             },
             {
+              "uid": "fKYNE92WKs",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Uvc9UHr",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Acolyte Psy-Seer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Acolyte Psy-Seer (Spell Conduit)",
+                  "content": [
+                    {
+                      "id": "WNMH1ZiQXSz-",
+                      "name": "Spell Conduit",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Acolyte Psy-Seer (Spell Conduit)",
+              "parentSectionId": "BCL5NyjN",
+              "id": "fKYNE92WKs"
+            },
+            {
               "uid": "KnPwafyVA5",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -5923,7 +5952,7 @@
               "costs": [
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -5948,41 +5977,12 @@
               "id": "iQ5k7_mR"
             },
             {
-              "uid": "fKYNE92WKs",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "Uvc9UHr",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Acolyte Psy-Seer",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Acolyte Psy-Seer (Spell Conduit)",
-                  "content": [
-                    {
-                      "id": "WNMH1ZiQXSz-",
-                      "name": "Spell Conduit",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Acolyte Psy-Seer (Spell Conduit)",
-              "parentSectionId": "BCL5NyjN",
-              "id": "fKYNE92WKs"
-            },
-            {
               "uid": "R3F2gEdi",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -6014,7 +6014,7 @@
               "costs": [
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 35
+                  "cost": 45
                 }
               ],
               "gains": [
@@ -6691,7 +6691,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:40.581Z",
+  "modifiedAt": "2026-04-30T09:21:52.545Z",
   "editedAt": "2026-04-20T18:58:03.600Z",
   "official": true,
   "versionString": "3.5.3",

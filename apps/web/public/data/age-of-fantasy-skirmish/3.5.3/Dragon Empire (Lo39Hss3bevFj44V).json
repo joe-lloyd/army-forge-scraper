@@ -725,7 +725,7 @@
     },
     {
       "id": "k2r8wW6",
-      "cost": 35,
+      "cost": 40,
       "name": "Claysoul Grenadiers",
       "size": 3,
       "type": 0,
@@ -1107,7 +1107,7 @@
       "hint": "Specialists - Lord",
       "sections": [
         {
-          "id": "bKENBu_",
+          "id": "H3wuGe2",
           "uid": "rslWLOX2D-",
           "label": "Upgrade with one",
           "options": [
@@ -1146,7 +1146,7 @@
               "costs": [
                 {
                   "unitId": "_tvNJu_",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1175,7 +1175,7 @@
               "costs": [
                 {
                   "unitId": "_tvNJu_",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1199,41 +1199,12 @@
               "id": "beJlGg4wIW"
             },
             {
-              "uid": "crju1U_5vV",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "_tvNJu_",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Bastion Guardian",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Bastion Guardian (Re-Deployment)",
-                  "content": [
-                    {
-                      "id": "zjzB46LX-QDg",
-                      "name": "Re-Deployment",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Bastion Guardian (Re-Deployment)",
-              "parentSectionId": "rslWLOX2D-",
-              "id": "crju1U_5vV"
-            },
-            {
               "uid": "4RY4h_fckQ",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "_tvNJu_",
-                  "cost": 30
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -1258,12 +1229,41 @@
               "id": "4RY4h_fckQ"
             },
             {
+              "uid": "crju1U_5vV",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_tvNJu_",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Bastion Guardian",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Bastion Guardian (Re-Deployment)",
+                  "content": [
+                    {
+                      "id": "zjzB46LX-QDg",
+                      "name": "Re-Deployment",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Bastion Guardian (Re-Deployment)",
+              "parentSectionId": "rslWLOX2D-",
+              "id": "crju1U_5vV"
+            },
+            {
               "uid": "v1f2tUydYj",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "_tvNJu_",
-                  "cost": 45
+                  "cost": 50
                 }
               ],
               "gains": [
@@ -1305,7 +1305,7 @@
       "hint": "Captain",
       "sections": [
         {
-          "id": "4gUIp4q",
+          "id": "w-bHNO6",
           "uid": "60_yhgqEzM",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1335,39 +1335,6 @@
               "label": "Dual Hand Weapons (A4)",
               "parentSectionId": "60_yhgqEzM",
               "id": "bzH6vzF4t_"
-            },
-            {
-              "uid": "vWQI6tgXjo",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "HSdaAnF",
-                  "cost": 5
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Halberd",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 3,
-                  "weaponId": "d9Kewo86",
-                  "specialRules": [
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Halberd (A3, Rending)"
-                }
-              ],
-              "label": "Halberd (A3, Rending)",
-              "parentSectionId": "60_yhgqEzM",
-              "id": "vWQI6tgXjo"
             },
             {
               "uid": "j0SQ9s_8_I",
@@ -1401,6 +1368,39 @@
               "label": "Spear (A3, Counter)",
               "parentSectionId": "60_yhgqEzM",
               "id": "j0SQ9s_8_I"
+            },
+            {
+              "uid": "vWQI6tgXjo",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "HSdaAnF",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Halberd",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "d9Kewo86",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Halberd (A3, Rending)"
+                }
+              ],
+              "label": "Halberd (A3, Rending)",
+              "parentSectionId": "60_yhgqEzM",
+              "id": "vWQI6tgXjo"
             },
             {
               "uid": "lIgU9sxXoe",
@@ -1478,7 +1478,7 @@
           ]
         },
         {
-          "id": "SfIhfLb",
+          "id": "Ng112-U",
           "uid": "c-vaQVZAAY",
           "label": "Upgrade with one",
           "options": [
@@ -1655,7 +1655,7 @@
           }
         },
         {
-          "id": "BnOXFU_",
+          "id": "oil7JBv",
           "uid": "lpkT2Ie5p3",
           "label": "Upgrade with one",
           "options": [
@@ -1694,7 +1694,7 @@
               "costs": [
                 {
                   "unitId": "HSdaAnF",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1770,7 +1770,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "8XQfnjr",
+          "id": "pf1RvJL",
           "uid": "qbdvPtoUr8",
           "label": "Upgrade one model with one",
           "options": [
@@ -1922,7 +1922,7 @@
       "hint": "Dragonkin Warriors",
       "sections": [
         {
-          "id": "UZ2lK02",
+          "id": "vsI0A6R",
           "uid": "Ea6p9nW2gI",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1932,7 +1932,7 @@
               "costs": [
                 {
                   "unitId": "pQNKWyY",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1977,7 +1977,7 @@
       "hint": "Claysoul Gunners",
       "sections": [
         {
-          "id": "r-H0nh8",
+          "id": "T11E-l3",
           "uid": "Wfc_sP7lPQ",
           "label": "Replace all Rifles",
           "options": [
@@ -2064,7 +2064,7 @@
           ]
         },
         {
-          "id": "zGXk7Iu",
+          "id": "ogZJ2je",
           "uid": "M0yW-SH_ES",
           "label": "Upgrade all models with",
           "options": [
@@ -2115,7 +2115,7 @@
       "hint": "Elite Dragonkin Warriors",
       "sections": [
         {
-          "id": "Og1ZeGf",
+          "id": "LD-wzsg",
           "uid": "OmNaBdBT6T",
           "label": "Replace Heavy Halberd",
           "options": [
@@ -2159,7 +2159,7 @@
               "costs": [
                 {
                   "unitId": "3dr20hD",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2209,7 +2209,7 @@
       "hint": "Dragonkin Horsemen",
       "sections": [
         {
-          "id": "n1lxRG2",
+          "id": "36aA-Yv",
           "uid": "ic_2kbk3wV",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2262,7 +2262,7 @@
       "hint": "Claysoul Horsemen",
       "sections": [
         {
-          "id": "rKFwPNY",
+          "id": "eryb_M9",
           "uid": "6UCSS3RGKB",
           "label": "Replace all Lances",
           "options": [
@@ -2362,7 +2362,7 @@
           ]
         },
         {
-          "id": "xRgg29G",
+          "id": "l8ufBng",
           "uid": "aoMsMSesrK",
           "label": "Upgrade all models with",
           "options": [
@@ -2413,7 +2413,7 @@
       "hint": "Elite Dragonkin Marksmen",
       "sections": [
         {
-          "id": "B76Y2e6",
+          "id": "XVxjNlw",
           "uid": "OTFhr6tuws",
           "label": "Replace Rifle",
           "options": [
@@ -2602,7 +2602,7 @@
       "hint": "Lord",
       "sections": [
         {
-          "id": "gvq6-h2",
+          "id": "SujMzOi",
           "uid": "LiOm6t2H",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -2687,7 +2687,7 @@
               "costs": [
                 {
                   "unitId": "_tvNJu_",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2805,7 +2805,7 @@
           ]
         },
         {
-          "id": "YVIN1rH",
+          "id": "4MvpOnw",
           "uid": "IFxz0C1e",
           "label": "Upgrade with one",
           "options": [
@@ -2916,7 +2916,7 @@
               "costs": [
                 {
                   "unitId": "_tvNJu_",
-                  "cost": 30
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -2953,7 +2953,7 @@
           }
         },
         {
-          "id": "24LlKvr",
+          "id": "vI9DEFJ",
           "uid": "Pycog9IB",
           "label": "Upgrade with one",
           "options": [
@@ -3010,7 +3010,7 @@
       "hint": "Claysoul Archers",
       "sections": [
         {
-          "id": "ZHMMdUL",
+          "id": "MyiqB6T",
           "uid": "6FCMeu961H",
           "label": "Replace all Bows",
           "options": [
@@ -3059,7 +3059,7 @@
           ]
         },
         {
-          "id": "YyPOPlI",
+          "id": "iUzIfZA",
           "uid": "Sh6ipZj9zT",
           "label": "Upgrade all models with",
           "options": [
@@ -3110,7 +3110,7 @@
       "hint": "Claysoul Grenadiers",
       "sections": [
         {
-          "id": "MmxerR2",
+          "id": "tZ820j-",
           "uid": "rLRN7sb5b6",
           "label": "Replace all Scale-Tip Bombs",
           "options": [
@@ -3206,7 +3206,7 @@
           ]
         },
         {
-          "id": "pHrds_v",
+          "id": "dp1JLkc",
           "uid": "CtW_qNUmbN",
           "label": "Upgrade all models with",
           "options": [
@@ -3257,7 +3257,7 @@
       "hint": "Myth-Steed Riders",
       "sections": [
         {
-          "id": "l91slyK",
+          "id": "4WwLj2V",
           "uid": "9BT_Ggl4ot",
           "label": "Replace Heavy Halberd",
           "options": [
@@ -3306,7 +3306,7 @@
               "costs": [
                 {
                   "unitId": "kMhCE0B",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3356,7 +3356,7 @@
       "hint": "Spirit Balance",
       "sections": [
         {
-          "id": "oMVA5N8",
+          "id": "vzeNceN",
           "uid": "mGqTFngfmQ",
           "label": "Upgrade one model with",
           "options": [
@@ -3427,7 +3427,7 @@
       "hint": "Specialists - Captain",
       "sections": [
         {
-          "id": "Wqx5lVR",
+          "id": "mZJw6tz",
           "uid": "ENIyJ82-",
           "label": "Upgrade with one",
           "options": [
@@ -3492,66 +3492,6 @@
               "id": "Jpdinm9Q"
             },
             {
-              "uid": "LrnWFehB",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "HSdaAnF",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Artificer",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Artificer (Unpredictable Shooter Aura)",
-                  "content": [
-                    {
-                      "id": "Ql2vwvAiWaor",
-                      "name": "Unpredictable Shooter Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Artificer (Unpredictable Shooter Aura)",
-              "parentSectionId": "ENIyJ82-",
-              "parentPackageUid": "BqekqYPY",
-              "id": "LrnWFehB"
-            },
-            {
-              "uid": "PG8QhCob",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "HSdaAnF",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Bastion Guardian",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Bastion Guardian (Re-Deployment)",
-                  "content": [
-                    {
-                      "id": "zjzB46LX-QDg",
-                      "name": "Re-Deployment",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Bastion Guardian (Re-Deployment)",
-              "parentSectionId": "ENIyJ82-",
-              "parentPackageUid": "BqekqYPY",
-              "id": "PG8QhCob"
-            },
-            {
               "uid": "C8bZPPfPpK",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -3582,12 +3522,42 @@
               "id": "C8bZPPfPpK"
             },
             {
+              "uid": "LrnWFehB",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "HSdaAnF",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Artificer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Artificer (Unpredictable Shooter Aura)",
+                  "content": [
+                    {
+                      "id": "Ql2vwvAiWaor",
+                      "name": "Unpredictable Shooter Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Artificer (Unpredictable Shooter Aura)",
+              "parentSectionId": "ENIyJ82-",
+              "parentPackageUid": "BqekqYPY",
+              "id": "LrnWFehB"
+            },
+            {
               "uid": "9aFldT4c",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "HSdaAnF",
-                  "cost": 30
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -3611,6 +3581,36 @@
               "parentSectionId": "ENIyJ82-",
               "parentPackageUid": "BqekqYPY",
               "id": "9aFldT4c"
+            },
+            {
+              "uid": "PG8QhCob",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "HSdaAnF",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Bastion Guardian",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Bastion Guardian (Re-Deployment)",
+                  "content": [
+                    {
+                      "id": "zjzB46LX-QDg",
+                      "name": "Re-Deployment",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Bastion Guardian (Re-Deployment)",
+              "parentSectionId": "ENIyJ82-",
+              "parentPackageUid": "BqekqYPY",
+              "id": "PG8QhCob"
             }
           ],
           "isHeroUpgrade": true,
@@ -3630,7 +3630,7 @@
       "hint": "Claysoul Ogres",
       "sections": [
         {
-          "id": "dNOXK_U",
+          "id": "RUTbFD3",
           "uid": "KH2JWLRMaq",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -3764,7 +3764,7 @@
           ]
         },
         {
-          "id": "BCsj2JS",
+          "id": "Q-IH73t",
           "uid": "QIk6-Hji_e",
           "label": "Upgrade with",
           "options": [
@@ -3811,7 +3811,7 @@
       "hint": "Claysoul Levy",
       "sections": [
         {
-          "id": "NgRwl5w",
+          "id": "in8Tgtc",
           "uid": "2Bm_OPy97Q",
           "label": "Replace all Slings and Hand Weapons",
           "options": [
@@ -3861,7 +3861,7 @@
           ]
         },
         {
-          "id": "4z9b9NK",
+          "id": "heuZX5y",
           "uid": "YKa3wwm7xR",
           "label": "Upgrade all models with",
           "options": [
@@ -3912,7 +3912,7 @@
       "hint": "Ravenmen Mercenaries",
       "sections": [
         {
-          "id": "PzLZqZC",
+          "id": "2Ux44dI",
           "uid": "_Pv6JefVYh",
           "label": "Replace all Heavy Claws",
           "options": [
@@ -3922,7 +3922,7 @@
               "costs": [
                 {
                   "unitId": "_8tTcm6",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3961,7 +3961,7 @@
           ]
         },
         {
-          "id": "SnXM2h_",
+          "id": "z4_neXV",
           "uid": "3yuQ82QNQq",
           "label": "Upgrade all models with",
           "options": [
@@ -4011,7 +4011,7 @@
       "hint": "Claysoul Snipers",
       "sections": [
         {
-          "id": "Iw7lUd5",
+          "id": "4XbOrIs",
           "uid": "wwLxwrD5",
           "label": "Replace Sniper Rifle",
           "options": [
@@ -4021,7 +4021,7 @@
               "costs": [
                 {
                   "unitId": "6kRzreA",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4062,7 +4062,7 @@
           ]
         },
         {
-          "id": "gz35Cr0",
+          "id": "zYQidAI",
           "uid": "fw1ZMDF5",
           "label": "Upgrade with",
           "options": [
@@ -4110,7 +4110,7 @@
       "hint": "Dragonkin Marksmen",
       "sections": [
         {
-          "id": "ZwGQNVX",
+          "id": "PbePCVn",
           "uid": "SASkhDd-L_",
           "label": "Replace Crossbow",
           "options": [
@@ -4711,7 +4711,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:18.900Z",
+  "modifiedAt": "2026-04-30T09:21:32.990Z",
   "editedAt": "2026-04-13T14:44:44.024Z",
   "official": true,
   "versionString": "3.5.3",

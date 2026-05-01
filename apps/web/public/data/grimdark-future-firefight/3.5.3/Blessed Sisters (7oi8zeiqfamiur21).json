@@ -384,7 +384,7 @@
     },
     {
       "id": "MbqCKb1",
-      "cost": 75,
+      "cost": 85,
       "name": "Constance",
       "size": 1,
       "type": 1,
@@ -1243,7 +1243,7 @@
     },
     {
       "id": "8LxKCD7",
-      "cost": 65,
+      "cost": 70,
       "name": "Biker Fanatic",
       "size": 1,
       "bases": {
@@ -1438,7 +1438,7 @@
       "hint": "Leader Weapons",
       "sections": [
         {
-          "id": "_MMSu3_",
+          "id": "JX1D1qk",
           "uid": "JGCchEK",
           "label": "Replace Combat Shield and CCW",
           "options": [
@@ -1544,7 +1544,7 @@
           ]
         },
         {
-          "id": "Z3CMv6g",
+          "id": "OC9wSze",
           "uid": "QiaDUvj",
           "label": "Replace Combat Shield",
           "options": [
@@ -1649,7 +1649,7 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 10
+                  "cost": 15
                 },
                 {
                   "unitId": "2TXWi3B",
@@ -1787,11 +1787,11 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 20
+                  "cost": 25
                 },
                 {
                   "unitId": "2TXWi3B",
-                  "cost": 15
+                  "cost": 20
                 },
                 {
                   "unitId": "_nVdDbE",
@@ -1874,15 +1874,15 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 40
+                  "cost": 45
                 },
                 {
                   "unitId": "2TXWi3B",
-                  "cost": 40
+                  "cost": 45
                 },
                 {
                   "unitId": "_nVdDbE",
-                  "cost": 40
+                  "cost": 45
                 }
               ],
               "gains": [
@@ -1920,15 +1920,15 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 45
+                  "cost": 50
                 },
                 {
                   "unitId": "2TXWi3B",
-                  "cost": 35
+                  "cost": 40
                 },
                 {
                   "unitId": "_nVdDbE",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -2009,7 +2009,7 @@
           ]
         },
         {
-          "id": "k3-3WA-",
+          "id": "1_0Vfxr",
           "uid": "JktpG-q",
           "label": "Take one Master Heavy Rifle attachment",
           "options": [
@@ -2236,7 +2236,7 @@
           ]
         },
         {
-          "id": "UotzLQd",
+          "id": "9cTAR80",
           "uid": "9LBlxtK",
           "label": "Replace CCW",
           "options": [
@@ -2297,7 +2297,7 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 10
+                  "cost": 15
                 },
                 {
                   "unitId": "2TXWi3B",
@@ -2397,11 +2397,11 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 15
+                  "cost": 20
                 },
                 {
                   "unitId": "2TXWi3B",
-                  "cost": 10
+                  "cost": 15
                 },
                 {
                   "unitId": "_nVdDbE",
@@ -2441,7 +2441,7 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 15
+                  "cost": 20
                 },
                 {
                   "unitId": "2TXWi3B",
@@ -2500,7 +2500,7 @@
       "hint": "Specialists - Fanatic",
       "sections": [
         {
-          "id": "EKEggwv",
+          "id": "MDG7P8i",
           "uid": "jDPiWW0",
           "label": "Upgrade with one",
           "options": [
@@ -2563,35 +2563,6 @@
               "id": "IJLtqfK"
             },
             {
-              "uid": "zRrf2l7",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "BT_-pdh",
-                  "cost": 5
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Priestess",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Priestess (Shred in Melee Aura)",
-                  "content": [
-                    {
-                      "id": "muH3OhuC6eK4",
-                      "name": "Shred in Melee Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Priestess (Shred in Melee Aura)",
-              "parentSectionId": "jDPiWW0",
-              "id": "zRrf2l7"
-            },
-            {
               "uid": "MJRXeoqXrY",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -2621,12 +2592,41 @@
               "id": "MJRXeoqXrY"
             },
             {
+              "uid": "zRrf2l7",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "BT_-pdh",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Priestess",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Priestess (Shred in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "muH3OhuC6eK4",
+                      "name": "Shred in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Priestess (Shred in Melee Aura)",
+              "parentSectionId": "jDPiWW0",
+              "id": "zRrf2l7"
+            },
+            {
               "uid": "hm4r7",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "BT_-pdh",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2669,7 +2669,7 @@
       "hint": "Leader Upgrades",
       "sections": [
         {
-          "id": "mYpNZEq",
+          "id": "bCalZTi",
           "uid": "5z9UHa0",
           "label": "Upgrade with one",
           "options": [
@@ -2877,7 +2877,7 @@
       "hint": "Warrior Sisters",
       "sections": [
         {
-          "id": "Ul-x0AN",
+          "id": "AuBMyjI",
           "uid": "rwrkjbz",
           "label": "Replace Heavy Rifle",
           "options": [
@@ -2888,7 +2888,7 @@
               "costs": [
                 {
                   "unitId": "0Bc4px2",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2924,7 +2924,7 @@
               "costs": [
                 {
                   "unitId": "0Bc4px2",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3001,7 +3001,7 @@
               "costs": [
                 {
                   "unitId": "0Bc4px2",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3119,7 +3119,7 @@
               "costs": [
                 {
                   "unitId": "0Bc4px2",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -3197,7 +3197,7 @@
           ]
         },
         {
-          "id": "i9_SATK",
+          "id": "sHJP475",
           "uid": "dz6vC7ts",
           "label": "Replace Heavy Rifle and CCW",
           "options": [
@@ -3272,7 +3272,7 @@
           ]
         },
         {
-          "id": "GTMKuxl",
+          "id": "gqQ1isH",
           "uid": "nRd7AXBw",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -3355,7 +3355,7 @@
           ]
         },
         {
-          "id": "pPig0K7",
+          "id": "vVPfhy4",
           "uid": "rlpKCnsk",
           "label": "Replace Energy Sword",
           "options": [
@@ -3412,7 +3412,7 @@
       "hint": "Support Sisters",
       "sections": [
         {
-          "id": "O1ppZYA",
+          "id": "9iVyTJH",
           "uid": "Pgv_F8-",
           "label": "Replace any Blessed Flamer",
           "options": [
@@ -3423,7 +3423,7 @@
               "costs": [
                 {
                   "unitId": "N9SDZqF",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3511,7 +3511,7 @@
       "hint": "Vanguard Sisters",
       "sections": [
         {
-          "id": "fLMmsa0",
+          "id": "7h9k6qZ",
           "uid": "v6bcNOr",
           "label": "Replace Heavy Rifle",
           "options": [
@@ -3600,7 +3600,7 @@
               "costs": [
                 {
                   "unitId": "VHKN-IZ",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3715,7 +3715,7 @@
           ]
         },
         {
-          "id": "wtgic9E",
+          "id": "V9kz1CP",
           "uid": "No7molA",
           "label": "Replace any Heavy Rifle",
           "options": [
@@ -3726,7 +3726,7 @@
               "costs": [
                 {
                   "unitId": "VHKN-IZ",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3762,7 +3762,7 @@
               "costs": [
                 {
                   "unitId": "VHKN-IZ",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3802,7 +3802,7 @@
           ]
         },
         {
-          "id": "HhPkeQo",
+          "id": "CrnyY6o",
           "uid": "77hK40l6",
           "label": "Replace Heavy Rifle and CCW",
           "options": [
@@ -3877,7 +3877,7 @@
           ]
         },
         {
-          "id": "4PlPzpw",
+          "id": "l22kQyW",
           "uid": "Aj-EQXm4",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -3960,7 +3960,7 @@
           ]
         },
         {
-          "id": "8l-rLxo",
+          "id": "ZOXYQ7v",
           "uid": "y1e5VJ4F",
           "label": "Replace Energy Sword",
           "options": [
@@ -4017,7 +4017,7 @@
       "hint": "Fanatic Sisters",
       "sections": [
         {
-          "id": "4Ar6A_H",
+          "id": "3Wgf8Ri",
           "uid": "kNZAW",
           "label": "Replace Chainsaw Sword",
           "options": [
@@ -4065,7 +4065,7 @@
           ]
         },
         {
-          "id": "u8YwvGW",
+          "id": "wFoaDbI",
           "uid": "Zl_L3",
           "label": "Upgrade with",
           "options": [
@@ -4113,7 +4113,7 @@
       "hint": "Protector Sisters",
       "sections": [
         {
-          "id": "NsZwzUG",
+          "id": "6r6xctD",
           "uid": "pHyTb",
           "label": "Replace Halberds and Heavy Pistol",
           "options": [
@@ -4168,7 +4168,7 @@
           ]
         },
         {
-          "id": "RL8B3Un",
+          "id": "wqsCJBl",
           "uid": "ruvyw7M",
           "label": "Replace Halberd",
           "options": [
@@ -4293,7 +4293,7 @@
           ]
         },
         {
-          "id": "fdCwArE",
+          "id": "CqUL17i",
           "uid": "2XYSqZr",
           "label": "Replace Heavy Pistol",
           "options": [
@@ -4340,7 +4340,7 @@
               "costs": [
                 {
                   "unitId": "zCo2G8c",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4429,7 +4429,7 @@
           ]
         },
         {
-          "id": "3UfCJEJ",
+          "id": "Js_cUdw",
           "uid": "hEW1rd3DRM",
           "label": "Upgrade with",
           "options": [
@@ -4476,7 +4476,7 @@
       "hint": "Pistoleer Sisters",
       "sections": [
         {
-          "id": "OM3h4d4",
+          "id": "Er2bdRB",
           "uid": "rk0A5Zg",
           "label": "Replace any Twin Heavy Pistol",
           "options": [
@@ -4525,7 +4525,7 @@
               "costs": [
                 {
                   "unitId": "qgESKb_",
-                  "cost": -5
+                  "cost": 0
                 }
               ],
               "gains": [
@@ -4600,7 +4600,7 @@
           ]
         },
         {
-          "id": "CFm_3EX",
+          "id": "OKZeZZd",
           "uid": "H1Ka5oX",
           "label": "Replace Twin Heavy Pistols and CCW",
           "options": [
@@ -4673,7 +4673,7 @@
           ]
         },
         {
-          "id": "UoxcxwY",
+          "id": "8R4QnNl",
           "uid": "VIce1",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -4762,7 +4762,7 @@
               "costs": [
                 {
                   "unitId": "qgESKb_",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4814,7 +4814,7 @@
       "hint": "Assault Sisters",
       "sections": [
         {
-          "id": "hFgsEs2",
+          "id": "4nc4zYS",
           "uid": "EnlXKF1",
           "label": "Replace Heavy Pistol",
           "options": [
@@ -4861,7 +4861,7 @@
               "costs": [
                 {
                   "unitId": "S9Oua8O",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4957,7 +4957,7 @@
       "hint": "Destroyer Sisters",
       "sections": [
         {
-          "id": "z_tiwja",
+          "id": "2OTZ26o",
           "uid": "saRiMbg",
           "label": "Replace Combat Shields and CCW",
           "options": [
@@ -5048,7 +5048,7 @@
           ]
         },
         {
-          "id": "TBE0XSu",
+          "id": "-9fXeE2",
           "uid": "BfN-JDW",
           "label": "Replace Storm Rifle",
           "options": [
@@ -5100,7 +5100,7 @@
               "costs": [
                 {
                   "unitId": "1oucreF",
-                  "cost": 35
+                  "cost": 45
                 }
               ],
               "gains": [
@@ -5145,7 +5145,7 @@
           ]
         },
         {
-          "id": "g5DGwK0",
+          "id": "pIToj2C",
           "uid": "TNUc16_",
           "label": "Replace any CCW",
           "options": [
@@ -5233,7 +5233,7 @@
               "costs": [
                 {
                   "unitId": "1oucreF",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -5273,7 +5273,7 @@
               "costs": [
                 {
                   "unitId": "1oucreF",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -5315,7 +5315,7 @@
               "costs": [
                 {
                   "unitId": "1oucreF",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -5364,7 +5364,7 @@
       "hint": "Biker Sisters",
       "sections": [
         {
-          "id": "cb8Lu9z",
+          "id": "YEuhXoU",
           "uid": "nGspWUx",
           "label": "Replace Heavy Pistols and CCW",
           "options": [
@@ -5468,7 +5468,7 @@
           ]
         },
         {
-          "id": "vM2_vcv",
+          "id": "O0xhYXc",
           "uid": "O1aUjAW",
           "label": "Replace Heavy Rifle",
           "options": [
@@ -5479,7 +5479,7 @@
               "costs": [
                 {
                   "unitId": "oN45C-p",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -5557,7 +5557,7 @@
               "costs": [
                 {
                   "unitId": "oN45C-p",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -5600,7 +5600,7 @@
           ]
         },
         {
-          "id": "mrSQaNM",
+          "id": "67keZA4",
           "uid": "xDwOUk5h",
           "label": "Replace Heavy Pistol and CCW",
           "options": [
@@ -5675,7 +5675,7 @@
           ]
         },
         {
-          "id": "yk6azWo",
+          "id": "YwSSnFd",
           "uid": "_NO63icm",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -5757,7 +5757,7 @@
           ]
         },
         {
-          "id": "_jzRTi4",
+          "id": "Eiyraoz",
           "uid": "0nRWt53H",
           "label": "Replace Energy Sword",
           "options": [
@@ -5813,7 +5813,7 @@
       "hint": "Novice Sisters",
       "sections": [
         {
-          "id": "J0Cfl7I",
+          "id": "tdDrGPk",
           "uid": "delH8",
           "label": "Replace all Dual CCWs",
           "options": [
@@ -5942,7 +5942,7 @@
           ]
         },
         {
-          "id": "AyQvyYn",
+          "id": "3f5SqGy",
           "uid": "Z9Q_Z",
           "label": "Replace one Pistols",
           "options": [
@@ -5953,7 +5953,7 @@
               "costs": [
                 {
                   "unitId": "fi5ZHtl",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -6049,7 +6049,7 @@
       "hint": "Squad Upgrades",
       "sections": [
         {
-          "id": "HkJVnzJ",
+          "id": "K_HGSkL",
           "uid": "ta_zE",
           "label": "Upgrade one model with one",
           "options": [
@@ -6150,23 +6150,23 @@
               "costs": [
                 {
                   "unitId": "0Bc4px2",
-                  "cost": 5
+                  "cost": 15
                 },
                 {
                   "unitId": "_MWEPTm",
-                  "cost": 5
+                  "cost": 15
                 },
                 {
                   "unitId": "fi5ZHtl",
-                  "cost": 5
+                  "cost": 15
                 },
                 {
                   "unitId": "zCo2G8c",
-                  "cost": 5
+                  "cost": 15
                 },
                 {
                   "unitId": "1oucreF",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -6211,7 +6211,7 @@
       "hint": "High Destroyer Sister",
       "sections": [
         {
-          "id": "MoGpaUw",
+          "id": "0k44RZX",
           "uid": "NsP4S",
           "label": "Replace Combat Shield and CCW",
           "options": [
@@ -6221,7 +6221,7 @@
               "costs": [
                 {
                   "unitId": "sF4ltO_",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -6303,7 +6303,7 @@
           ]
         },
         {
-          "id": "uT_AUZ5",
+          "id": "f5V-1_v",
           "uid": "ok6yv",
           "label": "Replace CCW",
           "options": [
@@ -6314,7 +6314,7 @@
               "costs": [
                 {
                   "unitId": "sF4ltO_",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -6439,7 +6439,7 @@
               "costs": [
                 {
                   "unitId": "sF4ltO_",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -6484,7 +6484,7 @@
       "hint": "Fanatic Superior",
       "sections": [
         {
-          "id": "1WCxC9G",
+          "id": "oNrODQO",
           "uid": "B_mke",
           "label": "Replace Dual Shock Whip",
           "options": [
@@ -6495,7 +6495,7 @@
               "costs": [
                 {
                   "unitId": "BT_-pdh",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -6531,7 +6531,7 @@
               "costs": [
                 {
                   "unitId": "BT_-pdh",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -6614,7 +6614,7 @@
           ]
         },
         {
-          "id": "1Jt1-Gl",
+          "id": "NOw3azP",
           "uid": "aTqmX",
           "label": "Upgrade with",
           "options": [
@@ -6662,7 +6662,7 @@
       "hint": "Celestial Warrior Sisters",
       "sections": [
         {
-          "id": "sGhpVLI",
+          "id": "dRKE8m4",
           "uid": "30Wd-",
           "label": "Replace any Heavy Rifle",
           "options": [
@@ -6715,7 +6715,7 @@
               "costs": [
                 {
                   "unitId": "_MWEPTm",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -6750,7 +6750,7 @@
               "costs": [
                 {
                   "unitId": "_MWEPTm",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -6785,7 +6785,7 @@
               "costs": [
                 {
                   "unitId": "_MWEPTm",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -6827,7 +6827,7 @@
               "costs": [
                 {
                   "unitId": "_MWEPTm",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -6904,7 +6904,7 @@
               "costs": [
                 {
                   "unitId": "_MWEPTm",
-                  "cost": 30
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -6986,7 +6986,7 @@
           ]
         },
         {
-          "id": "ST5JQpx",
+          "id": "xvZXCBj",
           "uid": "cTD6s6xs",
           "label": "Replace Heavy Rifle and CCW",
           "options": [
@@ -7061,7 +7061,7 @@
           ]
         },
         {
-          "id": "2_MLVcZ",
+          "id": "xlL5WKP",
           "uid": "aYA1Muzh",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -7144,7 +7144,7 @@
           ]
         },
         {
-          "id": "6UJDqi2",
+          "id": "Tkb4kVQ",
           "uid": "RXFfUVha",
           "label": "Replace Energy Sword",
           "options": [
@@ -7155,7 +7155,7 @@
               "costs": [
                 {
                   "unitId": "_MWEPTm",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -7201,7 +7201,7 @@
       "hint": "Specialists - Destroyer",
       "sections": [
         {
-          "id": "LmJXcxy",
+          "id": "Hyf-ftL",
           "uid": "-w_Xg80q",
           "label": "Upgrade with one",
           "options": [
@@ -7241,7 +7241,7 @@
               "costs": [
                 {
                   "unitId": "sF4ltO_",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -7271,7 +7271,7 @@
               "costs": [
                 {
                   "unitId": "sF4ltO_",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -7300,7 +7300,7 @@
               "costs": [
                 {
                   "unitId": "sF4ltO_",
-                  "cost": 15
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -7331,7 +7331,7 @@
               "costs": [
                 {
                   "unitId": "sF4ltO_",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -7363,7 +7363,7 @@
               "costs": [
                 {
                   "unitId": "sF4ltO_",
-                  "cost": 55
+                  "cost": 65
                 }
               ],
               "gains": [
@@ -7406,7 +7406,7 @@
       "hint": "Specialists - High Sister",
       "sections": [
         {
-          "id": "SVo2X_z",
+          "id": "G7_QCvp",
           "uid": "mIKx-g_2",
           "label": "Upgrade with one",
           "options": [
@@ -7484,11 +7484,11 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 5
+                  "cost": 15
                 },
                 {
                   "unitId": "2TXWi3B",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -7517,11 +7517,11 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 15
+                  "cost": 25
                 },
                 {
                   "unitId": "2TXWi3B",
-                  "cost": 15
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -7552,11 +7552,11 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 35
+                  "cost": 40
                 },
                 {
                   "unitId": "2TXWi3B",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -7588,11 +7588,11 @@
               "costs": [
                 {
                   "unitId": "W-crN7f",
-                  "cost": 55
+                  "cost": 65
                 },
                 {
                   "unitId": "2TXWi3B",
-                  "cost": 55
+                  "cost": 65
                 }
               ],
               "gains": [
@@ -7635,7 +7635,7 @@
       "hint": "Specialists - Novice",
       "sections": [
         {
-          "id": "RQdPjsW",
+          "id": "a2uAm8v",
           "uid": "9fVL6pnV",
           "label": "Upgrade with one",
           "options": [
@@ -7670,36 +7670,6 @@
               "id": "zDO2Tl7k"
             },
             {
-              "uid": "-_IFTrYc",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "_nVdDbE",
-                  "cost": 5
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Priestess",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Priestess (Shred in Melee Aura)",
-                  "content": [
-                    {
-                      "id": "muH3OhuC6eK4",
-                      "name": "Shred in Melee Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Priestess (Shred in Melee Aura)",
-              "parentSectionId": "9fVL6pnV",
-              "parentPackageUid": "F_N7ohBV",
-              "id": "-_IFTrYc"
-            },
-            {
               "uid": "vxWIvyu_yK",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -7729,12 +7699,42 @@
               "id": "vxWIvyu_yK"
             },
             {
+              "uid": "-_IFTrYc",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_nVdDbE",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Priestess",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Priestess (Shred in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "muH3OhuC6eK4",
+                      "name": "Shred in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Priestess (Shred in Melee Aura)",
+              "parentSectionId": "9fVL6pnV",
+              "parentPackageUid": "F_N7ohBV",
+              "id": "-_IFTrYc"
+            },
+            {
               "uid": "4e9J98_-",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "_nVdDbE",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -7765,7 +7765,7 @@
               "costs": [
                 {
                   "unitId": "_nVdDbE",
-                  "cost": 15
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -7795,7 +7795,7 @@
               "costs": [
                 {
                   "unitId": "_nVdDbE",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -8432,7 +8432,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:52:58.469Z",
+  "modifiedAt": "2026-04-30T09:21:15.195Z",
   "editedAt": "2026-04-23T11:12:46.105Z",
   "official": true,
   "versionString": "3.5.3",

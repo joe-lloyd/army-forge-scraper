@@ -15,7 +15,7 @@
   "units": [
     {
       "id": "lFMAUl8",
-      "cost": 50,
+      "cost": 55,
       "name": "Great Sister",
       "size": 1,
       "bases": {
@@ -85,70 +85,6 @@
       "disabledUpgradeSections": []
     },
     {
-      "id": "i8UI-D4",
-      "cost": 20,
-      "name": "Vigilant Sister",
-      "size": 1,
-      "bases": {
-        "round": "32",
-        "square": "30"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "JoOCVPx1xT1G",
-          "name": "Furious",
-          "label": "Furious"
-        },
-        {
-          "id": "D7ChSWl5R2We",
-          "name": "Guardian",
-          "label": "Guardian"
-        }
-      ],
-      "valid": true,
-      "defense": 4,
-      "quality": 4,
-      "weapons": [
-        {
-          "id": "9lYJ2BM_",
-          "name": "Energy Sword",
-          "type": "ArmyBookWeapon",
-          "range": 0,
-          "attacks": 2,
-          "weaponId": "0-erIAQg",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "17crjK7P6_w6",
-              "name": "AP",
-              "rating": 1,
-              "label": "AP(1)"
-            },
-            {
-              "type": "ArmyBookRule",
-              "id": "cavWDboL4ubs",
-              "name": "Rending",
-              "label": "Rending"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Energy Sword (A2, AP(1), Rending)",
-          "count": 1,
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [
-        "lXDVa"
-      ],
-      "genericName": "Assault Sisters",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 5,
-      "disabledUpgradeSections": []
-    },
-    {
       "id": "Z6mGfk5",
       "cost": 25,
       "name": "Prosecution Sister",
@@ -205,6 +141,70 @@
         "lXDVa"
       ],
       "genericName": "Support Sisters",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "i8UI-D4",
+      "cost": 25,
+      "name": "Vigilant Sister",
+      "size": 1,
+      "bases": {
+        "round": "32",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "JoOCVPx1xT1G",
+          "name": "Furious",
+          "label": "Furious"
+        },
+        {
+          "id": "D7ChSWl5R2We",
+          "name": "Guardian",
+          "label": "Guardian"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "9lYJ2BM_",
+          "name": "Energy Sword",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "0-erIAQg",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Energy Sword (A2, AP(1), Rending)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "lXDVa"
+      ],
+      "genericName": "Assault Sisters",
       "hasCustomRule": false,
       "disabledSections": [],
       "hasBalanceInvalid": false,
@@ -376,7 +376,7 @@
     },
     {
       "id": "hYoS4jK",
-      "cost": 70,
+      "cost": 75,
       "name": "Veteran Custodian Brother",
       "size": 1,
       "bases": {
@@ -472,7 +472,7 @@
       "hint": "Great Sister",
       "sections": [
         {
-          "id": "kOw6FD3",
+          "id": "np7TCey",
           "uid": "xdpVcr4",
           "label": "Replace Energy Sword",
           "options": [
@@ -483,7 +483,7 @@
               "costs": [
                 {
                   "unitId": "lFMAUl8",
-                  "cost": 5
+                  "cost": 0
                 }
               ],
               "gains": [
@@ -581,7 +581,7 @@
           ]
         },
         {
-          "id": "hcRsogS",
+          "id": "23M4POs",
           "uid": "5oJnTlu",
           "label": "Upgrade with one",
           "options": [
@@ -695,7 +695,7 @@
       "hint": "Custodian Brothers",
       "sections": [
         {
-          "id": "9FiT4iC",
+          "id": "ygBLVoL",
           "uid": "bZBMJ",
           "label": "Replace Shot-Mounts and Custodian Axe",
           "options": [
@@ -764,7 +764,7 @@
           ]
         },
         {
-          "id": "hgtsBKf",
+          "id": "uIMc2xv",
           "uid": "In2it",
           "label": "Replace any Shot-Mount",
           "options": [
@@ -821,11 +821,11 @@
               "costs": [
                 {
                   "unitId": "zHrtuAb",
-                  "cost": 20
+                  "cost": 25
                 },
                 {
                   "unitId": "hYoS4jK",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -870,7 +870,7 @@
                 },
                 {
                   "unitId": "hYoS4jK",
-                  "cost": 30
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -897,44 +897,6 @@
               "parentSectionUid": "In2it",
               "parentSectionId": "In2it",
               "id": "GO-t_"
-            },
-            {
-              "uid": "PtHL6",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "zHrtuAb",
-                  "cost": 30
-                },
-                {
-                  "unitId": "hYoS4jK",
-                  "cost": 40
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Destructor-Mount",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 24,
-                  "attacks": 2,
-                  "weaponId": "a7ujBvmE",
-                  "specialRules": [
-                    {
-                      "id": "xeJDKejG4QZN",
-                      "name": "Tear"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Destructor-Mount (24\", A2, Tear)"
-                }
-              ],
-              "label": "Destructor-Mount (24\", A2, Tear)",
-              "parentPackageUid": "UF0iY",
-              "parentSectionUid": "In2it",
-              "parentSectionId": "In2it",
-              "id": "PtHL6"
             },
             {
               "uid": "C1MzA",
@@ -974,6 +936,44 @@
               "parentSectionUid": "In2it",
               "parentSectionId": "In2it",
               "id": "C1MzA"
+            },
+            {
+              "uid": "PtHL6",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "zHrtuAb",
+                  "cost": 35
+                },
+                {
+                  "unitId": "hYoS4jK",
+                  "cost": 50
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Destructor-Mount",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "a7ujBvmE",
+                  "specialRules": [
+                    {
+                      "id": "xeJDKejG4QZN",
+                      "name": "Tear"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Destructor-Mount (24\", A2, Tear)"
+                }
+              ],
+              "label": "Destructor-Mount (24\", A2, Tear)",
+              "parentPackageUid": "UF0iY",
+              "parentSectionUid": "In2it",
+              "parentSectionId": "In2it",
+              "id": "PtHL6"
             },
             {
               "uid": "w-evR",
@@ -1027,7 +1027,7 @@
           ]
         },
         {
-          "id": "1KMth80",
+          "id": "BMeWT_I",
           "uid": "-GIrU",
           "label": "Replace any Custodian Axe",
           "options": [
@@ -1042,7 +1042,7 @@
                 },
                 {
                   "unitId": "hYoS4jK",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1125,11 +1125,11 @@
               "costs": [
                 {
                   "unitId": "zHrtuAb",
-                  "cost": 20
+                  "cost": 25
                 },
                 {
                   "unitId": "hYoS4jK",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -1177,7 +1177,7 @@
       "hint": "Heretic Spotter",
       "sections": [
         {
-          "id": "Si9zKuq",
+          "id": "jPG0YUm",
           "uid": "EpIMu",
           "label": "Upgrade with",
           "options": [
@@ -1186,11 +1186,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "unitId": "i8UI-D4",
+                  "unitId": "Z6mGfk5",
                   "cost": 5
                 },
                 {
-                  "unitId": "Z6mGfk5",
+                  "unitId": "i8UI-D4",
                   "cost": 5
                 },
                 {
@@ -1232,7 +1232,7 @@
       "hint": "Squad Upgrades",
       "sections": [
         {
-          "id": "hn6G882",
+          "id": "8r35LRz",
           "uid": "whwM2dFU",
           "label": "Upgrade with one",
           "options": [
@@ -1242,11 +1242,11 @@
               "costs": [
                 {
                   "unitId": "zHrtuAb",
-                  "cost": 5
+                  "cost": 10
                 },
                 {
                   "unitId": "hYoS4jK",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1276,11 +1276,11 @@
               "costs": [
                 {
                   "unitId": "zHrtuAb",
-                  "cost": 5
+                  "cost": 15
                 },
                 {
                   "unitId": "hYoS4jK",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1309,11 +1309,11 @@
               "costs": [
                 {
                   "unitId": "zHrtuAb",
-                  "cost": 10
+                  "cost": 15
                 },
                 {
                   "unitId": "hYoS4jK",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1354,7 +1354,7 @@
       "hint": "Specialists - Sister",
       "sections": [
         {
-          "id": "1jIc9vl",
+          "id": "cWj-Kp0",
           "uid": "gJiDZi2G",
           "label": "Upgrade with one",
           "options": [
@@ -1423,7 +1423,7 @@
               "costs": [
                 {
                   "unitId": "lFMAUl8",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1453,7 +1453,7 @@
               "costs": [
                 {
                   "unitId": "lFMAUl8",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1483,7 +1483,7 @@
               "costs": [
                 {
                   "unitId": "lFMAUl8",
-                  "cost": 30
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -1514,7 +1514,7 @@
               "costs": [
                 {
                   "unitId": "lFMAUl8",
-                  "cost": 50
+                  "cost": 60
                 }
               ],
               "gains": [
@@ -2118,8 +2118,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:10.236Z",
-  "editedAt": "2026-04-23T13:50:37.878Z",
+  "modifiedAt": "2026-04-30T09:33:08.431Z",
+  "editedAt": "2026-04-30T09:33:08.430Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/ewbra8nv3nq3k27p/Wn55S1LPYkkqOZQgkCP55.jpg",
@@ -2136,8 +2136,8 @@
       "https://www.etsy.com/shop/onepagerules"
     ]
   },
-  "balanceValid": true,
-  "balanceValidReason": 0,
+  "balanceValid": false,
+  "balanceValidReason": 4,
   "loreUrl": "https://www.onepagerules.com/factions/custodian-brothers",
   "voted": null,
   "specialRules": [

@@ -206,16 +206,29 @@
       "weapons": [
         {
           "id": "5HrEUnYw",
-          "name": "Dual Hand Weapons",
-          "type": "ArmyBookWeapon",
+          "name": "Great Saw",
           "count": 1,
-          "range": 0,
-          "attacks": 4,
-          "weaponId": "aSajfXrE",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "Dual Hand Weapons (A4)",
-          "originalCount": 1
+          "attacks": 1,
+          "weaponId": "avSwasQ1",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "label": "Great Saw (A1, AP(2), Deadly(3))",
+          "originalCount": 1,
+          "type": "ArmyBookWeapon"
         }
       ],
       "upgrades": [
@@ -308,7 +321,7 @@
     },
     {
       "id": "vcn9nJw",
-      "cost": 50,
+      "cost": 55,
       "name": "Rurthdeg",
       "size": 1,
       "type": 1,
@@ -419,6 +432,70 @@
       "disabledSections": [],
       "hasBalanceInvalid": false,
       "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "_ImR84h",
+      "cost": 15,
+      "name": "Berserker",
+      "size": 1,
+      "bases": {
+        "round": "32",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "AlIZbh-afBYi",
+          "name": "Protected",
+          "label": "Protected"
+        },
+        {
+          "id": "DhLjIDRrWz6-",
+          "name": "Piercing Assault",
+          "label": "Piercing Assault"
+        },
+        {
+          "id": "cygZBh3MtWs1",
+          "name": "Ferocious",
+          "label": "Ferocious"
+        }
+      ],
+      "valid": true,
+      "defense": 6,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "oY-8OBeM",
+          "name": "Berserker Claws",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "qdEzfGpd",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Berserker Claws (A1, AP(4))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "QWV3L",
+        "PjXum"
+      ],
+      "genericName": "Berserkers",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
       "disabledUpgradeSections": []
     },
     {
@@ -877,70 +954,6 @@
       "disabledUpgradeSections": []
     },
     {
-      "id": "_ImR84h",
-      "cost": 45,
-      "name": "Berserkers",
-      "size": 3,
-      "bases": {
-        "round": "32",
-        "square": "30"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "AlIZbh-afBYi",
-          "name": "Protected",
-          "label": "Protected"
-        },
-        {
-          "id": "DhLjIDRrWz6-",
-          "name": "Piercing Assault",
-          "label": "Piercing Assault"
-        },
-        {
-          "id": "cygZBh3MtWs1",
-          "name": "Ferocious",
-          "label": "Ferocious"
-        }
-      ],
-      "valid": true,
-      "defense": 6,
-      "quality": 4,
-      "weapons": [
-        {
-          "id": "oY-8OBeM",
-          "name": "Berserker Claws",
-          "type": "ArmyBookWeapon",
-          "count": 3,
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "qdEzfGpd",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "17crjK7P6_w6",
-              "name": "AP",
-              "rating": 4,
-              "label": "AP(4)"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Berserker Claws (A1, AP(4))",
-          "originalCount": 3
-        }
-      ],
-      "upgrades": [
-        "QWV3L",
-        "PjXum"
-      ],
-      "genericName": "Berserkers",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 5,
-      "disabledUpgradeSections": []
-    },
-    {
       "id": "DCcm6OJ",
       "cost": 55,
       "name": "Berserker Beast Rider",
@@ -1250,7 +1263,7 @@
     },
     {
       "id": "QkKPZBg",
-      "cost": 65,
+      "cost": 70,
       "name": "Hover Biker",
       "size": 1,
       "bases": {
@@ -1459,7 +1472,7 @@
       "hint": "Leader Weapons",
       "sections": [
         {
-          "id": "5FKxEmk",
+          "id": "gpyi9mC",
           "uid": "888ERTd",
           "label": "Replace Leader Pistol",
           "options": [
@@ -1719,7 +1732,7 @@
           ]
         },
         {
-          "id": "MvNvX0H",
+          "id": "uw8VXCY",
           "uid": "zpp30",
           "label": "Replace Heavy Flamer-Mod",
           "options": [
@@ -1808,7 +1821,7 @@
           ]
         },
         {
-          "id": "7G3SUWv",
+          "id": "oYU2qqc",
           "uid": "P01q5",
           "label": "Replace CCW",
           "options": [
@@ -1933,7 +1946,7 @@
               "costs": [
                 {
                   "unitId": "3GA8D0b",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1977,7 +1990,7 @@
       "hint": "Heavy Melee Weapon",
       "sections": [
         {
-          "id": "Jxl1dSc",
+          "id": "hmHehQn",
           "uid": "JwcJDo2",
           "label": "Replace CCW",
           "options": [
@@ -2141,19 +2154,19 @@
               "costs": [
                 {
                   "unitId": "-2RTGCp",
-                  "cost": 10
+                  "cost": 15
                 },
                 {
                   "unitId": "ErJf80m",
-                  "cost": 10
+                  "cost": 15
                 },
                 {
                   "unitId": "5hHhPKU",
-                  "cost": 10
+                  "cost": 15
                 },
                 {
                   "unitId": "2nuy0sm",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2198,44 +2211,10 @@
       "hint": "Leader Upgrades",
       "sections": [
         {
-          "id": "VxM9Vqh",
+          "id": "wOv1VK0",
           "uid": "F2wLwQw",
           "label": "Upgrade with one",
           "options": [
-            {
-              "uid": "I_GtGxgBK6",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "RdSmE77",
-                  "cost": 5
-                },
-                {
-                  "unitId": "3GA8D0b",
-                  "cost": 5
-                }
-              ],
-              "gains": [
-                {
-                  "id": "2TW0S3S",
-                  "name": "Pet Beast",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Pet Beast (Repel Ambushers)",
-                  "content": [
-                    {
-                      "id": "C6MzEy1CnxTs",
-                      "name": "Repel Ambushers",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Pet Beast (Repel Ambushers)",
-              "parentSectionId": "F2wLwQw",
-              "id": "I_GtGxgBK6"
-            },
             {
               "uid": "s6I3C_2",
               "cost": 10,
@@ -2270,6 +2249,40 @@
               "parentSectionUid": "F2wLwQw",
               "parentSectionId": "F2wLwQw",
               "id": "s6I3C_2"
+            },
+            {
+              "uid": "I_GtGxgBK6",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "RdSmE77",
+                  "cost": 10
+                },
+                {
+                  "unitId": "3GA8D0b",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "2TW0S3S",
+                  "name": "Pet Beast",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Pet Beast (Repel Ambushers)",
+                  "content": [
+                    {
+                      "id": "C6MzEy1CnxTs",
+                      "name": "Repel Ambushers",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Pet Beast (Repel Ambushers)",
+              "parentSectionId": "F2wLwQw",
+              "id": "I_GtGxgBK6"
             },
             {
               "uid": "i5T2NlZ",
@@ -2432,7 +2445,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "YLykgjP",
+          "id": "Yes67PZ",
           "uid": "FrtCkJc",
           "label": "Upgrade with one",
           "options": [
@@ -2471,7 +2484,7 @@
               "costs": [
                 {
                   "unitId": "3GA8D0b",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2500,7 +2513,7 @@
               "costs": [
                 {
                   "unitId": "3GA8D0b",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2531,7 +2544,7 @@
               "costs": [
                 {
                   "unitId": "3GA8D0b",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2560,7 +2573,7 @@
               "costs": [
                 {
                   "unitId": "3GA8D0b",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -2591,7 +2604,7 @@
               "costs": [
                 {
                   "unitId": "3GA8D0b",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -2633,7 +2646,7 @@
       "hint": "Orc Leader - Mechanic Weapons",
       "sections": [
         {
-          "id": "Yr1bcuY",
+          "id": "bb19RGp",
           "uid": "vOIM6xk",
           "label": "Replace Leader Pistol",
           "options": [
@@ -2643,7 +2656,7 @@
               "costs": [
                 {
                   "unitId": "RdSmE77",
-                  "cost": 10
+                  "cost": 15
                 },
                 {
                   "unitId": "3GA8D0b",
@@ -2734,7 +2747,7 @@
               "costs": [
                 {
                   "unitId": "RdSmE77",
-                  "cost": 20
+                  "cost": 25
                 },
                 {
                   "unitId": "3GA8D0b",
@@ -2765,43 +2778,6 @@
               "parentSectionUid": "vOIM6xk",
               "parentSectionId": "vOIM6xk",
               "id": "BJQo7jT"
-            },
-            {
-              "uid": "pEGB8DY",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "RdSmE77",
-                  "cost": 30
-                },
-                {
-                  "unitId": "3GA8D0b",
-                  "cost": 20
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Rapid Plasma Rifle",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 24,
-                  "attacks": 2,
-                  "weaponId": "mDZjvQ-V",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 4
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Rapid Plasma Rifle (24\", A2, AP(4))"
-                }
-              ],
-              "label": "Rapid Plasma Rifle (24\", A2, AP(4))",
-              "parentSectionId": "vOIM6xk",
-              "id": "pEGB8DY"
             },
             {
               "uid": "Y2VtEMG",
@@ -2845,6 +2821,43 @@
               "parentSectionUid": "vOIM6xk",
               "parentSectionId": "vOIM6xk",
               "id": "Y2VtEMG"
+            },
+            {
+              "uid": "pEGB8DY",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "RdSmE77",
+                  "cost": 35
+                },
+                {
+                  "unitId": "3GA8D0b",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Rapid Plasma Rifle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "mDZjvQ-V",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rapid Plasma Rifle (24\", A2, AP(4))"
+                }
+              ],
+              "label": "Rapid Plasma Rifle (24\", A2, AP(4))",
+              "parentSectionId": "vOIM6xk",
+              "id": "pEGB8DY"
             }
           ],
           "parentPackageUid": "F1",
@@ -2862,7 +2875,7 @@
       "hint": "Orc Warriors",
       "sections": [
         {
-          "id": "_bGwQO5",
+          "id": "BFe5Wbj",
           "uid": "SDbUV",
           "label": "Replace Pistols and CCW",
           "options": [
@@ -2917,46 +2930,10 @@
           ]
         },
         {
-          "id": "9e88F4r",
+          "id": "1avBAGL",
           "uid": "eWQzCSY",
           "label": "Replace any Pistol",
           "options": [
-            {
-              "uid": "HXE4FZe",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "D69wnil",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "id": "gN1LAzCn",
-                  "name": "Plasma Rifle",
-                  "type": "ArmyBookWeapon",
-                  "range": 24,
-                  "attacks": 1,
-                  "weaponId": "gN1LAzCn",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 4
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Plasma Rifle (24\", A1, AP(4))",
-                  "count": 1
-                }
-              ],
-              "label": "Plasma Rifle (24\", A1, AP(4))",
-              "parentPackageUid": "J1",
-              "parentSectionUid": "eWQzCSY",
-              "parentSectionId": "eWQzCSY",
-              "id": "HXE4FZe"
-            },
             {
               "uid": "vRBcBJ8",
               "cost": 15,
@@ -3000,12 +2977,48 @@
               "id": "vRBcBJ8"
             },
             {
+              "uid": "HXE4FZe",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "D69wnil",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gN1LAzCn",
+                  "name": "Plasma Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "gN1LAzCn",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Plasma Rifle (24\", A1, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Plasma Rifle (24\", A1, AP(4))",
+              "parentPackageUid": "J1",
+              "parentSectionUid": "eWQzCSY",
+              "parentSectionId": "eWQzCSY",
+              "id": "HXE4FZe"
+            },
+            {
               "uid": "uq7rL",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "D69wnil",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3045,7 +3058,7 @@
               "costs": [
                 {
                   "unitId": "D69wnil",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -3168,7 +3181,7 @@
           ]
         },
         {
-          "id": "6dF7uPO",
+          "id": "NzzRpdP",
           "uid": "gb5ou",
           "label": "Replace any CCW",
           "options": [
@@ -3293,7 +3306,7 @@
               "costs": [
                 {
                   "unitId": "D69wnil",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3340,7 +3353,7 @@
       "hint": "Specialists",
       "sections": [
         {
-          "id": "DyRwEUW",
+          "id": "lUv_0-n",
           "uid": "1ZkABV9",
           "label": "Replace Flamer",
           "options": [
@@ -3350,7 +3363,7 @@
               "costs": [
                 {
                   "unitId": "WXcv-b5",
-                  "cost": 0
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -3471,7 +3484,7 @@
           ]
         },
         {
-          "id": "4lsxNIY",
+          "id": "w_AW0hG",
           "uid": "gsId1j3",
           "label": "Replace any Flamer",
           "options": [
@@ -3528,7 +3541,7 @@
           ]
         },
         {
-          "id": "l_fxkpP",
+          "id": "4NnI_Ba",
           "uid": "E6-nk17",
           "label": "Upgrade with",
           "options": [
@@ -3585,7 +3598,7 @@
       "hint": "Veterans",
       "sections": [
         {
-          "id": "48SiAsY",
+          "id": "b1gSkPr",
           "uid": "1exLMO2",
           "label": "Replace any Pistol",
           "options": [
@@ -3631,7 +3644,7 @@
           ]
         },
         {
-          "id": "72i9V9A",
+          "id": "VipEosg",
           "uid": "X6iGg2Y",
           "label": "Take one Carbine attachment",
           "options": [
@@ -3778,7 +3791,7 @@
           ]
         },
         {
-          "id": "GI16OmD",
+          "id": "xzJFU14",
           "uid": "WOGnc",
           "label": "Replace any CCW",
           "options": [
@@ -3828,7 +3841,7 @@
               "costs": [
                 {
                   "unitId": "Snucv_c",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -3868,7 +3881,7 @@
           ]
         },
         {
-          "id": "xhn8CK3",
+          "id": "1jhFjxt",
           "uid": "JwBFc",
           "label": "Replace CCW",
           "options": [
@@ -3963,7 +3976,7 @@
       "hint": "Ultra Veterans",
       "sections": [
         {
-          "id": "F9UFIXE",
+          "id": "5hycUzQ",
           "uid": "B6G-xtg",
           "label": "Replace any Heavy Flamer-Mod",
           "options": [
@@ -4054,7 +4067,7 @@
           ]
         },
         {
-          "id": "QTKHKLe",
+          "id": "8evW8wg",
           "uid": "UI9Yg",
           "label": "Replace any Heavy Club",
           "options": [
@@ -4105,7 +4118,7 @@
               "costs": [
                 {
                   "unitId": "f2gOlPs",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -4145,7 +4158,7 @@
               "costs": [
                 {
                   "unitId": "f2gOlPs",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -4186,7 +4199,7 @@
           ]
         },
         {
-          "id": "4htM8uP",
+          "id": "omi9eGl",
           "uid": "LLVJx8d",
           "label": "Replace Carbine and Carbine-Mod and Heavy Club",
           "options": [
@@ -4249,7 +4262,7 @@
       "hint": "Hover Bikers",
       "sections": [
         {
-          "id": "Fzj8Sqk",
+          "id": "ktJe6MW",
           "uid": "JRny1",
           "label": "Replace any Killer-Rocket Pod",
           "options": [
@@ -4376,7 +4389,7 @@
           ]
         },
         {
-          "id": "HUwQgIP",
+          "id": "kInQBiB",
           "uid": "PUhP_8v",
           "label": "Replace CCW",
           "options": [
@@ -4418,7 +4431,7 @@
               "costs": [
                 {
                   "unitId": "QkKPZBg",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -4459,7 +4472,7 @@
           ]
         },
         {
-          "id": "ycQtyrc",
+          "id": "d3akJAU",
           "uid": "QNa9e",
           "label": "Replace Pistol and CCW",
           "options": [
@@ -4525,25 +4538,25 @@
       "hint": "Squad Upgrades",
       "sections": [
         {
-          "id": "t9YiEye",
+          "id": "-iu3Gzk",
           "uid": "s08qc",
-          "label": "Upgrade one model with one",
+          "label": "Upgrade with one",
           "options": [
             {
               "uid": "1q98h",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
+                  "unitId": "_ImR84h",
+                  "cost": 10
+                },
+                {
                   "unitId": "D69wnil",
-                  "cost": 5
+                  "cost": 10
                 },
                 {
                   "unitId": "Snucv_c",
-                  "cost": 5
-                },
-                {
-                  "unitId": "_ImR84h",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4573,16 +4586,16 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
+                  "unitId": "_ImR84h",
+                  "cost": 15
+                },
+                {
                   "unitId": "D69wnil",
-                  "cost": 5
+                  "cost": 15
                 },
                 {
                   "unitId": "Snucv_c",
-                  "cost": 5
-                },
-                {
-                  "unitId": "_ImR84h",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -4610,15 +4623,15 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
+                  "unitId": "_ImR84h",
+                  "cost": 20
+                },
+                {
                   "unitId": "D69wnil",
                   "cost": 20
                 },
                 {
                   "unitId": "Snucv_c",
-                  "cost": 20
-                },
-                {
-                  "unitId": "_ImR84h",
                   "cost": 20
                 }
               ],
@@ -4647,11 +4660,6 @@
           "parentPackageUid": "QWV3L",
           "type": "ArmyBookUpgradeSection",
           "variant": "upgrade",
-          "model": true,
-          "affects": {
-            "type": "exactly",
-            "value": 1
-          },
           "select": {
             "type": "exactly",
             "value": 1
@@ -4665,7 +4673,7 @@
       "hint": "Ultra Veteran Leader",
       "sections": [
         {
-          "id": "6V0Mpyk",
+          "id": "91vLsRk",
           "uid": "4YtaG",
           "label": "Replace Heavy Club",
           "options": [
@@ -4740,7 +4748,7 @@
           ]
         },
         {
-          "id": "0Mm34Li",
+          "id": "ki8wtWj",
           "uid": "wexfC",
           "label": "Replace Heavy Flamer-Mod",
           "options": [
@@ -4828,7 +4836,7 @@
           ]
         },
         {
-          "id": "4_wpeNd",
+          "id": "FJoeVzm",
           "uid": "mPIpO",
           "label": "Replace any Heavy Club",
           "options": [
@@ -4879,7 +4887,7 @@
               "costs": [
                 {
                   "unitId": "wHYIcWV",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -4918,7 +4926,7 @@
               "costs": [
                 {
                   "unitId": "wHYIcWV",
-                  "cost": 40
+                  "cost": 45
                 }
               ],
               "gains": [
@@ -4958,7 +4966,7 @@
           ]
         },
         {
-          "id": "Hmp_RTJ",
+          "id": "46_WXTD",
           "uid": "cXKO-",
           "label": "Replace 2x Heavy Club",
           "options": [
@@ -5014,7 +5022,7 @@
           ]
         },
         {
-          "id": "JY3pE2x",
+          "id": "2yLkmVN",
           "uid": "0PAAgAV3vG",
           "label": "Upgrade with",
           "options": [
@@ -5057,7 +5065,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "sux1yL4",
+          "id": "0iQ3DBk",
           "uid": "nva-8",
           "label": "Upgrade with one",
           "options": [
@@ -5067,7 +5075,7 @@
               "costs": [
                 {
                   "unitId": "wHYIcWV",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -5138,7 +5146,7 @@
       "hint": "Veteran Specialists",
       "sections": [
         {
-          "id": "4avrb-3",
+          "id": "kxCqRmz",
           "uid": "UM1wo",
           "label": "Replace any Heavy Flamer",
           "options": [
@@ -5148,7 +5156,7 @@
               "costs": [
                 {
                   "unitId": "iAADbpw",
-                  "cost": 0
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -5299,7 +5307,7 @@
               "costs": [
                 {
                   "unitId": "iAADbpw",
-                  "cost": 30
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -5343,7 +5351,7 @@
           ]
         },
         {
-          "id": "mrQQjLX",
+          "id": "_DLfGpp",
           "uid": "C1siP",
           "label": "Upgrade with",
           "options": [
@@ -5399,7 +5407,7 @@
       "hint": "Jump Pack Orcs",
       "sections": [
         {
-          "id": "Zx8wJ9n",
+          "id": "sn3uQW-",
           "uid": "n-Qwq",
           "label": "Replace Pistol",
           "options": [
@@ -5521,7 +5529,7 @@
               "costs": [
                 {
                   "unitId": "-2RTGCp",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -5563,7 +5571,7 @@
               "costs": [
                 {
                   "unitId": "-2RTGCp",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -5610,7 +5618,7 @@
       "hint": "Infiltrators",
       "sections": [
         {
-          "id": "KDDG5fe",
+          "id": "0f0CtUq",
           "uid": "C62Sd",
           "label": "Replace Pistol",
           "options": [
@@ -5679,42 +5687,6 @@
               "id": "wp2DI"
             },
             {
-              "uid": "bAO21",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "ErJf80m",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "id": "NpiCcA18",
-                  "name": "Plasma Rifle",
-                  "type": "ArmyBookWeapon",
-                  "range": 24,
-                  "attacks": 1,
-                  "weaponId": "gN1LAzCn",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 4
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Plasma Rifle (24\", A1, AP(4))",
-                  "count": 1
-                }
-              ],
-              "label": "Plasma Rifle (24\", A1, AP(4))",
-              "parentPackageUid": "lCdWF",
-              "parentSectionUid": "A7DsI",
-              "parentSectionId": "C62Sd",
-              "id": "bAO21"
-            },
-            {
               "uid": "hY4a0",
               "cost": 15,
               "type": "ArmyBookUpgradeOption",
@@ -5757,12 +5729,48 @@
               "id": "hY4a0"
             },
             {
+              "uid": "bAO21",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ErJf80m",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "NpiCcA18",
+                  "name": "Plasma Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "gN1LAzCn",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Plasma Rifle (24\", A1, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Plasma Rifle (24\", A1, AP(4))",
+              "parentPackageUid": "lCdWF",
+              "parentSectionUid": "A7DsI",
+              "parentSectionId": "C62Sd",
+              "id": "bAO21"
+            },
+            {
               "uid": "lLY5V",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "ErJf80m",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -5802,7 +5810,7 @@
               "costs": [
                 {
                   "unitId": "ErJf80m",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -5922,7 +5930,7 @@
           ]
         },
         {
-          "id": "AQkWIDy",
+          "id": "I9rCaKo",
           "uid": "Pxoy1",
           "label": "Replace any Pistol",
           "options": [
@@ -5986,9 +5994,9 @@
       "hint": "Berserkers",
       "sections": [
         {
-          "id": "r6heRC7",
+          "id": "HWct59J",
           "uid": "NUtti",
-          "label": "Replace all Berserker Claws",
+          "label": "Replace Berserker Claws",
           "options": [
             {
               "uid": "iV73cQXVsn",
@@ -5996,7 +6004,7 @@
               "costs": [
                 {
                   "unitId": "_ImR84h",
-                  "cost": 5
+                  "cost": 0
                 }
               ],
               "gains": [
@@ -6043,7 +6051,7 @@
               "costs": [
                 {
                   "unitId": "_ImR84h",
-                  "cost": 5
+                  "cost": 0
                 }
               ],
               "gains": [
@@ -6068,9 +6076,6 @@
           "parentPackageUid": "PjXum",
           "type": "ArmyBookUpgradeSection",
           "variant": "replace",
-          "affects": {
-            "type": "all"
-          },
           "targets": [
             "Berserker Claws"
           ]
@@ -6083,7 +6088,7 @@
       "hint": "Berserker Beast Riders",
       "sections": [
         {
-          "id": "_50ViFv",
+          "id": "8e4f10o",
           "uid": "KnFEL",
           "label": "Replace Berserker Claws",
           "options": [
@@ -6093,7 +6098,7 @@
               "costs": [
                 {
                   "unitId": "DCcm6OJ",
-                  "cost": 5
+                  "cost": 0
                 }
               ],
               "gains": [
@@ -6122,7 +6127,7 @@
               "costs": [
                 {
                   "unitId": "DCcm6OJ",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -6179,55 +6184,17 @@
       "hint": "Berserker Leader",
       "sections": [
         {
-          "id": "w6dyyzW",
+          "id": "ETeF5j_",
           "uid": "G5hYd",
-          "label": "Replace Dual Hand Weapon",
+          "label": "Replace Great Saw",
           "options": [
-            {
-              "uid": "g5wYEQLk4r",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "kvO1_5u",
-                  "cost": 0
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Great Saw",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 1,
-                  "weaponId": "avSwasQ1",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 2
-                    },
-                    {
-                      "id": "_mrPya5SXSqW",
-                      "name": "Deadly",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Great Saw (A1, AP(2), Deadly(3))"
-                }
-              ],
-              "label": "Great Saw (A1, AP(2), Deadly(3))",
-              "parentSectionId": "G5hYd",
-              "id": "g5wYEQLk4r"
-            },
             {
               "uid": "S1-nKpSgor",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "kvO1_5u",
-                  "cost": 0
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -6296,39 +6263,6 @@
               "id": "_D4aF"
             },
             {
-              "uid": "gLKFXNLygE",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "kvO1_5u",
-                  "cost": 5
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Berserker Claws",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 3,
-                  "weaponId": "KETAJMAP",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 4
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Berserker Claws (A3, AP(4))"
-                }
-              ],
-              "label": "Berserker Claws (A3, AP(4))",
-              "parentSectionId": "G5hYd",
-              "id": "gLKFXNLygE"
-            },
-            {
               "uid": "cK10tBCuwA",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -6374,17 +6308,50 @@
               "label": "Lance (A2, Thrust), Combat Shield (Shielded)",
               "parentSectionId": "G5hYd",
               "id": "cK10tBCuwA"
+            },
+            {
+              "uid": "gLKFXNLygE",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "kvO1_5u",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Berserker Claws",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "KETAJMAP",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Berserker Claws (A3, AP(4))"
+                }
+              ],
+              "label": "Berserker Claws (A3, AP(4))",
+              "parentSectionId": "G5hYd",
+              "id": "gLKFXNLygE"
             }
           ],
           "parentPackageUid": "xeAdI",
           "type": "ArmyBookUpgradeSection",
           "variant": "replace",
           "targets": [
-            "Dual Hand Weapon"
+            "Great Saw"
           ]
         },
         {
-          "id": "QKRXJtx",
+          "id": "OqT-Kn6",
           "uid": "GKnmw",
           "label": "Upgrade with one",
           "options": [
@@ -6461,7 +6428,7 @@
       "hint": "Veteran Leader Weapons",
       "sections": [
         {
-          "id": "BW-KNoI",
+          "id": "LWyz8gD",
           "uid": "XcMI8",
           "label": "Replace Leader Pistol",
           "options": [
@@ -6671,7 +6638,7 @@
           ]
         },
         {
-          "id": "Bp4CXKD",
+          "id": "kIk3cVz",
           "uid": "EfFwD",
           "label": "Replace CCW",
           "options": [
@@ -6796,7 +6763,7 @@
               "costs": [
                 {
                   "unitId": "RdSmE77",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -6840,7 +6807,7 @@
       "hint": "Squad Upgrades - Ultra Veterans",
       "sections": [
         {
-          "id": "QVf1C92",
+          "id": "MmCQpfD",
           "uid": "TI6Ag",
           "label": "Upgrade with one",
           "options": [
@@ -6850,7 +6817,7 @@
               "costs": [
                 {
                   "unitId": "f2gOlPs",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -6924,7 +6891,7 @@
       "hint": "Specialists - Berserker",
       "sections": [
         {
-          "id": "nC3ek2K",
+          "id": "5wOjx5Y",
           "uid": "p-1Al-aW",
           "label": "Upgrade with one",
           "options": [
@@ -6994,7 +6961,7 @@
               "costs": [
                 {
                   "unitId": "kvO1_5u",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -7024,7 +6991,7 @@
               "costs": [
                 {
                   "unitId": "kvO1_5u",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -7055,7 +7022,7 @@
               "costs": [
                 {
                   "unitId": "kvO1_5u",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -7086,7 +7053,7 @@
               "costs": [
                 {
                   "unitId": "kvO1_5u",
-                  "cost": 35
+                  "cost": 45
                 }
               ],
               "gains": [
@@ -7129,7 +7096,7 @@
       "hint": "Specialists - Ultra Veteran",
       "sections": [
         {
-          "id": "RJHx-JB",
+          "id": "08S7aHI",
           "uid": "1jvGyJRh",
           "label": "Upgrade with one",
           "options": [
@@ -7169,7 +7136,7 @@
               "costs": [
                 {
                   "unitId": "wHYIcWV",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -7199,7 +7166,7 @@
               "costs": [
                 {
                   "unitId": "wHYIcWV",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -7230,7 +7197,7 @@
               "costs": [
                 {
                   "unitId": "wHYIcWV",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -7261,7 +7228,7 @@
               "costs": [
                 {
                   "unitId": "wHYIcWV",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -7303,7 +7270,7 @@
       "hint": "Specialists - Veteran",
       "sections": [
         {
-          "id": "EPPaGxe",
+          "id": "21TpR5L",
           "uid": "F6QM6eQX",
           "label": "Upgrade with one",
           "options": [
@@ -7373,7 +7340,7 @@
               "costs": [
                 {
                   "unitId": "RdSmE77",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -7403,7 +7370,7 @@
               "costs": [
                 {
                   "unitId": "RdSmE77",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -7433,7 +7400,7 @@
               "costs": [
                 {
                   "unitId": "RdSmE77",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -7465,7 +7432,7 @@
               "costs": [
                 {
                   "unitId": "RdSmE77",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -8083,8 +8050,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:54:02.256Z",
-  "editedAt": "2026-04-29T14:54:41.614Z",
+  "modifiedAt": "2026-04-30T15:03:38.274Z",
+  "editedAt": "2026-04-30T15:03:38.273Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/1wj1ysgxpuuz9bc7/HLuJ_G_UDCVWud21yrs7z.jpg",

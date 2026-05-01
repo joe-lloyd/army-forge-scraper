@@ -15,6 +15,89 @@
   "backgroundFull": "In ancient times, the Elves were driven from the plains by the expanding human tribes. While many Elves fled to the Heartland forest, others were driven into the sea. These Elves discovered a great island to the east of Tyria and made their home there, finding many ruins and relics from lost civilisations. \n\nMost of these relics had been worn away by time, left broken and indecipherable, but the Elves who studied them gained a deep insight into magic and many powerful tools. Some of these wards were still active, and it was only through their magic that the islands were kept safe from flooding. Soon, these scholar Elves became powerful mages and ruled over their people. They learnt to command the beasts of the sea and demanded absolute obedience from their subjects. They used their knowledge to modify themselves to gain greater control over the creatures they controlled, slowly becoming more and more like their monstrous servants, capable of living in the ocean as easily as on land. \n\nAs the Mages became increasingly tyrannical and detached from the rest of the Sea Elves, they began to encounter rising resistance and even outright rebellion from their downtrodden kin. Eventually, the Mages were faced with revolution, and even their powerful magic and monstrous servants were not enough to quell it. The Mages and their followers became desperate, and chose to release even the creatures which they could not control, though they knew it would require them to destroy the island’s wards. \n\nAs the ocean and its monsters poured onto the island, these Elves fled into the deep sea, narrowly escaping the destruction they had wrought. The Elves found new lairs in caverns deep beneath the ocean, where they hid away, as much of their knowledge and relics had been abandoned in the flood, and were now scattered or destroyed. Slowly, the Mages and their servants began to rebuild in the oceans of Tyria, jealously seeking to reclaim the knowledge and power which they had lost beneath the waves. \n\nFor centuries now, the Deep-Sea Elves have sought whatever relics and magical knowledge they can find through coastal raids and hidden Voidgates, and some say that they are nearly ready to re-emerge onto the land and forge a new Empire to replace the one they have lost. \n\nHow will you reclaim your birthright?",
   "units": [
     {
+      "id": "WOcO4yE",
+      "cost": 50,
+      "name": "Sea Master",
+      "size": 1,
+      "bases": {
+        "round": "32",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "SPhAaWwefTmH",
+          "name": "Wave-Step",
+          "label": "Wave-Step"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "tiAlumta",
+          "name": "Barb Net-Catcher",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "olPuTa7O",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "WcOMD7QgPYXZ",
+              "name": "Lacerate",
+              "label": "Lacerate"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Barb Net-Catcher (A1, AP(1), Blast(3), Lacerate)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "A1",
+        "TPHl_s6k"
+      ],
+      "genericName": "Elite Sea Elf Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "UgsTwGS",
       "cost": 40,
       "name": "Scholar",
@@ -131,6 +214,7 @@
       ],
       "upgrades": [
         "C1",
+        "WcjON",
         "qebESXxV"
       ],
       "genericName": "Elite Sea Elf Warriors",
@@ -403,7 +487,8 @@
         }
       ],
       "upgrades": [
-        "C1"
+        "C1",
+        "Ku5irLdL"
       ],
       "genericName": "Sea Elf Warriors",
       "hasCustomRule": false,
@@ -752,11 +837,588 @@
   ],
   "upgradePackages": [
     {
+      "uid": "A1",
+      "hint": "Sea Master",
+      "sections": [
+        {
+          "id": "5kIm4le",
+          "uid": "UL2-I1v",
+          "label": "Replace Barb Net-Catcher",
+          "options": [
+            {
+              "uid": "S70OB",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Hand Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "6_Zqzqib",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Hand Weapon (A3, AP(1))"
+                }
+              ],
+              "label": "Heavy Hand Weapon (A3, AP(1))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "UL2-I1v",
+              "parentSectionId": "UL2-I1v",
+              "id": "S70OB"
+            },
+            {
+              "uid": "Zb1cZO7",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "BjFKyOXj",
+                  "name": "Heavy Halberd",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "Uy5FUW5G",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Halberd (A3, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Halberd (A3, AP(1), Rending)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "UL2-I1v",
+              "parentSectionId": "UL2-I1v",
+              "id": "Zb1cZO7"
+            },
+            {
+              "uid": "oLcbq_A",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Dual Heavy Hand Weapons",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "Ai9AtHvU",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dual Heavy Hand Weapons (A4, AP(1))"
+                }
+              ],
+              "label": "Dual Heavy Hand Weapons (A4, AP(1))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "UL2-I1v",
+              "parentSectionId": "UL2-I1v",
+              "id": "oLcbq_A"
+            },
+            {
+              "uid": "CxcPYS6",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "UqiqzYV2",
+                  "name": "Heavy Lance",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "ggb3h5wP",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "umbiz4tnEyF8",
+                      "name": "Thrust",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Lance (A3, AP(1), Thrust)",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Lance (A3, AP(1), Thrust)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "UL2-I1v",
+              "parentSectionId": "UL2-I1v",
+              "id": "CxcPYS6"
+            },
+            {
+              "uid": "lizeqpy",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "OSApTxXO",
+                  "name": "Heavy Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "UdU5JI5X",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Great Weapon (A3, AP(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Great Weapon (A3, AP(3))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "UL2-I1v",
+              "parentSectionId": "UL2-I1v",
+              "id": "lizeqpy"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Barb Net-Catcher"
+          ]
+        },
+        {
+          "id": "aWbH7JV",
+          "uid": "3nf9k",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "aYx-T",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Bow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "Hwvj_cWC",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Bow (24\", A2)"
+                },
+                {
+                  "name": "Head Reaver",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Head Reaver (Quick Shot)",
+                  "content": [
+                    {
+                      "id": "ykPufsAeq8Kw",
+                      "name": "Quick Shot",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Bow (24\", A2), Head Reaver (Quick Shot)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "3nf9k",
+              "parentSectionId": "3nf9k",
+              "id": "aYx-T"
+            },
+            {
+              "uid": "JDAC5S_HyT",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Crossbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "1O7HxLN_",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Crossbow (24\", A2, Rending)"
+                },
+                {
+                  "name": "Head Reaver",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Head Reaver (Quick Shot)",
+                  "content": [
+                    {
+                      "id": "ykPufsAeq8Kw",
+                      "name": "Quick Shot",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Crossbow (24\", A2, Rending), Head Reaver (Quick Shot)",
+              "parentSectionId": "3nf9k",
+              "id": "JDAC5S_HyT"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        },
+        {
+          "id": "SgCs0Aa",
+          "uid": "81EPk10R",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "UrxVYUDD",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Deep-Sea Passage",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Deep-Sea Passage (Ambush Re-Deployment)",
+                  "content": [
+                    {
+                      "id": "kpuEyaul7J3Z",
+                      "name": "Ambush Re-Deployment",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Deep-Sea Passage (Ambush Re-Deployment)",
+              "parentSectionId": "81EPk10R",
+              "parentPackageUid": "m8fVRWFW",
+              "id": "UrxVYUDD"
+            }
+          ],
+          "parentPackageUid": "m8fVRWFW",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        },
+        {
+          "id": "hFvh-Ql",
+          "uid": "68Qs6US",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "_hzb7cAeqn",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Thrall Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Thrall Master (Furious)",
+                  "content": [
+                    {
+                      "id": "JoOCVPx1xT1G",
+                      "name": "Furious",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Thrall Master (Furious)",
+              "parentSectionId": "68Qs6US",
+              "id": "_hzb7cAeqn"
+            },
+            {
+              "uid": "X0tI09l6fV",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sea Guardian",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sea Guardian (Scout)",
+                  "content": [
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sea Guardian (Scout)",
+              "parentSectionId": "68Qs6US",
+              "id": "X0tI09l6fV"
+            },
+            {
+              "uid": "Dc5t4b4",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Blaster War-Eel",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "60x35",
+                    "square": "50x25"
+                  },
+                  "label": "Blaster War-Eel (Fast, Impact(1), Retaliate(1))",
+                  "content": [
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "zCjAFXut7Gsg",
+                      "name": "Retaliate",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Blaster War-Eel (Fast, Impact(1), Retaliate(1))",
+              "parentSectionId": "68Qs6US",
+              "id": "Dc5t4b4"
+            },
+            {
+              "uid": "nFIfQ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Barrier War-Eel",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "60x35",
+                    "square": "50x25"
+                  },
+                  "label": "Barrier War-Eel (Fast, Impact(1), Stealth)",
+                  "content": [
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "9jyvRoBODD-O",
+                      "name": "Stealth",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Barrier War-Eel (Fast, Impact(1), Stealth)",
+              "parentSectionId": "68Qs6US",
+              "id": "nFIfQ"
+            },
+            {
+              "uid": "wAe6XjF",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 65
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sea-Wyrm",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "75x46",
+                    "square": "75x50"
+                  },
+                  "label": "Sea-Wyrm (Toxin Jaws (A1, Bane), Fast, Impact(2), Tough(3))",
+                  "content": [
+                    {
+                      "id": "4mudjWAL",
+                      "name": "Toxin Jaws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 1,
+                      "weaponId": "yK4PVA4L",
+                      "specialRules": [
+                        {
+                          "id": "Naqc5mga9Uha",
+                          "name": "Bane"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Toxin Jaws (A1, Bane)"
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sea-Wyrm (Toxin Jaws (A1, Bane), Fast, Impact(2), Tough(3))",
+              "parentSectionId": "68Qs6US",
+              "id": "wAe6XjF"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "B1",
       "hint": "Scholar",
       "sections": [
         {
-          "id": "7ozkZXo",
+          "id": "BJl-bQi",
           "uid": "y3R-xuD",
           "label": "Replace Hand Weapon",
           "options": [
@@ -871,7 +1533,7 @@
           ]
         },
         {
-          "id": "GLr7RaX",
+          "id": "QysuLfm",
           "uid": "AsZE_3o",
           "label": "Upgrade with one",
           "options": [
@@ -973,7 +1635,7 @@
           }
         },
         {
-          "id": "BKuUSs6",
+          "id": "LYnecMQ",
           "uid": "4_4sL3dzou",
           "label": "Upgrade with",
           "options": [
@@ -1014,7 +1676,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "YTjPmNw",
+          "id": "MhUQHir",
           "uid": "4Otj4W0",
           "label": "Upgrade with one",
           "options": [
@@ -1048,36 +1710,6 @@
               "id": "4DNG-cUKqj"
             },
             {
-              "uid": "eDRpmXPI_F",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "UgsTwGS",
-                  "cost": 5
-                }
-              ],
-              "gains": [
-                {
-                  "id": "6qXg7WB",
-                  "name": "Deep-Sea Companion",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Deep-Sea Companion (Repel Ambushers)",
-                  "content": [
-                    {
-                      "id": "C6MzEy1CnxTs",
-                      "name": "Repel Ambushers",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Deep-Sea Companion (Repel Ambushers)",
-              "parentSectionId": "4Otj4W0",
-              "id": "eDRpmXPI_F"
-            },
-            {
               "uid": "vKWezKmV-g",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -1105,6 +1737,36 @@
               "label": "Sea Guardian (Scout)",
               "parentSectionId": "4Otj4W0",
               "id": "vKWezKmV-g"
+            },
+            {
+              "uid": "eDRpmXPI_F",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "UgsTwGS",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "6qXg7WB",
+                  "name": "Deep-Sea Companion",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Deep-Sea Companion (Repel Ambushers)",
+                  "content": [
+                    {
+                      "id": "C6MzEy1CnxTs",
+                      "name": "Repel Ambushers",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Deep-Sea Companion (Repel Ambushers)",
+              "parentSectionId": "4Otj4W0",
+              "id": "eDRpmXPI_F"
             },
             {
               "uid": "C4aTl",
@@ -1264,7 +1926,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "Hfj-gJM",
+          "id": "_yHU_na",
           "uid": "tVmhdBR",
           "label": "Upgrade one model with one",
           "options": [
@@ -1413,7 +2075,7 @@
       "hint": "Elf Reavers",
       "sections": [
         {
-          "id": "6edmFFW",
+          "id": "XECsF8h",
           "uid": "U4FkSST",
           "label": "Replace Bow",
           "options": [
@@ -1468,10 +2130,55 @@
       "hint": "Depth Horrors",
       "sections": [
         {
-          "id": "VBw8DcN",
+          "id": "DWXCXIM",
           "uid": "CSr2rK6",
           "label": "Replace Dual Hand Weapon",
           "options": [
+            {
+              "uid": "DOUae",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "lpZp_f1",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "HVybGGmI",
+                  "name": "Barb Net-Catcher",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "olPuTa7O",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Barb Net-Catcher (A1, AP(1), Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Barb Net-Catcher (A1, AP(1), Blast(3), Lacerate)",
+              "parentPackageUid": "E1",
+              "parentSectionUid": "CSr2rK6",
+              "parentSectionId": "CSr2rK6",
+              "id": "DOUae"
+            },
             {
               "uid": "Bl_CY",
               "type": "ArmyBookUpgradeOption",
@@ -1561,7 +2268,7 @@
       "hint": "War-Eel Riders",
       "sections": [
         {
-          "id": "q94oBBD",
+          "id": "bRphg9S",
           "uid": "pOhKu3a",
           "label": "Replace Lance",
           "options": [
@@ -1605,7 +2312,7 @@
           ]
         },
         {
-          "id": "yaKJu4Z",
+          "id": "QG0wXyW",
           "uid": "u6m4nS9",
           "label": "Upgrade with one",
           "options": [
@@ -1690,7 +2397,7 @@
       "hint": "Deep-Sea Passage",
       "sections": [
         {
-          "id": "PKGaMWk",
+          "id": "VvyRc9O",
           "uid": "DfGHcxv-69",
           "label": "Upgrade all models with",
           "options": [
@@ -1752,7 +2459,7 @@
       "hint": "Specialists - Scholar",
       "sections": [
         {
-          "id": "cu_wTiF",
+          "id": "T0bRUiU",
           "uid": "ZT8ALkxj",
           "label": "Upgrade with one",
           "options": [
@@ -1763,7 +2470,7 @@
               "costs": [
                 {
                   "unitId": "UgsTwGS",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1795,7 +2502,7 @@
               "costs": [
                 {
                   "unitId": "UgsTwGS",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1826,7 +2533,7 @@
               "costs": [
                 {
                   "unitId": "UgsTwGS",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1857,7 +2564,7 @@
               "costs": [
                 {
                   "unitId": "UgsTwGS",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1881,10 +2588,364 @@
               "parentPackageUid": "cGowvZRS",
               "parentSectionUid": "Cd6gxt5",
               "id": "dQZXy5dQ"
+            },
+            {
+              "uid": "V_RleiVj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "UgsTwGS",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Tidemage",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Tidemage (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Tidemage (Caster(2))",
+              "parentSectionId": "ZT8ALkxj",
+              "parentPackageUid": "cGowvZRS",
+              "id": "V_RleiVj"
+            },
+            {
+              "uid": "t5kgCWqZn8",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "UgsTwGS",
+                  "cost": 75
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Tidemage",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Master Tidemage (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Tidemage (Caster(3))",
+              "parentSectionId": "ZT8ALkxj",
+              "id": "t5kgCWqZn8"
             }
           ],
           "isHeroUpgrade": true,
           "parentPackageUid": "cGowvZRS",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "WcjON",
+      "hint": "Elf Thralls",
+      "sections": [
+        {
+          "id": "cB2kMv_",
+          "uid": "EwbfV",
+          "label": "Replace Great Weapon",
+          "options": [
+            {
+              "uid": "z1BoR",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "PZhbjdS",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Barb Net-Catcher",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "olPuTa7O",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Barb Net-Catcher (A1, AP(1), Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Barb Net-Catcher (A1, AP(1), Blast(3), Lacerate)",
+              "parentPackageUid": "WcjON",
+              "parentSectionUid": "EwbfV",
+              "parentSectionId": "EwbfV",
+              "id": "z1BoR"
+            }
+          ],
+          "parentPackageUid": "WcjON",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Great Weapon"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "Ku5irLdL",
+      "hint": "Sea Guard",
+      "sections": [
+        {
+          "id": "ZIePP6s",
+          "uid": "1eVJ8zXYHK",
+          "label": "Upgrade one model with",
+          "options": [
+            {
+              "uid": "JI5h-eJ2fH",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5WDN0x7",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Mage Apprentice",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Mage Apprentice (Spell Accumulator(1))",
+                  "content": [
+                    {
+                      "id": "sHIDSc5b37Jm",
+                      "name": "Spell Accumulator",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Mage Apprentice (Spell Accumulator(1))",
+              "parentSectionId": "1eVJ8zXYHK",
+              "id": "JI5h-eJ2fH"
+            }
+          ],
+          "parentPackageUid": "Ku5irLdL",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "model": true,
+          "affects": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "TPHl_s6k",
+      "hint": "Specialists - Master",
+      "sections": [
+        {
+          "id": "GCiGDR8",
+          "uid": "JHG_nCqN",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "E5uFWaus",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "High Monarch",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "High Monarch (Bane in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "XoDRL2xVEnVf",
+                      "name": "Bane in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "High Monarch (Bane in Melee Aura)",
+              "parentSectionId": "JHG_nCqN",
+              "parentPackageUid": "bF8oynEr",
+              "id": "E5uFWaus"
+            },
+            {
+              "uid": "0__IRnQT",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Light Bringer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Light Bringer (Fearless Aura)",
+                  "content": [
+                    {
+                      "id": "C0UHMLhvoXXj",
+                      "name": "Fearless Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Light Bringer (Fearless Aura)",
+              "parentSectionId": "JHG_nCqN",
+              "parentPackageUid": "bF8oynEr",
+              "parentSectionUid": "Cd6gxt5",
+              "id": "0__IRnQT"
+            },
+            {
+              "uid": "1quz5nQ-",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Divine Navigator",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Divine Navigator (Wave-Step Boost Aura)",
+                  "content": [
+                    {
+                      "id": "9tX9-9gULZSe",
+                      "name": "Wave-Step Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Divine Navigator (Wave-Step Boost Aura)",
+              "parentSectionId": "JHG_nCqN",
+              "parentPackageUid": "bF8oynEr",
+              "id": "1quz5nQ-"
+            },
+            {
+              "uid": "_xKdXPMM",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Depth Scryer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Depth Scryer (Ranged Shrouding Aura)",
+                  "content": [
+                    {
+                      "id": "oZewV0wGuebE",
+                      "name": "Ranged Shrouding Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Depth Scryer (Ranged Shrouding Aura)",
+              "parentSectionId": "JHG_nCqN",
+              "parentPackageUid": "bF8oynEr",
+              "parentSectionUid": "Cd6gxt5",
+              "id": "_xKdXPMM"
+            },
+            {
+              "uid": "WNG0Wa7W",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WOcO4yE",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Army Standard Bearer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Army Standard Bearer (Fear(2))",
+                  "content": [
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Army Standard Bearer (Fear(2))",
+              "parentSectionId": "JHG_nCqN",
+              "parentPackageUid": "bF8oynEr",
+              "id": "WNG0Wa7W"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "bF8oynEr",
           "type": "ArmyBookUpgradeSection",
           "variant": "upgrade",
           "select": {
@@ -2507,7 +3568,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:17.116Z",
+  "modifiedAt": "2026-04-30T09:21:31.238Z",
   "editedAt": "2026-04-13T14:38:45.692Z",
   "official": true,
   "versionString": "3.5.3",
@@ -2558,6 +3619,15 @@
       "targetType": 1
     },
     {
+      "id": "sHIDSc5b37Jm",
+      "name": "Spell Accumulator",
+      "aliasedRuleId": null,
+      "description": "Gets X accumulator tokens at the start of each round, but can’t hold more than 6 tokens at once. Casters from other friendly units within 12\" may spend this model's accumulator tokens as if they were their own spell tokens. Friendly casters may only use this rule if this unit isn't Shaken.",
+      "hasRating": true,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "C6MzEy1CnxTs",
       "name": "Repel Ambushers",
       "aliasedRuleId": null,
@@ -2594,6 +3664,15 @@
       "targetType": 1
     },
     {
+      "id": "XoDRL2xVEnVf",
+      "name": "Bane in Melee Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Bane in melee. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "C0UHMLhvoXXj",
       "name": "Fearless Aura",
       "aliasedRuleId": null,
@@ -2610,6 +3689,15 @@
       "hasRating": false,
       "coreType": null,
       "targetType": 1
+    },
+    {
+      "id": "WcOMD7QgPYXZ",
+      "name": "Lacerate",
+      "aliasedRuleId": null,
+      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
     },
     {
       "id": "kpuEyaul7J3Z",
@@ -2657,6 +3745,15 @@
       "targetType": 1
     },
     {
+      "id": "47CAqf7ySlfc",
+      "name": "Caster",
+      "aliasedRuleId": null,
+      "description": "Gets X spell tokens at the start of each round, but can’t hold more than 6 tokens at once. At any point before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). Roll one die, on 4+ resolve the effect on a target in line of sight. Models within 18” in line of sight of the caster’s unit may spend any number of spell tokens at the same time before rolling, to give the caster +1/-1 to the roll per token.",
+      "hasRating": true,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
       "id": "6mJw5IdqSqNC",
       "name": "Ambush",
       "aliasedRuleId": null,
@@ -2672,6 +3769,15 @@
       "description": "On unmodified results of 1 to block hits, this weapon deals 1 extra wound.",
       "hasRating": false,
       "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "Naqc5mga9Uha",
+      "name": "Bane",
+      "aliasedRuleId": null,
+      "description": "Ignores Regeneration, and when attacking the target must re-roll unmodified Defense results of 6.",
+      "hasRating": false,
+      "coreType": 1,
       "targetType": 2
     },
     {
@@ -2727,15 +3833,6 @@
       "hasRating": false,
       "coreType": 1,
       "targetType": 1
-    },
-    {
-      "id": "WcOMD7QgPYXZ",
-      "name": "Lacerate",
-      "aliasedRuleId": null,
-      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
-      "hasRating": false,
-      "coreType": null,
-      "targetType": 2
     },
     {
       "id": "w_vX0mi58KKt",

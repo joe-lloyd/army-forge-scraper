@@ -574,6 +574,70 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "Ohd9a74",
+      "cost": 20,
+      "name": "Warlock Rider",
+      "size": 1,
+      "bases": {
+        "round": "60x35",
+        "square": "50x25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "KdgwlPb8LuD2",
+          "name": "Fast",
+          "label": "Fast"
+        },
+        {
+          "id": "62-mYKVM9MLd",
+          "name": "Impact",
+          "rating": 1,
+          "label": "Impact(1)"
+        },
+        {
+          "id": "2xUH_d7T_Zfv",
+          "name": "Harassing",
+          "label": "Harassing"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "jxYRE8yK",
+          "name": "Dark Cutlass",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "oFplNxDJ",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "WcOMD7QgPYXZ",
+              "name": "Lacerate",
+              "label": "Lacerate"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Dark Cutlass (A1, Lacerate)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "K1",
+        "ilpkKbcW"
+      ],
+      "genericName": "Mage Cavalry",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "EpqxFAd",
       "cost": 20,
       "name": "Winged Sister",
@@ -631,7 +695,7 @@
     },
     {
       "id": "6mkvZRW",
-      "cost": 25,
+      "cost": 30,
       "name": "Dark Shooter",
       "size": 1,
       "bases": {
@@ -685,7 +749,8 @@
         }
       ],
       "upgrades": [
-        "E1"
+        "E1",
+        "gl_D6lFg"
       ],
       "genericName": "Marksmen",
       "hasCustomRule": false,
@@ -877,7 +942,8 @@
         }
       ],
       "upgrades": [
-        "E1"
+        "E1",
+        "kNvSY4sh"
       ],
       "genericName": "Scouts",
       "hasCustomRule": false,
@@ -956,10 +1022,47 @@
       "hint": "Dark Captain",
       "sections": [
         {
-          "id": "GcmGhPy",
+          "id": "3s8RfTn",
           "uid": "6O15LLi",
           "label": "Replace Heavy Hand Weapon",
           "options": [
+            {
+              "uid": "Eepq2ajeao",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "hqL6cA1",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Captain Heavy Dark Cutlass",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "dmgGu44g",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Captain Heavy Dark Cutlass (A3, AP(1), Lacerate)"
+                }
+              ],
+              "label": "Captain Heavy Dark Cutlass (A3, AP(1), Lacerate)",
+              "parentSectionId": "6O15LLi",
+              "id": "Eepq2ajeao"
+            },
             {
               "uid": "MvGKje-",
               "cost": 5,
@@ -1039,43 +1142,6 @@
               "id": "F5UXi"
             },
             {
-              "uid": "NMGdWRI",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "hqL6cA1",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "id": "uxa4nHpb",
-                  "name": "Heavy Great Weapon",
-                  "type": "ArmyBookWeapon",
-                  "range": 0,
-                  "attacks": 3,
-                  "weaponId": "UdU5JI5X",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Heavy Great Weapon (A3, AP(3))",
-                  "count": 1
-                }
-              ],
-              "label": "Heavy Great Weapon (A3, AP(3))",
-              "parentPackageUid": "A1",
-              "parentSectionUid": "6O15LLi",
-              "parentSectionId": "6O15LLi",
-              "id": "NMGdWRI"
-            },
-            {
               "uid": "v0vsYlx",
               "cost": 5,
               "type": "ArmyBookUpgradeOption",
@@ -1116,6 +1182,43 @@
               "parentSectionUid": "6O15LLi",
               "parentSectionId": "6O15LLi",
               "id": "v0vsYlx"
+            },
+            {
+              "uid": "NMGdWRI",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "hqL6cA1",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "uxa4nHpb",
+                  "name": "Heavy Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "UdU5JI5X",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Great Weapon (A3, AP(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Great Weapon (A3, AP(3))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "6O15LLi",
+              "parentSectionId": "6O15LLi",
+              "id": "NMGdWRI"
             },
             {
               "uid": "Mph7Nh-",
@@ -1168,7 +1271,7 @@
           ]
         },
         {
-          "id": "wOafxn1",
+          "id": "j-bBgcD",
           "uid": "s0bvI-V",
           "label": "Upgrade with one",
           "options": [
@@ -1207,13 +1310,45 @@
               "id": "JAevtPO"
             },
             {
+              "uid": "Wt8r1we2Mw",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "hqL6cA1",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Captain Dark Handbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 3,
+                  "weaponId": "ibg5qx6A",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Captain Dark Handbow (12\", A3, Lacerate)"
+                }
+              ],
+              "label": "Captain Dark Handbow (12\", A3, Lacerate)",
+              "parentSectionId": "s0bvI-V",
+              "id": "Wt8r1we2Mw"
+            },
+            {
               "uid": "35qfIyG",
               "cost": 35,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "hqL6cA1",
-                  "cost": 30
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -1239,6 +1374,38 @@
               "parentSectionUid": "s0bvI-V",
               "parentSectionId": "s0bvI-V",
               "id": "35qfIyG"
+            },
+            {
+              "uid": "hlDyUJsVFT",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "hqL6cA1",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Captain Dark Crossbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 3,
+                  "weaponId": "aq8IaM89",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Captain Dark Crossbow (24\", A3, Lacerate)"
+                }
+              ],
+              "label": "Captain Dark Crossbow (24\", A3, Lacerate)",
+              "parentSectionId": "s0bvI-V",
+              "id": "hlDyUJsVFT"
             }
           ],
           "parentPackageUid": "A1",
@@ -1250,7 +1417,7 @@
           }
         },
         {
-          "id": "v87PGbO",
+          "id": "ubCkPGB",
           "uid": "88srmw_",
           "label": "Upgrade with one",
           "options": [
@@ -1558,7 +1725,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "EmbgDcQ",
+          "id": "-75l2YV",
           "uid": "A5tmu",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1662,6 +1829,38 @@
               "parentSectionUid": "A5tmu",
               "parentSectionId": "A5tmu",
               "id": "AfGos"
+            },
+            {
+              "uid": "Wa6CP10inC",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IoM820w",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Captain Dark Cutlass",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "FNxe-PAq",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Captain Dark Cutlass (A3, Lacerate)"
+                }
+              ],
+              "label": "Captain Dark Cutlass (A3, Lacerate)",
+              "parentSectionId": "A5tmu",
+              "id": "Wa6CP10inC"
             },
             {
               "uid": "Ra4Pj",
@@ -1777,7 +1976,7 @@
           ]
         },
         {
-          "id": "wKrp5dt",
+          "id": "ke8DJgM",
           "uid": "c0mkJaefj4",
           "label": "Upgrade with one",
           "options": [
@@ -1814,6 +2013,38 @@
               "id": "_Bv_4-aHgK"
             },
             {
+              "uid": "NLGAblZnPW",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IoM820w",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Captain Dark Handbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 3,
+                  "weaponId": "ibg5qx6A",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Captain Dark Handbow (12\", A3, Lacerate)"
+                }
+              ],
+              "label": "Captain Dark Handbow (12\", A3, Lacerate)",
+              "parentSectionId": "c0mkJaefj4",
+              "id": "NLGAblZnPW"
+            },
+            {
               "uid": "MsHO-dnL2j",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -1844,6 +2075,38 @@
               "label": "Captain Repeater Crossbow (18\", A3, Rending)",
               "parentSectionId": "c0mkJaefj4",
               "id": "MsHO-dnL2j"
+            },
+            {
+              "uid": "93tcjgLO7B",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IoM820w",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Captain Dark Crossbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 3,
+                  "weaponId": "aq8IaM89",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Captain Dark Crossbow (24\", A3, Lacerate)"
+                }
+              ],
+              "label": "Captain Dark Crossbow (24\", A3, Lacerate)",
+              "parentSectionId": "c0mkJaefj4",
+              "id": "93tcjgLO7B"
             }
           ],
           "parentPackageUid": "D1",
@@ -1855,7 +2118,7 @@
           }
         },
         {
-          "id": "xIdCHxK",
+          "id": "vn3Bnd8",
           "uid": "jixsFPa",
           "label": "Upgrade with one",
           "options": [
@@ -2125,7 +2388,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "0CZg1Mk",
+          "id": "1PQ2Awh",
           "uid": "T7P8u4a",
           "label": "Upgrade one model with one",
           "options": [
@@ -2334,10 +2597,42 @@
       "hint": "Dark Warriors",
       "sections": [
         {
-          "id": "-VDlRq1",
+          "id": "akzIdPe",
           "uid": "3lGAe7j",
           "label": "Replace all Hand Weapons",
           "options": [
+            {
+              "uid": "ua_WTFgckF",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "yrBgoA2",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Dark Cutlass",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "oFplNxDJ",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dark Cutlass (A1, Lacerate)"
+                }
+              ],
+              "label": "Dark Cutlass (A1, Lacerate)",
+              "parentSectionId": "3lGAe7j",
+              "id": "ua_WTFgckF"
+            },
             {
               "uid": "7xUQ_zZ",
               "cost": 20,
@@ -2428,7 +2723,7 @@
       "hint": "Corsairs",
       "sections": [
         {
-          "id": "iHPzNtI",
+          "id": "uDcswup",
           "uid": "gEQMxjN",
           "label": "Replace Dual Hand Weapon",
           "options": [
@@ -2479,6 +2774,50 @@
               "parentSectionUid": "gEQMxjN",
               "parentSectionId": "gEQMxjN",
               "id": "AfAA_Ti"
+            },
+            {
+              "uid": "w_PzjlmyPq",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ldmXtEN",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Dark Handbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 2,
+                  "weaponId": "UgvbAdJW",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dark Handbow (12\", A2, Lacerate)"
+                },
+                {
+                  "id": null,
+                  "name": "Hand Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "SWnfRBdJ",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Hand Weapon (A1)"
+                }
+              ],
+              "label": "Dark Handbow (12\", A2, Lacerate), Hand Weapon (A1)",
+              "parentSectionId": "gEQMxjN",
+              "id": "w_PzjlmyPq"
             }
           ],
           "parentPackageUid": "G1",
@@ -2496,7 +2835,7 @@
       "hint": "Winged Sisters",
       "sections": [
         {
-          "id": "HRWbWsJ",
+          "id": "XX8XpzS",
           "uid": "9hV3aiy",
           "label": "Replace Dual Hand Weapon",
           "options": [
@@ -2564,7 +2903,7 @@
       "hint": "Snake Sisters",
       "sections": [
         {
-          "id": "d9SOlc2",
+          "id": "j8UHRQD",
           "uid": "Iw16rwT",
           "label": "Replace Blood Glaive",
           "options": [
@@ -2631,7 +2970,7 @@
       "hint": "Dark Horsemen",
       "sections": [
         {
-          "id": "u3kYiEf",
+          "id": "5HJwUfM",
           "uid": "ZBZLQOY",
           "label": "Replace Lance",
           "options": [
@@ -2682,6 +3021,50 @@
               "parentSectionUid": "ZBZLQOY",
               "parentSectionId": "ZBZLQOY",
               "id": "0zQue"
+            },
+            {
+              "uid": "zOQeI_O12E",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Qattnen",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Dark Crossbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "OYVNs29A",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dark Crossbow (24\", A2, Lacerate)"
+                },
+                {
+                  "id": null,
+                  "name": "Hand Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "SWnfRBdJ",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Hand Weapon (A1)"
+                }
+              ],
+              "label": "Dark Crossbow (24\", A2, Lacerate), Hand Weapon (A1)",
+              "parentSectionId": "ZBZLQOY",
+              "id": "zOQeI_O12E"
             }
           ],
           "parentPackageUid": "J1",
@@ -2695,11 +3078,61 @@
       "calcErrors": false
     },
     {
+      "uid": "K1",
+      "hint": "Warlock Riders",
+      "sections": [
+        {
+          "id": "njku7KZ",
+          "uid": "g_JIY7r",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "8kO0n",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Ohd9a74",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Apprentice Sorcerer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Apprentice Sorcerer (Caster(1))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Apprentice Sorcerer (Caster(1))",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "g_JIY7r",
+              "parentSectionId": "g_JIY7r",
+              "id": "8kO0n"
+            }
+          ],
+          "parentPackageUid": "K1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "ilpkKbcW",
       "hint": "Boarding Attack + Looting Frenzy",
       "sections": [
         {
-          "id": "K5Y3yh_",
+          "id": "fsmpaeG",
           "uid": "6Ug7dggUsz",
           "label": "Upgrade with any",
           "options": [
@@ -2713,6 +3146,10 @@
                 },
                 {
                   "unitId": "KmdhdcR",
+                  "cost": 5
+                },
+                {
+                  "unitId": "Ohd9a74",
                   "cost": 5
                 },
                 {
@@ -2756,6 +3193,10 @@
                   "cost": 5
                 },
                 {
+                  "unitId": "Ohd9a74",
+                  "cost": 5
+                },
+                {
                   "unitId": "EpqxFAd",
                   "cost": 5
                 }
@@ -2792,11 +3233,115 @@
       "calcErrors": false
     },
     {
+      "uid": "gl_D6lFg",
+      "hint": "Dark Shooters",
+      "sections": [
+        {
+          "id": "J_R3peT",
+          "uid": "7tlIHSSTpE",
+          "label": "Replace Repeater Crossbow",
+          "options": [
+            {
+              "uid": "0U3uL6q8jf",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6mkvZRW",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Dark Crossbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "OYVNs29A",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dark Crossbow (24\", A2, Lacerate)"
+                }
+              ],
+              "label": "Dark Crossbow (24\", A2, Lacerate)",
+              "parentSectionId": "7tlIHSSTpE",
+              "id": "0U3uL6q8jf"
+            }
+          ],
+          "parentPackageUid": "gl_D6lFg",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Repeater Crossbow"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "kNvSY4sh",
+      "hint": "Shade Scouts",
+      "sections": [
+        {
+          "id": "25iZ3E6",
+          "uid": "qCzlE3wzqy",
+          "label": "Replace Repeater Handbow",
+          "options": [
+            {
+              "uid": "-Zm_pn60hZ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "kj4MEA-",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Dark Handbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 2,
+                  "weaponId": "UgvbAdJW",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dark Handbow (12\", A2, Lacerate)"
+                }
+              ],
+              "label": "Dark Handbow (12\", A2, Lacerate)",
+              "parentSectionId": "qCzlE3wzqy",
+              "id": "-Zm_pn60hZ"
+            }
+          ],
+          "parentPackageUid": "kNvSY4sh",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Repeater Handbow"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "TZZYRyWq",
       "hint": "Specialists - Captain",
       "sections": [
         {
-          "id": "c_SvC8a",
+          "id": "vUZoCrI",
           "uid": "tUKPXZ0f",
           "label": "Upgrade with one",
           "options": [
@@ -2806,7 +3351,7 @@
               "costs": [
                 {
                   "unitId": "hqL6cA1",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2829,96 +3374,6 @@
               "parentSectionId": "tUKPXZ0f",
               "parentPackageUid": "OgxUcy7t",
               "id": "npytsR2o"
-            },
-            {
-              "uid": "MrR9WWVC",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "hqL6cA1",
-                  "cost": 5
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Boarding Expert",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Boarding Expert (Harassing Boost Aura)",
-                  "content": [
-                    {
-                      "id": "RUS7R0SwaBUj",
-                      "name": "Harassing Boost Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Boarding Expert (Harassing Boost Aura)",
-              "parentSectionId": "tUKPXZ0f",
-              "parentPackageUid": "OgxUcy7t",
-              "id": "MrR9WWVC"
-            },
-            {
-              "uid": "oCeQW3Pd",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "hqL6cA1",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Freebooter Captain",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Freebooter Captain (Quick Shot Aura)",
-                  "content": [
-                    {
-                      "id": "a9j1Pje6TLBi",
-                      "name": "Quick Shot Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Freebooter Captain (Quick Shot Aura)",
-              "parentSectionId": "tUKPXZ0f",
-              "parentPackageUid": "OgxUcy7t",
-              "id": "oCeQW3Pd"
-            },
-            {
-              "uid": "3vW5B4W-",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "hqL6cA1",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Fleet Master",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Fleet Master (Ambush Aura)",
-                  "content": [
-                    {
-                      "id": "gOFh4u_LGrwP",
-                      "name": "Ambush Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Fleet Master (Ambush Aura)",
-              "parentSectionId": "tUKPXZ0f",
-              "parentPackageUid": "OgxUcy7t",
-              "id": "3vW5B4W-"
             },
             {
               "uid": "bRtsG84d-i",
@@ -2948,6 +3403,96 @@
               "label": "Shade Assassin (Takedown Strike)",
               "parentSectionId": "tUKPXZ0f",
               "id": "bRtsG84d-i"
+            },
+            {
+              "uid": "MrR9WWVC",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "hqL6cA1",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Boarding Expert",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Boarding Expert (Harassing Boost Aura)",
+                  "content": [
+                    {
+                      "id": "RUS7R0SwaBUj",
+                      "name": "Harassing Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Boarding Expert (Harassing Boost Aura)",
+              "parentSectionId": "tUKPXZ0f",
+              "parentPackageUid": "OgxUcy7t",
+              "id": "MrR9WWVC"
+            },
+            {
+              "uid": "oCeQW3Pd",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "hqL6cA1",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Freebooter Captain",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Freebooter Captain (Quick Shot Aura)",
+                  "content": [
+                    {
+                      "id": "a9j1Pje6TLBi",
+                      "name": "Quick Shot Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Freebooter Captain (Quick Shot Aura)",
+              "parentSectionId": "tUKPXZ0f",
+              "parentPackageUid": "OgxUcy7t",
+              "id": "oCeQW3Pd"
+            },
+            {
+              "uid": "3vW5B4W-",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "hqL6cA1",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fleet Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Fleet Master (Ambush Aura)",
+                  "content": [
+                    {
+                      "id": "gOFh4u_LGrwP",
+                      "name": "Ambush Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Fleet Master (Ambush Aura)",
+              "parentSectionId": "tUKPXZ0f",
+              "parentPackageUid": "OgxUcy7t",
+              "id": "3vW5B4W-"
             },
             {
               "uid": "vP5SfMx2",
@@ -2998,7 +3543,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "ZTTWjig",
+          "id": "nydCFYF",
           "uid": "Yejpwjpr",
           "label": "Upgrade with one",
           "options": [
@@ -3038,7 +3583,7 @@
               "costs": [
                 {
                   "unitId": "IoM820w",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3068,7 +3613,7 @@
               "costs": [
                 {
                   "unitId": "IoM820w",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3098,7 +3643,7 @@
               "costs": [
                 {
                   "unitId": "IoM820w",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3121,6 +3666,68 @@
               "parentSectionId": "Yejpwjpr",
               "parentPackageUid": "trYZxCWO",
               "id": "gDK5nWPE"
+            },
+            {
+              "uid": "6Nrk7TTT",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IoM820w",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sorcerer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sorcerer (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sorcerer (Caster(2))",
+              "parentSectionId": "Yejpwjpr",
+              "parentPackageUid": "trYZxCWO",
+              "id": "6Nrk7TTT"
+            },
+            {
+              "uid": "NkqUKVZI",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IoM820w",
+                  "cost": 50
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Sorcerer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Master Sorcerer (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Sorcerer (Caster(3))",
+              "parentSectionId": "Yejpwjpr",
+              "parentPackageUid": "trYZxCWO",
+              "id": "NkqUKVZI"
             }
           ],
           "isHeroUpgrade": true,
@@ -3140,7 +3747,7 @@
       "hint": "Boarding Attack",
       "sections": [
         {
-          "id": "8XHcVbw",
+          "id": "tw_sPkq",
           "uid": "XqeTs_87nX",
           "label": "Upgrade all models with",
           "options": [
@@ -3211,7 +3818,7 @@
       "hint": "Boarding Attack (Heroes)",
       "sections": [
         {
-          "id": "ZhYxH_q",
+          "id": "4tpqkzr",
           "uid": "Dga2utB-",
           "label": "Upgrade with",
           "options": [
@@ -3845,7 +4452,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:14.947Z",
+  "modifiedAt": "2026-04-30T09:21:29.314Z",
   "editedAt": "2026-04-23T11:16:33.304Z",
   "official": true,
   "versionString": "3.5.3",
@@ -3958,6 +4565,15 @@
       "hasRating": true,
       "coreType": null,
       "targetType": 1
+    },
+    {
+      "id": "WcOMD7QgPYXZ",
+      "name": "Lacerate",
+      "aliasedRuleId": null,
+      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
     },
     {
       "id": "RUS7R0SwaBUj",
@@ -4093,15 +4709,6 @@
       "hasRating": false,
       "coreType": 1,
       "targetType": 1
-    },
-    {
-      "id": "WcOMD7QgPYXZ",
-      "name": "Lacerate",
-      "aliasedRuleId": null,
-      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
-      "hasRating": false,
-      "coreType": null,
-      "targetType": 2
     },
     {
       "id": "w_vX0mi58KKt",

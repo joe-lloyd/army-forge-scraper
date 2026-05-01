@@ -137,7 +137,7 @@
     {
       "id": "7xHcSJO",
       "key": "new-unit",
-      "cost": 165,
+      "cost": 170,
       "name": "Mage Council",
       "size": 5,
       "bases": {
@@ -920,7 +920,31 @@
         "round": "120x92",
         "square": "100x60"
       },
-      "items": [],
+      "items": [
+        {
+          "id": "adZBjFDe",
+          "name": "Extra Space",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "aogQZcOOQrDI",
+              "name": "Transport",
+              "type": "ArmyBookRule",
+              "rating": 11
+            },
+            {
+              "id": "f2smhv8L",
+              "name": "Crew Attacks",
+              "count": 1,
+              "attacks": 2,
+              "weaponId": "MsFml841",
+              "specialRules": [],
+              "label": "Crew Attacks (A2)"
+            }
+          ],
+          "count": 1
+        }
+      ],
       "rules": [
         {
           "id": "a0YtInGiUDd6",
@@ -937,35 +961,7 @@
       "valid": true,
       "defense": 3,
       "quality": 4,
-      "weapons": [
-        {
-          "id": "1gSQILYf",
-          "name": "Spear Crew",
-          "type": "ArmyBookWeapon",
-          "count": 1,
-          "range": null,
-          "attacks": 6,
-          "weaponId": "JXcPnVLx",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "17crjK7P6_w6",
-              "name": "AP",
-              "rating": 1,
-              "label": "AP(1)"
-            },
-            {
-              "type": "ArmyBookRule",
-              "id": "cavWDboL4ubs",
-              "name": "Rending",
-              "label": "Rending"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Spear Crew (A6, AP(1), Rending)",
-          "originalCount": 1
-        }
-      ],
+      "weapons": [],
       "upgrades": [
         "P2CIy"
       ],
@@ -1229,7 +1225,7 @@
     },
     {
       "id": "v7FIEfQ",
-      "cost": 230,
+      "cost": 235,
       "name": "Steam Tank of Water",
       "size": 1,
       "bases": {
@@ -1327,7 +1323,7 @@
     },
     {
       "id": "9M00fD4",
-      "cost": 75,
+      "cost": 80,
       "name": "Empire Artillery",
       "size": 1,
       "bases": {
@@ -1402,7 +1398,7 @@
     },
     {
       "id": "0RUh3Gd",
-      "cost": 635,
+      "cost": 640,
       "name": "Elemental Titan",
       "size": 1,
       "bases": {
@@ -1521,7 +1517,7 @@
       "hint": "Battle Master",
       "sections": [
         {
-          "id": "WSCDO_M",
+          "id": "6E3VG3a",
           "uid": "fYgqdxo",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1733,7 +1729,7 @@
           ]
         },
         {
-          "id": "Pw6gtRi",
+          "id": "phmMUS6",
           "uid": "ML5CKi-",
           "label": "Upgrade with one",
           "options": [
@@ -1850,7 +1846,7 @@
           }
         },
         {
-          "id": "8vPPjY1",
+          "id": "MWQmJ2b",
           "uid": "f2MwRhU",
           "label": "Upgrade with one",
           "options": [
@@ -1989,7 +1985,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 205,
+                  "cost": 210,
                   "unitId": "Vj0QX3_"
                 }
               ],
@@ -2177,7 +2173,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "sd3drkV",
+          "id": "tZ9JPGJ",
           "uid": "xRfrcmf",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2364,7 +2360,7 @@
           ]
         },
         {
-          "id": "Q2gWRjB",
+          "id": "JWD7y0V",
           "uid": "Q1sIEXi",
           "label": "Upgrade with one",
           "options": [
@@ -2594,7 +2590,7 @@
           }
         },
         {
-          "id": "DY79ISw",
+          "id": "EFscOZb",
           "uid": "pYrPL5H",
           "label": "Upgrade with one",
           "options": [
@@ -2780,7 +2776,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "gYnx6F_",
+          "id": "dsZ1Pn8",
           "uid": "rYmmZcl",
           "label": "Upgrade up to three models with one",
           "options": [
@@ -2965,7 +2961,7 @@
       "hint": "Infantrymen",
       "sections": [
         {
-          "id": "w7V0RhA",
+          "id": "8Vlv2MT",
           "uid": "qhtlSgM",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2975,7 +2971,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 25,
                   "unitId": "-ESvMWE"
                 }
               ],
@@ -3059,7 +3055,7 @@
       "hint": "Marksmen",
       "sections": [
         {
-          "id": "AcCD6XQ",
+          "id": "UZgOcKf",
           "uid": "MMbaPhL",
           "label": "Replace all Firepowder Rifles",
           "options": [
@@ -3143,7 +3139,7 @@
           ]
         },
         {
-          "id": "4uvWb1f",
+          "id": "fIs0nJF",
           "uid": "c5uXM85",
           "label": "Replace one Firepowder Rifle",
           "options": [
@@ -3318,7 +3314,7 @@
       "hint": "Horse Marksmen",
       "sections": [
         {
-          "id": "O6rKQrs",
+          "id": "aWmfIOx",
           "uid": "WAzhz_J",
           "label": "Replace all Firepowder Rifles",
           "options": [
@@ -3435,7 +3431,7 @@
           ]
         },
         {
-          "id": "j_lAMkT",
+          "id": "KSeZnvC",
           "uid": "Rf8R3nO",
           "label": "Replace one Firepowder Rifle",
           "options": [
@@ -3533,7 +3529,7 @@
       "hint": "Knights",
       "sections": [
         {
-          "id": "2znVDmW",
+          "id": "40A4StH",
           "uid": "NR9lxGT",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -3592,7 +3588,7 @@
       "hint": "Guard Knights",
       "sections": [
         {
-          "id": "e8RurQi",
+          "id": "H7CRUBG",
           "uid": "NKCix9d",
           "label": "Replace all Lances",
           "options": [
@@ -3648,7 +3644,7 @@
       "hint": "Gryph Riders",
       "sections": [
         {
-          "id": "HIzbwpk",
+          "id": "DBNhmWc",
           "uid": "CcLOj0a",
           "label": "Replace all Lances",
           "options": [
@@ -3703,7 +3699,7 @@
       "hint": "Steam Tank",
       "sections": [
         {
-          "id": "ScHg6qh",
+          "id": "FI-HXpg",
           "uid": "Y_wdwmc",
           "label": "Replace Tank Cannon",
           "options": [
@@ -3764,7 +3760,7 @@
       "hint": "Empire Artillery",
       "sections": [
         {
-          "id": "gHzY_du",
+          "id": "TnI962B",
           "uid": "hq2n1IT",
           "label": "Replace Firepowder Volley Gun",
           "options": [
@@ -3896,7 +3892,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 35,
                   "unitId": "9M00fD4"
                 }
               ],
@@ -3997,7 +3993,7 @@
       "hint": "Mercenaries",
       "sections": [
         {
-          "id": "2kLeieX",
+          "id": "Cqst8AU",
           "uid": "3OWMz",
           "label": "Replace all Firepowder Pistols and Hand Weapons",
           "options": [
@@ -4185,12 +4181,12 @@
       "hint": "War Wagon",
       "sections": [
         {
-          "id": "xOR73oH",
+          "id": "ORiPKJM",
           "uid": "Prw5f",
-          "label": "Replace Spear Crew",
+          "label": "Replace Extra Space",
           "options": [
             {
-              "uid": "R8Hk_Tq7l8",
+              "uid": "w1H4OOMqap",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
@@ -4200,35 +4196,33 @@
               ],
               "gains": [
                 {
-                  "name": "Extra Space",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Extra Space (Crew Attacks (A2), Transport(11))",
-                  "content": [
+                  "id": null,
+                  "name": "Spear Crew",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 6,
+                  "weaponId": "JXcPnVLx",
+                  "specialRules": [
                     {
-                      "id": "ibVtnBGf",
-                      "name": "Crew Attacks",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 0,
-                      "attacks": 2,
-                      "weaponId": "MsFml841",
-                      "specialRules": [],
-                      "attacksMultiplier": 1
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
                     },
                     {
-                      "id": "aogQZcOOQrDI",
-                      "name": "Transport",
-                      "type": "ArmyBookRule",
-                      "rating": 11
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
                     }
                   ],
-                  "count": 1
+                  "attacksMultiplier": 1,
+                  "label": "Spear Crew (A6, AP(1), Rending)"
                 }
               ],
-              "label": "Extra Space (Crew Attacks (A2), Transport(11))",
+              "label": "Spear Crew (A6, AP(1), Rending)",
               "parentSectionId": "Prw5f",
-              "id": "R8Hk_Tq7l8"
+              "id": "w1H4OOMqap"
             },
             {
               "uid": "fPceV",
@@ -4283,11 +4277,11 @@
           "type": "ArmyBookUpgradeSection",
           "variant": "replace",
           "targets": [
-            "Spear Crew"
+            "Extra Space"
           ]
         },
         {
-          "id": "EXXNDOH",
+          "id": "-8JVjG1",
           "uid": "qAFJ7Y4X",
           "label": "Upgrade with",
           "options": [
@@ -4334,7 +4328,7 @@
       "hint": "Elemental Titan",
       "sections": [
         {
-          "id": "xiG0jqS",
+          "id": "dBlaxpz",
           "uid": "w_f-C",
           "label": "Replace Aether Elemental",
           "options": [
@@ -4378,7 +4372,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 60,
+                  "cost": 65,
                   "unitId": "0RUh3Gd"
                 }
               ],
@@ -4463,7 +4457,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 85,
+                  "cost": 90,
                   "unitId": "0RUh3Gd"
                 }
               ],
@@ -4559,7 +4553,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "7D-Bkyu",
+          "id": "Zkamk7G",
           "uid": "_ujhFkKc",
           "label": "Upgrade with one",
           "options": [
@@ -4794,7 +4788,7 @@
       "hint": "Message Runner",
       "sections": [
         {
-          "id": "xOc08mQ",
+          "id": "ePcW6kl",
           "uid": "FZVgLCvkoj",
           "label": "Upgrade one model with",
           "options": [
@@ -4865,7 +4859,7 @@
       "hint": "Specialists - Master",
       "sections": [
         {
-          "id": "GR-zttz",
+          "id": "s6aHODW",
           "uid": "t_cGNkas",
           "label": "Upgrade with one",
           "options": [
@@ -5100,7 +5094,7 @@
       "hint": "Hunting Hounds",
       "sections": [
         {
-          "id": "ZRARzCJ",
+          "id": "cdga97B",
           "uid": "0NfZIY5fT_",
           "label": "Replace Frenzied Bites",
           "options": [
@@ -5147,7 +5141,7 @@
           ]
         },
         {
-          "id": "axNYGc_",
+          "id": "06G8oFd",
           "uid": "F1l3MSQ10Z",
           "label": "Upgrade all models with",
           "options": [
@@ -5814,8 +5808,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:45.069Z",
-  "editedAt": "2026-04-28T08:43:20.929Z",
+  "modifiedAt": "2026-04-30T09:36:15.611Z",
+  "editedAt": "2026-04-30T09:36:15.611Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/jZ02AVPLx_S48Mnb/E8DqZPt93RLqiALEChBG5.jpg",
@@ -5838,8 +5832,8 @@
       "https://www.etsy.com/shop/onepagerules"
     ]
   },
-  "balanceValid": true,
-  "balanceValidReason": 0,
+  "balanceValid": false,
+  "balanceValidReason": 4,
   "loreUrl": "https://www.onepagerules.com/factions/human-empire",
   "voted": null,
   "specialRules": [

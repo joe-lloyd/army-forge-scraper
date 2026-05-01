@@ -5,7 +5,8 @@
     "build": "turbo run build",
     "dev": "turbo run dev --filter=web",
     "lint": "turbo run lint",
-    "scraper": "turbo run start --filter=scraper"
+    "scraper": "turbo run start --filter=@opr-api/scraper",
+    "update-data": "turbo run update-data --filter=web"
   },
   "devDependencies": {
     "turbo": "latest"

@@ -576,7 +576,7 @@
       "hint": "Sky-Captain",
       "sections": [
         {
-          "id": "M5h5t6i",
+          "id": "7gJ5BLX",
           "uid": "WjqeBx8",
           "label": "Replace Hand Weapon",
           "options": [
@@ -666,7 +666,7 @@
           ]
         },
         {
-          "id": "PZM3j2E",
+          "id": "Fm_AbIW",
           "uid": "s2J9-lm",
           "label": "Replace Flame Pistol",
           "options": [
@@ -795,7 +795,7 @@
       "hint": "Crew",
       "sections": [
         {
-          "id": "pN2PoQQ",
+          "id": "PEw8EXi",
           "uid": "7JOZWl_",
           "label": "Replace one Sky-Pistol and Hand Weapon",
           "options": [
@@ -849,7 +849,7 @@
           ]
         },
         {
-          "id": "XQqaczq",
+          "id": "5wjLxsX",
           "uid": "ZzFOs4A",
           "label": "Replace one Sky-Pistol",
           "options": [
@@ -1017,7 +1017,7 @@
           ]
         },
         {
-          "id": "a5oTCkv",
+          "id": "D2OBBEl",
           "uid": "2vqaepYO",
           "label": "Upgrade all models with",
           "options": [
@@ -1068,7 +1068,7 @@
       "hint": "Gunners",
       "sections": [
         {
-          "id": "01dTBkJ",
+          "id": "Nu9A7Nt",
           "uid": "uqWLpcm",
           "label": "Replace Sky-Rifle",
           "options": [
@@ -1114,7 +1114,7 @@
               "costs": [
                 {
                   "unitId": "a8sLHLr",
-                  "cost": 20
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -1156,7 +1156,7 @@
       "hint": "Balloon Wardens",
       "sections": [
         {
-          "id": "HwXv74G",
+          "id": "ExkLCb4",
           "uid": "bwsJF0f",
           "label": "Replace Twin Sky-Pistol and Sky-Pike",
           "options": [
@@ -1384,7 +1384,7 @@
           ]
         },
         {
-          "id": "vH6JoXD",
+          "id": "aa_dUle",
           "uid": "_qP8yWY",
           "label": "Replace Twin Sky-Pistol",
           "options": [
@@ -1445,7 +1445,7 @@
           ]
         },
         {
-          "id": "2jguVk6",
+          "id": "cB9RYf-",
           "uid": "H80ZVwv",
           "label": "Upgrade with",
           "options": [
@@ -1456,7 +1456,7 @@
               "costs": [
                 {
                   "unitId": "UdcIwMi",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1492,7 +1492,7 @@
       "hint": "Balloon Riggers",
       "sections": [
         {
-          "id": "Pr_pFww",
+          "id": "VgDXYj_",
           "uid": "d1erjdr",
           "label": "Replace Rivet Gun and Chain-Sword",
           "options": [
@@ -1603,6 +1603,55 @@
               "id": "RnHdZNy"
             },
             {
+              "uid": "1RYvCTu",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WumZjo6",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "wvuK81YJ",
+                  "name": "Knife",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "wvuK81YJ",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Knife (A2)",
+                  "count": 1
+                },
+                {
+                  "id": "4V92XAR1",
+                  "name": "Volley Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 4,
+                  "weaponId": "4V92XAR1",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Volley Rifle (18\", A4, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Volley Rifle (18\", A4, AP(1)), Knife (A2)",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "d1erjdr",
+              "parentSectionId": "d1erjdr",
+              "id": "1RYvCTu"
+            },
+            {
               "uid": "Y64SIGk",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -1660,55 +1709,6 @@
               "label": "Grappling Hook Launcher (18\", A3, AP(1)), Knife (A2), Grapple (Hit & Run Shooter Aura)",
               "parentSectionId": "d1erjdr",
               "id": "Y64SIGk"
-            },
-            {
-              "uid": "1RYvCTu",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "WumZjo6",
-                  "cost": 20
-                }
-              ],
-              "gains": [
-                {
-                  "id": "wvuK81YJ",
-                  "name": "Knife",
-                  "type": "ArmyBookWeapon",
-                  "range": 0,
-                  "attacks": 2,
-                  "weaponId": "wvuK81YJ",
-                  "specialRules": [],
-                  "attacksMultiplier": 1,
-                  "label": "Knife (A2)",
-                  "count": 1
-                },
-                {
-                  "id": "4V92XAR1",
-                  "name": "Volley Rifle",
-                  "type": "ArmyBookWeapon",
-                  "range": 18,
-                  "attacks": 4,
-                  "weaponId": "4V92XAR1",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 1
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Volley Rifle (18\", A4, AP(1))",
-                  "count": 1
-                }
-              ],
-              "label": "Volley Rifle (18\", A4, AP(1)), Knife (A2)",
-              "parentPackageUid": "F1",
-              "parentSectionUid": "d1erjdr",
-              "parentSectionId": "d1erjdr",
-              "id": "1RYvCTu"
             }
           ],
           "parentPackageUid": "F1",
@@ -1720,7 +1720,7 @@
           ]
         },
         {
-          "id": "CM0iYeP",
+          "id": "bpxAep-",
           "uid": "TWzJDPU3",
           "label": "Upgrade with",
           "options": [
@@ -1761,7 +1761,7 @@
               "costs": [
                 {
                   "unitId": "WumZjo6",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -1798,7 +1798,7 @@
       "hint": "Heavy Gunners",
       "sections": [
         {
-          "id": "pE5O8N0",
+          "id": "aTly3yH",
           "uid": "2RGFC",
           "label": "Replace any Flame-Gun",
           "options": [
@@ -1970,7 +1970,7 @@
       "hint": "Specialists - Captain",
       "sections": [
         {
-          "id": "UjJO7Gj",
+          "id": "vIBkssA",
           "uid": "a-6XqPOW",
           "label": "Upgrade with one",
           "options": [
@@ -1981,7 +1981,7 @@
               "costs": [
                 {
                   "unitId": "PHMSpuh",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2013,7 +2013,7 @@
               "costs": [
                 {
                   "unitId": "PHMSpuh",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2045,7 +2045,7 @@
               "costs": [
                 {
                   "unitId": "PHMSpuh",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2077,7 +2077,7 @@
               "costs": [
                 {
                   "unitId": "PHMSpuh",
-                  "cost": 15
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -2101,37 +2101,6 @@
               "parentPackageUid": "BfrtyNsh",
               "parentSectionUid": "vGolSX9",
               "id": "KUz3_Tc7"
-            },
-            {
-              "uid": "iHVh4xSS",
-              "cost": 35,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "PHMSpuh",
-                  "cost": 35
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Engine Master",
-                  "type": "ArmyBookItem",
-                  "label": "Engine Master (Mend)",
-                  "content": [
-                    {
-                      "id": "mETdyZ__yMVj",
-                      "name": "Mend",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Engine Master (Mend)",
-              "parentSectionId": "a-6XqPOW",
-              "parentPackageUid": "BfrtyNsh",
-              "parentSectionUid": "vGolSX9",
-              "id": "iHVh4xSS"
             },
             {
               "uid": "zMXeXyhK",
@@ -2164,6 +2133,37 @@
               "parentPackageUid": "BfrtyNsh",
               "parentSectionUid": "vGolSX9",
               "id": "zMXeXyhK"
+            },
+            {
+              "uid": "iHVh4xSS",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "PHMSpuh",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Engine Master",
+                  "type": "ArmyBookItem",
+                  "label": "Engine Master (Mend)",
+                  "content": [
+                    {
+                      "id": "mETdyZ__yMVj",
+                      "name": "Mend",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Engine Master (Mend)",
+              "parentSectionId": "a-6XqPOW",
+              "parentPackageUid": "BfrtyNsh",
+              "parentSectionUid": "vGolSX9",
+              "id": "iHVh4xSS"
             }
           ],
           "isHeroUpgrade": true,
@@ -2176,7 +2176,7 @@
           }
         },
         {
-          "id": "ZL31nV9",
+          "id": "u5unLt0",
           "uid": "KotRNFDE",
           "label": "Upgrade with",
           "options": [
@@ -2223,17 +2223,50 @@
       "hint": "Balloon Hunters",
       "sections": [
         {
-          "id": "M5bVTDU",
+          "id": "MJI-eIz",
           "uid": "pzIgfXI6",
           "label": "Upgrade with one",
           "options": [
+            {
+              "uid": "B8MAvrOTQT",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "fmWhps6",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Twin Sky-Rifle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "a3RqTww0",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Twin Sky-Rifle (24\", A2, AP(1))"
+                }
+              ],
+              "label": "Twin Sky-Rifle (24\", A2, AP(1))",
+              "parentSectionId": "pzIgfXI6",
+              "id": "B8MAvrOTQT"
+            },
             {
               "uid": "x-Py4-76",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "fmWhps6",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -2274,39 +2307,6 @@
               "parentSectionId": "pzIgfXI6",
               "parentPackageUid": "7qTTso-f",
               "id": "x-Py4-76"
-            },
-            {
-              "uid": "B8MAvrOTQT",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "fmWhps6",
-                  "cost": 30
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Twin Sky-Rifle",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 24,
-                  "attacks": 2,
-                  "weaponId": "a3RqTww0",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 1
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Twin Sky-Rifle (24\", A2, AP(1))"
-                }
-              ],
-              "label": "Twin Sky-Rifle (24\", A2, AP(1))",
-              "parentSectionId": "pzIgfXI6",
-              "id": "B8MAvrOTQT"
             }
           ],
           "parentPackageUid": "7qTTso-f",
@@ -2318,7 +2318,7 @@
           }
         },
         {
-          "id": "BmxXjui",
+          "id": "Hfb1bgb",
           "uid": "k3jRU67N",
           "label": "Upgrade with",
           "options": [
@@ -2945,7 +2945,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:54:26.393Z",
+  "modifiedAt": "2026-04-30T09:22:31.767Z",
   "editedAt": "2026-04-13T15:59:02.994Z",
   "official": true,
   "versionString": "3.5.3",

@@ -317,7 +317,7 @@
     },
     {
       "id": "bqb55tx",
-      "cost": 60,
+      "cost": 70,
       "name": "Swiftclaw",
       "size": 1,
       "type": 1,
@@ -426,7 +426,7 @@
     },
     {
       "id": "nY94cji",
-      "cost": 45,
+      "cost": 50,
       "name": "Eonflux",
       "size": 1,
       "type": 1,
@@ -1267,7 +1267,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "UX7v0Yi",
+          "id": "THStYMj",
           "uid": "uVvec",
           "label": "Replace Armblade",
           "options": [
@@ -1326,7 +1326,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "MzKCf14",
+          "id": "iMgQ1S3",
           "uid": "qlNM8hz",
           "label": "Upgrade with one",
           "options": [
@@ -1447,7 +1447,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "3HQX0ES",
+          "id": "sX0LI9L",
           "uid": "9xmu_Bn",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1613,7 +1613,7 @@
           ]
         },
         {
-          "id": "_o4sN49",
+          "id": "PM3YD0a",
           "uid": "ATYkq59",
           "label": "Upgrade with",
           "options": [
@@ -1656,7 +1656,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "kEgSWrz",
+          "id": "OSllu5k",
           "uid": "z_2Ss5S",
           "label": "Upgrade with any",
           "options": [
@@ -1699,7 +1699,7 @@
               "costs": [
                 {
                   "unitId": "xWCvQaatP",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1739,7 +1739,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "Wi55ynI",
+          "id": "xOYEHkC",
           "uid": "g-b1R",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -1898,61 +1898,6 @@
               "id": "YCnNlNX5fW"
             },
             {
-              "uid": "Iw_PB",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "VuB6STi_R",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Magic Blast",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 12,
-                  "attacks": 4,
-                  "weaponId": "PAe0VqXu",
-                  "specialRules": [
-                    {
-                      "id": "IEJp3a4vE0CB",
-                      "name": "Shred"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Magic Blast (12\", A4, Shred)"
-                },
-                {
-                  "id": null,
-                  "name": "Power Staff",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": null,
-                  "attacks": 2,
-                  "weaponId": "iGYRvcjX",
-                  "specialRules": [
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending"
-                    },
-                    {
-                      "id": "IEJp3a4vE0CB",
-                      "name": "Shred"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Power Staff (A2, Rending, Shred)"
-                }
-              ],
-              "label": "Magic Blast (12\", A4, Shred), Power Staff (A2, Rending, Shred)",
-              "parentPackageUid": "C3UuL",
-              "parentSectionUid": "g-b1R",
-              "parentSectionId": "g-b1R",
-              "id": "Iw_PB"
-            },
-            {
               "uid": "iLstcYi63D",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -2004,6 +1949,61 @@
               "label": "Hexed Chakram (18\", A3, Surge), Power Staff (A2, Rending, Shred)",
               "parentSectionId": "g-b1R",
               "id": "iLstcYi63D"
+            },
+            {
+              "uid": "Iw_PB",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "VuB6STi_R",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Magic Blast",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 4,
+                  "weaponId": "PAe0VqXu",
+                  "specialRules": [
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Magic Blast (12\", A4, Shred)"
+                },
+                {
+                  "id": null,
+                  "name": "Power Staff",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 2,
+                  "weaponId": "iGYRvcjX",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Power Staff (A2, Rending, Shred)"
+                }
+              ],
+              "label": "Magic Blast (12\", A4, Shred), Power Staff (A2, Rending, Shred)",
+              "parentPackageUid": "C3UuL",
+              "parentSectionUid": "g-b1R",
+              "parentSectionId": "g-b1R",
+              "id": "Iw_PB"
             }
           ],
           "parentPackageUid": "C3UuL",
@@ -2015,7 +2015,7 @@
           ]
         },
         {
-          "id": "c8_ur6p",
+          "id": "z_PBPDL",
           "uid": "DJTr1",
           "label": "Replace any Power Staff",
           "options": [
@@ -2071,7 +2071,7 @@
           ]
         },
         {
-          "id": "oYtHaeq",
+          "id": "XD5ANuC",
           "uid": "Jo1qEI68",
           "label": "Upgrade with",
           "options": [
@@ -2114,7 +2114,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "nTQ2lc8",
+          "id": "hDffV5m",
           "uid": "z3G3m",
           "label": "Upgrade with one",
           "options": [
@@ -2124,7 +2124,7 @@
               "costs": [
                 {
                   "unitId": "VuB6STi_R",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2210,7 +2210,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "08oYvp9",
+          "id": "Nl23S1K",
           "uid": "rU0Lr",
           "label": "Replace Mutated Claws",
           "options": [
@@ -2319,7 +2319,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "GkHLnDm",
+          "id": "FJSpz-O",
           "uid": "k6phA",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -2427,7 +2427,7 @@
               "costs": [
                 {
                   "unitId": "jFX10hTHU",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2597,7 +2597,7 @@
           ]
         },
         {
-          "id": "vNqqJAe",
+          "id": "__-4QZI",
           "uid": "dzk31",
           "label": "Replace any Power Staff",
           "options": [
@@ -2661,7 +2661,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "ZVlM_i8",
+          "id": "KMl8WiC",
           "uid": "jJcCY",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -2820,61 +2820,6 @@
               "id": "0UJJ55sJGr"
             },
             {
-              "uid": "VMMKs",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "7a44GoUMi",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Magic Blast",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 12,
-                  "attacks": 4,
-                  "weaponId": "PAe0VqXu",
-                  "specialRules": [
-                    {
-                      "id": "IEJp3a4vE0CB",
-                      "name": "Shred"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Magic Blast (12\", A4, Shred)"
-                },
-                {
-                  "id": null,
-                  "name": "Power Staff",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": null,
-                  "attacks": 2,
-                  "weaponId": "iGYRvcjX",
-                  "specialRules": [
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending"
-                    },
-                    {
-                      "id": "IEJp3a4vE0CB",
-                      "name": "Shred"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Power Staff (A2, Rending, Shred)"
-                }
-              ],
-              "label": "Magic Blast (12\", A4, Shred), Power Staff (A2, Rending, Shred)",
-              "parentPackageUid": "3y_Pe",
-              "parentSectionUid": "jJcCY",
-              "parentSectionId": "jJcCY",
-              "id": "VMMKs"
-            },
-            {
               "uid": "xqzYLfjW6M",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -2926,6 +2871,61 @@
               "label": "Hexed Chakram (18\", A3, Surge), Power Staff (A2, Rending, Shred)",
               "parentSectionId": "jJcCY",
               "id": "xqzYLfjW6M"
+            },
+            {
+              "uid": "VMMKs",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "7a44GoUMi",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Magic Blast",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 4,
+                  "weaponId": "PAe0VqXu",
+                  "specialRules": [
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Magic Blast (12\", A4, Shred)"
+                },
+                {
+                  "id": null,
+                  "name": "Power Staff",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 2,
+                  "weaponId": "iGYRvcjX",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Power Staff (A2, Rending, Shred)"
+                }
+              ],
+              "label": "Magic Blast (12\", A4, Shred), Power Staff (A2, Rending, Shred)",
+              "parentPackageUid": "3y_Pe",
+              "parentSectionUid": "jJcCY",
+              "parentSectionId": "jJcCY",
+              "id": "VMMKs"
             }
           ],
           "parentPackageUid": "3y_Pe",
@@ -2937,7 +2937,7 @@
           ]
         },
         {
-          "id": "4GVYns0",
+          "id": "kAQcSAg",
           "uid": "HsNci",
           "label": "Replace any Power Staff",
           "options": [
@@ -2993,7 +2993,7 @@
           ]
         },
         {
-          "id": "UrU1-Ei",
+          "id": "lvTIjKY",
           "uid": "XPKDTNVO",
           "label": "Upgrade with",
           "options": [
@@ -3043,7 +3043,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "QoOd-9T",
+          "id": "Xra3Vtm",
           "uid": "SNMn2",
           "label": "Upgrade with",
           "options": [
@@ -3093,7 +3093,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "705LerE",
+          "id": "bexqvCx",
           "uid": "LRymxjDasP",
           "label": "Replace Magic Bolt",
           "options": [
@@ -3170,7 +3170,7 @@
           ]
         },
         {
-          "id": "3_6oRiO",
+          "id": "5OlUahq",
           "uid": "9Fwehorm",
           "label": "Upgrade with",
           "options": [
@@ -3220,7 +3220,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "qZD5ZFV",
+          "id": "0E2Dnb_",
           "uid": "_dk0Vr2A",
           "label": "Upgrade with one",
           "options": [
@@ -3260,7 +3260,7 @@
               "costs": [
                 {
                   "unitId": "VuB6STi_R",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3291,7 +3291,7 @@
               "costs": [
                 {
                   "unitId": "VuB6STi_R",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3314,37 +3314,6 @@
               "parentSectionId": "_dk0Vr2A",
               "parentPackageUid": "G20bK-O7",
               "id": "g1UYxI6Y"
-            },
-            {
-              "uid": "VPdkY3XG",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "VuB6STi_R",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Change Favour",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Change Favour (Changebound Boost Aura)",
-                  "content": [
-                    {
-                      "id": "nU2aNk56ZJ8H",
-                      "name": "Changebound Boost Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Change Favour (Changebound Boost Aura)",
-              "parentSectionId": "_dk0Vr2A",
-              "parentPackageUid": "G20bK-O7",
-              "parentSectionUid": "KqfZo",
-              "id": "VPdkY3XG"
             },
             {
               "uid": "DwNzkbb6",
@@ -3379,12 +3348,43 @@
               "id": "DwNzkbb6"
             },
             {
+              "uid": "VPdkY3XG",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "VuB6STi_R",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Change Favour",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Change Favour (Changebound Boost Aura)",
+                  "content": [
+                    {
+                      "id": "nU2aNk56ZJ8H",
+                      "name": "Changebound Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Change Favour (Changebound Boost Aura)",
+              "parentSectionId": "_dk0Vr2A",
+              "parentPackageUid": "G20bK-O7",
+              "parentSectionUid": "KqfZo",
+              "id": "VPdkY3XG"
+            },
+            {
               "uid": "pudrwamS",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "VuB6STi_R",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -3429,7 +3429,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "67fj8rm",
+          "id": "UIzUmw5",
           "uid": "Gf_HZfpw",
           "label": "Upgrade with one",
           "options": [
@@ -3469,7 +3469,7 @@
               "costs": [
                 {
                   "unitId": "jFX10hTHU",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3500,7 +3500,7 @@
               "costs": [
                 {
                   "unitId": "jFX10hTHU",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3530,7 +3530,7 @@
               "costs": [
                 {
                   "unitId": "jFX10hTHU",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3573,7 +3573,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "9C9X9q3",
+          "id": "YLvYIG4",
           "uid": "q9KrL2Mw",
           "label": "Replace Magic Blast",
           "options": [
@@ -4257,7 +4257,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:54:48.037Z",
+  "modifiedAt": "2026-04-30T09:22:51.012Z",
   "editedAt": "2026-01-31T07:29:23.573Z",
   "official": true,
   "versionString": "3.5.3",
@@ -4280,8 +4280,8 @@
       "https://www.etsy.com/shop/onepagerules"
     ]
   },
-  "balanceValid": true,
-  "balanceValidReason": 0,
+  "balanceValid": false,
+  "balanceValidReason": 4,
   "loreUrl": null,
   "voted": null,
   "specialRules": [

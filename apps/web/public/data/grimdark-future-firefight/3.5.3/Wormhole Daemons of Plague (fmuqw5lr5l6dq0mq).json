@@ -217,7 +217,7 @@
     },
     {
       "id": "OIUBTkh5N",
-      "cost": 80,
+      "cost": 95,
       "name": "Plague Harvester",
       "size": 1,
       "sync": {
@@ -320,7 +320,7 @@
     },
     {
       "id": "qwp4bnI",
-      "cost": 75,
+      "cost": 85,
       "name": "Fungusfester",
       "size": 1,
       "type": 1,
@@ -754,22 +754,22 @@
       "weapons": [
         {
           "id": "DGLsGoHW",
-          "name": "Hand Weapon",
+          "name": "Infected Sword",
           "type": "ArmyBookWeapon",
           "count": 3,
-          "range": null,
+          "range": 0,
           "attacks": 1,
-          "weaponId": "rOZPAMuF",
+          "weaponId": "UTMP3YE0",
           "specialRules": [
             {
               "type": "ArmyBookRule",
-              "id": "Naqc5mga9Uha",
-              "name": "Bane",
-              "label": "Bane"
+              "id": "5v6oaGfrdf29",
+              "name": "Surge",
+              "label": "Surge"
             }
           ],
           "attacksMultiplier": 1,
-          "label": "Hand Weapon (A1, Bane)",
+          "label": "Infected Sword (A1, Surge)",
           "originalCount": 3
         }
       ],
@@ -955,7 +955,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "k7DWv5H",
+          "id": "iejKVpj",
           "uid": "9txt0",
           "label": "Replace Sword and Plague Hammer",
           "options": [
@@ -1164,7 +1164,7 @@
           ]
         },
         {
-          "id": "o0IG3en",
+          "id": "n0urOj-",
           "uid": "9eW-I",
           "label": "Replace any Infected Sword",
           "options": [
@@ -1257,7 +1257,7 @@
           ]
         },
         {
-          "id": "xzPXezy",
+          "id": "n4FJvML",
           "uid": "H5nRE",
           "label": "Upgrade with one",
           "options": [
@@ -1299,7 +1299,7 @@
               "costs": [
                 {
                   "unitId": "OH_Og3K-F",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1451,7 +1451,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "3NM5uqN",
+          "id": "5RFlhUC",
           "uid": "fpyuQ",
           "label": "Replace Infected Claws",
           "options": [
@@ -1547,7 +1547,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "aBzINB8",
+          "id": "0PbgRdv",
           "uid": "6VwJPph",
           "label": "Upgrade one model with one",
           "options": [
@@ -1673,43 +1673,41 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "r4uhJFs",
+          "id": "PDqZCIj",
           "uid": "97DeS-1",
-          "label": "Replace all Hand Weapons",
+          "label": "Replace all Infected Swords",
           "options": [
             {
-              "uid": "dk98M",
+              "uid": "6nxW3c887Q",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "_OxfOEtOE",
-                  "cost": 0
+                  "cost": 5
                 }
               ],
               "gains": [
                 {
                   "id": null,
-                  "name": "Infected Sword",
+                  "name": "Hand Weapon",
                   "type": "ArmyBookWeapon",
                   "count": 1,
-                  "range": 0,
+                  "range": null,
                   "attacks": 1,
-                  "weaponId": "UTMP3YE0",
+                  "weaponId": "rOZPAMuF",
                   "specialRules": [
                     {
-                      "id": "5v6oaGfrdf29",
-                      "name": "Surge"
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
                     }
                   ],
                   "attacksMultiplier": 1,
-                  "label": "Infected Sword (A1, Surge)"
+                  "label": "Hand Weapon (A1, Bane)"
                 }
               ],
-              "label": "Infected Sword (A1, Surge)",
-              "parentPackageUid": "E1",
-              "parentSectionUid": "97DeS-1",
+              "label": "Hand Weapon (A1, Bane)",
               "parentSectionId": "97DeS-1",
-              "id": "dk98M"
+              "id": "6nxW3c887Q"
             },
             {
               "uid": "cYLog-U",
@@ -1718,7 +1716,7 @@
               "costs": [
                 {
                   "unitId": "_OxfOEtOE",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1751,13 +1749,48 @@
               "id": "cYLog-U"
             },
             {
+              "uid": "iE4pWv4",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_OxfOEtOE",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "Qzt9xVWg",
+                  "name": "Dual Hand Weapons",
+                  "type": "ArmyBookWeapon",
+                  "range": null,
+                  "attacks": 2,
+                  "weaponId": "Qzt9xVWg",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dual Hand Weapons (A2, Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Dual Hand Weapons (A2, Bane)",
+              "parentPackageUid": "E1",
+              "parentSectionUid": "97DeS-1",
+              "parentSectionId": "97DeS-1",
+              "id": "iE4pWv4"
+            },
+            {
               "uid": "cFcMLkc",
               "cost": 10,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "_OxfOEtOE",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1796,7 +1829,7 @@
               "costs": [
                 {
                   "unitId": "_OxfOEtOE",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1828,41 +1861,6 @@
               "parentSectionUid": "97DeS-1",
               "parentSectionId": "97DeS-1",
               "id": "1i_Y1yi"
-            },
-            {
-              "uid": "iE4pWv4",
-              "cost": 20,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "_OxfOEtOE",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "id": "Qzt9xVWg",
-                  "name": "Dual Hand Weapons",
-                  "type": "ArmyBookWeapon",
-                  "range": null,
-                  "attacks": 2,
-                  "weaponId": "Qzt9xVWg",
-                  "specialRules": [
-                    {
-                      "id": "Naqc5mga9Uha",
-                      "name": "Bane"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Dual Hand Weapons (A2, Bane)",
-                  "count": 1
-                }
-              ],
-              "label": "Dual Hand Weapons (A2, Bane)",
-              "parentPackageUid": "E1",
-              "parentSectionUid": "97DeS-1",
-              "parentSectionId": "97DeS-1",
-              "id": "iE4pWv4"
             }
           ],
           "parentPackageUid": "E1",
@@ -1872,11 +1870,11 @@
             "type": "all"
           },
           "targets": [
-            "Hand Weapons"
+            "Infected Swords"
           ]
         },
         {
-          "id": "29Da6_k",
+          "id": "yhP6oET",
           "uid": "2KxLhuHf",
           "label": "Upgrade all models with",
           "options": [
@@ -1921,7 +1919,7 @@
           }
         },
         {
-          "id": "V4YOoVp",
+          "id": "7wzEqsE",
           "uid": "HT8ocIZ",
           "label": "Upgrade one model with",
           "options": [
@@ -1931,7 +1929,7 @@
               "costs": [
                 {
                   "unitId": "_OxfOEtOE",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1975,7 +1973,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "QuzfPTg",
+          "id": "VRZxfYY",
           "uid": "qO9zQ",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2022,7 +2020,7 @@
           ]
         },
         {
-          "id": "2HJTF1N",
+          "id": "xTVOtvR",
           "uid": "QJ9Phbz",
           "label": "Replace Stinger",
           "options": [
@@ -2075,7 +2073,7 @@
           ]
         },
         {
-          "id": "JhWuzkH",
+          "id": "0xaEe_Z",
           "uid": "dEZjAIW",
           "label": "Upgrade with any",
           "options": [
@@ -2163,7 +2161,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "vGZ6DzU",
+          "id": "dTuSwot",
           "uid": "RDNe3",
           "label": "Replace Mutated Infected Claws",
           "options": [
@@ -2205,7 +2203,7 @@
               "costs": [
                 {
                   "unitId": "XKdzOLrZN",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2252,7 +2250,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "18EnGrG",
+          "id": "wD56mzz",
           "uid": "rhph_",
           "label": "Replace Sword and Plague Hammer",
           "options": [
@@ -2463,7 +2461,7 @@
           ]
         },
         {
-          "id": "Vxm6P85",
+          "id": "BQ6Vkax",
           "uid": "vZMlo",
           "label": "Replace any Infected Sword",
           "options": [
@@ -2564,7 +2562,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "-1kZXNL",
+          "id": "Ft3HqUl",
           "uid": "wBhze",
           "label": "Upgrade with one",
           "options": [
@@ -2605,7 +2603,7 @@
               "costs": [
                 {
                   "unitId": "OH_Og3K-F",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2636,7 +2634,7 @@
               "costs": [
                 {
                   "unitId": "OH_Og3K-F",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2660,37 +2658,6 @@
               "parentSectionUid": "wBhze",
               "parentSectionId": "wBhze",
               "id": "ZF5HO"
-            },
-            {
-              "uid": "ZnSII",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "OH_Og3K-F",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Envoy of Plague",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Envoy of Plague (Rending in Melee Aura)",
-                  "content": [
-                    {
-                      "id": "-05w6vRgH2k9",
-                      "name": "Rending in Melee Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Envoy of Plague (Rending in Melee Aura)",
-              "parentPackageUid": "htH7F",
-              "parentSectionUid": "wBhze",
-              "parentSectionId": "wBhze",
-              "id": "ZnSII"
             },
             {
               "uid": "Pp_T0",
@@ -2725,12 +2692,43 @@
               "id": "Pp_T0"
             },
             {
+              "uid": "ZnSII",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "OH_Og3K-F",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Envoy of Plague",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Envoy of Plague (Rending in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "-05w6vRgH2k9",
+                      "name": "Rending in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Envoy of Plague (Rending in Melee Aura)",
+              "parentPackageUid": "htH7F",
+              "parentSectionUid": "wBhze",
+              "parentSectionId": "wBhze",
+              "id": "ZnSII"
+            },
+            {
               "uid": "r8vZa",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "OH_Og3K-F",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -2775,7 +2773,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "gOGW10I",
+          "id": "kDJLtOf",
           "uid": "Pvjn7YT0",
           "label": "Replace Scatter-Sling",
           "options": [
@@ -2826,7 +2824,7 @@
           ]
         },
         {
-          "id": "ZkknDgh",
+          "id": "El2gUn8",
           "uid": "tY_yT",
           "label": "Upgrade with",
           "options": [
@@ -2875,7 +2873,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "c64d9pz",
+          "id": "OjzcPKO",
           "uid": "5m7d0Sdu",
           "label": "Upgrade with",
           "options": [
@@ -2924,7 +2922,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "3_ZhOJF",
+          "id": "OhJwNG7",
           "uid": "_67V3vG8Sd",
           "label": "Replace Scatter-Sling",
           "options": [
@@ -2982,7 +2980,7 @@
       "sync": "vJuokTQpJWj3_MrJ",
       "sections": [
         {
-          "id": "b4MJ58L",
+          "id": "4m8N2IY",
           "uid": "vu8Exo4S",
           "label": "Upgrade with one",
           "options": [
@@ -3023,7 +3021,7 @@
               "costs": [
                 {
                   "unitId": "Gyc8X7kHv",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3054,7 +3052,7 @@
               "costs": [
                 {
                   "unitId": "Gyc8X7kHv",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3085,7 +3083,7 @@
               "costs": [
                 {
                   "unitId": "Gyc8X7kHv",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -3684,7 +3682,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:54:50.536Z",
+  "modifiedAt": "2026-04-30T09:22:52.855Z",
   "editedAt": "2026-01-31T07:30:55.882Z",
   "official": true,
   "versionString": "3.5.3",
@@ -3707,8 +3705,8 @@
       "https://www.etsy.com/shop/onepagerules"
     ]
   },
-  "balanceValid": false,
-  "balanceValidReason": 4,
+  "balanceValid": true,
+  "balanceValidReason": 0,
   "loreUrl": null,
   "voted": null,
   "specialRules": [

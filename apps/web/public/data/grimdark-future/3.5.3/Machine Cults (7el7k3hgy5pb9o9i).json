@@ -15,7 +15,7 @@
   "units": [
     {
       "id": "4ajpg-M",
-      "cost": 145,
+      "cost": 155,
       "name": "High Cyborg-Priest",
       "size": 1,
       "bases": {
@@ -39,10 +39,15 @@
           "name": "Tough",
           "rating": 6,
           "label": "Tough(6)"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
         }
       ],
       "valid": true,
-      "defense": 3,
+      "defense": 4,
       "quality": 4,
       "weapons": [
         {
@@ -186,7 +191,7 @@
     },
     {
       "id": "iGyqlfa",
-      "cost": 45,
+      "cost": 55,
       "name": "Cult Leader",
       "size": 1,
       "bases": {
@@ -219,7 +224,7 @@
       ],
       "valid": true,
       "defense": 4,
-      "quality": 5,
+      "quality": 4,
       "weapons": [
         {
           "id": "u42IQ0oq",
@@ -268,7 +273,7 @@
     },
     {
       "id": "L6kGWgk",
-      "cost": 85,
+      "cost": 110,
       "name": "Cult Rangers",
       "size": 5,
       "bases": {
@@ -290,7 +295,7 @@
       ],
       "valid": true,
       "defense": 4,
-      "quality": 5,
+      "quality": 4,
       "weapons": [
         {
           "id": "u42IQ0oq",
@@ -338,7 +343,7 @@
     },
     {
       "id": "XivtB59",
-      "cost": 115,
+      "cost": 135,
       "name": "Shock Priests",
       "size": 5,
       "bases": {
@@ -370,7 +375,7 @@
       ],
       "valid": true,
       "defense": 5,
-      "quality": 5,
+      "quality": 4,
       "weapons": [
         {
           "id": "r3uN6bHi",
@@ -402,6 +407,79 @@
       "disabledSections": [
         "HBKp5-4"
       ],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "GGy44eL",
+      "cost": 180,
+      "name": "Sect Stalkers",
+      "size": 5,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "KdgwlPb8LuD2",
+          "name": "Fast",
+          "label": "Fast"
+        },
+        {
+          "id": "JoOCVPx1xT1G",
+          "name": "Furious",
+          "label": "Furious"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "S8IZt-d0Sgwk",
+          "name": "Machine-Fog",
+          "label": "Machine-Fog"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "Ze90awxE",
+          "name": "Dual S-Blades",
+          "type": "ArmyBookWeapon",
+          "count": 5,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "Lfiql_sv",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Dual S-Blades (A2, AP(1), Rending)",
+          "originalCount": 5
+        }
+      ],
+      "upgrades": [
+        "F1"
+      ],
+      "genericName": "Sect Stalkers",
+      "hasCustomRule": false,
+      "disabledSections": [],
       "hasBalanceInvalid": false,
       "disabledUpgradeSections": []
     },
@@ -552,30 +630,40 @@
       "disabledUpgradeSections": []
     },
     {
-      "id": "GGy44eL",
-      "cost": 170,
-      "name": "Sect Stalkers",
-      "size": 5,
+      "id": "HGxRxOr",
+      "cost": 185,
+      "name": "Raider Cavalry",
+      "size": 3,
       "bases": {
-        "round": "40",
-        "square": "40"
+        "round": "60x35",
+        "square": "50x25"
       },
-      "items": [],
+      "items": [
+        {
+          "id": "-9D9PslI",
+          "name": "Cyborg Hooves",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "KdgwlPb8LuD2",
+              "name": "Fast",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 3
+        }
+      ],
       "rules": [
-        {
-          "id": "KdgwlPb8LuD2",
-          "name": "Fast",
-          "label": "Fast"
-        },
-        {
-          "id": "JoOCVPx1xT1G",
-          "name": "Furious",
-          "label": "Furious"
-        },
         {
           "id": "JSKVyurtWIyW",
           "name": "Strider",
           "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
         },
         {
           "id": "S8IZt-d0Sgwk",
@@ -585,16 +673,93 @@
       ],
       "valid": true,
       "defense": 4,
-      "quality": 3,
+      "quality": 4,
       "weapons": [
         {
-          "id": "Ze90awxE",
-          "name": "Dual S-Blades",
+          "id": "ZxZpO1sD",
+          "name": "Twin P-Pistol",
           "type": "ArmyBookWeapon",
-          "count": 5,
+          "count": 3,
+          "range": 9,
+          "attacks": 4,
+          "weaponId": "rhIpRrlR",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "WcOMD7QgPYXZ",
+              "name": "Lacerate",
+              "label": "Lacerate"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Twin P-Pistol (9\", A4, Lacerate)",
+          "originalCount": 3
+        },
+        {
+          "id": "Uek7nqRw",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
           "range": 0,
-          "attacks": 2,
-          "weaponId": "Lfiql_sv",
+          "attacks": 1,
+          "weaponId": "4o5CBBZC",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "CCW (A1)",
+          "count": 3,
+          "originalCount": 3
+        }
+      ],
+      "upgrades": [
+        "I1",
+        "zUfo6"
+      ],
+      "genericName": "Robot Cavalry",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "tT9cuP3",
+      "cost": 205,
+      "name": "Cult Gunners",
+      "size": 3,
+      "type": 0,
+      "bases": {
+        "round": "32",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "S8IZt-d0Sgwk",
+          "name": "Machine-Fog",
+          "label": "Machine-Fog"
+        },
+        {
+          "id": "H9E9PIWpGRdw",
+          "name": "Relentless",
+          "label": "Relentless"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "FR5eKDjG",
+          "name": "Eraser Beam",
+          "type": "ArmyBookWeapon",
+          "count": 3,
+          "range": 30,
+          "attacks": 1,
+          "weaponId": "KyqJn3hk",
           "specialRules": [
             {
               "type": "ArmyBookRule",
@@ -605,28 +770,42 @@
             },
             {
               "type": "ArmyBookRule",
-              "id": "cavWDboL4ubs",
-              "name": "Rending",
-              "label": "Rending"
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
             }
           ],
           "attacksMultiplier": 1,
-          "label": "Dual S-Blades (A2, AP(1), Rending)",
-          "originalCount": 5
+          "label": "Eraser Beam (30\", A1, AP(1), Blast(3))",
+          "originalCount": 3
+        },
+        {
+          "id": "V2zWbbvw",
+          "name": "Strike",
+          "type": "ArmyBookWeapon",
+          "count": 3,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "Lxf1DaC-",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Strike (A1)",
+          "originalCount": 3
         }
       ],
       "upgrades": [
-        "F1"
+        "ge4jOs_z",
+        "zUfo6"
       ],
-      "genericName": "Sect Stalkers",
+      "genericName": "Cult Gunners",
       "hasCustomRule": false,
-      "disabledSections": [],
       "hasBalanceInvalid": false,
       "disabledUpgradeSections": []
     },
     {
       "id": "M2Yr_Lr",
-      "cost": 225,
+      "cost": 230,
       "name": "Destroyer Cyborgs",
       "size": 3,
       "bases": {
@@ -704,7 +883,7 @@
     },
     {
       "id": "SGQH2IV",
-      "cost": 265,
+      "cost": 270,
       "name": "Breacher Cyborgs",
       "size": 3,
       "bases": {
@@ -775,96 +954,6 @@
         "J1"
       ],
       "genericName": "Combat Cyborgs",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "disabledUpgradeSections": []
-    },
-    {
-      "id": "HGxRxOr",
-      "cost": 150,
-      "name": "Raider Cavalry",
-      "size": 3,
-      "bases": {
-        "round": "60x35",
-        "square": "50x25"
-      },
-      "items": [
-        {
-          "id": "-9D9PslI",
-          "name": "Cyborg Hooves",
-          "type": "ArmyBookItem",
-          "content": [
-            {
-              "id": "KdgwlPb8LuD2",
-              "name": "Fast",
-              "type": "ArmyBookRule"
-            }
-          ],
-          "count": 3
-        }
-      ],
-      "rules": [
-        {
-          "id": "JSKVyurtWIyW",
-          "name": "Strider",
-          "label": "Strider"
-        },
-        {
-          "id": "a0YtInGiUDd6",
-          "name": "Tough",
-          "rating": 3,
-          "label": "Tough(3)"
-        },
-        {
-          "id": "S8IZt-d0Sgwk",
-          "name": "Machine-Fog",
-          "label": "Machine-Fog"
-        }
-      ],
-      "valid": true,
-      "defense": 4,
-      "quality": 5,
-      "weapons": [
-        {
-          "id": "ZxZpO1sD",
-          "name": "Twin P-Pistol",
-          "type": "ArmyBookWeapon",
-          "count": 3,
-          "range": 9,
-          "attacks": 4,
-          "weaponId": "rhIpRrlR",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "WcOMD7QgPYXZ",
-              "name": "Lacerate",
-              "label": "Lacerate"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Twin P-Pistol (9\", A4, Lacerate)",
-          "originalCount": 3
-        },
-        {
-          "id": "Uek7nqRw",
-          "name": "CCW",
-          "type": "ArmyBookWeapon",
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "4o5CBBZC",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "CCW (A1)",
-          "count": 3,
-          "originalCount": 3
-        }
-      ],
-      "upgrades": [
-        "I1",
-        "zUfo6"
-      ],
-      "genericName": "Robot Cavalry",
       "hasCustomRule": false,
       "disabledSections": [],
       "hasBalanceInvalid": false,
@@ -1052,7 +1141,7 @@
     },
     {
       "id": "KcJMZWi",
-      "cost": 365,
+      "cost": 370,
       "name": "Crawler Tank",
       "size": 1,
       "bases": {
@@ -1293,7 +1382,7 @@
     },
     {
       "id": "ulCeEQs",
-      "cost": 190,
+      "cost": 195,
       "name": "Combat Robot",
       "size": 1,
       "bases": {
@@ -1419,7 +1508,7 @@
     },
     {
       "id": "vnhLLJx",
-      "cost": 245,
+      "cost": 250,
       "name": "Iron Walker",
       "size": 1,
       "bases": {
@@ -1618,7 +1707,7 @@
     },
     {
       "id": "UBnnvms",
-      "cost": 290,
+      "cost": 285,
       "name": "Arch Gunship",
       "size": 1,
       "bases": {
@@ -1722,90 +1811,6 @@
       "hasCustomRule": false,
       "hasBalanceInvalid": false,
       "disabledUpgradeSections": []
-    },
-    {
-      "id": "tT9cuP3",
-      "cost": 170,
-      "name": "Cult Gunners",
-      "size": 3,
-      "type": 0,
-      "bases": {
-        "round": "",
-        "square": ""
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "S8IZt-d0Sgwk",
-          "name": "Machine-Fog",
-          "label": "Machine-Fog"
-        },
-        {
-          "id": "H9E9PIWpGRdw",
-          "name": "Relentless",
-          "label": "Relentless"
-        },
-        {
-          "id": "a0YtInGiUDd6",
-          "name": "Tough",
-          "rating": 3,
-          "label": "Tough(3)"
-        }
-      ],
-      "valid": true,
-      "defense": 4,
-      "quality": 5,
-      "weapons": [
-        {
-          "id": "FR5eKDjG",
-          "name": "Eraser Beam",
-          "type": "ArmyBookWeapon",
-          "count": 3,
-          "range": 30,
-          "attacks": 1,
-          "weaponId": "KyqJn3hk",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "17crjK7P6_w6",
-              "name": "AP",
-              "rating": 1,
-              "label": "AP(1)"
-            },
-            {
-              "type": "ArmyBookRule",
-              "id": "w_vX0mi58KKt",
-              "name": "Blast",
-              "rating": 3,
-              "label": "Blast(3)"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Eraser Beam (30\", A1, AP(1), Blast(3))",
-          "originalCount": 3
-        },
-        {
-          "id": "V2zWbbvw",
-          "name": "Strike",
-          "type": "ArmyBookWeapon",
-          "count": 3,
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "Lxf1DaC-",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "Strike (A1)",
-          "originalCount": 3
-        }
-      ],
-      "upgrades": [
-        "ge4jOs_z",
-        "zUfo6"
-      ],
-      "genericName": "Cult Gunners",
-      "hasCustomRule": false,
-      "hasBalanceInvalid": false,
-      "disabledUpgradeSections": []
     }
   ],
   "upgradePackages": [
@@ -1814,7 +1819,7 @@
       "hint": "High Cyborg-Priest",
       "sections": [
         {
-          "id": "YeH-rIn",
+          "id": "uRymUw3",
           "uid": "NUPTdiS",
           "label": "Upgrade with one",
           "options": [
@@ -1973,7 +1978,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 35,
                   "unitId": "4ajpg-M"
                 }
               ],
@@ -2060,7 +2065,7 @@
       "hint": "Cult Leader",
       "sections": [
         {
-          "id": "p-Xwvyn",
+          "id": "k9XKot1",
           "uid": "FdiNqBV",
           "label": "Replace Leader R-Pistol",
           "options": [
@@ -2209,7 +2214,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "iGyqlfa"
                 }
               ],
@@ -2289,7 +2294,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 90,
+                  "cost": 85,
                   "unitId": "iGyqlfa"
                 }
               ],
@@ -2334,7 +2339,7 @@
           ]
         },
         {
-          "id": "3GIDZoC",
+          "id": "zTQIkQb",
           "uid": "qsc_Mty",
           "label": "Replace Tech-Sword",
           "options": [
@@ -2371,48 +2376,6 @@
               "parentSectionUid": "qsc_Mty",
               "parentSectionId": "qsc_Mty",
               "id": "1ws-_dJ"
-            },
-            {
-              "uid": "Hl2hA60",
-              "cost": 5,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 5,
-                  "unitId": "iGyqlfa"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "jvTgqYhJ",
-                  "name": "Arc Sword",
-                  "type": "ArmyBookWeapon",
-                  "range": 0,
-                  "attacks": 2,
-                  "weaponId": "jvTgqYhJ",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 1
-                    },
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Arc Sword (A2, AP(1), Rending)",
-                  "count": 1
-                }
-              ],
-              "label": "Arc Sword (A2, AP(1), Rending)",
-              "parentPackageUid": "B1",
-              "parentSectionUid": "qsc_Mty",
-              "parentSectionId": "qsc_Mty",
-              "id": "Hl2hA60"
             },
             {
               "uid": "vajv7ps",
@@ -2455,12 +2418,54 @@
               "id": "vajv7ps"
             },
             {
+              "uid": "Hl2hA60",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "iGyqlfa"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "jvTgqYhJ",
+                  "name": "Arc Sword",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "jvTgqYhJ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Arc Sword (A2, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Arc Sword (A2, AP(1), Rending)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "qsc_Mty",
+              "parentSectionId": "qsc_Mty",
+              "id": "Hl2hA60"
+            },
+            {
               "uid": "eYS1WmJ",
               "cost": 10,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 15,
                   "unitId": "iGyqlfa"
                 }
               ],
@@ -2500,7 +2505,7 @@
           ]
         },
         {
-          "id": "zPFCT8q",
+          "id": "O_QCc3q",
           "uid": "mihBb",
           "label": "Upgrade with one",
           "options": [
@@ -2509,7 +2514,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "iGyqlfa"
                 }
               ],
@@ -2548,7 +2553,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 20,
                   "unitId": "iGyqlfa"
                 }
               ],
@@ -2625,7 +2630,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 45,
+                  "cost": 55,
                   "unitId": "iGyqlfa"
                 }
               ],
@@ -2663,7 +2668,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 45,
+                  "cost": 55,
                   "unitId": "iGyqlfa"
                 }
               ],
@@ -2710,7 +2715,7 @@
       "hint": "Specialists - High Priest",
       "sections": [
         {
-          "id": "wNPspCW",
+          "id": "yd4tf8m",
           "uid": "ilLvqMc",
           "label": "Upgrade with one",
           "options": [
@@ -2779,7 +2784,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 40,
                   "unitId": "4ajpg-M"
                 }
               ],
@@ -2867,7 +2872,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 55,
+                  "cost": 65,
                   "unitId": "4ajpg-M"
                 }
               ],
@@ -2939,7 +2944,7 @@
       "hint": "Cult Rangers",
       "sections": [
         {
-          "id": "JquIHhp",
+          "id": "fNvbRAq",
           "uid": "jtkAN",
           "label": "Replace all R-Fusils",
           "options": [
@@ -2949,7 +2954,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 25,
                   "unitId": "L6kGWgk"
                 }
               ],
@@ -2991,7 +2996,7 @@
           ]
         },
         {
-          "id": "ht_mQzT",
+          "id": "e2V6YE3",
           "uid": "cwC0Lvj",
           "label": "Replace one R-Fusil",
           "options": [
@@ -3031,12 +3036,54 @@
               "id": "nTanhQn"
             },
             {
-              "uid": "W50lpJz",
+              "uid": "9-I4Ari",
               "cost": 15,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "cost": 10,
+                  "unitId": "L6kGWgk"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "-_T9wTAv",
+                  "name": "Flamer",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "-_T9wTAv",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Flamer (12\", A1, Blast(3), Reliable)",
+                  "count": 1
+                }
+              ],
+              "label": "Flamer (12\", A1, Blast(3), Reliable)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "cwC0Lvj",
+              "parentSectionId": "cwC0Lvj",
+              "id": "9-I4Ari"
+            },
+            {
+              "uid": "W50lpJz",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 20,
                   "unitId": "L6kGWgk"
                 }
               ],
@@ -3077,7 +3124,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 25,
                   "unitId": "L6kGWgk"
                 }
               ],
@@ -3109,54 +3156,12 @@
               "id": "t_PxoPu"
             },
             {
-              "uid": "9-I4Ari",
-              "cost": 15,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 15,
-                  "unitId": "L6kGWgk"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "-_T9wTAv",
-                  "name": "Flamer",
-                  "type": "ArmyBookWeapon",
-                  "range": 12,
-                  "attacks": 1,
-                  "weaponId": "-_T9wTAv",
-                  "specialRules": [
-                    {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    },
-                    {
-                      "id": "Zx4mWN0SbmK8",
-                      "name": "Reliable",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Flamer (12\", A1, Blast(3), Reliable)",
-                  "count": 1
-                }
-              ],
-              "label": "Flamer (12\", A1, Blast(3), Reliable)",
-              "parentPackageUid": "D1",
-              "parentSectionUid": "cwC0Lvj",
-              "parentSectionId": "cwC0Lvj",
-              "id": "9-I4Ari"
-            },
-            {
               "uid": "re-VF2_",
               "cost": 35,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 25,
                   "unitId": "L6kGWgk"
                 }
               ],
@@ -3211,7 +3216,7 @@
           ]
         },
         {
-          "id": "QS2YVTc",
+          "id": "gy7Za5y",
           "uid": "MibQBmOt",
           "label": "Replace one R-Fusil and CCW",
           "options": [
@@ -3281,7 +3286,7 @@
           ]
         },
         {
-          "id": "sBYlEVD",
+          "id": "vJmsy0h",
           "uid": "fOf0mEbm",
           "label": "Replace R-Pistol",
           "options": [
@@ -3397,7 +3402,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "L6kGWgk"
                 }
               ],
@@ -3436,7 +3441,7 @@
           ]
         },
         {
-          "id": "VVPfMNR",
+          "id": "MwhaGwI",
           "uid": "oXtFrUHh",
           "label": "Replace Taser Sword",
           "options": [
@@ -3528,7 +3533,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "L6kGWgk"
                 }
               ],
@@ -3575,7 +3580,7 @@
       "hint": "Shock Priests",
       "sections": [
         {
-          "id": "fGvzkfN",
+          "id": "4xpGIex",
           "uid": "HBKp5-4",
           "label": "Replace all Shock Staffs",
           "options": [
@@ -3585,7 +3590,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "XivtB59"
                 }
               ],
@@ -3650,7 +3655,7 @@
       "hint": "Sect Stalkers",
       "sections": [
         {
-          "id": "jWHtyhk",
+          "id": "0Lz6BSa",
           "uid": "KssNAUH",
           "label": "Replace all Dual S-Blades",
           "options": [
@@ -3659,7 +3664,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 0,
                   "unitId": "GGy44eL"
                 }
               ],
@@ -3699,7 +3704,7 @@
           ]
         },
         {
-          "id": "lmvQTVl",
+          "id": "mdxO_9U",
           "uid": "qNTyplh",
           "label": "Upgrade one model with",
           "options": [
@@ -3766,7 +3771,7 @@
       "hint": "Sect Infiltrators",
       "sections": [
         {
-          "id": "TZjyaG0",
+          "id": "7prc19V",
           "uid": "UC1mTQ1",
           "label": "Replace all F-Blasters and Taser Swords",
           "options": [
@@ -3776,7 +3781,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 75,
+                  "cost": 80,
                   "unitId": "v6H89UD"
                 }
               ],
@@ -3844,7 +3849,7 @@
       "hint": "Sky Stalkers",
       "sections": [
         {
-          "id": "M1TmQJO",
+          "id": "JerBxRW",
           "uid": "V2B5fR0",
           "label": "Replace all F-Carbines",
           "options": [
@@ -3899,7 +3904,7 @@
           ]
         },
         {
-          "id": "N6GKLv2",
+          "id": "AR-Xbiu",
           "uid": "mxNTNak",
           "label": "Replace one F-Carbine and CCW",
           "options": [
@@ -3964,7 +3969,7 @@
           ]
         },
         {
-          "id": "sqvppmo",
+          "id": "fRFKztp",
           "uid": "ODkU-GS",
           "label": "Upgrade all models with",
           "options": [
@@ -4015,7 +4020,7 @@
       "hint": "Raider Cavalry",
       "sections": [
         {
-          "id": "3zApn2n",
+          "id": "fdKaQni",
           "uid": "yDCGAfm",
           "label": "Replace any Twin P-Pistol",
           "options": [
@@ -4064,7 +4069,7 @@
           ]
         },
         {
-          "id": "q0emPay",
+          "id": "_zNI1Vn",
           "uid": "ekjvoHy",
           "label": "Replace one G-Carbine",
           "options": [
@@ -4074,7 +4079,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "HGxRxOr"
                 }
               ],
@@ -4116,7 +4121,7 @@
           ]
         },
         {
-          "id": "wWbYhEP",
+          "id": "T5Bh_12",
           "uid": "E7mP9Rk",
           "label": "Replace one G-Carbine and CCW",
           "options": [
@@ -4247,7 +4252,7 @@
           ]
         },
         {
-          "id": "B0baKbA",
+          "id": "MzErZgz",
           "uid": "X9vaIfW",
           "label": "Upgrade all models with",
           "options": [
@@ -4297,7 +4302,7 @@
           }
         },
         {
-          "id": "HbhVmFY",
+          "id": "zZbCUrd",
           "uid": "CXZ2KEzFAe",
           "label": "Replace all Cyborg Hooves",
           "options": [
@@ -4349,7 +4354,7 @@
       "hint": "Breacher Cyborgs",
       "sections": [
         {
-          "id": "c_XRjUO",
+          "id": "LLklJhu",
           "uid": "DyBty90",
           "label": "Replace any Contortion Cannon",
           "options": [
@@ -4397,7 +4402,7 @@
           ]
         },
         {
-          "id": "soMBya-",
+          "id": "PSJ4ES9",
           "uid": "3mPJtGl",
           "label": "Replace all Cyborg Claws",
           "options": [
@@ -4407,7 +4412,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 35,
                   "unitId": "SGQH2IV"
                 }
               ],
@@ -4462,7 +4467,7 @@
       "hint": "Destroyer Cyborgs",
       "sections": [
         {
-          "id": "17DccTC",
+          "id": "5MQC0DA",
           "uid": "p0WKxi1",
           "label": "Replace any G-Cannon",
           "options": [
@@ -4472,7 +4477,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 20,
                   "unitId": "M2Yr_Lr"
                 }
               ],
@@ -4519,7 +4524,7 @@
           ]
         },
         {
-          "id": "7jFsSPh",
+          "id": "7vkzViD",
           "uid": "pwNOmnc",
           "label": "Replace one G-Cannon",
           "options": [
@@ -4529,7 +4534,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 35,
                   "unitId": "M2Yr_Lr"
                 }
               ],
@@ -4583,7 +4588,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 40,
                   "unitId": "M2Yr_Lr"
                 }
               ],
@@ -4658,7 +4663,7 @@
       "hint": "Landing Craft",
       "sections": [
         {
-          "id": "73iB-xc",
+          "id": "vrFOk0l",
           "uid": "r_abGVl",
           "label": "Upgrade with",
           "options": [
@@ -4710,7 +4715,7 @@
       "hint": "Attack Craft",
       "sections": [
         {
-          "id": "wSxWHI8",
+          "id": "qEpUMhZ",
           "uid": "SPjn_R7",
           "label": "Replace Energy Cannon",
           "options": [
@@ -4720,7 +4725,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 40,
                   "unitId": "y5c_wLy"
                 }
               ],
@@ -4768,7 +4773,7 @@
           ]
         },
         {
-          "id": "_zHW7Y8",
+          "id": "jGm8sVX",
           "uid": "DZHGzgk",
           "label": "Upgrade with",
           "options": [
@@ -4821,7 +4826,7 @@
       "hint": "Crawler Tank",
       "sections": [
         {
-          "id": "mrZqLox",
+          "id": "Azga1OC",
           "uid": "AyqUxLH",
           "label": "Replace Heavy Eraser Beam",
           "options": [
@@ -4866,7 +4871,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 55,
+                  "cost": 60,
                   "unitId": "KcJMZWi"
                 }
               ],
@@ -4924,7 +4929,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 65,
+                  "cost": 75,
                   "unitId": "KcJMZWi"
                 }
               ],
@@ -4967,7 +4972,7 @@
           ]
         },
         {
-          "id": "Flp4R63",
+          "id": "E3gDC4i",
           "uid": "vQqJL6h",
           "label": "Upgrade with",
           "options": [
@@ -5015,7 +5020,7 @@
       "hint": "Combat Robot",
       "sections": [
         {
-          "id": "IOR0mRd",
+          "id": "8QiIsJy",
           "uid": "VGZVfXu",
           "label": "Replace Dual Energy Fist and Heavy Flamer",
           "options": [
@@ -5025,7 +5030,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "ulCeEQs"
                 }
               ],
@@ -5064,7 +5069,7 @@
           ]
         },
         {
-          "id": "fl8S5lH",
+          "id": "ojIMFyw",
           "uid": "M6yIJBS",
           "label": "Replace Heavy Flamer",
           "options": [
@@ -5112,7 +5117,7 @@
           ]
         },
         {
-          "id": "sPT-kpA",
+          "id": "8TiSEhr",
           "uid": "Ipu7i8B",
           "label": "Upgrade with any",
           "options": [
@@ -5194,7 +5199,7 @@
       "hint": "Dragoon Walker",
       "sections": [
         {
-          "id": "0DI1Yk7",
+          "id": "fS4Z-7F",
           "uid": "3Nq8aoe",
           "label": "Replace Taser Lance",
           "options": [
@@ -5250,7 +5255,7 @@
           ]
         },
         {
-          "id": "jxQb8ay",
+          "id": "AuRGiNX",
           "uid": "I3avvNi",
           "label": "Upgrade with",
           "options": [
@@ -5302,7 +5307,7 @@
       "hint": "Iron Walker",
       "sections": [
         {
-          "id": "eSi-wrR",
+          "id": "10pgGnR",
           "uid": "3ZqAny-",
           "label": "Replace Twin Laser Cannon",
           "options": [
@@ -5312,7 +5317,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 0,
                   "unitId": "vnhLLJx"
                 }
               ],
@@ -5358,7 +5363,7 @@
       "hint": "Arch Fighter",
       "sections": [
         {
-          "id": "pLntnPZ",
+          "id": "voiGGLS",
           "uid": "qsWiheT",
           "label": "Upgrade with",
           "options": [
@@ -5405,7 +5410,7 @@
       "hint": "Sect Leader",
       "sections": [
         {
-          "id": "xEqHNJl",
+          "id": "q1AkFsx",
           "uid": "zKY3v",
           "label": "Replace Leader F-Blaster and Leader Taser Sword",
           "options": [
@@ -5490,7 +5495,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 25,
                   "unitId": "hvRc6eE"
                 }
               ],
@@ -5546,7 +5551,7 @@
           ]
         },
         {
-          "id": "-LciYQS",
+          "id": "UZfQFpc",
           "uid": "owP6g",
           "label": "Upgrade with one",
           "options": [
@@ -5641,7 +5646,7 @@
       "hint": "Machine-Creed Canticles",
       "sections": [
         {
-          "id": "uYXyYx8",
+          "id": "eqHCFPO",
           "uid": "Hfkuk",
           "label": "Upgrade all models with",
           "options": [
@@ -5654,15 +5659,15 @@
                   "unitId": "L6kGWgk"
                 },
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "XivtB59"
                 },
                 {
-                  "cost": 15,
+                  "cost": 20,
                   "unitId": "HGxRxOr"
                 },
                 {
-                  "cost": 20,
+                  "cost": 30,
                   "unitId": "tT9cuP3"
                 }
               ],
@@ -5705,7 +5710,7 @@
       "hint": "Specialists - Cult Leader",
       "sections": [
         {
-          "id": "KOvaunp",
+          "id": "4fxXSnh",
           "uid": "ZBvyPvJ-",
           "label": "Upgrade with one",
           "options": [
@@ -5745,7 +5750,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 40,
                   "unitId": "iGyqlfa"
                 }
               ],
@@ -5867,7 +5872,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 55,
+                  "cost": 65,
                   "unitId": "iGyqlfa"
                 }
               ],
@@ -5910,7 +5915,7 @@
       "hint": "Specialists - Sect Leader",
       "sections": [
         {
-          "id": "Py3UKdi",
+          "id": "VvPV6qh",
           "uid": "PA1zOWSs",
           "label": "Upgrade with one",
           "options": [
@@ -6042,7 +6047,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 55,
+                  "cost": 65,
                   "unitId": "hvRc6eE"
                 }
               ],
@@ -6085,7 +6090,7 @@
       "hint": "Power Hacker",
       "sections": [
         {
-          "id": "GBYwPYg",
+          "id": "0biWsut",
           "uid": "9IqMMPi2",
           "label": "Upgrade with",
           "options": [
@@ -6137,7 +6142,7 @@
       "hint": "Cult Gunners",
       "sections": [
         {
-          "id": "KO3s0iG",
+          "id": "qZ0HH53",
           "uid": "XjuVJfboem",
           "label": "Replace any Eraser Beam",
           "options": [
@@ -6146,7 +6151,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 25,
                   "unitId": "tT9cuP3"
                 }
               ],
@@ -6193,7 +6198,7 @@
           ]
         },
         {
-          "id": "QtV2cVH",
+          "id": "0uadHJt",
           "uid": "gkjrgXU9rp",
           "label": "Upgrade all models with one",
           "options": [
@@ -6284,7 +6289,7 @@
       "hint": "Machine-Creed Canticles (One Model)",
       "sections": [
         {
-          "id": "o31Zru2",
+          "id": "OBw0MSV",
           "uid": "ttPAB7xE",
           "label": "Upgrade with",
           "options": [
@@ -6293,7 +6298,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "4ajpg-M"
                 },
                 {
@@ -6975,8 +6980,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:54.735Z",
-  "editedAt": "2026-04-29T14:53:04.482Z",
+  "modifiedAt": "2026-04-30T09:22:04.612Z",
+  "editedAt": "2026-04-30T09:02:36.558Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/7el7k3hgy5pb9o9i/5-GXLJsImRFRZqmioAxea.jpg",

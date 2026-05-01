@@ -92,7 +92,7 @@
     },
     {
       "id": "FAvigTw",
-      "cost": 155,
+      "cost": 160,
       "name": "Oath-U7X1",
       "size": 1,
       "type": 1,
@@ -183,7 +183,7 @@
     },
     {
       "id": "PkAB3lE",
-      "cost": 70,
+      "cost": 85,
       "name": "Echo-3G01",
       "size": 1,
       "type": 1,
@@ -275,7 +275,7 @@
     },
     {
       "id": "8_XZlZr",
-      "cost": 65,
+      "cost": 70,
       "name": "Xyros-Z320",
       "size": 1,
       "type": 1,
@@ -602,66 +602,6 @@
       "disabledUpgradeSections": []
     },
     {
-      "id": "yoeQi4m",
-      "cost": 30,
-      "name": "Bot Swarm",
-      "size": 1,
-      "bases": {
-        "round": "40",
-        "square": "40"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "JSKVyurtWIyW",
-          "name": "Strider",
-          "label": "Strider"
-        },
-        {
-          "id": "a0YtInGiUDd6",
-          "name": "Tough",
-          "rating": 3,
-          "label": "Tough(3)"
-        },
-        {
-          "id": "Y_WeXWwLtX6z",
-          "name": "Self-Repair",
-          "label": "Self-Repair"
-        }
-      ],
-      "valid": true,
-      "defense": 6,
-      "quality": 5,
-      "weapons": [
-        {
-          "id": "DvYpHLlf",
-          "name": "Swarm Attacks",
-          "type": "ArmyBookWeapon",
-          "range": 0,
-          "attacks": 3,
-          "weaponId": "bUQRotbI",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "cavWDboL4ubs",
-              "name": "Rending",
-              "label": "Rending"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Swarm Attacks (A3, Rending)",
-          "count": 1,
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [],
-      "genericName": "Bot Swarms",
-      "hasCustomRule": false,
-      "hasBalanceInvalid": false,
-      "originalSize": 3,
-      "disabledUpgradeSections": []
-    },
-    {
       "id": "wvgi7_R",
       "cost": 30,
       "name": "Eternal",
@@ -804,6 +744,66 @@
       "genericName": "Snipers",
       "hasCustomRule": false,
       "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "yoeQi4m",
+      "cost": 35,
+      "name": "Bot Swarm",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "Y_WeXWwLtX6z",
+          "name": "Self-Repair",
+          "label": "Self-Repair"
+        }
+      ],
+      "valid": true,
+      "defense": 6,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "DvYpHLlf",
+          "name": "Swarm Attacks",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "bUQRotbI",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Swarm Attacks (A3, Rending)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [],
+      "genericName": "Bot Swarms",
+      "hasCustomRule": false,
       "hasBalanceInvalid": false,
       "originalSize": 3,
       "disabledUpgradeSections": []
@@ -967,76 +967,6 @@
       "disabledUpgradeSections": []
     },
     {
-      "id": "IMHCbyw",
-      "cost": 75,
-      "name": "Annihilator",
-      "size": 1,
-      "bases": {
-        "round": "40",
-        "square": "40"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "JSKVyurtWIyW",
-          "name": "Strider",
-          "label": "Strider"
-        },
-        {
-          "id": "a0YtInGiUDd6",
-          "name": "Tough",
-          "rating": 3,
-          "label": "Tough(3)"
-        },
-        {
-          "id": "Y_WeXWwLtX6z",
-          "name": "Self-Repair",
-          "label": "Self-Repair"
-        }
-      ],
-      "valid": true,
-      "defense": 3,
-      "quality": 3,
-      "weapons": [
-        {
-          "id": "R-zAIvUx",
-          "name": "Dual Hyper Swords",
-          "type": "ArmyBookWeapon",
-          "range": 0,
-          "attacks": 4,
-          "weaponId": "R-zAIvUx",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "17crjK7P6_w6",
-              "name": "AP",
-              "rating": 1,
-              "label": "AP(1)"
-            },
-            {
-              "type": "ArmyBookRule",
-              "id": "cavWDboL4ubs",
-              "name": "Rending",
-              "label": "Rending"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Dual Hyper Swords (A4, AP(1), Rending)",
-          "count": 1,
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [
-        "L1"
-      ],
-      "genericName": "Terminator Robots",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 3,
-      "disabledUpgradeSections": []
-    },
-    {
       "id": "gcoBL7U",
       "cost": 75,
       "name": "Destroyer Snake",
@@ -1100,6 +1030,76 @@
         "v1bOr7hx"
       ],
       "genericName": "Elite Robot Snakes",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "IMHCbyw",
+      "cost": 80,
+      "name": "Annihilator",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "Y_WeXWwLtX6z",
+          "name": "Self-Repair",
+          "label": "Self-Repair"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "R-zAIvUx",
+          "name": "Dual Hyper Swords",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "R-zAIvUx",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Dual Hyper Swords (A4, AP(1), Rending)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "L1"
+      ],
+      "genericName": "Terminator Robots",
       "hasCustomRule": false,
       "disabledSections": [],
       "hasBalanceInvalid": false,
@@ -1199,7 +1199,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "5Fpty9F",
+          "id": "iR3ZvxC",
           "uid": "sPruWe5",
           "label": "Replace Reaper Rifle",
           "options": [
@@ -1320,7 +1320,7 @@
               "costs": [
                 {
                   "unitId": "njiIkJi",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1410,7 +1410,7 @@
       "hint": "Eternals",
       "sections": [
         {
-          "id": "f91uCkY",
+          "id": "ha_glMn",
           "uid": "Lo_uRxc",
           "label": "Replace Flux Carbine",
           "options": [
@@ -1465,7 +1465,7 @@
       "hint": "Guardians",
       "sections": [
         {
-          "id": "5DwLV_Y",
+          "id": "5RBWE61",
           "uid": "lLgBGjy",
           "label": "Replace Atom-Casters and Void Blade",
           "options": [
@@ -1617,7 +1617,7 @@
           ]
         },
         {
-          "id": "669o3ui",
+          "id": "jKCx9bA",
           "uid": "4MAX6ow",
           "label": "Upgrade with",
           "options": [
@@ -1674,7 +1674,7 @@
       "hint": "Snipers",
       "sections": [
         {
-          "id": "FDl3_EZ",
+          "id": "13MPJvY",
           "uid": "vjHtJN7",
           "label": "Upgrade with",
           "options": [
@@ -1722,7 +1722,7 @@
       "hint": "Bikers",
       "sections": [
         {
-          "id": "J1X3XFq",
+          "id": "UDfbTt0",
           "uid": "lB405hn",
           "label": "Replace any Rapid Flux Carbine",
           "options": [
@@ -1812,7 +1812,7 @@
       "hint": "Snakes",
       "sections": [
         {
-          "id": "AJlTXFU",
+          "id": "uqc-W9s",
           "uid": "v9zaD4F8aX",
           "label": "Replace Spike Whip",
           "options": [
@@ -1896,7 +1896,7 @@
           ]
         },
         {
-          "id": "aXJsdUZ",
+          "id": "fgehmtA",
           "uid": "UJ6AojF",
           "label": "Replace one Metal Fang",
           "options": [
@@ -1943,7 +1943,7 @@
               "costs": [
                 {
                   "unitId": "0x2SCtg",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1992,7 +1992,7 @@
       "hint": "Tri-Scorpions",
       "sections": [
         {
-          "id": "IwmXHkZ",
+          "id": "e5ATCqW",
           "uid": "TCHi97K",
           "label": "Upgrade with",
           "options": [
@@ -2003,7 +2003,7 @@
               "costs": [
                 {
                   "unitId": "XgJtpyh",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2041,7 +2041,7 @@
       "hint": "Annihilators",
       "sections": [
         {
-          "id": "YEDULjF",
+          "id": "T_fQ54t",
           "uid": "Mjrnsra",
           "label": "Replace Dual Hyper Sword",
           "options": [
@@ -2101,7 +2101,7 @@
           ]
         },
         {
-          "id": "UvcZdhz",
+          "id": "ObMsf1t",
           "uid": "wlZA2",
           "label": "Replace Gauss Cannon",
           "options": [
@@ -2112,7 +2112,7 @@
               "costs": [
                 {
                   "unitId": "IMHCbyw",
-                  "cost": -5
+                  "cost": 0
                 }
               ],
               "gains": [
@@ -2152,7 +2152,7 @@
               "costs": [
                 {
                   "unitId": "IMHCbyw",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -2189,7 +2189,7 @@
           ]
         },
         {
-          "id": "wDIac86",
+          "id": "tp00PBZ",
           "uid": "eccUPLWILp",
           "label": "Upgrade with",
           "options": [
@@ -2228,14 +2228,14 @@
           "variant": "upgrade"
         }
       ],
-      "calcErrors": true
+      "calcErrors": false
     },
     {
       "uid": "cbvFtGXz",
       "hint": "Flesh-Eaters",
       "sections": [
         {
-          "id": "3uUrupj",
+          "id": "yoWi2VQ",
           "uid": "qn054liP0u",
           "label": "Upgrade with",
           "options": [
@@ -2282,7 +2282,7 @@
       "hint": "Robot Lord",
       "sections": [
         {
-          "id": "CKTy2Yg",
+          "id": "4qDnxHx",
           "uid": "ZWfO9Xoa",
           "label": "Replace Combat Shield and CCW",
           "options": [
@@ -2350,7 +2350,7 @@
           ]
         },
         {
-          "id": "-zik82e",
+          "id": "NsdrGJE",
           "uid": "0EjGQ_a1",
           "label": "Replace Combat Shield",
           "options": [
@@ -2435,7 +2435,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2470,7 +2470,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2539,7 +2539,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 30
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -2575,7 +2575,7 @@
           ]
         },
         {
-          "id": "A2JnoCw",
+          "id": "V3LEp4s",
           "uid": "7-JvgvNe",
           "label": "Replace CCW",
           "options": [
@@ -2661,7 +2661,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2703,7 +2703,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -2742,7 +2742,7 @@
           ]
         },
         {
-          "id": "4iIkkr5",
+          "id": "IzFNYs3",
           "uid": "OrWKAM1Bkp",
           "label": "Upgrade with one",
           "options": [
@@ -2752,7 +2752,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2831,7 +2831,7 @@
       "hint": "Specialists - Lord",
       "sections": [
         {
-          "id": "RoB7ISu",
+          "id": "axg1-H8",
           "uid": "YFufH-jg",
           "label": "Upgrade with one",
           "options": [
@@ -2871,7 +2871,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2902,7 +2902,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2932,7 +2932,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2962,7 +2962,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2992,7 +2992,7 @@
               "costs": [
                 {
                   "unitId": "lcEWPMS",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -3035,7 +3035,7 @@
       "hint": "Destroyer Snakes",
       "sections": [
         {
-          "id": "USLaGyO",
+          "id": "4lx7TGC",
           "uid": "vW-0rhAU",
           "label": "Upgrade with",
           "options": [
@@ -3046,7 +3046,7 @@
               "costs": [
                 {
                   "unitId": "gcoBL7U",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3670,7 +3670,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T16:12:27.936Z",
+  "modifiedAt": "2026-04-30T09:22:25.087Z",
   "editedAt": "2026-04-29T16:12:27.935Z",
   "official": true,
   "versionString": "3.5.3",
@@ -3696,8 +3696,8 @@
       "https://www.etsy.com/shop/onepagerules"
     ]
   },
-  "balanceValid": false,
-  "balanceValidReason": 4,
+  "balanceValid": true,
+  "balanceValidReason": 0,
   "loreUrl": "https://www.onepagerules.com/factions/robot-legions",
   "voted": null,
   "specialRules": [

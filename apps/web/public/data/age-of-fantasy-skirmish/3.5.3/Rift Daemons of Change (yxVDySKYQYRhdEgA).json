@@ -900,23 +900,33 @@
       "weapons": [
         {
           "id": "VUSbm51P",
-          "name": "Mutated Claws",
-          "type": "ArmyBookWeapon",
+          "name": "Hexed Spikes",
           "count": 1,
-          "range": null,
+          "range": 12,
           "attacks": 4,
-          "weaponId": "VUSbm51P",
+          "weaponId": "707aPxyv",
           "specialRules": [
             {
               "type": "ArmyBookRule",
-              "id": "IEJp3a4vE0CB",
-              "name": "Shred",
-              "label": "Shred"
+              "id": "5v6oaGfrdf29",
+              "name": "Surge",
+              "label": "Surge"
             }
           ],
-          "attacksMultiplier": 1,
-          "label": "Mutated Claws (A4, Shred)",
-          "originalCount": 1
+          "label": "Hexed Spikes (12\", A4, Surge)",
+          "originalCount": 1,
+          "type": "ArmyBookWeapon"
+        },
+        {
+          "id": "YG_05M2B",
+          "name": "Claws",
+          "count": 1,
+          "attacks": 1,
+          "weaponId": "S652usl0",
+          "specialRules": [],
+          "label": "Claws (A1)",
+          "originalCount": 1,
+          "type": "ArmyBookWeapon"
         }
       ],
       "upgrades": [
@@ -1006,7 +1016,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "DY_6PjJ",
+          "id": "IrOBjPz",
           "uid": "qlNM8hz",
           "label": "Upgrade with one",
           "options": [
@@ -1126,7 +1136,7 @@
       "hint": "Change Warriors",
       "sections": [
         {
-          "id": "sIJks_0",
+          "id": "8dlt_qD",
           "uid": "9xmu_Bn",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1292,7 +1302,7 @@
           ]
         },
         {
-          "id": "-Lk5auI",
+          "id": "SIeDVWl",
           "uid": "ATYkq59",
           "label": "Upgrade with",
           "options": [
@@ -1335,7 +1345,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "cyeK4uI",
+          "id": "wOPBxyX",
           "uid": "z_2Ss5S",
           "label": "Upgrade with any",
           "options": [
@@ -1378,7 +1388,7 @@
               "costs": [
                 {
                   "unitId": "UMiqTdF",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1417,7 +1427,7 @@
       "hint": "Furies",
       "sections": [
         {
-          "id": "GBG3ntE",
+          "id": "SrGMt0T",
           "uid": "uVvec",
           "label": "Replace Armblade",
           "options": [
@@ -1475,7 +1485,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "xgqYWIL",
+          "id": "PwBGmQN",
           "uid": "g-b1R",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -1634,61 +1644,6 @@
               "id": "YCnNlNX5fW"
             },
             {
-              "uid": "Iw_PB",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "MvLZSIo",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Magic Blast",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 12,
-                  "attacks": 4,
-                  "weaponId": "PAe0VqXu",
-                  "specialRules": [
-                    {
-                      "id": "IEJp3a4vE0CB",
-                      "name": "Shred"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Magic Blast (12\", A4, Shred)"
-                },
-                {
-                  "id": null,
-                  "name": "Power Staff",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": null,
-                  "attacks": 2,
-                  "weaponId": "iGYRvcjX",
-                  "specialRules": [
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending"
-                    },
-                    {
-                      "id": "IEJp3a4vE0CB",
-                      "name": "Shred"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Power Staff (A2, Rending, Shred)"
-                }
-              ],
-              "label": "Magic Blast (12\", A4, Shred), Power Staff (A2, Rending, Shred)",
-              "parentPackageUid": "C3UuL",
-              "parentSectionUid": "g-b1R",
-              "parentSectionId": "g-b1R",
-              "id": "Iw_PB"
-            },
-            {
               "uid": "iLstcYi63D",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -1740,6 +1695,61 @@
               "label": "Hexed Chakram (18\", A3, Surge), Power Staff (A2, Rending, Shred)",
               "parentSectionId": "g-b1R",
               "id": "iLstcYi63D"
+            },
+            {
+              "uid": "Iw_PB",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "MvLZSIo",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Magic Blast",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 4,
+                  "weaponId": "PAe0VqXu",
+                  "specialRules": [
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Magic Blast (12\", A4, Shred)"
+                },
+                {
+                  "id": null,
+                  "name": "Power Staff",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 2,
+                  "weaponId": "iGYRvcjX",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Power Staff (A2, Rending, Shred)"
+                }
+              ],
+              "label": "Magic Blast (12\", A4, Shred), Power Staff (A2, Rending, Shred)",
+              "parentPackageUid": "C3UuL",
+              "parentSectionUid": "g-b1R",
+              "parentSectionId": "g-b1R",
+              "id": "Iw_PB"
             }
           ],
           "parentPackageUid": "C3UuL",
@@ -1751,7 +1761,7 @@
           ]
         },
         {
-          "id": "8PgFL60",
+          "id": "l48_y7K",
           "uid": "DJTr1",
           "label": "Replace any Power Staff",
           "options": [
@@ -1807,7 +1817,7 @@
           ]
         },
         {
-          "id": "DOyh9Bs",
+          "id": "y7Koz2g",
           "uid": "Jo1qEI68",
           "label": "Upgrade with",
           "options": [
@@ -1850,7 +1860,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "C7AW7wz",
+          "id": "8_YDfK2",
           "uid": "z3G3m",
           "label": "Upgrade with one",
           "options": [
@@ -1860,7 +1870,7 @@
               "costs": [
                 {
                   "unitId": "MvLZSIo",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1945,7 +1955,7 @@
       "hint": "Fury Champion",
       "sections": [
         {
-          "id": "QakvcBW",
+          "id": "N-8ddbh",
           "uid": "k6phA",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -2053,7 +2063,7 @@
               "costs": [
                 {
                   "unitId": "MjmWJOF",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2223,7 +2233,7 @@
           ]
         },
         {
-          "id": "G5sHH_o",
+          "id": "15mIuMF",
           "uid": "dzk31",
           "label": "Replace any Power Staff",
           "options": [
@@ -2286,53 +2296,42 @@
       "hint": "Change Soul Spawns",
       "sections": [
         {
-          "id": "XR-vPOO",
+          "id": "6_968gD",
           "uid": "rU0Lr",
-          "label": "Replace Mutated Claws",
+          "label": "Replace Hexed Spikes and Claws",
           "options": [
             {
-              "uid": "bepjU9lIP3",
+              "uid": "hCVO87Kt6Y",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "IM104Sq",
-                  "cost": 0
+                  "cost": 5
                 }
               ],
               "gains": [
                 {
                   "id": null,
-                  "name": "Hexed Spikes",
+                  "name": "Mutated Claws",
                   "type": "ArmyBookWeapon",
                   "count": 1,
-                  "range": 12,
+                  "range": null,
                   "attacks": 4,
-                  "weaponId": "707aPxyv",
+                  "weaponId": "VUSbm51P",
                   "specialRules": [
                     {
-                      "id": "5v6oaGfrdf29",
-                      "name": "Surge"
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred",
+                      "type": "ArmyBookRule"
                     }
                   ],
                   "attacksMultiplier": 1,
-                  "label": "Hexed Spikes (12\", A4, Surge)"
-                },
-                {
-                  "id": null,
-                  "name": "Claws",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 1,
-                  "weaponId": "S652usl0",
-                  "specialRules": [],
-                  "attacksMultiplier": 1,
-                  "label": "Claws (A1)"
+                  "label": "Mutated Claws (A4, Shred)"
                 }
               ],
-              "label": "Hexed Spikes (12\", A4, Surge), Claws (A1)",
+              "label": "Mutated Claws (A4, Shred)",
               "parentSectionId": "rU0Lr",
-              "id": "bepjU9lIP3"
+              "id": "hCVO87Kt6Y"
             },
             {
               "uid": "7JZun",
@@ -2383,7 +2382,8 @@
           "type": "ArmyBookUpgradeSection",
           "variant": "replace",
           "targets": [
-            "Mutated Claws"
+            "Hexed Spikes",
+            "Claws"
           ]
         }
       ],
@@ -2394,7 +2394,7 @@
       "hint": "Horror Champion",
       "sections": [
         {
-          "id": "xH-3750",
+          "id": "UzhAY3b",
           "uid": "jJcCY",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -2553,61 +2553,6 @@
               "id": "0UJJ55sJGr"
             },
             {
-              "uid": "VMMKs",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "y3HJghW",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Magic Blast",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 12,
-                  "attacks": 4,
-                  "weaponId": "PAe0VqXu",
-                  "specialRules": [
-                    {
-                      "id": "IEJp3a4vE0CB",
-                      "name": "Shred"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Magic Blast (12\", A4, Shred)"
-                },
-                {
-                  "id": null,
-                  "name": "Power Staff",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": null,
-                  "attacks": 2,
-                  "weaponId": "iGYRvcjX",
-                  "specialRules": [
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending"
-                    },
-                    {
-                      "id": "IEJp3a4vE0CB",
-                      "name": "Shred"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Power Staff (A2, Rending, Shred)"
-                }
-              ],
-              "label": "Magic Blast (12\", A4, Shred), Power Staff (A2, Rending, Shred)",
-              "parentPackageUid": "3y_Pe",
-              "parentSectionUid": "jJcCY",
-              "parentSectionId": "jJcCY",
-              "id": "VMMKs"
-            },
-            {
               "uid": "xqzYLfjW6M",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -2659,6 +2604,61 @@
               "label": "Hexed Chakram (18\", A3, Surge), Power Staff (A2, Rending, Shred)",
               "parentSectionId": "jJcCY",
               "id": "xqzYLfjW6M"
+            },
+            {
+              "uid": "VMMKs",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y3HJghW",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Magic Blast",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 4,
+                  "weaponId": "PAe0VqXu",
+                  "specialRules": [
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Magic Blast (12\", A4, Shred)"
+                },
+                {
+                  "id": null,
+                  "name": "Power Staff",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 2,
+                  "weaponId": "iGYRvcjX",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Power Staff (A2, Rending, Shred)"
+                }
+              ],
+              "label": "Magic Blast (12\", A4, Shred), Power Staff (A2, Rending, Shred)",
+              "parentPackageUid": "3y_Pe",
+              "parentSectionUid": "jJcCY",
+              "parentSectionId": "jJcCY",
+              "id": "VMMKs"
             }
           ],
           "parentPackageUid": "3y_Pe",
@@ -2670,7 +2670,7 @@
           ]
         },
         {
-          "id": "eRdAfuA",
+          "id": "1g3zt5D",
           "uid": "HsNci",
           "label": "Replace any Power Staff",
           "options": [
@@ -2726,7 +2726,7 @@
           ]
         },
         {
-          "id": "3aqWv0W",
+          "id": "JzNypVI",
           "uid": "XPKDTNVO",
           "label": "Upgrade with",
           "options": [
@@ -2775,7 +2775,7 @@
       "hint": "Change Horrors",
       "sections": [
         {
-          "id": "7RiEJqw",
+          "id": "00Gn8NV",
           "uid": "SNMn2",
           "label": "Upgrade with",
           "options": [
@@ -2824,7 +2824,7 @@
       "hint": "Change Hexers",
       "sections": [
         {
-          "id": "gUKW28N",
+          "id": "T3jsEkt",
           "uid": "LRymxjDasP",
           "label": "Replace Magic Bolt",
           "options": [
@@ -2901,7 +2901,7 @@
           ]
         },
         {
-          "id": "I1uLjD0",
+          "id": "XEY8OMw",
           "uid": "9Fwehorm",
           "label": "Upgrade with",
           "options": [
@@ -2950,7 +2950,7 @@
       "hint": "Specialists - Fury ",
       "sections": [
         {
-          "id": "glRvJho",
+          "id": "eAyrUlo",
           "uid": "Gf_HZfpw",
           "label": "Upgrade with one",
           "options": [
@@ -2990,7 +2990,7 @@
               "costs": [
                 {
                   "unitId": "MjmWJOF",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3021,7 +3021,7 @@
               "costs": [
                 {
                   "unitId": "MjmWJOF",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3051,7 +3051,7 @@
               "costs": [
                 {
                   "unitId": "MjmWJOF",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3093,7 +3093,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "-ecMnjn",
+          "id": "keBGVJG",
           "uid": "_dk0Vr2A",
           "label": "Upgrade with one",
           "options": [
@@ -3133,7 +3133,7 @@
               "costs": [
                 {
                   "unitId": "MvLZSIo",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3164,7 +3164,7 @@
               "costs": [
                 {
                   "unitId": "MvLZSIo",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3187,37 +3187,6 @@
               "parentSectionId": "_dk0Vr2A",
               "parentPackageUid": "G20bK-O7",
               "id": "g1UYxI6Y"
-            },
-            {
-              "uid": "VPdkY3XG",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "MvLZSIo",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Change Favour",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Change Favour (Changebound Boost Aura)",
-                  "content": [
-                    {
-                      "id": "nU2aNk56ZJ8H",
-                      "name": "Changebound Boost Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Change Favour (Changebound Boost Aura)",
-              "parentSectionId": "_dk0Vr2A",
-              "parentPackageUid": "G20bK-O7",
-              "parentSectionUid": "KqfZo",
-              "id": "VPdkY3XG"
             },
             {
               "uid": "DwNzkbb6",
@@ -3252,12 +3221,43 @@
               "id": "DwNzkbb6"
             },
             {
+              "uid": "VPdkY3XG",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "MvLZSIo",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Change Favour",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Change Favour (Changebound Boost Aura)",
+                  "content": [
+                    {
+                      "id": "nU2aNk56ZJ8H",
+                      "name": "Changebound Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Change Favour (Changebound Boost Aura)",
+              "parentSectionId": "_dk0Vr2A",
+              "parentPackageUid": "G20bK-O7",
+              "parentSectionUid": "KqfZo",
+              "id": "VPdkY3XG"
+            },
+            {
               "uid": "pudrwamS",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "MvLZSIo",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -3301,7 +3301,7 @@
       "hint": "Hex-Furies",
       "sections": [
         {
-          "id": "N1uNm7M",
+          "id": "5H440y0",
           "uid": "q9KrL2Mw",
           "label": "Replace Magic Blast",
           "options": [
@@ -3985,8 +3985,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:54:14.774Z",
-  "editedAt": "2026-04-27T16:35:02.351Z",
+  "modifiedAt": "2026-04-30T09:42:17.617Z",
+  "editedAt": "2026-04-30T09:42:17.617Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/yxVDySKYQYRhdEgA/lwz6ZtEiR-4f7Km_KrgWl.jpg",
@@ -4008,8 +4008,8 @@
       "https://www.etsy.com/shop/onepagerules"
     ]
   },
-  "balanceValid": true,
-  "balanceValidReason": 0,
+  "balanceValid": false,
+  "balanceValidReason": 4,
   "loreUrl": "https://www.onepagerules.com/factions/rift-daemons",
   "voted": null,
   "specialRules": [

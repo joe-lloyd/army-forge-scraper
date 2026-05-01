@@ -15,7 +15,7 @@
   "units": [
     {
       "id": "navlwQ_",
-      "cost": 150,
+      "cost": 155,
       "name": "Monstrous Tyrant",
       "size": 1,
       "bases": {
@@ -112,7 +112,7 @@
     },
     {
       "id": "2Dk-V1m",
-      "cost": 70,
+      "cost": 75,
       "name": "Great Hunter",
       "size": 1,
       "bases": {
@@ -376,7 +376,7 @@
     },
     {
       "id": "4cDEOVp",
-      "cost": 165,
+      "cost": 170,
       "name": "Infected Soldiers",
       "size": 10,
       "bases": {
@@ -433,7 +433,7 @@
     },
     {
       "id": "eFF0JJq",
-      "cost": 145,
+      "cost": 150,
       "name": "Weapon Teams",
       "size": 3,
       "bases": {
@@ -504,7 +504,7 @@
     },
     {
       "id": "IMWo3hw",
-      "cost": 80,
+      "cost": 85,
       "name": "Infected Gunners",
       "size": 3,
       "bases": {
@@ -812,7 +812,7 @@
     },
     {
       "id": "4tJy4mK",
-      "cost": 110,
+      "cost": 115,
       "name": "Rabid Dogs",
       "size": 5,
       "bases": {
@@ -876,7 +876,7 @@
     },
     {
       "id": "LFBzHhZ",
-      "cost": 175,
+      "cost": 180,
       "name": "Infected Vultures",
       "size": 3,
       "bases": {
@@ -944,7 +944,7 @@
     },
     {
       "id": "UqaaDf5",
-      "cost": 220,
+      "cost": 230,
       "name": "Corrupted Beasts",
       "size": 3,
       "bases": {
@@ -1008,7 +1008,7 @@
     },
     {
       "id": "PJ2M66A",
-      "cost": 135,
+      "cost": 140,
       "name": "Great Beast",
       "size": 1,
       "bases": {
@@ -1071,7 +1071,7 @@
     },
     {
       "id": "KK8LQag",
-      "cost": 170,
+      "cost": 175,
       "name": "Attack Buggy",
       "size": 1,
       "bases": {
@@ -1153,7 +1153,7 @@
     },
     {
       "id": "Yss19LW",
-      "cost": 395,
+      "cost": 400,
       "name": "Battle Tank",
       "size": 1,
       "bases": {
@@ -1250,7 +1250,7 @@
     },
     {
       "id": "Yua0QBl",
-      "cost": 155,
+      "cost": 165,
       "name": "Combat Walker",
       "size": 1,
       "bases": {
@@ -1342,7 +1342,7 @@
     },
     {
       "id": "c_ks7oX",
-      "cost": 330,
+      "cost": 340,
       "name": "Abomination",
       "size": 1,
       "bases": {
@@ -1521,53 +1521,17 @@
       "hint": "Monstrous Tyrant",
       "sections": [
         {
-          "id": "juuCqDg",
+          "id": "rLbSMlI",
           "uid": "HGXOt3c",
           "label": "Replace Monstrous Claws",
           "options": [
-            {
-              "uid": "wWQUb",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 10,
-                  "unitId": "navlwQ_"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "Wt3nbAae",
-                  "name": "Monstrous Fists",
-                  "type": "ArmyBookWeapon",
-                  "range": 0,
-                  "attacks": 4,
-                  "weaponId": "Wt3nbAae",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 4
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Monstrous Fists (A4, AP(4))",
-                  "count": 1
-                }
-              ],
-              "label": "Monstrous Fists (A4, AP(4))",
-              "parentPackageUid": "A1",
-              "parentSectionUid": "HGXOt3c",
-              "parentSectionId": "HGXOt3c",
-              "id": "wWQUb"
-            },
             {
               "uid": "gKcCM",
               "cost": 10,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "navlwQ_"
                 }
               ],
@@ -1603,6 +1567,42 @@
               "parentSectionUid": "HGXOt3c",
               "parentSectionId": "HGXOt3c",
               "id": "gKcCM"
+            },
+            {
+              "uid": "wWQUb",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "navlwQ_"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "Wt3nbAae",
+                  "name": "Monstrous Fists",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "Wt3nbAae",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Monstrous Fists (A4, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Monstrous Fists (A4, AP(4))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "HGXOt3c",
+              "parentSectionId": "HGXOt3c",
+              "id": "wWQUb"
             }
           ],
           "parentPackageUid": "A1",
@@ -1620,7 +1620,7 @@
       "hint": "Great Hunter",
       "sections": [
         {
-          "id": "l2nMv1-",
+          "id": "N0bDaKV",
           "uid": "V2G50jg",
           "label": "Replace Barbed Claw",
           "options": [
@@ -1664,7 +1664,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 20,
                   "unitId": "2Dk-V1m"
                 }
               ],
@@ -1703,7 +1703,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 30,
                   "unitId": "2Dk-V1m"
                 }
               ],
@@ -1750,7 +1750,7 @@
       "hint": "Infected Leader",
       "sections": [
         {
-          "id": "TU3wGWR",
+          "id": "CeGawOG",
           "uid": "mPvPwT8",
           "label": "Replace Leader Pistol",
           "options": [
@@ -1789,7 +1789,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "YtYD-ZH"
                 }
               ],
@@ -1905,7 +1905,7 @@
           ]
         },
         {
-          "id": "pENeBWa",
+          "id": "W4CRorn",
           "uid": "pYGaHCI",
           "label": "Replace CCW",
           "options": [
@@ -1950,7 +1950,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "YtYD-ZH"
                 }
               ],
@@ -1992,7 +1992,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "YtYD-ZH"
                 }
               ],
@@ -2032,7 +2032,7 @@
           ]
         },
         {
-          "id": "kYoFC0M",
+          "id": "SK02Sz4",
           "uid": "KIXXpwnYsU",
           "label": "Upgrade with",
           "options": [
@@ -2071,7 +2071,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "JETMWV9",
+          "id": "dHssvD7",
           "uid": "ustuphL1Gh",
           "label": "Upgrade with one",
           "options": [
@@ -2165,7 +2165,7 @@
       "hint": "Specialists - Tyrant",
       "sections": [
         {
-          "id": "57gyWRv",
+          "id": "10pbKcy",
           "uid": "sIPPvmF",
           "label": "Upgrade with one",
           "options": [
@@ -2263,7 +2263,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 45,
                   "unitId": "navlwQ_"
                 }
               ],
@@ -2292,7 +2292,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 75,
+                  "cost": 80,
                   "unitId": "navlwQ_"
                 }
               ],
@@ -2335,7 +2335,7 @@
       "hint": "Infected Soldiers",
       "sections": [
         {
-          "id": "JgcTadD",
+          "id": "gpnhBKu",
           "uid": "U5ghStP",
           "label": "Replace up to two Carbines",
           "options": [
@@ -2345,7 +2345,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "4cDEOVp"
                 }
               ],
@@ -2381,7 +2381,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "4cDEOVp"
                 }
               ],
@@ -2586,7 +2586,7 @@
           ]
         },
         {
-          "id": "IULNFW3",
+          "id": "QLfaXZ4",
           "uid": "CN1cXFUy",
           "label": "Replace one Carbine and CCW",
           "options": [
@@ -2658,7 +2658,7 @@
           ]
         },
         {
-          "id": "GOm_-9C",
+          "id": "gT1JI5r",
           "uid": "aLFsL0-v",
           "label": "Replace Sgt. Pistol",
           "options": [
@@ -2740,7 +2740,7 @@
           ]
         },
         {
-          "id": "m7p4MV_",
+          "id": "IPYdjWc",
           "uid": "B8wjRysh",
           "label": "Replace Energy Sword",
           "options": [
@@ -2796,7 +2796,7 @@
       "hint": "Weapon Teams",
       "sections": [
         {
-          "id": "Rtojf5Y",
+          "id": "HstKfKr",
           "uid": "OE2oyWP",
           "label": "Replace any Heavy Machinegun",
           "options": [
@@ -2988,7 +2988,7 @@
       "hint": "Infected Gunners",
       "sections": [
         {
-          "id": "NYEm8jY",
+          "id": "GhDl7hO",
           "uid": "IdY-BUR",
           "label": "Replace any Grenade Launcher",
           "options": [
@@ -3206,7 +3206,7 @@
       "hint": "Hunters",
       "sections": [
         {
-          "id": "2jWyF2Q",
+          "id": "DknU-Gg",
           "uid": "F2nqAQI",
           "label": "Replace any Toxic Claws",
           "options": [
@@ -3254,7 +3254,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "CFZyeQL"
                 }
               ],
@@ -3297,7 +3297,7 @@
           ]
         },
         {
-          "id": "9fhqoBr",
+          "id": "zriLSBX",
           "uid": "UZWAK",
           "label": "Replace one Toxic Claw",
           "options": [
@@ -3307,7 +3307,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "CFZyeQL"
                 }
               ],
@@ -3361,7 +3361,7 @@
       "hint": "Infected Vultures",
       "sections": [
         {
-          "id": "Cr5u0gC",
+          "id": "HYkI2rf",
           "uid": "WvH_a",
           "label": "Replace any Sharp Talon",
           "options": [
@@ -3417,7 +3417,7 @@
           ]
         },
         {
-          "id": "Pd0RSsL",
+          "id": "vQ1rwuN",
           "uid": "WeCmFrR",
           "label": "Upgrade all models with",
           "options": [
@@ -3469,7 +3469,7 @@
       "hint": "Corrupted Beasts",
       "sections": [
         {
-          "id": "B2N3tit",
+          "id": "sQ04oBZ",
           "uid": "azWZFzy",
           "label": "Replace any Dual Sharp Claw",
           "options": [
@@ -3479,7 +3479,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "UqaaDf5"
                 }
               ],
@@ -3521,7 +3521,7 @@
           ]
         },
         {
-          "id": "bFHzXCy",
+          "id": "nZ6d9N_",
           "uid": "oNUTO",
           "label": "Replace one Dual Sharp Claw",
           "options": [
@@ -3572,7 +3572,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "UqaaDf5"
                 }
               ],
@@ -3628,7 +3628,7 @@
       "hint": "Attack Buggy",
       "sections": [
         {
-          "id": "Ss0LeJf",
+          "id": "m7kKuiy",
           "uid": "i-Cvhjq",
           "label": "Replace Heavy Spore Shooter",
           "options": [
@@ -3673,7 +3673,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 45,
+                  "cost": 50,
                   "unitId": "KK8LQag"
                 }
               ],
@@ -3753,7 +3753,7 @@
           ]
         },
         {
-          "id": "wSnHv69",
+          "id": "MpfVNrs",
           "uid": "wFVhC7G",
           "label": "Upgrade with any",
           "options": [
@@ -3834,7 +3834,7 @@
       "hint": "Battle Tank",
       "sections": [
         {
-          "id": "GMC_0qK",
+          "id": "fR-u0rK",
           "uid": "FPpqEZw",
           "label": "Replace Battle Cannon",
           "options": [
@@ -3844,7 +3844,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 30,
                   "unitId": "Yss19LW"
                 }
               ],
@@ -3979,7 +3979,7 @@
       "hint": "Combat Walker",
       "sections": [
         {
-          "id": "erNeQPt",
+          "id": "YXlHRHH",
           "uid": "Aq-p-CM",
           "label": "Replace Super-Heavy Fusion Rifle",
           "options": [
@@ -3988,7 +3988,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "Yua0QBl"
                 }
               ],
@@ -4051,7 +4051,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 45,
+                  "cost": 55,
                   "unitId": "Yua0QBl"
                 }
               ],
@@ -4139,7 +4139,7 @@
       "hint": "Light Dropship",
       "sections": [
         {
-          "id": "qkM05ct",
+          "id": "uIXO2sV",
           "uid": "CuMNoPh",
           "label": "Replace Twin Heavy Machinegun",
           "options": [
@@ -4248,7 +4248,7 @@
       "hint": "Evolving Strain",
       "sections": [
         {
-          "id": "qRTxA4u",
+          "id": "_MczWPo",
           "uid": "_VGXO",
           "label": "Upgrade all models with",
           "options": [
@@ -4312,7 +4312,7 @@
       "hint": "Contamination Cloud",
       "sections": [
         {
-          "id": "paw2UIJ",
+          "id": "IiJh9jw",
           "uid": "m8iHP",
           "label": "Upgrade with",
           "options": [
@@ -4362,7 +4362,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "7nAEL-G",
+          "id": "mWEyaNv",
           "uid": "ZItjjsfV",
           "label": "Upgrade with one",
           "options": [
@@ -4459,36 +4459,6 @@
               "id": "daAWHHtc2j"
             },
             {
-              "uid": "2ORAmSG9",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 40,
-                  "unitId": "YtYD-ZH"
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Spore Carrier",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Spore Carrier (Infected Boost Aura)",
-                  "content": [
-                    {
-                      "id": "FPA1mew5j78v",
-                      "name": "Infected Boost Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Spore Carrier (Infected Boost Aura)",
-              "parentSectionId": "ZItjjsfV",
-              "parentPackageUid": "xKhTnht-",
-              "id": "2ORAmSG9"
-            },
-            {
               "uid": "4zyy7Cz0",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -4517,6 +4487,36 @@
               "parentSectionId": "ZItjjsfV",
               "parentPackageUid": "xKhTnht-",
               "id": "4zyy7Cz0"
+            },
+            {
+              "uid": "2ORAmSG9",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 45,
+                  "unitId": "YtYD-ZH"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Spore Carrier",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Spore Carrier (Infected Boost Aura)",
+                  "content": [
+                    {
+                      "id": "FPA1mew5j78v",
+                      "name": "Infected Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Spore Carrier (Infected Boost Aura)",
+              "parentSectionId": "ZItjjsfV",
+              "parentPackageUid": "xKhTnht-",
+              "id": "2ORAmSG9"
             },
             {
               "uid": "CfCAPSdd",
@@ -4567,7 +4567,7 @@
       "hint": "Specialists - Hunter",
       "sections": [
         {
-          "id": "wAMjy1H",
+          "id": "yDisALg",
           "uid": "cR57wXMg",
           "label": "Upgrade with one",
           "options": [
@@ -4698,7 +4698,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 45,
                   "unitId": "2Dk-V1m"
                 }
               ],
@@ -4741,7 +4741,7 @@
       "hint": "Rabid Dogs",
       "sections": [
         {
-          "id": "Q3SsrDE",
+          "id": "E8FSCEn",
           "uid": "_TJ889WCnD",
           "label": "Replace all Rabid Hounds",
           "options": [
@@ -5443,7 +5443,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:47.020Z",
+  "modifiedAt": "2026-04-30T09:21:58.035Z",
   "editedAt": "2026-04-28T08:45:42.301Z",
   "official": true,
   "versionString": "3.5.3",
@@ -5629,21 +5629,21 @@
       "targetType": 1
     },
     {
-      "id": "17crjK7P6_w6",
-      "name": "AP",
-      "aliasedRuleId": null,
-      "description": "Targets get -X to Defense rolls when blocking hits.",
-      "hasRating": true,
-      "coreType": 1,
-      "targetType": 2
-    },
-    {
       "id": "5v6oaGfrdf29",
       "name": "Surge",
       "aliasedRuleId": null,
       "description": "On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).",
       "hasRating": false,
       "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
       "targetType": 2
     },
     {

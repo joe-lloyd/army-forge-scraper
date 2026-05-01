@@ -15,7 +15,7 @@
   "units": [
     {
       "id": "2Dk-V1m",
-      "cost": 70,
+      "cost": 75,
       "name": "Great Hunter",
       "size": 1,
       "bases": {
@@ -226,8 +226,70 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "wFIjWHd",
+      "cost": 25,
+      "name": "Leech Swarm",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "jgyVEAzjbDDh",
+          "name": "Infected",
+          "label": "Infected"
+        }
+      ],
+      "valid": true,
+      "defense": 6,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "ajcnpX4R",
+          "name": "Swarm Attacks",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "47t3-yyc",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "Naqc5mga9Uha",
+              "name": "Bane",
+              "label": "Bane"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Swarm Attacks (A3, Bane)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "GIuQy"
+      ],
+      "genericName": "Plague Swarms",
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "4tJy4mK",
-      "cost": 20,
+      "cost": 25,
       "name": "Rabid Dog",
       "size": 1,
       "bases": {
@@ -288,139 +350,6 @@
       "hasCustomRule": false,
       "hasBalanceInvalid": false,
       "originalSize": 5,
-      "disabledUpgradeSections": []
-    },
-    {
-      "id": "IMWo3hw",
-      "cost": 25,
-      "name": "Infected Gunner",
-      "size": 1,
-      "bases": {
-        "round": "25",
-        "square": "30"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "H9E9PIWpGRdw",
-          "name": "Relentless",
-          "label": "Relentless"
-        },
-        {
-          "id": "jgyVEAzjbDDh",
-          "name": "Infected",
-          "label": "Infected"
-        }
-      ],
-      "valid": true,
-      "defense": 5,
-      "quality": 5,
-      "weapons": [
-        {
-          "id": "C9Hnetww",
-          "name": "Grenade Launcher",
-          "type": "ArmyBookWeapon",
-          "count": 1,
-          "range": 24,
-          "attacks": 1,
-          "weaponId": "C9Hnetww",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "w_vX0mi58KKt",
-              "name": "Blast",
-              "rating": 3,
-              "label": "Blast(3)"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Grenade Launcher (24\", A1, Blast(3))",
-          "originalCount": 1
-        },
-        {
-          "id": "1kq0zoPt",
-          "name": "CCW",
-          "type": "ArmyBookWeapon",
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "4o5CBBZC",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "CCW (A1)",
-          "count": 1,
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [
-        "H1"
-      ],
-      "genericName": "Support Troopers",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 3,
-      "disabledUpgradeSections": []
-    },
-    {
-      "id": "wFIjWHd",
-      "cost": 25,
-      "name": "Leech Swarm",
-      "size": 1,
-      "bases": {
-        "round": "40",
-        "square": "40"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "JSKVyurtWIyW",
-          "name": "Strider",
-          "label": "Strider"
-        },
-        {
-          "id": "a0YtInGiUDd6",
-          "name": "Tough",
-          "rating": 3,
-          "label": "Tough(3)"
-        },
-        {
-          "id": "jgyVEAzjbDDh",
-          "name": "Infected",
-          "label": "Infected"
-        }
-      ],
-      "valid": true,
-      "defense": 6,
-      "quality": 5,
-      "weapons": [
-        {
-          "id": "ajcnpX4R",
-          "name": "Swarm Attacks",
-          "type": "ArmyBookWeapon",
-          "count": 1,
-          "range": 0,
-          "attacks": 3,
-          "weaponId": "47t3-yyc",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "Naqc5mga9Uha",
-              "name": "Bane",
-              "label": "Bane"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Swarm Attacks (A3, Bane)",
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [
-        "GIuQy"
-      ],
-      "genericName": "Plague Swarms",
-      "hasCustomRule": false,
-      "hasBalanceInvalid": false,
-      "originalSize": 3,
       "disabledUpgradeSections": []
     },
     {
@@ -543,8 +472,79 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "IMWo3hw",
+      "cost": 30,
+      "name": "Infected Gunner",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "H9E9PIWpGRdw",
+          "name": "Relentless",
+          "label": "Relentless"
+        },
+        {
+          "id": "jgyVEAzjbDDh",
+          "name": "Infected",
+          "label": "Infected"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "C9Hnetww",
+          "name": "Grenade Launcher",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 24,
+          "attacks": 1,
+          "weaponId": "C9Hnetww",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Grenade Launcher (24\", A1, Blast(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "1kq0zoPt",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "4o5CBBZC",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "CCW (A1)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "H1"
+      ],
+      "genericName": "Support Troopers",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "VNRS8L0",
-      "cost": 35,
+      "cost": 40,
       "name": "Infected Runners",
       "size": 3,
       "bases": {
@@ -930,7 +930,7 @@
       "hint": "Great Hunter",
       "sections": [
         {
-          "id": "OZkplqo",
+          "id": "GsfpDZT",
           "uid": "V2G50jg",
           "label": "Replace Barbed Claw",
           "options": [
@@ -975,7 +975,7 @@
               "costs": [
                 {
                   "unitId": "2Dk-V1m",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1014,7 +1014,7 @@
               "costs": [
                 {
                   "unitId": "2Dk-V1m",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -1060,7 +1060,7 @@
       "hint": "Infected Leader",
       "sections": [
         {
-          "id": "Qts9xAv",
+          "id": "s-2Cy0a",
           "uid": "mPvPwT8",
           "label": "Replace Leader Pistol",
           "options": [
@@ -1100,7 +1100,7 @@
               "costs": [
                 {
                   "unitId": "YtYD-ZH",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1211,7 +1211,7 @@
           ]
         },
         {
-          "id": "vNckIzj",
+          "id": "PM2yr07",
           "uid": "pYGaHCI",
           "label": "Replace CCW",
           "options": [
@@ -1257,7 +1257,7 @@
               "costs": [
                 {
                   "unitId": "YtYD-ZH",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1299,7 +1299,7 @@
               "costs": [
                 {
                   "unitId": "YtYD-ZH",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1338,7 +1338,7 @@
           ]
         },
         {
-          "id": "e3LowRa",
+          "id": "JZIUE3k",
           "uid": "KIXXpwnYsU",
           "label": "Upgrade with",
           "options": [
@@ -1377,7 +1377,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "7XU0mCl",
+          "id": "yXW3G4N",
           "uid": "ustuphL1Gh",
           "label": "Upgrade with one",
           "options": [
@@ -1471,7 +1471,7 @@
       "hint": "Infected Soldiers",
       "sections": [
         {
-          "id": "6mvks2b",
+          "id": "-hIDBIV",
           "uid": "U5ghStP",
           "label": "Replace any Carbine",
           "options": [
@@ -1482,7 +1482,7 @@
               "costs": [
                 {
                   "unitId": "4cDEOVp",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1518,7 +1518,7 @@
               "costs": [
                 {
                   "unitId": "4cDEOVp",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1586,6 +1586,50 @@
               "parentSectionUid": "U5ghStP",
               "parentSectionId": "U5ghStP",
               "id": "v8OyOd7"
+            },
+            {
+              "uid": "AkwNo",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4cDEOVp",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Spore Shooter",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "bRRoBYv2",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spore Shooter (18\", A1, AP(1), Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Spore Shooter (18\", A1, AP(1), Blast(3), Lacerate)",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "U5ghStP",
+              "parentSectionId": "U5ghStP",
+              "id": "AkwNo"
             },
             {
               "uid": "v7wrN0F",
@@ -1677,7 +1721,7 @@
           ]
         },
         {
-          "id": "os51VQf",
+          "id": "sxY-k0T",
           "uid": "CN1cXFUy",
           "label": "Replace Carbine and CCW",
           "options": [
@@ -1745,7 +1789,7 @@
           ]
         },
         {
-          "id": "mpomdy5",
+          "id": "CGte-7Z",
           "uid": "aLFsL0-v",
           "label": "Replace Sgt. Pistol",
           "options": [
@@ -1827,7 +1871,7 @@
           ]
         },
         {
-          "id": "Nq0Gvnh",
+          "id": "JI2op4Z",
           "uid": "B8wjRysh",
           "label": "Replace Energy Sword",
           "options": [
@@ -1883,7 +1927,7 @@
       "hint": "Weapon Teams",
       "sections": [
         {
-          "id": "d4IaP2N",
+          "id": "YXAbF7g",
           "uid": "OE2oyWP",
           "label": "Replace any Heavy Machinegun",
           "options": [
@@ -2009,6 +2053,52 @@
               "parentSectionUid": "OE2oyWP",
               "parentSectionId": "OE2oyWP",
               "id": "VBYdt-e"
+            },
+            {
+              "uid": "e41R-xamAH",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "eFF0JJq",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Spore Mortar",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 1,
+                  "weaponId": "PF3twvqV",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "8Ck9GAwUK824",
+                      "name": "Indirect"
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spore Mortar (30\", A1, AP(1), Blast(3), Indirect, Lacerate)"
+                }
+              ],
+              "label": "Spore Mortar (30\", A1, AP(1), Blast(3), Indirect, Lacerate)",
+              "parentSectionId": "OE2oyWP",
+              "id": "e41R-xamAH"
             }
           ],
           "parentPackageUid": "G1",
@@ -2029,7 +2119,7 @@
       "hint": "Infected Gunners",
       "sections": [
         {
-          "id": "6_OuSZ5",
+          "id": "1Ht2C38",
           "uid": "IdY-BUR",
           "label": "Replace any Grenade Launcher",
           "options": [
@@ -2073,6 +2163,48 @@
               "parentSectionUid": "IdY-BUR",
               "parentSectionId": "IdY-BUR",
               "id": "sb6aGUt"
+            },
+            {
+              "uid": "0RFjgRyy_b",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IMWo3hw",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Spore Shooter",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "bRRoBYv2",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spore Shooter (18\", A1, AP(1), Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Spore Shooter (18\", A1, AP(1), Blast(3), Lacerate)",
+              "parentSectionId": "IdY-BUR",
+              "id": "0RFjgRyy_b"
             },
             {
               "uid": "WK39r",
@@ -2205,7 +2337,7 @@
       "hint": "Hunters",
       "sections": [
         {
-          "id": "86AfRC3",
+          "id": "t870XNK",
           "uid": "F2nqAQI",
           "label": "Replace any Toxic Claws",
           "options": [
@@ -2254,7 +2386,7 @@
               "costs": [
                 {
                   "unitId": "CFZyeQL",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2296,7 +2428,7 @@
           ]
         },
         {
-          "id": "OUxoJbw",
+          "id": "By6LOil",
           "uid": "UZWAK",
           "label": "Replace Toxic Claw",
           "options": [
@@ -2307,7 +2439,7 @@
               "costs": [
                 {
                   "unitId": "CFZyeQL",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2356,7 +2488,7 @@
       "hint": "Infected Vultures",
       "sections": [
         {
-          "id": "FhWY4jN",
+          "id": "pLcvG5A",
           "uid": "WvH_a",
           "label": "Replace any Sharp Talon",
           "options": [
@@ -2412,7 +2544,7 @@
           ]
         },
         {
-          "id": "03QXGyi",
+          "id": "51NVLMV",
           "uid": "WeCmFrR",
           "label": "Upgrade with",
           "options": [
@@ -2460,7 +2592,7 @@
       "hint": "Corrupted Beasts",
       "sections": [
         {
-          "id": "BepQ3cg",
+          "id": "C916Ma2",
           "uid": "azWZFzy",
           "label": "Replace any Dual Sharp Claw",
           "options": [
@@ -2471,7 +2603,7 @@
               "costs": [
                 {
                   "unitId": "UqaaDf5",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2512,7 +2644,7 @@
           ]
         },
         {
-          "id": "a1e4inu",
+          "id": "R1sxLeX",
           "uid": "oNUTO",
           "label": "Replace Dual Sharp Claw",
           "options": [
@@ -2564,7 +2696,7 @@
               "costs": [
                 {
                   "unitId": "UqaaDf5",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2615,7 +2747,7 @@
       "hint": "Evolving Strain",
       "sections": [
         {
-          "id": "vSUkLM6",
+          "id": "Synv6rU",
           "uid": "_VGXO",
           "label": "Upgrade all models with",
           "options": [
@@ -2679,7 +2811,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "70ALBIZ",
+          "id": "6anrWzj",
           "uid": "ZItjjsfV",
           "label": "Upgrade with one",
           "options": [
@@ -2720,7 +2852,7 @@
               "costs": [
                 {
                   "unitId": "YtYD-ZH",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2750,7 +2882,7 @@
               "costs": [
                 {
                   "unitId": "YtYD-ZH",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2776,12 +2908,42 @@
               "id": "daAWHHtc2j"
             },
             {
+              "uid": "4zyy7Cz0",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "YtYD-ZH",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Rapid Mutator",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Rapid Mutator (Unpredictable Shooter Aura)",
+                  "content": [
+                    {
+                      "id": "Ql2vwvAiWaor",
+                      "name": "Unpredictable Shooter Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Rapid Mutator (Unpredictable Shooter Aura)",
+              "parentSectionId": "ZItjjsfV",
+              "parentPackageUid": "xKhTnht-",
+              "id": "4zyy7Cz0"
+            },
+            {
               "uid": "2ORAmSG9",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "YtYD-ZH",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2806,34 +2968,35 @@
               "id": "2ORAmSG9"
             },
             {
-              "uid": "4zyy7Cz0",
+              "uid": "CfCAPSdd",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "YtYD-ZH",
-                  "cost": 10
+                  "cost": 40
                 }
               ],
               "gains": [
                 {
-                  "name": "Rapid Mutator",
+                  "name": "Enlarged Brain",
                   "type": "ArmyBookItem",
                   "bases": null,
-                  "label": "Rapid Mutator (Unpredictable Shooter Aura)",
+                  "label": "Enlarged Brain (Caster(2))",
                   "content": [
                     {
-                      "id": "Ql2vwvAiWaor",
-                      "name": "Unpredictable Shooter Aura",
-                      "type": "ArmyBookRule"
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
                     }
                   ],
                   "count": 1
                 }
               ],
-              "label": "Rapid Mutator (Unpredictable Shooter Aura)",
+              "label": "Enlarged Brain (Caster(2))",
               "parentSectionId": "ZItjjsfV",
               "parentPackageUid": "xKhTnht-",
-              "id": "4zyy7Cz0"
+              "id": "CfCAPSdd"
             }
           ],
           "isHeroUpgrade": true,
@@ -2853,7 +3016,7 @@
       "hint": "Specialists - Hunter",
       "sections": [
         {
-          "id": "tRWUWfZ",
+          "id": "0PcVG1t",
           "uid": "cR57wXMg",
           "label": "Upgrade with one",
           "options": [
@@ -2894,7 +3057,7 @@
               "costs": [
                 {
                   "unitId": "2Dk-V1m",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2924,7 +3087,7 @@
               "costs": [
                 {
                   "unitId": "2Dk-V1m",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2954,7 +3117,7 @@
               "costs": [
                 {
                   "unitId": "2Dk-V1m",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2985,7 +3148,7 @@
               "costs": [
                 {
                   "unitId": "2Dk-V1m",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -3027,7 +3190,7 @@
       "hint": "Rabid Dogs",
       "sections": [
         {
-          "id": "DHegopt",
+          "id": "x43fqsY",
           "uid": "_TJ889WCnD",
           "label": "Replace Rabid Hound",
           "options": [
@@ -3726,7 +3889,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:47.020Z",
+  "modifiedAt": "2026-04-30T09:21:58.035Z",
   "editedAt": "2026-04-28T08:45:42.301Z",
   "official": true,
   "versionString": "3.5.3",
@@ -3813,6 +3976,15 @@
       "targetType": 1
     },
     {
+      "id": "WcOMD7QgPYXZ",
+      "name": "Lacerate",
+      "aliasedRuleId": null,
+      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
       "id": "FPA1mew5j78v",
       "name": "Infected Boost Aura",
       "aliasedRuleId": null,
@@ -3867,6 +4039,15 @@
       "targetType": 1
     },
     {
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
+      "aliasedRuleId": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "JQmfgK02rJLK",
       "name": "Infected Boost",
       "aliasedRuleId": null,
@@ -3885,21 +4066,21 @@
       "targetType": 1
     },
     {
-      "id": "17crjK7P6_w6",
-      "name": "AP",
-      "aliasedRuleId": null,
-      "description": "Targets get -X to Defense rolls when blocking hits.",
-      "hasRating": true,
-      "coreType": 1,
-      "targetType": 2
-    },
-    {
       "id": "5v6oaGfrdf29",
       "name": "Surge",
       "aliasedRuleId": null,
       "description": "On unmodified results of 6 to hit, this weapon deals 1 extra hits (only the original hit counts as a 6 for special rules).",
       "hasRating": false,
       "coreType": null,
+      "targetType": 2
+    },
+    {
+      "id": "17crjK7P6_w6",
+      "name": "AP",
+      "aliasedRuleId": null,
+      "description": "Targets get -X to Defense rolls when blocking hits.",
+      "hasRating": true,
+      "coreType": 1,
       "targetType": 2
     },
     {
@@ -3918,15 +4099,6 @@
       "description": "Assign each wound to one model, and multiply it by X. Hits from Deadly must be resolved first, and these wounds don’t carry over to other models if the original target is killed.",
       "hasRating": true,
       "coreType": 1,
-      "targetType": 2
-    },
-    {
-      "id": "WcOMD7QgPYXZ",
-      "name": "Lacerate",
-      "aliasedRuleId": null,
-      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
-      "hasRating": false,
-      "coreType": null,
       "targetType": 2
     },
     {

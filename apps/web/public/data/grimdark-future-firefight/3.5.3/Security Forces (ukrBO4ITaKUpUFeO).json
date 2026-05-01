@@ -522,6 +522,91 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "WFdlIdC",
+      "cost": 40,
+      "name": "Security Ram-Suppressor",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "H9E9PIWpGRdw",
+          "name": "Relentless",
+          "label": "Relentless"
+        },
+        {
+          "id": "jyVvnNyAKS-8",
+          "name": "Ballistic Vest",
+          "label": "Ballistic Vest"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "gJg_t",
+          "name": "Sonic Rammer",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 24,
+          "attacks": 1,
+          "weaponId": "I68HLxLK",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "WcOMD7QgPYXZ",
+              "name": "Lacerate",
+              "label": "Lacerate"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Sonic Rammer (24\", A1, Blast(3), Lacerate)",
+          "originalCount": 1
+        },
+        {
+          "id": "ddd2b",
+          "name": "Assault-Ram",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "KnnqD0Xt",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Assault-Ram (A1, AP(4))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "oYhddiF-"
+      ],
+      "genericName": "Enforcer Rammers",
+      "isNarrative": false,
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "60B4xCR",
       "cost": 40,
       "name": "Security Shield-Suppressors",
@@ -681,7 +766,7 @@
       "hint": "Leader",
       "sections": [
         {
-          "id": "uyOKL3H",
+          "id": "SVWB4q-",
           "uid": "0j7ey",
           "label": "Replace Heavy Pistol and CCW",
           "options": [
@@ -866,7 +951,7 @@
           ]
         },
         {
-          "id": "uzCutM-",
+          "id": "sj9eSBo",
           "uid": "r08ZQ",
           "label": "Replace any Heavy Pistol",
           "options": [
@@ -918,10 +1003,47 @@
           ]
         },
         {
-          "id": "yjCkrX0",
+          "id": "QF8I45x",
           "uid": "_z0Ag",
           "label": "Replace Heavy Pistol",
           "options": [
+            {
+              "uid": "pvRuuA2OtQ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Sonic Gun",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 9,
+                  "attacks": 1,
+                  "weaponId": "kfsCPd0S",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sonic Gun (9\", A1, Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Sonic Gun (9\", A1, Blast(3), Lacerate)",
+              "parentSectionId": "_z0Ag",
+              "id": "pvRuuA2OtQ"
+            },
             {
               "uid": "O0uTL",
               "cost": 5,
@@ -1184,10 +1306,51 @@
           ]
         },
         {
-          "id": "Cc8fJ1M",
+          "id": "cAMAzqg",
           "uid": "TXGoU",
           "label": "Take one Master Heavy Rifle attachment",
           "options": [
+            {
+              "uid": "w30APs5a7C",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Sonic-Mod",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "bdlbThUz",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sonic-Mod (18\", A1, Blast(3), Limited, Lacerate)"
+                }
+              ],
+              "label": "Sonic-Mod (18\", A1, Blast(3), Limited, Lacerate)",
+              "parentSectionId": "TXGoU",
+              "id": "w30APs5a7C"
+            },
             {
               "uid": "9Ulwp",
               "cost": 5,
@@ -1323,7 +1486,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1377,7 +1540,7 @@
           ]
         },
         {
-          "id": "OCsqqVx",
+          "id": "HOEGoxz",
           "uid": "PrBZ3",
           "label": "Replace any CCW",
           "options": [
@@ -1423,7 +1586,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1506,7 +1669,7 @@
           ]
         },
         {
-          "id": "Duq5JlA",
+          "id": "crTUWQV",
           "uid": "crB5p",
           "label": "Upgrade with",
           "options": [
@@ -1517,7 +1680,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1554,7 +1717,7 @@
       "hint": "Veteran Fighters",
       "sections": [
         {
-          "id": "btpO8k4",
+          "id": "YllnMZk",
           "uid": "spZWF",
           "label": "Replace any 2x CCW",
           "options": [
@@ -1664,7 +1827,7 @@
           ]
         },
         {
-          "id": "GLZnzhR",
+          "id": "BBpYVPh",
           "uid": "kpibf",
           "label": "Replace any Heavy Pistol",
           "options": [
@@ -1784,10 +1947,47 @@
           ]
         },
         {
-          "id": "7ho6RAy",
+          "id": "05A5A-j",
           "uid": "-PdAR",
           "label": "Replace one Heavy Pistol",
           "options": [
+            {
+              "uid": "LalTWQ7z7b",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "I2Syvun",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Sonic Gun",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 9,
+                  "attacks": 1,
+                  "weaponId": "kfsCPd0S",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sonic Gun (9\", A1, Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Sonic Gun (9\", A1, Blast(3), Lacerate)",
+              "parentSectionId": "-PdAR",
+              "id": "LalTWQ7z7b"
+            },
             {
               "uid": "v-KbV",
               "cost": 5,
@@ -1914,7 +2114,7 @@
           ]
         },
         {
-          "id": "kYQqG4A",
+          "id": "H9uX_go",
           "uid": "3iZWe",
           "label": "Replace any Hand Weapon",
           "options": [
@@ -1958,7 +2158,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2039,7 +2239,7 @@
           ]
         },
         {
-          "id": "wIYDSRd",
+          "id": "l1IrzH0",
           "uid": "HKNxf",
           "label": "Replace any CCW",
           "options": [
@@ -2171,7 +2371,7 @@
       "hint": "Veteran Gunners",
       "sections": [
         {
-          "id": "TRSjoSR",
+          "id": "VFGnXmw",
           "uid": "F37T4",
           "label": "Replace Heavy Rifle",
           "options": [
@@ -2202,6 +2402,44 @@
               "parentSectionUid": "F37T4",
               "parentSectionId": "F37T4",
               "id": "dCWF4"
+            },
+            {
+              "uid": "-d4bc",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "-uY2tQ6",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sonic Rammer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "I68HLxLK",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sonic Rammer (24\", A1, Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Sonic Rammer (24\", A1, Blast(3), Lacerate)",
+              "parentPackageUid": "1wwKp",
+              "parentSectionUid": "F37T4",
+              "parentSectionId": "F37T4",
+              "id": "-d4bc"
             },
             {
               "uid": "MNkuG",
@@ -2379,10 +2617,51 @@
           ]
         },
         {
-          "id": "gDWTgyz",
+          "id": "JS9xkk8",
           "uid": "X-DN_",
           "label": "Take one Heavy Rifle attachment",
           "options": [
+            {
+              "uid": "wpH6LClXlG",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "-uY2tQ6",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Sonic-Mod",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "bdlbThUz",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sonic-Mod (18\", A1, Blast(3), Limited, Lacerate)"
+                }
+              ],
+              "label": "Sonic-Mod (18\", A1, Blast(3), Limited, Lacerate)",
+              "parentSectionId": "X-DN_",
+              "id": "wpH6LClXlG"
+            },
             {
               "uid": "IqOP1",
               "cost": 5,
@@ -2512,7 +2791,7 @@
               "costs": [
                 {
                   "unitId": "-uY2tQ6",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2573,7 +2852,7 @@
       "hint": "Fighters",
       "sections": [
         {
-          "id": "phmgRcw",
+          "id": "FUbruI6",
           "uid": "XyVnQ",
           "label": "Replace any 2x CCW",
           "options": [
@@ -2670,7 +2949,7 @@
           ]
         },
         {
-          "id": "fPqSpbf",
+          "id": "zar47Zc",
           "uid": "kdAV2",
           "label": "Replace one Pistols",
           "options": [
@@ -2792,7 +3071,7 @@
           ]
         },
         {
-          "id": "yauapmU",
+          "id": "QqxPECI",
           "uid": "b_a8d",
           "label": "Replace any Hand Weapon",
           "options": [
@@ -2915,7 +3194,7 @@
           ]
         },
         {
-          "id": "DycgfkJ",
+          "id": "w5951PE",
           "uid": "XoOJw",
           "label": "Replace any CCW",
           "options": [
@@ -3044,7 +3323,7 @@
       "hint": "Gunners",
       "sections": [
         {
-          "id": "UGCVVox",
+          "id": "coTdeZI",
           "uid": "hcsQa",
           "label": "Replace one Rifles",
           "options": [
@@ -3077,13 +3356,51 @@
               "id": "hIuSO"
             },
             {
+              "uid": "yRceP",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "PLRIppr",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sonic Blaster",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "1KlkarGZ",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sonic Blaster (18\", A1, Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Sonic Blaster (18\", A1, Blast(3), Lacerate)",
+              "parentPackageUid": "i-RoY",
+              "parentSectionUid": "hcsQa",
+              "parentSectionId": "hcsQa",
+              "id": "yRceP"
+            },
+            {
               "uid": "wHtQq",
               "cost": 5,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "PLRIppr",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3279,7 +3596,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "YTJTrG8",
+          "id": "qdWeqsI",
           "uid": "oRjXn",
           "label": "Replace Pistol and CCW",
           "options": [
@@ -3450,7 +3767,7 @@
           ]
         },
         {
-          "id": "Ir4OkZQ",
+          "id": "85qkekT",
           "uid": "2jIef",
           "label": "Replace any Pistol",
           "options": [
@@ -3502,7 +3819,7 @@
           ]
         },
         {
-          "id": "8kkQUiV",
+          "id": "covW4EL",
           "uid": "s3ghA",
           "label": "Replace Pistol",
           "options": [
@@ -3647,6 +3964,43 @@
               "id": "SKZ1v"
             },
             {
+              "uid": "QDAKxK6IMP",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Sonic Gun",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 9,
+                  "attacks": 1,
+                  "weaponId": "kfsCPd0S",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sonic Gun (9\", A1, Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Sonic Gun (9\", A1, Blast(3), Lacerate)",
+              "parentSectionId": "s3ghA",
+              "id": "QDAKxK6IMP"
+            },
+            {
               "uid": "BoQaw",
               "cost": 10,
               "type": "ArmyBookUpgradeOption",
@@ -3726,7 +4080,7 @@
           ]
         },
         {
-          "id": "9KgGA_Y",
+          "id": "iu82M5u",
           "uid": "-hFlY",
           "label": "Replace any CCW",
           "options": [
@@ -3853,7 +4207,7 @@
           ]
         },
         {
-          "id": "dtHhebS",
+          "id": "gWGFESr",
           "uid": "Bf1h1",
           "label": "Upgrade with",
           "options": [
@@ -3864,7 +4218,7 @@
               "costs": [
                 {
                   "unitId": "U8_wfrQ",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3902,7 +4256,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "nvOi_i8",
+          "id": "uUBXAjN",
           "uid": "UUfBH",
           "label": "Upgrade with one",
           "options": [
@@ -4032,7 +4386,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -4054,6 +4408,36 @@
               "label": "Captain (Ranged Slayer Aura)",
               "parentSectionId": "UUfBH",
               "id": "yAK32zweL1"
+            },
+            {
+              "uid": "JYGYW",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Vw3Vvws",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Cyber-Security",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Cyber-Security (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Cyber-Security (Caster(2))",
+              "parentSectionId": "UUfBH",
+              "id": "JYGYW"
             }
           ],
           "isHeroUpgrade": true,
@@ -4073,7 +4457,7 @@
       "hint": "Shield-Suppressors",
       "sections": [
         {
-          "id": "nYDUAsV",
+          "id": "sjiaC-Y",
           "uid": "nQwMZ",
           "label": "Replace any CCW",
           "options": [
@@ -4334,10 +4718,47 @@
           ]
         },
         {
-          "id": "mCd_irC",
+          "id": "cM1W9LU",
           "uid": "mEo4C",
           "label": "Replace one Heavy Pistol",
           "options": [
+            {
+              "uid": "jSkWMJeoo7",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "60B4xCR",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Sonic Gun",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 9,
+                  "attacks": 1,
+                  "weaponId": "kfsCPd0S",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sonic Gun (9\", A1, Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Sonic Gun (9\", A1, Blast(3), Lacerate)",
+              "parentSectionId": "mEo4C",
+              "id": "jSkWMJeoo7"
+            },
             {
               "uid": "jVyc1",
               "cost": 5,
@@ -4498,7 +4919,7 @@
           ]
         },
         {
-          "id": "p1Lh9qd",
+          "id": "qiNcFZ7",
           "uid": "wqDT8_k6",
           "label": "Upgrade one model with",
           "options": [
@@ -4551,7 +4972,7 @@
       "hint": "Patrol-Bikers",
       "sections": [
         {
-          "id": "dh1zb6z",
+          "id": "Q3eqAVf",
           "uid": "1WGQG",
           "label": "Replace any Heavy Pistol",
           "options": [
@@ -4674,10 +5095,47 @@
           ]
         },
         {
-          "id": "B7wHTzF",
+          "id": "2JlGO12",
           "uid": "UKzct",
           "label": "Replace Heavy Pistol",
           "options": [
+            {
+              "uid": "F6YOXRJivn",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "6S_hurc",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Sonic Gun",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 9,
+                  "attacks": 1,
+                  "weaponId": "kfsCPd0S",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sonic Gun (9\", A1, Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Sonic Gun (9\", A1, Blast(3), Lacerate)",
+              "parentSectionId": "UKzct",
+              "id": "F6YOXRJivn"
+            },
             {
               "uid": "gRM5W",
               "cost": 5,
@@ -4800,7 +5258,7 @@
           ]
         },
         {
-          "id": "19WoePm",
+          "id": "8jTGZFd",
           "uid": "dwvOy",
           "label": "Replace any Hand Weapon",
           "options": [
@@ -4845,7 +5303,7 @@
               "costs": [
                 {
                   "unitId": "6S_hurc",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4928,7 +5386,7 @@
           ]
         },
         {
-          "id": "CvjHClG",
+          "id": "KSRKc4D",
           "uid": "vliqx0rC",
           "label": "Upgrade with",
           "options": [
@@ -4976,7 +5434,7 @@
       "hint": "Enforcer-Bots",
       "sections": [
         {
-          "id": "PmmNdhl",
+          "id": "wJ217-U",
           "uid": "7MMul",
           "label": "Replace any Shock Weapon",
           "options": [
@@ -5058,10 +5516,46 @@
           ]
         },
         {
-          "id": "c1ZNxa-",
+          "id": "dBszjXi",
           "uid": "WyEI-",
           "label": "Replace one Shock Weapon",
           "options": [
+            {
+              "uid": "Ktlym",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "knAVwhs",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sonic Rammer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "I68HLxLK",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sonic Rammer (24\", A1, Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Sonic Rammer (24\", A1, Blast(3), Lacerate)",
+              "parentSectionId": "WyEI-",
+              "id": "Ktlym"
+            },
             {
               "uid": "yQjSP",
               "type": "ArmyBookUpgradeOption",
@@ -5127,7 +5621,7 @@
           ]
         },
         {
-          "id": "aBrPYaX",
+          "id": "bddJ1gg",
           "uid": "4jTyEN5c",
           "label": "Upgrade with",
           "options": [
@@ -5137,7 +5631,7 @@
               "costs": [
                 {
                   "unitId": "knAVwhs",
-                  "cost": 0
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -5170,11 +5664,58 @@
       "calcErrors": false
     },
     {
+      "uid": "oYhddiF-",
+      "hint": "Ram-Suppressors",
+      "sections": [
+        {
+          "id": "_SW4VHA",
+          "uid": "X3bNpT9qLC",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "aA6bHM2mTH",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "WFdlIdC",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Security Scanner",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Security Scanner (Piercing Target(1))",
+                  "content": [
+                    {
+                      "id": "HMiVg3VVLQv3",
+                      "name": "Piercing Target",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Security Scanner (Piercing Target(1))",
+              "parentSectionId": "X3bNpT9qLC",
+              "id": "aA6bHM2mTH"
+            }
+          ],
+          "parentPackageUid": "oYhddiF-",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "mFjYaZv7",
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "ucIe5w7",
+          "id": "EwoaQh8",
           "uid": "5WFMoqRY",
           "label": "Upgrade with one",
           "options": [
@@ -5245,7 +5786,7 @@
               "costs": [
                 {
                   "unitId": "U8_wfrQ",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -5275,7 +5816,7 @@
               "costs": [
                 {
                   "unitId": "U8_wfrQ",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -5298,6 +5839,37 @@
               "parentSectionId": "5WFMoqRY",
               "parentPackageUid": "DAXV6FeC",
               "id": "iKrYGRie"
+            },
+            {
+              "uid": "Ds9dWTn1",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Cyber-Security",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Cyber-Security (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Cyber-Security (Caster(2))",
+              "parentSectionId": "5WFMoqRY",
+              "parentPackageUid": "DAXV6FeC",
+              "id": "Ds9dWTn1"
             }
           ],
           "isHeroUpgrade": true,
@@ -5879,7 +6451,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:54:21.837Z",
+  "modifiedAt": "2026-04-30T09:22:27.680Z",
   "editedAt": "2026-04-07T15:49:12.598Z",
   "official": true,
   "versionString": "3.5.3",
@@ -5984,6 +6556,15 @@
       "targetType": 2
     },
     {
+      "id": "WcOMD7QgPYXZ",
+      "name": "Lacerate",
+      "aliasedRuleId": null,
+      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
       "id": "FZLk0-3ci6jI",
       "name": "Martial Prowess",
       "aliasedRuleId": null,
@@ -6074,6 +6655,15 @@
       "targetType": 1
     },
     {
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
+      "aliasedRuleId": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "1TMBPe40kx2b",
       "name": "Melee Shrouding",
       "aliasedRuleId": null,
@@ -6081,15 +6671,6 @@
       "hasRating": false,
       "coreType": null,
       "targetType": 1
-    },
-    {
-      "id": "WcOMD7QgPYXZ",
-      "name": "Lacerate",
-      "aliasedRuleId": null,
-      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
-      "hasRating": false,
-      "coreType": null,
-      "targetType": 2
     },
     {
       "id": "w_vX0mi58KKt",

@@ -15,7 +15,7 @@
   "units": [
     {
       "id": "LReGGIdjk",
-      "cost": 600,
+      "cost": 605,
       "name": "Avatar of Lust",
       "size": 1,
       "sync": {
@@ -122,7 +122,7 @@
     },
     {
       "id": "dzUvtuvTe",
-      "cost": 275,
+      "cost": 280,
       "name": "Ascended Harbinger of Lust",
       "size": 1,
       "sync": {
@@ -529,7 +529,7 @@
     },
     {
       "id": "8z-_WuDqM",
-      "cost": 50,
+      "cost": 45,
       "name": "Infernal Siren",
       "size": 1,
       "sync": {
@@ -687,7 +687,7 @@
     },
     {
       "id": "oJkDvTVkl",
-      "cost": 80,
+      "cost": 85,
       "name": "Lust Furies",
       "size": 5,
       "sync": {
@@ -1297,7 +1297,7 @@
     },
     {
       "id": "s4bFC-UKh",
-      "cost": 200,
+      "cost": 195,
       "name": "Sacred Mirror",
       "size": 1,
       "sync": {
@@ -1525,7 +1525,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "dPfI8_S",
+          "id": "lmuX9uw",
           "uid": "y1b3IGa",
           "label": "Replace any Exalted Ritual Hammer",
           "options": [
@@ -1534,7 +1534,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 45,
                   "unitId": "LReGGIdjk"
                 }
               ],
@@ -1566,12 +1566,47 @@
               "id": "zaJz4PT"
             },
             {
+              "uid": "JlRhb",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 55,
+                  "unitId": "LReGGIdjk"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "Wl0gy_Lt",
+                  "name": "Exalted Arm-Crossbow",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 12,
+                  "weaponId": "Wl0gy_Lt",
+                  "specialRules": [
+                    {
+                      "id": "5v6oaGfrdf29",
+                      "name": "Surge"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Exalted Arm-Crossbow (12\", A12, Surge)",
+                  "count": 1
+                }
+              ],
+              "label": "Exalted Arm-Crossbow (12\", A12, Surge)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "y1b3IGa",
+              "parentSectionId": "y1b3IGa",
+              "id": "JlRhb"
+            },
+            {
               "uid": "bw6hhmX",
               "cost": 20,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 55,
+                  "cost": 60,
                   "unitId": "LReGGIdjk"
                 }
               ],
@@ -1611,6 +1646,43 @@
               "id": "bw6hhmX"
             },
             {
+              "uid": "nQfbHQghAG",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 60,
+                  "unitId": "LReGGIdjk"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Exalted Crossbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 6,
+                  "weaponId": "783CarUT",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "5v6oaGfrdf29",
+                      "name": "Surge"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Exalted Crossbow (18\", A6, AP(1), Surge)"
+                }
+              ],
+              "label": "Exalted Crossbow (18\", A6, AP(1), Surge)",
+              "parentSectionId": "y1b3IGa",
+              "id": "nQfbHQghAG"
+            },
+            {
               "uid": "dkMz1",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -1645,84 +1717,12 @@
               "id": "dkMz1"
             },
             {
-              "uid": "JlRhb",
-              "cost": 5,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 70,
-                  "unitId": "LReGGIdjk"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "Wl0gy_Lt",
-                  "name": "Exalted Arm-Crossbow",
-                  "type": "ArmyBookWeapon",
-                  "range": 12,
-                  "attacks": 12,
-                  "weaponId": "Wl0gy_Lt",
-                  "specialRules": [
-                    {
-                      "id": "5v6oaGfrdf29",
-                      "name": "Surge"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Exalted Arm-Crossbow (12\", A12, Surge)",
-                  "count": 1
-                }
-              ],
-              "label": "Exalted Arm-Crossbow (12\", A12, Surge)",
-              "parentPackageUid": "A1",
-              "parentSectionUid": "y1b3IGa",
-              "parentSectionId": "y1b3IGa",
-              "id": "JlRhb"
-            },
-            {
-              "uid": "nQfbHQghAG",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 75,
-                  "unitId": "LReGGIdjk"
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Exalted Crossbow",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 18,
-                  "attacks": 6,
-                  "weaponId": "783CarUT",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 1
-                    },
-                    {
-                      "id": "5v6oaGfrdf29",
-                      "name": "Surge"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Exalted Crossbow (18\", A6, AP(1), Surge)"
-                }
-              ],
-              "label": "Exalted Crossbow (18\", A6, AP(1), Surge)",
-              "parentSectionId": "y1b3IGa",
-              "id": "nQfbHQghAG"
-            },
-            {
               "uid": "lOe1IOa",
               "cost": 70,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 100,
+                  "cost": 110,
                   "unitId": "LReGGIdjk"
                 }
               ],
@@ -1768,7 +1768,7 @@
           ]
         },
         {
-          "id": "7Q5BEVY",
+          "id": "aseRO_d",
           "uid": "JwoWR8Qz",
           "label": "Upgrade with",
           "options": [
@@ -1816,7 +1816,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "oTYOWT0",
+          "id": "hJi83Pj",
           "uid": "ZD_tV32",
           "label": "Replace any Great Ritual Hammer",
           "options": [
@@ -1866,40 +1866,6 @@
               "id": "8GwxTfo"
             },
             {
-              "uid": "bZkXs",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 25,
-                  "unitId": "dzUvtuvTe"
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Great Perfect Sword",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 6,
-                  "weaponId": "b1muYxNU",
-                  "specialRules": [
-                    {
-                      "id": "7F4391rzKx2g",
-                      "name": "Shatter"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Great Perfect Sword (A6, Shatter)"
-                }
-              ],
-              "label": "Great Perfect Sword (A6, Shatter)",
-              "parentPackageUid": "B1",
-              "parentSectionUid": "ZD_tV32",
-              "parentSectionId": "ZD_tV32",
-              "id": "bZkXs"
-            },
-            {
               "uid": "7wZlO34",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -1934,6 +1900,40 @@
               "label": "Great Ritual Blade (A6, Rending, Surge)",
               "parentSectionId": "ZD_tV32",
               "id": "7wZlO34"
+            },
+            {
+              "uid": "bZkXs",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 30,
+                  "unitId": "dzUvtuvTe"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Great Perfect Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "b1muYxNU",
+                  "specialRules": [
+                    {
+                      "id": "7F4391rzKx2g",
+                      "name": "Shatter"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Perfect Sword (A6, Shatter)"
+                }
+              ],
+              "label": "Great Perfect Sword (A6, Shatter)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "ZD_tV32",
+              "parentSectionId": "ZD_tV32",
+              "id": "bZkXs"
             },
             {
               "uid": "rBZeg",
@@ -1975,7 +1975,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 30,
                   "unitId": "dzUvtuvTe"
                 }
               ],
@@ -2013,7 +2013,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 45,
+                  "cost": 50,
                   "unitId": "dzUvtuvTe"
                 }
               ],
@@ -2059,7 +2059,7 @@
           ]
         },
         {
-          "id": "9dMNUSl",
+          "id": "XcfO3_J",
           "uid": "gRXuRjPT",
           "label": "Upgrade with",
           "options": [
@@ -2107,7 +2107,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "XFDjzca",
+          "id": "B0dc7n_",
           "uid": "Qh1x7",
           "label": "Replace any Ritual Hammer",
           "options": [
@@ -2160,7 +2160,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "HJpCZHhtB"
                 }
               ],
@@ -2347,7 +2347,7 @@
           ]
         },
         {
-          "id": "iu4BJ8T",
+          "id": "-RitQmC",
           "uid": "0mzHTFy6",
           "label": "Upgrade with",
           "options": [
@@ -2390,7 +2390,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "KLDqgjt",
+          "id": "cbfubml",
           "uid": "nP_r4",
           "label": "Upgrade with one",
           "options": [
@@ -2508,7 +2508,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "JGcgE88",
+          "id": "3w375nS",
           "uid": "zH0vW",
           "label": "Replace Ritual Hammer and Blade",
           "options": [
@@ -2577,7 +2577,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "46SlFZLb0"
                 }
               ],
@@ -2719,7 +2719,7 @@
           ]
         },
         {
-          "id": "HCYNsxc",
+          "id": "mjQ2gPo",
           "uid": "kt_EW",
           "label": "Replace any Perfect Sword",
           "options": [
@@ -2810,7 +2810,7 @@
           ]
         },
         {
-          "id": "G5PX-9Z",
+          "id": "WGs4pPm",
           "uid": "CjOCGrrj",
           "label": "Upgrade with",
           "options": [
@@ -2853,7 +2853,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "gGPjwq8",
+          "id": "5B2yT1k",
           "uid": "MYPav",
           "label": "Upgrade with one",
           "options": [
@@ -3076,7 +3076,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "fhjWAUM",
+          "id": "6ODut0N",
           "uid": "Kyyvl",
           "label": "Replace all Perfect Claws",
           "options": [
@@ -3172,7 +3172,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "1T214Za",
+          "id": "tr5GwoO",
           "uid": "KSZLB29",
           "label": "Upgrade up to three models with one",
           "options": [
@@ -3298,7 +3298,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "Up315AJ",
+          "id": "JmwFNB5",
           "uid": "LjNRRMd",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -3489,7 +3489,7 @@
           ]
         },
         {
-          "id": "UR22zme",
+          "id": "ALLlkvw",
           "uid": "AlGfRorZ",
           "label": "Upgrade all models with",
           "options": [
@@ -3535,7 +3535,7 @@
           }
         },
         {
-          "id": "lexGWt5",
+          "id": "I7HlAOm",
           "uid": "OYY-LpL",
           "label": "Upgrade one model with",
           "options": [
@@ -3587,7 +3587,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "f4hvWtR",
+          "id": "Nv7sLha",
           "uid": "ze7zWH1",
           "label": "Upgrade with one",
           "options": [
@@ -3660,7 +3660,7 @@
           }
         },
         {
-          "id": "vMVL5iN",
+          "id": "-4eHS9J",
           "uid": "n4GNWEws",
           "label": "Upgrade with",
           "options": [
@@ -3710,7 +3710,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "saFB0zS",
+          "id": "7bz5RBQ",
           "uid": "oCbkAgq",
           "label": "Replace Lust Sword",
           "options": [
@@ -3720,7 +3720,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 30,
                   "unitId": "_SOmd_s0L"
                 }
               ],
@@ -3797,7 +3797,7 @@
           ]
         },
         {
-          "id": "fSWBUpY",
+          "id": "nbdgSUL",
           "uid": "eiewcoA",
           "label": "Replace Lust Cannon",
           "options": [
@@ -3846,7 +3846,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 180,
+                  "cost": 155,
                   "unitId": "_SOmd_s0L"
                 }
               ],
@@ -3884,7 +3884,7 @@
           ]
         },
         {
-          "id": "2ABk7AW",
+          "id": "JptoJvL",
           "uid": "f7VYiAwp",
           "label": "Upgrade with",
           "options": [
@@ -3933,7 +3933,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "TJu1gs4",
+          "id": "SbxzH7Q",
           "uid": "V6bq3",
           "label": "Replace Ritual Hammer and Blade",
           "options": [
@@ -4146,7 +4146,7 @@
           ]
         },
         {
-          "id": "h5s2cHD",
+          "id": "bpLuDS7",
           "uid": "pjHVc",
           "label": "Replace any Perfect Sword",
           "options": [
@@ -4247,7 +4247,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "K1AJijp",
+          "id": "vhEzjdY",
           "uid": "eBEe1",
           "label": "Replace all Mutated Claws",
           "options": [
@@ -4256,7 +4256,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 15,
                   "unitId": "NKX25Iojs"
                 }
               ],
@@ -4294,7 +4294,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 30,
                   "unitId": "NKX25Iojs"
                 }
               ],
@@ -4343,7 +4343,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "hFugwaj",
+          "id": "yVxRqPG",
           "uid": "o5ZSE",
           "label": "Upgrade with one",
           "options": [
@@ -4552,7 +4552,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "gp4HI29",
+          "id": "Nbn4ZtP",
           "uid": "PdNi_",
           "label": "Upgrade with one",
           "options": [
@@ -4697,7 +4697,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "ZHd3_g3",
+          "id": "f4If-XM",
           "uid": "csxQQqtF",
           "label": "Replace all Arm-Crossbows",
           "options": [
@@ -4706,7 +4706,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 0,
                   "unitId": "gIJ9ndmjS"
                 }
               ],
@@ -4751,7 +4751,7 @@
           ]
         },
         {
-          "id": "nVENtP2",
+          "id": "eaJMV3E",
           "uid": "ncdsU",
           "label": "Upgrade all models with",
           "options": [
@@ -4805,7 +4805,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "Lzf2h4o",
+          "id": "mzrsKxK",
           "uid": "T2Fu_",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -4855,7 +4855,7 @@
           ]
         },
         {
-          "id": "8Hqy1gx",
+          "id": "k2TgSgu",
           "uid": "wUc6fzdq",
           "label": "Upgrade all models with",
           "options": [
@@ -4909,7 +4909,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "oxEbLbx",
+          "id": "e-6TmML",
           "uid": "cxYAmgqiYa",
           "label": "Replace all Arm-Crossbows",
           "options": [
@@ -4918,7 +4918,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 0,
                   "unitId": "IKvQJNvaI"
                 }
               ],
@@ -4970,7 +4970,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "AGJ6ZKW",
+          "id": "BsoEVab",
           "uid": "qIt1BpeT82",
           "label": "Replace Razor-Flail Crew",
           "options": [
@@ -5021,7 +5021,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 55,
+                  "cost": 50,
                   "unitId": "RUdN0BIzN"
                 }
               ],
@@ -5062,7 +5062,7 @@
           ]
         },
         {
-          "id": "l-KRr7_",
+          "id": "ryu0_3-",
           "uid": "XZl5ANbU",
           "label": "Upgrade with",
           "options": [
@@ -5111,7 +5111,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "KKKj8A4",
+          "id": "4IEoTL4",
           "uid": "OeEsksEHDQ",
           "label": "Replace Horrific Reflection",
           "options": [
@@ -5166,7 +5166,7 @@
           ]
         },
         {
-          "id": "VZ9_UPr",
+          "id": "EMcYVrh",
           "uid": "gsm7kwjyZE",
           "label": "Upgrade with any",
           "options": [
@@ -5207,7 +5207,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 35,
                   "unitId": "s4bFC-UKh"
                 }
               ],
@@ -5248,7 +5248,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "uGoRHBX",
+          "id": "3p3BsU6",
           "uid": "Ct4WV8yF",
           "label": "Upgrade with one",
           "options": [
@@ -5318,7 +5318,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 65,
+                  "cost": 70,
                   "unitId": "LReGGIdjk"
                 }
               ],
@@ -5349,7 +5349,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 90,
+                  "cost": 95,
                   "unitId": "LReGGIdjk"
                 }
               ],
@@ -5380,7 +5380,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 125,
+                  "cost": 130,
                   "unitId": "LReGGIdjk"
                 }
               ],
@@ -5426,7 +5426,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "-VpeWPX",
+          "id": "MHaZI5a",
           "uid": "CIhVhnuf",
           "label": "Upgrade with one",
           "options": [
@@ -5603,7 +5603,7 @@
       "sync": "CuyCCyZTIHo5rc0Z",
       "sections": [
         {
-          "id": "SSLo5IO",
+          "id": "EbcZtfh",
           "uid": "VwM4qPoa",
           "label": "Upgrade with one",
           "options": [
@@ -6347,7 +6347,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:54:49.236Z",
+  "modifiedAt": "2026-04-30T09:22:52.022Z",
   "editedAt": "2025-11-25T14:04:42.926Z",
   "official": true,
   "versionString": "3.5.3",
@@ -6448,15 +6448,6 @@
       "targetType": 2
     },
     {
-      "id": "a6Ze2uaBlNHX",
-      "name": "Mind Control",
-      "aliasedRuleId": null,
-      "description": "Once per activation, before attacking, pick one enemy unit within 18\", which must take a morale test. If failed you may move it by up to 6\" in a straight line in any direction.",
-      "hasRating": false,
-      "coreType": null,
-      "targetType": 1
-    },
-    {
       "id": "yis0utoPMclv",
       "name": "Lustbound",
       "aliasedRuleId": "CJ2mI46Tp-al",
@@ -6470,6 +6461,15 @@
       "name": "Lustbound Boost",
       "aliasedRuleId": null,
       "description": "If this model has Lustbound, it gets +8\" range when shooting and moves +4\" when using Charge actions from Lustbound (instead of only +4\" and +2\").",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "a6Ze2uaBlNHX",
+      "name": "Mind Control",
+      "aliasedRuleId": null,
+      "description": "Once per activation, before attacking, pick one enemy unit within 18\" in line of sight, which must take a morale test. If failed you may move it by up to 6\" in a straight line in any direction.",
       "hasRating": false,
       "coreType": null,
       "targetType": 1

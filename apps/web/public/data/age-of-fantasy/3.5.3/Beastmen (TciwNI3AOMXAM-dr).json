@@ -16,7 +16,7 @@
   "units": [
     {
       "id": "qt6GWWu",
-      "cost": 135,
+      "cost": 140,
       "name": "Kemba Brute Boss",
       "size": 1,
       "bases": {
@@ -85,7 +85,7 @@
     },
     {
       "id": "GfyrCwd",
-      "cost": 85,
+      "cost": 90,
       "name": "Ndwari Centaur Boss",
       "size": 1,
       "bases": {
@@ -503,7 +503,7 @@
     },
     {
       "id": "r4tGNht",
-      "cost": 160,
+      "cost": 165,
       "name": "Kemba Brutes",
       "size": 3,
       "bases": {
@@ -635,7 +635,7 @@
     },
     {
       "id": "0OibnBL",
-      "cost": 150,
+      "cost": 135,
       "name": "Ndwari Centaurs",
       "size": 5,
       "bases": {
@@ -672,23 +672,21 @@
       "weapons": [
         {
           "id": "RubhWmFS",
-          "name": "Flameforged Heavy Weapon",
-          "type": "ArmyBookWeapon",
+          "name": "Lance",
           "count": 5,
-          "range": 0,
           "attacks": 1,
-          "weaponId": "E6eh5znD",
+          "weaponId": "CyRc1Z1h",
           "specialRules": [
             {
               "type": "ArmyBookRule",
-              "id": "xeJDKejG4QZN",
-              "name": "Tear",
-              "label": "Tear"
+              "id": "umbiz4tnEyF8",
+              "name": "Thrust",
+              "label": "Thrust"
             }
           ],
-          "attacksMultiplier": 1,
-          "label": "Flameforged Heavy Weapon (A1, Tear)",
-          "originalCount": 5
+          "label": "Lance (A1, Thrust)",
+          "originalCount": 5,
+          "type": "ArmyBookWeapon"
         }
       ],
       "upgrades": [
@@ -704,7 +702,7 @@
     },
     {
       "id": "wFBMdqe",
-      "cost": 155,
+      "cost": 160,
       "name": "Crazed Boars",
       "size": 3,
       "bases": {
@@ -775,7 +773,7 @@
     },
     {
       "id": "SVFVgdJ",
-      "cost": 90,
+      "cost": 95,
       "name": "Sambari Hounds",
       "size": 5,
       "bases": {
@@ -1113,7 +1111,7 @@
     },
     {
       "id": "QnUso3V",
-      "cost": 245,
+      "cost": 250,
       "name": "Kemba Brute Giant",
       "size": 1,
       "bases": {
@@ -1196,7 +1194,7 @@
     },
     {
       "id": "FY3khTw",
-      "cost": 285,
+      "cost": 290,
       "name": "Slimey Beast",
       "size": 1,
       "bases": {
@@ -1319,7 +1317,7 @@
     },
     {
       "id": "fQ4Z7Ng",
-      "cost": 1040,
+      "cost": 1055,
       "name": "Burning Titan",
       "size": 1,
       "bases": {
@@ -1559,7 +1557,7 @@
       "hint": "Beast Lord",
       "sections": [
         {
-          "id": "uPOAoK-",
+          "id": "RGHq0xN",
           "uid": "eaLEeEh",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1598,48 +1596,6 @@
               "parentSectionUid": "eaLEeEh",
               "parentSectionId": "eaLEeEh",
               "id": "5pk_V"
-            },
-            {
-              "uid": "nW8ZHDE",
-              "cost": 5,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 15,
-                  "unitId": "wdLZRL7"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "qWCbdvhr",
-                  "name": "Heavy Halberd",
-                  "type": "ArmyBookWeapon",
-                  "range": 0,
-                  "attacks": 3,
-                  "weaponId": "Uy5FUW5G",
-                  "specialRules": [
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending",
-                      "type": "ArmyBookRule"
-                    },
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 1
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Heavy Halberd (A3, AP(1), Rending)",
-                  "count": 1
-                }
-              ],
-              "label": "Heavy Halberd (A3, AP(1), Rending)",
-              "parentPackageUid": "A1",
-              "parentSectionUid": "eaLEeEh",
-              "parentSectionId": "eaLEeEh",
-              "id": "nW8ZHDE"
             },
             {
               "uid": "Ofi9cy0",
@@ -1684,11 +1640,53 @@
               "id": "Ofi9cy0"
             },
             {
+              "uid": "nW8ZHDE",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 20,
+                  "unitId": "wdLZRL7"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "qWCbdvhr",
+                  "name": "Heavy Halberd",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "Uy5FUW5G",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Halberd (A3, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Halberd (A3, AP(1), Rending)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "eaLEeEh",
+              "parentSectionId": "eaLEeEh",
+              "id": "nW8ZHDE"
+            },
+            {
               "uid": "zmkgP8K",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 35,
                   "unitId": "wdLZRL7"
                 }
               ],
@@ -1724,7 +1722,7 @@
           ]
         },
         {
-          "id": "UyeNjaV",
+          "id": "Nr8fiH6",
           "uid": "5rASiU8",
           "label": "Upgrade with one",
           "options": [
@@ -1843,7 +1841,7 @@
       "hint": "Hunt Master",
       "sections": [
         {
-          "id": "GJGLpwU",
+          "id": "BsjHUrP",
           "uid": "Wct-dtB",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1918,7 +1916,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 20,
                   "unitId": "vCLM1-8"
                 }
               ],
@@ -1953,7 +1951,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 25,
                   "unitId": "vCLM1-8"
                 }
               ],
@@ -1989,7 +1987,7 @@
           ]
         },
         {
-          "id": "l1ZwqI_",
+          "id": "nYpO-vQ",
           "uid": "mPMLCdc",
           "label": "Upgrade with one",
           "options": [
@@ -2074,7 +2072,7 @@
           }
         },
         {
-          "id": "WsRjLz1",
+          "id": "QOXiOtx",
           "uid": "HoxGA",
           "label": "Upgrade with one",
           "options": [
@@ -2189,7 +2187,7 @@
       "hint": "Brute Boss",
       "sections": [
         {
-          "id": "JSXXK3E",
+          "id": "5AHU8Gm",
           "uid": "FVK4iGU",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -2235,7 +2233,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 50,
                   "unitId": "qt6GWWu"
                 }
               ],
@@ -2271,7 +2269,7 @@
           ]
         },
         {
-          "id": "P-xiWx6",
+          "id": "7Gw4hGu",
           "uid": "wnL7m",
           "label": "Upgrade with any",
           "options": [
@@ -2358,7 +2356,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "CygKj3q",
+          "id": "bfmas3J",
           "uid": "UCZ9uS2",
           "label": "Upgrade up to three models with one",
           "options": [
@@ -2519,7 +2517,7 @@
       "hint": "Hunters",
       "sections": [
         {
-          "id": "t4JRB99",
+          "id": "65QYPwT",
           "uid": "Pt2N454",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2608,7 +2606,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "8-a3O0m",
+          "id": "fJ6r5TC",
           "uid": "uwRDtij",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2697,7 +2695,7 @@
       "hint": "Elites",
       "sections": [
         {
-          "id": "rO-b8Me",
+          "id": "vFGvY0s",
           "uid": "5AaRhhK",
           "label": "Replace all Heavy Hand Weapons",
           "options": [
@@ -2740,7 +2738,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 30,
                   "unitId": "49PAMNU"
                 }
               ],
@@ -2795,7 +2793,7 @@
       "hint": "Brutes",
       "sections": [
         {
-          "id": "Zdz4PmT",
+          "id": "9_cs3a5",
           "uid": "OsZ-fDG",
           "label": "Replace all Heavy Hand Weapons",
           "options": [
@@ -2804,7 +2802,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 50,
                   "unitId": "r4tGNht"
                 }
               ],
@@ -2880,7 +2878,7 @@
           ]
         },
         {
-          "id": "QWKV_VY",
+          "id": "hNhC0XY",
           "uid": "wMULU",
           "label": "Upgrade all models with any",
           "options": [
@@ -2972,7 +2970,7 @@
       "hint": "Hounds",
       "sections": [
         {
-          "id": "0dqv524",
+          "id": "hsCDg5Y",
           "uid": "zzR8rnk",
           "label": "Upgrade all models with",
           "options": [
@@ -3018,7 +3016,7 @@
           }
         },
         {
-          "id": "YmMFWUh",
+          "id": "r1pjr4K",
           "uid": "iHn3SW4Cnd",
           "label": "Replace Pursuit Predator",
           "options": [
@@ -3070,42 +3068,41 @@
       "hint": "Centaurs",
       "sections": [
         {
-          "id": "7qIwzX9",
+          "id": "zTvgHax",
           "uid": "jlgMob0",
-          "label": "Replace all Flameforged Heavy Weapons",
+          "label": "Replace all Lances",
           "options": [
             {
-              "uid": "k-rbGx2yEy",
+              "uid": "ncAKRpT01P",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": -15,
+                  "cost": 25,
                   "unitId": "0OibnBL"
                 }
               ],
               "gains": [
                 {
                   "id": null,
-                  "name": "Lance",
+                  "name": "Flameforged Heavy Weapon",
                   "type": "ArmyBookWeapon",
                   "count": 1,
                   "range": 0,
                   "attacks": 1,
-                  "weaponId": "CyRc1Z1h",
+                  "weaponId": "E6eh5znD",
                   "specialRules": [
                     {
-                      "id": "umbiz4tnEyF8",
-                      "name": "Thrust",
-                      "type": "ArmyBookRule"
+                      "id": "xeJDKejG4QZN",
+                      "name": "Tear"
                     }
                   ],
                   "attacksMultiplier": 1,
-                  "label": "Lance (A1, Thrust)"
+                  "label": "Flameforged Heavy Weapon (A1, Tear)"
                 }
               ],
-              "label": "Lance (A1, Thrust)",
+              "label": "Flameforged Heavy Weapon (A1, Tear)",
               "parentSectionId": "jlgMob0",
-              "id": "k-rbGx2yEy"
+              "id": "ncAKRpT01P"
             }
           ],
           "parentPackageUid": "L1",
@@ -3115,11 +3112,11 @@
             "type": "all"
           },
           "targets": [
-            "Flameforged Heavy Weapons"
+            "Lances"
           ]
         },
         {
-          "id": "13BdRip",
+          "id": "MxikDg1",
           "uid": "FwbiQAs",
           "label": "Upgrade all models with",
           "options": [
@@ -3163,7 +3160,7 @@
           }
         },
         {
-          "id": "7qFBLwX",
+          "id": "F2qDF8J",
           "uid": "MBDmawf",
           "label": "Upgrade one model with",
           "options": [
@@ -3208,14 +3205,14 @@
           }
         }
       ],
-      "calcErrors": true
+      "calcErrors": false
     },
     {
       "uid": "M1",
       "hint": "Light Chariot",
       "sections": [
         {
-          "id": "Crre6ex",
+          "id": "XpBdezH",
           "uid": "udJ4ms1",
           "label": "Replace Spear Crew",
           "options": [
@@ -3257,7 +3254,7 @@
           ]
         },
         {
-          "id": "j0iQEpy",
+          "id": "Hs0FUmg",
           "uid": "TtvHH6Is",
           "label": "Upgrade with",
           "options": [
@@ -3306,7 +3303,7 @@
       "hint": "Beast Tamer",
       "sections": [
         {
-          "id": "lkfILRo",
+          "id": "3IsszzA",
           "uid": "rE53dNc",
           "label": "Upgrade with",
           "options": [
@@ -3323,7 +3320,7 @@
                   "unitId": "QnUso3V"
                 },
                 {
-                  "cost": 15,
+                  "cost": 20,
                   "unitId": "FY3khTw"
                 }
               ],
@@ -3360,7 +3357,7 @@
       "hint": "Cyclops",
       "sections": [
         {
-          "id": "ErKROlb",
+          "id": "z9g8xBW",
           "uid": "vuEfq0r",
           "label": "Replace Heavy Strike",
           "options": [
@@ -3422,7 +3419,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 45,
                   "unitId": "YsQxHWq"
                 }
               ],
@@ -3478,7 +3475,7 @@
           ]
         },
         {
-          "id": "nfHAolt",
+          "id": "wedZ3hu",
           "uid": "bhXd1",
           "label": "Upgrade with any",
           "options": [
@@ -3561,7 +3558,7 @@
       "hint": "Brute Giant",
       "sections": [
         {
-          "id": "bXneGZN",
+          "id": "3drgPHr",
           "uid": "1dOGi",
           "label": "Replace Dual Hand Weapons",
           "options": [
@@ -3570,7 +3567,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 55,
+                  "cost": 70,
                   "unitId": "QnUso3V"
                 }
               ],
@@ -3606,7 +3603,7 @@
           ]
         },
         {
-          "id": "9JY6inB",
+          "id": "l2j65Q1",
           "uid": "ih0-VPS",
           "label": "Upgrade with any",
           "options": [
@@ -3647,7 +3644,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 20,
                   "unitId": "QnUso3V"
                 }
               ],
@@ -3725,7 +3722,7 @@
       "hint": "Burning Titan",
       "sections": [
         {
-          "id": "Xyxo3Le",
+          "id": "_iMhAAB",
           "uid": "keaSj",
           "label": "Replace Shaman Titan",
           "options": [
@@ -3774,7 +3771,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 60,
+                  "cost": 55,
                   "unitId": "fQ4Z7Ng"
                 }
               ],
@@ -3824,7 +3821,7 @@
       "hint": "Coordinated Hunt",
       "sections": [
         {
-          "id": "haH_Hc8",
+          "id": "8KmSwNY",
           "uid": "xuU_p",
           "label": "Upgrade one model with",
           "options": [
@@ -3891,7 +3888,7 @@
       "hint": "Specialists - Hunt Master",
       "sections": [
         {
-          "id": "qosjJcv",
+          "id": "fKwXUTx",
           "uid": "ObMNq",
           "label": "Upgrade with one",
           "options": [
@@ -4093,7 +4090,7 @@
       "hint": "Centaur Boss",
       "sections": [
         {
-          "id": "q1qNZMc",
+          "id": "6ia4Pa2",
           "uid": "-1qj6",
           "label": "Replace Flameforged Heavy Weapon",
           "options": [
@@ -4102,7 +4099,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "GfyrCwd"
                 }
               ],
@@ -4145,7 +4142,7 @@
           ]
         },
         {
-          "id": "SC2wVZz",
+          "id": "Aa-w57q",
           "uid": "GXzh6",
           "label": "Upgrade with one",
           "options": [
@@ -4193,7 +4190,7 @@
       "hint": "Slimey Beast",
       "sections": [
         {
-          "id": "cTUpnCh",
+          "id": "20lsjh3",
           "uid": "09N2q",
           "label": "Upgrade with any",
           "options": [
@@ -4234,7 +4231,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 35,
                   "unitId": "FY3khTw"
                 }
               ],
@@ -4276,7 +4273,7 @@
       "hint": "Specialists - Brute",
       "sections": [
         {
-          "id": "kCcTYaY",
+          "id": "EOlXiQM",
           "uid": "BS-4455t",
           "label": "Upgrade with one",
           "options": [
@@ -4389,7 +4386,7 @@
       "hint": "Specialists - Centaur",
       "sections": [
         {
-          "id": "LPbGxuD",
+          "id": "bIdTcqp",
           "uid": "mZ-t9esO",
           "label": "Upgrade with one",
           "options": [
@@ -4596,7 +4593,7 @@
       "hint": "Specialists - Beast Lord",
       "sections": [
         {
-          "id": "OT9x1j1",
+          "id": "IX0Q_TS",
           "uid": "oJxvU3aF",
           "label": "Upgrade with one",
           "options": [
@@ -5359,8 +5356,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:52:55.779Z",
-  "editedAt": "2026-04-27T16:20:14.638Z",
+  "modifiedAt": "2026-04-30T09:30:46.513Z",
+  "editedAt": "2026-04-30T09:30:46.513Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/TciwNI3AOMXAM-dr/Dd4z9vGU3LQKlqPlk1WHf.jpg",
@@ -5524,19 +5521,19 @@
       "targetType": 2
     },
     {
-      "id": "a6Ze2uaBlNHX",
-      "name": "Mind Control",
+      "id": "n66zmAJyCcKF",
+      "name": "Bestial Boost Aura",
       "aliasedRuleId": null,
-      "description": "Once per activation, before attacking, pick one enemy unit within 18\", which must take a morale test. If failed you may move it by up to 6\" in a straight line in any direction.",
+      "description": "This model and its unit get Bestial Boost.",
       "hasRating": false,
       "coreType": null,
       "targetType": 1
     },
     {
-      "id": "n66zmAJyCcKF",
-      "name": "Bestial Boost Aura",
+      "id": "a6Ze2uaBlNHX",
+      "name": "Mind Control",
       "aliasedRuleId": null,
-      "description": "This model and its unit get Bestial Boost.",
+      "description": "Once per activation, before attacking, pick one enemy unit within 18\" in line of sight, which must take a morale test. If failed you may move it by up to 6\" in a straight line in any direction.",
       "hasRating": false,
       "coreType": null,
       "targetType": 1

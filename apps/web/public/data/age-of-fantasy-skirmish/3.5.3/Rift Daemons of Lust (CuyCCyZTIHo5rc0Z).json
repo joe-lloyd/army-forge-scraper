@@ -208,7 +208,7 @@
     },
     {
       "id": "Lq2_MvM",
-      "cost": 50,
+      "cost": 45,
       "name": "Infernal Siren",
       "size": 1,
       "bases": {
@@ -305,7 +305,7 @@
     },
     {
       "id": "n4QUatN",
-      "cost": 105,
+      "cost": 115,
       "name": "Moonmire",
       "size": 1,
       "type": 1,
@@ -969,7 +969,7 @@
       "hint": "Infernal Siren",
       "sections": [
         {
-          "id": "1TfxwwB",
+          "id": "S6BsqGM",
           "uid": "ze7zWH1",
           "label": "Upgrade with one",
           "options": [
@@ -1042,7 +1042,7 @@
           }
         },
         {
-          "id": "CNoeUnl",
+          "id": "xq9UnOj",
           "uid": "n4GNWEws",
           "label": "Upgrade with",
           "options": [
@@ -1091,7 +1091,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "gv9TMsB",
+          "id": "0WR3AaZ",
           "uid": "KSZLB29",
           "label": "Upgrade one model with one",
           "options": [
@@ -1216,7 +1216,7 @@
       "hint": "Lust Warriors",
       "sections": [
         {
-          "id": "vWw1XSi",
+          "id": "cbYBp-1",
           "uid": "LjNRRMd",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1407,7 +1407,7 @@
           ]
         },
         {
-          "id": "FmSPNKY",
+          "id": "Qqkhmn_",
           "uid": "AlGfRorZ",
           "label": "Upgrade all models with",
           "options": [
@@ -1453,7 +1453,7 @@
           }
         },
         {
-          "id": "lDO8AA1",
+          "id": "iSxjf_j",
           "uid": "OYY-LpL",
           "label": "Upgrade one model with",
           "options": [
@@ -1463,7 +1463,7 @@
               "costs": [
                 {
                   "unitId": "a2FywBB",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1504,7 +1504,7 @@
       "hint": "Furies",
       "sections": [
         {
-          "id": "Yb2BNNr",
+          "id": "VdjjEV9",
           "uid": "Kyyvl",
           "label": "Replace Perfect Claws",
           "options": [
@@ -1596,7 +1596,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "MO7B5SA",
+          "id": "yhMM_Tc",
           "uid": "zH0vW",
           "label": "Replace Ritual Hammer and Blade",
           "options": [
@@ -1666,7 +1666,7 @@
               "costs": [
                 {
                   "unitId": "E0VMxeY",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1807,7 +1807,7 @@
           ]
         },
         {
-          "id": "NLtAGga",
+          "id": "EP9Qg-G",
           "uid": "kt_EW",
           "label": "Replace any Perfect Sword",
           "options": [
@@ -1898,7 +1898,7 @@
           ]
         },
         {
-          "id": "uv7PU2q",
+          "id": "VSjm1wR",
           "uid": "CjOCGrrj",
           "label": "Upgrade with",
           "options": [
@@ -1941,41 +1941,10 @@
           "variant": "upgrade"
         },
         {
-          "id": "HuznRsQ",
+          "id": "21t5pW9",
           "uid": "MYPav",
           "label": "Upgrade with one",
           "options": [
-            {
-              "uid": "9LLVpP0SVX",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "E0VMxeY",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "id": "uCUsKrp",
-                  "name": "Daemonic Incursion",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Daemonic Incursion (Ambush Aura)",
-                  "content": [
-                    {
-                      "id": "gOFh4u_LGrwP",
-                      "name": "Ambush Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Daemonic Incursion (Ambush Aura)",
-              "parentSectionId": "MYPav",
-              "parentPackageUid": "pTBhhd9t",
-              "id": "9LLVpP0SVX"
-            },
             {
               "uid": "4ESey",
               "type": "ArmyBookUpgradeOption",
@@ -2024,6 +1993,37 @@
               "label": "Lust Beast (Toxin Claws (A1, Bane), Fast)",
               "parentSectionId": "MYPav",
               "id": "4ESey"
+            },
+            {
+              "uid": "9LLVpP0SVX",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "E0VMxeY",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "uCUsKrp",
+                  "name": "Daemonic Incursion",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Daemonic Incursion (Ambush Aura)",
+                  "content": [
+                    {
+                      "id": "gOFh4u_LGrwP",
+                      "name": "Ambush Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Daemonic Incursion (Ambush Aura)",
+              "parentSectionId": "MYPav",
+              "parentPackageUid": "pTBhhd9t",
+              "id": "9LLVpP0SVX"
             }
           ],
           "parentPackageUid": "gwQ59",
@@ -2042,7 +2042,7 @@
       "hint": "Fury Champion",
       "sections": [
         {
-          "id": "_-ILRUX",
+          "id": "bfJwcbP",
           "uid": "V6bq3",
           "label": "Replace Ritual Hammer and Blade",
           "options": [
@@ -2255,7 +2255,7 @@
           ]
         },
         {
-          "id": "H8ZHvON",
+          "id": "YpattfI",
           "uid": "pjHVc",
           "label": "Replace any Perfect Sword",
           "options": [
@@ -2355,7 +2355,7 @@
       "hint": "Lust Soul Spawns",
       "sections": [
         {
-          "id": "R5Oaa8L",
+          "id": "CoweFpu",
           "uid": "eBEe1",
           "label": "Replace Mutated Claws",
           "options": [
@@ -2447,7 +2447,7 @@
       "hint": "Lust Beast Riders",
       "sections": [
         {
-          "id": "ftLRG6N",
+          "id": "N2YM_oR",
           "uid": "T2Fu_",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2494,7 +2494,7 @@
           ]
         },
         {
-          "id": "fq7p67E",
+          "id": "-1hKr9B",
           "uid": "wUc6fzdq",
           "label": "Upgrade with",
           "options": [
@@ -2543,7 +2543,7 @@
       "hint": "Lust Shooters",
       "sections": [
         {
-          "id": "X2lLHm0",
+          "id": "BQL54RD",
           "uid": "csxQQqtF",
           "label": "Replace Arm-Crossbow",
           "options": [
@@ -2553,7 +2553,7 @@
               "costs": [
                 {
                   "unitId": "x3csCb8",
-                  "cost": 5
+                  "cost": 0
                 }
               ],
               "gains": [
@@ -2594,7 +2594,7 @@
           ]
         },
         {
-          "id": "Sq4swzY",
+          "id": "H_PtuHf",
           "uid": "ncdsU",
           "label": "Upgrade with",
           "options": [
@@ -2643,7 +2643,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "_m7Buw5",
+          "id": "ljILkIy",
           "uid": "o5ZSE",
           "label": "Upgrade with one",
           "options": [
@@ -2682,7 +2682,7 @@
               "costs": [
                 {
                   "unitId": "E0VMxeY",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2713,7 +2713,7 @@
               "costs": [
                 {
                   "unitId": "E0VMxeY",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2744,7 +2744,7 @@
               "costs": [
                 {
                   "unitId": "E0VMxeY",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2807,7 +2807,7 @@
               "costs": [
                 {
                   "unitId": "E0VMxeY",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -2851,7 +2851,7 @@
       "hint": "Specialists - Fury",
       "sections": [
         {
-          "id": "Jwicy-Q",
+          "id": "ukL7lvC",
           "uid": "PdNi_",
           "label": "Upgrade with one",
           "options": [
@@ -2890,7 +2890,7 @@
               "costs": [
                 {
                   "unitId": "1Jztujo",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2921,7 +2921,7 @@
               "costs": [
                 {
                   "unitId": "1Jztujo",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2952,7 +2952,7 @@
               "costs": [
                 {
                   "unitId": "1Jztujo",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2995,7 +2995,7 @@
       "hint": "Shooter-Furies",
       "sections": [
         {
-          "id": "IDM3iqF",
+          "id": "U-RAuho",
           "uid": "cxYAmgqiYa",
           "label": "Replace Arm-Crossbow",
           "options": [
@@ -3005,7 +3005,7 @@
               "costs": [
                 {
                   "unitId": "1s7g5E-",
-                  "cost": 5
+                  "cost": 0
                 }
               ],
               "gains": [
@@ -3619,7 +3619,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:54:15.830Z",
+  "modifiedAt": "2026-04-30T09:22:22.496Z",
   "editedAt": "2026-04-13T15:54:08.849Z",
   "official": true,
   "versionString": "3.5.3",

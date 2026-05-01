@@ -101,7 +101,7 @@
     },
     {
       "id": "iGyqlfa",
-      "cost": 45,
+      "cost": 55,
       "name": "Cult Leader",
       "size": 1,
       "bases": {
@@ -134,7 +134,7 @@
       ],
       "valid": true,
       "defense": 4,
-      "quality": 5,
+      "quality": 4,
       "weapons": [
         {
           "id": "u42IQ0oq",
@@ -184,7 +184,7 @@
     },
     {
       "id": "L6kGWgk",
-      "cost": 15,
+      "cost": 20,
       "name": "Cult Ranger",
       "size": 1,
       "bases": {
@@ -206,7 +206,7 @@
       ],
       "valid": true,
       "defense": 4,
-      "quality": 5,
+      "quality": 4,
       "weapons": [
         {
           "id": "u42IQ0oq",
@@ -287,7 +287,7 @@
       ],
       "valid": true,
       "defense": 5,
-      "quality": 5,
+      "quality": 4,
       "weapons": [
         {
           "id": "r3uN6bHi",
@@ -546,14 +546,105 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "HGxRxOr",
+      "cost": 60,
+      "name": "Raider Cavalry",
+      "size": 1,
+      "bases": {
+        "round": "60x35",
+        "square": "50x25"
+      },
+      "items": [
+        {
+          "id": "-9D9PslI",
+          "name": "Cyborg Hooves",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "KdgwlPb8LuD2",
+              "name": "Fast",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "S8IZt-d0Sgwk",
+          "name": "Machine-Fog",
+          "label": "Machine-Fog"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "ZxZpO1sD",
+          "name": "Twin P-Pistol",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 9,
+          "attacks": 4,
+          "weaponId": "rhIpRrlR",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "WcOMD7QgPYXZ",
+              "name": "Lacerate",
+              "label": "Lacerate"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Twin P-Pistol (9\", A4, Lacerate)",
+          "originalCount": 1
+        },
+        {
+          "id": "Uek7nqRw",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "4o5CBBZC",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "CCW (A1)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "I1",
+        "zUfo6"
+      ],
+      "genericName": "Robot Cavalry",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "tT9cuP3",
-      "cost": 55,
+      "cost": 70,
       "name": "Cult Gunner",
       "size": 1,
       "type": 0,
       "bases": {
-        "round": "",
-        "square": ""
+        "round": "32",
+        "square": "30"
       },
       "items": [],
       "rules": [
@@ -576,7 +667,7 @@
       ],
       "valid": true,
       "defense": 4,
-      "quality": 5,
+      "quality": 4,
       "weapons": [
         {
           "id": "FR5eKDjG",
@@ -795,10 +886,44 @@
       "hint": "Cult Leader",
       "sections": [
         {
-          "id": "kfRwNWX",
+          "id": "aldvmcq",
           "uid": "FdiNqBV",
           "label": "Replace Leader R-Pistol",
           "options": [
+            {
+              "uid": "aH5568p",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "iGyqlfa",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Leader P-Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 9,
+                  "attacks": 3,
+                  "weaponId": "TOskpb88",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Leader P-Pistol (9\", A3, Lacerate)"
+                }
+              ],
+              "label": "Leader P-Pistol (9\", A3, Lacerate)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "FdiNqBV",
+              "parentSectionId": "FdiNqBV",
+              "id": "aH5568p"
+            },
             {
               "uid": "OlomW",
               "cost": 5,
@@ -911,7 +1036,7 @@
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -945,7 +1070,7 @@
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 50
+                  "cost": 45
                 }
               ],
               "gains": [
@@ -1027,7 +1152,7 @@
           ]
         },
         {
-          "id": "q4PiJDA",
+          "id": "1R2RrtF",
           "uid": "qsc_Mty",
           "label": "Replace Tech-Sword",
           "options": [
@@ -1064,48 +1189,6 @@
               "parentSectionUid": "qsc_Mty",
               "parentSectionId": "qsc_Mty",
               "id": "1ws-_dJ"
-            },
-            {
-              "uid": "Hl2hA60",
-              "cost": 5,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "iGyqlfa",
-                  "cost": 5
-                }
-              ],
-              "gains": [
-                {
-                  "id": "jvTgqYhJ",
-                  "name": "Arc Sword",
-                  "type": "ArmyBookWeapon",
-                  "range": 0,
-                  "attacks": 2,
-                  "weaponId": "jvTgqYhJ",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 1
-                    },
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Arc Sword (A2, AP(1), Rending)",
-                  "count": 1
-                }
-              ],
-              "label": "Arc Sword (A2, AP(1), Rending)",
-              "parentPackageUid": "B1",
-              "parentSectionUid": "qsc_Mty",
-              "parentSectionId": "qsc_Mty",
-              "id": "Hl2hA60"
             },
             {
               "uid": "vajv7ps",
@@ -1148,13 +1231,55 @@
               "id": "vajv7ps"
             },
             {
+              "uid": "Hl2hA60",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "iGyqlfa",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "jvTgqYhJ",
+                  "name": "Arc Sword",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "jvTgqYhJ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Arc Sword (A2, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Arc Sword (A2, AP(1), Rending)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "qsc_Mty",
+              "parentSectionId": "qsc_Mty",
+              "id": "Hl2hA60"
+            },
+            {
               "uid": "eYS1WmJ",
               "cost": 10,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1193,7 +1318,7 @@
           ]
         },
         {
-          "id": "gWrVb5S",
+          "id": "ab2ZHwe",
           "uid": "mihBb",
           "label": "Upgrade with one",
           "options": [
@@ -1203,7 +1328,7 @@
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1242,7 +1367,7 @@
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1319,7 +1444,7 @@
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 45
+                  "cost": 55
                 }
               ],
               "gains": [
@@ -1357,7 +1482,7 @@
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 45
+                  "cost": 55
                 }
               ],
               "gains": [
@@ -1403,7 +1528,7 @@
       "hint": "Cult Rangers",
       "sections": [
         {
-          "id": "OUNqfFw",
+          "id": "kDP7sjs",
           "uid": "jtkAN",
           "label": "Replace R-Fusil",
           "options": [
@@ -1479,91 +1604,13 @@
               "id": "nTanhQn"
             },
             {
-              "uid": "W50lpJz",
-              "cost": 15,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "L6kGWgk",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "id": "rWpAIWbo",
-                  "name": "Fusion Rifle",
-                  "type": "ArmyBookWeapon",
-                  "range": 12,
-                  "attacks": 1,
-                  "weaponId": "rWpAIWbo",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 4
-                    },
-                    {
-                      "id": "_mrPya5SXSqW",
-                      "name": "Deadly",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Fusion Rifle (12\", A1, AP(4), Deadly(3))",
-                  "count": 1
-                }
-              ],
-              "label": "Fusion Rifle (12\", A1, AP(4), Deadly(3))",
-              "parentPackageUid": "D1",
-              "parentSectionUid": "cwC0Lvj",
-              "parentSectionId": "jtkAN",
-              "id": "W50lpJz"
-            },
-            {
-              "uid": "t_PxoPu",
-              "cost": 20,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "L6kGWgk",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "id": "gejv6fo6",
-                  "name": "Plasma Carbine",
-                  "type": "ArmyBookWeapon",
-                  "range": 18,
-                  "attacks": 2,
-                  "weaponId": "LvBqgUDG",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Plasma Carbine (18\", A2, AP(4))",
-                  "count": 1
-                }
-              ],
-              "label": "Plasma Carbine (18\", A2, AP(4))",
-              "parentPackageUid": "D1",
-              "parentSectionUid": "cwC0Lvj",
-              "parentSectionId": "jtkAN",
-              "id": "t_PxoPu"
-            },
-            {
               "uid": "9-I4Ari",
               "cost": 15,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "L6kGWgk",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1599,13 +1646,54 @@
               "id": "9-I4Ari"
             },
             {
+              "uid": "W50lpJz",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "L6kGWgk",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "rWpAIWbo",
+                  "name": "Fusion Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "rWpAIWbo",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Fusion Rifle (12\", A1, AP(4), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Fusion Rifle (12\", A1, AP(4), Deadly(3))",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "cwC0Lvj",
+              "parentSectionId": "jtkAN",
+              "id": "W50lpJz"
+            },
+            {
               "uid": "re-VF2_",
               "cost": 35,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "L6kGWgk",
-                  "cost": 25
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1641,6 +1729,43 @@
               "parentSectionUid": "cwC0Lvj",
               "parentSectionId": "jtkAN",
               "id": "re-VF2_"
+            },
+            {
+              "uid": "t_PxoPu",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "L6kGWgk",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gejv6fo6",
+                  "name": "Plasma Carbine",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "LvBqgUDG",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Plasma Carbine (18\", A2, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Plasma Carbine (18\", A2, AP(4))",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "cwC0Lvj",
+              "parentSectionId": "jtkAN",
+              "id": "t_PxoPu"
             }
           ],
           "parentPackageUid": "D1",
@@ -1651,7 +1776,7 @@
           ]
         },
         {
-          "id": "2AG8-_Z",
+          "id": "NUzF6_m",
           "uid": "MibQBmOt",
           "label": "Replace R-Fusil and CCW",
           "options": [
@@ -1717,10 +1842,45 @@
           ]
         },
         {
-          "id": "YMTqNHw",
+          "id": "Icvs0CE",
           "uid": "fOf0mEbm",
           "label": "Replace R-Pistol",
           "options": [
+            {
+              "uid": "ogdzVE_4",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "L6kGWgk",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "Ym_1cOT_",
+                  "name": "P-Pistol",
+                  "type": "ArmyBookWeapon",
+                  "range": 9,
+                  "attacks": 2,
+                  "weaponId": "zekXQzwu",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "P-Pistol (9\", A2, Lacerate)",
+                  "count": 1
+                }
+              ],
+              "label": "P-Pistol (9\", A2, Lacerate)",
+              "parentSectionId": "fOf0mEbm",
+              "parentPackageUid": "wuKp1O_v",
+              "parentSectionUid": "8-7I7",
+              "id": "ogdzVE_4"
+            },
             {
               "uid": "VVsJd7y1",
               "cost": 0,
@@ -1799,7 +1959,7 @@
               "costs": [
                 {
                   "unitId": "L6kGWgk",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1837,7 +1997,7 @@
           ]
         },
         {
-          "id": "RVRkTrL",
+          "id": "FVmBBDk",
           "uid": "oXtFrUHh",
           "label": "Replace Taser Sword",
           "options": [
@@ -1930,7 +2090,7 @@
               "costs": [
                 {
                   "unitId": "L6kGWgk",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1976,7 +2136,7 @@
       "hint": "Shock Priests",
       "sections": [
         {
-          "id": "0XisCVb",
+          "id": "Jjg7Uen",
           "uid": "HBKp5-4",
           "label": "Replace Shock Staff",
           "options": [
@@ -2048,7 +2208,7 @@
       "hint": "Sect Stalkers",
       "sections": [
         {
-          "id": "45xUZX5",
+          "id": "h02L4do",
           "uid": "KssNAUH",
           "label": "Replace Dual S-Blade",
           "options": [
@@ -2058,7 +2218,7 @@
               "costs": [
                 {
                   "unitId": "GGy44eL",
-                  "cost": 5
+                  "cost": 0
                 }
               ],
               "gains": [
@@ -2094,7 +2254,7 @@
           ]
         },
         {
-          "id": "RyiDAdA",
+          "id": "fKEAiIm",
           "uid": "qNTyplh",
           "label": "Upgrade with",
           "options": [
@@ -2156,7 +2316,7 @@
       "hint": "Sect Infiltrators",
       "sections": [
         {
-          "id": "iTS0kFg",
+          "id": "yK5KmO2",
           "uid": "UC1mTQ1",
           "label": "Replace F-Blasters and Taser Sword",
           "options": [
@@ -2231,7 +2391,59 @@
       "hint": "Sky Stalkers",
       "sections": [
         {
-          "id": "L0Q_uWx",
+          "id": "FgVAboj",
+          "uid": "V2B5fR0",
+          "label": "Replace F-Carbine",
+          "options": [
+            {
+              "uid": "XQok6",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ykvshtT",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "RVYT21-6",
+                  "name": "P-Thrower",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 2,
+                  "weaponId": "RVYT21-6",
+                  "specialRules": [
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable"
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "P-Thrower (12\", A2, Reliable, Lacerate)",
+                  "count": 1
+                }
+              ],
+              "label": "P-Thrower (12\", A2, Reliable, Lacerate)",
+              "parentPackageUid": "H1",
+              "parentSectionUid": "V2B5fR0",
+              "parentSectionId": "V2B5fR0",
+              "id": "XQok6"
+            }
+          ],
+          "parentPackageUid": "H1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "F-Carbine"
+          ]
+        },
+        {
+          "id": "dAl62Rv",
           "uid": "mxNTNak",
           "label": "Replace F-Carbine and CCW",
           "options": [
@@ -2292,7 +2504,7 @@
           ]
         },
         {
-          "id": "1ulMW3I",
+          "id": "ip8I0Lf",
           "uid": "ODkU-GS",
           "label": "Upgrade with",
           "options": [
@@ -2335,11 +2547,330 @@
       "calcErrors": false
     },
     {
+      "uid": "I1",
+      "hint": "Raider Cavalry",
+      "sections": [
+        {
+          "id": "wG6Jw6Y",
+          "uid": "yDCGAfm",
+          "label": "Replace any Twin P-Pistol",
+          "options": [
+            {
+              "uid": "RnJQJ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "HGxRxOr",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "rhIpRrlR",
+                  "name": "G-Carbine",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "ZxZpO1sD",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "G-Carbine (18\", A2, AP(1))"
+                }
+              ],
+              "label": "G-Carbine (18\", A2, AP(1))",
+              "parentSectionId": "yDCGAfm",
+              "id": "RnJQJ"
+            }
+          ],
+          "parentPackageUid": "I1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Twin P-Pistol"
+          ]
+        },
+        {
+          "id": "dPbBxMG",
+          "uid": "ekjvoHy",
+          "label": "Replace G-Carbine",
+          "options": [
+            {
+              "uid": "sIy0rqo",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "HGxRxOr",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "UKpEaWkh",
+                  "name": "Twin P-Blaster",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 4,
+                  "weaponId": "UKpEaWkh",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Twin P-Blaster (18\", A4, Lacerate)",
+                  "count": 1
+                }
+              ],
+              "label": "Twin P-Blaster (18\", A4, Lacerate)",
+              "parentPackageUid": "I1",
+              "parentSectionUid": "ekjvoHy",
+              "parentSectionId": "ekjvoHy",
+              "id": "sIy0rqo"
+            }
+          ],
+          "parentPackageUid": "I1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "G-Carbine"
+          ]
+        },
+        {
+          "id": "k_V0Eg0",
+          "uid": "E7mP9Rk",
+          "label": "Replace G-Carbine and CCW",
+          "options": [
+            {
+              "uid": "Gh6p_",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "HGxRxOr",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "eqvaU1Xg",
+                  "name": "Raider Sabre",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "eqvaU1Xg",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Raider Sabre (A3, AP(1))",
+                  "count": 1
+                },
+                {
+                  "id": "i8NKogRV",
+                  "name": "Revolver",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "i8NKogRV",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Revolver (12\", A1, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Revolver (12\", A1, AP(1)), Raider Sabre (A3, AP(1))",
+              "parentPackageUid": "I1",
+              "parentSectionUid": "E7mP9Rk",
+              "parentSectionId": "E7mP9Rk",
+              "id": "Gh6p_"
+            },
+            {
+              "uid": "VZ-rA",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "HGxRxOr",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "zekXQzwu",
+                  "name": "P-Pistol",
+                  "type": "ArmyBookWeapon",
+                  "range": 9,
+                  "attacks": 2,
+                  "weaponId": "zekXQzwu",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "P-Pistol (9\", A2, Lacerate)",
+                  "count": 1
+                },
+                {
+                  "id": "qAk-dO9V",
+                  "name": "Energy Sword",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "0-erIAQg",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Energy Sword (A2, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "P-Pistol (9\", A2, Lacerate), Energy Sword (A2, AP(1), Rending)",
+              "parentPackageUid": "I1",
+              "parentSectionUid": "E7mP9Rk",
+              "parentSectionId": "E7mP9Rk",
+              "id": "VZ-rA"
+            }
+          ],
+          "parentPackageUid": "I1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "G-Carbine",
+            "CCW"
+          ]
+        },
+        {
+          "id": "GDnaqZg",
+          "uid": "X9vaIfW",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "wXGL1SG",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "HGxRxOr",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "P-Breath",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 6,
+                  "attacks": 2,
+                  "weaponId": "OcuwVa2s",
+                  "specialRules": [
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited"
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "P-Breath (6\", A2, Limited, Lacerate)"
+                }
+              ],
+              "label": "P-Breath (6\", A2, Limited, Lacerate)",
+              "parentSectionId": "X9vaIfW",
+              "id": "wXGL1SG"
+            }
+          ],
+          "parentPackageUid": "I1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        },
+        {
+          "id": "ihCnHZs",
+          "uid": "CXZ2KEzFAe",
+          "label": "Replace Cyborg Hoof",
+          "options": [
+            {
+              "uid": "5Uc8dq0RXJ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "HGxRxOr",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Raider Hooves",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Raider Hooves (Scout)",
+                  "content": [
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Raider Hooves (Scout)",
+              "parentSectionId": "CXZ2KEzFAe",
+              "id": "5Uc8dq0RXJ"
+            }
+          ],
+          "parentPackageUid": "I1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Cyborg Hoof"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "J1",
       "hint": "Breacher Cyborgs",
       "sections": [
         {
-          "id": "_Cn_xLw",
+          "id": "f7_PWCu",
           "uid": "DyBty90",
           "label": "Replace any Contortion Cannon",
           "options": [
@@ -2387,7 +2918,7 @@
           ]
         },
         {
-          "id": "A2orY-S",
+          "id": "x44yiAa",
           "uid": "3mPJtGl",
           "label": "Replace Cyborg Claws",
           "options": [
@@ -2449,7 +2980,7 @@
       "hint": "Destroyer Cyborgs",
       "sections": [
         {
-          "id": "HpV_vi7",
+          "id": "tfupfM-",
           "uid": "p0WKxi1",
           "label": "Replace any G-Cannon",
           "options": [
@@ -2460,7 +2991,7 @@
               "costs": [
                 {
                   "unitId": "M2Yr_Lr",
-                  "cost": 15
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2506,10 +3037,64 @@
           ]
         },
         {
-          "id": "-jQpSTf",
+          "id": "4EnLD73",
           "uid": "pwNOmnc",
           "label": "Replace G-Cannon",
           "options": [
+            {
+              "uid": "0klSalP",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "M2Yr_Lr",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "P-Blaster",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "8gmg_4AO",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "P-Blaster (18\", A2, Lacerate)"
+                },
+                {
+                  "name": "Plasma Cannon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 1,
+                  "weaponId": "oxyWH0_6",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Plasma Cannon (30\", A1, AP(4), Blast(3))"
+                }
+              ],
+              "label": "Plasma Cannon (30\", A1, AP(4), Blast(3)), P-Blaster (18\", A2, Lacerate)",
+              "parentSectionId": "pwNOmnc",
+              "id": "0klSalP"
+            },
             {
               "uid": "83FypDf",
               "cost": 25,
@@ -2517,7 +3102,7 @@
               "costs": [
                 {
                   "unitId": "M2Yr_Lr",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -2587,7 +3172,7 @@
       "hint": "Sect Leader",
       "sections": [
         {
-          "id": "X8779vl",
+          "id": "SmkZb3W",
           "uid": "zKY3v",
           "label": "Replace Leader F-Blaster and Leader Taser Sword",
           "options": [
@@ -2673,7 +3258,7 @@
               "costs": [
                 {
                   "unitId": "hvRc6eE",
-                  "cost": 20
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -2728,7 +3313,7 @@
           ]
         },
         {
-          "id": "tzb916w",
+          "id": "eMrduvF",
           "uid": "owP6g",
           "label": "Upgrade with one",
           "options": [
@@ -2823,7 +3408,7 @@
       "hint": "Machine-Creed Canticles",
       "sections": [
         {
-          "id": "gN1csF3",
+          "id": "UmwxtLG",
           "uid": "Hfkuk",
           "label": "Upgrade with",
           "options": [
@@ -2840,8 +3425,12 @@
                   "cost": 5
                 },
                 {
-                  "unitId": "tT9cuP3",
+                  "unitId": "HGxRxOr",
                   "cost": 5
+                },
+                {
+                  "unitId": "tT9cuP3",
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2879,7 +3468,7 @@
       "hint": "Specialists - Cult Leader",
       "sections": [
         {
-          "id": "dEewgZ6",
+          "id": "yBQ0M3e",
           "uid": "ZBvyPvJ-",
           "label": "Upgrade with one",
           "options": [
@@ -2920,7 +3509,7 @@
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2950,7 +3539,7 @@
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 15
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -2981,7 +3570,7 @@
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 15
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -3011,7 +3600,7 @@
               "costs": [
                 {
                   "unitId": "iGyqlfa",
-                  "cost": 35
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -3034,6 +3623,37 @@
               "parentSectionId": "ZBvyPvJ-",
               "parentPackageUid": "VuUksnQ4",
               "id": "8G0OHZVD"
+            },
+            {
+              "uid": "Uwg9QiMn",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "iGyqlfa",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Psy-Hacker",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Psy-Hacker (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Psy-Hacker (Caster(2))",
+              "parentSectionId": "ZBvyPvJ-",
+              "parentPackageUid": "VuUksnQ4",
+              "id": "Uwg9QiMn"
             }
           ],
           "isHeroUpgrade": true,
@@ -3053,7 +3673,7 @@
       "hint": "Specialists - Sect Leader",
       "sections": [
         {
-          "id": "V_YLS_p",
+          "id": "EqNcajm",
           "uid": "PA1zOWSs",
           "label": "Upgrade with one",
           "options": [
@@ -3094,7 +3714,7 @@
               "costs": [
                 {
                   "unitId": "hvRc6eE",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3124,7 +3744,7 @@
               "costs": [
                 {
                   "unitId": "hvRc6eE",
-                  "cost": 15
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -3155,7 +3775,7 @@
               "costs": [
                 {
                   "unitId": "hvRc6eE",
-                  "cost": 15
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -3178,6 +3798,37 @@
               "parentSectionId": "PA1zOWSs",
               "parentPackageUid": "UfsRh-Ei",
               "id": "sROOzUu3"
+            },
+            {
+              "uid": "9s2Wa1ky",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "hvRc6eE",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Psy-Hacker",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Psy-Hacker (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Psy-Hacker (Caster(2))",
+              "parentSectionId": "PA1zOWSs",
+              "parentPackageUid": "UfsRh-Ei",
+              "id": "9s2Wa1ky"
             }
           ],
           "isHeroUpgrade": true,
@@ -3197,7 +3848,7 @@
       "hint": "Cult Gunners",
       "sections": [
         {
-          "id": "aDkWvBG",
+          "id": "OGdDbs1",
           "uid": "XjuVJfboem",
           "label": "Replace any Eraser Beam",
           "options": [
@@ -3207,7 +3858,7 @@
               "costs": [
                 {
                   "unitId": "tT9cuP3",
-                  "cost": 15
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -3253,10 +3904,43 @@
           ]
         },
         {
-          "id": "9_w0owU",
+          "id": "PSptcV9",
           "uid": "gkjrgXU9rp",
           "label": "Upgrade with one",
           "options": [
+            {
+              "uid": "kY_eWSiVSO",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "tT9cuP3",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "yNLHiq1G",
+                  "name": "Light P-Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 9,
+                  "attacks": 1,
+                  "weaponId": "Se234DVN",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Light P-Pistol (9\", A1, Lacerate)"
+                }
+              ],
+              "label": "Light P-Pistol (9\", A1, Lacerate)",
+              "parentSectionId": "gkjrgXU9rp",
+              "id": "kY_eWSiVSO"
+            },
             {
               "uid": "fRcjmVAZ4q",
               "type": "ArmyBookUpgradeOption",
@@ -3307,7 +3991,7 @@
       "hint": "Machine-Creed Canticles (One Model)",
       "sections": [
         {
-          "id": "KwrD-mn",
+          "id": "gFdi0OM",
           "uid": "ttPAB7xE",
           "label": "Upgrade with",
           "options": [
@@ -3986,8 +4670,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:53:54.735Z",
-  "editedAt": "2026-04-29T14:53:04.482Z",
+  "modifiedAt": "2026-04-30T09:22:04.612Z",
+  "editedAt": "2026-04-30T09:02:36.558Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/7el7k3hgy5pb9o9i/5-GXLJsImRFRZqmioAxea.jpg",
@@ -4100,6 +4784,15 @@
       "targetType": 1
     },
     {
+      "id": "WcOMD7QgPYXZ",
+      "name": "Lacerate",
+      "aliasedRuleId": null,
+      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
       "id": "engi9zFdRht9",
       "name": "Machine-Fog Boost Aura",
       "aliasedRuleId": null,
@@ -4181,6 +4874,15 @@
       "targetType": 1
     },
     {
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
+      "aliasedRuleId": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "eYZyOr9wu0jr",
       "name": "Machine-Fog Boost",
       "aliasedRuleId": null,
@@ -4206,15 +4908,6 @@
       "hasRating": false,
       "coreType": null,
       "targetType": 1
-    },
-    {
-      "id": "WcOMD7QgPYXZ",
-      "name": "Lacerate",
-      "aliasedRuleId": null,
-      "description": "When attacking the target must re-roll unmodified Defense results of 6.",
-      "hasRating": false,
-      "coreType": null,
-      "targetType": 2
     },
     {
       "id": "rkGri9GAybaZ",

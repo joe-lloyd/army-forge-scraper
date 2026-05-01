@@ -157,7 +157,7 @@
     },
     {
       "id": "asfGIyF",
-      "cost": 175,
+      "cost": 180,
       "name": "Hakatlo",
       "size": 1,
       "type": 1,
@@ -254,7 +254,7 @@
     },
     {
       "id": "K4TfVDc",
-      "cost": 85,
+      "cost": 95,
       "name": "Teqi",
       "size": 1,
       "type": 1,
@@ -559,8 +559,67 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "i3Iw5yl",
+      "cost": 25,
+      "name": "Geckos",
+      "size": 3,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "PBP94ujaST4y",
+          "name": "Primal",
+          "label": "Primal"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "azKr7HlW",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "range": null,
+          "attacks": 1,
+          "weaponId": "azKr7HlW",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "Naqc5mga9Uha",
+              "name": "Bane",
+              "label": "Bane"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Hand Weapon (A1, Bane)",
+          "count": 3,
+          "originalCount": 3
+        }
+      ],
+      "upgrades": [
+        "D1",
+        "E1",
+        "Wo23Mo3E"
+      ],
+      "genericName": "Geckos",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "e3dqR3h",
-      "cost": 20,
+      "cost": 25,
       "name": "Raptor Rider",
       "size": 1,
       "bases": {
@@ -620,65 +679,6 @@
         "I1"
       ],
       "genericName": "Velociraptor Riders",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 5,
-      "disabledUpgradeSections": []
-    },
-    {
-      "id": "i3Iw5yl",
-      "cost": 25,
-      "name": "Geckos",
-      "size": 3,
-      "bases": {
-        "round": "25",
-        "square": "25"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "JSKVyurtWIyW",
-          "name": "Strider",
-          "label": "Strider"
-        },
-        {
-          "id": "PBP94ujaST4y",
-          "name": "Primal",
-          "label": "Primal"
-        }
-      ],
-      "valid": true,
-      "defense": 5,
-      "quality": 5,
-      "weapons": [
-        {
-          "id": "azKr7HlW",
-          "name": "Hand Weapon",
-          "type": "ArmyBookWeapon",
-          "range": null,
-          "attacks": 1,
-          "weaponId": "azKr7HlW",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "Naqc5mga9Uha",
-              "name": "Bane",
-              "label": "Bane"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Hand Weapon (A1, Bane)",
-          "count": 3,
-          "originalCount": 3
-        }
-      ],
-      "upgrades": [
-        "D1",
-        "E1",
-        "Wo23Mo3E"
-      ],
-      "genericName": "Geckos",
       "hasCustomRule": false,
       "disabledSections": [],
       "hasBalanceInvalid": false,
@@ -1094,7 +1094,7 @@
       "hint": "Saurian Veteran",
       "sections": [
         {
-          "id": "OL_UZYL",
+          "id": "E67VpmM",
           "uid": "lv6Kwp8",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1338,7 +1338,7 @@
           ]
         },
         {
-          "id": "B0b8lmo",
+          "id": "03nvVUq",
           "uid": "7GEC5vh",
           "label": "Upgrade with one",
           "options": [
@@ -1403,7 +1403,7 @@
       "hint": "Gecko Champion",
       "sections": [
         {
-          "id": "NQT00-x",
+          "id": "2NbmAsq",
           "uid": "VWPdSuF",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1490,7 +1490,7 @@
           ]
         },
         {
-          "id": "Bl5iWWg",
+          "id": "mZDlfXm",
           "uid": "AVfL2fu",
           "label": "Upgrade with one",
           "options": [
@@ -1606,7 +1606,7 @@
           }
         },
         {
-          "id": "IYzpIlH",
+          "id": "S8quEt2",
           "uid": "EoDtGGR",
           "label": "Upgrade with one",
           "options": [
@@ -1900,7 +1900,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "1B8333k",
+          "id": "cAyjhQO",
           "uid": "K7vBaqU",
           "label": "Upgrade one model with one",
           "options": [
@@ -1918,11 +1918,11 @@
                   "cost": 5
                 },
                 {
-                  "unitId": "e3dqR3h",
+                  "unitId": "i3Iw5yl",
                   "cost": 5
                 },
                 {
-                  "unitId": "i3Iw5yl",
+                  "unitId": "e3dqR3h",
                   "cost": 5
                 },
                 {
@@ -1967,11 +1967,11 @@
                   "cost": 5
                 },
                 {
-                  "unitId": "e3dqR3h",
+                  "unitId": "i3Iw5yl",
                   "cost": 5
                 },
                 {
-                  "unitId": "i3Iw5yl",
+                  "unitId": "e3dqR3h",
                   "cost": 5
                 },
                 {
@@ -2016,11 +2016,11 @@
                   "cost": 5
                 },
                 {
-                  "unitId": "e3dqR3h",
+                  "unitId": "i3Iw5yl",
                   "cost": 5
                 },
                 {
-                  "unitId": "i3Iw5yl",
+                  "unitId": "e3dqR3h",
                   "cost": 5
                 },
                 {
@@ -2073,7 +2073,7 @@
       "hint": "Geckos",
       "sections": [
         {
-          "id": "YdgZaOX",
+          "id": "bY8rpAu",
           "uid": "7Z5xr5z",
           "label": "Upgrade all models with one",
           "options": [
@@ -2173,7 +2173,7 @@
       "hint": "Saurian Warriors",
       "sections": [
         {
-          "id": "Km45_4_",
+          "id": "VY9HQgC",
           "uid": "EDPDKgz",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2184,7 +2184,7 @@
               "costs": [
                 {
                   "unitId": "kpjfnHa",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2267,7 +2267,7 @@
       "hint": "Guardians",
       "sections": [
         {
-          "id": "Vrw67qr",
+          "id": "QRIt6w2",
           "uid": "yHF96RD",
           "label": "Replace Obsidian Great Weapon",
           "options": [
@@ -2362,7 +2362,7 @@
       "hint": "Raptor Riders",
       "sections": [
         {
-          "id": "L-c7qka",
+          "id": "F7NdKTW",
           "uid": "N59dlLC",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2418,7 +2418,7 @@
       "hint": "Deinonychus Riders",
       "sections": [
         {
-          "id": "9b_DZvJ",
+          "id": "JjdYLwt",
           "uid": "qAsgu",
           "label": "Replace Lance",
           "options": [
@@ -2495,7 +2495,7 @@
       "hint": "Sacred Destiny",
       "sections": [
         {
-          "id": "LrfjETC",
+          "id": "2XP9CIo",
           "uid": "FvbTYLN3pa",
           "label": "Upgrade all models with",
           "options": [
@@ -2558,7 +2558,7 @@
       "hint": "Pterodactyl Riders",
       "sections": [
         {
-          "id": "GJMzkXk",
+          "id": "j0BudTe",
           "uid": "KmIUmugY",
           "label": "Upgrade with one",
           "options": [
@@ -2642,7 +2642,7 @@
           }
         },
         {
-          "id": "Vwc31ff",
+          "id": "J2GFYXE",
           "uid": "i4L-3B8B",
           "label": "Upgrade with",
           "options": [
@@ -2709,7 +2709,7 @@
       "hint": "Ripjawdactyl Riders",
       "sections": [
         {
-          "id": "5rWMcGG",
+          "id": "8drk00Y",
           "uid": "0iK8c8GQ",
           "label": "Upgrade with one",
           "options": [
@@ -2793,7 +2793,7 @@
           }
         },
         {
-          "id": "Vy0Zi_I",
+          "id": "v3vhSTo",
           "uid": "LzOzBx71",
           "label": "Upgrade with",
           "options": [
@@ -2841,7 +2841,7 @@
       "hint": "Gators",
       "sections": [
         {
-          "id": "NgdLjY0",
+          "id": "X6a43Y7",
           "uid": "0bMWrhG4Rk",
           "label": "Replace Obsidian Great Weapon",
           "options": [
@@ -2895,7 +2895,7 @@
       "hint": "Specialists - Gecko",
       "sections": [
         {
-          "id": "GRCDb2Q",
+          "id": "JR_6i0x",
           "uid": "ZwBfV61v",
           "label": "Upgrade with one",
           "options": [
@@ -2937,7 +2937,7 @@
               "costs": [
                 {
                   "unitId": "pbodyqx",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2967,7 +2967,7 @@
               "costs": [
                 {
                   "unitId": "pbodyqx",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2997,7 +2997,7 @@
               "costs": [
                 {
                   "unitId": "pbodyqx",
-                  "cost": 10
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -3027,7 +3027,7 @@
               "costs": [
                 {
                   "unitId": "pbodyqx",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -3070,7 +3070,7 @@
       "hint": "Specialists - Saurian",
       "sections": [
         {
-          "id": "UmoQnKC",
+          "id": "CYjBIfu",
           "uid": "anZId3sh",
           "label": "Upgrade with one",
           "options": [
@@ -3081,7 +3081,7 @@
               "costs": [
                 {
                   "unitId": "iPmkRyx",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3112,7 +3112,7 @@
               "costs": [
                 {
                   "unitId": "iPmkRyx",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3135,35 +3135,6 @@
               "parentSectionId": "anZId3sh",
               "parentPackageUid": "BDGnZWCI",
               "id": "ZIGgqQC0"
-            },
-            {
-              "uid": "zaZUj8J1aa",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "iPmkRyx",
-                  "cost": 10
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Chief",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Chief (Rending in Melee Aura)",
-                  "content": [
-                    {
-                      "id": "-05w6vRgH2k9",
-                      "name": "Rending in Melee Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Chief (Rending in Melee Aura)",
-              "parentSectionId": "anZId3sh",
-              "id": "zaZUj8J1aa"
             },
             {
               "uid": "-0_3kdAcVU",
@@ -3194,6 +3165,35 @@
               "label": "Army Standard Bearer (Fear(2))",
               "parentSectionId": "anZId3sh",
               "id": "-0_3kdAcVU"
+            },
+            {
+              "uid": "zaZUj8J1aa",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "iPmkRyx",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Chief",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Chief (Rending in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "-05w6vRgH2k9",
+                      "name": "Rending in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Chief (Rending in Melee Aura)",
+              "parentSectionId": "anZId3sh",
+              "id": "zaZUj8J1aa"
             }
           ],
           "isHeroUpgrade": true,
@@ -3213,7 +3213,7 @@
       "hint": "Chameleons",
       "sections": [
         {
-          "id": "wQPd35O",
+          "id": "-TV5bcJ",
           "uid": "SQ1HTrEnFz",
           "label": "Replace Fire Bola",
           "options": [
@@ -3265,7 +3265,7 @@
       "hint": "Sacred Destiny (Heroes)",
       "sections": [
         {
-          "id": "du1J8SA",
+          "id": "yHuoYKP",
           "uid": "iEn1ustX",
           "label": "Upgrade with",
           "options": [
@@ -3872,7 +3872,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:54:19.753Z",
+  "modifiedAt": "2026-04-30T09:22:25.923Z",
   "editedAt": "2026-04-28T09:28:50.726Z",
   "official": true,
   "versionString": "3.5.3",

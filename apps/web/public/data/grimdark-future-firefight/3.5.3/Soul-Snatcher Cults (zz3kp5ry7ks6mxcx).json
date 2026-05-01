@@ -578,8 +578,66 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "t2ehUmj",
+      "cost": 35,
+      "name": "Minions",
+      "size": 3,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "gzKDP8xc6MCQ",
+          "name": "Fanatic",
+          "label": "Fanatic"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 5,
+      "weapons": [
+        {
+          "id": "ar_e50-g",
+          "name": "Rifle",
+          "type": "ArmyBookWeapon",
+          "range": 24,
+          "attacks": 1,
+          "weaponId": "ar_e50-g",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Rifle (24\", A1)",
+          "count": 3,
+          "originalCount": 3
+        },
+        {
+          "id": "w4DyLplT",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "4o5CBBZC",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "CCW (A1)",
+          "count": 3,
+          "originalCount": 3
+        }
+      ],
+      "upgrades": [
+        "D1"
+      ],
+      "genericName": "Minions",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 10,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "8V1jGIF",
-      "cost": 30,
+      "cost": 35,
       "name": "Soul-Snatcher",
       "size": 1,
       "bases": {
@@ -653,64 +711,6 @@
       "disabledSections": [],
       "hasBalanceInvalid": false,
       "originalSize": 5,
-      "disabledUpgradeSections": []
-    },
-    {
-      "id": "t2ehUmj",
-      "cost": 35,
-      "name": "Minions",
-      "size": 3,
-      "bases": {
-        "round": "25",
-        "square": "25"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "gzKDP8xc6MCQ",
-          "name": "Fanatic",
-          "label": "Fanatic"
-        }
-      ],
-      "valid": true,
-      "defense": 5,
-      "quality": 5,
-      "weapons": [
-        {
-          "id": "ar_e50-g",
-          "name": "Rifle",
-          "type": "ArmyBookWeapon",
-          "range": 24,
-          "attacks": 1,
-          "weaponId": "ar_e50-g",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "Rifle (24\", A1)",
-          "count": 3,
-          "originalCount": 3
-        },
-        {
-          "id": "w4DyLplT",
-          "name": "CCW",
-          "type": "ArmyBookWeapon",
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "4o5CBBZC",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "CCW (A1)",
-          "count": 3,
-          "originalCount": 3
-        }
-      ],
-      "upgrades": [
-        "D1"
-      ],
-      "genericName": "Minions",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 10,
       "disabledUpgradeSections": []
     },
     {
@@ -867,7 +867,7 @@
       "hint": "Cult Leader",
       "sections": [
         {
-          "id": "b_Sk1Bq",
+          "id": "NSMBEsf",
           "uid": "X4x98aW",
           "label": "Replace Dual Sharp Claw",
           "options": [
@@ -960,7 +960,7 @@
               "costs": [
                 {
                   "unitId": "BMa76or",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1043,7 +1043,7 @@
           ]
         },
         {
-          "id": "prmR3XL",
+          "id": "qfqULRR",
           "uid": "JgKBk",
           "label": "Replace Cult Pistol",
           "options": [
@@ -1186,42 +1186,10 @@
           ]
         },
         {
-          "id": "ONilyDd",
+          "id": "KGq-Dr_",
           "uid": "vN3el",
           "label": "Upgrade with one",
           "options": [
-            {
-              "uid": "fq5-7T7-I9",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "BMa76or",
-                  "cost": 5
-                }
-              ],
-              "gains": [
-                {
-                  "id": "ZhV2y3Z",
-                  "name": "Pet Familiar",
-                  "type": "ArmyBookItem",
-                  "label": "Pet Familiar (Repel Ambushers)",
-                  "content": [
-                    {
-                      "id": "C6MzEy1CnxTs",
-                      "name": "Repel Ambushers",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Pet Familiar (Repel Ambushers)",
-              "parentSectionId": "vN3el",
-              "parentPackageUid": "q06iQJTm",
-              "parentSectionUid": "EHnL43G",
-              "id": "fq5-7T7-I9"
-            },
             {
               "uid": "y09tN",
               "type": "ArmyBookUpgradeOption",
@@ -1253,6 +1221,38 @@
               "label": "Combat Bike (Fast)",
               "parentSectionId": "vN3el",
               "id": "y09tN"
+            },
+            {
+              "uid": "fq5-7T7-I9",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "BMa76or",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "ZhV2y3Z",
+                  "name": "Pet Familiar",
+                  "type": "ArmyBookItem",
+                  "label": "Pet Familiar (Repel Ambushers)",
+                  "content": [
+                    {
+                      "id": "C6MzEy1CnxTs",
+                      "name": "Repel Ambushers",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Pet Familiar (Repel Ambushers)",
+              "parentSectionId": "vN3el",
+              "parentPackageUid": "q06iQJTm",
+              "parentSectionUid": "EHnL43G",
+              "id": "fq5-7T7-I9"
             }
           ],
           "parentPackageUid": "B1",
@@ -1271,7 +1271,7 @@
       "hint": "Cult Hitman",
       "sections": [
         {
-          "id": "2iI__Tm",
+          "id": "NamCKRQ",
           "uid": "RoH-xaG",
           "label": "Replace Cult Pistol",
           "options": [
@@ -1353,7 +1353,7 @@
           ]
         },
         {
-          "id": "kmfiK8g",
+          "id": "30mfHbb",
           "uid": "AE8iAT2",
           "label": "Replace Cult Pistol and CCW",
           "options": [
@@ -1364,7 +1364,7 @@
               "costs": [
                 {
                   "unitId": "QVwQQXN",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1449,7 +1449,7 @@
           ]
         },
         {
-          "id": "JJsr3vV",
+          "id": "1LP05fo",
           "uid": "DJR-GUH75J",
           "label": "Upgrade with one",
           "options": [
@@ -1460,7 +1460,7 @@
               "costs": [
                 {
                   "unitId": "QVwQQXN",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1531,7 +1531,7 @@
       "hint": "Minions",
       "sections": [
         {
-          "id": "gdn33Hl",
+          "id": "pOdjU4F",
           "uid": "9sQ0YE5",
           "label": "Replace one Rifles",
           "options": [
@@ -1542,7 +1542,7 @@
               "costs": [
                 {
                   "unitId": "t2ehUmj",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1737,7 +1737,7 @@
           ]
         },
         {
-          "id": "W5cUGaG",
+          "id": "0SUcd-K",
           "uid": "YtLprT46",
           "label": "Upgrade one model with",
           "options": [
@@ -1747,7 +1747,7 @@
               "costs": [
                 {
                   "unitId": "t2ehUmj",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1789,7 +1789,7 @@
       "hint": "Minion Weapon Teams",
       "sections": [
         {
-          "id": "sg3NXBn",
+          "id": "epnRcvn",
           "uid": "vF0Tiea",
           "label": "Replace any Mortar",
           "options": [
@@ -1875,47 +1875,6 @@
               "id": "yhtqmjz"
             },
             {
-              "uid": "cN08eDk",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "mnjV-FB",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "id": "-mTDUQJk",
-                  "name": "Laser Cannon",
-                  "type": "ArmyBookWeapon",
-                  "range": 36,
-                  "attacks": 1,
-                  "weaponId": "-mTDUQJk",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 3
-                    },
-                    {
-                      "id": "_mrPya5SXSqW",
-                      "name": "Deadly",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Laser Cannon (36\", A1, AP(3), Deadly(3))",
-                  "count": 1
-                }
-              ],
-              "label": "Laser Cannon (36\", A1, AP(3), Deadly(3))",
-              "parentPackageUid": "E1",
-              "parentSectionUid": "vF0Tiea",
-              "parentSectionId": "vF0Tiea",
-              "id": "cN08eDk"
-            },
-            {
               "uid": "Kh7b0Zf",
               "cost": 15,
               "type": "ArmyBookUpgradeOption",
@@ -1951,6 +1910,47 @@
               "parentSectionUid": "vF0Tiea",
               "parentSectionId": "vF0Tiea",
               "id": "Kh7b0Zf"
+            },
+            {
+              "uid": "cN08eDk",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "mnjV-FB",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "-mTDUQJk",
+                  "name": "Laser Cannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 36,
+                  "attacks": 1,
+                  "weaponId": "-mTDUQJk",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Laser Cannon (36\", A1, AP(3), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Laser Cannon (36\", A1, AP(3), Deadly(3))",
+              "parentPackageUid": "E1",
+              "parentSectionUid": "vF0Tiea",
+              "parentSectionId": "vF0Tiea",
+              "id": "cN08eDk"
             }
           ],
           "parentPackageUid": "E1",
@@ -1971,7 +1971,7 @@
       "hint": "Neophytes",
       "sections": [
         {
-          "id": "kCEWndE",
+          "id": "khsTN_h",
           "uid": "7QqxwDt",
           "label": "Replace any Rifle",
           "options": [
@@ -2023,7 +2023,7 @@
           ]
         },
         {
-          "id": "IhauE7p",
+          "id": "zemC4Lo",
           "uid": "pt9e8V0",
           "label": "Replace Rifle",
           "options": [
@@ -2309,7 +2309,7 @@
           ]
         },
         {
-          "id": "nO2Ypb7",
+          "id": "TvR7kK0",
           "uid": "3B10Sllq",
           "label": "Upgrade with",
           "options": [
@@ -2319,7 +2319,7 @@
               "costs": [
                 {
                   "unitId": "wg6fbNx",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2349,7 +2349,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "opPAy3J",
+          "id": "bm_5F9q",
           "uid": "opqI_EA",
           "label": "Replace Rifle and CCW",
           "options": [
@@ -2452,7 +2452,7 @@
           ]
         },
         {
-          "id": "7GsA7U7",
+          "id": "8rKkhxB",
           "uid": "0i8pABP",
           "label": "Replace CCW",
           "options": [
@@ -2585,7 +2585,7 @@
       "hint": "Acolytes",
       "sections": [
         {
-          "id": "SPGhT09",
+          "id": "pzDxB8l",
           "uid": "b5fiPg0",
           "label": "Replace Pistol",
           "options": [
@@ -2640,7 +2640,7 @@
           ]
         },
         {
-          "id": "pTkEkKY",
+          "id": "6o7JaF3",
           "uid": "CIJ-Kir",
           "label": "Replace Pistol and Mutant Claws",
           "options": [
@@ -2733,7 +2733,7 @@
               "costs": [
                 {
                   "unitId": "USqMvAJ",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2775,7 +2775,7 @@
               "costs": [
                 {
                   "unitId": "USqMvAJ",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2862,7 +2862,7 @@
           ]
         },
         {
-          "id": "-QSuQ87",
+          "id": "NiJLiGe",
           "uid": "SX6S8wCH",
           "label": "Upgrade with",
           "options": [
@@ -2872,7 +2872,7 @@
               "costs": [
                 {
                   "unitId": "USqMvAJ",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2902,7 +2902,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "baZpM2M",
+          "id": "vyLUn1T",
           "uid": "CFnFx",
           "label": "Replace Pistol and Mutant Claw",
           "options": [
@@ -2963,7 +2963,7 @@
           ]
         },
         {
-          "id": "OiW-LIG",
+          "id": "IB9sHJ1",
           "uid": "QO9mEQd",
           "label": "Replace Sharp Claw",
           "options": [
@@ -3061,7 +3061,7 @@
       "hint": "Mutant Brutes",
       "sections": [
         {
-          "id": "kJT9Jrf",
+          "id": "Wl7GjLS",
           "uid": "G5po4_b",
           "label": "Replace Heavy Pick",
           "options": [
@@ -3200,7 +3200,7 @@
       "hint": "Soul-Snatchers",
       "sections": [
         {
-          "id": "5pOhS6C",
+          "id": "_UtmHuT",
           "uid": "DO2LaKMgYb",
           "label": "Replace Adrenaline Fueled",
           "options": [
@@ -3242,7 +3242,7 @@
           ]
         },
         {
-          "id": "gZ2WXiv",
+          "id": "lgsT2c4",
           "uid": "8Js-iCM",
           "label": "Upgrade with",
           "options": [
@@ -3253,7 +3253,7 @@
               "costs": [
                 {
                   "unitId": "8V1jGIF",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3292,7 +3292,7 @@
       "hint": "Neophyte Bikers",
       "sections": [
         {
-          "id": "dsgvnE1",
+          "id": "o-L5ucY",
           "uid": "zyFbueh",
           "label": "Replace any Rifle",
           "options": [
@@ -3406,7 +3406,7 @@
           ]
         },
         {
-          "id": "k1__1n3",
+          "id": "6vWvtOZ",
           "uid": "eE3WCng",
           "label": "Replace CCW",
           "options": [
@@ -3487,7 +3487,7 @@
               "costs": [
                 {
                   "unitId": "j0Kdw2N",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3570,7 +3570,7 @@
               "costs": [
                 {
                   "unitId": "j0Kdw2N",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3616,7 +3616,7 @@
       "hint": "Specialists - Cult Leader",
       "sections": [
         {
-          "id": "P_Bn3zD",
+          "id": "8e7tE8q",
           "uid": "GSysU",
           "label": "Upgrade with one",
           "options": [
@@ -3655,7 +3655,7 @@
               "costs": [
                 {
                   "unitId": "BMa76or",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3686,7 +3686,7 @@
               "costs": [
                 {
                   "unitId": "BMa76or",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3710,35 +3710,6 @@
               "parentSectionUid": "GSysU",
               "parentSectionId": "GSysU",
               "id": "X9_-q"
-            },
-            {
-              "uid": "gfrbK",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "BMa76or",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Tactical Master",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Tactical Master (Re-Deployment)",
-                  "content": [
-                    {
-                      "id": "zjzB46LX-QDg",
-                      "name": "Re-Deployment",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Tactical Master (Re-Deployment)",
-              "parentSectionId": "GSysU",
-              "id": "gfrbK"
             },
             {
               "uid": "TPWZF",
@@ -3778,7 +3749,7 @@
               "costs": [
                 {
                   "unitId": "BMa76or",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -3803,6 +3774,35 @@
               "parentSectionUid": "GSysU",
               "parentSectionId": "GSysU",
               "id": "BuvY_"
+            },
+            {
+              "uid": "gfrbK",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "BMa76or",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Tactical Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Tactical Master (Re-Deployment)",
+                  "content": [
+                    {
+                      "id": "zjzB46LX-QDg",
+                      "name": "Re-Deployment",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Tactical Master (Re-Deployment)",
+              "parentSectionId": "GSysU",
+              "id": "gfrbK"
             }
           ],
           "isHeroUpgrade": true,
@@ -3822,7 +3822,7 @@
       "hint": "Brute Champion",
       "sections": [
         {
-          "id": "wJE-W0f",
+          "id": "3spp90M",
           "uid": "dUpN0gs0U_",
           "label": "Replace Massive Heavy Pick",
           "options": [
@@ -3832,7 +3832,7 @@
               "costs": [
                 {
                   "unitId": "zqbGWjZ",
-                  "cost": 5
+                  "cost": 0
                 }
               ],
               "gains": [
@@ -3944,7 +3944,7 @@
           ]
         },
         {
-          "id": "GGhOQpu",
+          "id": "eopmoUC",
           "uid": "atkcq6xX",
           "label": "Upgrade with",
           "options": [
@@ -3955,7 +3955,7 @@
               "costs": [
                 {
                   "unitId": "zqbGWjZ",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3992,7 +3992,7 @@
       "hint": "Supreme Leader",
       "sections": [
         {
-          "id": "oDw6kjw",
+          "id": "PDc4qIq",
           "uid": "4sZF8B7Qca",
           "label": "Replace Sharp Claw",
           "options": [
@@ -4042,7 +4042,7 @@
           ]
         },
         {
-          "id": "qzhkiVl",
+          "id": "9HbIezd",
           "uid": "WtsENy59",
           "label": "Upgrade with",
           "options": [
@@ -4053,7 +4053,7 @@
               "costs": [
                 {
                   "unitId": "YJDuv06",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4083,7 +4083,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "FaF_1-p",
+          "id": "w-0Pbcw",
           "uid": "K6NVek03qF",
           "label": "Replace Adrenaline Fueled",
           "options": [
@@ -4205,7 +4205,7 @@
       "hint": "Specialists - Supreme Leader",
       "sections": [
         {
-          "id": "W5o8zkw",
+          "id": "JobxjZM",
           "uid": "x6iwN-4R",
           "label": "Upgrade with one",
           "options": [
@@ -4245,7 +4245,7 @@
               "costs": [
                 {
                   "unitId": "YJDuv06",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4276,7 +4276,7 @@
               "costs": [
                 {
                   "unitId": "YJDuv06",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -4302,41 +4302,12 @@
               "id": "Y2I6nisT"
             },
             {
-              "uid": "VwKzsRUlPt",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "YJDuv06",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Tactical Master",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Tactical Master (Re-Deployment)",
-                  "content": [
-                    {
-                      "id": "zjzB46LX-QDg",
-                      "name": "Re-Deployment",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Tactical Master (Re-Deployment)",
-              "parentSectionId": "x6iwN-4R",
-              "id": "VwKzsRUlPt"
-            },
-            {
               "uid": "7NwyrabEOw",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "YJDuv06",
-                  "cost": 25
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -4361,12 +4332,41 @@
               "id": "7NwyrabEOw"
             },
             {
-              "uid": "T6PSKxJ9mI",
+              "uid": "VwKzsRUlPt",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "YJDuv06",
                   "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Tactical Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Tactical Master (Re-Deployment)",
+                  "content": [
+                    {
+                      "id": "zjzB46LX-QDg",
+                      "name": "Re-Deployment",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Tactical Master (Re-Deployment)",
+              "parentSectionId": "x6iwN-4R",
+              "id": "VwKzsRUlPt"
+            },
+            {
+              "uid": "T6PSKxJ9mI",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "YJDuv06",
+                  "cost": 45
                 }
               ],
               "gains": [
@@ -4408,7 +4408,7 @@
       "hint": "Specialists - Brute",
       "sections": [
         {
-          "id": "zstdIQt",
+          "id": "vQPPl3Y",
           "uid": "0-cmWeW_",
           "label": "Upgrade with one",
           "options": [
@@ -4448,7 +4448,7 @@
               "costs": [
                 {
                   "unitId": "zqbGWjZ",
-                  "cost": 5
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4479,7 +4479,7 @@
               "costs": [
                 {
                   "unitId": "zqbGWjZ",
-                  "cost": 5
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -4510,7 +4510,7 @@
               "costs": [
                 {
                   "unitId": "zqbGWjZ",
-                  "cost": 15
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -4552,7 +4552,7 @@
       "hint": "Mutant Soul-Snatchers",
       "sections": [
         {
-          "id": "HnIMjr5",
+          "id": "NYuPaWC",
           "uid": "uTstZTqH",
           "label": "Replace Displacer Gland",
           "options": [
@@ -4595,7 +4595,7 @@
           ]
         },
         {
-          "id": "64TD5ud",
+          "id": "-YdhOwn",
           "uid": "0usff1jb",
           "label": "Upgrade with",
           "options": [
@@ -4606,7 +4606,7 @@
               "costs": [
                 {
                   "unitId": "QhBJKna",
-                  "cost": 10
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -5268,7 +5268,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-29T15:54:27.368Z",
+  "modifiedAt": "2026-04-30T09:22:32.616Z",
   "editedAt": "2026-04-28T18:27:11.876Z",
   "official": true,
   "versionString": "3.5.3",
