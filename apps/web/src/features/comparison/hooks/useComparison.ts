@@ -1,6 +1,13 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { DATA_API } from '@/config';
+import type { ArmyData } from '../types';
+
+interface ArmySummary {
+  id: string;
+  name: string;
+  genericName?: string;
+}
 
 export function useComparison() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -14,14 +21,16 @@ export function useComparison() {
   // Data state
   const [systems, setSystems] = useState<string[]>([]);
   const [versions, setVersions] = useState<string[]>([]);
-  const [armiesA, setArmiesA] = useState<{ id: string; name: string; genericName?: string }[]>([]);
-  const [armiesB, setArmiesB] = useState<any[]>([]);
-  const [latestArmies, setLatestArmies] = useState<{ id: string; name: string; genericName?: string }[]>([]);
-  const [armyDataA, setArmyDataA] = useState<any>(null);
-  const [armyDataB, setArmyDataB] = useState<any>(null);
+  const [armiesA, setArmiesA] = useState<ArmySummary[]>([]);
+  const [armiesB, setArmiesB] = useState<ArmySummary[]>([]);
+  const [latestArmies, setLatestArmies] = useState<ArmySummary[]>([]);
+  const [armyDataA, setArmyDataA] = useState<ArmyData | null>(null);
+  const [armyDataB, setArmyDataB] = useState<ArmyData | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   // Helper to update params preserving others
-  const updateParams = (updates: Record<string, string>) => {
+  const updateParams = useCallback((updates: Record<string, string>) => {
     setSearchParams((prev) => {
       const newParams = new URLSearchParams(prev);
       Object.entries(updates).forEach(([key, value]) => {
@@ -30,12 +39,16 @@ export function useComparison() {
       });
       return newParams;
     });
-  };
+  }, [setSearchParams]);
 
   // Fetch Systems
   useEffect(() => {
-    fetch(`${DATA_API}/index.json`)
-      .then((res) => res.json())
+    const controller = new AbortController();
+    fetch(`${DATA_API}/index.json`, { signal: controller.signal })
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch systems');
+        return res.json();
+      })
       .then((data) => {
         if (!Array.isArray(data)) return;
         setSystems(data);
@@ -47,14 +60,23 @@ export function useComparison() {
           }
         }
       })
-      .catch((err) => console.error('Failed to fetch systems:', err));
-  }, []);
+      .catch((err) => {
+        if (err.name === 'AbortError') return;
+        console.error('Failed to fetch systems:', err);
+        setError('Failed to load systems.');
+      });
+    return () => controller.abort();
+  }, [selectedSystem, updateParams]);
 
   // Fetch Versions when System changes
   useEffect(() => {
     if (!selectedSystem) return;
-    fetch(`${DATA_API}/${selectedSystem}/index.json`)
-      .then((res) => res.json())
+    const controller = new AbortController();
+    fetch(`${DATA_API}/${selectedSystem}/index.json`, { signal: controller.signal })
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch versions');
+        return res.json();
+      })
       .then((data) => {
         const sorted = Array.isArray(data) ? data.sort().reverse() : [];
         setVersions(sorted);
@@ -69,68 +91,121 @@ export function useComparison() {
             updateParams({ vA: sorted[0], vB: sorted[0] });
           }
         }
+      })
+      .catch((err) => {
+        if (err.name === 'AbortError') return;
+        console.error('Failed to fetch versions:', err);
+        setError('Failed to load versions.');
       });
-  }, [selectedSystem]);
+    return () => controller.abort();
+  }, [selectedSystem, versionA, versionB, updateParams]);
 
-  // Fetch Armies when Version A changes
+  // Fetch Armies for A and B
   useEffect(() => {
     if (!selectedSystem || !versionA) return;
-    fetch(`${DATA_API}/${selectedSystem}/${versionA}/index.json?t=${Date.now()}`)
+    const controller = new AbortController();
+    fetch(`${DATA_API}/${selectedSystem}/${versionA}/index.json?t=${Date.now()}`, { signal: controller.signal })
       .then((res) => res.json())
       .then((data) => {
         setArmiesA(data);
         if (data.length > 0 && !selectedArmyId) {
           updateParams({ army: data[0].id });
         }
+      })
+      .catch((err) => {
+        if (err.name === 'AbortError') return;
+        console.error('Failed to fetch armies A:', err);
       });
-  }, [selectedSystem, versionA]);
+    return () => controller.abort();
+  }, [selectedSystem, versionA, selectedArmyId, updateParams]);
 
-  // Fetch Armies for B
   useEffect(() => {
     if (!selectedSystem || !versionB) return;
-    fetch(`${DATA_API}/${selectedSystem}/${versionB}/index.json?t=${Date.now()}`)
+    const controller = new AbortController();
+    fetch(`${DATA_API}/${selectedSystem}/${versionB}/index.json?t=${Date.now()}`, { signal: controller.signal })
       .then((res) => res.json())
-      .then((data) => setArmiesB(data));
+      .then((data) => setArmiesB(data))
+      .catch((err) => {
+        if (err.name === 'AbortError') return;
+        console.error('Failed to fetch armies B:', err);
+      });
+    return () => controller.abort();
   }, [selectedSystem, versionB]);
 
   // Fetch Latest Armies for generic names
+  const latestVersion = useMemo(() => versions[0], [versions]);
   useEffect(() => {
-    if (!selectedSystem || versions.length === 0) return;
-    const latestVersion = versions[0];
-    fetch(`${DATA_API}/${selectedSystem}/${latestVersion}/index.json?t=${Date.now()}`)
+    if (!selectedSystem || !latestVersion) return;
+    const controller = new AbortController();
+    fetch(`${DATA_API}/${selectedSystem}/${latestVersion}/index.json?t=${Date.now()}`, { signal: controller.signal })
       .then((res) => res.json())
-      .then((data) => setLatestArmies(data));
-  }, [selectedSystem, versions]);
+      .then((data) => setLatestArmies(data))
+      .catch((err) => {
+        if (err.name === 'AbortError') return;
+        console.error('Failed to fetch latest armies:', err);
+      });
+    return () => controller.abort();
+  }, [selectedSystem, latestVersion]);
 
   // Fetch Data when selections change
   useEffect(() => {
     if (!selectedSystem || !versionA || !selectedArmyId) return;
 
-    fetch(`${DATA_API}/${selectedSystem}/${versionA}/${selectedArmyId}`)
-      .then((res) => res.json())
+    const controller = new AbortController();
+    setLoading(true);
+    setError(null);
+
+    fetch(`${DATA_API}/${selectedSystem}/${versionA}/${selectedArmyId}`, { signal: controller.signal })
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to fetch army A data');
+        return res.json();
+      })
       .then((dataA) => {
         setArmyDataA(dataA);
-
-        if (versionB && armiesB.length > 0) {
-          const exactMatch = armiesB.find((a) => a.id === selectedArmyId);
-          if (exactMatch) {
-            fetch(`${DATA_API}/${selectedSystem}/${versionB}/${selectedArmyId}`)
-              .then((res) => res.json())
-              .then((dataB) => setArmyDataB(dataB));
-          } else {
-            const namePrefix = selectedArmyId ? selectedArmyId.split('(')[0].trim() : '';
-            const fuzzyMatch = armiesB.find((a) => a.name.startsWith(namePrefix));
-            if (fuzzyMatch) {
-              fetch(`${DATA_API}/${selectedSystem}/${versionB}/${fuzzyMatch.id}`)
-                .then((res) => res.json())
-                .then((dataB) => setArmyDataB(dataB));
-            } else {
-              setArmyDataB(null);
-            }
-          }
-        }
+        setLoading(false);
+      })
+      .catch((err) => {
+        if (err.name === 'AbortError') return;
+        console.error('Failed to fetch army data A:', err);
+        setError('Failed to load army data.');
+        setLoading(false);
       });
-  }, [selectedSystem, versionA, versionB, selectedArmyId, armiesB]);
+
+    return () => controller.abort();
+  }, [selectedSystem, versionA, selectedArmyId]);
+
+  useEffect(() => {
+    if (!selectedSystem || !versionB || !selectedArmyId || armiesB.length === 0) return;
+
+    const controller = new AbortController();
+    const exactMatch = armiesB.find((a) => a.id === selectedArmyId);
+    let targetId = '';
+
+    if (exactMatch) {
+      targetId = selectedArmyId;
+    } else {
+      const namePrefix = selectedArmyId.split('(')[0].trim();
+      const fuzzyMatch = armiesB.find((a) => a.name.startsWith(namePrefix));
+      if (fuzzyMatch) targetId = fuzzyMatch.id;
+    }
+
+    if (targetId) {
+      fetch(`${DATA_API}/${selectedSystem}/${versionB}/${targetId}`, { signal: controller.signal })
+        .then((res) => {
+          if (!res.ok) throw new Error('Failed to fetch army B data');
+          return res.json();
+        })
+        .then((dataB) => setArmyDataB(dataB))
+        .catch((err) => {
+          if (err.name === 'AbortError') return;
+          console.error('Failed to fetch army data B:', err);
+        });
+    } else {
+      setArmyDataB(null);
+    }
+
+    return () => controller.abort();
+  }, [selectedSystem, versionB, selectedArmyId, armiesB]);
 
   return {
     selectedSystem,
@@ -143,6 +218,8 @@ export function useComparison() {
     latestArmies,
     armyDataA,
     armyDataB,
+    loading,
+    error,
     updateParams,
   };
 }

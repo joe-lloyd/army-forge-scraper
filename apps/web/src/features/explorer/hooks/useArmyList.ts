@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { API_URL } from '@/config';
 
 export interface ArmySummary {
   uid: string;
@@ -20,32 +21,52 @@ export function useArmyList() {
   const [selectedSystem, setSelectedSystem] = useState(2);
   const [armies, setArmies] = useState<ArmySummary[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [search, setSearch] = useState('');
 
   useEffect(() => {
+    const controller = new AbortController();
     setLoading(true);
-    fetch(`http://localhost:3000/armies?gameSystem=${selectedSystem}`)
-      .then((res) => res.json())
+    setError(null);
+
+    fetch(`${API_URL}/armies?gameSystem=${selectedSystem}`, { signal: controller.signal })
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+        return res.json();
+      })
       .then((data) => {
         setArmies(data);
         setLoading(false);
       })
       .catch((err) => {
+        if (err.name === 'AbortError') return;
         console.error('Failed to fetch armies:', err);
+        setError('Failed to load army list. Please try again later.');
         setLoading(false);
       });
+
+    return () => controller.abort();
   }, [selectedSystem]);
 
   const filteredArmies = armies.filter((a) =>
     a.name.toLowerCase().includes(search.toLowerCase())
   );
 
+  const handleSetSearch = useCallback((val: string) => {
+    setSearch(val);
+  }, []);
+
+  const handleSelectSystem = useCallback((id: number) => {
+    setSelectedSystem(id);
+  }, []);
+
   return {
     selectedSystem,
-    setSelectedSystem,
+    selectSystem: handleSelectSystem,
     loading,
+    error,
     search,
-    setSearch,
+    setSearch: handleSetSearch,
     filteredArmies,
   };
 }

@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import type { ArmyBook, Unit } from '@opr-api/shared';
 import { UnitCard } from './UnitCard';
 import { UnitDetailSidebar } from './UnitDetailSidebar';
@@ -8,17 +7,16 @@ interface ArmyDetailViewProps {
   army: ArmyBook;
   selectedUnit: Unit | null;
   onSelectUnit: (unit: Unit) => void;
+  onBack: () => void;
 }
 
-export function ArmyDetailView({ army, selectedUnit, onSelectUnit }: ArmyDetailViewProps) {
-  const navigate = useNavigate();
-
+export function ArmyDetailView({ army, selectedUnit, onSelectUnit, onBack }: ArmyDetailViewProps) {
   const heroes = army.units.filter((u) => u.rules.some((r) => r.name === 'Hero'));
   const standardUnits = army.units.filter((u) => !u.rules.some((r) => r.name === 'Hero'));
 
   return (
     <div className="container mx-auto max-w-[1400px] px-4 pb-20">
-      <Button onClick={() => navigate(-1)} variant="secondary" className="mb-8 mt-4 rounded-full">
+      <Button onClick={onBack} variant="secondary" className="mb-8 mt-4 rounded-full">
         &larr; Back to List
       </Button>
 

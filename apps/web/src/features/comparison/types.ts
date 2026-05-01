@@ -1,3 +1,36 @@
+export interface Weapon {
+  id: string;
+  name: string;
+  range: number;
+  attacks: number;
+  specialRules: any[];
+  count: number;
+}
+
+export interface Item {
+  id: string;
+  name: string;
+  content: any[];
+  count: number;
+}
+
+export interface UpgradeOption {
+  id: string;
+  uid?: string;
+  label: string;
+  cost: number;
+  costs?: { unitId: string; cost: number }[];
+  gains: any[];
+  finalCost?: number;
+}
+
+export interface UpgradeSection {
+  id: string;
+  uid?: string;
+  label: string;
+  options: UpgradeOption[];
+}
+
 export interface Unit {
   id: string;
   name: string;
@@ -5,8 +38,8 @@ export interface Unit {
   cost: number;
   quality: number;
   defense: number;
-  weapons: any[];
-  items?: any[];
+  weapons: Weapon[];
+  items?: Item[];
   rules: any[];
   upgrades: string[];
   size?: number;
@@ -20,7 +53,7 @@ export interface Unit {
 export interface UpgradePackage {
   uid: string;
   hint: string;
-  sections: any[];
+  sections: UpgradeSection[];
 }
 
 export interface Spell {

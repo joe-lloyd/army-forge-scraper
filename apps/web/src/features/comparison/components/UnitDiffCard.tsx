@@ -1,5 +1,5 @@
 import { diffArrays } from 'diff';
-import type { Unit, ArmyData } from '../types';
+import type { Unit, ArmyData, Weapon, Item, UpgradePackage, UpgradeSection } from '../types';
 import RuleText, { RuleList } from './RuleText';
 import { formatBases, getCostColor, getStatColor, getUpgradeDetails } from '../utils/diffHelpers';
 import { UpgradeSectionTable } from './UpgradeSectionTable';
@@ -32,7 +32,7 @@ export function UnitDiffCard({ uA, uB, dataA, dataB, rulesDict }: UnitDiffCardPr
     );
   };
 
-  const serializeW = (w: any) =>
+  const serializeW = (w: Weapon) =>
     JSON.stringify({
       name: w.name,
       count: w.count || 1,
@@ -42,7 +42,7 @@ export function UnitDiffCard({ uA, uB, dataA, dataB, rulesDict }: UnitDiffCardPr
       isItem: false,
     });
 
-  const serializeItem = (item: any) =>
+  const serializeItem = (item: Item) =>
     JSON.stringify({
       name: item.name,
       count: item.count || 1,
@@ -237,67 +237,120 @@ export function UnitDiffCard({ uA, uB, dataA, dataB, rulesDict }: UnitDiffCardPr
             Upgrades (Vs Version B)
           </div>
           <div className="flex flex-col gap-3">
-            {upgradeDetailsB.map((pkgB: any) => {
-              const pkgA = upgradeDetailsA.find((p: any) => p?.uid === pkgB.uid);
-              const isNewPkg = !pkgA;
-              const usedSectionAIds = new Set<string>();
+            {(() => {
+              const usedPkgAIds = new Set<string>();
+              
+              const matchedAndAdded = upgradeDetailsB.map((pkgB: UpgradePackage) => {
+                // Try matching by UID, fallback to hint
+                let pkgA = upgradeDetailsA.find((p: UpgradePackage) => p?.uid === pkgB.uid);
+                if (!pkgA) {
+                  pkgA = upgradeDetailsA.find((p: UpgradePackage) => p?.hint === pkgB.hint);
+                }
+                
+                if (pkgA) usedPkgAIds.add(pkgA.uid);
 
-              return (
-                <div
-                  key={pkgB.uid}
-                  className={`rounded-lg p-2 border ${
-                    isNewPkg ? 'bg-lime-400/5 border-lime-400/50' : 'bg-white/5 border-white/5'
-                  }`}
-                >
-                  <div className="flex justify-between items-center mb-1 pb-1 border-b border-white/10">
-                    <div className={`text-sm font-bold ${isNewPkg ? 'text-lime-400' : 'text-sky-400'}`}>
-                      {pkgB.hint}
+                const isNewPkg = !pkgA;
+                const usedSectionAIds = new Set<string>();
+
+                return (
+                  <div
+                    key={pkgB.uid || pkgB.hint}
+                    className={`rounded-lg p-2 border ${
+                      isNewPkg ? 'bg-lime-400/5 border-lime-400/50' : 'bg-white/5 border-white/5'
+                    }`}
+                  >
+                    <div className="flex justify-between items-center mb-1 pb-1 border-b border-white/10">
+                      <div className={`text-sm font-bold ${isNewPkg ? 'text-lime-400' : 'text-sky-400'}`}>
+                        {pkgB.hint}
+                      </div>
+                      {isNewPkg && (
+                        <span className="text-[10px] bg-lime-400 text-black font-bold px-1 rounded">
+                          NEW
+                        </span>
+                      )}
                     </div>
-                    {isNewPkg && (
-                      <span className="text-[10px] bg-lime-400 text-black font-bold px-1 rounded">
-                        NEW
-                      </span>
-                    )}
-                  </div>
 
-                  {pkgB.sections.map((sectionB: any) => {
-                    // Robust matching: 1. Try exact UID or ID match
-                    let sectionA = pkgA?.sections.find(
-                      (s: any) =>
-                        (s.uid && sectionB.uid && s.uid === sectionB.uid) ||
-                        (s.id && sectionB.id && s.id === sectionB.id)
-                    );
-
-                    const getSid = (s: any) => s.uid || s.id;
-
-                    // 2. If no match or collision, try label match (skipping used IDs)
-                    if (sectionA && usedSectionAIds.has(getSid(sectionA))) {
-                      sectionA = undefined;
-                    }
-
-                    if (!sectionA && pkgA) {
-                      sectionA = pkgA.sections.find(
-                        (s: any) =>
-                          s.label === sectionB.label && !usedSectionAIds.has(getSid(s))
+                    {/* Render matched and added sections */}
+                    {pkgB.sections.map((sectionB: UpgradeSection) => {
+                      let sectionA = pkgA?.sections.find(
+                        (s: UpgradeSection) =>
+                          (s.uid && sectionB.uid && s.uid == sectionB.uid) ||
+                          (s.id && sectionB.id && s.id == sectionB.id)
                       );
-                    }
 
-                    if (sectionA) {
-                      usedSectionAIds.add(getSid(sectionA));
-                    }
+                      const getSid = (s: UpgradeSection) => s.uid || s.id;
 
-                    return (
+                      if (sectionA && usedSectionAIds.has(getSid(sectionA))) {
+                        sectionA = undefined;
+                      }
+
+                      if (!sectionA && pkgA) {
+                        sectionA = pkgA.sections.find(
+                          (s: UpgradeSection) => {
+                            const sid = getSid(s);
+                            return s.label === sectionB.label && (!sid || !usedSectionAIds.has(sid));
+                          }
+                        );
+                      }
+
+                      if (sectionA) {
+                        const sid = getSid(sectionA);
+                        if (sid) usedSectionAIds.add(sid);
+                      }
+
+                      return (
+                        <UpgradeSectionTable
+                          key={sectionB.id || sectionB.label}
+                          sectionB={sectionB}
+                          sectionA={sectionA}
+                          isDiffMode={true}
+                        />
+                      );
+                    })}
+
+                    {/* Render removed sections (in A but not matched to anything in B) */}
+                    {pkgA?.sections
+                      .filter((sA) => !usedSectionAIds.has(sA.uid || sA.id))
+                      .map((sectionA) => (
+                        <UpgradeSectionTable
+                          key={sectionA.id || sectionA.label}
+                          sectionB={{ ...sectionA, options: [] }}
+                          sectionA={sectionA}
+                          isDiffMode={true}
+                        />
+                      ))}
+                  </div>
+                );
+              });
+
+              const removed = upgradeDetailsA
+                .filter((p) => !usedPkgAIds.has(p.uid))
+                .map((pkgA) => (
+                  <div
+                    key={pkgA.uid}
+                    className="rounded-lg p-2 border bg-red-500/5 border-red-500/50 opacity-70"
+                  >
+                    <div className="flex justify-between items-center mb-1 pb-1 border-b border-white/10">
+                      <div className="text-sm font-bold text-red-500 line-through">
+                        {pkgA.hint}
+                      </div>
+                      <span className="text-[10px] bg-red-500 text-white font-bold px-1 rounded">
+                        REMOVED
+                      </span>
+                    </div>
+                    {pkgA.sections.map((sectionA) => (
                       <UpgradeSectionTable
-                        key={sectionB.id}
-                        sectionB={sectionB}
+                        key={sectionA.id || sectionA.label}
+                        sectionB={{ ...sectionA, options: [] }}
                         sectionA={sectionA}
                         isDiffMode={true}
                       />
-                    );
-                  })}
-                </div>
-              );
-            })}
+                    ))}
+                  </div>
+                ));
+
+              return [...matchedAndAdded, ...removed];
+            })()}
           </div>
         </div>
       )}

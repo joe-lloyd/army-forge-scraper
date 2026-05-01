@@ -1,1 +1,1 @@
-export { default as ComparisonFeature } from "./components/ComparisonFeature";
+export { ComparisonFeatureContainer } from "./components/ComparisonFeatureContainer";

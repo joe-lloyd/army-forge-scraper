@@ -1,34 +1,43 @@
 import { RuleList } from './RuleText';
 import { getCostColor } from '../utils/diffHelpers';
+import type { UpgradeSection, UpgradeOption } from '../types';
 
 interface UpgradeSectionTableProps {
-  sectionB: any;
-  sectionA?: any;
+  sectionB: UpgradeSection;
+  sectionA?: UpgradeSection;
   isDiffMode?: boolean;
 }
+
+type RowType = 'removed' | 'added' | 'changed' | 'unchanged' | 'standard';
 
 export function UpgradeSectionTable({ sectionB, sectionA, isDiffMode = false }: UpgradeSectionTableProps) {
   const optsA = sectionA?.options || [];
   const optsB = sectionB.options || [];
 
   const availableOptsA = [...optsA];
-  const mappedB = optsB.map((optB: any) => {
-    if (!isDiffMode) return { opt: optB, type: 'standard' as const, optA: undefined };
+  const mappedB = optsB.map((optB) => {
+    if (!isDiffMode) return { opt: optB, type: 'standard' as RowType, optA: undefined };
 
-    const getBase = (label: string) => (label || '').split('(')[0].trim();
+    const getBase = (label: string) => (label || '').split('(')[0].trim().toLowerCase();
     const baseB = getBase(optB.label);
 
-    let matchIdx = availableOptsA.findIndex((a: any) => {
-      const isIdMatch = (a.uid && optB.uid && a.uid === optB.uid) || (a.id && optB.id && a.id === optB.id);
-      return isIdMatch && getBase(a.label) === baseB;
+    // Step 1: ID/UID match — must ALSO share the same base label to avoid
+    // positional ID collisions between versions (e.g. ID "1" meaning different
+    // weapons in v1 vs v2).
+    let matchIdx = availableOptsA.findIndex((a) => {
+      const idMatch = (a.uid && optB.uid && a.uid == optB.uid) || (a.id && optB.id && a.id == optB.id);
+      return idMatch && getBase(a.label) === baseB;
     });
 
+    // Step 2: Exact label match (most reliable cross-version identifier)
     if (matchIdx === -1) {
-      matchIdx = availableOptsA.findIndex((a: any) => a.label === optB.label);
+      matchIdx = availableOptsA.findIndex((a) => a.label === optB.label);
     }
 
-    if (matchIdx === -1) {
-      matchIdx = availableOptsA.findIndex((a: any) => getBase(a.label) === baseB);
+    // Step 3: Base label match — only use when base is long enough to be
+    // meaningful (> 6 chars) to avoid false matches on short labels like "A3".
+    if (matchIdx === -1 && baseB.length > 6) {
+      matchIdx = availableOptsA.findIndex((a) => getBase(a.label) === baseB);
     }
 
     if (matchIdx !== -1) {
@@ -43,30 +52,30 @@ export function UpgradeSectionTable({ sectionB, sectionA, isDiffMode = false }: 
 
       return {
         opt: optB,
-        type: isChanged ? 'changed' : 'unchanged',
+        type: (isChanged ? 'changed' : 'unchanged') as RowType,
         optA,
       };
     }
-    return { opt: optB, type: 'added' as const, optA: undefined };
+    return { opt: optB, type: 'added' as RowType, optA: undefined };
   });
 
   const removedOpts = isDiffMode ? availableOptsA : [];
   const allSectionOptions = [...(isDiffMode ? optsA : []), ...optsB];
-  const hasWeapons = allSectionOptions.some((opt: any) =>
+  const hasWeapons = allSectionOptions.some((opt) =>
     (opt.gains || []).some((g: any) => g.attacks !== undefined || g.range !== undefined)
   );
-  const hasSpecial = allSectionOptions.some((opt: any) =>
+  const hasSpecial = allSectionOptions.some((opt) =>
     (opt.gains || []).some((g: any) => g.specialRules && g.specialRules.length > 0)
   );
 
   const renderRow = (
-    opt: any,
-    type: 'removed' | 'added' | 'changed' | 'unchanged' | 'standard',
+    opt: UpgradeOption,
+    type: RowType,
     outerIdx: number,
-    optA?: any
+    optA?: UpgradeOption
   ) => {
     const weapons = (opt.gains || []).filter(
-      (g: any) => g.attacks !== undefined || g.range !== undefined
+      (g) => g.attacks !== undefined || g.range !== undefined
     );
 
     let rowClass = 'border-b border-white/5 last:border-0 transition-colors';
@@ -83,11 +92,11 @@ export function UpgradeSectionTable({ sectionB, sectionA, isDiffMode = false }: 
       textClass = 'text-lime-400';
     } else if (type === 'changed') {
       rowClass = 'bg-black/30 border-white/10';
-      const diff = opt.finalCost - optA.finalCost;
-      const color = getCostColor(optA.finalCost, opt.finalCost);
+      const diff = (opt.finalCost ?? 0) - (optA?.finalCost ?? 0);
+      const color = getCostColor(optA?.finalCost ?? 0, opt.finalCost ?? 0);
       costText = (
         <span style={{ color, fontWeight: 'bold' }}>
-          {optA.finalCost} → {opt.finalCost} ({diff > 0 ? '+' : ''}
+          {optA?.finalCost} → {opt.finalCost} ({diff > 0 ? '+' : ''}
           {diff})pts
         </span>
       );
@@ -156,8 +165,8 @@ export function UpgradeSectionTable({ sectionB, sectionA, isDiffMode = false }: 
             </tr>
           </thead>
           <tbody>
-            {removedOpts.map((opt: any, i: number) => renderRow(opt, 'removed', i))}
-            {mappedB.map((item: any, i: number) =>
+            {removedOpts.map((opt, i) => renderRow(opt, 'removed', i))}
+            {mappedB.map((item, i) =>
               renderRow(item.opt, item.type, i + removedOpts.length, item.optA)
             )}
           </tbody>

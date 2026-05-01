@@ -93,7 +93,7 @@ export function ComparisonControls({
             onChange={(e) => onUpdateParams({ army: e.target.value })}
           >
             <option value="">Select Army...</option>
-            {armiesA.map((a: any) => {
+            {armiesA.map((a) => {
               const latest = latestArmies.find((l) => l.id === a.id);
               let genericName = latest?.genericName || a.genericName;
               if (genericName) {

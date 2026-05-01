@@ -25,12 +25,12 @@ export const getUpgradeDetails = (unit: Unit | null | undefined, data: ArmyData 
       const pkg = data.upgradePackages.find((p) => p.uid === uid);
       if (!pkg) return null;
 
-      const processedSections = pkg.sections.map((section: any) => ({
+      const processedSections = pkg.sections.map((section) => ({
         ...section,
-        options: section.options.map((opt: any) => {
+        options: section.options.map((opt) => {
           let finalCost = opt.cost;
           if (opt.costs && Array.isArray(opt.costs)) {
-            const match = opt.costs.find((c: any) => c.unitId === unit.id);
+            const match = opt.costs.find((c) => c.unitId === unit.id);
             if (match) finalCost = match.cost;
           }
           return { ...opt, finalCost };
@@ -39,10 +39,12 @@ export const getUpgradeDetails = (unit: Unit | null | undefined, data: ArmyData 
 
       return { ...pkg, sections: processedSections };
     })
-    .filter(Boolean);
+    .filter((pkg): pkg is NonNullable<typeof pkg> => pkg !== null);
 };
 
 export const createRulesDict = (dataA: ArmyData, dataB: ArmyData) => {
+  // If a rule exists in both versions with different descriptions,
+  // Version B's description takes precedence in the dictionary.
   return {
     ...Object.fromEntries((dataA.specialRules || []).map((r) => [r.name, r.description])),
     ...Object.fromEntries((dataB.specialRules || []).map((r) => [r.name, r.description])),

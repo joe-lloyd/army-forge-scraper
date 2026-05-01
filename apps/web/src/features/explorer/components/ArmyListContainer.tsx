@@ -10,7 +10,7 @@ export default function ArmyListContainer() {
   const navigate = useNavigate();
   const {
     selectedSystem,
-    setSelectedSystem,
+    selectSystem,
     loading,
     search,
     setSearch,
@@ -36,7 +36,7 @@ export default function ArmyListContainer() {
           <Button
             key={sys.id}
             variant={selectedSystem === sys.id ? 'primary' : 'secondary'}
-            onClick={() => setSelectedSystem(sys.id)}
+            onClick={() => selectSystem(sys.id)}
             className="rounded-full"
           >
             {sys.name}
