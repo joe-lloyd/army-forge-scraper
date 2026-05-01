@@ -62,6 +62,7 @@ interface DiffViewProps {
   dataA: ArmyData;
   dataB: ArmyData;
   versions?: { a: string; b: string };
+  hideHeader?: boolean;
 }
 
 const CollapsibleSection = ({
@@ -366,7 +367,7 @@ const UpgradeSectionTable = ({
   );
 };
 
-export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
+export default function DiffView({ dataA, dataB, versions, hideHeader }: DiffViewProps) {
   // Collapsed state map. If a key is true, it is CLOSED.
   // Wait, better to be explicit about OPEN state?
   // The request says "special rules collapsed by default".
@@ -1297,37 +1298,39 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
 
   return (
     <div className="animate-fade-in pb-16">
-      <div className="grid grid-cols-3 gap-6 mb-4 px-4 sticky top-0 bg-slate-950/80 backdrop-blur-md z-10 py-4 border-b border-white/5">
-        <h3 className="text-center text-slate-400 font-semibold text-xl">
-          {dataA.name}{" "}
-          {formatArmyGenericName(dataA.name, dataA.genericName) ? (
-            <span className="opacity-70 text-sm">
-              [{formatArmyGenericName(dataA.name, dataA.genericName)}]
+      {!hideHeader && (
+        <div className="w-screen relative left-1/2 -translate-x-1/2 grid grid-cols-3 gap-2 md:gap-6 mb-4 px-4 md:px-8 sticky top-0 bg-slate-950/80 backdrop-blur-md z-[60] py-4 border-b border-white/5">
+          <h3 className="text-center text-slate-400 font-semibold text-base md:text-xl break-words">
+            {dataA.name}{" "}
+            {formatArmyGenericName(dataA.name, dataA.genericName) ? (
+              <span className="opacity-70 text-sm">
+                [{formatArmyGenericName(dataA.name, dataA.genericName)}]
+              </span>
+            ) : (
+              ""
+            )}
+            <span className="text-sm opacity-50 block mt-1">
+              {versions?.a || "Version A"}
             </span>
-          ) : (
-            ""
-          )}
-          <span className="text-sm opacity-50 block mt-1">
-            {versions?.a || "Version A"}
-          </span>
-        </h3>
-        <h3 className="text-center text-sky-400 font-bold tracking-widest text-xl flex items-center justify-center">
-          VS
-        </h3>
-        <h3 className="text-center text-slate-400 font-semibold text-xl">
-          {dataB.name}{" "}
-          {formatArmyGenericName(dataB.name, dataB.genericName) ? (
-            <span className="opacity-70 text-sm">
-              [{formatArmyGenericName(dataB.name, dataB.genericName)}]
+          </h3>
+          <h3 className="text-center text-sky-400 font-bold tracking-widest text-base md:text-xl flex items-center justify-center">
+            VS
+          </h3>
+          <h3 className="text-center text-slate-400 font-semibold text-base md:text-xl break-words">
+            {dataB.name}{" "}
+            {formatArmyGenericName(dataB.name, dataB.genericName) ? (
+              <span className="opacity-70 text-sm">
+                [{formatArmyGenericName(dataB.name, dataB.genericName)}]
+              </span>
+            ) : (
+              ""
+            )}
+            <span className="text-sm opacity-50 block mt-1">
+              {versions?.b || "Version B"}
             </span>
-          ) : (
-            ""
-          )}
-          <span className="text-sm opacity-50 block mt-1">
-            {versions?.b || "Version B"}
-          </span>
-        </h3>
-      </div>
+          </h3>
+        </div>
+      )}
 
       {/* Army Wide Section */}
       <div className="space-y-4 mb-4">
