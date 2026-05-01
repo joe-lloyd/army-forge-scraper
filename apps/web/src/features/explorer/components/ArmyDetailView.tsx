@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import type { ArmyBook, Unit } from "@opr-api/shared";
 
-export default function ArmyDetail() {
+export default function ArmyDetailView() {
   const { systemId, armyId } = useParams();
   const [army, setArmy] = useState<ArmyBook | null>(null);
   const [loading, setLoading] = useState(true);

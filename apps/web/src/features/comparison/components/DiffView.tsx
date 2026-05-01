@@ -367,7 +367,12 @@ const UpgradeSectionTable = ({
   );
 };
 
-export default function DiffView({ dataA, dataB, versions, hideHeader }: DiffViewProps) {
+export default function DiffView({
+  dataA,
+  dataB,
+  versions,
+  hideHeader,
+}: DiffViewProps) {
   // Collapsed state map. If a key is true, it is CLOSED.
   // Wait, better to be explicit about OPEN state?
   // The request says "special rules collapsed by default".
@@ -437,9 +442,8 @@ export default function DiffView({ dataA, dataB, versions, hideHeader }: DiffVie
     const upgradeDetails = getUpgradeDetails(unit, data);
 
     return (
-      <div className="glass-card h-full p-2 relative">
+      <div className="glass-card overflow-hidden h-full p-2 relative">
         {/* Top Accent Line */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-t-xl"></div>
         <div className="flex justify-between items-start mb-4">
           <div>
             <h4 className="m-0 text-xl font-bold text-white">
@@ -696,9 +700,9 @@ export default function DiffView({ dataA, dataB, versions, hideHeader }: DiffVie
     };
 
     return (
-      <div className="glass-card h-full p-2 relative border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
+      <div className="glass-card overflow-hidden h-full p-2 relative border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
         {/* Top Accent Line */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-t-xl"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 to-indigo-500"></div>
 
         {/* Header */}
         <div className="flex justify-between items-start mb-4">
@@ -827,9 +831,7 @@ export default function DiffView({ dataA, dataB, versions, hideHeader }: DiffVie
               // Unchanged
               return (
                 <div key={key} className="text-sm mb-1">
-                  <span
-                    className={`font-medium`}
-                  >
+                  <span className={`font-medium`}>
                     {countStr}
                     {name}
                   </span>

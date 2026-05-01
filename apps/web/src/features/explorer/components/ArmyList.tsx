@@ -17,7 +17,7 @@ interface ArmySummary {
   systemId: number;
 }
 
-export default function Home() {
+export default function ArmyList() {
   const [selectedSystem, setSelectedSystem] = useState(2);
   const [armies, setArmies] = useState<ArmySummary[]>([]);
   const [loading, setLoading] = useState(true);
