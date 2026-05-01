@@ -21,7 +21,7 @@ export function UnitBaseCard({ unit, data, version, rulesDict }: UnitBaseCardPro
   const upgradeDetails = getUpgradeDetails(unit, data);
 
   return (
-    <div className="glass-card relative h-full overflow-hidden p-2">
+    <div className="glass-card relative h-full p-2">
       <div className="mb-4 flex items-start justify-between">
         <div>
           <h4 className="m-0 text-xl font-bold text-white">

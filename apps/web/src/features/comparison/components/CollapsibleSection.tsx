@@ -42,8 +42,8 @@ export function CollapsibleSection({
       </button>
 
       <div
-        className={`overflow-hidden transition-all duration-500 ${
-          isOpen ? 'max-h-[50000px] opacity-100' : 'max-h-0 opacity-0'
+        className={`transition-all duration-500 ${
+          isOpen ? 'max-h-[50000px] opacity-100 overflow-visible' : 'max-h-0 opacity-0 overflow-hidden'
         }`}
       >
         {children}
