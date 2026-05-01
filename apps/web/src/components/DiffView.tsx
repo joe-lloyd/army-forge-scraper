@@ -1,16 +1,24 @@
 import React, { useState } from "react";
 import { diffWords, diffArrays } from "diff";
-import { RuleList } from "./RuleText";
+import RuleText, { RuleList } from "./RuleText";
 
 interface Unit {
   id: string;
   name: string;
+  genericName?: string;
   cost: number;
   quality: number;
   defense: number;
   weapons: any[];
+  items?: any[];
   rules: any[];
   upgrades: string[]; // List of package UIDs
+  size?: number;
+  bases?: Record<string, string>;
+  product?: {
+    storeLinksPhysical?: string[];
+    storeLinksDigital?: string[];
+  };
 }
 
 interface UpgradePackage {
@@ -34,6 +42,7 @@ interface SpecialRule {
 
 interface ArmyData {
   name: string;
+  genericName?: string;
   units: Unit[];
   upgradePackages: UpgradePackage[];
   rules?: any[];
@@ -41,6 +50,13 @@ interface ArmyData {
   specialRules?: SpecialRule[];
   background?: string;
 }
+
+const formatBases = (bases?: Record<string, string>) => {
+  if (!bases) return "";
+  return Object.entries(bases)
+    .map(([type, size]) => `${size}mm ${type}`)
+    .join(" / ");
+};
 
 interface DiffViewProps {
   dataA: ArmyData;
@@ -175,7 +191,9 @@ const UpgradeSectionTable = ({
 
     // Try explicit ID or UID match first, but require base name to match
     let matchIdx = availableOptsA.findIndex((a: any) => {
-      const isIdMatch = (a.uid && optB.uid && a.uid === optB.uid) || (a.id && optB.id && a.id === optB.id);
+      const isIdMatch =
+        (a.uid && optB.uid && a.uid === optB.uid) ||
+        (a.id && optB.id && a.id === optB.id);
       return isIdMatch && getBase(a.label) === baseB;
     });
 
@@ -186,7 +204,9 @@ const UpgradeSectionTable = ({
 
     // Fallback to base label match (ignoring stats in parentheses)
     if (matchIdx === -1) {
-      matchIdx = availableOptsA.findIndex((a: any) => getBase(a.label) === baseB);
+      matchIdx = availableOptsA.findIndex(
+        (a: any) => getBase(a.label) === baseB,
+      );
     }
 
     if (matchIdx !== -1) {
@@ -199,7 +219,7 @@ const UpgradeSectionTable = ({
         optA.finalCost !== optB.finalCost;
       const isLabelChanged = optA.label !== optB.label;
       const isChanged = isCostChanged || isLabelChanged;
-      
+
       return {
         opt: optB,
         type: isChanged ? "changed" : "unchanged",
@@ -264,8 +284,6 @@ const UpgradeSectionTable = ({
     const weaponRows =
       weapons.length > 0 ? weapons : [{ name: labelText, isDummy: true }];
 
-
-
     return weaponRows.map((w: any, idx: number) => (
       <tr
         key={`${opt.id || "opt"}-${outerIdx}-${idx}`}
@@ -295,7 +313,11 @@ const UpgradeSectionTable = ({
             </td>
             {hasSpecial && (
               <td className={`py-1 ${textClass} text-[10px]`}>
-                {w.specialRules?.length ? <RuleList rules={w.specialRules} /> : "-"}
+                {w.specialRules?.length ? (
+                  <RuleList rules={w.specialRules} />
+                ) : (
+                  "-"
+                )}
               </td>
             )}
           </>
@@ -357,6 +379,15 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
     setCollapsed((prev) => ({ ...prev, [section]: !prev[section] }));
   };
 
+  const rulesDict = {
+    ...Object.fromEntries(
+      (dataA.specialRules || []).map((r) => [r.name, r.description]),
+    ),
+    ...Object.fromEntries(
+      (dataB.specialRules || []).map((r) => [r.name, r.description]),
+    ),
+  };
+
   const getUpgradeDetails = (
     unit: Unit | null | undefined,
     data: ArmyData | null,
@@ -405,10 +436,28 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
     const upgradeDetails = getUpgradeDetails(unit, data);
 
     return (
-      <div className="glass-card h-full p-2 relative overflow-hidden">
-        {/* Header */}
+      <div className="glass-card h-full p-2 relative">
+        {/* Top Accent Line */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-t-xl"></div>
         <div className="flex justify-between items-start mb-4">
-          <h4 className="m-0 text-xl font-bold text-white">{unit.name}</h4>
+          <div>
+            <h4 className="m-0 text-xl font-bold text-white">
+              {unit.name}{" "}
+              {unit.genericName ? (
+                <span className="text-sm text-slate-400 font-normal">
+                  [{unit.genericName}]
+                </span>
+              ) : (
+                ""
+              )}
+            </h4>
+            {(unit.size || unit.bases) && (
+              <div className="text-xs text-slate-500 mt-1 flex gap-3">
+                {unit.size && <span>Size: {unit.size}</span>}
+                {unit.bases && <span>Base: {formatBases(unit.bases)}</span>}
+              </div>
+            )}
+          </div>
           <span className="unit-cost font-bold text-sky-400">
             {unit.cost}pts
           </span>
@@ -445,7 +494,23 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
                 {" "}
                 ({w.range ? `${w.range}"` : "Melee"}, A{w.attacks}
                 {w.specialRules?.length > 0 && ", "}
-                <RuleList rules={w.specialRules} />
+                <RuleList rules={w.specialRules} specialRulesDict={rulesDict} />
+                )
+              </span>
+            </div>
+          ))}
+          {unit.items?.map((item, idx) => (
+            <div key={`item-${idx}`} className="text-sm mb-1">
+              <span className="font-medium">
+                {item.count > 1 ? `${item.count}x ` : ""}
+                {item.name}
+              </span>
+              <span className="text-slate-400">
+                {" "}
+                (
+                {item.content?.length > 0 && (
+                  <RuleList rules={item.content} specialRulesDict={rulesDict} />
+                )}
                 )
               </span>
             </div>
@@ -458,13 +523,13 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
             Rules
           </div>
           <div className="text-sm text-slate-400 leading-relaxed">
-            <RuleList rules={unit.rules} />
+            <RuleList rules={unit.rules} specialRulesDict={rulesDict} />
           </div>
         </div>
 
         {/* Upgrades Table */}
         {upgradeDetails.length > 0 && (
-          <div>
+          <div className="mb-4">
             <div className="unit-detail-label mb-2 text-xs uppercase text-slate-500 font-semibold">
               Upgrades
             </div>
@@ -485,6 +550,68 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
             </div>
           </div>
         )}
+
+        {/* Product Links Dropdown */}
+        {unit.product?.storeLinksPhysical?.length ||
+        unit.product?.storeLinksDigital?.length ? (
+          <div className="absolute bottom-2 right-2 group">
+            <button className="text-slate-500 hover:text-sky-400 transition-colors p-1 rounded hover:bg-white/5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="1" />
+                <circle cx="19" cy="12" r="1" />
+                <circle cx="5" cy="12" r="1" />
+              </svg>
+            </button>
+            <div className="absolute bottom-full right-0 mb-1 hidden group-hover:block w-48 bg-slate-900 border border-slate-700 shadow-xl rounded overflow-hidden z-20">
+              {unit.product.storeLinksPhysical?.length ? (
+                <>
+                  <div className="px-3 py-1 bg-slate-800 text-[10px] uppercase text-slate-400 font-bold">
+                    Physical Models
+                  </div>
+                  {unit.product.storeLinksPhysical.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="block px-3 py-2 text-xs text-sky-400 hover:bg-slate-800 hover:text-sky-300 truncate"
+                    >
+                      Store Link {i + 1}
+                    </a>
+                  ))}
+                </>
+              ) : null}
+              {unit.product.storeLinksDigital?.length ? (
+                <>
+                  <div className="px-3 py-1 bg-slate-800 text-[10px] uppercase text-slate-400 font-bold">
+                    Digital / STL
+                  </div>
+                  {unit.product.storeLinksDigital.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="block px-3 py-2 text-xs text-lime-400 hover:bg-slate-800 hover:text-lime-300 truncate"
+                    >
+                      STL Link {i + 1}
+                    </a>
+                  ))}
+                </>
+              ) : null}
+            </div>
+          </div>
+        ) : null}
       </div>
     );
   };
@@ -518,24 +645,32 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
     };
 
     // Weapons Diff Logic
-    const formatWDetails = (w: any) =>
-      `(${w.range ? w.range + '"' : "Melee"}, A${w.attacks}${
-        w.specialRules?.length > 0
-          ? `, ${w.specialRules
-              .map((r: any) => (r.rating ? `${r.name}(${r.rating})` : r.name))
-              .join(", ")}`
-          : ""
-      })`;
-
     const serializeW = (w: any) =>
       JSON.stringify({
         name: w.name,
         count: w.count || 1,
-        details: formatWDetails(w),
+        range: w.range,
+        attacks: w.attacks,
+        specialRules: w.specialRules || [],
+        isItem: false,
       });
 
-    const wA = uA.weapons.map(serializeW);
-    const wB = uB.weapons.map(serializeW);
+    const serializeItem = (item: any) =>
+      JSON.stringify({
+        name: item.name,
+        count: item.count || 1,
+        specialRules: item.content || [],
+        isItem: true,
+      });
+
+    const wA = [
+      ...uA.weapons.map(serializeW),
+      ...(uA.items || []).map(serializeItem),
+    ];
+    const wB = [
+      ...uB.weapons.map(serializeW),
+      ...(uB.items || []).map(serializeItem),
+    ];
     const wDiffs = diffArrays(wA, wB);
 
     // Rules Diff Logic
@@ -551,14 +686,66 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
     const upgradeDetailsA = getUpgradeDetails(uA, dataA);
     const upgradeDetailsB = getUpgradeDetails(uB, dataB);
 
+    const renderDiffRule = (ruleStr: string) => {
+      const match = ruleStr.match(/^(.+?)(?:\((.+?)\))?$/);
+      if (!match) return <span>{ruleStr}</span>;
+      const name = match[1];
+      const rating = match[2];
+      return <RuleText rule={{ name, rating }} specialRulesDict={rulesDict} />;
+    };
+
     return (
-      <div className="glass-card h-full p-2 relative border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)] overflow-hidden">
+      <div className="glass-card h-full p-2 relative border border-sky-500/30 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
         {/* Top Accent Line */}
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 to-indigo-500"></div>
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-400 to-indigo-500 rounded-t-xl"></div>
 
         {/* Header */}
         <div className="flex justify-between items-start mb-4">
-          <h4 className="m-0 text-xl font-bold text-white">{uB.name}</h4>
+          <div>
+            <h4 className="m-0 text-xl font-bold text-white">
+              {uA.name !== uB.name ? (
+                <span className="text-red-400 line-through mr-2 opacity-70">
+                  {uA.name}
+                </span>
+              ) : null}
+              {uB.name}{" "}
+              {uB.genericName ? (
+                <span className="text-sm text-slate-400 font-normal">
+                  [{uB.genericName}]
+                </span>
+              ) : (
+                ""
+              )}
+            </h4>
+            {(uA.size || uA.bases || uB.size || uB.bases) && (
+              <div className="text-xs text-slate-500 mt-1 flex gap-3">
+                {(uA.size || uB.size) && (
+                  <span>
+                    Size:{" "}
+                    {uA.size === uB.size ? (
+                      uB.size
+                    ) : (
+                      <span className="text-sky-400 font-bold">
+                        {uA.size || 0} &rarr; {uB.size || 0}
+                      </span>
+                    )}
+                  </span>
+                )}
+                {(uA.bases || uB.bases) && (
+                  <span>
+                    Base:{" "}
+                    {JSON.stringify(uA.bases) === JSON.stringify(uB.bases) ? (
+                      formatBases(uB.bases)
+                    ) : (
+                      <span className="text-sky-400 font-bold">
+                        {formatBases(uA.bases)} &rarr; {formatBases(uB.bases)}
+                      </span>
+                    )}
+                  </span>
+                )}
+              </div>
+            )}
+          </div>
           <span className="unit-cost text-white" style={costStyle}>
             {costText}
           </span>
@@ -591,9 +778,22 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
           </div>
           {wDiffs.map((part, partIdx) => {
             return part.value.map((wJson, itemIdx) => {
-              const { name, count, details } = JSON.parse(wJson);
+              const { name, count, range, attacks, specialRules, isItem } =
+                JSON.parse(wJson);
               const countStr = count > 1 ? `${count}x ` : "";
               const key = `${partIdx}-${itemIdx}`;
+
+              const detailsEl = isItem ? (
+                specialRules?.length > 0 && (
+                  <RuleList rules={specialRules} specialRulesDict={rulesDict} />
+                )
+              ) : (
+                <>
+                  {range ? `${range}"` : "Melee"}, A{attacks}
+                  {specialRules?.length > 0 && ", "}
+                  <RuleList rules={specialRules} specialRulesDict={rulesDict} />
+                </>
+              );
 
               if (part.added) {
                 return (
@@ -605,7 +805,7 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
                       + {countStr}
                       {name}
                     </span>{" "}
-                    <span className="text-lime-400/80">{details}</span>
+                    <span className="text-lime-400/80">({detailsEl})</span>
                   </div>
                 );
               }
@@ -619,18 +819,20 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
                       - {countStr}
                       {name}
                     </span>{" "}
-                    <span className="opacity-60">{details}</span>
+                    <span className="opacity-60">({detailsEl})</span>
                   </div>
                 );
               }
               // Unchanged
               return (
                 <div key={key} className="text-sm mb-1">
-                  <span className="text-slate-100 font-medium">
+                  <span
+                    className={`font-medium`}
+                  >
                     {countStr}
                     {name}
                   </span>
-                  <span className="text-slate-400"> {details}</span>
+                  <span className="text-slate-400"> ({detailsEl})</span>
                 </div>
               );
             });
@@ -654,7 +856,7 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
                 if (part.added) {
                   return (
                     <span key={key} className="text-lime-400 font-bold">
-                      + {ruleName}
+                      + {renderDiffRule(ruleName)}
                       {suffix}
                     </span>
                   );
@@ -665,14 +867,14 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
                       key={key}
                       className="text-red-500 line-through opacity-80"
                     >
-                      - {ruleName}
+                      - {renderDiffRule(ruleName)}
                       {suffix}
                     </span>
                   );
                 }
                 return (
                   <span key={key} className="text-slate-400">
-                    {ruleName}
+                    {renderDiffRule(ruleName)}
                     {suffix}
                   </span>
                 );
@@ -723,7 +925,9 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
                       // Robust matching:
                       // 1. Try exact UID or ID match
                       let sectionA = pkgA?.sections.find(
-                        (s: any) => (s.uid && sectionB.uid && s.uid === sectionB.uid) || (s.id && sectionB.id && s.id === sectionB.id),
+                        (s: any) =>
+                          (s.uid && sectionB.uid && s.uid === sectionB.uid) ||
+                          (s.id && sectionB.id && s.id === sectionB.id),
                       );
 
                       const getSid = (s: any) => s.uid || s.id;
@@ -1082,21 +1286,44 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
     );
   };
 
+  const formatArmyGenericName = (name: string, gn?: string) => {
+    if (!gn) return "";
+    const parts = gn
+      .split("||")
+      .map((p) => p.trim())
+      .filter(Boolean);
+    return [...new Set(parts)].filter((p) => p !== name).join(" / ");
+  };
+
   return (
     <div className="animate-fade-in pb-16">
       <div className="grid grid-cols-3 gap-6 mb-4 px-4 sticky top-0 bg-slate-950/80 backdrop-blur-md z-10 py-4 border-b border-white/5">
         <h3 className="text-center text-slate-400 font-semibold text-xl">
           {dataA.name}{" "}
-          <span className="text-sm opacity-50 block">
+          {formatArmyGenericName(dataA.name, dataA.genericName) ? (
+            <span className="opacity-70 text-sm">
+              [{formatArmyGenericName(dataA.name, dataA.genericName)}]
+            </span>
+          ) : (
+            ""
+          )}
+          <span className="text-sm opacity-50 block mt-1">
             {versions?.a || "Version A"}
           </span>
         </h3>
-        <h3 className="text-center text-sky-400 font-bold tracking-widest text-xl">
+        <h3 className="text-center text-sky-400 font-bold tracking-widest text-xl flex items-center justify-center">
           VS
         </h3>
         <h3 className="text-center text-slate-400 font-semibold text-xl">
           {dataB.name}{" "}
-          <span className="text-sm opacity-50 block">
+          {formatArmyGenericName(dataB.name, dataB.genericName) ? (
+            <span className="opacity-70 text-sm">
+              [{formatArmyGenericName(dataB.name, dataB.genericName)}]
+            </span>
+          ) : (
+            ""
+          )}
+          <span className="text-sm opacity-50 block mt-1">
             {versions?.b || "Version B"}
           </span>
         </h3>
@@ -1196,13 +1423,15 @@ export default function DiffView({ dataA, dataB, versions }: DiffViewProps) {
                   </div>
                 )}
                 {row.status === "NEW" && (
-                  <div className="glass-card h-full flex items-center justify-center text-lime-400 font-bold border border-lime-400/50 bg-lime-400/5 tracking-wider">
-                    NEW UNIT ADDED
+                  <div className="h-full border-2 border-lime-400/50 bg-lime-400/5 shadow-[0_0_15px_rgba(163,230,53,0.1)] rounded-xl relative">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-lime-400 z-10 rounded-t-xl"></div>
+                    {renderUnitCard(row.uB, dataB, "Ver B")}
                   </div>
                 )}
                 {row.status === "DELETED" && (
-                  <div className="glass-card h-full flex items-center justify-center text-red-500 font-bold border border-red-500/50 bg-red-500/5 tracking-wider">
-                    UNIT REMOVED
+                  <div className="h-full border-2 border-red-500/50 bg-red-500/5 shadow-[0_0_15px_rgba(239,68,68,0.1)] rounded-xl relative grayscale opacity-75">
+                    <div className="absolute top-0 left-0 w-full h-1 bg-red-500 z-10 rounded-t-xl"></div>
+                    {renderUnitCard(row.uA, dataA, "Ver A")}
                   </div>
                 )}
                 {row.status === "CHANGED" &&

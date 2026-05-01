@@ -52,10 +52,26 @@ systems.forEach((system) => {
     // We should replicate that structure or simplified.
     // Let's replicate it so the frontend needs fewer changes.
     const files = getFiles(versionPath);
-    const armies = files.map((file) => ({
-      id: file,
-      name: file.replace(".json", ""),
-    }));
+    const armies = files.map((file) => {
+      const filePath = path.join(versionPath, file);
+      const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+      
+      let armyName = data.name || file.replace(".json", "");
+      // Remove generic ID from the name if present, e.g. "Alien Hives (w7qor7b2kuifcyvk)" -> "Alien Hives"
+      armyName = armyName.replace(/\s*\([^)]*\)$/, "");
+
+      let genericName = "";
+      if (data.genericName) {
+        const parts = data.genericName.split("||").map(p => p.trim()).filter(Boolean);
+        genericName = [...new Set(parts)].filter(p => p !== armyName).join(" / ");
+      }
+
+      return {
+        id: file,
+        name: armyName,
+        genericName: genericName,
+      };
+    });
 
     fs.writeFileSync(
       path.join(versionPath, "index.json"),

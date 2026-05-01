@@ -17,8 +17,11 @@ export default function ComparisonPage() {
   // Data state
   const [systems, setSystems] = useState<string[]>([]);
   const [versions, setVersions] = useState<string[]>([]);
-  const [armiesA, setArmiesA] = useState<{ id: string; name: string }[]>([]);
-  const [armiesB, setArmiesB] = useState<{ id: string; name: string }[]>([]);
+  const [armiesA, setArmiesA] = useState<{ id: string; name: string, genericName?: string }[]>(
+    [],
+  );
+  const [armiesB, setArmiesB] = useState<any[]>([]);
+  const [latestArmies, setLatestArmies] = useState<{ id: string; name: string, genericName?: string }[]>([]);
   const [armyDataA, setArmyDataA] = useState<any>(null);
   const [armyDataB, setArmyDataB] = useState<any>(null);
 
@@ -83,7 +86,7 @@ export default function ComparisonPage() {
   // Fetch Armies when Version A changes (Base list)
   useEffect(() => {
     if (!selectedSystem || !versionA) return;
-    fetch(`${DATA_API}/${selectedSystem}/${versionA}/index.json`) // Static index
+    fetch(`${DATA_API}/${selectedSystem}/${versionA}/index.json?t=${Date.now()}`) // Static index
       .then((res) => res.json())
       .then((data) => {
         setArmiesA(data);
@@ -96,10 +99,19 @@ export default function ComparisonPage() {
   // Fetch Armies for B just to have them matched
   useEffect(() => {
     if (!selectedSystem || !versionB) return;
-    fetch(`${DATA_API}/${selectedSystem}/${versionB}/index.json`) // Static index
+    fetch(`${DATA_API}/${selectedSystem}/${versionB}/index.json?t=${Date.now()}`) // Static index
       .then((res) => res.json())
       .then((data) => setArmiesB(data));
   }, [selectedSystem, versionB]);
+
+  // Fetch Latest Armies for generic names
+  useEffect(() => {
+    if (!selectedSystem || versions.length === 0) return;
+    const latestVersion = versions[0];
+    fetch(`${DATA_API}/${selectedSystem}/${latestVersion}/index.json?t=${Date.now()}`)
+      .then((res) => res.json())
+      .then((data) => setLatestArmies(data));
+  }, [selectedSystem, versions]);
 
   // Fetch Data when selections change
   useEffect(() => {
@@ -223,11 +235,19 @@ export default function ComparisonPage() {
               onChange={(e) => updateParams({ army: e.target.value })}
             >
               <option value="">Select Army...</option>
-              {armiesA.map((a) => (
-                <option key={a.id} value={a.id}>
-                  {a.name}
-                </option>
-              ))}
+              {armiesA.map((a: any) => {
+                const latest = latestArmies.find(l => l.id === a.id);
+                let genericName = latest?.genericName || a.genericName;
+                if (genericName) {
+                  const parts = genericName.includes("||") ? genericName.split("||") : genericName.split("/");
+                  genericName = [...new Set(parts.map((p: string) => p.trim()).filter(Boolean))].filter(p => p !== a.name).join(" / ");
+                }
+                return (
+                  <option key={a.id} value={a.id}>
+                    {a.name} {genericName ? `[${genericName}]` : ""}
+                  </option>
+                );
+              })}
             </select>
           </div>
         </div>
