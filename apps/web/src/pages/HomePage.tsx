@@ -1,4 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import { GAME_SYSTEMS } from "@/features/explorer";
+
+const SYSTEM_ICONS: Record<number, string> = {
+  2: "⚔️",
+  3: "🔫",
+  4: "🏰",
+  5: "🗡️",
+};
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -15,9 +23,9 @@ export default function HomePage() {
         <p className="text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
           Visualize unit and upgrade changes between patch versions with precision. Ensure your lists are up-to-date.
         </p>
-        
+
         <div className="pt-8">
-          <button 
+          <button
             onClick={() => navigate('/compare')}
             className="px-10 py-5 bg-sky-500 hover:bg-sky-400 text-white font-bold text-lg rounded-2xl shadow-[0_0_40px_rgba(56,189,248,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(56,189,248,0.5)]"
           >
@@ -25,14 +33,35 @@ export default function HomePage() {
           </button>
         </div>
 
+        {/* System category links */}
+        <div className="pt-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-slate-500 mb-4">
+            Browse Army Books by Game System
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+            {GAME_SYSTEMS.map((sys) => (
+              <button
+                key={sys.id}
+                onClick={() => navigate(`/army/${sys.id}`)}
+                className="group glass-card p-4 flex flex-col items-center gap-2 hover:border-sky-500/40 hover:shadow-[0_0_20px_rgba(56,189,248,0.12)] transition-all duration-300"
+              >
+                <span className="text-2xl">{SYSTEM_ICONS[sys.id] ?? "🎲"}</span>
+                <span className="text-xs font-semibold text-slate-300 group-hover:text-sky-300 transition-colors leading-tight text-center">
+                  {sys.name}
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+
         <div className="mt-20 p-8 glass-card border border-white/5 rounded-3xl bg-slate-900/50 backdrop-blur-md">
           <h2 className="text-2xl font-bold text-slate-200 mb-3">We need your feedback!</h2>
           <p className="text-slate-400 mb-6 text-sm max-w-lg mx-auto">
             Notice a missing unit? Found a bug in the diff calculation? Let us know so we can improve the tool for the community.
           </p>
-          <a 
-            href="https://github.com/joe-lloyd/army-forge-scraper/issues" 
-            target="_blank" 
+          <a
+            href="https://github.com/joe-lloyd/army-forge-scraper/issues"
+            target="_blank"
             rel="noreferrer"
             className="inline-flex items-center justify-center gap-3 px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-xl transition-colors font-semibold"
           >
@@ -46,3 +75,4 @@ export default function HomePage() {
     </div>
   );
 }
+

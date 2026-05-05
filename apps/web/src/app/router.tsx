@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ComparisonPage from "@/pages/ComparisonPage";
 import HomePage from "@/pages/HomePage";
 import ArmyDetailPage from "@/pages/ArmyDetailPage";
+import SystemCategoryPage from "@/pages/SystemCategoryPage";
 import { Footer } from "@/components/layout/Footer";
 
 export function AppRouter() {
@@ -12,6 +13,7 @@ export function AppRouter() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/compare" element={<ComparisonPage />} />
+            <Route path="/army/:systemId" element={<SystemCategoryPage />} />
             <Route path="/army/:systemId/:armyId" element={<ArmyDetailPage />} />
           </Routes>
         </main>

@@ -27,8 +27,16 @@ async function fetchArmyDetail(armyId, gameSystemId) {
   return response.data;
 }
 
+const args = process.argv.slice(2);
+const force = args.includes("--force");
+
 async function scrape() {
   const dataRootDir = path.join(__dirname, "..", "..", "..", "data");
+  const updates = [];
+
+  if (force) {
+    console.log("Force mode enabled: All armies will be re-scraped.");
+  }
 
   for (const system of GAME_SYSTEMS) {
     console.log(
@@ -49,21 +57,39 @@ async function scrape() {
 
       for (const armySummary of armyList) {
         try {
-          console.log(`Fetching ${armySummary.name} (${armySummary.uid})...`);
-          const data = await fetchArmyDetail(armySummary.uid, system.id);
-
-          const version = data.versionString || "unknown";
+          const version = armySummary.versionString || "unknown";
           const outputDir = path.join(dataRootDir, system.slug, version);
-          await fs.ensureDir(outputDir);
-
-          const fileName = `${data.name} (${data.uid}).json`.replace(
+          const fileName = `${armySummary.name} (${armySummary.uid}).json`.replace(
             /\//g,
             "-",
           );
           const filePath = path.join(outputDir, fileName);
 
+          // Check if we already have this version up to date
+          if (!force && (await fs.pathExists(filePath))) {
+            const localData = await fs.readJson(filePath);
+            if (localData.modifiedAt === armySummary.modifiedAt) {
+              console.log(
+                `Skipping ${armySummary.name} (${armySummary.uid}) - already up to date (${armySummary.modifiedAt})`,
+              );
+              continue;
+            }
+          }
+
+          console.log(`Fetching ${armySummary.name} (${armySummary.uid})...`);
+          const data = await fetchArmyDetail(armySummary.uid, system.id);
+
+          await fs.ensureDir(outputDir);
           await fs.writeJson(filePath, data, { spaces: 2 });
           console.log(`Saved to ${filePath}`);
+          
+          updates.push({
+            name: armySummary.name,
+            uid: armySummary.uid,
+            system: system.slug,
+            version: version,
+            modifiedAt: armySummary.modifiedAt
+          });
 
           // Respectful delay
           await new Promise((resolve) => setTimeout(resolve, 500));
@@ -77,6 +103,18 @@ async function scrape() {
     } catch (error) {
       console.error(`Failed to scrape ${system.slug}:`, error.message);
     }
+  }
+
+  if (updates.length > 0) {
+    const updatePath = path.join(__dirname, "..", "..", "..", "updates.md");
+    let content = `# OPR Data Updates Detected\n\nFound ${updates.length} updated army books.\n\n`;
+    content += "| Game System | Army Name | Version | Modified At |\n";
+    content += "| --- | --- | --- | --- |\n";
+    updates.forEach(u => {
+      content += `| ${u.system} | ${u.name} | ${u.version} | ${u.modifiedAt} |\n`;
+    });
+    await fs.writeFile(updatePath, content);
+    console.log(`\nUpdates summary written to ${updatePath}`);
   }
 
   console.log("\nScraping complete.");

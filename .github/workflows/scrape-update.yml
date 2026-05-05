@@ -1,0 +1,39 @@
+name: Monitor OPR Updates
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run Smart Scraper
+        run: pnpm scraper
+
+      - name: Create Issue if Updates Found
+        if: hashFiles('updates.md') != ''
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: "🚀 OPR Data Updates Available"
+          content-filepath: ./updates.md
+          labels: |
+            data-update
+            automated
