@@ -15,7 +15,7 @@
   "units": [
     {
       "id": "igyAK4c",
-      "cost": 205,
+      "cost": 200,
       "name": "Frog-Mage",
       "size": 1,
       "bases": {
@@ -96,8 +96,7 @@
       ],
       "upgrades": [
         "A1",
-        "CJhthuW4",
-        "8sTiZwjn"
+        "CJhthuW4"
       ],
       "genericName": "Psychic Frog Leader",
       "hasCustomRule": false,
@@ -201,8 +200,7 @@
       ],
       "upgrades": [
         "D1",
-        "dMe0HVxL",
-        "8sTiZwjn"
+        "dMe0HVxL"
       ],
       "genericName": "Great Croc Leader",
       "hasCustomRule": false,
@@ -276,8 +274,7 @@
       ],
       "upgrades": [
         "B1",
-        "jnsJnyP5",
-        "8sTiZwjn"
+        "jnsJnyP5"
       ],
       "genericName": "Saurian Leader",
       "hasCustomRule": false,
@@ -359,8 +356,7 @@
       ],
       "upgrades": [
         "C1",
-        "X0PEpsW6",
-        "8sTiZwjn"
+        "X0PEpsW6"
       ],
       "genericName": "Gecko Leader",
       "hasCustomRule": false,
@@ -1941,7 +1937,7 @@
     },
     {
       "id": "ozQztyW",
-      "cost": 155,
+      "cost": 150,
       "name": "Tehaxi",
       "size": 1,
       "type": 1,
@@ -2048,7 +2044,7 @@
       "hint": "Frog-Mage",
       "sections": [
         {
-          "id": "9ipfufs",
+          "id": "CFicxWH",
           "uid": "gggsShU",
           "label": "Replace Magic Shock",
           "options": [
@@ -2141,10 +2137,42 @@
           ]
         },
         {
-          "id": "4-xZ8rE",
+          "id": "UQRlVFV",
           "uid": "ttfyh",
           "label": "Upgrade with one",
           "options": [
+            {
+              "uid": "o2tzANFw9m",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "igyAK4c"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "s-7mS07",
+                  "name": "Sacred Destiny",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sacred Destiny (Protection Feat)",
+                  "content": [
+                    {
+                      "id": "TU7fkKrcAvop",
+                      "name": "Protection Feat",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sacred Destiny (Protection Feat)",
+              "parentSectionId": "ttfyh",
+              "parentPackageUid": "Y8UV9g5D",
+              "parentSectionUid": "bbXr-",
+              "id": "o2tzANFw9m"
+            },
             {
               "uid": "EKuk9",
               "type": "ArmyBookUpgradeOption",
@@ -2179,7 +2207,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 85,
+                  "cost": 80,
                   "unitId": "igyAK4c"
                 }
               ],
@@ -2238,7 +2266,7 @@
       "hint": "Saurian Veteran",
       "sections": [
         {
-          "id": "moZhNmf",
+          "id": "2U-H3w3",
           "uid": "IU-NuTc",
           "label": "Replace Veteran Pistol",
           "options": [
@@ -2315,7 +2343,7 @@
           ]
         },
         {
-          "id": "ISB1OjU",
+          "id": "ayQAh4z",
           "uid": "swAt6cr",
           "label": "Replace CCW",
           "options": [
@@ -2439,7 +2467,7 @@
           ]
         },
         {
-          "id": "CghmJ-k",
+          "id": "IRbjsZF",
           "uid": "pUO9oa0",
           "label": "Upgrade with one",
           "options": [
@@ -2471,6 +2499,38 @@
               "label": "Hardened Elite (Fortified)",
               "parentSectionId": "pUO9oa0",
               "id": "Mfobs"
+            },
+            {
+              "uid": "dI-MuUuGvb",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 5,
+                  "unitId": "RpQgbmd"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "2Zav6TU",
+                  "name": "Sacred Destiny",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sacred Destiny (Protection Feat)",
+                  "content": [
+                    {
+                      "id": "TU7fkKrcAvop",
+                      "name": "Protection Feat",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sacred Destiny (Protection Feat)",
+              "parentSectionId": "pUO9oa0",
+              "parentPackageUid": "Ef6fTH6m",
+              "parentSectionUid": "bbXr-",
+              "id": "dI-MuUuGvb"
             },
             {
               "uid": "c8rhK",
@@ -2612,7 +2672,7 @@
       "hint": "Gecko Champion",
       "sections": [
         {
-          "id": "ibpSnvb",
+          "id": "0yKR4_6",
           "uid": "xDgt3Qe",
           "label": "Replace Champion Burst Gun and CCW",
           "options": [
@@ -2730,7 +2790,7 @@
           ]
         },
         {
-          "id": "4cBZm-o",
+          "id": "bv3wwJI",
           "uid": "dxvgKq9",
           "label": "Replace Champion Burst Gun",
           "options": [
@@ -2852,7 +2912,7 @@
           ]
         },
         {
-          "id": "GVrqOJl",
+          "id": "72WJNlI",
           "uid": "DNikFnW",
           "label": "Replace CCW",
           "options": [
@@ -2941,10 +3001,42 @@
           ]
         },
         {
-          "id": "BV5ubZo",
+          "id": "X22hpdh",
           "uid": "nckeinr",
           "label": "Upgrade with one",
           "options": [
+            {
+              "uid": "GqwZ9_Axnx",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 5,
+                  "unitId": "X1af9wy"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "tfX3G_u",
+                  "name": "Sacred Destiny",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sacred Destiny (Protection Feat)",
+                  "content": [
+                    {
+                      "id": "TU7fkKrcAvop",
+                      "name": "Protection Feat",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sacred Destiny (Protection Feat)",
+              "parentSectionId": "nckeinr",
+              "parentPackageUid": "inv9qUvf",
+              "parentSectionUid": "bbXr-",
+              "id": "GqwZ9_Axnx"
+            },
             {
               "uid": "R3hf3SmgqC",
               "type": "ArmyBookUpgradeOption",
@@ -3105,7 +3197,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 55,
+                  "cost": 60,
                   "unitId": "X1af9wy"
                 }
               ],
@@ -3266,7 +3358,7 @@
       "hint": "Gator Veteran",
       "sections": [
         {
-          "id": "Z70x4bF",
+          "id": "yPghsDg",
           "uid": "7KNMY",
           "label": "Replace any Heavy Mace",
           "options": [
@@ -3388,7 +3480,7 @@
           ]
         },
         {
-          "id": "jGgXgXN",
+          "id": "AwbwyGX",
           "uid": "7MJH_",
           "label": "Upgrade with",
           "options": [
@@ -3440,6 +3532,48 @@
           "parentPackageUid": "D1",
           "type": "ArmyBookUpgradeSection",
           "variant": "upgrade"
+        },
+        {
+          "id": "IwP7qgh",
+          "uid": "Wv_FZ_GS",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "qEWMz_J4",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "d5xE-v0"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sacred Destiny",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sacred Destiny (Protection Feat)",
+                  "content": [
+                    {
+                      "id": "TU7fkKrcAvop",
+                      "name": "Protection Feat",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sacred Destiny (Protection Feat)",
+              "parentSectionId": "Wv_FZ_GS",
+              "parentPackageUid": "3G-vfxfF",
+              "parentSectionUid": "bbXr-",
+              "id": "qEWMz_J4"
+            }
+          ],
+          "isLowPrio": false,
+          "parentPackageUid": "3G-vfxfF",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
         }
       ],
       "calcErrors": false
@@ -3449,7 +3583,7 @@
       "hint": "Saurian Warriors",
       "sections": [
         {
-          "id": "u18hqIg",
+          "id": "nCTVb5a",
           "uid": "BPcXFyf",
           "label": "Replace all Pistols and CCWs",
           "options": [
@@ -3508,7 +3642,7 @@
           ]
         },
         {
-          "id": "mUWroOM",
+          "id": "wEHTyB1",
           "uid": "Ssgra6M",
           "label": "Replace one Pistol",
           "options": [
@@ -3690,7 +3824,7 @@
       "hint": "Saurian Guardians",
       "sections": [
         {
-          "id": "nvPTSch",
+          "id": "vA-deQL",
           "uid": "8Op_oL2",
           "label": "Replace all Hammers",
           "options": [
@@ -3754,7 +3888,7 @@
           ]
         },
         {
-          "id": "UHmju5k",
+          "id": "EdzSC1B",
           "uid": "-uIqtdB",
           "label": "Replace one Hammer",
           "options": [
@@ -3812,7 +3946,7 @@
           ]
         },
         {
-          "id": "L6heuRW",
+          "id": "8i3kX-F",
           "uid": "I5dh_",
           "label": "Upgrade all models with",
           "options": [
@@ -3862,7 +3996,7 @@
       "hint": "Raptor Riders",
       "sections": [
         {
-          "id": "ooPJef_",
+          "id": "QCCkExN",
           "uid": "m9oeMXT",
           "label": "Replace any Pistol",
           "options": [
@@ -3913,7 +4047,7 @@
           ]
         },
         {
-          "id": "DMC5Pwo",
+          "id": "dBQKrI8",
           "uid": "hGkUEh-",
           "label": "Replace any CCW",
           "options": [
@@ -4049,7 +4183,7 @@
       "hint": "Gators",
       "sections": [
         {
-          "id": "yXrVfk2",
+          "id": "8TMaade",
           "uid": "6vJTRlk",
           "label": "Replace any Bludgeon",
           "options": [
@@ -4174,7 +4308,7 @@
           ]
         },
         {
-          "id": "Gw2CJWb",
+          "id": "GbNlnBa",
           "uid": "zNDQCVf",
           "label": "Upgrade any model with",
           "options": [
@@ -4239,7 +4373,7 @@
       "hint": "Triceratops",
       "sections": [
         {
-          "id": "bvXTyOM",
+          "id": "qhd1rNj",
           "uid": "TvDK5en",
           "label": "Replace Carrier Platform",
           "options": [
@@ -4425,7 +4559,7 @@
           ]
         },
         {
-          "id": "q9gM5tF",
+          "id": "J7nuc2m",
           "uid": "OVa-0",
           "label": "Upgrade with",
           "options": [
@@ -4472,7 +4606,7 @@
       "hint": "Spinosaurus",
       "sections": [
         {
-          "id": "myrNrja",
+          "id": "5x-VOvp",
           "uid": "2gAOMe0",
           "label": "Upgrade with any",
           "options": [
@@ -4554,7 +4688,7 @@
       "hint": "Ankylosaurus",
       "sections": [
         {
-          "id": "qvWJGqQ",
+          "id": "RogXRah",
           "uid": "Y41yDFp",
           "label": "Replace Twin Beam Cannon",
           "options": [
@@ -4608,7 +4742,7 @@
           ]
         },
         {
-          "id": "sUmZG6Z",
+          "id": "bmrGnvi",
           "uid": "WI5nTAI6A7",
           "label": "Upgrade with any",
           "options": [
@@ -4646,7 +4780,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 30,
                   "unitId": "fyqjUBx"
                 }
               ],
@@ -4688,7 +4822,7 @@
       "hint": "Dread Titan",
       "sections": [
         {
-          "id": "iV7IWDX",
+          "id": "l-xA-ni",
           "uid": "zXvcvFw",
           "label": "Replace Dread Gator",
           "options": [
@@ -4882,7 +5016,7 @@
       "hint": "Support Lizards",
       "sections": [
         {
-          "id": "AJ8SMm6",
+          "id": "QBOygaL",
           "uid": "fY4f7",
           "label": "Upgrade with one",
           "options": [
@@ -4962,7 +5096,7 @@
           }
         },
         {
-          "id": "twA-equ",
+          "id": "wBEcL6M",
           "uid": "68q7QcK7",
           "label": "Upgrade with",
           "options": [
@@ -4971,11 +5105,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 30,
                   "unitId": "G9Cu-8-"
                 },
                 {
-                  "cost": 35,
+                  "cost": 30,
                   "unitId": "Q6xnsW8"
                 }
               ],
@@ -5013,7 +5147,7 @@
       "hint": "Chameleons",
       "sections": [
         {
-          "id": "1baj6Aj",
+          "id": "sxfFY3k",
           "uid": "0HddzH8Pqz",
           "label": "Replace all Burst Guns",
           "options": [
@@ -5066,7 +5200,7 @@
           ]
         },
         {
-          "id": "6y8gNgp",
+          "id": "GnYZmAW",
           "uid": "OPqJAnyp5n",
           "label": "Upgrade one model with",
           "options": [
@@ -5117,7 +5251,7 @@
       "hint": "Deinonychus Riders",
       "sections": [
         {
-          "id": "WpHzFYR",
+          "id": "cd-_p60",
           "uid": "1Jbhh",
           "label": "Replace all Shock Lances",
           "options": [
@@ -5185,7 +5319,7 @@
       "hint": "Gecko Cohort",
       "sections": [
         {
-          "id": "Lc4a9Dr",
+          "id": "kfIuDtt",
           "uid": "Xyi3I",
           "label": "Replace all Energy Shields",
           "options": [
@@ -5230,7 +5364,7 @@
           ]
         },
         {
-          "id": "UyukWy3",
+          "id": "AywfGm1",
           "uid": "8H3-y",
           "label": "Upgrade all models with",
           "options": [
@@ -5283,7 +5417,7 @@
       "hint": "Sacred Destiny",
       "sections": [
         {
-          "id": "RdSJsTn",
+          "id": "Xw2KKCj",
           "uid": "bbXr-",
           "label": "Upgrade all models with",
           "options": [
@@ -5348,7 +5482,7 @@
       "hint": "Ripjawdactyl Riders",
       "sections": [
         {
-          "id": "XGqQ--C",
+          "id": "2uKmDgU",
           "uid": "brZdxynR",
           "label": "Replace all Energy Shields and CCWS",
           "options": [
@@ -5447,7 +5581,7 @@
           ]
         },
         {
-          "id": "g9cxOko",
+          "id": "fpuYTjf",
           "uid": "8fJhNM1YVP",
           "label": "Upgrade one model with",
           "options": [
@@ -5499,7 +5633,7 @@
       "hint": "Pterodactyl Riders",
       "sections": [
         {
-          "id": "0AptFzA",
+          "id": "Etz7vEM",
           "uid": "6yz98eov",
           "label": "Replace all Energy Shields and CCWS",
           "options": [
@@ -5598,7 +5732,7 @@
           ]
         },
         {
-          "id": "PHaRZ4J",
+          "id": "vWA6Bv3",
           "uid": "22PoQ2Vhez",
           "label": "Upgrade all models with",
           "options": [
@@ -5669,7 +5803,7 @@
       "hint": "Specialists - Gecko",
       "sections": [
         {
-          "id": "wREskMx",
+          "id": "AiFxD9O",
           "uid": "ZjT4i3az",
           "label": "Upgrade with one",
           "options": [
@@ -5738,7 +5872,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 30,
                   "unitId": "X1af9wy"
                 }
               ],
@@ -5851,7 +5985,7 @@
       "hint": "Specialists - Gator",
       "sections": [
         {
-          "id": "AjqCoHk",
+          "id": "r_twRLf",
           "uid": "XPqzbAZ_",
           "label": "Upgrade with one",
           "options": [
@@ -5996,7 +6130,7 @@
       "hint": "Specialists - Frog-Mage",
       "sections": [
         {
-          "id": "ey3QnF8",
+          "id": "QUto1kO",
           "uid": "0aUG-hDK",
           "label": "Upgrade with one",
           "options": [
@@ -6172,7 +6306,7 @@
       "hint": "Specialists - Saurian",
       "sections": [
         {
-          "id": "IClUcCe",
+          "id": "FxNAu3E",
           "uid": "MqEj0RAg",
           "label": "Upgrade with one",
           "options": [
@@ -6309,67 +6443,6 @@
             "type": "exactly",
             "value": 1
           }
-        }
-      ],
-      "calcErrors": false
-    },
-    {
-      "uid": "8sTiZwjn",
-      "hint": "Sacred Destiny (Heroes)",
-      "sections": [
-        {
-          "id": "PklzRJH",
-          "uid": "YWXPc_DF",
-          "label": "Upgrade with",
-          "options": [
-            {
-              "uid": "y26VscY0",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 10,
-                  "unitId": "igyAK4c"
-                },
-                {
-                  "cost": 10,
-                  "unitId": "d5xE-v0"
-                },
-                {
-                  "cost": 5,
-                  "unitId": "RpQgbmd"
-                },
-                {
-                  "cost": 5,
-                  "unitId": "X1af9wy"
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Sacred Destiny",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Sacred Destiny (Protection Feat)",
-                  "content": [
-                    {
-                      "id": "TU7fkKrcAvop",
-                      "name": "Protection Feat",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Sacred Destiny (Protection Feat)",
-              "parentSectionId": "YWXPc_DF",
-              "parentPackageUid": "MIy1K4u1",
-              "parentSectionUid": "bbXr-",
-              "id": "y26VscY0"
-            }
-          ],
-          "isLowPrio": true,
-          "parentPackageUid": "MIy1K4u1",
-          "type": "ArmyBookUpgradeSection",
-          "variant": "upgrade"
         }
       ],
       "calcErrors": false
@@ -6940,8 +7013,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:22:26.879Z",
-  "editedAt": "2026-04-28T09:29:13.911Z",
+  "modifiedAt": "2026-05-05T08:02:57.243Z",
+  "editedAt": "2026-05-04T00:57:41.963Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/U6hwlur14RpnInZr/Qx6qRvf6RtDWCbE03RjM1.jpg",

@@ -2373,7 +2373,7 @@
     },
     {
       "id": "4d2RRvh",
-      "cost": 185,
+      "cost": 175,
       "name": "Artillery Gun",
       "size": 1,
       "bases": {
@@ -2459,7 +2459,7 @@
       "hint": "Leader Weapons",
       "sections": [
         {
-          "id": "s5L9bI4",
+          "id": "x7j3Akk",
           "uid": "wwjZVUq",
           "label": "Replace Gravity Pistol and CCW",
           "options": [
@@ -2553,7 +2553,7 @@
           ]
         },
         {
-          "id": "E4dcjI0",
+          "id": "Bj_SFiD",
           "uid": "C3M0Prp",
           "label": "Replace Flamer Pistol",
           "options": [
@@ -2646,7 +2646,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "FJRVn9S"
                 },
                 {
@@ -2816,7 +2816,7 @@
           ]
         },
         {
-          "id": "r197b_x",
+          "id": "MSC7diM",
           "uid": "CPoQHGT",
           "label": "Take one Master Heavy Rifle attachment",
           "options": [
@@ -3033,7 +3033,7 @@
           ]
         },
         {
-          "id": "vCG9aAR",
+          "id": "Dm3FrfC",
           "uid": "3LJ6Wjx",
           "label": "Replace CCW",
           "options": [
@@ -3223,7 +3223,7 @@
       "hint": "Leader Upgrades",
       "sections": [
         {
-          "id": "Aqid7FE",
+          "id": "YyA14KZ",
           "uid": "NearFSC",
           "label": "Upgrade with one",
           "options": [
@@ -3343,7 +3343,7 @@
       "hint": "Battle Brothers",
       "sections": [
         {
-          "id": "LZXtJzc",
+          "id": "UbOEjR6",
           "uid": "OwEuxMR",
           "label": "Replace one Heavy Rifle",
           "options": [
@@ -3472,6 +3472,51 @@
               "id": "e_L6eO1"
             },
             {
+              "uid": "DUv-Bdp",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "rsouUXt"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "-XPeFh1K",
+                  "name": "Gravity Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "-XPeFh1K",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Gravity Rifle (18\", A1, AP(1), Blast(3), Lacerate)",
+                  "count": 1
+                }
+              ],
+              "label": "Gravity Rifle (18\", A1, AP(1), Blast(3), Lacerate)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "OwEuxMR",
+              "parentSectionId": "OwEuxMR",
+              "id": "DUv-Bdp"
+            },
+            {
               "uid": "1uBYrBT",
               "cost": 15,
               "type": "ArmyBookUpgradeOption",
@@ -3511,51 +3556,6 @@
               "parentSectionUid": "OwEuxMR",
               "parentSectionId": "OwEuxMR",
               "id": "1uBYrBT"
-            },
-            {
-              "uid": "DUv-Bdp",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 20,
-                  "unitId": "rsouUXt"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "-XPeFh1K",
-                  "name": "Gravity Rifle",
-                  "type": "ArmyBookWeapon",
-                  "range": 18,
-                  "attacks": 1,
-                  "weaponId": "-XPeFh1K",
-                  "specialRules": [
-                    {
-                      "id": "WcOMD7QgPYXZ",
-                      "name": "Lacerate"
-                    },
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 1
-                    },
-                    {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Gravity Rifle (18\", A1, AP(1), Blast(3), Lacerate)",
-                  "count": 1
-                }
-              ],
-              "label": "Gravity Rifle (18\", A1, AP(1), Blast(3), Lacerate)",
-              "parentPackageUid": "D1",
-              "parentSectionUid": "OwEuxMR",
-              "parentSectionId": "OwEuxMR",
-              "id": "DUv-Bdp"
             },
             {
               "uid": "0DHLo06",
@@ -3684,7 +3684,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 50,
+                  "cost": 40,
                   "unitId": "rsouUXt"
                 }
               ],
@@ -3818,7 +3818,7 @@
           ]
         },
         {
-          "id": "LTFfKMG",
+          "id": "roDc56-",
           "uid": "QKtqiW3o",
           "label": "Replace one Heavy Rifle and CCW",
           "options": [
@@ -3897,7 +3897,7 @@
           ]
         },
         {
-          "id": "Um2eTy_",
+          "id": "tQqQzJp",
           "uid": "v3yIofo9",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -3991,7 +3991,7 @@
           ]
         },
         {
-          "id": "-fbPf_Y",
+          "id": "1Gpz8i6",
           "uid": "bz-9S2vZ",
           "label": "Replace Energy Sword",
           "options": [
@@ -4048,7 +4048,7 @@
       "hint": "Assault Brothers",
       "sections": [
         {
-          "id": "iT8ZipX",
+          "id": "mf5Gd1r",
           "uid": "RQd82ba",
           "label": "Replace up to two Heavy Pistols",
           "options": [
@@ -4101,7 +4101,7 @@
           ]
         },
         {
-          "id": "zE7VRza",
+          "id": "sAKGtdP",
           "uid": "WTJGr",
           "label": "Replace one Heavy Pistol",
           "options": [
@@ -4230,7 +4230,7 @@
           ]
         },
         {
-          "id": "w0znfmM",
+          "id": "MYbJpjb",
           "uid": "Qv-DDr7",
           "label": "Replace one Heavy Pistol and Heavy CCW",
           "options": [
@@ -4486,7 +4486,7 @@
           ]
         },
         {
-          "id": "YopOdqH",
+          "id": "FjGuop_",
           "uid": "oFy97rs",
           "label": "Upgrade all models with",
           "options": [
@@ -4536,7 +4536,7 @@
           }
         },
         {
-          "id": "3EELuU0",
+          "id": "VVxlGez",
           "uid": "lIOr2V5Y",
           "label": "Replace one Heavy Pistol and Heavy CCW",
           "options": [
@@ -4614,7 +4614,7 @@
           ]
         },
         {
-          "id": "ZFFlsIa",
+          "id": "T2zjLDj",
           "uid": "Ik1zNGkC",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -4708,7 +4708,7 @@
           ]
         },
         {
-          "id": "sD0aN6h",
+          "id": "-UhLbKL",
           "uid": "xN7OjZnX",
           "label": "Replace Energy Sword",
           "options": [
@@ -4765,7 +4765,7 @@
       "hint": "Support Brothers",
       "sections": [
         {
-          "id": "S0F1Bkd",
+          "id": "A6jgy7V",
           "uid": "9QIyR_F",
           "label": "Replace any Heavy Flamer",
           "options": [
@@ -4896,7 +4896,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 30,
                   "unitId": "y59VWP0"
                 }
               ],
@@ -5036,7 +5036,7 @@
       "hint": "Pathfinders",
       "sections": [
         {
-          "id": "sfTjWww",
+          "id": "LTEYwNz",
           "uid": "AbkSR4M",
           "label": "Replace all Heavy Pistols and CCWs",
           "options": [
@@ -5145,7 +5145,7 @@
           ]
         },
         {
-          "id": "tKpMP5K",
+          "id": "wGi39B6",
           "uid": "hapUmb9",
           "label": "Replace one Heavy Pistol",
           "options": [
@@ -5366,7 +5366,7 @@
           ]
         },
         {
-          "id": "ZkvkfPL",
+          "id": "whxbccn",
           "uid": "iYerJ",
           "label": "Replace up to three Heavy Rifles",
           "options": [
@@ -5429,7 +5429,7 @@
           ]
         },
         {
-          "id": "-v61Isl",
+          "id": "Lxi_tJX",
           "uid": "cOpzgjU",
           "label": "Upgrade all models with any",
           "options": [
@@ -5508,7 +5508,7 @@
           }
         },
         {
-          "id": "jr0202w",
+          "id": "6x0WcoB",
           "uid": "vfM3WiuH",
           "label": "Replace one Heavy Pistol and CCW",
           "options": [
@@ -5587,7 +5587,7 @@
           ]
         },
         {
-          "id": "sZNGHlf",
+          "id": "KPePMDT",
           "uid": "FUJTh69D",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -5678,7 +5678,7 @@
           ]
         },
         {
-          "id": "iLHW3nI",
+          "id": "6ieIrSq",
           "uid": "SnsO2J-U",
           "label": "Replace Energy Sword",
           "options": [
@@ -5734,7 +5734,7 @@
       "hint": "Destroyers",
       "sections": [
         {
-          "id": "Pyhl8cZ",
+          "id": "XLOXev_",
           "uid": "_e1XMzY",
           "label": "Replace all Combat Shields and CCWS",
           "options": [
@@ -5830,7 +5830,7 @@
           ]
         },
         {
-          "id": "MJOF2S6",
+          "id": "sKoRG4c",
           "uid": "5cbkyo8",
           "label": "Replace one Storm Rifle",
           "options": [
@@ -5991,7 +5991,7 @@
           ]
         },
         {
-          "id": "tQcKJz1",
+          "id": "ac1hokt",
           "uid": "xrsacpw",
           "label": "Replace any CCW",
           "options": [
@@ -6168,7 +6168,7 @@
       "hint": "Pathfinder Bikers",
       "sections": [
         {
-          "id": "6dDxUoM",
+          "id": "-nwVCy-",
           "uid": "5lwWH5w",
           "label": "Replace any Grenade Launcher",
           "options": [
@@ -6220,7 +6220,7 @@
           ]
         },
         {
-          "id": "ZJl72b3",
+          "id": "c-qT37f",
           "uid": "ktgnRd4",
           "label": "Replace all Heavy Pistols and CCWs",
           "options": [
@@ -6285,7 +6285,7 @@
           ]
         },
         {
-          "id": "MAX3R56",
+          "id": "eydDU_I",
           "uid": "1thdBuyuSa",
           "label": "Replace all High-Speed Tires",
           "options": [
@@ -6335,7 +6335,7 @@
           ]
         },
         {
-          "id": "cR2xGv6",
+          "id": "_SZ7J-M",
           "uid": "I-yhhzw7",
           "label": "Replace one Heavy Pistol and CCW",
           "options": [
@@ -6414,7 +6414,7 @@
           ]
         },
         {
-          "id": "I6D-j1k",
+          "id": "68e04pk",
           "uid": "NCiHedt3",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -6505,7 +6505,7 @@
           ]
         },
         {
-          "id": "e3XH6CX",
+          "id": "UeuE2ZP",
           "uid": "Oo_SEL1C",
           "label": "Replace Energy Sword",
           "options": [
@@ -6561,7 +6561,7 @@
       "hint": "Brother Bikers",
       "sections": [
         {
-          "id": "3eHI5gq",
+          "id": "6QrIT-t",
           "uid": "qaQSfRf",
           "label": "Replace all Heavy Pistols and CCWs",
           "options": [
@@ -6626,7 +6626,7 @@
           ]
         },
         {
-          "id": "ZcnByPi",
+          "id": "AHA2Psy",
           "uid": "_YAITGc",
           "label": "Replace one Heavy Rifle",
           "options": [
@@ -6708,6 +6708,51 @@
               "id": "s0dFhPv"
             },
             {
+              "uid": "apMzuRh",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "qmhlV0x"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "-XPeFh1K",
+                  "name": "Gravity Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "-XPeFh1K",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Gravity Rifle (18\", A1, AP(1), Blast(3), Lacerate)",
+                  "count": 1
+                }
+              ],
+              "label": "Gravity Rifle (18\", A1, AP(1), Blast(3), Lacerate)",
+              "parentPackageUid": "J1",
+              "parentSectionUid": "_YAITGc",
+              "parentSectionId": "_YAITGc",
+              "id": "apMzuRh"
+            },
+            {
               "uid": "zq5eKuI",
               "cost": 15,
               "type": "ArmyBookUpgradeOption",
@@ -6747,51 +6792,6 @@
               "parentSectionUid": "_YAITGc",
               "parentSectionId": "_YAITGc",
               "id": "zq5eKuI"
-            },
-            {
-              "uid": "apMzuRh",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 20,
-                  "unitId": "qmhlV0x"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "-XPeFh1K",
-                  "name": "Gravity Rifle",
-                  "type": "ArmyBookWeapon",
-                  "range": 18,
-                  "attacks": 1,
-                  "weaponId": "-XPeFh1K",
-                  "specialRules": [
-                    {
-                      "id": "WcOMD7QgPYXZ",
-                      "name": "Lacerate"
-                    },
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 1
-                    },
-                    {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Gravity Rifle (18\", A1, AP(1), Blast(3), Lacerate)",
-                  "count": 1
-                }
-              ],
-              "label": "Gravity Rifle (18\", A1, AP(1), Blast(3), Lacerate)",
-              "parentPackageUid": "J1",
-              "parentSectionUid": "_YAITGc",
-              "parentSectionId": "_YAITGc",
-              "id": "apMzuRh"
             }
           ],
           "parentPackageUid": "J1",
@@ -6806,7 +6806,7 @@
           ]
         },
         {
-          "id": "yj0Uik8",
+          "id": "U2ZWhKh",
           "uid": "YVYUnBx5",
           "label": "Replace one Heavy Pistol and CCW",
           "options": [
@@ -6885,7 +6885,7 @@
           ]
         },
         {
-          "id": "jhQsqlD",
+          "id": "_tND2f-",
           "uid": "cZqwVXhW",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -6976,7 +6976,7 @@
           ]
         },
         {
-          "id": "JOXTbOg",
+          "id": "osNRW1R",
           "uid": "lF6EdYpU",
           "label": "Replace Energy Sword",
           "options": [
@@ -7032,7 +7032,7 @@
       "hint": "Support Bike",
       "sections": [
         {
-          "id": "1nWKNEM",
+          "id": "ad9zLn8",
           "uid": "L5AT3_E",
           "label": "Replace Heavy Flamer",
           "options": [
@@ -7121,7 +7121,7 @@
           ]
         },
         {
-          "id": "AeVfS69",
+          "id": "I0YIf_W",
           "uid": "n2KRnGH",
           "label": "Replace Heavy Pistol",
           "options": [
@@ -7177,7 +7177,7 @@
       "hint": "Vehicle Upgrades",
       "sections": [
         {
-          "id": "w2f-UxU",
+          "id": "76yKN5v",
           "uid": "IM9nknz",
           "label": "Upgrade with one",
           "options": [
@@ -7283,7 +7283,7 @@
           }
         },
         {
-          "id": "ApIOKCi",
+          "id": "CFgF7Yt",
           "uid": "-7UIi",
           "label": "Upgrade with any",
           "options": [
@@ -7402,7 +7402,7 @@
       "hint": "Attack APC",
       "sections": [
         {
-          "id": "Pk7sHjs",
+          "id": "s28w6tl",
           "uid": "hHcZXLK",
           "label": "Replace Twin Heavy Flamer",
           "options": [
@@ -7587,7 +7587,7 @@
           ]
         },
         {
-          "id": "COpt8ko",
+          "id": "g6TTXQL",
           "uid": "fO1Z8",
           "label": "Upgrade with",
           "options": [
@@ -7635,7 +7635,7 @@
       "hint": "Drop Pod",
       "sections": [
         {
-          "id": "-eL1CS9",
+          "id": "p2-dJpV",
           "uid": "Lfz_nki",
           "label": "Replace Death Launcher",
           "options": [
@@ -7691,7 +7691,7 @@
       "hint": "Battle Tank",
       "sections": [
         {
-          "id": "GaKq-34",
+          "id": "bIMiNMU",
           "uid": "PFy24Ik",
           "label": "Replace Twin Storm Cannon",
           "options": [
@@ -7912,7 +7912,7 @@
           ]
         },
         {
-          "id": "H73rFN3",
+          "id": "1Q5Ekj8",
           "uid": "vcV10XE",
           "label": "Replace Twin Heavy Machineguns",
           "options": [
@@ -7973,7 +7973,7 @@
       "hint": "Heavy Tank",
       "sections": [
         {
-          "id": "wMbRrBv",
+          "id": "KB3URJI",
           "uid": "rQkNEKS",
           "label": "Replace Quad Flamer Cannon",
           "options": [
@@ -8063,7 +8063,7 @@
           ]
         },
         {
-          "id": "QfJSLRH",
+          "id": "IhnZrqI",
           "uid": "7B9L19M",
           "label": "Replace Twin Heavy Machinegun",
           "options": [
@@ -8119,7 +8119,7 @@
       "hint": "Artillery Gun",
       "sections": [
         {
-          "id": "XBHkqgU",
+          "id": "q5Z1Vqt",
           "uid": "1DbfzHx",
           "label": "Replace Heavy Gatling Cannon",
           "options": [
@@ -8269,7 +8269,7 @@
       "hint": "Attack Speeder",
       "sections": [
         {
-          "id": "vqXxpHj",
+          "id": "7RMEisV",
           "uid": "xYwKvrO",
           "label": "Replace any Heavy Flamer",
           "options": [
@@ -8397,7 +8397,7 @@
           ]
         },
         {
-          "id": "uAAUhv9",
+          "id": "vnKzts-",
           "uid": "8yh3Iw3",
           "label": "Replace one Heavy Flamer",
           "options": [
@@ -8454,7 +8454,7 @@
           ]
         },
         {
-          "id": "jHxNUKI",
+          "id": "pn51J48",
           "uid": "bdUrx-g",
           "label": "Upgrade with any",
           "options": [
@@ -8538,7 +8538,7 @@
       "hint": "Heavy Exo-Suit",
       "sections": [
         {
-          "id": "zZCtelA",
+          "id": "ozzJIxS",
           "uid": "PkrtJej",
           "label": "Replace Twin Flamer",
           "options": [
@@ -8622,7 +8622,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 90,
+                  "cost": 70,
                   "unitId": "G163lhb"
                 }
               ],
@@ -8708,7 +8708,7 @@
           ]
         },
         {
-          "id": "h9LPC8V",
+          "id": "5B9859A",
           "uid": "zhQRFH5",
           "label": "Upgrade with one",
           "options": [
@@ -8794,7 +8794,7 @@
           }
         },
         {
-          "id": "u8ijqed",
+          "id": "t3Tdb-X",
           "uid": "1JKdiu7",
           "label": "Upgrade with one",
           "options": [
@@ -8889,7 +8889,7 @@
       "hint": "Combat Walker",
       "sections": [
         {
-          "id": "iSiI1hh",
+          "id": "YTN9OYi",
           "uid": "72MR6oT",
           "label": "Replace one Walker Fist",
           "options": [
@@ -9213,7 +9213,7 @@
           ]
         },
         {
-          "id": "AlIJNZI",
+          "id": "XJXJh1x",
           "uid": "e8udYuz",
           "label": "Replace one Walker Fist",
           "options": [
@@ -9314,7 +9314,7 @@
           ]
         },
         {
-          "id": "OEBN5EW",
+          "id": "bUEItCQ",
           "uid": "8cG2vbh",
           "label": "Upgrade any Walker Fist with one",
           "options": [
@@ -9477,7 +9477,7 @@
       "hint": "Light Gunship",
       "sections": [
         {
-          "id": "g9YUs-a",
+          "id": "ZplmvuR",
           "uid": "AFtah63",
           "label": "Upgrade with one",
           "options": [
@@ -9567,7 +9567,7 @@
           }
         },
         {
-          "id": "Yw0W9lf",
+          "id": "TMl1aLT",
           "uid": "TNz9N_Q",
           "label": "Replace Twin Typhoon Missiles",
           "options": [
@@ -9709,7 +9709,7 @@
       "hint": "Heavy Gunship",
       "sections": [
         {
-          "id": "JvzN8lz",
+          "id": "xI4_WWg",
           "uid": "TgjKSM6",
           "label": "Replace Twin Minigun",
           "options": [
@@ -9804,7 +9804,7 @@
           ]
         },
         {
-          "id": "VGlM1Wu",
+          "id": "EbdQFYF",
           "uid": "wibp_uc",
           "label": "Replace Typhoon Missiles",
           "options": [
@@ -9901,7 +9901,7 @@
       "hint": "Elite Pathfinder",
       "sections": [
         {
-          "id": "BuEqLLb",
+          "id": "4nNBxlW",
           "uid": "3m7F1",
           "label": "Replace Gravity Pistol",
           "options": [
@@ -9996,7 +9996,7 @@
           ]
         },
         {
-          "id": "v_3Bj5W",
+          "id": "H_4uKTG",
           "uid": "txeOI",
           "label": "Upgrade with any",
           "options": [
@@ -10130,7 +10130,7 @@
       "hint": "Master Destroyer",
       "sections": [
         {
-          "id": "mCuWt7r",
+          "id": "UXltwMv",
           "uid": "1AhPd",
           "label": "Replace Combat Shield and CCW",
           "options": [
@@ -10224,7 +10224,7 @@
           ]
         },
         {
-          "id": "FRck7e_",
+          "id": "wyCdwgC",
           "uid": "U5iFb",
           "label": "Replace CCW",
           "options": [
@@ -10402,7 +10402,7 @@
       "hint": "Veteran Battle Brothers",
       "sections": [
         {
-          "id": "bNJzrhG",
+          "id": "R8x5Fms",
           "uid": "0n5lu",
           "label": "Replace any Heavy Rifle",
           "options": [
@@ -10578,7 +10578,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 25,
                   "unitId": "L9mFDNe"
                 }
               ],
@@ -10740,6 +10740,51 @@
               "id": "o8o5D"
             },
             {
+              "uid": "s1Bas",
+              "cost": 45,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 50,
+                  "unitId": "L9mFDNe"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "W-MRJYv_",
+                  "name": "Gravity Cannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "G_w7Fy16",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Gravity Cannon (24\", A1, AP(2), Blast(3), Lacerate)",
+                  "count": 1
+                }
+              ],
+              "label": "Gravity Cannon (24\", A1, AP(2), Blast(3), Lacerate)",
+              "parentPackageUid": "C_pZc",
+              "parentSectionUid": "0n5lu",
+              "parentSectionId": "0n5lu",
+              "id": "s1Bas"
+            },
+            {
               "uid": "Kk7Ip",
               "cost": 55,
               "type": "ArmyBookUpgradeOption",
@@ -10820,51 +10865,6 @@
               "parentSectionUid": "0n5lu",
               "parentSectionId": "0n5lu",
               "id": "Xe2z_"
-            },
-            {
-              "uid": "s1Bas",
-              "cost": 45,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 70,
-                  "unitId": "L9mFDNe"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "W-MRJYv_",
-                  "name": "Gravity Cannon",
-                  "type": "ArmyBookWeapon",
-                  "range": 24,
-                  "attacks": 1,
-                  "weaponId": "G_w7Fy16",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 2
-                    },
-                    {
-                      "id": "WcOMD7QgPYXZ",
-                      "name": "Lacerate"
-                    },
-                    {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Gravity Cannon (24\", A1, AP(2), Blast(3), Lacerate)",
-                  "count": 1
-                }
-              ],
-              "label": "Gravity Cannon (24\", A1, AP(2), Blast(3), Lacerate)",
-              "parentPackageUid": "C_pZc",
-              "parentSectionUid": "0n5lu",
-              "parentSectionId": "0n5lu",
-              "id": "s1Bas"
             }
           ],
           "parentPackageUid": "C_pZc",
@@ -10878,7 +10878,7 @@
           ]
         },
         {
-          "id": "dLCgK11",
+          "id": "HdIEKt6",
           "uid": "uYBKN",
           "label": "Any model may take one Heavy Rifle attachment",
           "options": [
@@ -11077,7 +11077,7 @@
           ]
         },
         {
-          "id": "v7gNeNL",
+          "id": "zYGflGj",
           "uid": "iwmwrRZV",
           "label": "Replace one Heavy Rifle and CCW",
           "options": [
@@ -11156,7 +11156,7 @@
           ]
         },
         {
-          "id": "1MfsKMI",
+          "id": "7S-siIV",
           "uid": "KlDAblJU",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -11202,7 +11202,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "L9mFDNe"
                 }
               ],
@@ -11250,7 +11250,7 @@
           ]
         },
         {
-          "id": "rR7fAr6",
+          "id": "22w1w8t",
           "uid": "RjRFQ4qj",
           "label": "Replace Energy Sword",
           "options": [
@@ -11307,7 +11307,7 @@
       "hint": "Veteran Assault Brothers",
       "sections": [
         {
-          "id": "Sk5oUrp",
+          "id": "79is0VK",
           "uid": "pWo9jqAOpr",
           "label": "Replace any Heavy Pistol and Combat Shield",
           "options": [
@@ -11490,7 +11490,7 @@
           ]
         },
         {
-          "id": "Hky41Ku",
+          "id": "zEsiSLY",
           "uid": "vGQBU",
           "label": "Replace any Heavy Pistol",
           "options": [
@@ -11575,7 +11575,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "QDw-E9g"
                 }
               ],
@@ -11626,7 +11626,7 @@
           ]
         },
         {
-          "id": "PlRw8GG",
+          "id": "qrlbNvh",
           "uid": "stSby",
           "label": "Replace any Heavy CCW",
           "options": [
@@ -11721,7 +11721,7 @@
           ]
         },
         {
-          "id": "J_imQD0",
+          "id": "0mpX9w7",
           "uid": "QlEe_",
           "label": "Upgrade all models with",
           "options": [
@@ -11772,7 +11772,7 @@
           }
         },
         {
-          "id": "BrwkiL9",
+          "id": "Kf5tOA_",
           "uid": "okV3YvFg",
           "label": "Replace one Heavy Pistol and Heavy CCW",
           "options": [
@@ -11850,7 +11850,7 @@
           ]
         },
         {
-          "id": "Y8Gw58o",
+          "id": "vsP8Ird",
           "uid": "EJKucIer",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -11896,7 +11896,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "QDw-E9g"
                 }
               ],
@@ -11944,7 +11944,7 @@
           ]
         },
         {
-          "id": "yWpHd_P",
+          "id": "YMNqmYw",
           "uid": "D_qYZVO7",
           "label": "Replace Energy Sword",
           "options": [
@@ -12001,7 +12001,7 @@
       "hint": "Squad Upgrades",
       "sections": [
         {
-          "id": "a7ygYzq",
+          "id": "fSaC-5u",
           "uid": "VSUO3",
           "label": "Upgrade one model with one",
           "options": [
@@ -12164,7 +12164,7 @@
       "hint": "Specialists - Pathfinder",
       "sections": [
         {
-          "id": "qpbBiHI",
+          "id": "6i4-EkV",
           "uid": "YN10lG_K",
           "label": "Upgrade with one",
           "options": [
@@ -12203,7 +12203,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "itAQcmT"
                 }
               ],
@@ -12233,7 +12233,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 25,
                   "unitId": "itAQcmT"
                 }
               ],
@@ -12305,7 +12305,7 @@
       "hint": "Specialists - Destroyer",
       "sections": [
         {
-          "id": "CNLJwQz",
+          "id": "dvXfTCv",
           "uid": "HPEjYH-V",
           "label": "Upgrade with one",
           "options": [
@@ -12344,7 +12344,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "qMjB0Rk"
                 }
               ],
@@ -12403,7 +12403,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 25,
                   "unitId": "qMjB0Rk"
                 }
               ],
@@ -12510,7 +12510,7 @@
       "hint": "Specialists - Master",
       "sections": [
         {
-          "id": "_r3WPe6",
+          "id": "9_L1Y65",
           "uid": "5E4zYzbg",
           "label": "Upgrade with one",
           "options": [
@@ -12552,11 +12552,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "Ov5Z8wE"
                 },
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "FJRVn9S"
                 }
               ],
@@ -12620,11 +12620,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 25,
                   "unitId": "Ov5Z8wE"
                 },
                 {
-                  "cost": 30,
+                  "cost": 25,
                   "unitId": "FJRVn9S"
                 }
               ],
@@ -12807,7 +12807,7 @@
       "hint": "Veteran Leader Weapons",
       "sections": [
         {
-          "id": "zTrzkC8",
+          "id": "OqpkT4L",
           "uid": "2bQaElLx",
           "label": "Replace Combat Shield and CCW",
           "options": [
@@ -13008,7 +13008,7 @@
           ]
         },
         {
-          "id": "1NGi87K",
+          "id": "liMlqQm",
           "uid": "4vBnND6n",
           "label": "Replace Flamer Pistol",
           "options": [
@@ -13251,7 +13251,7 @@
           ]
         },
         {
-          "id": "XZManLO",
+          "id": "OYT-oNI",
           "uid": "gnlXo9kG",
           "label": "Take one Master Heavy Rifle attachment",
           "options": [
@@ -13452,7 +13452,7 @@
           ]
         },
         {
-          "id": "sbDLaTU",
+          "id": "Dcy_JrG",
           "uid": "7B1UqQX8",
           "label": "Replace CCW",
           "options": [
@@ -13626,7 +13626,7 @@
       "hint": "Targeting Array",
       "sections": [
         {
-          "id": "poku3BY",
+          "id": "yhZ9Kus",
           "uid": "4CpDcTuy",
           "label": "Upgrade with",
           "options": [
@@ -14291,7 +14291,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:21:12.328Z",
+  "modifiedAt": "2026-05-05T08:01:46.280Z",
   "editedAt": "2026-04-27T16:16:07.532Z",
   "official": true,
   "versionString": "3.5.3",
@@ -14534,7 +14534,7 @@
       "id": "1TMBPe40kx2b",
       "name": "Melee Shrouding",
       "aliasedRuleId": null,
-      "description": "Enemies get -3\" movement when trying to charge units where all models have this rule.",
+      "description": "Enemies get -3\" movement to a min. of 6\" when trying to charge units where all models have this rule.",
       "hasRating": false,
       "coreType": null,
       "targetType": 1

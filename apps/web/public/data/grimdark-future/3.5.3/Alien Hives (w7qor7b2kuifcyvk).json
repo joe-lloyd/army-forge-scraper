@@ -961,7 +961,7 @@
     },
     {
       "id": "_nhe5Po",
-      "cost": 150,
+      "cost": 145,
       "name": "Venom Beasts",
       "size": 3,
       "bases": {
@@ -1106,7 +1106,7 @@
     },
     {
       "id": "tbvpeyi",
-      "cost": 230,
+      "cost": 220,
       "name": "Shadow Leapers",
       "size": 3,
       "bases": {
@@ -1360,7 +1360,7 @@
     },
     {
       "id": "nETJZj-",
-      "cost": 180,
+      "cost": 175,
       "name": "Shadow Hunter",
       "size": 1,
       "bases": {
@@ -1607,6 +1607,7 @@
         {
           "id": "zvvApBrG",
           "name": "Heavy Psy-Torrent",
+          "type": "ArmyBookWeapon",
           "count": 1,
           "range": 9,
           "attacks": 2,
@@ -1633,9 +1634,9 @@
               "label": "Reliable"
             }
           ],
+          "attacksMultiplier": 1,
           "label": "Heavy Psy-Torrent (9\", A2, AP(1), Blast(3), Reliable)",
-          "originalCount": 1,
-          "type": "ArmyBookWeapon"
+          "originalCount": 1
         },
         {
           "id": "O_6k1",
@@ -2051,6 +2052,7 @@
         {
           "id": "C9_mYqo2",
           "name": "Heavy Psy-Torrent",
+          "type": "ArmyBookWeapon",
           "count": 1,
           "range": 9,
           "attacks": 2,
@@ -2077,9 +2079,9 @@
               "label": "Reliable"
             }
           ],
+          "attacksMultiplier": 1,
           "label": "Heavy Psy-Torrent (9\", A2, AP(1), Blast(3), Reliable)",
-          "originalCount": 1,
-          "type": "ArmyBookWeapon"
+          "originalCount": 1
         },
         {
           "id": "PIp7xyja",
@@ -2756,7 +2758,7 @@
     },
     {
       "id": "Jwz4vyd",
-      "cost": 195,
+      "cost": 185,
       "name": "Invasion Artillery Spore",
       "size": 1,
       "bases": {
@@ -3205,7 +3207,7 @@
     },
     {
       "id": "X3tCKAU",
-      "cost": 280,
+      "cost": 265,
       "name": "Ksi'adoz Smokeborn",
       "size": 1,
       "type": 1,
@@ -3473,7 +3475,7 @@
     },
     {
       "id": "IEOjUfy",
-      "cost": 155,
+      "cost": 150,
       "name": "Troseis",
       "size": 1,
       "type": 1,
@@ -3819,7 +3821,7 @@
       "hint": "Hive Lord",
       "sections": [
         {
-          "id": "t4xmNqY",
+          "id": "lbku4_P",
           "uid": "IQd7evV",
           "label": "Replace any Heavy Razor Claw",
           "options": [
@@ -4034,7 +4036,7 @@
           ]
         },
         {
-          "id": "s3Kdc5l",
+          "id": "dhFDELm",
           "uid": "9ZOE5",
           "label": "Replace Shredder Cannon",
           "options": [
@@ -4420,7 +4422,7 @@
           ]
         },
         {
-          "id": "yhSBJY-",
+          "id": "WHYzd2x",
           "uid": "HawCg",
           "label": "Upgrade with",
           "options": [
@@ -4474,7 +4476,7 @@
       "hint": "Prime Warrior",
       "sections": [
         {
-          "id": "JLAAX9P",
+          "id": "5HQQpfM",
           "uid": "A_Ko4Rk",
           "label": "Replace one Heavy Razor Claws",
           "options": [
@@ -4721,7 +4723,7 @@
           ]
         },
         {
-          "id": "qDsXpMV",
+          "id": "FVgLRQw",
           "uid": "ijbm7zF",
           "label": "Upgrade with",
           "options": [
@@ -4774,7 +4776,7 @@
       "hint": "Grunt Upgrades",
       "sections": [
         {
-          "id": "wiUNpg4",
+          "id": "f3UBYPA",
           "uid": "3wJarRx",
           "label": "Upgrade all models with one",
           "options": [
@@ -4820,6 +4822,50 @@
               "id": "1ewDpNQ"
             },
             {
+              "uid": "Kz0oZ4M",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "_LXFoO9"
+                },
+                {
+                  "cost": 5,
+                  "unitId": "CMADHYi"
+                },
+                {
+                  "cost": 10,
+                  "unitId": "6oOZMAA"
+                },
+                {
+                  "cost": 5,
+                  "unitId": "_c1518l"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Toxic Cysts",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Toxic Cysts (Bane in Melee)",
+                  "content": [
+                    {
+                      "id": "7d9yvTiP6UR5",
+                      "name": "Bane in Melee",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Toxic Cysts (Bane in Melee)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "3wJarRx",
+              "parentSectionId": "3wJarRx",
+              "id": "Kz0oZ4M"
+            },
+            {
               "uid": "QdM5WhnXD_",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -4859,50 +4905,6 @@
               "label": "Combat Mutations (Piercing Growth)",
               "parentSectionId": "3wJarRx",
               "id": "QdM5WhnXD_"
-            },
-            {
-              "uid": "Kz0oZ4M",
-              "cost": 5,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 15,
-                  "unitId": "_LXFoO9"
-                },
-                {
-                  "cost": 10,
-                  "unitId": "CMADHYi"
-                },
-                {
-                  "cost": 40,
-                  "unitId": "6oOZMAA"
-                },
-                {
-                  "cost": 5,
-                  "unitId": "_c1518l"
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Toxic Cysts",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Toxic Cysts (Bane in Melee)",
-                  "content": [
-                    {
-                      "id": "7d9yvTiP6UR5",
-                      "name": "Bane in Melee",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Toxic Cysts (Bane in Melee)",
-              "parentPackageUid": "D1",
-              "parentSectionUid": "3wJarRx",
-              "parentSectionId": "3wJarRx",
-              "id": "Kz0oZ4M"
             }
           ],
           "isLowPrio": true,
@@ -4926,7 +4928,7 @@
       "hint": "Grunt Ranged Upgrades",
       "sections": [
         {
-          "id": "4fLQMLl",
+          "id": "VZMJhE6",
           "uid": "QyRz7ED",
           "label": "Replace all Bio-Spiners",
           "options": [
@@ -5012,7 +5014,7 @@
           ]
         },
         {
-          "id": "jp_9viV",
+          "id": "GwmM-HC",
           "uid": "0yYhyhC",
           "label": "Replace up to two Bio-Spiners",
           "options": [
@@ -5259,7 +5261,7 @@
       "hint": "Assault Grunts",
       "sections": [
         {
-          "id": "2KsuUzB",
+          "id": "w4QL639",
           "uid": "xwVYFo1",
           "label": "Replace up to two Razor Claws",
           "options": [
@@ -5433,7 +5435,7 @@
       "hint": "Soul-Snatchers",
       "sections": [
         {
-          "id": "79yKXTA",
+          "id": "eoQsMMm",
           "uid": "_7uCIC6beY",
           "label": "Replace all Adrenaline Fueleds",
           "options": [
@@ -5478,7 +5480,7 @@
           ]
         },
         {
-          "id": "aWZrOZ7",
+          "id": "LP0MPx1",
           "uid": "An_cSbk",
           "label": "Upgrade one model with",
           "options": [
@@ -5533,7 +5535,7 @@
       "hint": "Hive Swarm",
       "sections": [
         {
-          "id": "BNz3UdL",
+          "id": "HgMS_uK",
           "uid": "3CsAitE",
           "label": "Upgrade all models with",
           "options": [
@@ -5590,7 +5592,7 @@
       "hint": "Melee Upgrades",
       "sections": [
         {
-          "id": "H113t7O",
+          "id": "qBm0EfI",
           "uid": "HcgSsOq",
           "label": "Replace any Razor Claws",
           "options": [
@@ -5758,7 +5760,7 @@
           ]
         },
         {
-          "id": "BGSknDU",
+          "id": "93jDsxi",
           "uid": "9G4I1",
           "label": "Replace one Razor Claws",
           "options": [
@@ -5888,7 +5890,7 @@
       "hint": "Hive Warriors",
       "sections": [
         {
-          "id": "q3dtL04",
+          "id": "iXTrRPQ",
           "uid": "S3YuiRt",
           "label": "Any model may replace one Razor Claws",
           "options": [
@@ -6011,7 +6013,7 @@
           ]
         },
         {
-          "id": "-VRj9Xv",
+          "id": "YoB1wig",
           "uid": "fQBmVR8",
           "label": "Replace one Ravager Gun",
           "options": [
@@ -6189,7 +6191,7 @@
           ]
         },
         {
-          "id": "Fubc3du",
+          "id": "7bb3xtX",
           "uid": "OFogXML",
           "label": "Upgrade all models with",
           "options": [
@@ -6246,7 +6248,7 @@
       "hint": "Ravenous Beasts",
       "sections": [
         {
-          "id": "J5Cig71",
+          "id": "gCeZ_jz",
           "uid": "-H2Ty6q",
           "label": "Replace all Adrenaline Fueleds",
           "options": [
@@ -6301,7 +6303,7 @@
       "hint": "Hive Guardians",
       "sections": [
         {
-          "id": "IJjxbGN",
+          "id": "tPX4-WX",
           "uid": "MjXargB",
           "label": "Any model may replace one Razor Claws",
           "options": [
@@ -6450,7 +6452,7 @@
       "hint": "Monster Melee Upgrades",
       "sections": [
         {
-          "id": "oiNrGz1",
+          "id": "9prKIT5",
           "uid": "jGBmYru",
           "label": "Replace any Heavy Razor Claws",
           "options": [
@@ -6714,7 +6716,7 @@
       "hint": "Carnivo-Rex",
       "sections": [
         {
-          "id": "AaILgrv",
+          "id": "NjOOYzW",
           "uid": "rr7LRjf",
           "label": "Replace 3x Heavy Razor Claws",
           "options": [
@@ -6909,7 +6911,7 @@
           ]
         },
         {
-          "id": "UNubLWI",
+          "id": "0peH1s5",
           "uid": "OMH5U",
           "label": "Replace one Heavy Razor Claw",
           "options": [
@@ -6964,7 +6966,7 @@
       "hint": "Tyrant Great Beast",
       "sections": [
         {
-          "id": "VqctSTl",
+          "id": "m6yoqaT",
           "uid": "52VfpiV",
           "label": "Replace Bio-Pod",
           "options": [
@@ -7057,7 +7059,7 @@
       "hint": "Artillery Great Beast",
       "sections": [
         {
-          "id": "h52TtS4",
+          "id": "DLe3lvc",
           "uid": "tkBr8-k",
           "label": "Replace Shredder Bio-Artillery",
           "options": [
@@ -7212,7 +7214,7 @@
       "hint": "Invasion Spores",
       "sections": [
         {
-          "id": "n9RC0Mp",
+          "id": "G6m4DAc",
           "uid": "RO6Knn5",
           "label": "Upgrade with one",
           "options": [
@@ -7411,7 +7413,7 @@
       "hint": "Rapacious Beast",
       "sections": [
         {
-          "id": "PyBaW3b",
+          "id": "8YsEQBa",
           "uid": "4Tn-Mgp",
           "label": "Replace Caustic Cannon",
           "options": [
@@ -7510,51 +7512,10 @@
           ]
         },
         {
-          "id": "ltDqc6S",
+          "id": "MsooRNu",
           "uid": "GlJSCqR",
           "label": "Replace Stinger Spitter",
           "options": [
-            {
-              "uid": "MgFl_OJs-c",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 10,
-                  "unitId": "kQgZckF"
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Spore Bombs",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 1,
-                  "weaponId": "yDPvmG5f",
-                  "specialRules": [
-                    {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "rating": 6
-                    },
-                    {
-                      "id": "IEJp3a4vE0CB",
-                      "name": "Shred"
-                    },
-                    {
-                      "id": "Hdm9ry6kJvzb",
-                      "name": "Strafing"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Spore Bombs (A1, Blast(6), Shred, Strafing)"
-                }
-              ],
-              "label": "Spore Bombs (A1, Blast(6), Shred, Strafing)",
-              "parentSectionId": "GlJSCqR",
-              "id": "MgFl_OJs-c"
-            },
             {
               "uid": "xAyAJwz",
               "cost": 25,
@@ -7594,6 +7555,47 @@
               "parentSectionUid": "GlJSCqR",
               "parentSectionId": "GlJSCqR",
               "id": "xAyAJwz"
+            },
+            {
+              "uid": "MgFl_OJs-c",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 25,
+                  "unitId": "kQgZckF"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Spore Bombs",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "yDPvmG5f",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 6
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    },
+                    {
+                      "id": "Hdm9ry6kJvzb",
+                      "name": "Strafing"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Spore Bombs (A1, Blast(6), Shred, Strafing)"
+                }
+              ],
+              "label": "Spore Bombs (A1, Blast(6), Shred, Strafing)",
+              "parentSectionId": "GlJSCqR",
+              "id": "MgFl_OJs-c"
             },
             {
               "uid": "BaYwL",
@@ -7657,7 +7659,7 @@
       "hint": "Shadow Hunter",
       "sections": [
         {
-          "id": "DndBZfX",
+          "id": "dLNkZIH",
           "uid": "dsnYX",
           "label": "Upgrade with one",
           "options": [
@@ -7740,7 +7742,7 @@
       "hint": "Elite Melee Upgrades",
       "sections": [
         {
-          "id": "LcdMMYJ",
+          "id": "0IfpJti",
           "uid": "cRc_X",
           "label": "Replace any Heavy Razor Claw",
           "options": [
@@ -7967,7 +7969,7 @@
       "hint": "Mortar Beast",
       "sections": [
         {
-          "id": "awB7uF3",
+          "id": "CR6TuOu",
           "uid": "3mbdv",
           "label": "Replace Spore Gun",
           "options": [
@@ -8017,7 +8019,7 @@
       "hint": "Venom Beasts",
       "sections": [
         {
-          "id": "yTFivyR",
+          "id": "qrchq5N",
           "uid": "16-0ikiTpx",
           "label": "Replace all Poison Spurts and Toxin Claws",
           "options": [
@@ -8070,7 +8072,7 @@
           ]
         },
         {
-          "id": "D94GpcI",
+          "id": "0xidaNp",
           "uid": "gbJtb",
           "label": "Upgrade one model with",
           "options": [
@@ -8079,7 +8081,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 30,
                   "unitId": "_nhe5Po"
                 }
               ],
@@ -8121,7 +8123,7 @@
       "hint": "Spawning Great Beast",
       "sections": [
         {
-          "id": "s9N14SF",
+          "id": "pb3SsYu",
           "uid": "LQKtC",
           "label": "Upgrade with one",
           "options": [
@@ -8232,7 +8234,7 @@
       "hint": "Invasion Artillery Spore",
       "sections": [
         {
-          "id": "9s-2v5C",
+          "id": "Ri7uWDG",
           "uid": "A2j-0",
           "label": "Replace Spore Carrier",
           "options": [
@@ -8323,7 +8325,7 @@
       "hint": "Replace Heavy Psy-Torrent",
       "sections": [
         {
-          "id": "NWcOq5n",
+          "id": "TWRcjdj",
           "uid": "Ffzwz",
           "label": "Replace Heavy Psy-Torrent",
           "options": [
@@ -8351,16 +8353,14 @@
                   "weaponId": "WSkJKBlp",
                   "specialRules": [
                     {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 1
-                    },
-                    {
                       "id": "w_vX0mi58KKt",
                       "name": "Blast",
-                      "type": "ArmyBookRule",
                       "rating": 3
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
                     }
                   ],
                   "attacksMultiplier": 1,
@@ -8428,7 +8428,7 @@
       "hint": "Support Grunts",
       "sections": [
         {
-          "id": "3Pb6WyB",
+          "id": "lqnsp1e",
           "uid": "QZxwb",
           "label": "Replace all Bio-Cannons",
           "options": [
@@ -8487,7 +8487,7 @@
       "hint": "Toxico-Rex",
       "sections": [
         {
-          "id": "BdfFf08",
+          "id": "w8rHZdt",
           "uid": "j59IX",
           "label": "Upgrade with one",
           "options": [
@@ -8535,7 +8535,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 30,
                   "unitId": "w1qhVzS"
                 }
               ],
@@ -8576,7 +8576,7 @@
       "hint": "Hive Titan",
       "sections": [
         {
-          "id": "EDYRnMY",
+          "id": "Z0wJ0xr",
           "uid": "wNeyAfIqvD",
           "label": "Replace Titanic Heavy Claws",
           "options": [
@@ -8649,7 +8649,7 @@
           ]
         },
         {
-          "id": "7er80tZ",
+          "id": "VescY_G",
           "uid": "y1ZM9",
           "label": "Replace Warrior Emissary",
           "options": [
@@ -8817,7 +8817,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 285,
+                  "cost": 280,
                   "unitId": "GiIM1wN"
                 }
               ],
@@ -8880,7 +8880,7 @@
       "hint": "Grunt Veteran",
       "sections": [
         {
-          "id": "_tSeYnL",
+          "id": "k-f8dyw",
           "uid": "hm7yH",
           "label": "Replace Razor Claw",
           "options": [
@@ -9042,7 +9042,7 @@
           ]
         },
         {
-          "id": "_quGizt",
+          "id": "-UzBdXg",
           "uid": "BNIOW",
           "label": "Upgrade with one",
           "options": [
@@ -9155,7 +9155,7 @@
           }
         },
         {
-          "id": "xTqWSBe",
+          "id": "anYC-s7",
           "uid": "Ryewg",
           "label": "Upgrade with one",
           "options": [
@@ -9236,7 +9236,7 @@
           }
         },
         {
-          "id": "NALR7yO",
+          "id": "qdJx8jQ",
           "uid": "ss1ssKfV",
           "label": "Upgrade with one",
           "options": [
@@ -9348,7 +9348,7 @@
       "hint": "Hive Burrower",
       "sections": [
         {
-          "id": "IzlbvhX",
+          "id": "lzmWs0q",
           "uid": "z3ruXQqpdC",
           "label": "Replace 3x Heavy Razor Claw",
           "options": [
@@ -9357,7 +9357,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 20,
                   "unitId": "laQL0iJ"
                 }
               ],
@@ -9419,7 +9419,7 @@
           ]
         },
         {
-          "id": "auNlzRr",
+          "id": "0Xl_FUK",
           "uid": "g9p2yVKZhE",
           "label": "Replace Deep Deployment",
           "options": [
@@ -9462,7 +9462,7 @@
           ]
         },
         {
-          "id": "X1Zki7v",
+          "id": "j24tCfa",
           "uid": "XeH6Qr_JFI",
           "label": "Upgrade with one",
           "options": [
@@ -9471,7 +9471,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 95,
+                  "cost": 85,
                   "unitId": "laQL0iJ"
                 }
               ],
@@ -9552,7 +9552,7 @@
       "hint": "Psycho-Grunts",
       "sections": [
         {
-          "id": "rbwr3Bi",
+          "id": "XzHPHWf",
           "uid": "Izv8-ZjmRa",
           "label": "Upgrade one model with",
           "options": [
@@ -9603,7 +9603,7 @@
       "hint": "Replace Stinger Launcher",
       "sections": [
         {
-          "id": "w_4o2a-",
+          "id": "fRR6nHa",
           "uid": "l4mzSTKb",
           "label": "Replace any Stinger Launcher",
           "options": [
@@ -9717,7 +9717,7 @@
       "hint": "Specialists - Prime",
       "sections": [
         {
-          "id": "-y7xfg1",
+          "id": "2Rpj99U",
           "uid": "nxseWutH",
           "label": "Upgrade with one",
           "options": [
@@ -9893,7 +9893,7 @@
       "hint": "Specialists - Snatcher",
       "sections": [
         {
-          "id": "fHeqYNZ",
+          "id": "PenDgxb",
           "uid": "4CX0mlsU",
           "label": "Upgrade with one",
           "options": [
@@ -10031,7 +10031,7 @@
           }
         },
         {
-          "id": "E7FSbTq",
+          "id": "g5EHx_p",
           "uid": "kSX9S-bPt1",
           "label": "Replace Adrenaline Fueled",
           "options": [
@@ -10080,7 +10080,7 @@
       "hint": "Specialists - Grunt",
       "sections": [
         {
-          "id": "RRT_Q5T",
+          "id": "qmG4ECy",
           "uid": "Yew-UyFs",
           "label": "Upgrade with one",
           "options": [
@@ -10226,7 +10226,7 @@
       "hint": "Specialists - Hive Lord",
       "sections": [
         {
-          "id": "YmMOmDd",
+          "id": "B6svqSt",
           "uid": "KmpaBEsW",
           "label": "Upgrade with one",
           "options": [
@@ -10402,7 +10402,7 @@
       "hint": "Psycho-Rex",
       "sections": [
         {
-          "id": "2g_ujYa",
+          "id": "927ATm0",
           "uid": "x7RXbRaZ",
           "label": "Replace Heavy Psy-Torrent",
           "options": [
@@ -10470,7 +10470,7 @@
       "hint": "Battle Pheromones",
       "sections": [
         {
-          "id": "di1xL5i",
+          "id": "IeQiQNT",
           "uid": "p4VUCuS1",
           "label": "Upgrade with",
           "options": [
@@ -10526,7 +10526,7 @@
       "hint": "Winged Grunts",
       "sections": [
         {
-          "id": "rKPXst1",
+          "id": "Vk1n6W3",
           "uid": "hLW1XLBw",
           "label": "Upgrade all models with one",
           "options": [
@@ -10536,7 +10536,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "vuuKwqD"
                 }
               ],
@@ -11252,7 +11252,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T11:21:42.366Z",
+  "modifiedAt": "2026-05-05T08:01:44.383Z",
   "editedAt": "2026-04-30T11:21:42.365Z",
   "official": true,
   "versionString": "3.5.3",
@@ -11305,7 +11305,7 @@
       "id": "cgCroTrOmiv-",
       "name": "Hive Bond",
       "aliasedRuleId": "sboUNnEXK9B8",
-      "description": "Units where all models have this rule get +1 to morale test rolls from shooting/melee.",
+      "description": "Units where all models have this rule get +1 to morale test rolls triggered by shooting/melee.",
       "hasRating": false,
       "coreType": null,
       "targetType": 1

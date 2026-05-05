@@ -745,6 +745,92 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "FmIGYwF",
+      "cost": 40,
+      "name": "Sniper",
+      "size": 1,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "FAMbscK5vhSu",
+          "name": "Scout",
+          "label": "Scout"
+        },
+        {
+          "id": "9jyvRoBODD-O",
+          "name": "Stealth",
+          "label": "Stealth"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "5bc5xNmd5M14",
+          "name": "Highborn",
+          "label": "Highborn"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "2Ox5FTEq",
+          "name": "Sniper Rifle",
+          "type": "ArmyBookWeapon",
+          "range": 30,
+          "attacks": 1,
+          "weaponId": "2Ox5FTEq",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "Zx4mWN0SbmK8",
+              "name": "Reliable",
+              "label": "Reliable"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Sniper Rifle (30\", A1, AP(1), Reliable)",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "WPM5pFS4",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "4o5CBBZC",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "CCW (A1)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "ZWNjt"
+      ],
+      "genericName": "Snipers",
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "G02X_NY",
       "cost": 40,
       "name": "Stinger",
@@ -913,92 +999,6 @@
       "genericName": "Psychic Group",
       "hasCustomRule": false,
       "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 3,
-      "disabledUpgradeSections": []
-    },
-    {
-      "id": "FmIGYwF",
-      "cost": 45,
-      "name": "Sniper",
-      "size": 1,
-      "bases": {
-        "round": "25",
-        "square": "25"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "FAMbscK5vhSu",
-          "name": "Scout",
-          "label": "Scout"
-        },
-        {
-          "id": "9jyvRoBODD-O",
-          "name": "Stealth",
-          "label": "Stealth"
-        },
-        {
-          "id": "JSKVyurtWIyW",
-          "name": "Strider",
-          "label": "Strider"
-        },
-        {
-          "id": "5bc5xNmd5M14",
-          "name": "Highborn",
-          "label": "Highborn"
-        }
-      ],
-      "valid": true,
-      "defense": 5,
-      "quality": 4,
-      "weapons": [
-        {
-          "id": "2Ox5FTEq",
-          "name": "Sniper Rifle",
-          "type": "ArmyBookWeapon",
-          "range": 30,
-          "attacks": 1,
-          "weaponId": "2Ox5FTEq",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "17crjK7P6_w6",
-              "name": "AP",
-              "rating": 1,
-              "label": "AP(1)"
-            },
-            {
-              "type": "ArmyBookRule",
-              "id": "Zx4mWN0SbmK8",
-              "name": "Reliable",
-              "label": "Reliable"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Sniper Rifle (30\", A1, AP(1), Reliable)",
-          "count": 1,
-          "originalCount": 1
-        },
-        {
-          "id": "WPM5pFS4",
-          "name": "CCW",
-          "type": "ArmyBookWeapon",
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "4o5CBBZC",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "CCW (A1)",
-          "count": 1,
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [
-        "ZWNjt"
-      ],
-      "genericName": "Snipers",
-      "hasCustomRule": false,
       "hasBalanceInvalid": false,
       "originalSize": 3,
       "disabledUpgradeSections": []
@@ -1551,7 +1551,7 @@
       "hint": "Leader Upgrades",
       "sections": [
         {
-          "id": "dr6W73L",
+          "id": "wQITmi-",
           "uid": "5uRpV",
           "label": "Replace CCW and Combat Shield",
           "options": [
@@ -1613,7 +1613,7 @@
           ]
         },
         {
-          "id": "-vc_wDP",
+          "id": "_3gcNih",
           "uid": "ktRRVSU",
           "label": "Replace Master Shard Pistol",
           "options": [
@@ -2033,7 +2033,7 @@
           ]
         },
         {
-          "id": "6Jf9tvs",
+          "id": "YJrb6sF",
           "uid": "oUwyFGw",
           "label": "Replace CCW",
           "options": [
@@ -2216,7 +2216,7 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 20
+                  "cost": 15
                 },
                 {
                   "unitId": "Uvc9UHr",
@@ -2258,7 +2258,7 @@
           ]
         },
         {
-          "id": "rkmbRVq",
+          "id": "I1c6qua",
           "uid": "jJdE6",
           "label": "Upgrade with",
           "options": [
@@ -2268,11 +2268,11 @@
               "costs": [
                 {
                   "unitId": "9zCsahE",
-                  "cost": 20
+                  "cost": 15
                 },
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 20
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2308,7 +2308,7 @@
       "hint": "Elven Noble",
       "sections": [
         {
-          "id": "26DQ6gE",
+          "id": "8BnjM30",
           "uid": "L_sFgCY",
           "label": "Upgrade with one",
           "options": [
@@ -2567,7 +2567,7 @@
       "hint": "Elite Protector",
       "sections": [
         {
-          "id": "hT_GRT0",
+          "id": "fls0DAq",
           "uid": "8kVUEOs",
           "label": "Upgrade with one",
           "options": [
@@ -2606,7 +2606,7 @@
               "costs": [
                 {
                   "unitId": "Uvc9UHr",
-                  "cost": 25
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2713,7 +2713,7 @@
       "hint": "Specialists - Noble",
       "sections": [
         {
-          "id": "qvMO91C",
+          "id": "7klY4qf",
           "uid": "Zzcey9Q",
           "label": "Upgrade with one",
           "options": [
@@ -2913,7 +2913,7 @@
       "hint": "Acolytes",
       "sections": [
         {
-          "id": "qEnOb8Z",
+          "id": "BSLtDIy",
           "uid": "bvENwsA",
           "label": "Replace any Energy Sword",
           "options": [
@@ -2966,7 +2966,7 @@
           ]
         },
         {
-          "id": "p0Fccx6",
+          "id": "NZe9T5e",
           "uid": "PbveOcZ",
           "label": "Upgrade with",
           "options": [
@@ -3040,7 +3040,7 @@
       "hint": "Strikers",
       "sections": [
         {
-          "id": "y7bZp7v",
+          "id": "lD_tZmA",
           "uid": "O4pBdhd",
           "label": "Replace Shard Pistol",
           "options": [
@@ -3136,7 +3136,7 @@
           ]
         },
         {
-          "id": "NWCoot8",
+          "id": "fNtrBx6",
           "uid": "4s0iNv2",
           "label": "Replace CCW",
           "options": [
@@ -3191,7 +3191,7 @@
           ]
         },
         {
-          "id": "llpz6I6",
+          "id": "YJu-jw1",
           "uid": "0dh-l",
           "label": "Upgrade with",
           "options": [
@@ -3202,7 +3202,7 @@
               "costs": [
                 {
                   "unitId": "BPcH3j1",
-                  "cost": 20
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3240,7 +3240,7 @@
       "hint": "Protectors",
       "sections": [
         {
-          "id": "5Q_5CMX",
+          "id": "Os5srTR",
           "uid": "lyOVNn3",
           "label": "Replace Shardgun",
           "options": [
@@ -3497,7 +3497,7 @@
       "hint": "Retributors",
       "sections": [
         {
-          "id": "2lJXj-T",
+          "id": "TsizSN6",
           "uid": "0qfO7",
           "label": "Replace Energy Swords and Combat Shield",
           "options": [
@@ -3557,7 +3557,7 @@
           ]
         },
         {
-          "id": "XY3u9lY",
+          "id": "njgj3VG",
           "uid": "ftwEp12",
           "label": "Replace Shard Carbine",
           "options": [
@@ -3605,7 +3605,7 @@
           ]
         },
         {
-          "id": "8mnrPwx",
+          "id": "8oLGkFq",
           "uid": "lxdIc1d",
           "label": "Replace Energy Sword and Combat Shield",
           "options": [
@@ -3759,7 +3759,7 @@
           ]
         },
         {
-          "id": "woK_pVS",
+          "id": "i56Ay3_",
           "uid": "EpwNwvH",
           "label": "Replace Shard Pistol",
           "options": [
@@ -3801,7 +3801,7 @@
           ]
         },
         {
-          "id": "aTMrEXJ",
+          "id": "LNT6qfH",
           "uid": "Y4Gv4ws6",
           "label": "Upgrade with",
           "options": [
@@ -3849,7 +3849,7 @@
       "hint": "Revenants",
       "sections": [
         {
-          "id": "Thb5dse",
+          "id": "8S7hzFU",
           "uid": "A6T88TC",
           "label": "Replace Shard Pistol and Energy Sword",
           "options": [
@@ -4003,7 +4003,7 @@
           ]
         },
         {
-          "id": "r-e7p2H",
+          "id": "F__GQKc",
           "uid": "4qyNVHD",
           "label": "Replace Sgt. Energy Sword",
           "options": [
@@ -4056,7 +4056,7 @@
           ]
         },
         {
-          "id": "baTfmzy",
+          "id": "9clG37p",
           "uid": "Ki9nGoj",
           "label": "Upgrade with",
           "options": [
@@ -4106,7 +4106,7 @@
       "hint": "Vanquishers",
       "sections": [
         {
-          "id": "mUi7TbW",
+          "id": "9CD3P7L",
           "uid": "5VbZE3r",
           "label": "Replace any Surge Rocket",
           "options": [
@@ -4163,7 +4163,7 @@
           ]
         },
         {
-          "id": "nUmoTGE",
+          "id": "nz4oJVd",
           "uid": "PLS6wbG",
           "label": "Replace Surge Rocket",
           "options": [
@@ -4261,7 +4261,7 @@
           ]
         },
         {
-          "id": "nmd0Azm",
+          "id": "pScxUsD",
           "uid": "Lhq9p-6U",
           "label": "Upgrade with",
           "options": [
@@ -4309,7 +4309,7 @@
       "hint": "Scorchers",
       "sections": [
         {
-          "id": "C9BTYZS",
+          "id": "rLmiNre",
           "uid": "FbsV-6x",
           "label": "Replace Heavy Flamer",
           "options": [
@@ -4408,7 +4408,7 @@
       "hint": "Stingers",
       "sections": [
         {
-          "id": "85ykcCD",
+          "id": "3M6dbWO",
           "uid": "ILQaMF0",
           "label": "Replace Shard Pistol and Stinger Blade",
           "options": [
@@ -4518,7 +4518,7 @@
           ]
         },
         {
-          "id": "IUnTECp",
+          "id": "AkKue4-",
           "uid": "uMHKeid",
           "label": "Replace Sgt. Shard Pistol",
           "options": [
@@ -4566,7 +4566,7 @@
           ]
         },
         {
-          "id": "KSR1mei",
+          "id": "RbxHNKN",
           "uid": "2tcxY16",
           "label": "Replace Sgt. Stinger Blade",
           "options": [
@@ -4630,7 +4630,7 @@
       "hint": "Shifters",
       "sections": [
         {
-          "id": "rHyBaCS",
+          "id": "up6IQ1s",
           "uid": "jiLxnoG",
           "label": "Replace Web Spinner",
           "options": [
@@ -4715,7 +4715,7 @@
           ]
         },
         {
-          "id": "0QWe9QW",
+          "id": "se9BqUk",
           "uid": "Arznc4j",
           "label": "Replace CCW",
           "options": [
@@ -4726,7 +4726,7 @@
               "costs": [
                 {
                   "unitId": "vQBMFLU",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -4770,7 +4770,7 @@
       "hint": "Gliders",
       "sections": [
         {
-          "id": "ZRwH28N",
+          "id": "Fu0oL8g",
           "uid": "63G9k",
           "label": "Replace Laser Pistols and CCW",
           "options": [
@@ -4829,7 +4829,7 @@
           ]
         },
         {
-          "id": "lctxiuL",
+          "id": "RsKn5_P",
           "uid": "hYkS-Cf",
           "label": "Replace Laser Pistol and CCW",
           "options": [
@@ -4956,7 +4956,7 @@
           ]
         },
         {
-          "id": "M9Du44i",
+          "id": "0BKm6g6",
           "uid": "UGRSh",
           "label": "Replace Laser Pistol",
           "options": [
@@ -5038,7 +5038,7 @@
           ]
         },
         {
-          "id": "qO64ljw",
+          "id": "ILIl8se",
           "uid": "iEBvKix",
           "label": "Upgrade with",
           "options": [
@@ -5116,7 +5116,7 @@
       "hint": "Elemental Protectors",
       "sections": [
         {
-          "id": "--z3zHs",
+          "id": "vmHV7rB",
           "uid": "cteC-",
           "label": "Replace Distortion Gun",
           "options": [
@@ -5172,7 +5172,7 @@
       "hint": "Jetbike Protectors",
       "sections": [
         {
-          "id": "eAGNSlj",
+          "id": "9JcIbQ0",
           "uid": "HX4N5DlyB_",
           "label": "Upgrade with",
           "options": [
@@ -5220,7 +5220,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "L55O6nX",
+          "id": "Th1D-tL",
           "uid": "OA2fkfm",
           "label": "Replace any Mounted Shardgun and Sniper Rifle",
           "options": [
@@ -5313,10 +5313,42 @@
           ]
         },
         {
-          "id": "Ufp6Fny",
+          "id": "9elA7GZ",
           "uid": "IXCqc",
           "label": "Upgrade with one",
           "options": [
+            {
+              "uid": "TxxNG",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "aMQa9nT",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Hologram Field",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Hologram Field (Stealth Aura)",
+                  "content": [
+                    {
+                      "id": "8haZ36fXvnzn",
+                      "name": "Stealth Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Hologram Field (Stealth Aura)",
+              "parentPackageUid": "P1",
+              "parentSectionUid": "IXCqc",
+              "parentSectionId": "IXCqc",
+              "id": "TxxNG"
+            },
             {
               "uid": "plVtT_aDVy",
               "type": "ArmyBookUpgradeOption",
@@ -5345,38 +5377,6 @@
               "label": "Flicker Shield (Regeneration Aura)",
               "parentSectionId": "IXCqc",
               "id": "plVtT_aDVy"
-            },
-            {
-              "uid": "TxxNG",
-              "cost": 25,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "aMQa9nT",
-                  "cost": 20
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Hologram Field",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Hologram Field (Stealth Aura)",
-                  "content": [
-                    {
-                      "id": "8haZ36fXvnzn",
-                      "name": "Stealth Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Hologram Field (Stealth Aura)",
-              "parentPackageUid": "P1",
-              "parentSectionUid": "IXCqc",
-              "parentSectionId": "IXCqc",
-              "id": "TxxNG"
             }
           ],
           "parentPackageUid": "P1",
@@ -5395,7 +5395,7 @@
       "hint": "Jetbike Strikers",
       "sections": [
         {
-          "id": "S5osANi",
+          "id": "cLMa8T3",
           "uid": "ctGS5",
           "label": "Replace Shard Pistols and CCW",
           "options": [
@@ -5448,7 +5448,7 @@
           ]
         },
         {
-          "id": "-4q9WEL",
+          "id": "rEnDQrU",
           "uid": "UoZDM",
           "label": "Replace Energy Lance",
           "options": [
@@ -5576,10 +5576,39 @@
           ]
         },
         {
-          "id": "IwyfWLf",
+          "id": "X1lkEZI",
           "uid": "pd5NA",
           "label": "Upgrade with one",
           "options": [
+            {
+              "uid": "KARJkX2gbv",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "c2SKcZS",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Hologram Field",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Hologram Field (Stealth Aura)",
+                  "content": [
+                    {
+                      "id": "8haZ36fXvnzn",
+                      "name": "Stealth Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Hologram Field (Stealth Aura)",
+              "parentSectionId": "pd5NA",
+              "id": "KARJkX2gbv"
+            },
             {
               "uid": "AJ-fA",
               "type": "ArmyBookUpgradeOption",
@@ -5608,35 +5637,6 @@
               "label": "Master-Crafted Engines (Scout Aura)",
               "parentSectionId": "pd5NA",
               "id": "AJ-fA"
-            },
-            {
-              "uid": "KARJkX2gbv",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "c2SKcZS",
-                  "cost": 20
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Hologram Field",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Hologram Field (Stealth Aura)",
-                  "content": [
-                    {
-                      "id": "8haZ36fXvnzn",
-                      "name": "Stealth Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Hologram Field (Stealth Aura)",
-              "parentSectionId": "pd5NA",
-              "id": "KARJkX2gbv"
             }
           ],
           "parentPackageUid": "XLPem",
@@ -5655,7 +5655,7 @@
       "hint": "Elemental Strikers",
       "sections": [
         {
-          "id": "IXtQV5X",
+          "id": "JZdQCDV",
           "uid": "ayah8",
           "label": "Replace Killing Axes and Combat Shield",
           "options": [
@@ -5708,7 +5708,7 @@
           ]
         },
         {
-          "id": "RwzVzOk",
+          "id": "SH9qYCK",
           "uid": "9RA5s",
           "label": "Replace any Killing Axe",
           "options": [
@@ -5806,7 +5806,7 @@
       "hint": "Snipers",
       "sections": [
         {
-          "id": "k4PrOsv",
+          "id": "S-3bvNe",
           "uid": "gG8d_",
           "label": "Upgrade with",
           "options": [
@@ -5854,7 +5854,7 @@
       "hint": "Specialists - Protector",
       "sections": [
         {
-          "id": "fwkb7YP",
+          "id": "LvlKZI4",
           "uid": "BCL5NyjN",
           "label": "Upgrade with one",
           "options": [
@@ -6691,7 +6691,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:21:52.545Z",
+  "modifiedAt": "2026-05-05T08:02:23.616Z",
   "editedAt": "2026-04-20T18:58:03.600Z",
   "official": true,
   "versionString": "3.5.3",

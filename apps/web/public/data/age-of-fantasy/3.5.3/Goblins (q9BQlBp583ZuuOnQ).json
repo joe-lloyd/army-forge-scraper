@@ -16,7 +16,7 @@
   "units": [
     {
       "id": "DQ5jgGa",
-      "cost": 110,
+      "cost": 105,
       "name": "Troll Boss",
       "size": 1,
       "bases": {
@@ -175,7 +175,7 @@
     },
     {
       "id": "3CdeUMf",
-      "cost": 210,
+      "cost": 175,
       "name": "Shaman Circle",
       "size": 5,
       "bases": {
@@ -319,7 +319,7 @@
     },
     {
       "id": "HypLKLk",
-      "cost": 130,
+      "cost": 105,
       "name": "Cave-Beast Herd",
       "size": 5,
       "bases": {
@@ -460,7 +460,7 @@
     },
     {
       "id": "ahILLgo",
-      "cost": 60,
+      "cost": 55,
       "name": "Nasty Assassins",
       "size": 3,
       "bases": {
@@ -534,7 +534,7 @@
     },
     {
       "id": "wWfmdi2",
-      "cost": 100,
+      "cost": 90,
       "name": "Fanatics",
       "size": 3,
       "bases": {
@@ -708,7 +708,7 @@
     },
     {
       "id": "QF59XD5",
-      "cost": 175,
+      "cost": 170,
       "name": "Trolls",
       "size": 3,
       "bases": {
@@ -950,7 +950,7 @@
     },
     {
       "id": "dBNP3MI",
-      "cost": 145,
+      "cost": 140,
       "name": "Great Wolf Riders",
       "size": 3,
       "bases": {
@@ -1038,7 +1038,7 @@
     },
     {
       "id": "YrYb72R",
-      "cost": 300,
+      "cost": 275,
       "name": "Giant Cave-Beast",
       "size": 1,
       "bases": {
@@ -1142,7 +1142,7 @@
     },
     {
       "id": "4OMUbC2",
-      "cost": 265,
+      "cost": 260,
       "name": "Giant Spider",
       "size": 1,
       "bases": {
@@ -1255,7 +1255,7 @@
     },
     {
       "id": "_-4Y87q",
-      "cost": 265,
+      "cost": 260,
       "name": "Troll Giant",
       "size": 1,
       "bases": {
@@ -1366,7 +1366,7 @@
     },
     {
       "id": "Q4emtC6",
-      "cost": 120,
+      "cost": 115,
       "name": "Wolf Chariot",
       "size": 1,
       "bases": {
@@ -1575,7 +1575,7 @@
     },
     {
       "id": "zdR7M6l",
-      "cost": 130,
+      "cost": 125,
       "name": "Pump Plane",
       "size": 1,
       "bases": {
@@ -1621,7 +1621,7 @@
           "label": "Mischievous"
         }
       ],
-      "valid": false,
+      "valid": true,
       "defense": 3,
       "quality": 5,
       "weapons": [
@@ -1662,24 +1662,26 @@
         {
           "id": "YFXxUgQE",
           "name": "Crew Attacks",
+          "type": "ArmyBookWeapon",
           "count": 1,
+          "range": 0,
           "attacks": 2,
           "weaponId": "MsFml841",
           "specialRules": [],
+          "attacksMultiplier": 1,
           "label": "Crew Attacks (A2)",
-          "originalCount": 1,
-          "type": "ArmyBookWeapon"
+          "originalCount": 1
         }
       ],
       "upgrades": [],
       "genericName": "Fanatic Plane",
       "hasCustomRule": false,
-      "hasBalanceInvalid": true,
+      "hasBalanceInvalid": false,
       "disabledUpgradeSections": []
     },
     {
       "id": "hGp-X7M",
-      "cost": 95,
+      "cost": 90,
       "name": "Goblin Artillery",
       "size": 1,
       "bases": {
@@ -1775,7 +1777,7 @@
       "hint": "Goblin Leader",
       "sections": [
         {
-          "id": "8naFisZ",
+          "id": "RDYe4zI",
           "uid": "QEuodiy",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1923,7 +1925,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "MhIwX30"
                 }
               ],
@@ -1962,7 +1964,7 @@
           ]
         },
         {
-          "id": "r7oHDN9",
+          "id": "QU7zTzt",
           "uid": "ySuPu",
           "label": "Upgrade with one",
           "options": [
@@ -1999,7 +2001,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 25,
                   "unitId": "MhIwX30"
                 }
               ],
@@ -2036,7 +2038,7 @@
           }
         },
         {
-          "id": "QT1pq_G",
+          "id": "jFFetD4",
           "uid": "T5l2tXXz",
           "label": "Replace Spider Clan",
           "options": [
@@ -2115,7 +2117,7 @@
           ]
         },
         {
-          "id": "hbnBS66",
+          "id": "zbtSNG6",
           "uid": "YWic_Bu",
           "label": "Upgrade with one",
           "options": [
@@ -2410,7 +2412,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 60,
+                  "cost": 50,
                   "unitId": "MhIwX30"
                 }
               ],
@@ -2528,7 +2530,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 285,
+                  "cost": 260,
                   "unitId": "MhIwX30"
                 }
               ],
@@ -2624,10 +2626,47 @@
       "hint": "Troll Boss",
       "sections": [
         {
-          "id": "mE0n7vM",
+          "id": "lkSx2Ib",
           "uid": "CKsGUAK",
           "label": "Replace Heavy Hand Weapon",
           "options": [
+            {
+              "uid": "nq95rp2",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "DQ5jgGa"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gfFHInft",
+                  "name": "Heavy Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "_FOfqfiL",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Great Weapon (A4, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Great Weapon (A4, AP(4))",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "CKsGUAK",
+              "parentSectionId": "CKsGUAK",
+              "id": "nq95rp2"
+            },
             {
               "uid": "EkbWy",
               "cost": 20,
@@ -2675,43 +2714,6 @@
               "parentSectionUid": "CKsGUAK",
               "parentSectionId": "CKsGUAK",
               "id": "EkbWy"
-            },
-            {
-              "uid": "nq95rp2",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 40,
-                  "unitId": "DQ5jgGa"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "gfFHInft",
-                  "name": "Heavy Great Weapon",
-                  "type": "ArmyBookWeapon",
-                  "range": 0,
-                  "attacks": 4,
-                  "weaponId": "_FOfqfiL",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Heavy Great Weapon (A4, AP(4))",
-                  "count": 1
-                }
-              ],
-              "label": "Heavy Great Weapon (A4, AP(4))",
-              "parentPackageUid": "B1",
-              "parentSectionUid": "CKsGUAK",
-              "parentSectionId": "CKsGUAK",
-              "id": "nq95rp2"
             }
           ],
           "parentPackageUid": "B1",
@@ -2729,7 +2731,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "kcMSCxP",
+          "id": "BhJQUus",
           "uid": "4O3HF3X",
           "label": "Upgrade up to three models with one",
           "options": [
@@ -2854,7 +2856,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "uVc_FKD",
+          "id": "U3NcOnQ",
           "uid": "D0UPSBz",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2864,7 +2866,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 30,
                   "unitId": "NfGAfXW"
                 }
               ],
@@ -2900,7 +2902,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 65,
+                  "cost": 40,
                   "unitId": "NfGAfXW"
                 }
               ],
@@ -2948,7 +2950,7 @@
       "hint": "Cave-Beast Herd",
       "sections": [
         {
-          "id": "pwgFrSr",
+          "id": "S0WdG9N",
           "uid": "XkbUmjk",
           "label": "Upgrade all models with",
           "options": [
@@ -3001,7 +3003,7 @@
       "hint": "Trolls",
       "sections": [
         {
-          "id": "IaezMPA",
+          "id": "2Oc9900",
           "uid": "Rh_FVkf",
           "label": "Replace any Heavy Hand Weapon",
           "options": [
@@ -3059,7 +3061,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "QF59XD5"
                 }
               ],
@@ -3109,7 +3111,7 @@
       "hint": "Shooters",
       "sections": [
         {
-          "id": "VXOTvgO",
+          "id": "22HYD9R",
           "uid": "w-BvhSq",
           "label": "Replace all Shortbows",
           "options": [
@@ -3119,7 +3121,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 65,
+                  "cost": 35,
                   "unitId": "voUEnj5"
                 }
               ],
@@ -3160,7 +3162,7 @@
           ]
         },
         {
-          "id": "sad-o6k",
+          "id": "Lit2LhP",
           "uid": "6bbV6QdVwk",
           "label": "Replace one Crossbow",
           "options": [
@@ -3169,7 +3171,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 20,
                   "unitId": "voUEnj5"
                 }
               ],
@@ -3221,7 +3223,7 @@
       "hint": "Beast Riders",
       "sections": [
         {
-          "id": "PKuBjYe",
+          "id": "JmabIgs",
           "uid": "kFwU6Gx",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -3231,7 +3233,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "6z-hbTL"
                 }
               ],
@@ -3273,7 +3275,7 @@
           ]
         },
         {
-          "id": "XpUgUxO",
+          "id": "aCI-7HP",
           "uid": "D1nZvrc",
           "label": "Upgrade all models with",
           "options": [
@@ -3317,7 +3319,7 @@
           }
         },
         {
-          "id": "PQPeQm9",
+          "id": "C7vjWuc",
           "uid": "1RmQGxP-Vi",
           "label": "Replace all Spider Mounts",
           "options": [
@@ -3377,7 +3379,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 15,
                   "unitId": "6z-hbTL"
                 }
               ],
@@ -3441,7 +3443,7 @@
       "hint": "Troll Giant",
       "sections": [
         {
-          "id": "K07vJQx",
+          "id": "tw5VFhk",
           "uid": "w_kVXeu",
           "label": "Replace Giant Club",
           "options": [
@@ -3500,7 +3502,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 45,
+                  "cost": 10,
                   "unitId": "_-4Y87q"
                 }
               ],
@@ -3539,7 +3541,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 75,
+                  "cost": 35,
                   "unitId": "_-4Y87q"
                 }
               ],
@@ -3601,7 +3603,7 @@
       "hint": "Giant Spider",
       "sections": [
         {
-          "id": "H6O7_Qs",
+          "id": "BAVTEkR",
           "uid": "7lNi0v7",
           "label": "Replace Spider Shrine",
           "options": [
@@ -3680,7 +3682,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 140,
+                  "cost": 75,
                   "unitId": "4OMUbC2"
                 }
               ],
@@ -3721,7 +3723,7 @@
           ]
         },
         {
-          "id": "85OjmLW",
+          "id": "HaG8aWG",
           "uid": "ioEeq",
           "label": "Replace Great Acid Fang",
           "options": [
@@ -3799,7 +3801,7 @@
       "hint": "Wolf Chariot",
       "sections": [
         {
-          "id": "GPgehZI",
+          "id": "SB2qP2O",
           "uid": "3X2DKYX",
           "label": "Replace Spear Crew",
           "options": [
@@ -3848,7 +3850,7 @@
       "hint": "Pump Wagon",
       "sections": [
         {
-          "id": "NtiVRcd",
+          "id": "0NgvOsP",
           "uid": "qX84zKv",
           "label": "Replace Crew Attacks",
           "options": [
@@ -3897,7 +3899,7 @@
       "hint": "Goblin Artillery",
       "sections": [
         {
-          "id": "Kp-wlip",
+          "id": "nwSb8vK",
           "uid": "OJYm3yn",
           "label": "Replace Scrap-Shooter",
           "options": [
@@ -3956,7 +3958,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 25,
                   "unitId": "hGp-X7M"
                 }
               ],
@@ -3999,7 +4001,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 30,
                   "unitId": "hGp-X7M"
                 }
               ],
@@ -4057,7 +4059,7 @@
       "hint": "Assassins",
       "sections": [
         {
-          "id": "u3_e2jQ",
+          "id": "EeAs6Ve",
           "uid": "lQIMA",
           "label": "Upgrade all models with one",
           "options": [
@@ -4147,7 +4149,7 @@
       "hint": "Goblin Clans",
       "sections": [
         {
-          "id": "8mnl7J8",
+          "id": "dnSo9DO",
           "uid": "EGY6J",
           "label": "Replace all Bat Clans",
           "options": [
@@ -4240,7 +4242,7 @@
       "hint": "Troll Tribes",
       "sections": [
         {
-          "id": "m24mVri",
+          "id": "Us8f1N_",
           "uid": "Iyx6jQs7",
           "label": "Replace all Cave Tribes",
           "options": [
@@ -4287,7 +4289,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 20,
                   "unitId": "QF59XD5"
                 }
               ],
@@ -4335,7 +4337,7 @@
       "hint": "Shroom-Sniffers",
       "sections": [
         {
-          "id": "haHsmny",
+          "id": "vQG01PL",
           "uid": "4DrwbhXbOG",
           "label": "Upgrade one model with",
           "options": [
@@ -4386,7 +4388,7 @@
       "hint": "Giant Cave-Beast",
       "sections": [
         {
-          "id": "YbpnsGC",
+          "id": "5q2Rcgc",
           "uid": "qwmfqtiR9x",
           "label": "Upgrade with",
           "options": [
@@ -4395,7 +4397,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 180,
+                  "cost": 110,
                   "unitId": "YrYb72R"
                 }
               ],
@@ -4440,7 +4442,7 @@
       "hint": "Specialists - Goblin",
       "sections": [
         {
-          "id": "MhA8iCd",
+          "id": "gkdbuGQ",
           "uid": "emHHCMa9",
           "label": "Upgrade with one",
           "options": [
@@ -4651,7 +4653,7 @@
       "hint": "Troll Tribes (One Model)",
       "sections": [
         {
-          "id": "F9Xy6xQ",
+          "id": "jVLNolY",
           "uid": "QqSo16iC",
           "label": "Replace Cave Tribe",
           "options": [
@@ -4706,7 +4708,7 @@
                   "unitId": "DQ5jgGa"
                 },
                 {
-                  "cost": 35,
+                  "cost": 30,
                   "unitId": "_-4Y87q"
                 }
               ],
@@ -4751,7 +4753,7 @@
       "hint": "Mob Madness",
       "sections": [
         {
-          "id": "YxnT64U",
+          "id": "nogZ6S6",
           "uid": "1spFIyAt",
           "label": "Upgrade all models with",
           "options": [
@@ -4814,7 +4816,7 @@
       "hint": "Specialists - Troll",
       "sections": [
         {
-          "id": "5EcreBL",
+          "id": "GWwPr22",
           "uid": "nT2DEwH8",
           "label": "Upgrade with one",
           "options": [
@@ -4855,7 +4857,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 20,
                   "unitId": "DQ5jgGa"
                 }
               ],
@@ -4994,7 +4996,7 @@
       "hint": "Sniff Out Threats",
       "sections": [
         {
-          "id": "lCcf-M7",
+          "id": "UXpECE5",
           "uid": "zqDxcxRK",
           "label": "Upgrade with",
           "options": [
@@ -5645,7 +5647,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:34:15.236Z",
+  "modifiedAt": "2026-05-05T08:02:17.737Z",
   "editedAt": "2026-04-30T09:34:15.236Z",
   "official": true,
   "versionString": "3.5.3",
@@ -5663,8 +5665,8 @@
       "https://www.etsy.com/shop/onepagerules"
     ]
   },
-  "balanceValid": false,
-  "balanceValidReason": 1,
+  "balanceValid": true,
+  "balanceValidReason": 0,
   "loreUrl": "https://www.onepagerules.com/factions/goblins",
   "voted": null,
   "specialRules": [

@@ -15,7 +15,7 @@
     {
       "id": "Vw3Vvws",
       "key": "new-unit",
-      "cost": 40,
+      "cost": 35,
       "name": "Raider Leader",
       "size": 1,
       "bases": {
@@ -178,57 +178,6 @@
       ],
       "hasBalanceInvalid": false,
       "originalSize": 1,
-      "disabledUpgradeSections": []
-    },
-    {
-      "id": "I2Syvun",
-      "key": "new-unit",
-      "cost": 15,
-      "name": "Raider Veteran Fighter",
-      "size": 1,
-      "bases": {
-        "round": "25",
-        "square": "25"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "JSKVyurtWIyW",
-          "name": "Strider",
-          "label": "Strider"
-        },
-        {
-          "id": "a467r6cU8RF6",
-          "name": "Raider",
-          "label": "Raider"
-        }
-      ],
-      "valid": true,
-      "defense": 5,
-      "quality": 4,
-      "weapons": [
-        {
-          "id": "au3VB",
-          "name": "Hand Weapons",
-          "type": "ArmyBookWeapon",
-          "count": 2,
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "SWnfRBdJ",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "2x Hand Weapons (A1)",
-          "originalCount": 2
-        }
-      ],
-      "upgrades": [
-        "c7_d5"
-      ],
-      "genericName": "Wild Veteran Fighters",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 5,
       "disabledUpgradeSections": []
     },
     {
@@ -496,7 +445,7 @@
     {
       "id": "ka_P8jM",
       "key": "new-unit",
-      "cost": 35,
+      "cost": 30,
       "name": "Raider Fighters",
       "size": 3,
       "bases": {
@@ -670,6 +619,57 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "I2Syvun",
+      "key": "new-unit",
+      "cost": 45,
+      "name": "Raider Veteran Fighters",
+      "size": 3,
+      "bases": {
+        "round": "25",
+        "square": "25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a467r6cU8RF6",
+          "name": "Raider",
+          "label": "Raider"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "au3VB",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 6,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "SWnfRBdJ",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "2x Hand Weapon (A1)",
+          "originalCount": 6
+        }
+      ],
+      "upgrades": [
+        "c7_d5"
+      ],
+      "genericName": "Wild Veteran Fighters",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "knAVwhs",
       "cost": 50,
       "name": "Raider Great Prowler",
@@ -746,7 +746,7 @@
       "hint": "Leader",
       "sections": [
         {
-          "id": "ne-k2BS",
+          "id": "vy1rQEO",
           "uid": "0j7ey",
           "label": "Replace Heavy Throwing Weapon and Hand Weapon",
           "options": [
@@ -823,7 +823,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -863,7 +863,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 30
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -904,7 +904,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 45
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -944,7 +944,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 65
+                  "cost": 30
                 }
               ],
               "gains": [
@@ -983,7 +983,7 @@
           ]
         },
         {
-          "id": "U1QC6zv",
+          "id": "JqHYRBh",
           "uid": "r08ZQ",
           "label": "Replace Heavy Throwing Weapon",
           "options": [
@@ -1168,7 +1168,7 @@
           ]
         },
         {
-          "id": "BtUtKvJ",
+          "id": "_bhsveW",
           "uid": "PrBZ3",
           "label": "Replace any Hand Weapon",
           "options": [
@@ -1213,7 +1213,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1253,7 +1253,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1288,7 +1288,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 30
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1331,7 +1331,7 @@
           ]
         },
         {
-          "id": "qJM1HDx",
+          "id": "Iwhj4v-",
           "uid": "crB5p",
           "label": "Upgrade with",
           "options": [
@@ -1414,7 +1414,7 @@
       "hint": "Veteran Fighters",
       "sections": [
         {
-          "id": "khB6cLj",
+          "id": "FG4NjDQ",
           "uid": "spZWF",
           "label": "Replace any 2x Hand Weapon",
           "options": [
@@ -1476,9 +1476,9 @@
           ]
         },
         {
-          "id": "W3uycb1",
+          "id": "s-Hie7S",
           "uid": "zjqHh",
-          "label": "Replace 2x Hand Weapon",
+          "label": "Replace one 2x Hand Weapon",
           "options": [
             {
               "uid": "NnMN7r8",
@@ -1523,7 +1523,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1563,7 +1563,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 25
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1604,7 +1604,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 30
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1643,7 +1643,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 40
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -1686,7 +1686,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 50
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -1719,12 +1719,16 @@
           "parentPackageUid": "c7_d5",
           "type": "ArmyBookUpgradeSection",
           "variant": "replace",
+          "affects": {
+            "type": "exactly",
+            "value": 1
+          },
           "targets": [
             "2x Hand Weapon"
           ]
         },
         {
-          "id": "wy4XA-o",
+          "id": "aG8B8yj",
           "uid": "-PdAR",
           "label": "Replace any Heavy Throwing Weapon",
           "options": [
@@ -1776,9 +1780,9 @@
           ]
         },
         {
-          "id": "h166Dui",
+          "id": "rexpwYa",
           "uid": "oFAjZ",
-          "label": "Replace Heavy Throwing Weapon",
+          "label": "Replace one Heavy Throwing Weapon",
           "options": [
             {
               "uid": "YzvoI",
@@ -1857,12 +1861,16 @@
           "parentPackageUid": "c7_d5",
           "type": "ArmyBookUpgradeSection",
           "variant": "replace",
+          "affects": {
+            "type": "exactly",
+            "value": 1
+          },
           "targets": [
             "Heavy Throwing Weapon"
           ]
         },
         {
-          "id": "yC1cjnX",
+          "id": "sJ9nQ6b",
           "uid": "3iZWe",
           "label": "Replace any Dagger",
           "options": [
@@ -1907,7 +1915,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1946,7 +1954,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1980,7 +1988,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 30
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2023,7 +2031,7 @@
           ]
         },
         {
-          "id": "Pf1UOza",
+          "id": "cEkfz9G",
           "uid": "HKNxf",
           "label": "Replace any Hand Weapon",
           "options": [
@@ -2068,7 +2076,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -2108,7 +2116,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -2143,7 +2151,7 @@
               "costs": [
                 {
                   "unitId": "I2Syvun",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2193,7 +2201,7 @@
       "hint": "Veteran Shooters",
       "sections": [
         {
-          "id": "1rjgtS0",
+          "id": "zbbnrpN",
           "uid": "F37T4",
           "label": "Replace any Longbow",
           "options": [
@@ -2251,7 +2259,7 @@
       "hint": "Fighters",
       "sections": [
         {
-          "id": "QjGugxb",
+          "id": "57llHcM",
           "uid": "XyVnQ",
           "label": "Replace any 2x Hand Weapon",
           "options": [
@@ -2306,7 +2314,7 @@
           ]
         },
         {
-          "id": "LkVDdPy",
+          "id": "uYldY6h",
           "uid": "kdAV2",
           "label": "Replace one Throwing Weapons",
           "options": [
@@ -2350,7 +2358,7 @@
               "costs": [
                 {
                   "unitId": "ka_P8jM",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -2393,7 +2401,7 @@
           ]
         },
         {
-          "id": "ptdHFbl",
+          "id": "0UTDQmk",
           "uid": "b_a8d",
           "label": "Replace any Dagger",
           "options": [
@@ -2471,7 +2479,7 @@
               "costs": [
                 {
                   "unitId": "ka_P8jM",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2509,7 +2517,7 @@
               "costs": [
                 {
                   "unitId": "ka_P8jM",
-                  "cost": 20
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2552,7 +2560,7 @@
           ]
         },
         {
-          "id": "WPOEfGf",
+          "id": "qK89Bp7",
           "uid": "XoOJw",
           "label": "Replace any Hand Weapon",
           "options": [
@@ -2629,7 +2637,7 @@
               "costs": [
                 {
                   "unitId": "ka_P8jM",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -2668,7 +2676,7 @@
               "costs": [
                 {
                   "unitId": "ka_P8jM",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -2718,7 +2726,7 @@
       "hint": "Shooters",
       "sections": [
         {
-          "id": "I2sTsSi",
+          "id": "_TIN92v",
           "uid": "GD8ZD",
           "label": "Replace one Shortbows",
           "options": [
@@ -2777,7 +2785,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "ai3sJKm",
+          "id": "1kNVCzP",
           "uid": "oRjXn",
           "label": "Replace Throwing Weapon and Hand Weapon",
           "options": [
@@ -2817,7 +2825,7 @@
           ]
         },
         {
-          "id": "jelIT58",
+          "id": "brd42XH",
           "uid": "s3ghA",
           "label": "Replace Throwing Weapon",
           "options": [
@@ -2920,7 +2928,7 @@
               "costs": [
                 {
                   "unitId": "U8_wfrQ",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -2959,7 +2967,7 @@
           ]
         },
         {
-          "id": "yjlJmHW",
+          "id": "OO8pGZ_",
           "uid": "-hFlY",
           "label": "Replace any Hand Weapon",
           "options": [
@@ -3040,7 +3048,7 @@
               "costs": [
                 {
                   "unitId": "U8_wfrQ",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3079,7 +3087,7 @@
               "costs": [
                 {
                   "unitId": "U8_wfrQ",
-                  "cost": 20
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3122,7 +3130,7 @@
           ]
         },
         {
-          "id": "rB4NUWN",
+          "id": "--HhFTT",
           "uid": "Bf1h1",
           "label": "Upgrade with",
           "options": [
@@ -3206,7 +3214,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "pkeRlXO",
+          "id": "x4z8NLw",
           "uid": "UUfBH",
           "label": "Upgrade with one",
           "options": [
@@ -3274,7 +3282,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3303,7 +3311,7 @@
               "costs": [
                 {
                   "unitId": "Vw3Vvws",
-                  "cost": 20
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3404,7 +3412,7 @@
       "hint": "Plains-Protectors",
       "sections": [
         {
-          "id": "R4xU7UO",
+          "id": "lLA3WJ_",
           "uid": "VJoar",
           "label": "Replace 2x Hand Weapon",
           "options": [
@@ -3451,7 +3459,7 @@
               "costs": [
                 {
                   "unitId": "WFdlIdC",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3491,7 +3499,7 @@
               "costs": [
                 {
                   "unitId": "WFdlIdC",
-                  "cost": 25
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -3533,7 +3541,7 @@
               "costs": [
                 {
                   "unitId": "WFdlIdC",
-                  "cost": 30
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -3572,7 +3580,7 @@
               "costs": [
                 {
                   "unitId": "WFdlIdC",
-                  "cost": 40
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -3615,7 +3623,7 @@
               "costs": [
                 {
                   "unitId": "WFdlIdC",
-                  "cost": 50
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -3653,7 +3661,7 @@
           ]
         },
         {
-          "id": "mSMvWLW",
+          "id": "9s8tlsD",
           "uid": "4puP2",
           "label": "Replace any Hand Weapon",
           "options": [
@@ -3699,7 +3707,7 @@
               "costs": [
                 {
                   "unitId": "WFdlIdC",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -3739,7 +3747,7 @@
               "costs": [
                 {
                   "unitId": "WFdlIdC",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -3780,7 +3788,7 @@
           ]
         },
         {
-          "id": "xRaX8QS",
+          "id": "Qo2LUD3",
           "uid": "GxD1hYQ7",
           "label": "Upgrade with",
           "options": [
@@ -3828,7 +3836,7 @@
       "hint": "Plains-Hunters",
       "sections": [
         {
-          "id": "PJywNJk",
+          "id": "-c24PnP",
           "uid": "xehZU",
           "label": "Replace any Heavy Throwing Weapon",
           "options": [
@@ -3883,7 +3891,7 @@
           ]
         },
         {
-          "id": "4bfSdMT",
+          "id": "hhKKpEI",
           "uid": "ZzYnB",
           "label": "Replace Heavy Throwing Weapon",
           "options": [
@@ -3971,7 +3979,7 @@
           ]
         },
         {
-          "id": "JQDFlMt",
+          "id": "9NrPW7H",
           "uid": "Kv5wC",
           "label": "Replace any Dagger",
           "options": [
@@ -4017,7 +4025,7 @@
               "costs": [
                 {
                   "unitId": "60B4xCR",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4057,7 +4065,7 @@
               "costs": [
                 {
                   "unitId": "60B4xCR",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4092,7 +4100,7 @@
               "costs": [
                 {
                   "unitId": "60B4xCR",
-                  "cost": 30
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -4135,7 +4143,7 @@
           ]
         },
         {
-          "id": "m1tZelD",
+          "id": "XAh2Xkk",
           "uid": "ZdPUqPHV",
           "label": "Upgrade with",
           "options": [
@@ -4183,7 +4191,7 @@
       "hint": "Beast Riders",
       "sections": [
         {
-          "id": "TAyu_B0",
+          "id": "SWDLMMo",
           "uid": "v2eof",
           "label": "Replace any 2x Hand Weapon",
           "options": [
@@ -4238,7 +4246,7 @@
           ]
         },
         {
-          "id": "e2OGaAC",
+          "id": "Zrzfc-8",
           "uid": "rbQX2",
           "label": "Replace any Throwing Weapon",
           "options": [
@@ -4248,7 +4256,7 @@
               "costs": [
                 {
                   "unitId": "z7qDmJs",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -4328,7 +4336,7 @@
           ]
         },
         {
-          "id": "kFn_nwv",
+          "id": "YylW__0",
           "uid": "37m3H",
           "label": "Replace any Dagger",
           "options": [
@@ -4374,7 +4382,7 @@
               "costs": [
                 {
                   "unitId": "z7qDmJs",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4414,7 +4422,7 @@
               "costs": [
                 {
                   "unitId": "z7qDmJs",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4449,7 +4457,7 @@
               "costs": [
                 {
                   "unitId": "z7qDmJs",
-                  "cost": 30
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -4492,7 +4500,7 @@
           ]
         },
         {
-          "id": "q2rThNJ",
+          "id": "tmGQIyz",
           "uid": "Hl_vt",
           "label": "Replace any Hand Weapon",
           "options": [
@@ -4538,7 +4546,7 @@
               "costs": [
                 {
                   "unitId": "z7qDmJs",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -4577,7 +4585,7 @@
               "costs": [
                 {
                   "unitId": "z7qDmJs",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -4612,7 +4620,7 @@
               "costs": [
                 {
                   "unitId": "z7qDmJs",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4655,7 +4663,7 @@
           ]
         },
         {
-          "id": "TBAIcMP",
+          "id": "KhcJtdY",
           "uid": "192E4kM-",
           "label": "Upgrade with",
           "options": [
@@ -4703,7 +4711,7 @@
       "hint": "Raider Great Prowlers",
       "sections": [
         {
-          "id": "azHPk0m",
+          "id": "umWBlI-",
           "uid": "-EynceKd5B",
           "label": "Replace any Heavy Claw",
           "options": [
@@ -4713,7 +4721,7 @@
               "costs": [
                 {
                   "unitId": "knAVwhs",
-                  "cost": 30
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4761,7 +4769,7 @@
           ]
         },
         {
-          "id": "z7XGIUW",
+          "id": "Oo2Y8BJ",
           "uid": "tB_8xiQS",
           "label": "Upgrade with",
           "options": [
@@ -4808,7 +4816,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "p0-4mzN",
+          "id": "aYrd396",
           "uid": "c6CoC06g",
           "label": "Upgrade with one",
           "options": [
@@ -4848,7 +4856,7 @@
               "costs": [
                 {
                   "unitId": "U8_wfrQ",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -4871,6 +4879,36 @@
               "parentSectionId": "c6CoC06g",
               "parentPackageUid": "9s-QFSsb",
               "id": "VjM0odUu"
+            },
+            {
+              "uid": "mpV-R06c",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "U8_wfrQ",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Raider Lookout",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Raider Lookout (Stealth Aura)",
+                  "content": [
+                    {
+                      "id": "8haZ36fXvnzn",
+                      "name": "Stealth Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Raider Lookout (Stealth Aura)",
+              "parentSectionId": "c6CoC06g",
+              "parentPackageUid": "9s-QFSsb",
+              "id": "mpV-R06c"
             },
             {
               "uid": "voBXVxZb",
@@ -4901,36 +4939,6 @@
               "parentSectionId": "c6CoC06g",
               "parentPackageUid": "9s-QFSsb",
               "id": "voBXVxZb"
-            },
-            {
-              "uid": "mpV-R06c",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "U8_wfrQ",
-                  "cost": 20
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Raider Lookout",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Raider Lookout (Stealth Aura)",
-                  "content": [
-                    {
-                      "id": "8haZ36fXvnzn",
-                      "name": "Stealth Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Raider Lookout (Stealth Aura)",
-              "parentSectionId": "c6CoC06g",
-              "parentPackageUid": "9s-QFSsb",
-              "id": "mpV-R06c"
             },
             {
               "uid": "I9EMo9Ms",
@@ -5557,7 +5565,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:22:13.705Z",
+  "modifiedAt": "2026-05-05T08:02:44.765Z",
   "editedAt": "2026-04-28T10:05:04.030Z",
   "official": true,
   "versionString": "3.5.3",

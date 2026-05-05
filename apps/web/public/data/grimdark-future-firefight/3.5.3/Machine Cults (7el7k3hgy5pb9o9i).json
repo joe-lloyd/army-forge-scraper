@@ -546,6 +546,90 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "tT9cuP3",
+      "cost": 50,
+      "name": "Cult Gunner",
+      "size": 1,
+      "type": 0,
+      "bases": {
+        "round": "32",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "S8IZt-d0Sgwk",
+          "name": "Machine-Fog",
+          "label": "Machine-Fog"
+        },
+        {
+          "id": "H9E9PIWpGRdw",
+          "name": "Relentless",
+          "label": "Relentless"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "FR5eKDjG",
+          "name": "Eraser Beam",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 30,
+          "attacks": 1,
+          "weaponId": "KyqJn3hk",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Eraser Beam (30\", A1, AP(1), Blast(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "V2zWbbvw",
+          "name": "Strike",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "Lxf1DaC-",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Strike (A1)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "ge4jOs_z",
+        "zUfo6"
+      ],
+      "genericName": "Cult Gunners",
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "HGxRxOr",
       "cost": 60,
       "name": "Raider Cavalry",
@@ -632,91 +716,6 @@
       "genericName": "Robot Cavalry",
       "hasCustomRule": false,
       "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 3,
-      "disabledUpgradeSections": []
-    },
-    {
-      "id": "tT9cuP3",
-      "cost": 70,
-      "name": "Cult Gunner",
-      "size": 1,
-      "type": 0,
-      "bases": {
-        "round": "32",
-        "square": "30"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "S8IZt-d0Sgwk",
-          "name": "Machine-Fog",
-          "label": "Machine-Fog"
-        },
-        {
-          "id": "H9E9PIWpGRdw",
-          "name": "Relentless",
-          "label": "Relentless"
-        },
-        {
-          "id": "a0YtInGiUDd6",
-          "name": "Tough",
-          "rating": 3,
-          "label": "Tough(3)"
-        }
-      ],
-      "valid": true,
-      "defense": 4,
-      "quality": 4,
-      "weapons": [
-        {
-          "id": "FR5eKDjG",
-          "name": "Eraser Beam",
-          "type": "ArmyBookWeapon",
-          "count": 1,
-          "range": 30,
-          "attacks": 1,
-          "weaponId": "KyqJn3hk",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "17crjK7P6_w6",
-              "name": "AP",
-              "rating": 1,
-              "label": "AP(1)"
-            },
-            {
-              "type": "ArmyBookRule",
-              "id": "w_vX0mi58KKt",
-              "name": "Blast",
-              "rating": 3,
-              "label": "Blast(3)"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Eraser Beam (30\", A1, AP(1), Blast(3))",
-          "originalCount": 1
-        },
-        {
-          "id": "V2zWbbvw",
-          "name": "Strike",
-          "type": "ArmyBookWeapon",
-          "count": 1,
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "Lxf1DaC-",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "Strike (A1)",
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [
-        "ge4jOs_z",
-        "zUfo6"
-      ],
-      "genericName": "Cult Gunners",
-      "hasCustomRule": false,
       "hasBalanceInvalid": false,
       "originalSize": 3,
       "disabledUpgradeSections": []
@@ -886,7 +885,7 @@
       "hint": "Cult Leader",
       "sections": [
         {
-          "id": "aldvmcq",
+          "id": "3rWcDg1",
           "uid": "FdiNqBV",
           "label": "Replace Leader R-Pistol",
           "options": [
@@ -1152,7 +1151,7 @@
           ]
         },
         {
-          "id": "1R2RrtF",
+          "id": "Yogi7Z2",
           "uid": "qsc_Mty",
           "label": "Replace Tech-Sword",
           "options": [
@@ -1318,7 +1317,7 @@
           ]
         },
         {
-          "id": "ab2ZHwe",
+          "id": "JeGRHaY",
           "uid": "mihBb",
           "label": "Upgrade with one",
           "options": [
@@ -1528,7 +1527,7 @@
       "hint": "Cult Rangers",
       "sections": [
         {
-          "id": "kDP7sjs",
+          "id": "rD4sI3z",
           "uid": "jtkAN",
           "label": "Replace R-Fusil",
           "options": [
@@ -1776,7 +1775,7 @@
           ]
         },
         {
-          "id": "NUzF6_m",
+          "id": "uPomjGi",
           "uid": "MibQBmOt",
           "label": "Replace R-Fusil and CCW",
           "options": [
@@ -1842,7 +1841,7 @@
           ]
         },
         {
-          "id": "Icvs0CE",
+          "id": "5xnSODL",
           "uid": "fOf0mEbm",
           "label": "Replace R-Pistol",
           "options": [
@@ -1997,7 +1996,7 @@
           ]
         },
         {
-          "id": "FVmBBDk",
+          "id": "rNG1u1M",
           "uid": "oXtFrUHh",
           "label": "Replace Taser Sword",
           "options": [
@@ -2136,7 +2135,7 @@
       "hint": "Shock Priests",
       "sections": [
         {
-          "id": "Jjg7Uen",
+          "id": "_qWQfKr",
           "uid": "HBKp5-4",
           "label": "Replace Shock Staff",
           "options": [
@@ -2208,7 +2207,7 @@
       "hint": "Sect Stalkers",
       "sections": [
         {
-          "id": "h02L4do",
+          "id": "o9qHE99",
           "uid": "KssNAUH",
           "label": "Replace Dual S-Blade",
           "options": [
@@ -2254,7 +2253,7 @@
           ]
         },
         {
-          "id": "fKEAiIm",
+          "id": "yekxemI",
           "uid": "qNTyplh",
           "label": "Upgrade with",
           "options": [
@@ -2316,7 +2315,7 @@
       "hint": "Sect Infiltrators",
       "sections": [
         {
-          "id": "yK5KmO2",
+          "id": "FX2Ja5i",
           "uid": "UC1mTQ1",
           "label": "Replace F-Blasters and Taser Sword",
           "options": [
@@ -2391,7 +2390,7 @@
       "hint": "Sky Stalkers",
       "sections": [
         {
-          "id": "FgVAboj",
+          "id": "wlLLmP7",
           "uid": "V2B5fR0",
           "label": "Replace F-Carbine",
           "options": [
@@ -2443,7 +2442,7 @@
           ]
         },
         {
-          "id": "dAl62Rv",
+          "id": "lQc43la",
           "uid": "mxNTNak",
           "label": "Replace F-Carbine and CCW",
           "options": [
@@ -2504,7 +2503,7 @@
           ]
         },
         {
-          "id": "ip8I0Lf",
+          "id": "iERnJsP",
           "uid": "ODkU-GS",
           "label": "Upgrade with",
           "options": [
@@ -2551,7 +2550,7 @@
       "hint": "Raider Cavalry",
       "sections": [
         {
-          "id": "wG6Jw6Y",
+          "id": "wBo9aJ0",
           "uid": "yDCGAfm",
           "label": "Replace any Twin P-Pistol",
           "options": [
@@ -2600,7 +2599,7 @@
           ]
         },
         {
-          "id": "dPbBxMG",
+          "id": "4rjDYV_",
           "uid": "ekjvoHy",
           "label": "Replace G-Carbine",
           "options": [
@@ -2648,7 +2647,7 @@
           ]
         },
         {
-          "id": "k_V0Eg0",
+          "id": "Jk4hkC0",
           "uid": "E7mP9Rk",
           "label": "Replace G-Carbine and CCW",
           "options": [
@@ -2775,7 +2774,7 @@
           ]
         },
         {
-          "id": "GDnaqZg",
+          "id": "R1_27Dk",
           "uid": "X9vaIfW",
           "label": "Upgrade with",
           "options": [
@@ -2821,7 +2820,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "ihCnHZs",
+          "id": "DlzYAff",
           "uid": "CXZ2KEzFAe",
           "label": "Replace Cyborg Hoof",
           "options": [
@@ -2870,7 +2869,7 @@
       "hint": "Breacher Cyborgs",
       "sections": [
         {
-          "id": "f7_PWCu",
+          "id": "zdg4a0Q",
           "uid": "DyBty90",
           "label": "Replace any Contortion Cannon",
           "options": [
@@ -2918,7 +2917,7 @@
           ]
         },
         {
-          "id": "x44yiAa",
+          "id": "unzf1Nn",
           "uid": "3mPJtGl",
           "label": "Replace Cyborg Claws",
           "options": [
@@ -2980,7 +2979,7 @@
       "hint": "Destroyer Cyborgs",
       "sections": [
         {
-          "id": "tfupfM-",
+          "id": "9BkZMv0",
           "uid": "p0WKxi1",
           "label": "Replace any G-Cannon",
           "options": [
@@ -3037,7 +3036,7 @@
           ]
         },
         {
-          "id": "4EnLD73",
+          "id": "702srmX",
           "uid": "pwNOmnc",
           "label": "Replace G-Cannon",
           "options": [
@@ -3172,7 +3171,7 @@
       "hint": "Sect Leader",
       "sections": [
         {
-          "id": "SmkZb3W",
+          "id": "Z9ZFo1v",
           "uid": "zKY3v",
           "label": "Replace Leader F-Blaster and Leader Taser Sword",
           "options": [
@@ -3313,7 +3312,7 @@
           ]
         },
         {
-          "id": "eMrduvF",
+          "id": "nxoOHPa",
           "uid": "owP6g",
           "label": "Upgrade with one",
           "options": [
@@ -3408,7 +3407,7 @@
       "hint": "Machine-Creed Canticles",
       "sections": [
         {
-          "id": "UmwxtLG",
+          "id": "QhrDQqL",
           "uid": "Hfkuk",
           "label": "Upgrade with",
           "options": [
@@ -3425,12 +3424,12 @@
                   "cost": 5
                 },
                 {
-                  "unitId": "HGxRxOr",
-                  "cost": 5
-                },
-                {
                   "unitId": "tT9cuP3",
                   "cost": 10
+                },
+                {
+                  "unitId": "HGxRxOr",
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -3468,7 +3467,7 @@
       "hint": "Specialists - Cult Leader",
       "sections": [
         {
-          "id": "yBQ0M3e",
+          "id": "_asBYs0",
           "uid": "ZBvyPvJ-",
           "label": "Upgrade with one",
           "options": [
@@ -3673,7 +3672,7 @@
       "hint": "Specialists - Sect Leader",
       "sections": [
         {
-          "id": "EqNcajm",
+          "id": "Q-UiVUd",
           "uid": "PA1zOWSs",
           "label": "Upgrade with one",
           "options": [
@@ -3848,7 +3847,7 @@
       "hint": "Cult Gunners",
       "sections": [
         {
-          "id": "OGdDbs1",
+          "id": "A4poVid",
           "uid": "XjuVJfboem",
           "label": "Replace any Eraser Beam",
           "options": [
@@ -3904,7 +3903,7 @@
           ]
         },
         {
-          "id": "PSptcV9",
+          "id": "5YRM76J",
           "uid": "gkjrgXU9rp",
           "label": "Upgrade with one",
           "options": [
@@ -3991,7 +3990,7 @@
       "hint": "Machine-Creed Canticles (One Model)",
       "sections": [
         {
-          "id": "gFdi0OM",
+          "id": "_EAC5bM",
           "uid": "ttPAB7xE",
           "label": "Upgrade with",
           "options": [
@@ -4670,8 +4669,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:22:04.612Z",
-  "editedAt": "2026-04-30T09:02:36.558Z",
+  "modifiedAt": "2026-05-05T08:02:35.680Z",
+  "editedAt": "2026-05-04T00:43:07.895Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/7el7k3hgy5pb9o9i/5-GXLJsImRFRZqmioAxea.jpg",
@@ -4904,7 +4903,7 @@
       "id": "1TMBPe40kx2b",
       "name": "Melee Shrouding",
       "aliasedRuleId": null,
-      "description": "Enemies get -3\" movement when trying to charge units where all models have this rule.",
+      "description": "Enemies get -3\" movement to a min. of 6\" when trying to charge units where all models have this rule.",
       "hasRating": false,
       "coreType": null,
       "targetType": 1

@@ -15,7 +15,7 @@
   "units": [
     {
       "id": "E8xb3jd",
-      "cost": 170,
+      "cost": 155,
       "name": "Death Walker Champ",
       "size": 1,
       "bases": {
@@ -108,7 +108,7 @@
     },
     {
       "id": "z5hi0Bk",
-      "cost": 150,
+      "cost": 140,
       "name": "Killer Tank Champ",
       "size": 1,
       "bases": {
@@ -336,7 +336,7 @@
     },
     {
       "id": "u6NKuTu",
-      "cost": 100,
+      "cost": 95,
       "name": "Shooter Mob",
       "size": 10,
       "bases": {
@@ -396,7 +396,7 @@
     },
     {
       "id": "2tFZ--L",
-      "cost": 115,
+      "cost": 110,
       "name": "Storm Mob",
       "size": 10,
       "bases": {
@@ -455,7 +455,7 @@
     },
     {
       "id": "t2iqo8w",
-      "cost": 230,
+      "cost": 170,
       "name": "Freaks",
       "size": 10,
       "bases": {
@@ -716,7 +716,7 @@
     },
     {
       "id": "Biinmvj",
-      "cost": 130,
+      "cost": 120,
       "name": "Looters",
       "size": 3,
       "bases": {
@@ -787,7 +787,7 @@
     },
     {
       "id": "jHkvoAd",
-      "cost": 180,
+      "cost": 160,
       "name": "Bug Riders",
       "size": 3,
       "bases": {
@@ -886,7 +886,7 @@
     },
     {
       "id": "uzV2zZS",
-      "cost": 165,
+      "cost": 155,
       "name": "Killer Tanks",
       "size": 3,
       "bases": {
@@ -973,7 +973,7 @@
     {
       "id": "UUu1IPo",
       "key": "arrogant-eel-pal",
-      "cost": 185,
+      "cost": 170,
       "name": "Death Walkers",
       "size": 3,
       "bases": {
@@ -1062,7 +1062,7 @@
     },
     {
       "id": "S7oIg4m",
-      "cost": 150,
+      "cost": 140,
       "name": "Big Bug",
       "size": 1,
       "bases": {
@@ -1170,7 +1170,7 @@
     },
     {
       "id": "1-RTd1N",
-      "cost": 375,
+      "cost": 370,
       "name": "Super Tank",
       "size": 1,
       "bases": {
@@ -1285,7 +1285,7 @@
     },
     {
       "id": "0wy6JQL",
-      "cost": 465,
+      "cost": 405,
       "name": "Mega Walker",
       "size": 1,
       "type": 0,
@@ -1442,7 +1442,7 @@
     },
     {
       "id": "OKeEdqy",
-      "cost": 105,
+      "cost": 95,
       "name": "Artillery Gun",
       "size": 1,
       "bases": {
@@ -1532,7 +1532,7 @@
     },
     {
       "id": "0oejS_N",
-      "cost": 215,
+      "cost": 205,
       "name": "Waskatsin",
       "size": 1,
       "type": 1,
@@ -1661,7 +1661,7 @@
       "hint": "Specialists",
       "sections": [
         {
-          "id": "EmYzJ0q",
+          "id": "ZPQELYy",
           "uid": "FrtCkJc",
           "label": "Upgrade with one",
           "options": [
@@ -1670,15 +1670,15 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 20,
                   "unitId": "E8xb3jd"
                 },
                 {
-                  "cost": 25,
+                  "cost": 20,
                   "unitId": "z5hi0Bk"
                 },
                 {
-                  "cost": 25,
+                  "cost": 20,
                   "unitId": "F8XwFML"
                 }
               ],
@@ -1871,7 +1871,7 @@
       "hint": "Storm Mob",
       "sections": [
         {
-          "id": "fMkk1m7",
+          "id": "-KqeN1r",
           "uid": "ym3iLDS",
           "label": "Replace up to two Pistols",
           "options": [
@@ -1880,7 +1880,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "2tFZ--L"
                 }
               ],
@@ -1912,7 +1912,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "2tFZ--L"
                 }
               ],
@@ -1939,6 +1939,46 @@
               "label": "Bubble Pistol (12\", A1, AP(4))",
               "parentSectionId": "ym3iLDS",
               "id": "ie3B0Ka"
+            },
+            {
+              "uid": "dGbeWNVNdC",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 5,
+                  "unitId": "2tFZ--L"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Smasher Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 6,
+                  "attacks": 1,
+                  "weaponId": "yEr_9bW2",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))"
+                }
+              ],
+              "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))",
+              "parentSectionId": "ym3iLDS",
+              "id": "dGbeWNVNdC"
             },
             {
               "uid": "h3BGMum",
@@ -1983,51 +2023,11 @@
               "id": "h3BGMum"
             },
             {
-              "uid": "dGbeWNVNdC",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 15,
-                  "unitId": "2tFZ--L"
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Smasher Pistol",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 6,
-                  "attacks": 1,
-                  "weaponId": "yEr_9bW2",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    },
-                    {
-                      "id": "_mrPya5SXSqW",
-                      "name": "Deadly",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))"
-                }
-              ],
-              "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))",
-              "parentSectionId": "ym3iLDS",
-              "id": "dGbeWNVNdC"
-            },
-            {
               "uid": "PZwYCZ2",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "2tFZ--L"
                 }
               ],
@@ -2072,7 +2072,7 @@
           ]
         },
         {
-          "id": "uuWrjqF",
+          "id": "c4FNSwb",
           "uid": "tMYvR",
           "label": "Replace up to two Pistols and CCWS",
           "options": [
@@ -2176,7 +2176,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "2tFZ--L"
                 }
               ],
@@ -2225,7 +2225,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "2tFZ--L"
                 }
               ],
@@ -2270,7 +2270,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 15,
                   "unitId": "2tFZ--L"
                 }
               ],
@@ -2314,7 +2314,7 @@
           ]
         },
         {
-          "id": "g4VoGHt",
+          "id": "1tL1Lk-",
           "uid": "d4Fdl",
           "label": "Upgrade all models with",
           "options": [
@@ -2369,7 +2369,7 @@
       "hint": "Replace Rocket Launcher",
       "sections": [
         {
-          "id": "_LFlQdr",
+          "id": "X1YfLh6",
           "uid": "whHTnPm",
           "label": "Replace any Rocket Launcher",
           "options": [
@@ -2379,15 +2379,15 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "uzV2zZS"
                 },
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "UUu1IPo"
                 },
                 {
-                  "cost": 5,
+                  "cost": 10,
                   "unitId": "S7oIg4m"
                 }
               ],
@@ -2476,15 +2476,15 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 45,
+                  "cost": 25,
                   "unitId": "uzV2zZS"
                 },
                 {
-                  "cost": 45,
+                  "cost": 25,
                   "unitId": "UUu1IPo"
                 },
                 {
-                  "cost": 45,
+                  "cost": 25,
                   "unitId": "S7oIg4m"
                 }
               ],
@@ -2518,15 +2518,15 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 50,
+                  "cost": 25,
                   "unitId": "uzV2zZS"
                 },
                 {
-                  "cost": 50,
+                  "cost": 25,
                   "unitId": "UUu1IPo"
                 },
                 {
-                  "cost": 50,
+                  "cost": 25,
                   "unitId": "S7oIg4m"
                 }
               ],
@@ -2580,7 +2580,7 @@
       "hint": "Death Walkers",
       "sections": [
         {
-          "id": "UenUQ2M",
+          "id": "lgMWRtU",
           "uid": "5fEvSs_",
           "label": "Replace any Mini-Claw",
           "options": [
@@ -2644,7 +2644,7 @@
       "hint": "Champ Upgrades",
       "sections": [
         {
-          "id": "0h_p63N",
+          "id": "3u9e7Hq",
           "uid": "605oW",
           "label": "Replace Boss Pistol and CCW",
           "options": [
@@ -2653,7 +2653,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 10,
                   "unitId": "VIoVkOK"
                 }
               ],
@@ -2693,7 +2693,7 @@
           ]
         },
         {
-          "id": "BdQYEBu",
+          "id": "2zotzRY",
           "uid": "HxNSG",
           "label": "Replace Boss Pistol",
           "options": [
@@ -2837,7 +2837,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "VIoVkOK"
                 }
               ],
@@ -2877,7 +2877,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "VIoVkOK"
                 }
               ],
@@ -2910,7 +2910,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 5,
                   "unitId": "VIoVkOK"
                 }
               ],
@@ -2951,7 +2951,7 @@
           ]
         },
         {
-          "id": "oYqQ5JC",
+          "id": "5d7AY9z",
           "uid": "Vr4UW",
           "label": "Replace CCW",
           "options": [
@@ -3036,7 +3036,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "VIoVkOK"
                 }
               ],
@@ -3075,7 +3075,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "VIoVkOK"
                 }
               ],
@@ -3113,7 +3113,7 @@
           ]
         },
         {
-          "id": "3HLoTwQ",
+          "id": "lauKvMx",
           "uid": "d9-aT7cU",
           "label": "Upgrade with",
           "options": [
@@ -3153,7 +3153,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "W3JTWBq",
+          "id": "mlJMNla",
           "uid": "HcJ1LM6z",
           "label": "Upgrade with one",
           "options": [
@@ -3305,7 +3305,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 80,
+                  "cost": 75,
                   "unitId": "VIoVkOK"
                 }
               ],
@@ -3389,7 +3389,7 @@
       "hint": "Shooter Mob",
       "sections": [
         {
-          "id": "QBT_59a",
+          "id": "Cggg8r5",
           "uid": "V2mAO",
           "label": "Replace up to two Scrap Guns",
           "options": [
@@ -3398,7 +3398,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "u6NKuTu"
                 }
               ],
@@ -3431,7 +3431,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "u6NKuTu"
                 }
               ],
@@ -3457,6 +3457,46 @@
               "label": "Chucker Rifle (18\", A2, Rending)",
               "parentSectionId": "V2mAO",
               "id": "Fjjm0"
+            },
+            {
+              "uid": "HXTvVJSN0Z",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "u6NKuTu"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "5aEbVGVu",
+                  "name": "Smasher Rifle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "-y_mhJOk",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))"
+                }
+              ],
+              "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))",
+              "parentSectionId": "V2mAO",
+              "id": "HXTvVJSN0Z"
             },
             {
               "uid": "YKbhz",
@@ -3500,51 +3540,11 @@
               "id": "YKbhz"
             },
             {
-              "uid": "HXTvVJSN0Z",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 30,
-                  "unitId": "u6NKuTu"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "5aEbVGVu",
-                  "name": "Smasher Rifle",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 12,
-                  "attacks": 1,
-                  "weaponId": "-y_mhJOk",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    },
-                    {
-                      "id": "_mrPya5SXSqW",
-                      "name": "Deadly",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))"
-                }
-              ],
-              "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))",
-              "parentSectionId": "V2mAO",
-              "id": "HXTvVJSN0Z"
-            },
-            {
               "uid": "6SV3-",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 20,
                   "unitId": "u6NKuTu"
                 }
               ],
@@ -3596,7 +3596,7 @@
       "hint": "Commandos",
       "sections": [
         {
-          "id": "_r0qwog",
+          "id": "_OsKorh",
           "uid": "u1vYO",
           "label": "Replace all Scrap Guns and CCWS",
           "options": [
@@ -3644,7 +3644,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 20,
                   "unitId": "jDur5gr"
                 }
               ],
@@ -3697,7 +3697,7 @@
           ]
         },
         {
-          "id": "qOMdWOA",
+          "id": "TtSSgOI",
           "uid": "Ni8MN",
           "label": "Replace one Scrap Gun",
           "options": [
@@ -3706,7 +3706,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "jDur5gr"
                 }
               ],
@@ -3739,7 +3739,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "jDur5gr"
                 }
               ],
@@ -3765,6 +3765,46 @@
               "label": "Chucker Rifle (18\", A2, Rending)",
               "parentSectionId": "Ni8MN",
               "id": "a3jTz"
+            },
+            {
+              "uid": "jAVtXklxhb",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "jDur5gr"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Smasher Rifle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "-y_mhJOk",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))"
+                }
+              ],
+              "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))",
+              "parentSectionId": "Ni8MN",
+              "id": "jAVtXklxhb"
             },
             {
               "uid": "hC6NZ",
@@ -3808,51 +3848,11 @@
               "id": "hC6NZ"
             },
             {
-              "uid": "jAVtXklxhb",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 30,
-                  "unitId": "jDur5gr"
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Smasher Rifle",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 12,
-                  "attacks": 1,
-                  "weaponId": "-y_mhJOk",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    },
-                    {
-                      "id": "_mrPya5SXSqW",
-                      "name": "Deadly",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))"
-                }
-              ],
-              "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))",
-              "parentSectionId": "Ni8MN",
-              "id": "jAVtXklxhb"
-            },
-            {
               "uid": "DboyO",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 20,
                   "unitId": "jDur5gr"
                 }
               ],
@@ -3897,7 +3897,7 @@
           ]
         },
         {
-          "id": "G67WDgi",
+          "id": "OfM3DYl",
           "uid": "7gmn5",
           "label": "Replace up to three Scrap Guns",
           "options": [
@@ -3955,7 +3955,7 @@
           ]
         },
         {
-          "id": "cNBK8Va",
+          "id": "qQ49ViK",
           "uid": "-H-M_",
           "label": "Upgrade all models with",
           "options": [
@@ -4007,7 +4007,7 @@
       "hint": "Boss Mob",
       "sections": [
         {
-          "id": "8kuH-cw",
+          "id": "pCdBpWU",
           "uid": "K7TTu",
           "label": "Replace any Boss Pistol",
           "options": [
@@ -4087,7 +4087,7 @@
           ]
         },
         {
-          "id": "AEVRcQC",
+          "id": "ZRMltQL",
           "uid": "JCxXJ",
           "label": "Replace one Boss Pistol",
           "options": [
@@ -4137,7 +4137,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "RJMV2f5"
                 }
               ],
@@ -4169,7 +4169,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 15,
                   "unitId": "RJMV2f5"
                 }
               ],
@@ -4202,7 +4202,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 40,
+                  "cost": 20,
                   "unitId": "RJMV2f5"
                 }
               ],
@@ -4242,7 +4242,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 50,
+                  "cost": 30,
                   "unitId": "RJMV2f5"
                 }
               ],
@@ -4287,7 +4287,7 @@
           ]
         },
         {
-          "id": "i6WqB81",
+          "id": "z-EEyw-",
           "uid": "My00h",
           "label": "Take one Boss Carbine attachment",
           "options": [
@@ -4380,7 +4380,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "RJMV2f5"
                 }
               ],
@@ -4417,7 +4417,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "RJMV2f5"
                 }
               ],
@@ -4466,7 +4466,7 @@
           ]
         },
         {
-          "id": "JIpKHNb",
+          "id": "3XSunvd",
           "uid": "vdY6f",
           "label": "Replace one CCW",
           "options": [
@@ -4510,7 +4510,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "RJMV2f5"
                 }
               ],
@@ -4549,7 +4549,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "RJMV2f5"
                 }
               ],
@@ -4589,7 +4589,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 15,
                   "unitId": "RJMV2f5"
                 }
               ],
@@ -4639,7 +4639,7 @@
       "hint": "Squad Upgrades",
       "sections": [
         {
-          "id": "ZdDkjYh",
+          "id": "sjY50XT",
           "uid": "UdQZ1",
           "label": "Upgrade one model with one",
           "options": [
@@ -4731,7 +4731,7 @@
       "hint": "Looters",
       "sections": [
         {
-          "id": "uVqDvVG",
+          "id": "_lmEile",
           "uid": "Udzqn",
           "label": "Replace any Heavy Machinegun",
           "options": [
@@ -4740,7 +4740,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 5,
+                  "cost": 0,
                   "unitId": "Biinmvj"
                 }
               ],
@@ -4784,7 +4784,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 5,
                   "unitId": "Biinmvj"
                 }
               ],
@@ -4822,7 +4822,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 5,
                   "unitId": "Biinmvj"
                 }
               ],
@@ -4859,7 +4859,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 45,
+                  "cost": 20,
                   "unitId": "Biinmvj"
                 }
               ],
@@ -4897,7 +4897,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 45,
+                  "cost": 25,
                   "unitId": "Biinmvj"
                 }
               ],
@@ -4943,7 +4943,7 @@
       "hint": "Super Tank",
       "sections": [
         {
-          "id": "14QyGtp",
+          "id": "lUzSvtR",
           "uid": "ZmVkSNtf",
           "label": "Replace Heavy Lobber Mortar",
           "options": [
@@ -4952,7 +4952,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 25,
                   "unitId": "1-RTd1N"
                 }
               ],
@@ -4990,7 +4990,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 80,
+                  "cost": 25,
                   "unitId": "1-RTd1N"
                 }
               ],
@@ -5030,7 +5030,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 95,
+                  "cost": 35,
                   "unitId": "1-RTd1N"
                 }
               ],
@@ -5065,44 +5065,11 @@
               "id": "RdZf615a"
             },
             {
-              "uid": "q2-PgCAa",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 95,
-                  "unitId": "1-RTd1N"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "LMUryd9p",
-                  "name": "Heavy Chucker Cannon",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 24,
-                  "attacks": 8,
-                  "weaponId": "A6lMzAz6",
-                  "specialRules": [
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Heavy Chucker Cannon (24\", A8, Rending)"
-                }
-              ],
-              "label": "Heavy Chucker Cannon (24\", A8, Rending)",
-              "parentSectionId": "ZmVkSNtf",
-              "parentPackageUid": "1-BEAX8O",
-              "id": "q2-PgCAa"
-            },
-            {
               "uid": "NAPz5jHR",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 110,
+                  "cost": 50,
                   "unitId": "1-RTd1N"
                 }
               ],
@@ -5134,6 +5101,39 @@
               "parentSectionId": "ZmVkSNtf",
               "parentPackageUid": "1-BEAX8O",
               "id": "NAPz5jHR"
+            },
+            {
+              "uid": "q2-PgCAa",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 55,
+                  "unitId": "1-RTd1N"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "LMUryd9p",
+                  "name": "Heavy Chucker Cannon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 8,
+                  "weaponId": "A6lMzAz6",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Chucker Cannon (24\", A8, Rending)"
+                }
+              ],
+              "label": "Heavy Chucker Cannon (24\", A8, Rending)",
+              "parentSectionId": "ZmVkSNtf",
+              "parentPackageUid": "1-BEAX8O",
+              "id": "q2-PgCAa"
             }
           ],
           "parentPackageUid": "1-BEAX8O",
@@ -5144,7 +5144,7 @@
           ]
         },
         {
-          "id": "RqSDyTw",
+          "id": "-7ZeRb3",
           "uid": "fMayV",
           "label": "Replace Sponson-Flamer",
           "options": [
@@ -5190,7 +5190,7 @@
           ]
         },
         {
-          "id": "sddJmaU",
+          "id": "I15Sdfs",
           "uid": "uw2Zs",
           "label": "Upgrade with any",
           "options": [
@@ -5368,7 +5368,7 @@
       "hint": "Freaks",
       "sections": [
         {
-          "id": "O_vqoGl",
+          "id": "kiYuJoW",
           "uid": "woY8V",
           "label": "Upgrade all models with",
           "options": [
@@ -5420,7 +5420,7 @@
       "hint": "Scout Bikers",
       "sections": [
         {
-          "id": "owggJsw",
+          "id": "ErcnVKz",
           "uid": "48U6R",
           "label": "Replace one Pistol",
           "options": [
@@ -5429,7 +5429,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "2nLGvXr"
                 }
               ],
@@ -5463,7 +5463,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "2nLGvXr"
                 }
               ],
@@ -5492,6 +5492,46 @@
               "parentSectionUid": "48U6R",
               "parentSectionId": "48U6R",
               "id": "slcIW"
+            },
+            {
+              "uid": "2x1rxXUNUR",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 5,
+                  "unitId": "2nLGvXr"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Smasher Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 6,
+                  "attacks": 1,
+                  "weaponId": "yEr_9bW2",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))"
+                }
+              ],
+              "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))",
+              "parentSectionId": "48U6R",
+              "id": "2x1rxXUNUR"
             },
             {
               "uid": "czAjK",
@@ -5536,51 +5576,11 @@
               "id": "czAjK"
             },
             {
-              "uid": "2x1rxXUNUR",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 15,
-                  "unitId": "2nLGvXr"
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Smasher Pistol",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 6,
-                  "attacks": 1,
-                  "weaponId": "yEr_9bW2",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    },
-                    {
-                      "id": "_mrPya5SXSqW",
-                      "name": "Deadly",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))"
-                }
-              ],
-              "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))",
-              "parentSectionId": "48U6R",
-              "id": "2x1rxXUNUR"
-            },
-            {
               "uid": "Quogw",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "2nLGvXr"
                 }
               ],
@@ -5627,7 +5627,7 @@
           ]
         },
         {
-          "id": "jHG1B43",
+          "id": "eInMIzG",
           "uid": "ksuiQ",
           "label": "Replace one Pistol and CCW",
           "options": [
@@ -5735,7 +5735,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "2nLGvXr"
                 }
               ],
@@ -5786,7 +5786,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "2nLGvXr"
                 }
               ],
@@ -5842,7 +5842,7 @@
           ]
         },
         {
-          "id": "zmvfGBG",
+          "id": "ydx6z0U",
           "uid": "JwtWdsSHe7",
           "label": "Replace all Trekker Tires",
           "options": [
@@ -5899,7 +5899,7 @@
       "hint": "Bug Riders",
       "sections": [
         {
-          "id": "8PLEtFt",
+          "id": "4MqkL9K",
           "uid": "HOn2w",
           "label": "Replace any Scrap Guns",
           "options": [
@@ -5908,7 +5908,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "jHkvoAd"
                 }
               ],
@@ -5943,7 +5943,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "jHkvoAd"
                 }
               ],
@@ -5971,6 +5971,46 @@
               "parentSectionUid": "HOn2w",
               "parentSectionId": "HOn2w",
               "id": "c9bw8"
+            },
+            {
+              "uid": "cv8ZC2DwhP",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "jHkvoAd"
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Smasher Rifle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "-y_mhJOk",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))"
+                }
+              ],
+              "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))",
+              "parentSectionId": "HOn2w",
+              "id": "cv8ZC2DwhP"
             },
             {
               "uid": "SjZMV",
@@ -6014,51 +6054,11 @@
               "id": "SjZMV"
             },
             {
-              "uid": "cv8ZC2DwhP",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 30,
-                  "unitId": "jHkvoAd"
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Smasher Rifle",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 12,
-                  "attacks": 1,
-                  "weaponId": "-y_mhJOk",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    },
-                    {
-                      "id": "_mrPya5SXSqW",
-                      "name": "Deadly",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))"
-                }
-              ],
-              "label": "Smasher Rifle (12\", A1, AP(4), Deadly(3))",
-              "parentSectionId": "HOn2w",
-              "id": "cv8ZC2DwhP"
-            },
-            {
               "uid": "ycK2H",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 35,
+                  "cost": 20,
                   "unitId": "jHkvoAd"
                 }
               ],
@@ -6111,7 +6111,7 @@
       "hint": "Ramshackle Crew",
       "sections": [
         {
-          "id": "x4UThdZ",
+          "id": "kMURHVG",
           "uid": "EiLXz",
           "label": "Upgrade all models with",
           "options": [
@@ -6176,7 +6176,7 @@
       "hint": "Trash Goggles",
       "sections": [
         {
-          "id": "8K_Hzj0",
+          "id": "S6syHnI",
           "uid": "J7Q-OgHj8J",
           "label": "Upgrade all models with",
           "options": [
@@ -6254,7 +6254,7 @@
       "hint": "Big Bug",
       "sections": [
         {
-          "id": "wxEw1iy",
+          "id": "duEbzbu",
           "uid": "O220bTdm",
           "label": "Upgrade with any",
           "options": [
@@ -6336,7 +6336,7 @@
       "hint": "Artillery Gun",
       "sections": [
         {
-          "id": "rj1Q5YE",
+          "id": "qKftayV",
           "uid": "GlS9RNRd",
           "label": "Replace Heavy Lobber Mortar",
           "options": [
@@ -6345,7 +6345,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 25,
                   "unitId": "OKeEdqy"
                 }
               ],
@@ -6383,7 +6383,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 60,
+                  "cost": 25,
                   "unitId": "OKeEdqy"
                 }
               ],
@@ -6423,7 +6423,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 85,
+                  "cost": 40,
                   "unitId": "OKeEdqy"
                 }
               ],
@@ -6466,7 +6466,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 85,
+                  "cost": 45,
                   "unitId": "OKeEdqy"
                 }
               ],
@@ -6504,7 +6504,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 90,
+                  "cost": 50,
                   "unitId": "OKeEdqy"
                 }
               ],
@@ -6545,7 +6545,7 @@
           ]
         },
         {
-          "id": "d2h7_qy",
+          "id": "laUMna9",
           "uid": "DoIYM7Mc",
           "label": "Upgrade with",
           "options": [
@@ -6593,7 +6593,7 @@
       "hint": "Specialists - Champ",
       "sections": [
         {
-          "id": "irLBMW0",
+          "id": "q--B9jA",
           "uid": "SzbcJiHl",
           "label": "Upgrade with one",
           "options": [
@@ -6632,7 +6632,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 20,
                   "unitId": "VIoVkOK"
                 }
               ],
@@ -6767,7 +6767,7 @@
       "hint": "Boss Champ Upgrades",
       "sections": [
         {
-          "id": "I9jIROW",
+          "id": "OdbbT6L",
           "uid": "io9FXH3R",
           "label": "Replace Boss Pistol and CCW",
           "options": [
@@ -6776,7 +6776,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 25,
+                  "cost": 10,
                   "unitId": "F8XwFML"
                 }
               ],
@@ -6816,7 +6816,7 @@
           ]
         },
         {
-          "id": "B0adeGF",
+          "id": "_TfpPwR",
           "uid": "rpIiu2iU",
           "label": "Replace Boss Pistol",
           "options": [
@@ -6928,7 +6928,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 10,
+                  "cost": 5,
                   "unitId": "F8XwFML"
                 }
               ],
@@ -6956,6 +6956,46 @@
               "parentSectionId": "rpIiu2iU",
               "parentPackageUid": "_ouNTS3G",
               "id": "L8L4zf3l"
+            },
+            {
+              "uid": "4WvA3lmR40",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 5,
+                  "unitId": "F8XwFML"
+                }
+              ],
+              "gains": [
+                {
+                  "id": "KQGQJzE7",
+                  "name": "Smasher Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 6,
+                  "attacks": 1,
+                  "weaponId": "yEr_9bW2",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))"
+                }
+              ],
+              "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))",
+              "parentSectionId": "rpIiu2iU",
+              "id": "4WvA3lmR40"
             },
             {
               "uid": "bCgvXAEn",
@@ -6992,51 +7032,11 @@
               "id": "bCgvXAEn"
             },
             {
-              "uid": "4WvA3lmR40",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 15,
-                  "unitId": "F8XwFML"
-                }
-              ],
-              "gains": [
-                {
-                  "id": "KQGQJzE7",
-                  "name": "Smasher Pistol",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 6,
-                  "attacks": 1,
-                  "weaponId": "yEr_9bW2",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    },
-                    {
-                      "id": "_mrPya5SXSqW",
-                      "name": "Deadly",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))"
-                }
-              ],
-              "label": "Smasher Pistol (6\", A1, AP(4), Deadly(3))",
-              "parentSectionId": "rpIiu2iU",
-              "id": "4WvA3lmR40"
-            },
-            {
               "uid": "AeV7i43H",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "F8XwFML"
                 }
               ],
@@ -7078,7 +7078,7 @@
           ]
         },
         {
-          "id": "GHsaUjU",
+          "id": "wyOvIpP",
           "uid": "S3wzfbYs",
           "label": "Take one Boss Carbine attachment",
           "options": [
@@ -7173,7 +7173,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "F8XwFML"
                 }
               ],
@@ -7212,7 +7212,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 10,
                   "unitId": "F8XwFML"
                 }
               ],
@@ -7263,7 +7263,7 @@
           ]
         },
         {
-          "id": "1xZMCjI",
+          "id": "w_hzkDM",
           "uid": "56r-32YA",
           "label": "Replace CCW",
           "options": [
@@ -7308,7 +7308,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "F8XwFML"
                 }
               ],
@@ -7346,7 +7346,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "F8XwFML"
                 }
               ],
@@ -7387,7 +7387,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 30,
+                  "cost": 15,
                   "unitId": "F8XwFML"
                 }
               ],
@@ -7425,7 +7425,7 @@
           ]
         },
         {
-          "id": "DWfys-7",
+          "id": "2rLwNe8",
           "uid": "n9bPOv_Y",
           "label": "Upgrade with one",
           "options": [
@@ -7577,7 +7577,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 90,
+                  "cost": 85,
                   "unitId": "F8XwFML"
                 }
               ],
@@ -7655,7 +7655,7 @@
       "hint": "Replace Rapid Rocket Launcher",
       "sections": [
         {
-          "id": "1intDVD",
+          "id": "1cKcY13",
           "uid": "kuZC4g4x",
           "label": "Replace Rapid Rocket Launcher",
           "options": [
@@ -7715,11 +7715,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 25,
                   "unitId": "E8xb3jd"
                 },
                 {
-                  "cost": 20,
+                  "cost": 25,
                   "unitId": "z5hi0Bk"
                 }
               ],
@@ -7754,11 +7754,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 90,
+                  "cost": 30,
                   "unitId": "E8xb3jd"
                 },
                 {
-                  "cost": 90,
+                  "cost": 30,
                   "unitId": "z5hi0Bk"
                 }
               ],
@@ -7798,11 +7798,11 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 90,
+                  "cost": 55,
                   "unitId": "E8xb3jd"
                 },
                 {
-                  "cost": 90,
+                  "cost": 55,
                   "unitId": "z5hi0Bk"
                 }
               ],
@@ -7847,7 +7847,7 @@
       "hint": "Death Walkers Champ",
       "sections": [
         {
-          "id": "UmJ9U5a",
+          "id": "9b0sXgw",
           "uid": "XqaC-evj",
           "label": "Replace Heavy Claw",
           "options": [
@@ -7908,7 +7908,7 @@
       "hint": "Killer Tanks",
       "sections": [
         {
-          "id": "pbGe62p",
+          "id": "5HF2EiH",
           "uid": "sIpPmKBR1l",
           "label": "Upgrade all models with",
           "options": [
@@ -7960,7 +7960,7 @@
       "hint": "Killer Tank Champ",
       "sections": [
         {
-          "id": "acLC1zM",
+          "id": "XMsDuQh",
           "uid": "V67U162O-x",
           "label": "Upgrade with",
           "options": [
@@ -8623,7 +8623,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:21:45.498Z",
+  "modifiedAt": "2026-05-05T08:02:16.902Z",
   "editedAt": "2026-04-29T16:44:13.844Z",
   "official": true,
   "versionString": "3.5.3",

@@ -1155,22 +1155,35 @@
       "weapons": [
         {
           "id": "VUSbm51P",
-          "name": "Mutated Claws",
+          "name": "Hexed Spikes",
           "type": "ArmyBookWeapon",
           "count": 1,
-          "range": null,
+          "range": 12,
           "attacks": 4,
-          "weaponId": "VUSbm51P",
+          "weaponId": "707aPxyv",
           "specialRules": [
             {
               "type": "ArmyBookRule",
-              "id": "IEJp3a4vE0CB",
-              "name": "Shred",
-              "label": "Shred"
+              "id": "5v6oaGfrdf29",
+              "name": "Surge",
+              "label": "Surge"
             }
           ],
           "attacksMultiplier": 1,
-          "label": "Mutated Claws (A4, Shred)",
+          "label": "Hexed Spikes (12\", A4, Surge)",
+          "originalCount": 1
+        },
+        {
+          "id": "YG_05M2B",
+          "name": "Claws",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "S652usl0",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Claws (A1)",
           "originalCount": 1
         }
       ],
@@ -1267,7 +1280,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "THStYMj",
+          "id": "FtPSmFs",
           "uid": "uVvec",
           "label": "Replace Armblade",
           "options": [
@@ -1326,7 +1339,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "iMgQ1S3",
+          "id": "FuQXzYc",
           "uid": "qlNM8hz",
           "label": "Upgrade with one",
           "options": [
@@ -1447,7 +1460,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "sX0LI9L",
+          "id": "P-W87z5",
           "uid": "9xmu_Bn",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1613,7 +1626,7 @@
           ]
         },
         {
-          "id": "PM3YD0a",
+          "id": "WrCUseg",
           "uid": "ATYkq59",
           "label": "Upgrade with",
           "options": [
@@ -1656,7 +1669,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "OSllu5k",
+          "id": "b1XBnqc",
           "uid": "z_2Ss5S",
           "label": "Upgrade with any",
           "options": [
@@ -1739,7 +1752,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "xOYEHkC",
+          "id": "FV7Gt8H",
           "uid": "g-b1R",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -2015,7 +2028,7 @@
           ]
         },
         {
-          "id": "z_PBPDL",
+          "id": "58UWbDe",
           "uid": "DJTr1",
           "label": "Replace any Power Staff",
           "options": [
@@ -2071,7 +2084,7 @@
           ]
         },
         {
-          "id": "XD5ANuC",
+          "id": "RwCxCIi",
           "uid": "Jo1qEI68",
           "label": "Upgrade with",
           "options": [
@@ -2114,7 +2127,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "hDffV5m",
+          "id": "ab2iA-K",
           "uid": "z3G3m",
           "label": "Upgrade with one",
           "options": [
@@ -2210,53 +2223,41 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "Nl23S1K",
+          "id": "4p40Hgk",
           "uid": "rU0Lr",
-          "label": "Replace Mutated Claws",
+          "label": "Replace Hexed Spikes and Claws",
           "options": [
             {
-              "uid": "bepjU9lIP3",
+              "uid": "hCVO87Kt6Y",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "mv1yLigVg",
-                  "cost": 0
+                  "cost": 5
                 }
               ],
               "gains": [
                 {
                   "id": null,
-                  "name": "Hexed Spikes",
+                  "name": "Mutated Claws",
                   "type": "ArmyBookWeapon",
                   "count": 1,
-                  "range": 12,
+                  "range": null,
                   "attacks": 4,
-                  "weaponId": "707aPxyv",
+                  "weaponId": "VUSbm51P",
                   "specialRules": [
                     {
-                      "id": "5v6oaGfrdf29",
-                      "name": "Surge"
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
                     }
                   ],
                   "attacksMultiplier": 1,
-                  "label": "Hexed Spikes (12\", A4, Surge)"
-                },
-                {
-                  "id": null,
-                  "name": "Claws",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 1,
-                  "weaponId": "S652usl0",
-                  "specialRules": [],
-                  "attacksMultiplier": 1,
-                  "label": "Claws (A1)"
+                  "label": "Mutated Claws (A4, Shred)"
                 }
               ],
-              "label": "Hexed Spikes (12\", A4, Surge), Claws (A1)",
+              "label": "Mutated Claws (A4, Shred)",
               "parentSectionId": "rU0Lr",
-              "id": "bepjU9lIP3"
+              "id": "hCVO87Kt6Y"
             },
             {
               "uid": "7JZun",
@@ -2307,7 +2308,8 @@
           "type": "ArmyBookUpgradeSection",
           "variant": "replace",
           "targets": [
-            "Mutated Claws"
+            "Hexed Spikes",
+            "Claws"
           ]
         }
       ],
@@ -2319,7 +2321,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "FJSpz-O",
+          "id": "kET_PC_",
           "uid": "k6phA",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -2597,7 +2599,7 @@
           ]
         },
         {
-          "id": "__-4QZI",
+          "id": "HE6w9Qp",
           "uid": "dzk31",
           "label": "Replace any Power Staff",
           "options": [
@@ -2661,7 +2663,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "KMl8WiC",
+          "id": "yFmau-p",
           "uid": "jJcCY",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -2937,7 +2939,7 @@
           ]
         },
         {
-          "id": "kAQcSAg",
+          "id": "NSlZEfw",
           "uid": "HsNci",
           "label": "Replace any Power Staff",
           "options": [
@@ -2993,7 +2995,7 @@
           ]
         },
         {
-          "id": "lvTIjKY",
+          "id": "wetHqQ3",
           "uid": "XPKDTNVO",
           "label": "Upgrade with",
           "options": [
@@ -3043,7 +3045,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "Xra3Vtm",
+          "id": "ZPREzar",
           "uid": "SNMn2",
           "label": "Upgrade with",
           "options": [
@@ -3093,7 +3095,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "bexqvCx",
+          "id": "5RY3X6J",
           "uid": "LRymxjDasP",
           "label": "Replace Magic Bolt",
           "options": [
@@ -3170,7 +3172,7 @@
           ]
         },
         {
-          "id": "5OlUahq",
+          "id": "aF-D1sD",
           "uid": "9Fwehorm",
           "label": "Upgrade with",
           "options": [
@@ -3220,7 +3222,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "0E2Dnb_",
+          "id": "CT-dCDw",
           "uid": "_dk0Vr2A",
           "label": "Upgrade with one",
           "options": [
@@ -3384,7 +3386,7 @@
               "costs": [
                 {
                   "unitId": "VuB6STi_R",
-                  "cost": 40
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -3429,7 +3431,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "UIzUmw5",
+          "id": "Gz81IqB",
           "uid": "Gf_HZfpw",
           "label": "Upgrade with one",
           "options": [
@@ -3573,7 +3575,7 @@
       "sync": "yxVDySKYQYRhdEgA",
       "sections": [
         {
-          "id": "YLvYIG4",
+          "id": "4ukwn2D",
           "uid": "q9KrL2Mw",
           "label": "Replace Magic Blast",
           "options": [
@@ -4257,7 +4259,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:22:51.012Z",
+  "modifiedAt": "2026-05-05T08:03:18.977Z",
   "editedAt": "2026-01-31T07:29:23.573Z",
   "official": true,
   "versionString": "3.5.3",
@@ -4280,8 +4282,8 @@
       "https://www.etsy.com/shop/onepagerules"
     ]
   },
-  "balanceValid": false,
-  "balanceValidReason": 4,
+  "balanceValid": true,
+  "balanceValidReason": 0,
   "loreUrl": null,
   "voted": null,
   "specialRules": [

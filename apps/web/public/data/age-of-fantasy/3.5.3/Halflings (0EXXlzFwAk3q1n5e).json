@@ -447,7 +447,7 @@
     },
     {
       "id": "xSlWPl2",
-      "cost": 50,
+      "cost": 45,
       "name": "Thieves",
       "size": 3,
       "bases": {
@@ -886,7 +886,7 @@
     },
     {
       "id": "Kt_SEhO",
-      "cost": 195,
+      "cost": 205,
       "name": "Zeppelins",
       "size": 3,
       "bases": {
@@ -1243,7 +1243,7 @@
     },
     {
       "id": "G42cMNm",
-      "cost": 305,
+      "cost": 300,
       "name": "Iron Pig",
       "size": 1,
       "bases": {
@@ -1366,7 +1366,7 @@
     },
     {
       "id": "avLiLhw",
-      "cost": 90,
+      "cost": 85,
       "name": "Halfling Artillery",
       "size": 1,
       "bases": {
@@ -1447,7 +1447,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "s2yJrBL",
+          "id": "TAyDfg5",
           "uid": "cge6fZx",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1659,7 +1659,7 @@
           ]
         },
         {
-          "id": "ZcD634D",
+          "id": "iwD2EFn",
           "uid": "zSbP4DqS7H",
           "label": "Upgrade with one",
           "options": [
@@ -1748,58 +1748,16 @@
           }
         },
         {
-          "id": "9rif7m0",
+          "id": "UOjuxVv",
           "uid": "9t7DZv_",
           "label": "Upgrade with one",
           "options": [
-            {
-              "uid": "F3CdUQE",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 10,
-                  "unitId": "gjLy2pX"
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Pig",
-                  "type": "ArmyBookItem",
-                  "bases": {
-                    "round": "60x35",
-                    "square": "50x25"
-                  },
-                  "label": "Pig (Armor(3), Impact(1))",
-                  "content": [
-                    {
-                      "id": "74RjQ1k41DoO",
-                      "name": "Armor",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    },
-                    {
-                      "id": "62-mYKVM9MLd",
-                      "name": "Impact",
-                      "type": "ArmyBookRule",
-                      "rating": 1
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Pig (Armor(3), Impact(1))",
-              "parentPackageUid": "A1",
-              "parentSectionUid": "9t7DZv_",
-              "parentSectionId": "9t7DZv_",
-              "id": "F3CdUQE"
-            },
             {
               "uid": "ZStjGxIlFV",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "gjLy2pX"
                 }
               ],
@@ -1837,7 +1795,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "gjLy2pX"
                 }
               ],
@@ -1873,12 +1831,53 @@
               "id": "iEZ_qnh"
             },
             {
+              "uid": "F3CdUQE",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 10,
+                  "unitId": "gjLy2pX"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Pig",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "60x35",
+                    "square": "50x25"
+                  },
+                  "label": "Pig (Impact(1), Swift)",
+                  "content": [
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "leFm23MTiJxO",
+                      "name": "Swift",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Pig (Impact(1), Swift)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "9t7DZv_",
+              "parentSectionId": "9t7DZv_",
+              "id": "F3CdUQE"
+            },
+            {
               "uid": "-OtCM0E",
               "cost": 15,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "gjLy2pX"
                 }
               ],
@@ -1924,7 +1923,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 20,
+                  "cost": 15,
                   "unitId": "gjLy2pX"
                 }
               ],
@@ -1970,7 +1969,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 110,
+                  "cost": 100,
                   "unitId": "gjLy2pX"
                 }
               ],
@@ -2034,7 +2033,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 140,
+                  "cost": 130,
                   "unitId": "gjLy2pX"
                 }
               ],
@@ -2103,7 +2102,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 145,
+                  "cost": 135,
                   "unitId": "gjLy2pX"
                 }
               ],
@@ -2204,7 +2203,7 @@
       "hint": "Leader",
       "sections": [
         {
-          "id": "iUnh3vs",
+          "id": "J7GJph-",
           "uid": "F9DZrNC",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2391,7 +2390,7 @@
           ]
         },
         {
-          "id": "-PCL1he",
+          "id": "UcAIP4N",
           "uid": "xv6CZz8",
           "label": "Upgrade with one",
           "options": [
@@ -2486,52 +2485,10 @@
           }
         },
         {
-          "id": "mvZAGJy",
+          "id": "4uo4zls",
           "uid": "pV1ud1X",
           "label": "Upgrade with one",
           "options": [
-            {
-              "uid": "4rfkw",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "cost": 10,
-                  "unitId": "8zAbXEx"
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Pig",
-                  "type": "ArmyBookItem",
-                  "bases": {
-                    "round": "60x35",
-                    "square": "50x25"
-                  },
-                  "label": "Pig (Armor(4), Impact(1))",
-                  "content": [
-                    {
-                      "id": "74RjQ1k41DoO",
-                      "name": "Armor",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    },
-                    {
-                      "id": "62-mYKVM9MLd",
-                      "name": "Impact",
-                      "type": "ArmyBookRule",
-                      "rating": 1
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Pig (Armor(4), Impact(1))",
-              "parentPackageUid": "B1",
-              "parentSectionUid": "pV1ud1X",
-              "parentSectionId": "pV1ud1X",
-              "id": "4rfkw"
-            },
             {
               "uid": "7hTEV_zz7L",
               "type": "ArmyBookUpgradeOption",
@@ -2577,7 +2534,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "8zAbXEx"
                 }
               ],
@@ -2618,7 +2575,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "8zAbXEx"
                 }
               ],
@@ -2663,7 +2620,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 15,
+                  "cost": 10,
                   "unitId": "8zAbXEx"
                 }
               ],
@@ -2691,6 +2648,53 @@
               "label": "Master Thief (Stealth, Strider)",
               "parentSectionId": "pV1ud1X",
               "id": "VRaQMZUt4N"
+            },
+            {
+              "uid": "4rfkw",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "cost": 15,
+                  "unitId": "8zAbXEx"
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Pig",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "60x35",
+                    "square": "50x25"
+                  },
+                  "label": "Pig (Armor(4), Impact(1), Swift)",
+                  "content": [
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "leFm23MTiJxO",
+                      "name": "Swift",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Pig (Armor(4), Impact(1), Swift)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "pV1ud1X",
+              "parentSectionId": "pV1ud1X",
+              "id": "4rfkw"
             },
             {
               "uid": "CK_ML-b",
@@ -2755,7 +2759,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "eZvn0Nr",
+          "id": "bRVAigy",
           "uid": "FClLCl9",
           "label": "Upgrade up to three models with one",
           "options": [
@@ -2892,7 +2896,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "Q5MZYO_",
+          "id": "Awmh0OC",
           "uid": "e6sUln_",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2987,7 +2991,7 @@
       "hint": "Thieves",
       "sections": [
         {
-          "id": "YJIoKu0",
+          "id": "VyEWFMm",
           "uid": "diuiRCg",
           "label": "Replace all Dual Hand Weapons",
           "options": [
@@ -3035,7 +3039,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 55,
+                  "cost": 50,
                   "unitId": "xSlWPl2"
                 }
               ],
@@ -3096,7 +3100,7 @@
           ]
         },
         {
-          "id": "eNoJOuT",
+          "id": "lYr5kPh",
           "uid": "Oj1t5",
           "label": "Upgrade all models with one",
           "options": [
@@ -3184,7 +3188,7 @@
       "hint": "Marksmen",
       "sections": [
         {
-          "id": "qSJGHpi",
+          "id": "6330sPf",
           "uid": "UDNFFyM",
           "label": "Replace all Shortbows",
           "options": [
@@ -3278,7 +3282,7 @@
       "hint": "Beast Riders",
       "sections": [
         {
-          "id": "5AAUbML",
+          "id": "Du-Re75",
           "uid": "Pw8gcW7",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -3330,7 +3334,7 @@
           ]
         },
         {
-          "id": "Yf3RUzv",
+          "id": "ilYEMWE",
           "uid": "dt9ab2D",
           "label": "Upgrade all models with one",
           "options": [
@@ -3414,7 +3418,7 @@
           }
         },
         {
-          "id": "L07eHwZ",
+          "id": "QaronAu",
           "uid": "G6XLfq-",
           "label": "Replace all Dog Mounts",
           "options": [
@@ -3547,7 +3551,7 @@
       "hint": "Golems",
       "sections": [
         {
-          "id": "-hEQlrR",
+          "id": "0RvKV2C",
           "uid": "2a4gS-V",
           "label": "Replace all Rock Breeds",
           "options": [
@@ -3565,6 +3569,7 @@
                   "name": "Tree Breed",
                   "type": "ArmyBookItem",
                   "bases": null,
+                  "label": "Tree Breed (Bane in Melee, Scout)",
                   "content": [
                     {
                       "id": "7d9yvTiP6UR5",
@@ -3577,7 +3582,6 @@
                       "type": "ArmyBookRule"
                     }
                   ],
-                  "label": "Tree Breed (Bane in Melee, Scout)",
                   "count": 1
                 }
               ],
@@ -3641,7 +3645,7 @@
       "hint": "Beast Chariot",
       "sections": [
         {
-          "id": "NaDNG_h",
+          "id": "1FJSD9_",
           "uid": "iRpbuMD",
           "label": "Replace Spear Crew",
           "options": [
@@ -3683,7 +3687,7 @@
           ]
         },
         {
-          "id": "arm5t-N",
+          "id": "WjHp_qG",
           "uid": "OMPPv8u",
           "label": "Replace Draft Goat",
           "options": [
@@ -3823,7 +3827,7 @@
       "hint": "Halfling Artillery",
       "sections": [
         {
-          "id": "8pYI-Of",
+          "id": "cAPXBFP",
           "uid": "4yGy1tw",
           "label": "Replace Volley Gun",
           "options": [
@@ -3922,7 +3926,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 45,
+                  "cost": 35,
                   "unitId": "avLiLhw"
                 }
               ],
@@ -4029,7 +4033,7 @@
       "hint": "Cockatrice",
       "sections": [
         {
-          "id": "qOvr-JE",
+          "id": "nPFvo2y",
           "uid": "REc82",
           "label": "Replace Sharp Beak and Sharp Claws",
           "options": [
@@ -4100,7 +4104,7 @@
       "hint": "Kin Bond",
       "sections": [
         {
-          "id": "xQDc0Su",
+          "id": "3807Wsd",
           "uid": "PQviO_dieY",
           "label": "Upgrade one model with",
           "options": [
@@ -4163,7 +4167,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "bjOFTuk",
+          "id": "wZ67MG3",
           "uid": "ebFZSnUC",
           "label": "Upgrade with one",
           "options": [
@@ -4334,7 +4338,7 @@
       "hint": "Drunks",
       "sections": [
         {
-          "id": "nAANq-R",
+          "id": "JfjJVV7",
           "uid": "7a7CfCMTKG",
           "label": "Upgrade all models with",
           "options": [
@@ -4343,7 +4347,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 115,
+                  "cost": 105,
                   "unitId": "__kWeE8"
                 }
               ],
@@ -4397,7 +4401,7 @@
       "hint": "Jetpack Troopers",
       "sections": [
         {
-          "id": "Sbbgml3",
+          "id": "cKjvcbb",
           "uid": "0xXTFm1M2A",
           "label": "Replace all Grenades",
           "options": [
@@ -4406,7 +4410,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 55,
+                  "cost": 50,
                   "unitId": "r2A20bR"
                 }
               ],
@@ -4462,7 +4466,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "rc49iQn",
+          "id": "knRG6t0",
           "uid": "2O-uQMYQ",
           "label": "Upgrade with one",
           "options": [
@@ -4666,7 +4670,7 @@
       "hint": "Terrifying Fireworks",
       "sections": [
         {
-          "id": "IcM3527",
+          "id": "PV2eN8-",
           "uid": "-YxdEBRA",
           "label": "Upgrade with",
           "options": [
@@ -5316,8 +5320,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:35:35.427Z",
-  "editedAt": "2026-04-30T09:35:35.427Z",
+  "modifiedAt": "2026-05-05T08:02:19.347Z",
+  "editedAt": "2026-05-04T09:48:45.161Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/Yc0G2hHhIghLqbveC8OGx.png",
@@ -5335,7 +5339,7 @@
     ]
   },
   "balanceValid": false,
-  "balanceValidReason": 5,
+  "balanceValidReason": 1,
   "loreUrl": "https://www.onepagerules.com/factions/halflings",
   "voted": null,
   "specialRules": [

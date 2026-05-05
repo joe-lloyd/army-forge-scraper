@@ -17,6 +17,87 @@
   "backgroundFull": "The Eternal Wardens hail from the Alabaster City, a bustling metropolis which stands in stark contrast to the ashen wasteland that makes up the rest of their realm. The city is a host to countless Voidgates that allow the Wardens to travel to countless Planes, including Tyria and many more beyond it. The largest Voidgate in the Alabaster City lies in its very heart, sealed by the Warden God who has dedicated his entire being to keeping the gate shut, stopping what lies beyond it from venturing in. \n\nThere is no one alive who still knows the full truth of what lies beyond the gate, except for fragments of legend and speculation. All that is known for certain is that their God has dedicated his entire purpose to ensuring that the Voidgate remains shut. This task has slowly drained the Warden God’s power over the centuries, however, and the people of the city have long watched their God’s strength slowly fail. \n\nIn order to preserve the Warden God, his followers sacrifice thousands of souls each day to lend him strength. His most devoted and skilled followers are inducted into the order of Eternal Wardens and imbued with a portion of their God’s power. The Wardens venture out into several Planes to find worthy sacrifices, and either bring them to the Alabaster city alive, or capture their souls in lanterns to feed to their God. \n\nDuring their travels, the Wardens discovered that a Havoc Daemon’s soul contains a portion of their god’s divine energy, and serves as a uniquely potent sacrifice for their own god. The Wardens started hunting Havoc Daemons through several Planes, eventually following the Havoc Gods to Tyria, arriving early in the Havoc Wars whilst pursuing the Havoc Gods. In Tyria, they helped win many battles, fighting alongside Tyrians and capturing many Daemons. When the Havoc Gods were sealed, the Eternal Wardens disappeared as suddenly as they came. \n\nNow that the Great Rift has opened, and the Havoc Gods have been freed, the Wardens have returned to Tyria, viewing it as a hunting ground for capturing Daemons. However, they are now more careful fighting Daemons, not wishing them to be as badly defeated as they were, so as not to lose their source of souls. When necessary, they will even fight with other Tyrian factions, just to make sure that the Havoc Daemons are not driven to extinction. \n\nHow will you keep the gate sealed?",
   "units": [
     {
+      "id": "IDLyyFy",
+      "cost": 95,
+      "name": "Warden Knight",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "2atvlmICQSCV",
+          "name": "Fearless",
+          "label": "Fearless"
+        },
+        {
+          "id": "JoOCVPx1xT1G",
+          "name": "Furious",
+          "label": "Furious"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "UXo89u7JIIGL",
+          "name": "Warden",
+          "label": "Warden"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "yT9x9gc3",
+          "name": "Sword & Staff",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "mRZa3770",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "Naqc5mga9Uha",
+              "name": "Bane",
+              "label": "Bane"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Sword & Staff (A3, AP(1), Bane)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "9EFD4",
+        "uzin9Wjg"
+      ],
+      "genericName": "Enforcer Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "h0ceTgP",
       "cost": 45,
       "name": "Guardian Elite",
@@ -1218,7 +1299,7 @@
       "hint": "Guardian Elite",
       "sections": [
         {
-          "id": "Wr4-zpJ",
+          "id": "n9KabOv",
           "uid": "gzf-hi-",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1385,7 +1466,7 @@
           ]
         },
         {
-          "id": "xghmaFK",
+          "id": "TU_47Ba",
           "uid": "G_gj_BS",
           "label": "Upgrade with",
           "options": [
@@ -1462,7 +1543,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "IyrUGuF",
+          "id": "5iRyoAX",
           "uid": "4hH8jUe",
           "label": "Upgrade with one",
           "options": [
@@ -1582,7 +1663,7 @@
       "hint": "Guardians",
       "sections": [
         {
-          "id": "szj5aHs",
+          "id": "sWfCse9",
           "uid": "nIMmVsU",
           "label": "Replace Heavy Halberd",
           "options": [
@@ -1681,7 +1762,7 @@
       "hint": "Paladins",
       "sections": [
         {
-          "id": "SiNLahD",
+          "id": "tEhwAoT",
           "uid": "UA2w8zT",
           "label": "Replace Sword & Staff",
           "options": [
@@ -1718,7 +1799,7 @@
               "costs": [
                 {
                   "unitId": "ay8SZTZ",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -1760,10 +1841,52 @@
           ]
         },
         {
-          "id": "Mwx7TTL",
+          "id": "b6Ex5eZ",
           "uid": "wQ00JHh",
           "label": "Replace Hand Weapon",
           "options": [
+            {
+              "uid": "bsJOxus7SU",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ay8SZTZ",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Thunder Mace",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "x4on2SYr",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)",
+              "parentSectionId": "wQ00JHh",
+              "id": "bsJOxus7SU"
+            },
             {
               "uid": "CwUmEIC",
               "cost": 10,
@@ -1800,48 +1923,6 @@
               "parentSectionUid": "wQ00JHh",
               "parentSectionId": "wQ00JHh",
               "id": "CwUmEIC"
-            },
-            {
-              "uid": "bsJOxus7SU",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "ay8SZTZ",
-                  "cost": 20
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Thunder Mace",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 1,
-                  "weaponId": "x4on2SYr",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 2
-                    },
-                    {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "rating": 3
-                    },
-                    {
-                      "id": "WcOMD7QgPYXZ",
-                      "name": "Lacerate"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)"
-                }
-              ],
-              "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)",
-              "parentSectionId": "wQ00JHh",
-              "id": "bsJOxus7SU"
             }
           ],
           "parentPackageUid": "G1",
@@ -1852,7 +1933,7 @@
           ]
         },
         {
-          "id": "3_73z8o",
+          "id": "EWplwKX",
           "uid": "0P_vgRi",
           "label": "Upgrade with",
           "options": [
@@ -1902,10 +1983,52 @@
       "hint": "Wardens",
       "sections": [
         {
-          "id": "w2Wn02s",
+          "id": "6WPmfzi",
           "uid": "j-OMKPM",
           "label": "Replace Heavy Hand Weapon",
           "options": [
+            {
+              "uid": "6i29a9RFCg",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "BIpTSoW",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Thunder Mace",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "x4on2SYr",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)",
+              "parentSectionId": "j-OMKPM",
+              "id": "6i29a9RFCg"
+            },
             {
               "uid": "7alIWAJ",
               "cost": 35,
@@ -1942,48 +2065,6 @@
               "parentSectionUid": "j-OMKPM",
               "parentSectionId": "j-OMKPM",
               "id": "7alIWAJ"
-            },
-            {
-              "uid": "6i29a9RFCg",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "BIpTSoW",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Thunder Mace",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 1,
-                  "weaponId": "x4on2SYr",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 2
-                    },
-                    {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "rating": 3
-                    },
-                    {
-                      "id": "WcOMD7QgPYXZ",
-                      "name": "Lacerate"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)"
-                }
-              ],
-              "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)",
-              "parentSectionId": "j-OMKPM",
-              "id": "6i29a9RFCg"
             },
             {
               "uid": "ddJqS",
@@ -2038,7 +2119,7 @@
       "hint": "Eternals",
       "sections": [
         {
-          "id": "AYWGN2j",
+          "id": "H7L-0gg",
           "uid": "G8FIwsX",
           "label": "Replace Great Glaive",
           "options": [
@@ -2154,7 +2235,7 @@
               "costs": [
                 {
                   "unitId": "EVgav1G",
-                  "cost": 30
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2208,7 +2289,7 @@
       "hint": "Destroyers",
       "sections": [
         {
-          "id": "4-67fTn",
+          "id": "RazM4lo",
           "uid": "bNvRTCH",
           "label": "Replace Meteor Hammer",
           "options": [
@@ -2259,7 +2340,7 @@
               "costs": [
                 {
                   "unitId": "2yYDL1W",
-                  "cost": 20
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2311,7 +2392,7 @@
       "hint": "Warden Shooters",
       "sections": [
         {
-          "id": "JaNDXrm",
+          "id": "iSNybv5",
           "uid": "i9CtNIi",
           "label": "Replace Bow",
           "options": [
@@ -2404,7 +2485,7 @@
               "costs": [
                 {
                   "unitId": "meDF1iu",
-                  "cost": 20
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2458,7 +2539,7 @@
       "hint": "Winged Wardens",
       "sections": [
         {
-          "id": "FVbFKUT",
+          "id": "P-0HNY4",
           "uid": "hy4fkkm",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -2548,6 +2629,48 @@
               "id": "nVUfm1i"
             },
             {
+              "uid": "FJWtAc8q8c",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "lfX0CH6",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Thunder Mace",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "x4on2SYr",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)",
+              "parentSectionId": "hy4fkkm",
+              "id": "FJWtAc8q8c"
+            },
+            {
               "uid": "IffeZWD",
               "cost": 35,
               "type": "ArmyBookUpgradeOption",
@@ -2583,48 +2706,6 @@
               "parentSectionUid": "hy4fkkm",
               "parentSectionId": "hy4fkkm",
               "id": "IffeZWD"
-            },
-            {
-              "uid": "FJWtAc8q8c",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "lfX0CH6",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Thunder Mace",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 1,
-                  "weaponId": "x4on2SYr",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 2
-                    },
-                    {
-                      "id": "w_vX0mi58KKt",
-                      "name": "Blast",
-                      "rating": 3
-                    },
-                    {
-                      "id": "WcOMD7QgPYXZ",
-                      "name": "Lacerate"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)"
-                }
-              ],
-              "label": "Thunder Mace (A1, AP(2), Blast(3), Lacerate)",
-              "parentSectionId": "hy4fkkm",
-              "id": "FJWtAc8q8c"
             }
           ],
           "parentPackageUid": "L1",
@@ -2635,7 +2716,7 @@
           ]
         },
         {
-          "id": "F031hQs",
+          "id": "Ox6vIuU",
           "uid": "rAAUQro",
           "label": "Replace Javelin",
           "options": [
@@ -2689,7 +2770,7 @@
           ]
         },
         {
-          "id": "rqZPCG8",
+          "id": "KRO3sOp",
           "uid": "JUCT5",
           "label": "Upgrade with",
           "options": [
@@ -2737,7 +2818,7 @@
       "hint": "Warden Marskmen",
       "sections": [
         {
-          "id": "frURoh8",
+          "id": "CdcLsyZ",
           "uid": "w4Ise99",
           "label": "Replace Cyclone Crossbow",
           "options": [
@@ -2801,7 +2882,7 @@
       "hint": "Gryph Hunters",
       "sections": [
         {
-          "id": "sxWN4Z4",
+          "id": "rdCldYl",
           "uid": "RfW_UA6",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2949,7 +3030,7 @@
       "hint": "Drake-Lion Paladins",
       "sections": [
         {
-          "id": "QauHSt7",
+          "id": "ed2eUKw",
           "uid": "uoue6h-",
           "label": "Replace any Sword & Staff",
           "options": [
@@ -2959,7 +3040,7 @@
               "costs": [
                 {
                   "unitId": "Nl1wnIW",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -3002,7 +3083,7 @@
           ]
         },
         {
-          "id": "DDa0T4e",
+          "id": "AZL-PHe",
           "uid": "e-1wv1X",
           "label": "Upgrade with",
           "options": [
@@ -3048,11 +3129,676 @@
       "calcErrors": false
     },
     {
+      "uid": "9EFD4",
+      "hint": "Warden Knight",
+      "sections": [
+        {
+          "id": "BY_aH_8",
+          "uid": "Hv2za",
+          "label": "Replace Sword & Staff",
+          "options": [
+            {
+              "uid": "oI467",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Hand Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "WHcr53Ec",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Hand Weapon (A4, AP(1))"
+                }
+              ],
+              "label": "Heavy Hand Weapon (A4, AP(1))",
+              "parentSectionId": "Hv2za",
+              "id": "oI467"
+            },
+            {
+              "uid": "mNucM",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "SZg3yvGj",
+                  "name": "Great Staff",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "SZg3yvGj",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Staff (A4, AP(1), Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Great Staff (A4, AP(1), Bane)",
+              "parentPackageUid": "9EFD4",
+              "parentSectionUid": "Hv2za",
+              "parentSectionId": "Hv2za",
+              "id": "mNucM"
+            },
+            {
+              "uid": "kkYvw",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "Du5c8ebd",
+                  "name": "Heavy Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "MyZm7lHh",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Great Weapon (A4, AP(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Great Weapon (A4, AP(3))",
+              "parentPackageUid": "9EFD4",
+              "parentSectionUid": "Hv2za",
+              "parentSectionId": "Hv2za",
+              "id": "kkYvw"
+            },
+            {
+              "uid": "UyQSlgcpbT",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Great Thunder Mace",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 2,
+                  "weaponId": "dI34SDE9",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Thunder Mace (A2, AP(2), Blast(3), Lacerate)"
+                }
+              ],
+              "label": "Great Thunder Mace (A2, AP(2), Blast(3), Lacerate)",
+              "parentSectionId": "Hv2za",
+              "id": "UyQSlgcpbT"
+            },
+            {
+              "uid": "17qSL",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "id": "wWvmfQ49",
+                  "name": "Dual Heavy Hand Weapons",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 8,
+                  "weaponId": "yQ5zddlK",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dual Heavy Hand Weapons (A8, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Dual Heavy Hand Weapons (A8, AP(1))",
+              "parentPackageUid": "9EFD4",
+              "parentSectionUid": "Hv2za",
+              "parentSectionId": "Hv2za",
+              "id": "17qSL"
+            }
+          ],
+          "parentPackageUid": "9EFD4",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Sword & Staff"
+          ]
+        },
+        {
+          "id": "5nylJ66",
+          "uid": "KmLjS",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "W2ovx",
+              "cost": 45,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 60
+                }
+              ],
+              "gains": [
+                {
+                  "id": "NgepZcKp",
+                  "name": "Knight Bow",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 4,
+                  "weaponId": "NgepZcKp",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Knight Bow (24\", A4, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Knight Bow (24\", A4, AP(1))",
+              "parentPackageUid": "9EFD4",
+              "parentSectionUid": "KmLjS",
+              "parentSectionId": "KmLjS",
+              "id": "W2ovx"
+            },
+            {
+              "uid": "96RQI",
+              "cost": 45,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 65
+                }
+              ],
+              "gains": [
+                {
+                  "id": "-WISu1wx",
+                  "name": "Great Bow",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 1,
+                  "weaponId": "-WISu1wx",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Bow (30\", A1, AP(3), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Great Bow (30\", A1, AP(3), Deadly(3))",
+              "parentPackageUid": "9EFD4",
+              "parentSectionUid": "KmLjS",
+              "parentSectionId": "KmLjS",
+              "id": "96RQI"
+            }
+          ],
+          "parentPackageUid": "9EFD4",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        },
+        {
+          "id": "asC8x6Y",
+          "uid": "TSOKz",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "rpOah",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Paladin",
+                  "type": "ArmyBookItem",
+                  "label": "Paladin (Unpredictable Fighter)",
+                  "content": [
+                    {
+                      "id": "DEeVIJcfNfS6",
+                      "name": "Unpredictable Fighter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Paladin (Unpredictable Fighter)",
+              "parentPackageUid": "9EFD4",
+              "parentSectionUid": "TSOKz",
+              "parentSectionId": "TSOKz",
+              "id": "rpOah"
+            }
+          ],
+          "isHeroUpgrade": false,
+          "parentPackageUid": "9EFD4",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        },
+        {
+          "id": "iNbGK1k",
+          "uid": "g7KKf",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "3tm1Yl06QJ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "AUMnP4D",
+                  "name": "Beast-Hound Companion",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Beast-Hound Companion (Repel Ambushers)",
+                  "content": [
+                    {
+                      "id": "C6MzEy1CnxTs",
+                      "name": "Repel Ambushers",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Beast-Hound Companion (Repel Ambushers)",
+              "parentSectionId": "g7KKf",
+              "parentPackageUid": "9Xk5T6Sh",
+              "id": "3tm1Yl06QJ"
+            },
+            {
+              "uid": "1M_1b03",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Drake-Lion",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "90x52",
+                    "square": "75x50"
+                  },
+                  "label": "Drake-Lion (Fast, Strider)",
+                  "content": [
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Drake-Lion (Fast, Strider)",
+              "parentSectionId": "g7KKf",
+              "id": "1M_1b03"
+            },
+            {
+              "uid": "mAwv6UxMIz",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Wings",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Wings (Ambush, Flying)",
+                  "content": [
+                    {
+                      "id": "6mJw5IdqSqNC",
+                      "name": "Ambush",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Wings (Ambush, Flying)",
+              "parentSectionId": "g7KKf",
+              "id": "mAwv6UxMIz"
+            }
+          ],
+          "parentPackageUid": "9EFD4",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "uzin9Wjg",
+      "hint": "Specialists - Knight",
+      "sections": [
+        {
+          "id": "m3X9-aE",
+          "uid": "IoN9d3fg",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "_fqZRq5q",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Herald",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Herald (Unstoppable in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "AB3FAl-SEUYP",
+                      "name": "Unstoppable in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Herald (Unstoppable in Melee Aura)",
+              "parentSectionId": "IoN9d3fg",
+              "parentPackageUid": "W6y9T1x6",
+              "parentSectionUid": "BS47S",
+              "id": "_fqZRq5q"
+            },
+            {
+              "uid": "jZq4QuEH",
+              "cost": 50,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Soul Collector",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Soul Collector (Bane when Shooting Aura)",
+                  "content": [
+                    {
+                      "id": "ba6LlbpoLkSu",
+                      "name": "Bane when Shooting Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Soul Collector (Bane when Shooting Aura)",
+              "parentSectionId": "IoN9d3fg",
+              "parentPackageUid": "W6y9T1x6",
+              "parentSectionUid": "BS47S",
+              "id": "jZq4QuEH"
+            },
+            {
+              "uid": "mD7S8OG8DL",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Prayer Chanter",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Prayer Chanter (Stealth Aura)",
+                  "content": [
+                    {
+                      "id": "8haZ36fXvnzn",
+                      "name": "Stealth Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Prayer Chanter (Stealth Aura)",
+              "parentSectionId": "IoN9d3fg",
+              "id": "mD7S8OG8DL"
+            },
+            {
+              "uid": "prYq5BFo",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Exorcist",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Exorcist (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Exorcist (Caster(2))",
+              "parentSectionId": "IoN9d3fg",
+              "parentPackageUid": "W6y9T1x6",
+              "id": "prYq5BFo"
+            },
+            {
+              "uid": "D9w-kWD6",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heirloom Bearer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Heirloom Bearer (Re-Deployment)",
+                  "content": [
+                    {
+                      "id": "zjzB46LX-QDg",
+                      "name": "Re-Deployment",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Heirloom Bearer (Re-Deployment)",
+              "parentSectionId": "IoN9d3fg",
+              "parentPackageUid": "W6y9T1x6",
+              "id": "D9w-kWD6"
+            },
+            {
+              "uid": "drJI8JnZ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IDLyyFy",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Exorcist",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Master Exorcist (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Exorcist (Caster(3))",
+              "parentSectionId": "IoN9d3fg",
+              "parentPackageUid": "W6y9T1x6",
+              "id": "drJI8JnZ"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "W6y9T1x6",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "4y4E5-2F",
       "hint": "Beast-Hounds",
       "sections": [
         {
-          "id": "GdwAVtY",
+          "id": "bFH0LGo",
           "uid": "Bk1hdYwYNz",
           "label": "Replace Hunting Hound",
           "options": [
@@ -3101,7 +3847,7 @@
       "hint": "Specialists - Guardian",
       "sections": [
         {
-          "id": "LOFiYZ9",
+          "id": "yhKxaF_",
           "uid": "1nV-5JBu",
           "label": "Upgrade with one",
           "options": [
@@ -3144,7 +3890,7 @@
               "costs": [
                 {
                   "unitId": "h0ceTgP",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3175,7 +3921,7 @@
               "costs": [
                 {
                   "unitId": "h0ceTgP",
-                  "cost": 20
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -3247,7 +3993,7 @@
       "hint": "Lightning Beacon",
       "sections": [
         {
-          "id": "WgPv-KE",
+          "id": "O8YBTLV",
           "uid": "bIvmbbtZ",
           "label": "Upgrade with",
           "options": [
@@ -3870,8 +4616,8 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:21:38.640Z",
-  "editedAt": "2026-04-30T10:17:00.706Z",
+  "modifiedAt": "2026-05-05T08:02:10.149Z",
+  "editedAt": "2026-05-04T01:00:32.371Z",
   "official": true,
   "versionString": "3.5.3",
   "coverImagePath": "https://af-images.s3.eu-north-1.amazonaws.com/army-books/covers/-MrGWaleoZR7pxIn/NzrlMwS93LNriSF_8zDgk.jpg",
@@ -3984,6 +4730,15 @@
       "targetType": 1
     },
     {
+      "id": "AB3FAl-SEUYP",
+      "name": "Unstoppable in Melee Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Unstoppable in melee. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "r8OBuam8nRXP",
       "name": "Vanguard",
       "aliasedRuleId": null,
@@ -4056,6 +4811,15 @@
       "targetType": 1
     },
     {
+      "id": "QXyt-zV_bjpg",
+      "name": "Unstoppable",
+      "aliasedRuleId": null,
+      "description": "Ignores Regeneration, and ignores all negative modifiers to this weapon.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 2
+    },
+    {
       "id": "9jyvRoBODD-O",
       "name": "Stealth",
       "aliasedRuleId": null,
@@ -4072,15 +4836,6 @@
       "hasRating": true,
       "coreType": 1,
       "targetType": 1
-    },
-    {
-      "id": "QXyt-zV_bjpg",
-      "name": "Unstoppable",
-      "aliasedRuleId": null,
-      "description": "Ignores Regeneration, and ignores all negative modifiers to this weapon.",
-      "hasRating": false,
-      "coreType": 1,
-      "targetType": 2
     },
     {
       "id": "w_vX0mi58KKt",

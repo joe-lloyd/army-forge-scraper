@@ -360,60 +360,8 @@
       "disabledUpgradeSections": []
     },
     {
-      "id": "ubHQDXB",
-      "cost": 25,
-      "name": "Guardians",
-      "size": 3,
-      "bases": {
-        "round": "32",
-        "square": "30"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "Ldhtmr4H8b6G",
-          "name": "Slow",
-          "label": "Slow"
-        },
-        {
-          "id": "f1xiOutM7xXQ",
-          "name": "Ossified",
-          "label": "Ossified"
-        }
-      ],
-      "valid": true,
-      "defense": 4,
-      "quality": 4,
-      "weapons": [
-        {
-          "id": "ZSkH2YnO",
-          "name": "Hand Weapon",
-          "type": "ArmyBookWeapon",
-          "count": 3,
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "SWnfRBdJ",
-          "specialRules": [],
-          "attacksMultiplier": 1,
-          "label": "Hand Weapon (A1)",
-          "originalCount": 3
-        }
-      ],
-      "upgrades": [
-        "C1",
-        "D1",
-        "7nPkjKGx"
-      ],
-      "genericName": "Skeleton Warriors",
-      "hasCustomRule": false,
-      "disabledSections": [],
-      "hasBalanceInvalid": false,
-      "originalSize": 10,
-      "disabledUpgradeSections": []
-    },
-    {
       "id": "PG_O1yz",
-      "cost": 25,
+      "cost": 20,
       "name": "Reaper",
       "size": 1,
       "type": 0,
@@ -469,6 +417,58 @@
       "hasCustomRule": false,
       "hasBalanceInvalid": false,
       "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "ubHQDXB",
+      "cost": 25,
+      "name": "Guardians",
+      "size": 3,
+      "bases": {
+        "round": "32",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "Ldhtmr4H8b6G",
+          "name": "Slow",
+          "label": "Slow"
+        },
+        {
+          "id": "f1xiOutM7xXQ",
+          "name": "Ossified",
+          "label": "Ossified"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "ZSkH2YnO",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 3,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "SWnfRBdJ",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Hand Weapon (A1)",
+          "originalCount": 3
+        }
+      ],
+      "upgrades": [
+        "C1",
+        "D1",
+        "7nPkjKGx"
+      ],
+      "genericName": "Skeleton Warriors",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 10,
       "disabledUpgradeSections": []
     },
     {
@@ -622,7 +622,7 @@
       "hint": "Herald of Death",
       "sections": [
         {
-          "id": "Fvpb7NO",
+          "id": "AU5p2kX",
           "uid": "No8pLwT",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -876,7 +876,7 @@
           ]
         },
         {
-          "id": "MsA1HOx",
+          "id": "75ffeBx",
           "uid": "6WN8i2K0KM",
           "label": "Upgrade with one",
           "options": [
@@ -959,7 +959,7 @@
           }
         },
         {
-          "id": "Thp-MrV",
+          "id": "TR8QDxS",
           "uid": "x9zo7kD",
           "label": "Upgrade with one",
           "options": [
@@ -969,7 +969,7 @@
               "costs": [
                 {
                   "unitId": "NySQofv",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1007,7 +1007,7 @@
               "costs": [
                 {
                   "unitId": "NySQofv",
-                  "cost": 60
+                  "cost": 50
                 }
               ],
               "gains": [
@@ -1062,7 +1062,7 @@
       "hint": "Bone Master",
       "sections": [
         {
-          "id": "BCL383S",
+          "id": "VJQ3Say",
           "uid": "Z_SeZKS",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1285,7 +1285,7 @@
           ]
         },
         {
-          "id": "2Rlf7dh",
+          "id": "xWCbP1x",
           "uid": "mXe_u0qeAb",
           "label": "Upgrade with one",
           "options": [
@@ -1368,7 +1368,7 @@
           }
         },
         {
-          "id": "IyCjbrn",
+          "id": "0mis2Gc",
           "uid": "_rEPv5v",
           "label": "Upgrade with one",
           "options": [
@@ -1378,7 +1378,7 @@
               "costs": [
                 {
                   "unitId": "VUZBCgc",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1478,7 +1478,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "jKXdsez",
+          "id": "81jIkPD",
           "uid": "7N23TI0",
           "label": "Upgrade one model with one",
           "options": [
@@ -1603,7 +1603,7 @@
       "hint": "Guardians",
       "sections": [
         {
-          "id": "qZk3dJf",
+          "id": "4humbbl",
           "uid": "5obDBoF",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1726,7 +1726,7 @@
           ]
         },
         {
-          "id": "jqdONQK",
+          "id": "XyLw0TY",
           "uid": "B8l8wd8",
           "label": "Replace one Hand Weapon",
           "options": [
@@ -1794,7 +1794,7 @@
       "hint": "Death Riders",
       "sections": [
         {
-          "id": "5KR-H-C",
+          "id": "8AYxxu8",
           "uid": "90yOccK",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1886,7 +1886,7 @@
       "hint": "Stalkers",
       "sections": [
         {
-          "id": "FnZnhFl",
+          "id": "MS2v0PO",
           "uid": "q0PINz0",
           "label": "Replace Quad Blade",
           "options": [
@@ -1947,7 +1947,7 @@
       "hint": "Unstoppable Husk",
       "sections": [
         {
-          "id": "6O-qiri",
+          "id": "_Wj2bkv",
           "uid": "J58_ew2-NV",
           "label": "Upgrade all models with",
           "options": [
@@ -2009,7 +2009,7 @@
       "hint": "Immortals",
       "sections": [
         {
-          "id": "cJIf7H-",
+          "id": "JwXIRaW",
           "uid": "PsbdJPCt3_",
           "label": "Replace Heavy Halberd",
           "options": [
@@ -2070,7 +2070,7 @@
       "hint": "Specialists - Bone Master",
       "sections": [
         {
-          "id": "i28GbE0",
+          "id": "RKS8uX-",
           "uid": "QgKJmnKT",
           "label": "Upgrade with one",
           "options": [
@@ -2142,7 +2142,7 @@
               "costs": [
                 {
                   "unitId": "VUZBCgc",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2274,7 +2274,7 @@
       "hint": "Great Stalker",
       "sections": [
         {
-          "id": "qtmJbqt",
+          "id": "oUulFLU",
           "uid": "dWM_MgNz",
           "label": "Replace Dual Falchion",
           "options": [
@@ -2408,7 +2408,7 @@
       "hint": "Specialists - Stalker",
       "sections": [
         {
-          "id": "9Izz2dt",
+          "id": "-bas61Z",
           "uid": "qdUqsPL8",
           "label": "Upgrade with one",
           "options": [
@@ -2445,6 +2445,36 @@
               "id": "Gvnh8osp"
             },
             {
+              "uid": "Xyc66BSn",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vObAD3f",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Lord of Bones",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Lord of Bones (Swift Aura)",
+                  "content": [
+                    {
+                      "id": "amQphBHWOeJs",
+                      "name": "Swift Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Lord of Bones (Swift Aura)",
+              "parentSectionId": "qdUqsPL8",
+              "parentPackageUid": "-64NuSjo",
+              "id": "Xyc66BSn"
+            },
+            {
               "uid": "QfCFx5Aa",
               "cost": 15,
               "type": "ArmyBookUpgradeOption",
@@ -2475,36 +2505,6 @@
               "parentPackageUid": "-64NuSjo",
               "parentSectionUid": "m8IU8cH",
               "id": "QfCFx5Aa"
-            },
-            {
-              "uid": "Xyc66BSn",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "vObAD3f",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Lord of Bones",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Lord of Bones (Swift Aura)",
-                  "content": [
-                    {
-                      "id": "amQphBHWOeJs",
-                      "name": "Swift Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Lord of Bones (Swift Aura)",
-              "parentSectionId": "qdUqsPL8",
-              "parentPackageUid": "-64NuSjo",
-              "id": "Xyc66BSn"
             },
             {
               "uid": "SFJQ9BGf",
@@ -2585,7 +2585,7 @@
       "hint": "Specialists - Herald",
       "sections": [
         {
-          "id": "QJ6jlH5",
+          "id": "zEdeicP",
           "uid": "TO1dKdYh",
           "label": "Upgrade with one",
           "options": [
@@ -2652,6 +2652,36 @@
               "id": "UopVZ4uR"
             },
             {
+              "uid": "MuYUYl7-",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "NySQofv",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Lord of Bones",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Lord of Bones (Swift Aura)",
+                  "content": [
+                    {
+                      "id": "amQphBHWOeJs",
+                      "name": "Swift Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Lord of Bones (Swift Aura)",
+              "parentSectionId": "TO1dKdYh",
+              "parentPackageUid": "yXU8AMcU",
+              "id": "MuYUYl7-"
+            },
+            {
               "uid": "pEMJqaWg",
               "cost": 15,
               "type": "ArmyBookUpgradeOption",
@@ -2682,36 +2712,6 @@
               "parentPackageUid": "yXU8AMcU",
               "parentSectionUid": "m8IU8cH",
               "id": "pEMJqaWg"
-            },
-            {
-              "uid": "MuYUYl7-",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "NySQofv",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Lord of Bones",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Lord of Bones (Swift Aura)",
-                  "content": [
-                    {
-                      "id": "amQphBHWOeJs",
-                      "name": "Swift Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Lord of Bones (Swift Aura)",
-              "parentSectionId": "TO1dKdYh",
-              "parentPackageUid": "yXU8AMcU",
-              "id": "MuYUYl7-"
             },
             {
               "uid": "dl0eQZHgv_",
@@ -2762,7 +2762,7 @@
       "hint": "Guardian Archers",
       "sections": [
         {
-          "id": "z3bEs9U",
+          "id": "ebWWSPw",
           "uid": "TzdXqIcRAk",
           "label": "Replace Heavy Bow",
           "options": [
@@ -2811,7 +2811,7 @@
           ]
         },
         {
-          "id": "ANX96Nu",
+          "id": "xFlVRhX",
           "uid": "Hop9o0BDpI",
           "label": "Upgrade with",
           "options": [
@@ -2857,7 +2857,7 @@
       "hint": "Reapers",
       "sections": [
         {
-          "id": "NxfKl5e",
+          "id": "wrvbfP0",
           "uid": "TFvfzJUytH",
           "label": "Upgrade with",
           "options": [
@@ -3494,7 +3494,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:22:12.838Z",
+  "modifiedAt": "2026-05-05T08:02:43.931Z",
   "editedAt": "2026-04-23T13:33:08.752Z",
   "official": true,
   "versionString": "3.5.3",

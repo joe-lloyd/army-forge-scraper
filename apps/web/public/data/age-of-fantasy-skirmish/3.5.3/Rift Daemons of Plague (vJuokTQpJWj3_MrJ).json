@@ -208,7 +208,7 @@
     },
     {
       "id": "rb_k13c",
-      "cost": 95,
+      "cost": 90,
       "name": "Plague Harvester",
       "size": 1,
       "bases": {
@@ -786,7 +786,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "0h40z2X",
+          "id": "SXb025b",
           "uid": "6VwJPph",
           "label": "Upgrade one model with one",
           "options": [
@@ -911,7 +911,7 @@
       "hint": "Plague Warriors",
       "sections": [
         {
-          "id": "hnW2pzV",
+          "id": "_oXieD3",
           "uid": "97DeS-1",
           "label": "Replace all Infected Swords",
           "options": [
@@ -946,6 +946,45 @@
               "label": "Hand Weapon (A1, Bane)",
               "parentSectionId": "97DeS-1",
               "id": "6nxW3c887Q"
+            },
+            {
+              "uid": "cFcMLkc",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "atz33g2",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "ltqkmldU",
+                  "name": "Halberd",
+                  "type": "ArmyBookWeapon",
+                  "range": null,
+                  "attacks": 1,
+                  "weaponId": "ltqkmldU",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Halberd (A1, Rending, Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Halberd (A1, Rending, Bane)",
+              "parentPackageUid": "E1",
+              "parentSectionUid": "97DeS-1",
+              "parentSectionId": "97DeS-1",
+              "id": "cFcMLkc"
             },
             {
               "uid": "cYLog-U",
@@ -1022,52 +1061,13 @@
               "id": "iE4pWv4"
             },
             {
-              "uid": "cFcMLkc",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "atz33g2",
-                  "cost": 20
-                }
-              ],
-              "gains": [
-                {
-                  "id": "ltqkmldU",
-                  "name": "Halberd",
-                  "type": "ArmyBookWeapon",
-                  "range": null,
-                  "attacks": 1,
-                  "weaponId": "ltqkmldU",
-                  "specialRules": [
-                    {
-                      "id": "Naqc5mga9Uha",
-                      "name": "Bane"
-                    },
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Halberd (A1, Rending, Bane)",
-                  "count": 1
-                }
-              ],
-              "label": "Halberd (A1, Rending, Bane)",
-              "parentPackageUid": "E1",
-              "parentSectionUid": "97DeS-1",
-              "parentSectionId": "97DeS-1",
-              "id": "cFcMLkc"
-            },
-            {
               "uid": "1i_Y1yi",
               "cost": 20,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "atz33g2",
-                  "cost": 20
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1112,7 +1112,7 @@
           ]
         },
         {
-          "id": "I_FNFwG",
+          "id": "0FGz5k1",
           "uid": "2KxLhuHf",
           "label": "Upgrade all models with",
           "options": [
@@ -1157,7 +1157,7 @@
           }
         },
         {
-          "id": "uphcew4",
+          "id": "AXU50EG",
           "uid": "HT8ocIZ",
           "label": "Upgrade one model with",
           "options": [
@@ -1210,7 +1210,7 @@
       "hint": "Plague Fly Riders",
       "sections": [
         {
-          "id": "GAywULU",
+          "id": "mTtAGy9",
           "uid": "qO9zQ",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1257,7 +1257,7 @@
           ]
         },
         {
-          "id": "QFo5WjC",
+          "id": "j2dkcP9",
           "uid": "QJ9Phbz",
           "label": "Replace Stinger",
           "options": [
@@ -1310,7 +1310,7 @@
           ]
         },
         {
-          "id": "Wo6IF55",
+          "id": "2AZoVZT",
           "uid": "dEZjAIW",
           "label": "Upgrade with any",
           "options": [
@@ -1397,7 +1397,7 @@
       "hint": "Furies",
       "sections": [
         {
-          "id": "bAU3Lqv",
+          "id": "HyoofnF",
           "uid": "fpyuQ",
           "label": "Replace Infected Claws",
           "options": [
@@ -1446,7 +1446,7 @@
               "costs": [
                 {
                   "unitId": "1d1ydfq",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -1492,7 +1492,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "kRYcgbN",
+          "id": "S4MhgB9",
           "uid": "9txt0",
           "label": "Replace Sword and Plague Hammer",
           "options": [
@@ -1584,7 +1584,7 @@
               "costs": [
                 {
                   "unitId": "7NfheZg",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1701,7 +1701,7 @@
           ]
         },
         {
-          "id": "bqxyoxJ",
+          "id": "Y6Wrh_d",
           "uid": "9eW-I",
           "label": "Replace any Infected Sword",
           "options": [
@@ -1750,7 +1750,7 @@
               "costs": [
                 {
                   "unitId": "7NfheZg",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -1794,7 +1794,7 @@
           ]
         },
         {
-          "id": "ze9R1Qx",
+          "id": "9s_2J9j",
           "uid": "H5nRE",
           "label": "Upgrade with one",
           "options": [
@@ -1916,7 +1916,7 @@
               "costs": [
                 {
                   "unitId": "7NfheZg",
-                  "cost": 95
+                  "cost": 90
                 }
               ],
               "gains": [
@@ -1987,7 +1987,7 @@
       "hint": "Fury Champion",
       "sections": [
         {
-          "id": "aDSnkcI",
+          "id": "qz2UBQO",
           "uid": "rhph_",
           "label": "Replace Sword and Plague Hammer",
           "options": [
@@ -2198,7 +2198,7 @@
           ]
         },
         {
-          "id": "6nAz_WM",
+          "id": "lj_sSam",
           "uid": "vZMlo",
           "label": "Replace any Infected Sword",
           "options": [
@@ -2247,7 +2247,7 @@
               "costs": [
                 {
                   "unitId": "WUYnx9b",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -2298,7 +2298,7 @@
       "hint": "Plague Soul Spawns",
       "sections": [
         {
-          "id": "6BtlEtR",
+          "id": "P39uD2D",
           "uid": "RDNe3",
           "label": "Replace Mutated Infected Claws",
           "options": [
@@ -2340,7 +2340,7 @@
               "costs": [
                 {
                   "unitId": "rLSYPnF",
-                  "cost": 15
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -2386,7 +2386,7 @@
       "hint": "Plague Slingers",
       "sections": [
         {
-          "id": "Oi-sc-u",
+          "id": "QDhVVSF",
           "uid": "Pvjn7YT0",
           "label": "Replace Scatter-Sling",
           "options": [
@@ -2437,7 +2437,7 @@
           ]
         },
         {
-          "id": "glO69Rh",
+          "id": "qLo59bE",
           "uid": "tY_yT",
           "label": "Upgrade with",
           "options": [
@@ -2485,7 +2485,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "4H3FuO6",
+          "id": "jwfwqoX",
           "uid": "wBhze",
           "label": "Upgrade with one",
           "options": [
@@ -2695,7 +2695,7 @@
       "hint": "Plague Harvester",
       "sections": [
         {
-          "id": "Fc6VNp4",
+          "id": "956fJUz",
           "uid": "5m7d0Sdu",
           "label": "Upgrade with",
           "options": [
@@ -2743,7 +2743,7 @@
       "hint": "Sling-Furies",
       "sections": [
         {
-          "id": "qA2SIoQ",
+          "id": "Yd8LmOJ",
           "uid": "_67V3vG8Sd",
           "label": "Replace Scatter-Sling",
           "options": [
@@ -2800,7 +2800,7 @@
       "hint": "Specialists - Fury",
       "sections": [
         {
-          "id": "c-gjATB",
+          "id": "llx_Hwj",
           "uid": "vu8Exo4S",
           "label": "Upgrade with one",
           "options": [
@@ -3502,7 +3502,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:22:23.305Z",
+  "modifiedAt": "2026-05-05T08:02:54.031Z",
   "editedAt": "2026-04-29T16:12:01.340Z",
   "official": true,
   "versionString": "3.5.3",

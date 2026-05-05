@@ -871,7 +871,7 @@
     },
     {
       "id": "0-x0eXy",
-      "cost": 60,
+      "cost": 55,
       "name": "Grotesque",
       "size": 1,
       "bases": {
@@ -1011,7 +1011,7 @@
       "hint": "Iron Champion",
       "sections": [
         {
-          "id": "549kYPZ",
+          "id": "hE57-jF",
           "uid": "PPILfoz",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1181,7 +1181,7 @@
           ]
         },
         {
-          "id": "5wufH_u",
+          "id": "2wo69I6",
           "uid": "xUyXW9E",
           "label": "Upgrade with one",
           "options": [
@@ -1358,7 +1358,7 @@
           }
         },
         {
-          "id": "nAJQvvj",
+          "id": "wgs5kkK",
           "uid": "BYsDwO_",
           "label": "Upgrade with one",
           "options": [
@@ -1408,7 +1408,7 @@
       "hint": "Abyssal Leader",
       "sections": [
         {
-          "id": "ydhRpKb",
+          "id": "yBEGgR4",
           "uid": "cR43IcB",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1559,7 +1559,7 @@
           ]
         },
         {
-          "id": "WhO2hAr",
+          "id": "9cUNhW3",
           "uid": "egImqqn",
           "label": "Upgrade with one",
           "options": [
@@ -1676,7 +1676,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "NFbHnG_",
+          "id": "MP6VYnv",
           "uid": "mt6z4_6",
           "label": "Upgrade one model with one",
           "options": [
@@ -1813,7 +1813,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "ajf2jq5",
+          "id": "Wiw4iDb",
           "uid": "RWxDSi5",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1900,7 +1900,7 @@
           ]
         },
         {
-          "id": "zNTjZ40",
+          "id": "RhUEX1c",
           "uid": "TjsOnssfL2",
           "label": "Upgrade all models with",
           "options": [
@@ -1950,7 +1950,7 @@
       "hint": "Berserker",
       "sections": [
         {
-          "id": "PgK4EQY",
+          "id": "BxgBxdj",
           "uid": "W0aS8Tw",
           "label": "Replace all Great Weapons",
           "options": [
@@ -1999,7 +1999,7 @@
       "hint": "Shooters",
       "sections": [
         {
-          "id": "rihYABp",
+          "id": "h7jINxC",
           "uid": "mRkZM-A",
           "label": "Replace Shotgun",
           "options": [
@@ -2119,7 +2119,7 @@
       "hint": "Weapon Teams",
       "sections": [
         {
-          "id": "aUd7qEb",
+          "id": "rztlwXy",
           "uid": "UGAMgAo",
           "label": "Replace Flamethrower",
           "options": [
@@ -2211,7 +2211,7 @@
       "hint": "Flame Spirits",
       "sections": [
         {
-          "id": "PskeUCc",
+          "id": "ycm1i6p",
           "uid": "_wfQVZk",
           "label": "Replace Dual Hand Weapon",
           "options": [
@@ -2285,10 +2285,42 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "TzKNToT",
+          "id": "OXKKc9A",
           "uid": "fi7j-wU5",
           "label": "Upgrade with one",
           "options": [
+            {
+              "uid": "kxS0Vk3P",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "mUV7hLd",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Taskmaster",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Taskmaster (Swift Aura)",
+                  "content": [
+                    {
+                      "id": "amQphBHWOeJs",
+                      "name": "Swift Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Taskmaster (Swift Aura)",
+              "parentSectionId": "fi7j-wU5",
+              "parentPackageUid": "ot6jTMkt",
+              "parentSectionUid": "tijJN9c",
+              "id": "kxS0Vk3P"
+            },
             {
               "uid": "Z99jh9EyT6",
               "type": "ArmyBookUpgradeOption",
@@ -2317,38 +2349,6 @@
               "label": "Pain Forger (Melee Slayer Aura)",
               "parentSectionId": "fi7j-wU5",
               "id": "Z99jh9EyT6"
-            },
-            {
-              "uid": "kxS0Vk3P",
-              "cost": 25,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "mUV7hLd",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Taskmaster",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Taskmaster (Swift Aura)",
-                  "content": [
-                    {
-                      "id": "amQphBHWOeJs",
-                      "name": "Swift Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Taskmaster (Swift Aura)",
-              "parentSectionId": "fi7j-wU5",
-              "parentPackageUid": "ot6jTMkt",
-              "parentSectionUid": "tijJN9c",
-              "id": "kxS0Vk3P"
             },
             {
               "uid": "e4CIvujG",
@@ -2462,7 +2462,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "KaqbOYc",
+          "id": "kxQUtqu",
           "uid": "g2aS30gU",
           "label": "Upgrade with one",
           "options": [
@@ -2497,6 +2497,38 @@
               "id": "4A1DrNoz"
             },
             {
+              "uid": "R4r9LmNW",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "QKGF3-r",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Taskmaster",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Taskmaster (Swift Aura)",
+                  "content": [
+                    {
+                      "id": "amQphBHWOeJs",
+                      "name": "Swift Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Taskmaster (Swift Aura)",
+              "parentSectionId": "g2aS30gU",
+              "parentPackageUid": "qoDzmKDv",
+              "parentSectionUid": "tijJN9c",
+              "id": "R4r9LmNW"
+            },
+            {
               "uid": "45rHpsf7",
               "type": "ArmyBookUpgradeOption",
               "costs": [
@@ -2525,38 +2557,6 @@
               "parentSectionId": "g2aS30gU",
               "parentPackageUid": "qoDzmKDv",
               "id": "45rHpsf7"
-            },
-            {
-              "uid": "R4r9LmNW",
-              "cost": 25,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "QKGF3-r",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Taskmaster",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Taskmaster (Swift Aura)",
-                  "content": [
-                    {
-                      "id": "amQphBHWOeJs",
-                      "name": "Swift Aura",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Taskmaster (Swift Aura)",
-              "parentSectionId": "g2aS30gU",
-              "parentPackageUid": "qoDzmKDv",
-              "parentSectionUid": "tijJN9c",
-              "id": "R4r9LmNW"
             },
             {
               "uid": "M0TQrxc2",
@@ -2668,7 +2668,7 @@
       "hint": "Sentinel Centaurs",
       "sections": [
         {
-          "id": "MYyLJ3d",
+          "id": "1Fnzv53",
           "uid": "Q18_aJZt4y",
           "label": "Replace Great Weapon",
           "options": [
@@ -2871,7 +2871,7 @@
       "hint": "Bull Centaurs",
       "sections": [
         {
-          "id": "L9iorWT",
+          "id": "7tz3uDT",
           "uid": "hLyG4f6Kt5",
           "label": "Upgrade with",
           "options": [
@@ -2915,7 +2915,7 @@
       "hint": "Infernal Shooters",
       "sections": [
         {
-          "id": "QsESHoX",
+          "id": "uqPdZp9",
           "uid": "8lLAEjTsBn",
           "label": "Replace Blunderbuss",
           "options": [
@@ -3006,7 +3006,7 @@
       "hint": "Squad Upgrades",
       "sections": [
         {
-          "id": "VIwBX_F",
+          "id": "_go0uld",
           "uid": "KxFQPkNV",
           "label": "Upgrade one model with one",
           "options": [
@@ -3117,7 +3117,7 @@
       "hint": "Hex Banner",
       "sections": [
         {
-          "id": "PIQLR29",
+          "id": "6NoFjrm",
           "uid": "8ouyfvOz",
           "label": "Upgrade with",
           "options": [
@@ -3724,7 +3724,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:21:49.973Z",
+  "modifiedAt": "2026-05-05T08:02:21.186Z",
   "editedAt": "2026-04-23T11:20:43.875Z",
   "official": true,
   "versionString": "3.5.3",
@@ -3958,7 +3958,7 @@
       "id": "1TMBPe40kx2b",
       "name": "Melee Shrouding",
       "aliasedRuleId": null,
-      "description": "Enemies get -3\" movement when trying to charge units where all models have this rule.",
+      "description": "Enemies get -3\" movement to a min. of 6\" when trying to charge units where all models have this rule.",
       "hasRating": false,
       "coreType": null,
       "targetType": 1

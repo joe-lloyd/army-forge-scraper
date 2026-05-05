@@ -53,6 +53,7 @@
         {
           "id": "Sutc7Iw_",
           "name": "Elite Shotgun",
+          "type": "ArmyBookWeapon",
           "count": 1,
           "range": 12,
           "attacks": 3,
@@ -66,20 +67,22 @@
               "label": "AP(1)"
             }
           ],
+          "attacksMultiplier": 1,
           "label": "Elite Shotgun (12\", A3, AP(1))",
-          "originalCount": 1,
-          "type": "ArmyBookWeapon"
+          "originalCount": 1
         },
         {
           "id": "_KS_hNCi",
           "name": "CCW",
+          "type": "ArmyBookWeapon",
           "count": 1,
+          "range": 0,
           "attacks": 1,
           "weaponId": "4o5CBBZC",
           "specialRules": [],
+          "attacksMultiplier": 1,
           "label": "CCW (A1)",
-          "originalCount": 1,
-          "type": "ArmyBookWeapon"
+          "originalCount": 1
         }
       ],
       "upgrades": [
@@ -275,7 +278,7 @@
     },
     {
       "id": "_eneM1Q",
-      "cost": 105,
+      "cost": 100,
       "name": "Ruyi \"Lonespear\"",
       "size": 1,
       "type": 1,
@@ -427,7 +430,7 @@
     },
     {
       "id": "qQiZ68s",
-      "cost": 80,
+      "cost": 70,
       "name": "Ranjo \"Swiftsnare\"",
       "size": 1,
       "type": 1,
@@ -718,7 +721,7 @@
     },
     {
       "id": "VEbHNRI",
-      "cost": 40,
+      "cost": 35,
       "name": "Hounds",
       "size": 3,
       "bases": {
@@ -907,7 +910,7 @@
     },
     {
       "id": "ARMiAVY",
-      "cost": 45,
+      "cost": 40,
       "name": "Tracker",
       "size": 1,
       "bases": {
@@ -984,7 +987,7 @@
     },
     {
       "id": "1znOU_R",
-      "cost": 55,
+      "cost": 50,
       "name": "Beast Rider",
       "size": 1,
       "bases": {
@@ -1028,7 +1031,9 @@
         {
           "id": "LbieEp8f",
           "name": "Explosive Spear",
+          "type": "ArmyBookWeapon",
           "count": 1,
+          "range": null,
           "attacks": 2,
           "weaponId": "1SDqCytK",
           "specialRules": [
@@ -1040,9 +1045,9 @@
               "label": "AP(2)"
             }
           ],
+          "attacksMultiplier": 1,
           "label": "Explosive Spear (A2, AP(2))",
-          "originalCount": 1,
-          "type": "ArmyBookWeapon"
+          "originalCount": 1
         }
       ],
       "upgrades": [
@@ -1150,7 +1155,7 @@
       "hint": "Veteran",
       "sections": [
         {
-          "id": "SPx2zAJ",
+          "id": "APEBiw4",
           "uid": "foLSUGF",
           "label": "Replace Elite Scrap Pistol and CCW",
           "options": [
@@ -1227,7 +1232,7 @@
               "costs": [
                 {
                   "unitId": "XhgyXd9",
-                  "cost": 20
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1262,7 +1267,7 @@
               "costs": [
                 {
                   "unitId": "XhgyXd9",
-                  "cost": 45
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -1303,7 +1308,7 @@
           ]
         },
         {
-          "id": "Nwjo4qs",
+          "id": "TU0iUsh",
           "uid": "Z5KxjCC",
           "label": "Replace Elite Scrap Pistol",
           "options": [
@@ -1343,7 +1348,7 @@
               "costs": [
                 {
                   "unitId": "XhgyXd9",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -1378,7 +1383,7 @@
               "costs": [
                 {
                   "unitId": "XhgyXd9",
-                  "cost": 30
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -1418,7 +1423,7 @@
           ]
         },
         {
-          "id": "tUHXaeP",
+          "id": "VzwpkdY",
           "uid": "A4tTbA_",
           "label": "Replace CCW",
           "options": [
@@ -1465,7 +1470,7 @@
               "costs": [
                 {
                   "unitId": "XhgyXd9",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1506,7 +1511,7 @@
               "costs": [
                 {
                   "unitId": "XhgyXd9",
-                  "cost": 20
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1548,7 +1553,7 @@
               "costs": [
                 {
                   "unitId": "XhgyXd9",
-                  "cost": 25
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1593,7 +1598,7 @@
       "hint": "Nomads",
       "sections": [
         {
-          "id": "ErGcFD6",
+          "id": "yDA0uPT",
           "uid": "0mpLH2_",
           "label": "Replace all Scrap Rifles and CCWS",
           "options": [
@@ -1652,7 +1657,7 @@
           ]
         },
         {
-          "id": "HX0NPeU",
+          "id": "NyZJ97p",
           "uid": "ONq-G1h",
           "label": "Replace one Scrap Rifle",
           "options": [
@@ -1733,7 +1738,7 @@
               "costs": [
                 {
                   "unitId": "8LCt3JN",
-                  "cost": 20
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1769,7 +1774,7 @@
               "costs": [
                 {
                   "unitId": "8LCt3JN",
-                  "cost": 20
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -1804,7 +1809,7 @@
               "costs": [
                 {
                   "unitId": "8LCt3JN",
-                  "cost": 20
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -1891,7 +1896,7 @@
               "costs": [
                 {
                   "unitId": "8LCt3JN",
-                  "cost": 30
+                  "cost": 25
                 }
               ],
               "gains": [
@@ -1943,7 +1948,7 @@
       "hint": "Elites",
       "sections": [
         {
-          "id": "xzudNVz",
+          "id": "z2dwNRY",
           "uid": "1B_aaB9",
           "label": "Replace any Energy Rifle",
           "options": [
@@ -1995,7 +2000,7 @@
           ]
         },
         {
-          "id": "DixqSWf",
+          "id": "qOvUQhW",
           "uid": "GVh565Z",
           "label": "Replace Energy Rifle",
           "options": [
@@ -2006,7 +2011,7 @@
               "costs": [
                 {
                   "unitId": "uF7noGn",
-                  "cost": 25
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2042,13 +2047,50 @@
               "id": "Fk4KScM"
             },
             {
+              "uid": "C-mkPJ0",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "uF7noGn",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gN1LAzCn",
+                  "name": "Heavy Plasma Rifle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 1,
+                  "weaponId": "B_cWQAxV",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Plasma Rifle (30\", A1, AP(4))"
+                }
+              ],
+              "label": "Heavy Plasma Rifle (30\", A1, AP(4))",
+              "parentPackageUid": "E1",
+              "parentSectionUid": "GVh565Z",
+              "parentSectionId": "GVh565Z",
+              "id": "C-mkPJ0"
+            },
+            {
               "uid": "CLjKAWt",
               "cost": 10,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "uF7noGn",
-                  "cost": 25
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2089,50 +2131,13 @@
               "id": "CLjKAWt"
             },
             {
-              "uid": "C-mkPJ0",
-              "cost": 10,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "uF7noGn",
-                  "cost": 30
-                }
-              ],
-              "gains": [
-                {
-                  "id": "gN1LAzCn",
-                  "name": "Heavy Plasma Rifle",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 30,
-                  "attacks": 1,
-                  "weaponId": "B_cWQAxV",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "type": "ArmyBookRule",
-                      "rating": 4
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Heavy Plasma Rifle (30\", A1, AP(4))"
-                }
-              ],
-              "label": "Heavy Plasma Rifle (30\", A1, AP(4))",
-              "parentPackageUid": "E1",
-              "parentSectionUid": "GVh565Z",
-              "parentSectionId": "GVh565Z",
-              "id": "C-mkPJ0"
-            },
-            {
               "uid": "CkWfS5C",
               "cost": 45,
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "uF7noGn",
-                  "cost": 40
+                  "cost": 35
                 }
               ],
               "gains": [
@@ -2186,7 +2191,7 @@
       "hint": "Vultures",
       "sections": [
         {
-          "id": "bNreRjL",
+          "id": "8ebqC2P",
           "uid": "dzNNXTp",
           "label": "Replace Scrap Pistols and CCW",
           "options": [
@@ -2235,7 +2240,7 @@
           ]
         },
         {
-          "id": "GDrY8pG",
+          "id": "wRkkYYc",
           "uid": "R40tYtX",
           "label": "Replace Scrap Pistol",
           "options": [
@@ -2273,6 +2278,42 @@
               "parentSectionUid": "S0NfqTh",
               "parentSectionId": "R40tYtX",
               "id": "p9G9NJ8"
+            },
+            {
+              "uid": "KeEMl-4",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "LutTMHw",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "GYxijt2k",
+                  "name": "Force Blaster",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "GYxijt2k",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Force Blaster (12\", A1, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Force Blaster (12\", A1, AP(4))",
+              "parentPackageUid": "F1",
+              "parentSectionUid": "S0NfqTh",
+              "parentSectionId": "R40tYtX",
+              "id": "KeEMl-4"
             },
             {
               "uid": "a8CET",
@@ -2344,42 +2385,6 @@
               "parentSectionUid": "S0NfqTh",
               "parentSectionId": "R40tYtX",
               "id": "9Iy_Rqy"
-            },
-            {
-              "uid": "KeEMl-4",
-              "cost": 5,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "LutTMHw",
-                  "cost": 15
-                }
-              ],
-              "gains": [
-                {
-                  "id": "GYxijt2k",
-                  "name": "Force Blaster",
-                  "type": "ArmyBookWeapon",
-                  "range": 12,
-                  "attacks": 1,
-                  "weaponId": "GYxijt2k",
-                  "specialRules": [
-                    {
-                      "id": "17crjK7P6_w6",
-                      "name": "AP",
-                      "rating": 4
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Force Blaster (12\", A1, AP(4))",
-                  "count": 1
-                }
-              ],
-              "label": "Force Blaster (12\", A1, AP(4))",
-              "parentPackageUid": "F1",
-              "parentSectionUid": "S0NfqTh",
-              "parentSectionId": "R40tYtX",
-              "id": "KeEMl-4"
             }
           ],
           "parentPackageUid": "F1",
@@ -2390,7 +2395,7 @@
           ]
         },
         {
-          "id": "Hokoi11",
+          "id": "T1MoYdQ",
           "uid": "_fqDZ",
           "label": "Replace any CCW",
           "options": [
@@ -2401,7 +2406,7 @@
               "costs": [
                 {
                   "unitId": "LutTMHw",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2443,7 +2448,7 @@
               "costs": [
                 {
                   "unitId": "LutTMHw",
-                  "cost": 30
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2484,7 +2489,7 @@
           ]
         },
         {
-          "id": "m-hfTGz",
+          "id": "oOSqRCq",
           "uid": "VrAoI",
           "label": "Replace CCW",
           "options": [
@@ -2531,7 +2536,7 @@
               "costs": [
                 {
                   "unitId": "LutTMHw",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -2581,7 +2586,7 @@
       "hint": "Hounds",
       "sections": [
         {
-          "id": "VFKOEN7",
+          "id": "SIwM_06",
           "uid": "5zZIkBPOHR",
           "label": "Replace all Claws",
           "options": [
@@ -2591,7 +2596,7 @@
               "costs": [
                 {
                   "unitId": "VEbHNRI",
-                  "cost": 20
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -2629,7 +2634,7 @@
           ]
         },
         {
-          "id": "6yvOClF",
+          "id": "4faOMZp",
           "uid": "f3C0KfQRAP",
           "label": "Replace all Hunting Hounds",
           "options": [
@@ -2674,7 +2679,7 @@
           ]
         },
         {
-          "id": "FIj6TfU",
+          "id": "3Fm84le",
           "uid": "mVJDGDC",
           "label": "Upgrade all models with any",
           "options": [
@@ -2759,7 +2764,7 @@
       "hint": "Beast Riders",
       "sections": [
         {
-          "id": "Y89ou1W",
+          "id": "5WyjWuN",
           "uid": "4X8u8Xg",
           "label": "Replace any Explosive Spear",
           "options": [
@@ -2819,8 +2824,7 @@
                   "specialRules": [
                     {
                       "id": "cavWDboL4ubs",
-                      "name": "Rending",
-                      "type": "ArmyBookRule"
+                      "name": "Rending"
                     }
                   ],
                   "attacksMultiplier": 1,
@@ -2838,7 +2842,7 @@
               "costs": [
                 {
                   "unitId": "1znOU_R",
-                  "cost": 25
+                  "cost": 20
                 }
               ],
               "gains": [
@@ -2889,7 +2893,7 @@
       "hint": "Squad Backpacks + Hunter's Mark",
       "sections": [
         {
-          "id": "ALcRxrx",
+          "id": "DImS3pc",
           "uid": "TR6i3PC_",
           "label": "Upgrade one model with one",
           "options": [
@@ -3004,7 +3008,7 @@
       "hint": "Stalkers",
       "sections": [
         {
-          "id": "_SoT47u",
+          "id": "GqTAWiy",
           "uid": "4Rg4a",
           "label": "Replace any CCW",
           "options": [
@@ -3015,7 +3019,7 @@
               "costs": [
                 {
                   "unitId": "i38ZXSB",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -3055,7 +3059,7 @@
               "costs": [
                 {
                   "unitId": "i38ZXSB",
-                  "cost": 10
+                  "cost": 5
                 }
               ],
               "gains": [
@@ -3096,7 +3100,7 @@
           ]
         },
         {
-          "id": "Utv9Es2",
+          "id": "6lSVH_7",
           "uid": "D0f6Q",
           "label": "Replace one CCW",
           "options": [
@@ -3197,7 +3201,7 @@
       "hint": "Specialists - Elite",
       "sections": [
         {
-          "id": "xYwgNCl",
+          "id": "ZmjbeWY",
           "uid": "zRNNz",
           "label": "Upgrade with one",
           "options": [
@@ -3236,7 +3240,7 @@
               "costs": [
                 {
                   "unitId": "Nzc4pM6",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3371,10 +3375,42 @@
       "hint": "Elite Veteran",
       "sections": [
         {
-          "id": "9CQNX1w",
+          "id": "7NB0F76",
           "uid": "hEIAv",
           "label": "Replace Elite Shotgun and CCW",
           "options": [
+            {
+              "uid": "L0iISLa41A",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Nzc4pM6",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Hunting Hook",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "nPARSX_u",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Hunting Hook (A3, Rending)"
+                }
+              ],
+              "label": "Hunting Hook (A3, Rending)",
+              "parentSectionId": "hEIAv",
+              "id": "L0iISLa41A"
+            },
             {
               "uid": "87Aom",
               "cost": 5,
@@ -3443,45 +3479,12 @@
               "id": "BN-UP"
             },
             {
-              "uid": "L0iISLa41A",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "Nzc4pM6",
-                  "cost": 5
-                }
-              ],
-              "gains": [
-                {
-                  "id": null,
-                  "name": "Hunting Hook",
-                  "type": "ArmyBookWeapon",
-                  "count": 1,
-                  "range": 0,
-                  "attacks": 3,
-                  "weaponId": "nPARSX_u",
-                  "specialRules": [
-                    {
-                      "id": "cavWDboL4ubs",
-                      "name": "Rending",
-                      "type": "ArmyBookRule"
-                    }
-                  ],
-                  "attacksMultiplier": 1,
-                  "label": "Hunting Hook (A3, Rending)"
-                }
-              ],
-              "label": "Hunting Hook (A3, Rending)",
-              "parentSectionId": "hEIAv",
-              "id": "L0iISLa41A"
-            },
-            {
               "uid": "CyPGn",
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
                   "unitId": "Nzc4pM6",
-                  "cost": 45
+                  "cost": 40
                 }
               ],
               "gains": [
@@ -3523,7 +3526,7 @@
           ]
         },
         {
-          "id": "5S84EgZ",
+          "id": "l6pMqLa",
           "uid": "XLtAO",
           "label": "Replace Elite Shotgun",
           "options": [
@@ -3576,7 +3579,7 @@
       "hint": "Beast Gunners",
       "sections": [
         {
-          "id": "-lTlBNA",
+          "id": "9itIlDe",
           "uid": "N8QrH",
           "label": "Replace any Heavy Machinegun",
           "options": [
@@ -3638,7 +3641,7 @@
       "hint": "Trackers",
       "sections": [
         {
-          "id": "At9gEJJ",
+          "id": "FterYhG",
           "uid": "mEj0Yj9Y45",
           "label": "Upgrade with",
           "options": [
@@ -3684,7 +3687,7 @@
       "hint": "Specialists - Veteran",
       "sections": [
         {
-          "id": "qxmrsYt",
+          "id": "RFjFucc",
           "uid": "ygPGIahf",
           "label": "Upgrade with one",
           "options": [
@@ -3724,7 +3727,7 @@
               "costs": [
                 {
                   "unitId": "XhgyXd9",
-                  "cost": 15
+                  "cost": 10
                 }
               ],
               "gains": [
@@ -3861,7 +3864,7 @@
       "hint": "Hero Upgrades",
       "sections": [
         {
-          "id": "bmurym3",
+          "id": "cGDprK9",
           "uid": "GVsAZd4g",
           "label": "Upgrade with one",
           "options": [
@@ -4698,7 +4701,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:37:51.253Z",
+  "modifiedAt": "2026-05-05T08:02:29.576Z",
   "editedAt": "2026-04-30T09:37:51.253Z",
   "official": true,
   "versionString": "3.5.3",
@@ -4721,8 +4724,8 @@
       "https://www.etsy.com/shop/onepagerules"
     ]
   },
-  "balanceValid": false,
-  "balanceValidReason": 4,
+  "balanceValid": true,
+  "balanceValidReason": 0,
   "loreUrl": "https://www.onepagerules.com/factions/jackals",
   "voted": null,
   "specialRules": [
@@ -4991,7 +4994,7 @@
       "id": "okU8qW-h2rau",
       "name": "Ranged Shrouding",
       "aliasedRuleId": null,
-      "description": "Enemies get -6\" range when trying to shoot units where all models have this rule.",
+      "description": "Enemies get -6\" range to a min. of 6\" when trying to shoot units where all models have this rule.",
       "hasRating": false,
       "coreType": null,
       "targetType": 1

@@ -813,7 +813,7 @@
     },
     {
       "id": "zt7BQGh",
-      "cost": 160,
+      "cost": 165,
       "name": "Lesser Change Horrors",
       "size": 5,
       "bases": {
@@ -1126,6 +1126,7 @@
         {
           "id": "VUSbm51P",
           "name": "Hexed Spikes",
+          "type": "ArmyBookWeapon",
           "count": 3,
           "range": 12,
           "attacks": 4,
@@ -1138,20 +1139,22 @@
               "label": "Surge"
             }
           ],
+          "attacksMultiplier": 1,
           "label": "Hexed Spikes (12\", A4, Surge)",
-          "originalCount": 3,
-          "type": "ArmyBookWeapon"
+          "originalCount": 3
         },
         {
           "id": "YG_05M2B",
           "name": "Claws",
+          "type": "ArmyBookWeapon",
           "count": 3,
+          "range": 0,
           "attacks": 1,
           "weaponId": "S652usl0",
           "specialRules": [],
+          "attacksMultiplier": 1,
           "label": "Claws (A1)",
-          "originalCount": 3,
-          "type": "ArmyBookWeapon"
+          "originalCount": 3
         }
       ],
       "upgrades": [
@@ -1621,7 +1624,7 @@
       "hint": "Avatar",
       "sections": [
         {
-          "id": "2EdKFAP",
+          "id": "4vtFitu",
           "uid": "4PQR7vP",
           "label": "Replace any Exalted Power Hammer",
           "options": [
@@ -1864,7 +1867,7 @@
           ]
         },
         {
-          "id": "ddZMZaS",
+          "id": "FKhEhgq",
           "uid": "ppELecIH",
           "label": "Upgrade with",
           "options": [
@@ -1911,7 +1914,7 @@
       "hint": "Ascended",
       "sections": [
         {
-          "id": "CxVXvBL",
+          "id": "jXx-NDA",
           "uid": "4sD4pPS",
           "label": "Replace any Great Power Hammer",
           "options": [
@@ -2154,7 +2157,7 @@
           ]
         },
         {
-          "id": "UTbJeX6",
+          "id": "QOOBvNL",
           "uid": "tRVj8KgT",
           "label": "Upgrade with",
           "options": [
@@ -2201,7 +2204,7 @@
       "hint": "Harbinger",
       "sections": [
         {
-          "id": "SN-L0uG",
+          "id": "h8RzlCz",
           "uid": "Dvq_9BW",
           "label": "Replace any Power Hammer",
           "options": [
@@ -2442,7 +2445,7 @@
           ]
         },
         {
-          "id": "o0UO8aA",
+          "id": "BF31ofQ",
           "uid": "dXJyLZnJ",
           "label": "Upgrade with",
           "options": [
@@ -2485,7 +2488,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "DGQhK6G",
+          "id": "3484tEo",
           "uid": "wAzfP",
           "label": "Upgrade with one",
           "options": [
@@ -2602,7 +2605,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "Tp6glVN",
+          "id": "_QLANhH",
           "uid": "qlNM8hz",
           "label": "Upgrade up to three models with one",
           "options": [
@@ -2727,7 +2730,7 @@
       "hint": "Change Warriors",
       "sections": [
         {
-          "id": "fHzklqQ",
+          "id": "SlZ20lE",
           "uid": "9xmu_Bn",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2896,7 +2899,7 @@
           ]
         },
         {
-          "id": "sEjwedv",
+          "id": "qejkn-1",
           "uid": "ATYkq59",
           "label": "Upgrade one model with",
           "options": [
@@ -2944,7 +2947,7 @@
           }
         },
         {
-          "id": "j746f0j",
+          "id": "Dc6ayKm",
           "uid": "z_2Ss5S",
           "label": "Upgrade one model with any",
           "options": [
@@ -3031,7 +3034,7 @@
       "hint": "Soul Daemon",
       "sections": [
         {
-          "id": "193ZZAU",
+          "id": "y5gDkmI",
           "uid": "UarB89I",
           "label": "Replace Change Sword",
           "options": [
@@ -3084,7 +3087,7 @@
           ]
         },
         {
-          "id": "KW-kC96",
+          "id": "N-_Q7rf",
           "uid": "Gz8CuLS",
           "label": "Replace Change Cannon",
           "options": [
@@ -3178,7 +3181,7 @@
       "hint": "Furies",
       "sections": [
         {
-          "id": "YGKRrML",
+          "id": "CXd-_Rz",
           "uid": "uVvec",
           "label": "Replace all Armblades",
           "options": [
@@ -3239,7 +3242,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "Yy_6Fnd",
+          "id": "im-vpDn",
           "uid": "g-b1R",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -3515,7 +3518,7 @@
           ]
         },
         {
-          "id": "bNNZa3s",
+          "id": "-K8R-Nk",
           "uid": "DJTr1",
           "label": "Replace any Power Staff",
           "options": [
@@ -3571,7 +3574,7 @@
           ]
         },
         {
-          "id": "I9cFC8J",
+          "id": "KGVpa5P",
           "uid": "Jo1qEI68",
           "label": "Upgrade with",
           "options": [
@@ -3614,7 +3617,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "vjGd5YQ",
+          "id": "F64lf25",
           "uid": "z3G3m",
           "label": "Upgrade with one",
           "options": [
@@ -3775,7 +3778,7 @@
       "hint": "Fury Champion",
       "sections": [
         {
-          "id": "O5wBTxc",
+          "id": "D-F5SQz",
           "uid": "k6phA",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -4053,7 +4056,7 @@
           ]
         },
         {
-          "id": "pfRvQuG",
+          "id": "7Wel0Tf",
           "uid": "dzk31",
           "label": "Replace any Power Staff",
           "options": [
@@ -4116,7 +4119,7 @@
       "hint": "Change Soul Spawns",
       "sections": [
         {
-          "id": "APQj7Iv",
+          "id": "z_QIMYz",
           "uid": "rU0Lr",
           "label": "Replace all Hexed Spikes and Claws",
           "options": [
@@ -4141,8 +4144,7 @@
                   "specialRules": [
                     {
                       "id": "IEJp3a4vE0CB",
-                      "name": "Shred",
-                      "type": "ArmyBookRule"
+                      "name": "Shred"
                     }
                   ],
                   "attacksMultiplier": 1,
@@ -4217,7 +4219,7 @@
       "hint": "Horror Champion",
       "sections": [
         {
-          "id": "TgbE9zl",
+          "id": "wEwwJX-",
           "uid": "jJcCY",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -4493,7 +4495,7 @@
           ]
         },
         {
-          "id": "I76lYZI",
+          "id": "n4-91NA",
           "uid": "HsNci",
           "label": "Replace any Power Staff",
           "options": [
@@ -4549,7 +4551,7 @@
           ]
         },
         {
-          "id": "O3p2YoB",
+          "id": "RCnD8JQ",
           "uid": "XPKDTNVO",
           "label": "Upgrade with",
           "options": [
@@ -4598,7 +4600,7 @@
       "hint": "Change Horrors",
       "sections": [
         {
-          "id": "OPBz7Gi",
+          "id": "XgJl0yu",
           "uid": "SNMn2",
           "label": "Upgrade one model with",
           "options": [
@@ -4652,7 +4654,7 @@
       "hint": "Change Hexers",
       "sections": [
         {
-          "id": "qYg3RW_",
+          "id": "TWvCafi",
           "uid": "LRymxjDasP",
           "label": "Replace all Magic Bolts",
           "options": [
@@ -4732,7 +4734,7 @@
           ]
         },
         {
-          "id": "ct75Lbf",
+          "id": "DHuuYcH",
           "uid": "9Fwehorm",
           "label": "Upgrade one model with",
           "options": [
@@ -4786,7 +4788,7 @@
       "hint": "Screecher Chariot",
       "sections": [
         {
-          "id": "JNIRhCS",
+          "id": "mtNR6rS",
           "uid": "GmQX-rWSEU",
           "label": "Replace Great Scorcher Blaze",
           "options": [
@@ -4851,7 +4853,7 @@
       "hint": "Specialists - Fury ",
       "sections": [
         {
-          "id": "sHuhKiI",
+          "id": "U5V-LT4",
           "uid": "Gf_HZfpw",
           "label": "Upgrade with one",
           "options": [
@@ -4994,7 +4996,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "XlYLdSL",
+          "id": "nrUFoM8",
           "uid": "_dk0Vr2A",
           "label": "Upgrade with one",
           "options": [
@@ -5202,7 +5204,7 @@
       "hint": "Specialists - Harbinger",
       "sections": [
         {
-          "id": "YVlZbs2",
+          "id": "Rq1bq9-",
           "uid": "tS0BQRSo",
           "label": "Upgrade with one",
           "options": [
@@ -5378,7 +5380,7 @@
       "hint": "Specialists - Ascended",
       "sections": [
         {
-          "id": "MRuB8Qi",
+          "id": "Dg5inJX",
           "uid": "TI83O4TD",
           "label": "Upgrade with one",
           "options": [
@@ -5554,7 +5556,7 @@
       "hint": "Specialists - Avatar",
       "sections": [
         {
-          "id": "F2kD9Yu",
+          "id": "WwW-tAl",
           "uid": "imvnJsYn",
           "label": "Upgrade with one",
           "options": [
@@ -5682,7 +5684,7 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
-                  "cost": 120,
+                  "cost": 115,
                   "unitId": "Nkn5sQ4"
                 }
               ],
@@ -5727,7 +5729,7 @@
       "hint": "Hex-Furies",
       "sections": [
         {
-          "id": "uIuaP_p",
+          "id": "ynBRAvI",
           "uid": "q9KrL2Mw",
           "label": "Replace all Magic Blasts",
           "options": [
@@ -5821,7 +5823,7 @@
       "hint": "Curse of Change",
       "sections": [
         {
-          "id": "VqF4eq0",
+          "id": "Jbsif2x",
           "uid": "7S1NlR4r",
           "label": "Upgrade with",
           "options": [
@@ -6467,7 +6469,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:42:17.617Z",
+  "modifiedAt": "2026-05-05T08:02:52.431Z",
   "editedAt": "2026-04-30T09:42:17.617Z",
   "official": true,
   "versionString": "3.5.3",
@@ -6490,8 +6492,8 @@
       "https://www.etsy.com/shop/onepagerules"
     ]
   },
-  "balanceValid": false,
-  "balanceValidReason": 4,
+  "balanceValid": true,
+  "balanceValidReason": 0,
   "loreUrl": "https://www.onepagerules.com/factions/rift-daemons",
   "voted": null,
   "specialRules": [

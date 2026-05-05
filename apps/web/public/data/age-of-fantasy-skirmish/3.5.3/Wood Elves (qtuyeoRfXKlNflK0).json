@@ -664,6 +664,79 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "Da6iqpU",
+      "cost": 25,
+      "name": "Grove Lancer",
+      "size": 1,
+      "bases": {
+        "round": "60x35",
+        "square": "50x25"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "KdgwlPb8LuD2",
+          "name": "Fast",
+          "label": "Fast"
+        },
+        {
+          "id": "JoOCVPx1xT1G",
+          "name": "Furious",
+          "label": "Furious"
+        },
+        {
+          "id": "62-mYKVM9MLd",
+          "name": "Impact",
+          "rating": "1",
+          "label": "Impact(1)"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "4rzxsYvWU9Ge",
+          "name": "Wild Veil",
+          "label": "Wild Veil"
+        }
+      ],
+      "valid": true,
+      "defense": 5,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "WA6eszsx",
+          "name": "Lance",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "CyRc1Z1h",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "umbiz4tnEyF8",
+              "name": "Thrust",
+              "label": "Thrust"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Lance (A1, Thrust)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "E1",
+        "U8N4h1oZ"
+      ],
+      "genericName": "Lancer Cavalry",
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 5,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "2ZWcx2t",
       "cost": 25,
       "name": "War Dancer",
@@ -860,79 +933,6 @@
         "N92nOt54"
       ],
       "genericName": "Wood Elf Scouts",
-      "hasCustomRule": false,
-      "hasBalanceInvalid": false,
-      "originalSize": 5,
-      "disabledUpgradeSections": []
-    },
-    {
-      "id": "Da6iqpU",
-      "cost": 30,
-      "name": "Grove Lancer",
-      "size": 1,
-      "bases": {
-        "round": "60x35",
-        "square": "50x25"
-      },
-      "items": [],
-      "rules": [
-        {
-          "id": "KdgwlPb8LuD2",
-          "name": "Fast",
-          "label": "Fast"
-        },
-        {
-          "id": "JoOCVPx1xT1G",
-          "name": "Furious",
-          "label": "Furious"
-        },
-        {
-          "id": "62-mYKVM9MLd",
-          "name": "Impact",
-          "rating": "1",
-          "label": "Impact(1)"
-        },
-        {
-          "id": "JSKVyurtWIyW",
-          "name": "Strider",
-          "label": "Strider"
-        },
-        {
-          "id": "4rzxsYvWU9Ge",
-          "name": "Wild Veil",
-          "label": "Wild Veil"
-        }
-      ],
-      "valid": true,
-      "defense": 5,
-      "quality": 3,
-      "weapons": [
-        {
-          "id": "WA6eszsx",
-          "name": "Lance",
-          "type": "ArmyBookWeapon",
-          "range": 0,
-          "attacks": 1,
-          "weaponId": "CyRc1Z1h",
-          "specialRules": [
-            {
-              "type": "ArmyBookRule",
-              "id": "umbiz4tnEyF8",
-              "name": "Thrust",
-              "label": "Thrust"
-            }
-          ],
-          "attacksMultiplier": 1,
-          "label": "Lance (A1, Thrust)",
-          "count": 1,
-          "originalCount": 1
-        }
-      ],
-      "upgrades": [
-        "E1",
-        "U8N4h1oZ"
-      ],
-      "genericName": "Lancer Cavalry",
       "hasCustomRule": false,
       "hasBalanceInvalid": false,
       "originalSize": 5,
@@ -1631,7 +1631,7 @@
       "hint": "Grove Champion",
       "sections": [
         {
-          "id": "gAltnTZ",
+          "id": "I_J8Wdg",
           "uid": "Vjp3qwy",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1840,7 +1840,7 @@
           ]
         },
         {
-          "id": "G79NbF_",
+          "id": "lVCg56A",
           "uid": "D_M_3AL",
           "label": "Upgrade with one",
           "options": [
@@ -2107,7 +2107,7 @@
       "hint": "Treeman Elder",
       "sections": [
         {
-          "id": "9UVwDDy",
+          "id": "yEb2bc5",
           "uid": "CB-xgP3",
           "label": "Replace Branch Mace",
           "options": [
@@ -2234,7 +2234,7 @@
       "hint": "Eternal Elder",
       "sections": [
         {
-          "id": "2Ls4JEa",
+          "id": "I3Y4K_S",
           "uid": "tDmRH",
           "label": "Replace Heavy Claws",
           "options": [
@@ -2353,7 +2353,7 @@
           ]
         },
         {
-          "id": "Sbh57lz",
+          "id": "SoR6X77",
           "uid": "rgF5cH8",
           "label": "Upgrade with one",
           "options": [
@@ -2432,7 +2432,7 @@
           }
         },
         {
-          "id": "VbZhVgU",
+          "id": "XPOTpjR",
           "uid": "RG3-vo7",
           "label": "Upgrade with",
           "options": [
@@ -2478,7 +2478,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "MWj85ft",
+          "id": "3RRu64s",
           "uid": "n_dfpbj",
           "label": "Upgrade one model with one",
           "options": [
@@ -2504,11 +2504,11 @@
                   "cost": 5
                 },
                 {
-                  "unitId": "2ZWcx2t",
+                  "unitId": "Da6iqpU",
                   "cost": 5
                 },
                 {
-                  "unitId": "Da6iqpU",
+                  "unitId": "2ZWcx2t",
                   "cost": 5
                 },
                 {
@@ -2561,11 +2561,11 @@
                   "cost": 5
                 },
                 {
-                  "unitId": "2ZWcx2t",
+                  "unitId": "Da6iqpU",
                   "cost": 5
                 },
                 {
-                  "unitId": "Da6iqpU",
+                  "unitId": "2ZWcx2t",
                   "cost": 5
                 },
                 {
@@ -2618,11 +2618,11 @@
                   "cost": 5
                 },
                 {
-                  "unitId": "2ZWcx2t",
+                  "unitId": "Da6iqpU",
                   "cost": 5
                 },
                 {
-                  "unitId": "Da6iqpU",
+                  "unitId": "2ZWcx2t",
                   "cost": 5
                 },
                 {
@@ -2675,7 +2675,7 @@
       "hint": "Eternal Revenants",
       "sections": [
         {
-          "id": "hTcKcgH",
+          "id": "ZoEXbX3",
           "uid": "aLRWyAI",
           "label": "Replace Heavy Claws",
           "options": [
@@ -2809,7 +2809,7 @@
           ]
         },
         {
-          "id": "v3cMw6t",
+          "id": "BQdEFUs",
           "uid": "XguCo",
           "label": "Replace Spite Blade",
           "options": [
@@ -2861,7 +2861,7 @@
           ]
         },
         {
-          "id": "P7M6BKi",
+          "id": "NniwLR3",
           "uid": "RRxae",
           "label": "Upgrade with",
           "options": [
@@ -2909,7 +2909,7 @@
       "hint": "Glade Guardians",
       "sections": [
         {
-          "id": "86PiJPm",
+          "id": "fYINB4P",
           "uid": "rXr_aSk",
           "label": "Upgrade all Longbows with one",
           "options": [
@@ -3092,7 +3092,7 @@
       "hint": "Deer Riders",
       "sections": [
         {
-          "id": "W5K9gO1",
+          "id": "bNnUnZ0",
           "uid": "JpRJni8",
           "label": "Replace Lance",
           "options": [
@@ -3191,7 +3191,7 @@
           ]
         },
         {
-          "id": "tR8GBr4",
+          "id": "08eIEtm",
           "uid": "2Ccpbv6j_p",
           "label": "Replace Swift Defender",
           "options": [
@@ -3240,7 +3240,7 @@
       "hint": "Mounted Weavers",
       "sections": [
         {
-          "id": "dWESWzu",
+          "id": "9bbrMln",
           "uid": "fw2m1",
           "label": "Replace Hand Weapon",
           "options": [
@@ -3288,7 +3288,7 @@
           ]
         },
         {
-          "id": "ItKy9Ub",
+          "id": "REBhfxD",
           "uid": "Lqn2Nor",
           "label": "Upgrade with",
           "options": [
@@ -3338,7 +3338,7 @@
       "hint": "Eternal Hunters",
       "sections": [
         {
-          "id": "9s8dVoK",
+          "id": "Sj06mXf",
           "uid": "WCrOJF8",
           "label": "Replace Great Weapon",
           "options": [
@@ -3489,7 +3489,7 @@
       "hint": "Owl Riders",
       "sections": [
         {
-          "id": "DYLqu97",
+          "id": "TAS6HkK",
           "uid": "r1xs560",
           "label": "Replace Lance",
           "options": [
@@ -3571,7 +3571,7 @@
       "hint": "Glade Defenders",
       "sections": [
         {
-          "id": "I8vIt7P",
+          "id": "Qc5g7In",
           "uid": "q3JsK",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -3665,7 +3665,7 @@
       "hint": "Glade Leader",
       "sections": [
         {
-          "id": "NDR_IXg",
+          "id": "RfwBTk9",
           "uid": "JwMH_",
           "label": "Replace Hand Weapon",
           "options": [
@@ -3852,7 +3852,7 @@
           ]
         },
         {
-          "id": "MacwGnW",
+          "id": "WYOiK73",
           "uid": "zL2aq",
           "label": "Upgrade with one",
           "options": [
@@ -3967,7 +3967,7 @@
               "costs": [
                 {
                   "unitId": "2HF3Nnt",
-                  "cost": 20
+                  "cost": 15
                 }
               ],
               "gains": [
@@ -4135,7 +4135,7 @@
       "hint": "Eternal Bug Riders",
       "sections": [
         {
-          "id": "luEnE7p",
+          "id": "5VmgOKa",
           "uid": "nY20P",
           "label": "Replace Lance",
           "options": [
@@ -4187,7 +4187,7 @@
       "hint": "Treeman Brutes",
       "sections": [
         {
-          "id": "AEzR1Oh",
+          "id": "EKzZOPE",
           "uid": "bXlW3",
           "label": "Replace Branch Mace",
           "options": [
@@ -4241,7 +4241,7 @@
       "hint": "Treemen",
       "sections": [
         {
-          "id": "nqTeqES",
+          "id": "7-sa7Lb",
           "uid": "17uIZ",
           "label": "Replace all Heavy Claws",
           "options": [
@@ -4337,7 +4337,7 @@
       "hint": "War Dancers",
       "sections": [
         {
-          "id": "A-6Ri3Z",
+          "id": "y1WHIjy",
           "uid": "7rho4",
           "label": "Upgrade with",
           "options": [
@@ -4385,7 +4385,7 @@
       "hint": "Leader Upgrades",
       "sections": [
         {
-          "id": "D3GLB1w",
+          "id": "M-PEUX8",
           "uid": "AfuG4",
           "label": "Upgrade with one",
           "options": [
@@ -4573,7 +4573,7 @@
       "hint": "Glow-Fairy Dust",
       "sections": [
         {
-          "id": "6we2hQw",
+          "id": "mYgq75L",
           "uid": "jpBb6vrorJ",
           "label": "Upgrade one model with",
           "options": [
@@ -4641,7 +4641,7 @@
       "hint": "Glade Scouts",
       "sections": [
         {
-          "id": "PUBk3og",
+          "id": "lRHbQPf",
           "uid": "lSSW5fzytg",
           "label": "Replace Hunting Longbow",
           "options": [
@@ -4688,7 +4688,7 @@
       "hint": "Forest Watch",
       "sections": [
         {
-          "id": "hxQhDET",
+          "id": "u_E91hT",
           "uid": "j2O3vc6E-6",
           "label": "Replace Hunting Bow",
           "options": [
@@ -4735,7 +4735,7 @@
       "hint": "Specialists - Grove",
       "sections": [
         {
-          "id": "jxLWlBQ",
+          "id": "n3iS6Zg",
           "uid": "lDtx9fA4",
           "label": "Upgrade with one",
           "options": [
@@ -4941,7 +4941,7 @@
       "hint": "Specialists - Eternal",
       "sections": [
         {
-          "id": "s2n8tAo",
+          "id": "FYvx001",
           "uid": "pyTo0hZl",
           "label": "Upgrade with one",
           "options": [
@@ -5146,7 +5146,7 @@
       "hint": "Specialists - Treeman",
       "sections": [
         {
-          "id": "LdOG-fv",
+          "id": "HBLemRG",
           "uid": "8pPMMneJ",
           "label": "Upgrade with one",
           "options": [
@@ -5385,7 +5385,7 @@
       "hint": "Specialists - Glade",
       "sections": [
         {
-          "id": "Fa739QC",
+          "id": "mA_uA76",
           "uid": "dv1QctMw",
           "label": "Upgrade with one",
           "options": [
@@ -6182,7 +6182,7 @@
       "effectSkirmish": ""
     }
   ],
-  "modifiedAt": "2026-04-30T09:22:49.179Z",
+  "modifiedAt": "2026-05-05T08:03:17.240Z",
   "editedAt": "2026-04-28T10:03:25.642Z",
   "official": true,
   "versionString": "3.5.3",
@@ -6504,7 +6504,7 @@
       "id": "qQNXJkFzIjyq",
       "name": "Wild Veil Boost",
       "aliasedRuleId": null,
-      "description": "If all models in this unit have Wild Veil, enemies get -8\" range when shooting  them and -4\" movement when charging them from Wild Veil (instead of only -4\" and -2\").",
+      "description": "If all models in this unit have Wild Veil, enemies get -8\" range to a min. of 6\" when shooting  them, and -4\" movement to a min. of 6\" when charging them from Wild Veil (instead of only -4\" and -2\").",
       "hasRating": false,
       "coreType": null,
       "targetType": 1
