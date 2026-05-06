@@ -30,7 +30,7 @@ export function getDamageMultiplier(
   targetDefense: number,
   targetSize: number,
   targetToughness: number,
-  hitChance: number
+  _hitChance: number
 ): number {
   let multiplier = 1;
 
@@ -97,14 +97,16 @@ export function calculateWeaponOffense(
   quality: number,
   targetDefense: number,
   targetSize: number,
-  targetToughness: number
+  targetToughness: number,
+  assault: boolean = false
 ): number {
   const attacksMultiplier = (weapon as any).attacksMultiplier || 1;
   const baseAttacks = weapon.count * weapon.attacks * attacksMultiplier;
   
   if (baseAttacks === 0) return 0;
 
-  const hitChance = getHitChance(quality);
+  const effectiveQuality = assault ? quality + 1 : quality;
+  const hitChance = getHitChance(effectiveQuality);
   
   const ap = getWeaponAP(weapon);
   const blockChance = getBlockChance(targetDefense, ap);
@@ -118,15 +120,23 @@ export function calculateWeaponOffense(
 /**
  * Calculates total offense score for a unit (sum of all weapons * unit size)
  */
-export function calculateUnitOffense(unit: Unit, config: BalValConfig = DEFAULT_BALVAL_CONFIG): number {
-  if (!unit.weapons || unit.weapons.length === 0) return 0;
-
-  let totalWeaponOffense = 0;
-  for (const weapon of unit.weapons) {
-    totalWeaponOffense += calculateWeaponOffense(weapon, unit.quality, config.targetDefense, config.targetSize, config.targetToughness);
+export function calculateUnitOffense(unit: Unit, config: BalValConfig = DEFAULT_BALVAL_CONFIG): { meleeOffense: number, rangedOffense: number, totalOffense: number } {
+  if (!unit.weapons || unit.weapons.length === 0) {
+    return { meleeOffense: 0, rangedOffense: 0, totalOffense: 0 };
   }
 
-  return totalWeaponOffense;
+  let meleeOffense = 0;
+  let rangedOffense = 0;
+  for (const weapon of unit.weapons) {
+    const wOffense = calculateWeaponOffense(weapon, unit.quality, config.targetDefense, config.targetSize, config.targetToughness, config.assault);
+    if (weapon.range === 0) {
+      meleeOffense += wOffense;
+    } else {
+      rangedOffense += wOffense;
+    }
+  }
+
+  return { meleeOffense, rangedOffense, totalOffense: Math.max(meleeOffense, rangedOffense) };
 }
 
 /**
@@ -163,10 +173,12 @@ export function calculateEffectiveHP(unit: Unit): number {
  * Calculates raw BalVal metrics for a single unit
  */
 export function calculateUnitRawBalVal(unit: Unit, config: BalValConfig = DEFAULT_BALVAL_CONFIG): Omit<BalValResult, 'normalizedBalVal' | 'tier'> {
-  const unitOffense = calculateUnitOffense(unit, config);
+  const { meleeOffense, rangedOffense, totalOffense } = calculateUnitOffense(unit, config);
   const effectiveHP = calculateEffectiveHP(unit);
 
-  const offenseEfficiency = unit.cost > 0 ? unitOffense / unit.cost : 0;
+  const offenseEfficiency = unit.cost > 0 ? totalOffense / unit.cost : 0;
+  const meleeEfficiency = unit.cost > 0 ? meleeOffense / unit.cost : 0;
+  const rangedEfficiency = unit.cost > 0 ? rangedOffense / unit.cost : 0;
   const defenseEfficiency = unit.cost > 0 ? effectiveHP / unit.cost : 0;
 
   const rawBalVal = (offenseEfficiency * config.offenseWeight) + (defenseEfficiency * (1 - config.offenseWeight));
@@ -174,9 +186,13 @@ export function calculateUnitRawBalVal(unit: Unit, config: BalValConfig = DEFAUL
   return {
     unitId: unit.id,
     unitCost: unit.cost,
-    unitOffense,
+    unitOffense: totalOffense,
+    unitMeleeOffense: meleeOffense,
+    unitRangedOffense: rangedOffense,
     effectiveHP,
     offenseEfficiency,
+    meleeEfficiency,
+    rangedEfficiency,
     defenseEfficiency,
     rawBalVal,
   };
@@ -222,7 +238,7 @@ export function calculateUpgradeBalValDelta(
   option: any,
   section: any,
   unit: Unit,
-  config: BalValConfig = DEFAULT_BALVAL_CONFIG
+  config: any = DEFAULT_BALVAL_CONFIG
 ): { offenseDelta: number; ehpDelta: number } {
   let offenseDelta = 0;
   let ehpDelta = 0;
@@ -231,7 +247,7 @@ export function calculateUpgradeBalValDelta(
   if (option.gains && option.gains.length > 0) {
     for (const gain of option.gains) {
       if (gain.type === 'ArmyBookWeapon') {
-        offenseDelta += calculateWeaponOffense(gain, unit.quality, config.targetDefense, config.targetSize, config.targetToughness);
+        offenseDelta += calculateWeaponOffense(gain, unit.quality, config.targetDefense, config.targetSize, config.targetToughness, config.assault);
       } else if (gain.type === 'ArmyBookRule' || gain.type === 'ArmyBookDefense') {
         // Simple heuristic for rules (since EHP formula requires a full unit context, we approximate the delta)
         // For accurate delta, we should calculate base EHP, calculate new EHP with rule, and diff.
@@ -266,7 +282,8 @@ export function calculateUpgradeBalValDelta(
             unit.quality,
             config.targetDefense,
             config.targetSize,
-            config.targetToughness
+            config.targetToughness,
+            config.assault
           );
           
           // OPR "Replace all X" vs "Replace one X" vs "Replace up to two X"
@@ -286,5 +303,205 @@ export function calculateUpgradeBalValDelta(
   }
 
   return { offenseDelta, ehpDelta };
+}
+
+/**
+ * Parses the quantity of models affected by an upgrade section label.
+ */
+export function parseUpgradeQuantity(label: string, unitSize: number, isDoubled: boolean): number {
+  const l = label.toLowerCase();
+  const baseFactor = isDoubled ? 2 : 1;
+  
+  if (l.includes('all ') || l.includes('any ')) return unitSize;
+  if (l.includes('one ')) return 1 * baseFactor;
+  if (l.includes('two ')) return 2 * baseFactor;
+  if (l.includes('three ')) return 3 * baseFactor;
+  
+  // Default to 1 for specific model upgrades (like sergeants)
+  return 1 * baseFactor;
+}
+
+/**
+ * Finds the mathematically most efficient loadout for a unit given the current config.
+ * Optimizes by selecting the best option from each upgrade section if it improves efficiency.
+ * Handles dependencies by tracking a dynamic weapon pool.
+ */
+export function calculateBestLoadout(
+  unit: any,
+  army: any,
+  config: BalValConfig = DEFAULT_BALVAL_CONFIG,
+  isDoubled: boolean = false
+): { offense: number; meleeOffense: number; rangedOffense: number; cost: number; id: string; label: string, weapons: any[] } {
+  const baseResult = calculateUnitRawBalVal(unit, config);
+  
+  let currentMelee = baseResult.unitMeleeOffense;
+  let currentRanged = baseResult.unitRangedOffense;
+  let currentCost = unit.cost;
+  let currentWeapons = [...(unit.weapons || [])].map(w => ({ ...w }));
+  let compositeLabel = 'Default Loadout';
+  let isModified = false;
+
+  if (!unit.upgrades || unit.upgrades.length === 0) {
+    return { 
+      offense: baseResult.unitOffense, 
+      meleeOffense: baseResult.unitMeleeOffense, 
+      rangedOffense: baseResult.unitRangedOffense, 
+      cost: unit.cost, 
+      id: 'base', 
+      label: 'Default Loadout',
+      weapons: currentWeapons
+    };
+  }
+
+  // Iterate through each section and pick the BEST option that improves efficiency
+  unit.upgrades.forEach((pkgUid: string) => {
+    const pkg = army.upgradePackages?.find((p: any) => p.uid === pkgUid);
+    if (!pkg) return;
+
+    pkg.sections.forEach((section: any) => {
+      const sectionLabel = (section.label || '').toLowerCase();
+      
+      let bestOption: any = null;
+      let bestOptionDeltas = { melee: 0, ranged: 0, cost: 0, weapons: [] as any[], replacedWeapons: [] as any[], quantity: 0 };
+      let bestOptionEfficiency = 0;
+
+      // Current efficiency baseline for this section
+      const currentEff = currentCost > 0 ? (Math.max(currentMelee, currentRanged) * config.offenseWeight + baseResult.effectiveHP * (1 - config.offenseWeight)) / currentCost : 0;
+
+      section.options.forEach((option: any) => {
+        const weaponGains = option.gains?.filter((g: any) => g.type === 'ArmyBookWeapon') || [];
+        const ruleGains = option.gains?.filter((g: any) => g.type === 'ArmyBookRule') || [];
+        
+        if (weaponGains.length === 0 && ruleGains.length === 0) return;
+
+        let meleeDelta = 0;
+        let rangedDelta = 0;
+        let quantity = 0;
+
+        // 1. Identify which weapons we are replacing from the pool
+        const replacedWeapons: any[] = [];
+        if (section.variant === 'replace' && sectionLabel.includes('replace')) {
+          // Find ALL matches in the pool
+          const matches = currentWeapons.filter(w => sectionLabel.includes(w.name.toLowerCase()));
+          
+          if (matches.length > 0) {
+            // Determine quantity limit
+            if (sectionLabel.includes('all ') || sectionLabel.includes('any ')) {
+              // Replace as many as are available for each type
+              quantity = Math.max(...matches.map(w => w.count));
+            } else {
+              const labelNum = sectionLabel.includes('one ') ? 1 : sectionLabel.includes('two ') ? 2 : sectionLabel.includes('three ') ? 3 : 1;
+              quantity = labelNum * (isDoubled ? 2 : 1);
+            }
+
+            matches.forEach(w => {
+              const q = Math.min(w.count, quantity);
+              replacedWeapons.push({ weapon: w, quantity: q });
+
+              const singleReplacedOffense = calculateWeaponOffense(
+                { ...w, count: 1 }, 
+                unit.quality, 
+                config.targetDefense, 
+                config.targetSize,
+                config.targetToughness,
+                config.assault
+              );
+              
+              if (w.range === 0) meleeDelta -= (singleReplacedOffense * q);
+              else rangedDelta -= (singleReplacedOffense * q);
+            });
+          } else {
+            // No matching weapon to replace
+            return;
+          }
+        } else {
+          // It's an upgrade (adding gear)
+          const baseFactor = isDoubled ? 2 : 1;
+          if (sectionLabel.includes('all ') || sectionLabel.includes('any ')) {
+            quantity = unit.size;
+          } else {
+            const labelNum = sectionLabel.includes('one ') ? 1 : sectionLabel.includes('two ') ? 2 : 1;
+            quantity = labelNum * baseFactor;
+          }
+        }
+
+        // 2. Add gained weapons value
+        weaponGains.forEach((gain: any) => {
+          const singleGainedOffense = calculateWeaponOffense(
+            { ...gain, count: 1 },
+            unit.quality,
+            config.targetDefense,
+            config.targetSize,
+            config.targetToughness,
+            config.assault
+          );
+          
+          if (gain.range === 0) meleeDelta += (singleGainedOffense * quantity);
+          else rangedDelta += (singleGainedOffense * quantity);
+        });
+
+        // OPR cost logic
+        let actualCost = option.cost;
+        if (!(sectionLabel.includes('all ') || sectionLabel.includes('any '))) {
+           if (sectionLabel.includes('one ') || sectionLabel.includes('two ') || sectionLabel.includes('three ')) {
+              actualCost = option.cost * (quantity / (sectionLabel.includes('two ') ? 2 : sectionLabel.includes('three ') ? 3 : 1));
+           }
+        }
+        
+        const finalTestCost = currentCost + actualCost;
+        const testEff = finalTestCost > 0 ? (Math.max(currentMelee + meleeDelta, currentRanged + rangedDelta) * config.offenseWeight + baseResult.effectiveHP * (1 - config.offenseWeight)) / finalTestCost : 0;
+
+        if (testEff > currentEff && testEff > bestOptionEfficiency) {
+          bestOption = option;
+          bestOptionEfficiency = testEff;
+          bestOptionDeltas = { 
+            melee: meleeDelta, 
+            ranged: rangedDelta, 
+            cost: actualCost,
+            weapons: weaponGains.map((g: any) => ({ ...g, count: g.count * (section.variant === 'replace' ? (quantity || 1) : quantity) })),
+            replacedWeapons: replacedWeapons,
+            quantity: quantity
+          };
+        }
+      });
+
+      // If we found a beneficial option in this section, apply it to the state
+      if (bestOption) {
+        currentMelee += bestOptionDeltas.melee;
+        currentRanged += bestOptionDeltas.ranged;
+        currentCost += bestOptionDeltas.cost;
+        
+        if (bestOptionDeltas.replacedWeapons && bestOptionDeltas.replacedWeapons.length > 0) {
+          bestOptionDeltas.replacedWeapons.forEach((rw: any) => {
+            currentWeapons = currentWeapons.map(w => {
+              if (w.id === rw.weapon.id) {
+                 const newCount = Math.max(0, w.count - rw.quantity);
+                 return newCount > 0 ? { ...w, count: newCount } : null;
+              }
+              return w;
+            }).filter(Boolean) as any[];
+          });
+        }
+        currentWeapons.push(...bestOptionDeltas.weapons);
+        
+        if (!isModified) {
+          compositeLabel = bestOption.label;
+          isModified = true;
+        } else {
+          compositeLabel += ` + ${bestOption.label}`;
+        }
+      }
+    });
+  });
+
+  return {
+    offense: Math.max(currentMelee, currentRanged),
+    meleeOffense: currentMelee,
+    rangedOffense: currentRanged,
+    cost: currentCost,
+    id: isModified ? 'composite' : 'base',
+    label: compositeLabel,
+    weapons: currentWeapons
+  };
 }
 

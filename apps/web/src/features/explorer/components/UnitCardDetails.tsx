@@ -6,18 +6,18 @@ interface UnitCardDetailsProps {
   army: any;
   balValScore?: BalValResult;
   balValConfig: BalValConfig;
+  isDoubled: boolean;
 }
 
-export function UnitCardDetails({ unit, army, balValScore, balValConfig }: UnitCardDetailsProps) {
+export function UnitCardDetails({ unit, army, balValScore, balValConfig, isDoubled }: UnitCardDetailsProps) {
   // -- Loadout Generation Logic --
   // 1. Base Loadout
-  const baseOffense = balValScore?.unitOffense || 0;
-  const loadouts = [
+  const loadouts: any[] = [
     {
       id: 'base',
       label: 'Default Loadout',
       weapons: unit.weapons || [],
-      offense: baseOffense,
+      offense: balValScore?.unitOffense || 0,
       cost: unit.cost,
       isBase: true,
     }
@@ -53,7 +53,8 @@ export function UnitCardDetails({ unit, army, balValScore, balValConfig }: UnitC
                   unit.quality, 
                   balValConfig.targetDefense, 
                   balValConfig.targetSize,
-                  balValConfig.targetToughness
+                  balValConfig.targetToughness,
+                  balValConfig.assault
                 );
                 offenseDelta -= (singleReplacedOffense * replaceCount);
                 break;
@@ -61,7 +62,7 @@ export function UnitCardDetails({ unit, army, balValScore, balValConfig }: UnitC
             }
           } else {
              // If it's just an upgrade, it usually applies to 1 model
-             replaceCount = 1; 
+             replaceCount = isDoubled ? 2 : 1; 
           }
 
           // Add new weapons
@@ -72,7 +73,8 @@ export function UnitCardDetails({ unit, army, balValScore, balValConfig }: UnitC
               unit.quality,
               balValConfig.targetDefense,
               balValConfig.targetSize,
-              balValConfig.targetToughness
+              balValConfig.targetToughness,
+              balValConfig.assault
             );
             offenseDelta += (singleGainedOffense * replaceCount);
             newWeaponsForDisplay.push({ ...gain, count: gain.count * replaceCount });
@@ -81,7 +83,7 @@ export function UnitCardDetails({ unit, army, balValScore, balValConfig }: UnitC
           // Build the final display weapon list for this loadout
           const finalWeapons = [];
           for (const w of unit.weapons || []) {
-             if (replacedWeapon && w.id === replacedWeapon.id) {
+             if (replacedWeapon && w.id === (replacedWeapon as any).id) {
                // We replaced all of this weapon, so skip it
                continue; 
              }
@@ -89,12 +91,13 @@ export function UnitCardDetails({ unit, army, balValScore, balValConfig }: UnitC
           }
           finalWeapons.push(...newWeaponsForDisplay);
 
-          const finalOffense = baseOffense + offenseDelta;
+
+          const finalOffense = (balValScore?.unitOffense || 0) + offenseDelta; // simplified sum for mobile
           const finalCost = unit.cost + (option.cost * replaceCount);
 
           loadouts.push({
             id: option.id,
-            label: `All take ${option.label}`,
+            label: option.label,
             weapons: finalWeapons,
             offense: finalOffense,
             cost: finalCost,
@@ -121,21 +124,32 @@ export function UnitCardDetails({ unit, army, balValScore, balValConfig }: UnitC
       {/* BalVal Breakdown */}
       {balValScore && (
         <section>
-          <div className="grid grid-cols-2 gap-3">
-            <div className="rounded-lg bg-white/5 border border-white/10 p-3 relative overflow-hidden">
-              <div className="absolute top-0 left-0 h-1 bg-rose-500" style={{ width: `${Math.min(100, balValScore.offenseEfficiency * 1000)}%` }}></div>
-              <div className="text-[10px] uppercase tracking-wider text-slate-400">Expected Dmg / Turn</div>
-              <div className="text-xl font-extrabold text-white mt-1">{balValScore.unitOffense.toFixed(2)}</div>
-              <div className="text-[10px] text-slate-500 mt-0.5">Offense Eff: {balValScore.offenseEfficiency.toFixed(3)}</div>
+            <div className="grid grid-cols-1 gap-3">
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-lg bg-white/5 border border-white/10 p-3 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 h-1 bg-rose-500" style={{ width: `${Math.min(100, balValScore.meleeEfficiency * 1000)}%` }}></div>
+                  <div className="text-[9px] uppercase tracking-wider text-slate-400">Melee</div>
+                  <div className="text-lg font-extrabold text-white mt-0.5">{balValScore.unitMeleeOffense.toFixed(2)}</div>
+                </div>
+                <div className="rounded-lg bg-white/5 border border-white/10 p-3 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 h-1 bg-amber-500" style={{ width: `${Math.min(100, balValScore.rangedEfficiency * 1000)}%` }}></div>
+                  <div className="text-[9px] uppercase tracking-wider text-slate-400">Ranged</div>
+                  <div className="text-lg font-extrabold text-white mt-0.5">{balValScore.unitRangedOffense.toFixed(2)}</div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="rounded-lg bg-white/5 border border-white/10 p-3 relative overflow-hidden">
+                  <div className="absolute top-0 left-0 h-1 bg-emerald-500" style={{ width: `${Math.min(100, balValScore.defenseEfficiency * 1000)}%` }}></div>
+                  <div className="text-[9px] uppercase tracking-wider text-slate-400">EHP</div>
+                  <div className="text-lg font-extrabold text-white mt-0.5">{balValScore.effectiveHP.toFixed(2)}</div>
+                </div>
+                <div className="rounded-lg bg-sky-500/5 border border-sky-500/20 p-3 flex flex-col justify-center">
+                  <div className="text-[9px] uppercase tracking-wider text-sky-400 font-bold">Best</div>
+                  <div className="text-lg font-black text-white mt-0.5">{balValScore.unitOffense.toFixed(2)}</div>
+                </div>
+              </div>
             </div>
-            <div className="rounded-lg bg-white/5 border border-white/10 p-3 relative overflow-hidden">
-              <div className="absolute top-0 left-0 h-1 bg-emerald-500" style={{ width: `${Math.min(100, balValScore.defenseEfficiency * 1000)}%` }}></div>
-              <div className="text-[10px] uppercase tracking-wider text-slate-400">Effective HP</div>
-              <div className="text-xl font-extrabold text-white mt-1">{balValScore.effectiveHP.toFixed(2)}</div>
-              <div className="text-[10px] text-slate-500 mt-0.5">Defense Eff: {balValScore.defenseEfficiency.toFixed(3)}</div>
-            </div>
-          </div>
-        </section>
+          </section>
       )}
 
       {/* Loadouts List */}

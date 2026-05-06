@@ -8,9 +8,10 @@ interface UnitCardProps {
   onSelect: (unit: any) => void;
   balValScore?: BalValResult;
   balValConfig: BalValConfig;
+  isDoubled: boolean;
 }
 
-export function UnitCard({ unit, army, isSelected, onSelect, balValScore, balValConfig }: UnitCardProps) {
+export function UnitCard({ unit, army, isSelected, onSelect, balValScore, balValConfig, isDoubled }: UnitCardProps) {
 
   const getTierStyles = (tier: string | undefined) => {
     switch (tier) {
@@ -50,7 +51,9 @@ export function UnitCard({ unit, army, isSelected, onSelect, balValScore, balVal
             </h4>
           </div>
           <div className="flex items-center gap-3">
-            <span className={`shrink-0 font-bold text-sm ${tierStyle.text}`}>{unit.cost}pts</span>
+            <div className="flex flex-col items-end">
+              <span className={`shrink-0 font-bold text-sm ${tierStyle.text}`}>{unit.cost}pts</span>
+            </div>
             {/* Arrow indicator for mobile accordion */}
             <svg 
               className={`w-5 h-5 text-slate-400 transition-transform duration-200 lg:hidden ${isSelected ? 'rotate-180' : ''}`} 
@@ -79,6 +82,7 @@ export function UnitCard({ unit, army, isSelected, onSelect, balValScore, balVal
             army={army} 
             balValScore={balValScore} 
             balValConfig={balValConfig} 
+            isDoubled={isDoubled}
           />
         )}
       </div>

@@ -3,6 +3,7 @@ import ComparisonPage from "@/pages/ComparisonPage";
 import HomePage from "@/pages/HomePage";
 import ArmyDetailPage from "@/pages/ArmyDetailPage";
 import SystemCategoryPage from "@/pages/SystemCategoryPage";
+import BalValExplanationPage from "@/pages/BalValExplanationPage";
 import { Footer } from "@/components/layout/Footer";
 
 export function AppRouter() {
@@ -13,6 +14,7 @@ export function AppRouter() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/compare" element={<ComparisonPage />} />
+            <Route path="/math-hammer" element={<BalValExplanationPage />} />
             <Route path="/army/:systemId" element={<SystemCategoryPage />} />
             <Route path="/army/:systemId/:armyId" element={<ArmyDetailPage />} />
           </Routes>

@@ -4,7 +4,7 @@ import { ArmyDetailSkeleton } from './ArmyDetailSkeleton';
 import { ArmyDetailEmpty } from './ArmyDetailEmpty';
 
 export default function ArmyDetailViewContainer() {
-  const { army, loading, selectedUnit, setSelectedUnit, balValConfig, setBalValConfig, balValScores } = useArmyDetail();
+  const { army, loading, selectedUnit, setSelectedUnit, balValConfig, setBalValConfig, balValScores, doubledUnitIds, toggleDoubleUnit } = useArmyDetail();
 
   if (loading) return <ArmyDetailSkeleton />;
   if (!army) return <ArmyDetailEmpty />;
@@ -17,7 +17,8 @@ export default function ArmyDetailViewContainer() {
       balValConfig={balValConfig}
       setBalValConfig={setBalValConfig}
       balValScores={balValScores}
-      onBack={() => {}}
+      doubledUnitIds={doubledUnitIds}
+      onToggleDoubleUnit={toggleDoubleUnit}
     />
   );
 }

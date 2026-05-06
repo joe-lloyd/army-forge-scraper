@@ -24,12 +24,18 @@ export default function HomePage() {
           Visualize unit and upgrade changes between patch versions with precision. Ensure your lists are up-to-date.
         </p>
 
-        <div className="pt-8">
+        <div className="pt-8 flex flex-col items-center gap-4">
           <button
             onClick={() => navigate('/compare')}
-            className="px-10 py-5 bg-sky-500 hover:bg-sky-400 text-white font-bold text-lg rounded-2xl shadow-[0_0_40px_rgba(56,189,248,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(56,189,248,0.5)]"
+            className="px-10 py-5 bg-sky-500 hover:bg-sky-400 text-white font-bold text-lg rounded-2xl shadow-[0_0_40px_rgba(56,189,248,0.3)] transition-all hover:scale-105 hover:shadow-[0_0_60px_rgba(56,189,248,0.5)] w-full max-w-sm"
           >
             Start Comparison Tool
+          </button>
+          <button
+            onClick={() => navigate('/math-hammer')}
+            className="px-6 py-3 bg-slate-800/50 hover:bg-slate-700/50 text-slate-300 font-medium rounded-xl border border-slate-700 transition-colors w-full max-w-sm"
+          >
+            How Math-Hammer (BalVal) Works
           </button>
         </div>
 
