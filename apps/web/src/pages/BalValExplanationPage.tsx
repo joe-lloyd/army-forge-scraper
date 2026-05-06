@@ -88,6 +88,20 @@ export default function BalValExplanationPage() {
               Attacks × Hit Chance × (1 - Block Chance) × Multipliers
             </div>
           </div>
+
+          <div className="rounded-xl border border-purple-500/30 bg-gradient-to-br from-purple-900/20 via-rose-900/10 to-amber-900/10 p-5">
+            <h3 className="mb-2 text-lg font-medium text-purple-200">Assault Action — Combined Attack</h3>
+            <p className="mb-3 text-sm text-purple-200/80">
+              By default a unit's <strong>Total Offense</strong> is <code className="text-amber-300">max(melee, ranged)</code> — it can only do one in a turn.
+              When the <strong>Assault</strong> action is toggled on, the unit moves into engagement and fires <em>both</em> melee and ranged in the same activation, but takes a <strong className="text-rose-300">-1 to hit</strong> penalty on every attack.
+            </p>
+            <div className="rounded bg-slate-900/80 p-4 font-mono text-sm text-purple-300">
+              Total Offense (Assault) = Melee + Ranged · all hits at Quality + 1
+            </div>
+            <p className="mt-3 text-xs italic text-purple-300/70">
+              Hybrid units (e.g. Witches with pistol + CCW) gain a lot from Assault; pure-shooting units with no melee usually lose damage.
+            </p>
+          </div>
         </section>
 
         {/* Defensive Calculations */}
@@ -123,36 +137,158 @@ export default function BalValExplanationPage() {
           </div>
         </section>
 
-        {/* The BalVal Score */}
+        {/* Tiers */}
         <section className="space-y-6">
           <div className="flex items-center gap-3 border-b border-slate-700 pb-2">
             <Calculator className="h-6 w-6 text-purple-400" />
-            <h2 className="text-2xl font-semibold text-white">3. The Final BalVal Score</h2>
+            <h2 className="text-2xl font-semibold text-white">3. Tiers — Damage & Survivability</h2>
           </div>
           <p className="text-slate-400">
-            Finally, we calculate how efficient the unit is relative to its point cost.
+            Each unit gets two tier grades, ranked separately within the army:
           </p>
 
           <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-xl border border-slate-800 bg-slate-800/50 p-4 font-mono text-sm text-slate-300">
-              Offense Efficiency = Total Offense / Cost
+            <div className="rounded-xl border border-rose-700/40 bg-rose-950/20 p-5">
+              <h3 className="mb-2 text-lg font-medium text-rose-200">Damage Tier</h3>
+              <div className="rounded bg-slate-900/80 p-3 font-mono text-xs text-rose-300 mb-3">
+                Damage Eff = Total Offense / Cost
+              </div>
+              <p className="text-sm text-rose-200/70">
+                Percentile rank of <em>damage-per-point</em> across every unit in the army. Units that kill the most for their cost climb to <strong className="text-sky-300">S</strong>.
+              </p>
             </div>
-            <div className="rounded-xl border border-slate-800 bg-slate-800/50 p-4 font-mono text-sm text-slate-300">
-              Defense Efficiency = Effective HP / Cost
+            <div className="rounded-xl border border-emerald-700/40 bg-emerald-950/20 p-5">
+              <h3 className="mb-2 text-lg font-medium text-emerald-200">Survivability Tier</h3>
+              <div className="rounded bg-slate-900/80 p-3 font-mono text-xs text-emerald-300 mb-3">
+                Defense Eff = Effective HP / Cost
+              </div>
+              <p className="text-sm text-emerald-200/70">
+                Percentile rank of <em>EHP-per-point</em>. A small Tough(6) hero and a 10-strong horde can both grade highly here.
+              </p>
             </div>
           </div>
 
-          <div className="rounded-xl border border-purple-900/30 bg-purple-950/20 p-5">
-            <h3 className="mb-2 text-lg font-medium text-purple-200">Raw BalVal Score</h3>
-            <p className="mb-3 text-sm text-purple-200/70">
-              The Raw BalVal Score is a weighted average of these two efficiencies (default 50/50 split). Units are then ranked by this raw score to place them into Percentiles and Tiers (S, A, B, C, D).
+          <div className="rounded-xl border border-slate-700 bg-slate-800/40 p-5">
+            <h3 className="mb-2 text-lg font-medium text-white">Tier thresholds</h3>
+            <p className="mb-3 text-sm text-slate-400">
+              Tiers are assigned by percentile within the current army (so an "A" in one army is not the same as an "A" in another):
             </p>
-            <div className="rounded bg-slate-900/80 p-4 font-mono text-sm text-purple-300">
-              BalVal = (Offense Eff. × W_offense) + (Defense Eff. × W_defense)
+            <div className="grid grid-cols-5 gap-2 text-center text-xs">
+              <Cell tier="S" pct="Top 10%" color="text-sky-400" />
+              <Cell tier="A" pct="Top 30%" color="text-emerald-400" />
+              <Cell tier="B" pct="Mid 30%" color="text-slate-300" />
+              <Cell tier="C" pct="Bottom 25%" color="text-amber-400" />
+              <Cell tier="D" pct="Bottom 15%" color="text-rose-400" />
             </div>
+          </div>
+        </section>
+
+        {/* Loadout semantics */}
+        <section className="space-y-6">
+          <div className="flex items-center gap-3 border-b border-slate-700 pb-2">
+            <h2 className="text-2xl font-semibold text-white">4. Loadout Semantics</h2>
+          </div>
+          <p className="text-slate-400">
+            Each upgrade section in army-forge data carries an{' '}
+            <code className="text-amber-300 text-xs">affects</code> field that
+            authoritatively dictates how many model swaps are legal. The optimizer and the loadout
+            preview both drive off this field — never off the human-readable label — so the
+            calculations match the rulebook exactly.
+          </p>
+
+          <div className="overflow-x-auto rounded-xl border border-slate-800 bg-slate-800/40">
+            <table className="w-full text-sm">
+              <thead className="bg-slate-900/60 text-[10px] uppercase tracking-widest text-slate-400">
+                <tr>
+                  <th className="px-4 py-3 text-left">affects.type</th>
+                  <th className="px-4 py-3 text-left">Meaning</th>
+                  <th className="px-4 py-3 text-left">Optimizer sweep (k)</th>
+                  <th className="px-4 py-3 text-left">Example</th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-300">
+                <SemRow
+                  type="exactly N"
+                  meaning="Exactly N model-swaps. Forced count, no choice."
+                  sweep="[N × instances]"
+                  example="Replace one Barb Pistol and CCW (sgt loadout)"
+                />
+                <SemRow
+                  type="up to N"
+                  meaning="0..N model-swaps. Each step is a meaningful choice — preview emits one pill per k."
+                  sweep="[1, 2, ..., N]"
+                  example="Replace up to two Dual CCWs (Gene-Warriors)"
+                />
+                <SemRow
+                  type="any"
+                  meaning="Any number of models can elect this swap. Per-model elective."
+                  sweep="[1, 2, ..., pool]"
+                  example="Replace any Barb Rifle (Raider)"
+                />
+                <SemRow
+                  type="all"
+                  meaning="Mandatory whole-stack swap. Single application consumes every matching weapon."
+                  sweep="[pool]"
+                  example="Replace all Rifles (Heavy Squad)"
+                />
+                <SemRow
+                  type="null"
+                  meaning="No constraint info — singleton replacement. Used for sgt-pistol-replace style sections."
+                  sweep="[1]"
+                  example="Replace Sgt. Barb Pistol"
+                />
+              </tbody>
+            </table>
+          </div>
+
+          <div className="rounded-xl border border-amber-700/30 bg-amber-950/20 p-5">
+            <h3 className="mb-2 text-lg font-medium text-amber-200">Sergeant chains</h3>
+            <p className="text-sm text-amber-200/80">
+              A section is treated as <em>sergeant-creating</em> when one of the weapons it adds
+              is referenced by a later section's label. Those sections are forced to{' '}
+              <code className="text-amber-300 text-xs">k = 1 × instances</code> regardless of what{' '}
+              <code className="text-amber-300 text-xs">affects</code> says, because OPR has only
+              one sergeant per unit. Per-model upgrades earlier in the package are also restricted
+              to leave one model in the pool for the upcoming sergeant — that's the{' '}
+              <em>reservation</em> step you'll see in chain previews.
+            </p>
           </div>
         </section>
       </main>
     </div>
+  );
+}
+
+function Cell({ tier, pct, color }: { tier: string; pct: string; color: string }) {
+  return (
+    <div className="rounded-lg border border-slate-700 bg-slate-900/60 py-3 px-2">
+      <div className={`text-2xl font-black ${color}`}>{tier}</div>
+      <div className="text-[10px] uppercase tracking-widest text-slate-500 mt-1">{pct}</div>
+    </div>
+  );
+}
+
+function SemRow({
+  type,
+  meaning,
+  sweep,
+  example,
+}: {
+  type: string;
+  meaning: string;
+  sweep: string;
+  example: string;
+}) {
+  return (
+    <tr className="border-t border-slate-800">
+      <td className="px-4 py-3 align-top">
+        <code className="text-amber-300 text-xs whitespace-nowrap">{type}</code>
+      </td>
+      <td className="px-4 py-3 align-top text-slate-300">{meaning}</td>
+      <td className="px-4 py-3 align-top">
+        <code className="text-sky-300 text-xs whitespace-nowrap">{sweep}</code>
+      </td>
+      <td className="px-4 py-3 align-top text-slate-400 italic text-xs">{example}</td>
+    </tr>
   );
 }

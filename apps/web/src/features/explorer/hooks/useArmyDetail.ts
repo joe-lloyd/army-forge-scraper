@@ -4,9 +4,8 @@ import { DATA_API } from '@/config';
 import { GAME_SYSTEMS } from './useArmyList';
 import { DEFAULT_BALVAL_CONFIG } from '../utils/types';
 import type { BalValConfig } from '../utils/types';
-import { calculateArmyBalVal, calculateBestLoadout } from '../utils/balval';
+import { calculateArmyBalVal, findBestLoadout } from '../utils/balval';
 
-// We import the shared types but use the raw JSON shape from files
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type ArmyBook = any;
 
@@ -26,11 +25,8 @@ export function useArmyDetail() {
   const toggleDoubleUnit = (unitId: string) => {
     setDoubledUnitIds((prev) => {
       const next = new Set(prev);
-      if (next.has(unitId)) {
-        next.delete(unitId);
-      } else {
-        next.add(unitId);
-      }
+      if (next.has(unitId)) next.delete(unitId);
+      else next.add(unitId);
       return next;
     });
   };
@@ -45,7 +41,6 @@ export function useArmyDetail() {
     setLoading(true);
     setError(null);
 
-    // Step 1: get version list to find latest
     fetch(`${DATA_API}/${system.slug}/index.json`, { signal: controller.signal })
       .then((res) => {
         if (!res.ok) throw new Error('Failed to fetch versions');
@@ -54,20 +49,17 @@ export function useArmyDetail() {
       .then((versions) => {
         const latest = versions[0];
         if (!latest) throw new Error('No versions found');
-        // Step 2: find the filename for this armyId from the version index
         return fetch(`${DATA_API}/${system.slug}/${latest}/index.json`, { signal: controller.signal })
           .then((res) => {
             if (!res.ok) throw new Error('Failed to fetch army index');
             return res.json() as Promise<{ id: string; name: string }[]>;
           })
           .then((index) => {
-            // Find the entry whose filename contains the armyId
             const entry = index.find((e) => e.id.includes(`(${armyId})`));
             if (!entry) throw new Error(`Army not found: ${armyId}`);
-            // Step 3: fetch the actual army JSON file
             return fetch(
               `${DATA_API}/${system.slug}/${latest}/${encodeURIComponent(entry.id)}`,
-              { signal: controller.signal }
+              { signal: controller.signal },
             ).then((res) => {
               if (!res.ok) throw new Error('Failed to fetch army data');
               return res.json();
@@ -76,9 +68,7 @@ export function useArmyDetail() {
       })
       .then((data) => {
         setArmy(data);
-        if (data.units?.length > 0) {
-          setSelectedUnit(data.units[0]);
-        }
+        if (data.units?.length > 0) setSelectedUnit(data.units[0]);
         setLoading(false);
       })
       .catch((err) => {
@@ -93,7 +83,7 @@ export function useArmyDetail() {
 
   const processedArmy = useMemo(() => {
     if (!army?.units) return army;
-    
+
     const newUnits = army.units.map((unit: any) => {
       const isDoubled = doubledUnitIds.has(unit.id);
       let pUnit = { ...unit };
@@ -108,26 +98,24 @@ export function useArmyDetail() {
       }
 
       if (balValConfig.mostEffective) {
-        const best = calculateBestLoadout(pUnit, army, balValConfig, isDoubled);
-        // We override the offensive stats and cost with the best loadout
-        // But we keep the original base weapons list so calculateUnitOffense (called inside calculateArmyBalVal)
-        // doesn't re-calculate the wrong thing.
-        // Actually, calculateArmyBalVal calls calculateUnitRawBalVal which calls calculateUnitOffense.
-        // So we should just replace the weapons list with the best loadout weapons!
+        const best = findBestLoadout(pUnit, army, balValConfig, { isDoubled });
+        const optimized = best.applications.length > 0;
         pUnit = {
           ...pUnit,
           cost: best.cost,
           weapons: best.weapons,
-          isOptimized: true,
-          optimizedId: best.id,
-          optimizedLabel: best.label,
+          isOptimized: optimized,
+          optimizedId: optimized ? 'best-combo' : 'base',
+          optimizedLabel: optimized
+            ? best.applications.map(a => a.optionLabel).join(' + ')
+            : 'Default Loadout',
+          optimizedApplications: best.applications,
           originalCost: unit.cost * (isDoubled ? 2 : 1),
         };
       }
-      
       return pUnit;
     });
-    
+
     return { ...army, units: newUnits };
   }, [army, doubledUnitIds, balValConfig]);
 
@@ -136,7 +124,6 @@ export function useArmyDetail() {
     return calculateArmyBalVal(processedArmy.units, balValConfig);
   }, [processedArmy?.units, balValConfig]);
 
-  // Update selectedUnit if it gets doubled
   const activeSelectedUnit = useMemo(() => {
     if (!selectedUnit || !processedArmy?.units) return selectedUnit;
     return processedArmy.units.find((u: any) => u.id === selectedUnit.id) || selectedUnit;
