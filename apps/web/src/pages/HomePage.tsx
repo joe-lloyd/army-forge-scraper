@@ -32,6 +32,12 @@ export default function HomePage() {
             Start Comparison Tool
           </button>
           <button
+            onClick={() => navigate('/analyzer')}
+            className="px-6 py-3 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 font-bold rounded-xl border border-indigo-400/40 transition-colors w-full max-w-sm"
+          >
+            Analyze a List (All-Comers Rating)
+          </button>
+          <button
             onClick={() => navigate('/math-hammer')}
             className="px-6 py-3 bg-slate-800/50 hover:bg-slate-700/50 text-slate-300 font-medium rounded-xl border border-slate-700 transition-colors w-full max-w-sm"
           >
