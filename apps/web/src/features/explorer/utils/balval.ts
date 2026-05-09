@@ -23,6 +23,7 @@ export function getDamageMultiplier(
   targetDefense: number,
   targetSize: number,
   targetToughness: number,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _hitChance: number,
 ): number {
   let multiplier = 1;
@@ -56,6 +57,30 @@ export function getWeaponAP(weapon: Weapon): number {
   return apRule?.rating || 0;
 }
 
+// ---- Defense w/ optional re-roll-defender-6s rule (Bane / Lacerate) ----
+//
+// Original block chance = max((7 - effDef) / 6, 1/6).
+// Re-rolling natural 6s (1/6 of all rolls) means those saves are replaced.
+// The replacement roll has the same block probability. Net:
+//   newBlock = (block - 1/6) + (1/6) * block = block * 7/6 - 1/6
+// Floored at 0 (heavy AP + reroll can effectively eliminate saves).
+function blockChanceWithReroll(defense: number, ap: number, defenderRerollSixes: boolean): number {
+  const block = getBlockChance(defense, ap);
+  if (!defenderRerollSixes) return block;
+  return Math.max(0, (block * 7) / 6 - 1 / 6);
+}
+
+// ---- Weapon offense ----
+//
+// Computes expected wounds inflicted on a single target unit. Models the OPR
+// special-rule suite: Blast/Deadly caps, Reliable hit override, Rending and
+// Destructive AP+4 procs, Bane/Lacerate defense re-rolls, Furious/Surge bonus
+// hits, Shred bonus wounds, Hazardous flat AP, Thrust/Impact charge effects.
+//
+// Floor-based triggers: rules that key off "natural 6 to hit" or "natural 1 to
+// block" use floor(shots / 6) or floor(hits / 6) — i.e. you only get the bonus
+// once you have enough dice in flight to expect it on average. Matches how a
+// table player thinks ("5 dice probably won't roll a 1; 6 dice probably will").
 export function calculateWeaponOffense(
   weapon: Weapon,
   quality: number,
@@ -64,19 +89,82 @@ export function calculateWeaponOffense(
   targetToughness: number,
   assault: boolean = false,
 ): number {
-  const attacksMultiplier = (weapon as any).attacksMultiplier || 1;
-  const baseAttacks = weapon.count * weapon.attacks * attacksMultiplier;
-  if (baseAttacks === 0) return 0;
+  const attacksMultiplier = (weapon as { attacksMultiplier?: number }).attacksMultiplier ?? 1;
+  const shots = weapon.count * weapon.attacks * attacksMultiplier;
+  if (shots === 0) return 0;
 
-  const effectiveQuality = assault ? quality + 1 : quality;
-  const hitChance = getHitChance(effectiveQuality);
+  const isMelee = (weapon.range || 0) === 0;
+  const rules: Rule[] = weapon.specialRules || [];
+  const has = (n: string) => rules.some((r) => r.name === n);
+  const ratingOf = (n: string) => rules.find((r) => r.name === n)?.rating ?? 0;
 
-  const ap = getWeaponAP(weapon);
-  const blockChance = getBlockChance(targetDefense, ap);
-  const woundChance = hitChance * (1 - blockChance);
+  // ---- Hit-roll modifiers ----
+  let q = quality;
+  let apBonus = 0;
+  // Thrust (charging melee): +1 to hit, AP+1.
+  if (isMelee && has('Thrust')) {
+    q -= 1;
+    apBonus += 1;
+  }
+  // Hazardous: flat AP+4 (we ignore the self-wound side effect).
+  if (has('Hazardous')) apBonus += 4;
+  // Assault: -1 to hit (existing rule).
+  if (assault) q += 1;
 
-  const damageMultiplier = getDamageMultiplier(weapon, targetDefense, targetSize, targetToughness, hitChance);
-  return baseAttacks * woundChance * damageMultiplier;
+  // Reliable overrides hit roll to Quality 2+.
+  const hitChance = has('Reliable') ? getHitChance(2) : getHitChance(q);
+
+  // ---- AP + defender-side modifiers ----
+  const baseAp = getWeaponAP(weapon) + apBonus;
+  const defenderReroll = has('Bane') || has('Lacerate');
+  const block = blockChanceWithReroll(targetDefense, baseAp, defenderReroll);
+
+  // ---- Damage multipliers (Blast / Deadly capped at target size / tough) ----
+  let dmgMult = 1;
+  const blastR = ratingOf('Blast');
+  const deadlyR = ratingOf('Deadly');
+  if (blastR) dmgMult *= Math.min(blastR, targetSize);
+  if (deadlyR) dmgMult *= Math.min(deadlyR, targetToughness);
+
+  // ---- Base expected wounds ----
+  let damage = shots * hitChance * (1 - block) * dmgMult;
+
+  // ---- Floor-based 1-in-6 procs ----
+  // floor(shots / 6) = "every full set of 6 dice expects one natural 6 hit".
+  const sixHits = Math.floor(shots / 6);
+
+  // Furious (charging melee only): each natural-6-to-hit deals 1 extra hit.
+  if (sixHits > 0 && has('Furious') && isMelee) {
+    damage += sixHits * (1 - block) * dmgMult;
+  }
+  // Surge: same as Furious but no charge requirement.
+  if (sixHits > 0 && has('Surge')) {
+    damage += sixHits * (1 - block) * dmgMult;
+  }
+  // Rending / Destructive: natural 6 hits get AP+4.
+  // Compute the delta in wound-prob from the higher AP for those hits only.
+  if (sixHits > 0 && (has('Rending') || has('Destructive'))) {
+    const ap4Block = blockChanceWithReroll(targetDefense, baseAp + 4, defenderReroll);
+    const delta = sixHits * ((1 - ap4Block) - (1 - block)) * dmgMult;
+    if (delta > 0) damage += delta;
+  }
+
+  // Shred: natural 1 on defense roll = 1 extra wound. Trigger once per 6 hits.
+  if (has('Shred')) {
+    const expectedHits = Math.floor(shots * hitChance);
+    const extraWounds = Math.floor(expectedHits / 6);
+    if (extraWounds > 0) damage += extraWounds * dmgMult;
+  }
+
+  // Impact (charging melee): roll X dice, hits on 2+. Extra independent attack
+  // bundle, base AP only (no Thrust/Hazardous bonus on impact dice).
+  if (has('Impact') && isMelee) {
+    const x = ratingOf('Impact') || 1;
+    const impactBlock = blockChanceWithReroll(targetDefense, getWeaponAP(weapon), defenderReroll);
+    damage += x * (5 / 6) * (1 - impactBlock);
+  }
+
+  return damage;
 }
 
 // When assault is active, melee + ranged fire in the same activation (both

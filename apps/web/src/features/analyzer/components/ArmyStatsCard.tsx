@@ -1,4 +1,4 @@
-import { THREAT_PROFILES, type ArmyAnalysis } from '../utils/aggregate';
+import { OPPONENT_PROFILES, type ArmyAnalysis, type ArmyVsProfile } from '../utils/aggregate';
 import { TierBadge } from './TierBadge';
 
 interface Props {
@@ -6,8 +6,8 @@ interface Props {
 }
 
 export function ArmyStatsCard({ analysis }: Props) {
-  const { allComers, perProfile } = analysis;
-  const apTotal = allComers.apCoverage.total || 1;
+  const { outputMix, perProfile } = analysis;
+  const apTotal = outputMix.apCoverage.total || 1;
   const pct = (n: number) => `${Math.round((n / apTotal) * 100)}%`;
 
   return (
@@ -39,28 +39,18 @@ export function ArmyStatsCard({ analysis }: Props) {
       </div>
 
       <div className="glass-card p-6">
-        <h3 className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-4">
-          Output vs Threat Profile
+        <h3 className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-2">
+          Output vs Opponent Army
         </h3>
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
-          {perProfile.map((p) => {
-            const profile = THREAT_PROFILES.find((tp) => tp.id === p.profileId);
-            return (
-              <div key={p.profileId} className="rounded-lg border border-slate-700/50 bg-slate-900/40 p-3">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-300">
-                    {profile?.name}
-                  </span>
-                  <TierBadge tier={p.tier} size="sm" />
-                </div>
-                <div className="text-xl font-extrabold text-white">{p.totalDamage.toFixed(1)}</div>
-                <div className="text-[10px] text-slate-500">
-                  {p.damagePerPoint.toFixed(3)} dmg/pt
-                </div>
-                <p className="text-[10px] text-slate-500 mt-2 leading-tight">{profile?.description}</p>
-              </div>
-            );
-          })}
+        <p className="text-[11px] text-slate-500 mb-4 leading-relaxed">
+          Each profile is a hypothetical 2000-pt skew opponent. Kill % = expected wounds dealt in
+          one activation pass / opponent's total wound pool. Coverage = worst matchup;
+          Output = average matchup.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
+          {perProfile.map((p) => (
+            <ProfileMatchupCard key={p.profileId} matchup={p} />
+          ))}
         </div>
       </div>
 
@@ -70,28 +60,28 @@ export function ArmyStatsCard({ analysis }: Props) {
         </h3>
         <p className="text-[11px] text-slate-500 mb-3">
           Melee + Ranged totals = full army attack output. Blast / Deadly are subsets within each
-          mode (min vs hardest target · max vs softest).
+          mode (raw → max with multipliers stacked).
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <OutputColumn
             label="Melee"
             tone="rose"
-            totalMin={allComers.totalMeleeShots}
-            totalMax={allComers.totalMeleeShotsMax}
-            blastMin={allComers.totalMeleeBlastMin}
-            blastMax={allComers.totalMeleeBlastMax}
-            deadlyMin={allComers.totalMeleeDeadlyMin}
-            deadlyMax={allComers.totalMeleeDeadlyMax}
+            totalMin={outputMix.totalMeleeShots}
+            totalMax={outputMix.totalMeleeShotsMax}
+            blastMin={outputMix.totalMeleeBlastMin}
+            blastMax={outputMix.totalMeleeBlastMax}
+            deadlyMin={outputMix.totalMeleeDeadlyMin}
+            deadlyMax={outputMix.totalMeleeDeadlyMax}
           />
           <OutputColumn
             label="Ranged"
             tone="sky"
-            totalMin={allComers.totalRangedShots}
-            totalMax={allComers.totalRangedShotsMax}
-            blastMin={allComers.totalRangedBlastMin}
-            blastMax={allComers.totalRangedBlastMax}
-            deadlyMin={allComers.totalRangedDeadlyMin}
-            deadlyMax={allComers.totalRangedDeadlyMax}
+            totalMin={outputMix.totalRangedShots}
+            totalMax={outputMix.totalRangedShotsMax}
+            blastMin={outputMix.totalRangedBlastMin}
+            blastMax={outputMix.totalRangedBlastMax}
+            deadlyMin={outputMix.totalRangedDeadlyMin}
+            deadlyMax={outputMix.totalRangedDeadlyMax}
           />
         </div>
       </div>
@@ -103,18 +93,15 @@ export function ArmyStatsCard({ analysis }: Props) {
           </h3>
           <div className="space-y-2">
             {[
-              { k: 'AP 0', v: allComers.apCoverage.ap0, color: 'bg-slate-500' },
-              { k: 'AP 1', v: allComers.apCoverage.ap1, color: 'bg-amber-500' },
-              { k: 'AP 2', v: allComers.apCoverage.ap2, color: 'bg-orange-500' },
-              { k: 'AP 3+', v: allComers.apCoverage.ap3plus, color: 'bg-rose-500' },
+              { k: 'AP 0', v: outputMix.apCoverage.ap0, color: 'bg-slate-500' },
+              { k: 'AP 1', v: outputMix.apCoverage.ap1, color: 'bg-amber-500' },
+              { k: 'AP 2', v: outputMix.apCoverage.ap2, color: 'bg-orange-500' },
+              { k: 'AP 3+', v: outputMix.apCoverage.ap3plus, color: 'bg-rose-500' },
             ].map((row) => (
               <div key={row.k} className="flex items-center gap-3 text-xs">
                 <span className="w-12 font-mono font-bold text-slate-300">{row.k}</span>
                 <div className="flex-1 h-2 rounded-full bg-slate-800 overflow-hidden">
-                  <div
-                    className={`h-full ${row.color}`}
-                    style={{ width: `${(row.v / apTotal) * 100}%` }}
-                  />
+                  <div className={`h-full ${row.color}`} style={{ width: `${(row.v / apTotal) * 100}%` }} />
                 </div>
                 <span className="w-16 text-right text-slate-400">
                   {row.v.toFixed(0)} ({pct(row.v)})
@@ -123,37 +110,98 @@ export function ArmyStatsCard({ analysis }: Props) {
             ))}
           </div>
           <div className="grid grid-cols-3 gap-2 mt-4 pt-4 border-t border-slate-700/50">
-            <Stat label="Blast" value={allComers.blastSourceCount} ok={allComers.blastSourceCount > 0} />
-            <Stat label="Deadly" value={allComers.deadlySourceCount} ok={allComers.deadlySourceCount > 0} />
-            <Stat label="Rending" value={allComers.rendingSourceCount} ok={allComers.rendingSourceCount > 0} />
+            <Stat label="Blast" value={outputMix.blastSourceCount} ok={outputMix.blastSourceCount > 0} />
+            <Stat label="Deadly" value={outputMix.deadlySourceCount} ok={outputMix.deadlySourceCount > 0} />
+            <Stat label="Rending" value={outputMix.rendingSourceCount} ok={outputMix.rendingSourceCount > 0} />
           </div>
         </div>
 
         <div className="glass-card p-6">
           <h3 className="text-xs font-bold uppercase tracking-widest text-sky-400 mb-4">
-            Gaps & Notes
+            Gaps & Overkill
           </h3>
-          {allComers.gaps.length === 0 ? (
+          {analysis.gaps.length === 0 && analysis.overkillWarnings.length === 0 ? (
             <p className="text-sm text-emerald-300 flex items-center gap-2">
               <span className="text-lg">✓</span> No major gaps detected — this list is well-rounded.
             </p>
           ) : (
-            <ul className="space-y-2">
-              {allComers.gaps.map((g, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-2 text-sm text-amber-200 bg-amber-500/5 border border-amber-500/20 rounded-lg p-2"
-                >
-                  <span className="text-amber-400 mt-0.5">⚠</span>
-                  <span className="leading-snug">{g}</span>
-                </li>
-              ))}
-            </ul>
+            <div className="space-y-3">
+              {analysis.gaps.length > 0 && (
+                <ul className="space-y-1.5">
+                  {analysis.gaps.map((g, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-2 text-sm text-amber-200 bg-amber-500/5 border border-amber-500/20 rounded-lg p-2"
+                    >
+                      <span className="text-amber-400 mt-0.5">⚠</span>
+                      <span className="leading-snug">{g}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {analysis.overkillWarnings.length > 0 && (
+                <div>
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-rose-400 mb-2">
+                    Overkill / wasted capacity
+                  </p>
+                  <ul className="space-y-1">
+                    {analysis.overkillWarnings.map((w, i) => (
+                      <li
+                        key={i}
+                        className="flex items-start gap-2 text-[11px] text-rose-200/90 bg-rose-500/5 border border-rose-500/20 rounded p-1.5"
+                      >
+                        <span className="text-rose-400 mt-0.5">↯</span>
+                        <span className="leading-snug font-mono">{w}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           )}
         </div>
       </div>
     </div>
   );
+}
+
+function ProfileMatchupCard({ matchup }: { matchup: ArmyVsProfile }) {
+  const profile = OPPONENT_PROFILES.find((p) => p.id === matchup.profileId)!;
+  const killPct = Math.round(matchup.killPercent * 100);
+  return (
+    <div className="rounded-lg border border-slate-700/50 bg-slate-900/40 p-4">
+      <div className="flex items-start justify-between gap-2 mb-3">
+        <div className="min-w-0">
+          <h4 className="text-sm font-extrabold text-white truncate">{profile.name}</h4>
+          <p className="text-[10px] text-slate-500 font-mono">
+            {profile.unitCount}×{profile.modelsPerUnit} D{profile.defense}+{profile.tough > 1 ? ` T(${profile.tough})` : ''} · {profile.totalWounds}w
+          </p>
+        </div>
+        <TierBadge tier={matchup.tier} size="sm" />
+      </div>
+      <div className="flex items-baseline justify-between mb-2">
+        <span className="text-2xl font-extrabold text-white">{killPct}%</span>
+        <span className="text-[10px] text-slate-400 font-mono">
+          {matchup.totalExpectedWounds.toFixed(1)} / {profile.totalWounds}w
+        </span>
+      </div>
+      <div className="h-2 rounded-full bg-slate-800 overflow-hidden mb-3">
+        <div
+          className={`h-full ${killBarColor(matchup.killPercent)}`}
+          style={{ width: `${Math.min(100, killPct)}%` }}
+        />
+      </div>
+      <p className="text-[10px] text-slate-500 leading-tight">{profile.description}</p>
+    </div>
+  );
+}
+
+function killBarColor(p: number): string {
+  if (p >= 0.9) return 'bg-sky-500';
+  if (p >= 0.7) return 'bg-emerald-500';
+  if (p >= 0.5) return 'bg-amber-500';
+  if (p >= 0.3) return 'bg-orange-500';
+  return 'bg-rose-500';
 }
 
 function Stat({ label, value, ok }: { label: string; value: number; ok: boolean }) {
@@ -208,9 +256,7 @@ function OutputColumn({
             {isRange ? `${totalMin}–${totalMax}` : totalMin}
           </div>
           {isRange && (
-            <div className="text-[10px] text-slate-500 uppercase tracking-widest mt-1">
-              raw → max
-            </div>
+            <div className="text-[10px] text-slate-500 uppercase tracking-widest mt-1">raw → max</div>
           )}
         </div>
       </div>

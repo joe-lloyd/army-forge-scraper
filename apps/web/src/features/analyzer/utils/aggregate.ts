@@ -1,64 +1,100 @@
 import type { Weapon, Rule } from '@opr-api/shared';
-import {
-  calculateUnitOffense,
-  calculateEffectiveHP,
-  getWeaponAP,
-} from '@/features/explorer/utils/balval';
-import type { BalValConfig, Tier } from '@/features/explorer/utils/types';
+import { calculateUnitOffense, calculateEffectiveHP, getWeaponAP } from '@/features/explorer/utils/balval';
+import type { Tier } from '@/features/explorer/utils/types';
 import type { ParsedUnit } from './parseList';
-
-export interface ThreatProfile {
-  id: string;
-  name: string;
-  description: string;
-  config: BalValConfig;
-}
-
-/**
- * "All-comers" threat suite. A balanced list should put out meaningful damage
- * across all profiles, not just one.
- */
-export const THREAT_PROFILES: ThreatProfile[] = [
-  {
-    id: 'horde',
-    name: 'Horde',
-    description: 'D5+, size 10 — chaff & mass infantry. Blast shines here.',
-    config: { targetDefense: 5, targetSize: 10, targetToughness: 1, offenseWeight: 0.6, assault: false, mostEffective: false },
-  },
-  {
-    id: 'lightInfantry',
-    name: 'Light Inf.',
-    description: 'D4+, size 5 — generic line troops.',
-    config: { targetDefense: 4, targetSize: 5, targetToughness: 1, offenseWeight: 0.6, assault: false, mostEffective: false },
-  },
-  {
-    id: 'mediumInfantry',
-    name: 'Medium Inf.',
-    description: 'D3+, size 5 — power-armoured infantry. AP2+ matters.',
-    config: { targetDefense: 3, targetSize: 5, targetToughness: 1, offenseWeight: 0.6, assault: false, mostEffective: false },
-  },
-  {
-    id: 'elite',
-    name: 'Elite',
-    description: 'D2+, size 1 — terminator-tier. Need AP3+ or rending.',
-    config: { targetDefense: 2, targetSize: 1, targetToughness: 1, offenseWeight: 0.6, assault: false, mostEffective: false },
-  },
-  {
-    id: 'tough',
-    name: 'Tough/Big',
-    description: 'D3+, T(6) — vehicles & monsters. Deadly is king.',
-    config: { targetDefense: 3, targetSize: 1, targetToughness: 6, offenseWeight: 0.6, assault: false, mostEffective: false },
-  },
-];
 
 export type Tier5 = Tier;
 
-export interface UnitProfileScore {
+// ---- Opponent army profiles ----
+//
+// Each profile is a hypothetical 2000-pt skew opponent. We measure:
+//   "Can our list put out enough damage to crush this army?"
+//
+// modelsPerUnit drives Blast (Blast(R) caps at min(R, modelsPerUnit) per attack).
+// tough drives Deadly (Deadly(R) caps at min(R, tough)).
+// totalWounds = unitCount * modelsPerUnit * tough — the entire army's HP pool.
+
+export interface OpponentProfile {
+  id: string;
+  name: string;
+  short: string;
+  description: string;
+  defense: number;
+  modelsPerUnit: number;
+  unitCount: number;
+  tough: number;
+  /** Derived: full army wounds at 2000pts. */
+  totalWounds: number;
+}
+
+function mkProfile(p: Omit<OpponentProfile, 'totalWounds'>): OpponentProfile {
+  return { ...p, totalWounds: p.unitCount * p.modelsPerUnit * p.tough };
+}
+
+export const OPPONENT_PROFILES: OpponentProfile[] = [
+  mkProfile({
+    id: 'horde',
+    name: 'Horde Army',
+    short: 'Horde',
+    description: '~144 D6+ Tough(1) chaff. Volume + Blast wins; AP is wasted.',
+    defense: 6,
+    modelsPerUnit: 12,
+    unitCount: 12,
+    tough: 1,
+  }),
+  mkProfile({
+    id: 'infantry',
+    name: 'Infantry Army',
+    short: 'Infantry',
+    description: '~72 D4+ Tough(1) line troops. Standard battle target.',
+    defense: 4,
+    modelsPerUnit: 6,
+    unitCount: 12,
+    tough: 1,
+  }),
+  mkProfile({
+    id: 'elite',
+    name: 'Elite Army',
+    short: 'Elite',
+    description: '~40 D3+ Tough(3) power-armoured. Need AP2+ and durability.',
+    defense: 3,
+    modelsPerUnit: 4,
+    unitCount: 10,
+    tough: 3,
+  }),
+  mkProfile({
+    id: 'monsters',
+    name: 'Tanks & Monsters',
+    short: 'Monsters',
+    description: '7 D2+ Tough(12) walkers/tanks. Need Deadly + AP4. Blast wasted.',
+    defense: 2,
+    modelsPerUnit: 1,
+    unitCount: 7,
+    tough: 12,
+  }),
+];
+
+// Backwards-compat alias used by older UI code paths (kept as deprecated).
+export const THREAT_PROFILES = OPPONENT_PROFILES;
+export type ThreatProfile = OpponentProfile;
+
+// ---- Public types ----
+
+export interface UnitVsProfile {
   profileId: string;
-  totalOffense: number;
-  meleeOffense: number;
-  rangedOffense: number;
-  efficiency: number; // damage per point
+  /** Expected wounds dealt to a single squad of this profile per activation. */
+  expectedWoundsPerSquad: number;
+  /** Expected wounds dealt to the army (capped by total wounds). */
+  expectedWoundsTotal: number;
+  /** Fraction of opponent army wiped (0..1, capped). */
+  killShare: number;
+  /** Unit cost / army cost. */
+  pointsShare: number;
+  /** killShare / pointsShare — values >1 mean better-than-fair-share output. */
+  efficiency: number;
+  tier: Tier5;
+  /** Detected overkill warnings (AP, Blast, Deadly) for this profile. */
+  overkillNotes: string[];
 }
 
 export interface UnitAnalysis {
@@ -70,14 +106,15 @@ export interface UnitAnalysis {
   attachedToName?: string;
   attachedHeroNames?: string[];
   effectiveHP: number;
-  perProfile: UnitProfileScore[];
+  perProfile: UnitVsProfile[];
+  /** Mean efficiency across profiles (1.0 = perfectly average all-rounder). */
   avgEfficiency: number;
+  /** Min efficiency across profiles (the unit's worst matchup). */
+  worstEfficiency: number;
   durabilityEfficiency: number; // EHP / cost
   outputTier: Tier5;
   durabilityTier: Tier5;
-  /** lowest-scoring profile for this unit (its weakness) */
   worstProfileId: string;
-  /** highest-scoring profile (its specialty) */
   bestProfileId: string;
   weaponSummary: WeaponSummary;
 }
@@ -86,37 +123,36 @@ export interface WeaponSummary {
   totalShots: number;
   meleeShots: number;
   rangedShots: number;
-  /** Max melee output once Blast and Deadly ratings are applied (stacked). */
   meleeShotsMax: number;
-  /** Max ranged output once Blast and Deadly ratings are applied (stacked). */
   rangedShotsMax: number;
   apBuckets: { ap0: number; ap1: number; ap2: number; ap3plus: number };
   hasBlast: boolean;
   hasDeadly: boolean;
   hasRending: boolean;
-  /** Blast — min vs size 1, max vs size ≥ rating. Split by melee/ranged. */
   meleeBlastShotsMin: number;
   meleeBlastShotsMax: number;
   rangedBlastShotsMin: number;
   rangedBlastShotsMax: number;
-  /** Deadly — min vs Tough(1), max vs Tough(rating). Split by melee/ranged. */
   meleeDeadlyShotsMin: number;
   meleeDeadlyShotsMax: number;
   rangedDeadlyShotsMin: number;
   rangedDeadlyShotsMax: number;
-  /** Distinct weapon entries with Blast / Deadly. */
   blastSources: number;
   deadlySources: number;
 }
 
-export interface ProfileSummary {
+export interface ArmyVsProfile {
   profileId: string;
-  totalDamage: number;
-  damagePerPoint: number;
+  /** Sum of expectedWoundsTotal across all units (raw, uncapped). */
+  totalExpectedWounds: number;
+  /** Capped at opponent.totalWounds. */
+  effectiveKillWounds: number;
+  /** effectiveKillWounds / opponent.totalWounds (0..1). */
+  killPercent: number;
   tier: Tier5;
 }
 
-export interface AllComersBreakdown {
+export interface OutputMixSummary {
   apCoverage: { ap0: number; ap1: number; ap2: number; ap3plus: number; total: number };
   totalMeleeShots: number;
   totalRangedShots: number;
@@ -133,36 +169,38 @@ export interface AllComersBreakdown {
   blastSourceCount: number;
   deadlySourceCount: number;
   rendingSourceCount: number;
-  gaps: string[]; // human-readable warnings
-  coverageScore: number; // 0..1
 }
 
 export interface ArmyAnalysis {
   listName: string;
   totalPoints: number;
-  /** Canonical points from list metadata (Army Forge listPoints). */
   canonicalPoints?: number;
   pointsLimit?: number;
   unitCount: number;
   squadCount: number;
   heroCount: number;
   totalEffectiveHP: number;
-  perProfile: ProfileSummary[];
-  allComers: AllComersBreakdown;
+  /** Per-opponent-army results. */
+  perProfile: ArmyVsProfile[];
+  outputMix: OutputMixSummary;
+  /** Aggregated overkill warnings (de-duped, top units flagged). */
+  overkillWarnings: string[];
+  /** Per-profile gaps + general all-comers gaps. */
+  gaps: string[];
+  /** Avg killPercent across profiles. */
+  avgKillPercent: number;
+  /** Worst killPercent — limits all-comers viability. */
+  worstKillPercent: number;
   outputTier: Tier5;
   durabilityTier: Tier5;
   coverageTier: Tier5;
   overallTier: Tier5;
-  outputScore: number;
   durabilityScore: number;
-  coverageScoreNormalized: number;
   units: UnitAnalysis[];
 }
 
 // ---- Tier mapping ----
-// Calibrated against typical OPR lists. Tune as data accumulates.
 function tierForScore(score: number, thresholds: [number, number, number, number]): Tier5 {
-  // thresholds = [D->C, C->B, B->A, A->S]
   if (score >= thresholds[3]) return 'S';
   if (score >= thresholds[2]) return 'A';
   if (score >= thresholds[1]) return 'B';
@@ -170,15 +208,16 @@ function tierForScore(score: number, thresholds: [number, number, number, number
   return 'D';
 }
 
-// Calibrated against typical OPR damage-per-point output averaged across the 5
-// threat profiles. A bog-standard infantry squad lands around 0.020–0.025; a
-// well-built dedicated damage dealer tops 0.05; truly broken units exceed 0.07.
-const OUTPUT_TIERS: [number, number, number, number] = [0.020, 0.030, 0.045, 0.065];
-// EHP-per-point — D5+ size 10 chaff ~0.23, D2+ Tough(3) elite ~0.10–0.15.
+// Unit efficiency = killShare / pointsShare. 1.0 = pulls own weight; <0.5 = dead weight.
+const UNIT_EFFICIENCY_TIERS: [number, number, number, number] = [0.5, 0.85, 1.2, 1.7];
+// Army-vs-profile kill % thresholds. Calibrated so a focused anti-horde list (e.g.
+// Sisters w/ 18 Blessed Flamers, Q3+ Reliable Blast(3)) hits A vs Horde and
+// S vs Infantry, while still landing D vs Monsters when no Deadly is brought.
+const ARMY_KILL_TIERS: [number, number, number, number] = [0.25, 0.4, 0.6, 0.8];
+// Durability EHP/pt — unchanged from before.
 const DURA_TIERS: [number, number, number, number] = [0.08, 0.12, 0.18, 0.26];
-const COVERAGE_TIERS: [number, number, number, number] = [0.4, 0.55, 0.7, 0.85];
 
-// ---- Weapon summary ----
+// ---- Weapon summary (unchanged) ----
 function summarizeWeapons(weapons: Weapon[]): WeaponSummary {
   const apBuckets = { ap0: 0, ap1: 0, ap2: 0, ap3plus: 0 };
   let totalShots = 0;
@@ -271,23 +310,93 @@ function summarizeWeapons(weapons: Weapon[]): WeaponSummary {
   };
 }
 
-// ---- Unit analysis ----
-function analyzeUnit(unit: ParsedUnit): UnitAnalysis {
-  const perProfile: UnitProfileScore[] = THREAT_PROFILES.map((p) => {
-    const o = calculateUnitOffense(unit, p.config);
-    const efficiency = unit.cost > 0 ? o.totalOffense / unit.cost : 0;
+// ---- Overkill detection ----
+//
+// AP overkill: a save floors at 1/6 once effective defense ≥ 7 (natural-6 always
+// saves). Min-useful-AP = max(0, 6 - defense). Anything above is wasted shots-
+// equivalent. We surface waste only when it's substantial (≥2 wasted AP) AND the
+// weapon contributes ≥4 weighted shots-AP — keeps noise out for small sidearms.
+//
+// Blast(R) overkill: caps at min(R, modelsPerUnit). Excess R is wasted.
+// Deadly(R) overkill: caps at min(R, tough). Excess R is wasted.
+
+function overkillNotesForUnit(unit: ParsedUnit, profile: OpponentProfile): string[] {
+  const notes: string[] = [];
+  const apFloor = Math.max(0, 6 - profile.defense);
+
+  for (const w of unit.weapons) {
+    const shots = (w.count || 0) * (w.attacks || 0);
+    if (shots <= 0) continue;
+    const ap = getWeaponAP(w);
+    const apWasted = Math.max(0, ap - apFloor);
+    if (apWasted >= 2 && apWasted * shots >= 4) {
+      notes.push(`${w.name}: AP${ap} overkill vs D${profile.defense}+ (only AP${apFloor} useful)`);
+    }
+
+    const rules: Rule[] = w.specialRules || [];
+    const blast = rules.find((r) => r.name === 'Blast');
+    if (blast) {
+      const r = Math.max(1, blast.rating ?? 1);
+      const wasted = Math.max(0, r - profile.modelsPerUnit);
+      if (wasted >= 2 && shots >= 1) {
+        notes.push(
+          `${w.name}: Blast(${r}) wasted vs ${profile.modelsPerUnit}-model targets (caps at ${profile.modelsPerUnit})`,
+        );
+      }
+    }
+    const deadly = rules.find((r) => r.name === 'Deadly');
+    if (deadly) {
+      const r = Math.max(1, deadly.rating ?? 1);
+      const wasted = Math.max(0, r - profile.tough);
+      if (wasted >= 2 && shots >= 1) {
+        notes.push(
+          `${w.name}: Deadly(${r}) wasted vs Tough(${profile.tough}) (caps at ${profile.tough})`,
+        );
+      }
+    }
+  }
+  return notes;
+}
+
+// ---- Per-unit analysis ----
+
+function analyzeUnit(unit: ParsedUnit, totalArmyPoints: number): UnitAnalysis {
+  const perProfile: UnitVsProfile[] = OPPONENT_PROFILES.map((p) => {
+    const offense = calculateUnitOffense(unit, {
+      targetDefense: p.defense,
+      targetSize: p.modelsPerUnit,
+      targetToughness: p.tough,
+      offenseWeight: 0.6,
+      assault: false,
+      mostEffective: false,
+    });
+    // expected wounds the unit deals in a single activation against ONE squad of
+    // this profile. That's also the army-wide damage potential per turn (each
+    // unit fires once), but we compare it against the army's total wound pool.
+    const expectedWoundsPerSquad = offense.totalOffense;
+    const expectedWoundsTotal = expectedWoundsPerSquad; // single-activation snapshot
+    const killShare = p.totalWounds > 0 ? Math.min(1, expectedWoundsTotal / p.totalWounds) : 0;
+    const pointsShare = totalArmyPoints > 0 ? unit.cost / totalArmyPoints : 0;
+    const efficiency = pointsShare > 0 ? killShare / pointsShare : 0;
     return {
       profileId: p.id,
-      totalOffense: o.totalOffense,
-      meleeOffense: o.meleeOffense,
-      rangedOffense: o.rangedOffense,
+      expectedWoundsPerSquad,
+      expectedWoundsTotal,
+      killShare,
+      pointsShare,
       efficiency,
+      tier: tierForScore(efficiency, UNIT_EFFICIENCY_TIERS),
+      overkillNotes: overkillNotesForUnit(unit, p),
     };
   });
 
   const ehp = calculateEffectiveHP(unit);
   const durabilityEfficiency = unit.cost > 0 ? ehp / unit.cost : 0;
   const avgEfficiency = perProfile.reduce((s, p) => s + p.efficiency, 0) / perProfile.length;
+  const worstEfficiency = perProfile.reduce(
+    (m, p) => Math.min(m, p.efficiency),
+    Number.POSITIVE_INFINITY,
+  );
 
   let worst = perProfile[0];
   let best = perProfile[0];
@@ -307,8 +416,9 @@ function analyzeUnit(unit: ParsedUnit): UnitAnalysis {
     effectiveHP: ehp,
     perProfile,
     avgEfficiency,
+    worstEfficiency: Number.isFinite(worstEfficiency) ? worstEfficiency : 0,
     durabilityEfficiency,
-    outputTier: tierForScore(avgEfficiency, OUTPUT_TIERS),
+    outputTier: tierForScore(avgEfficiency, UNIT_EFFICIENCY_TIERS),
     durabilityTier: tierForScore(durabilityEfficiency, DURA_TIERS),
     worstProfileId: worst.profileId,
     bestProfileId: best.profileId,
@@ -316,8 +426,8 @@ function analyzeUnit(unit: ParsedUnit): UnitAnalysis {
   };
 }
 
-// ---- Coverage / gaps ----
-function buildCoverage(units: UnitAnalysis[], totalPoints: number): AllComersBreakdown {
+// ---- Output mix (unchanged shape) ----
+function buildOutputMix(units: UnitAnalysis[]): OutputMixSummary {
   const apCoverage = { ap0: 0, ap1: 0, ap2: 0, ap3plus: 0, total: 0 };
   let totalMeleeShots = 0;
   let totalRangedShots = 0;
@@ -359,43 +469,6 @@ function buildCoverage(units: UnitAnalysis[], totalPoints: number): AllComersBre
     if (w.hasRending) rendingSourceCount += 1;
   }
 
-  const gaps: string[] = [];
-  const apShare = (n: number) =>
-    apCoverage.total > 0 ? n / apCoverage.total : 0;
-  const ap2Share = apShare(apCoverage.ap2 + apCoverage.ap3plus);
-  const ap3Share = apShare(apCoverage.ap3plus);
-
-  if (ap2Share < 0.15) gaps.push('Low AP2+ — will struggle vs power-armoured infantry.');
-  if (ap3Share < 0.05) gaps.push('Almost no AP3+ — elite/terminator targets will tank hits.');
-  if (blastSourceCount === 0) gaps.push('No Blast — hordes will be slow to chew through.');
-  if (deadlySourceCount === 0) gaps.push('No Deadly — Tough(3+) targets cost-inefficient to kill.');
-
-  // Coverage score — reward AP diversity + presence of blast/deadly/rending.
-  // 4 axes, each 0..1, then averaged with weights.
-  const apDiversity = (() => {
-    if (apCoverage.total === 0) return 0;
-    const shares = [apCoverage.ap0, apCoverage.ap1, apCoverage.ap2, apCoverage.ap3plus].map(
-      (n) => n / apCoverage.total,
-    );
-    // High-AP ramp: reward presence of AP2+ and AP3+, but don't punish base shots.
-    const ap2Plus = shares[2] + shares[3];
-    return Math.min(1, 0.4 + ap2Plus * 1.4); // 0.4 floor when lacking AP, full score around 43% AP2+
-  })();
-  const blastPresence = blastSourceCount > 0 ? Math.min(1, blastSourceCount / 2) : 0;
-  const deadlyPresence = deadlySourceCount > 0 ? Math.min(1, deadlySourceCount / 2) : 0;
-  const rendingBonus = rendingSourceCount > 0 ? 0.1 : 0;
-
-  const coverageScore = Math.min(
-    1,
-    apDiversity * 0.45 + blastPresence * 0.25 + deadlyPresence * 0.25 + rendingBonus,
-  );
-
-  // Bonus for cheap output (Blast/Deadly): if blast OR deadly contribute non-trivial
-  // share of total output we don't penalize lower raw shot count.
-  if (totalPoints > 0 && blastSourceCount === 0 && deadlySourceCount === 0) {
-    gaps.push('Output relies entirely on raw shots — no cheap multiplier weapons.');
-  }
-
   return {
     apCoverage,
     totalMeleeShots,
@@ -413,8 +486,6 @@ function buildCoverage(units: UnitAnalysis[], totalPoints: number): AllComersBre
     blastSourceCount,
     deadlySourceCount,
     rendingSourceCount,
-    gaps,
-    coverageScore,
   };
 }
 
@@ -431,54 +502,76 @@ export function analyzeList(
   units: ParsedUnit[],
   options: AnalyzeListOptions = {},
 ): ArmyAnalysis {
-  const unitAnalyses = units.map(analyzeUnit);
   const summedPoints = units.reduce((s, u) => s + u.cost, 0);
-  // Prefer canonical points (Army Forge listPoints) for normalization — it's the
-  // ground-truth total. Fall back to summed parsed costs.
-  const totalPoints = options.canonicalPoints && options.canonicalPoints > 0
-    ? options.canonicalPoints
-    : summedPoints;
+  const totalPoints =
+    options.canonicalPoints && options.canonicalPoints > 0
+      ? options.canonicalPoints
+      : summedPoints;
+
+  const unitAnalyses = units.map((u) => analyzeUnit(u, totalPoints));
   const totalEffectiveHP = unitAnalyses.reduce((s, u) => s + u.effectiveHP, 0);
 
-  // Per-profile army totals
-  const perProfile: ProfileSummary[] = THREAT_PROFILES.map((p) => {
-    const totalDamage = unitAnalyses.reduce((s, u) => {
+  // Per-opponent army totals
+  const perProfile: ArmyVsProfile[] = OPPONENT_PROFILES.map((p) => {
+    const totalExpectedWounds = unitAnalyses.reduce((s, u) => {
       const x = u.perProfile.find((pp) => pp.profileId === p.id);
-      return s + (x?.totalOffense ?? 0);
+      return s + (x?.expectedWoundsTotal ?? 0);
     }, 0);
-    const damagePerPoint = totalPoints > 0 ? totalDamage / totalPoints : 0;
+    const effectiveKillWounds = Math.min(p.totalWounds, totalExpectedWounds);
+    const killPercent = p.totalWounds > 0 ? effectiveKillWounds / p.totalWounds : 0;
     return {
       profileId: p.id,
-      totalDamage,
-      damagePerPoint,
-      tier: tierForScore(damagePerPoint, OUTPUT_TIERS),
+      totalExpectedWounds,
+      effectiveKillWounds,
+      killPercent,
+      tier: tierForScore(killPercent, ARMY_KILL_TIERS),
     };
   });
 
-  const avgOutput = perProfile.reduce((s, p) => s + p.damagePerPoint, 0) / perProfile.length;
+  const outputMix = buildOutputMix(unitAnalyses);
+
+  // Gaps — generated from per-profile shortcomings.
+  const gaps: string[] = [];
+  for (const ap of perProfile) {
+    const profile = OPPONENT_PROFILES.find((x) => x.id === ap.profileId)!;
+    if (ap.killPercent < 0.3) {
+      gaps.push(`${profile.name}: only ${Math.round(ap.killPercent * 100)}% kill — heavily under-equipped.`);
+    } else if (ap.killPercent < 0.5) {
+      gaps.push(`${profile.name}: ${Math.round(ap.killPercent * 100)}% kill — likely lose this matchup.`);
+    }
+  }
+
+  // Top overkill warnings — surface top 5 most-impactful from per-unit notes.
+  const overkillCounts = new Map<string, number>();
+  for (const u of unitAnalyses) {
+    for (const p of u.perProfile) {
+      for (const note of p.overkillNotes) {
+        const key = `${u.unitName} → ${note}`;
+        overkillCounts.set(key, (overkillCounts.get(key) ?? 0) + 1);
+      }
+    }
+  }
+  const overkillWarnings = [...overkillCounts.keys()].slice(0, 8);
+
+  const avgKillPercent = perProfile.reduce((s, p) => s + p.killPercent, 0) / perProfile.length;
+  const worstKillPercent = perProfile.reduce((m, p) => Math.min(m, p.killPercent), 1);
+
   const durabilityScore = totalPoints > 0 ? totalEffectiveHP / totalPoints : 0;
 
-  const allComers = buildCoverage(unitAnalyses, totalPoints);
-
-  // Coverage tier — combines profile balance + ap/blast/deadly presence.
-  // Profile balance = 1 - normalized stddev of damagePerPoint across profiles.
-  const profileMean = avgOutput || 0.0001;
-  const variance =
-    perProfile.reduce((s, p) => s + (p.damagePerPoint - profileMean) ** 2, 0) / perProfile.length;
-  const stddev = Math.sqrt(variance);
-  const balance = Math.max(0, 1 - stddev / profileMean); // 1 = perfectly even; 0 = heavily skewed
-  const coverageScoreNormalized = allComers.coverageScore * 0.6 + balance * 0.4;
-
-  const outputTier = tierForScore(avgOutput, OUTPUT_TIERS);
+  // Tier composition:
+  // - outputTier: from average kill% across opponents (overall punching power).
+  // - coverageTier: from worst kill% (the all-comers bottleneck).
+  // - durabilityTier: EHP/pt as before.
+  // - overallTier: weighted combo. Coverage carries most weight per the user's
+  //   stated all-comers priority; output supports it; durability backstop.
+  const outputTier = tierForScore(avgKillPercent, ARMY_KILL_TIERS);
+  const coverageTier = tierForScore(worstKillPercent, ARMY_KILL_TIERS);
   const durabilityTier = tierForScore(durabilityScore, DURA_TIERS);
-  const coverageTier = tierForScore(coverageScoreNormalized, COVERAGE_TIERS);
 
-  // Overall — weighted: coverage heaviest (the user's stated priority for all-comers),
-  // then output (cheap output preferred), durability supporting.
   const overallScoreNorm =
-    Math.min(1, avgOutput / OUTPUT_TIERS[3]) * 0.35 +
+    Math.min(1, avgKillPercent / ARMY_KILL_TIERS[3]) * 0.35 +
     Math.min(1, durabilityScore / DURA_TIERS[3]) * 0.2 +
-    coverageScoreNormalized * 0.45;
+    Math.min(1, worstKillPercent / ARMY_KILL_TIERS[3]) * 0.45;
   const overallTier = tierForScore(overallScoreNorm, [0.35, 0.5, 0.65, 0.82]);
 
   return {
@@ -491,18 +584,20 @@ export function analyzeList(
     heroCount: options.heroCount ?? 0,
     totalEffectiveHP,
     perProfile,
-    allComers,
+    outputMix,
+    overkillWarnings,
+    gaps,
+    avgKillPercent,
+    worstKillPercent,
     outputTier,
     durabilityTier,
     coverageTier,
     overallTier,
-    outputScore: avgOutput,
     durabilityScore,
-    coverageScoreNormalized,
     units: unitAnalyses,
   };
 }
 
-export function profileById(id: string): ThreatProfile | undefined {
-  return THREAT_PROFILES.find((p) => p.id === id);
+export function profileById(id: string): OpponentProfile | undefined {
+  return OPPONENT_PROFILES.find((p) => p.id === id);
 }
