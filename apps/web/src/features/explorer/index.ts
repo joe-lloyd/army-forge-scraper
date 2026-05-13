@@ -10,6 +10,7 @@ export type { CommonRulesData } from './hooks/useCommonRules';
 export {
   buildBaseLoadout,
   applyOption,
+  searchLoadouts,
   findBestLoadout,
   enumerateOptionLoadouts,
   getAllLoadouts,

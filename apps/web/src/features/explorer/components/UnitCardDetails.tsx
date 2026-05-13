@@ -33,13 +33,20 @@ export function UnitCardDetails({
   const { dict } = useCommonRules(systemSlug);
 
   const visible = useMemo(() => {
-    const base = loadouts.find(l => l.isBase);
-    const best = loadouts.find(l => l.isBestCombo && !l.isBase);
+    const base = loadouts.find((l) => l.isBase);
+    const best = loadouts.find((l) => l.isBestCombo && !l.isBase);
+    // Pin niche winners (most output / melee / ranged) so the markers are
+    // always visible even if those loadouts wouldn't otherwise crack the
+    // top-6 by efficiency delta.
+    const niche = loadouts.filter(
+      (l) => !l.isBase && !l.isBestCombo && (l.isMostOutput || l.isMostMelee || l.isMostRanged),
+    );
+    const nicheIds = new Set(niche.map((l) => l.id));
     const others = loadouts
-      .filter(l => !l.isBase && !l.isBestCombo)
+      .filter((l) => !l.isBase && !l.isBestCombo && !nicheIds.has(l.id))
       .sort((a, b) => b.efficiencyDelta - a.efficiencyDelta)
-      .slice(0, 6);
-    return [base, best, ...others].filter(Boolean) as LoadoutOption[];
+      .slice(0, Math.max(0, 6 - niche.length));
+    return [base, best, ...niche, ...others].filter(Boolean) as LoadoutOption[];
   }, [loadouts]);
 
   return (
@@ -135,7 +142,10 @@ function LoadoutRow({
     <div className={`rounded-xl border p-3 ${containerClass}`}>
       <div className="flex items-start justify-between mb-2 border-b border-white/5 pb-2">
         <div className="text-xs font-bold text-white flex items-center gap-1.5">
-          {isBest && <span className="text-amber-400">★</span>}
+          {isBest && <span className="text-amber-400" title="Best efficiency (dmg per point)">★</span>}
+          {loadout.isMostOutput && <span title="Most total attacks (AP wins ties)">💥</span>}
+          {loadout.isMostMelee && <span title="Most melee attacks (AP wins ties)">⚔️</span>}
+          {loadout.isMostRanged && <span title="Most ranged attacks (AP wins ties)">🎯</span>}
           {loadout.label}
         </div>
         <div className="text-xs font-black text-sky-400">{loadout.state.cost}pts</div>

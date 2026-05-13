@@ -14,6 +14,7 @@ export type { ArmyAnalysis, UnitAnalysis, OpponentProfile, Tier5 } from './utils
 export {
   applyOption,
   buildBaseLoadout,
+  searchLoadouts,
   findBestLoadout,
   enumerateOptionLoadouts,
   getAllLoadouts,

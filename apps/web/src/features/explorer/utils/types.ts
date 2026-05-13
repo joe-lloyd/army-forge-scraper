@@ -105,12 +105,28 @@ export interface LoadoutOption {
   offense: number;
   efficiency: number;
 
+  // Raw shot volume (count × attacks) summed across the loadout's weapons.
+  // Damage already factors in AP via blockChance; these counts ignore AP so
+  // they capture "swing volume" — useful when a player wants to flood targets
+  // rather than maximize per-hit lethality.
+  meleeAttacks: number;
+  rangedAttacks: number;
+  totalAttacks: number;
+
   baseEfficiency: number;
   efficiencyDelta: number;
   offenseDelta: number;
   costDelta: number;
 
   isBase: boolean;
+  // Highest efficiency (dmg per point) — the current ⭐ flag.
   isBestCombo: boolean;
+  // Highest total attack count, with expected damage as tiebreaker. AP wins
+  // via the damage tiebreaker (3 attacks AP(3) > 3 attacks AP(0)).
+  isMostOutput: boolean;
+  // Highest melee attack count, melee damage tiebreaker.
+  isMostMelee: boolean;
+  // Highest ranged attack count, ranged damage tiebreaker.
+  isMostRanged: boolean;
   applications: UpgradeApplication[];
 }

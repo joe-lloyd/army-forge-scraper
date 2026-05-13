@@ -331,6 +331,259 @@ describe('parseSectionTargets / Nx prefix', () => {
     expect(next.weapons.find(w => w.id === 'thc')!.count).toBe(1);
   });
 
+  it('applies affects:all to every model even when option gains share a name with a later section target (Novice Sisters regression)', () => {
+    // Real-world bug: section 0 "Replace all Dual CCWs" has a Pistol+CCW
+    // option that gains a generic "Pistol". Section 2 "Replace up to two
+    // Pistols" then targets "Pistols". The sgt heuristic used to substring-
+    // match "pistol" in section 2's label and misclassify section 0 as a
+    // sergeant section, forcing k=1 (only one model gets the upgrade)
+    // instead of k=10 (all 10 models — the affects:all contract).
+    const novice: any = {
+      id: 'novice', name: 'Novice Sisters', cost: 100, size: 10, quality: 4, defense: 5,
+      weapons: [{ id: 'd', name: 'Dual CCWs', label: 'Dual CCWs', count: 10, attacks: 2, range: 0, specialRules: [] }],
+      rules: [],
+      upgrades: ['p1'],
+    };
+    const army: any = {
+      upgradePackages: [{
+        uid: 'p1',
+        sections: [
+          {
+            id: 's0', label: 'Replace all Dual CCWs', variant: 'replace',
+            affects: { type: 'all' },
+            targets: ['Dual CCWs'],
+            options: [
+              {
+                id: 'gw', label: 'Great Weapon', cost: 2,
+                gains: [{ type: 'ArmyBookWeapon', id: 'gw', name: 'Great Weapon', label: 'Great Weapon', count: 1, attacks: 2, range: 0, specialRules: [{ id: 'ap1', name: 'AP', rating: 1, label: 'AP(1)' }] }],
+              },
+              {
+                id: 'pc', label: 'Pistol + CCW', cost: 3,
+                gains: [
+                  { type: 'ArmyBookWeapon', id: 'pist', name: 'Pistol', label: 'Pistol', count: 1, attacks: 1, range: 12, specialRules: [] },
+                  { type: 'ArmyBookWeapon', id: 'ccw', name: 'CCW', label: 'CCW', count: 1, attacks: 1, range: 0, specialRules: [] },
+                ],
+              },
+            ],
+          },
+          {
+            id: 's2', label: 'Replace up to two Pistols', variant: 'replace',
+            affects: { type: 'up to', value: 2 },
+            targets: ['Pistols'],
+            options: [{
+              id: 'fr', label: 'Fusion Rifle', cost: 5,
+              gains: [{ type: 'ArmyBookWeapon', id: 'fr', name: 'Fusion Rifle', label: 'Fusion Rifle', count: 1, attacks: 1, range: 12, specialRules: [{ id: 'ap4', name: 'AP', rating: 4, label: 'AP(4)' }] }],
+            }],
+          },
+        ],
+      }],
+    };
+
+    // The Great Weapon option should be enumerable AT k=10 (all 10 swap),
+    // even though section 0's Pistol+CCW option's gained "Pistol" appears
+    // in section 2's label.
+    const list = enumerateOptionLoadouts(novice, army, DEFAULT_BALVAL_CONFIG);
+    const gw = list.find(l => l.label === 'Great Weapon');
+    expect(gw).toBeDefined();
+    const gwWeapon = gw!.state.weapons.find(w => w.name === 'Great Weapon');
+    expect(gwWeapon).toBeDefined();
+    expect(gwWeapon!.count).toBe(10); // all 10 models, not 1
+    expect(gw!.state.weapons.find(w => w.id === 'd')).toBeUndefined(); // Dual CCWs all consumed
+    // Cost charge: `affects:all` is ONE selection at the listed price — 2pts
+    // total for the whole-unit swap, NOT 2 × 10 models. (Same fix that
+    // caused the real-world 300pts overcharge on Novice Sisters' 30pt Great
+    // Weapon upgrade.)
+    expect(gw!.state.cost).toBe(novice.cost + 2);
+    expect(gw!.applications[0].costApplied).toBe(2);
+  });
+
+  it('does not multiply cost by k for affects:exactly (single selection covering N models)', () => {
+    const unit: any = {
+      id: 'u', name: 'U', cost: 100, size: 5, quality: 4, defense: 4,
+      weapons: [{ id: 'r', name: 'Rifle', label: 'Rifle', count: 5, attacks: 1, range: 24, specialRules: [] }],
+      rules: [],
+      upgrades: ['p'],
+    };
+    const army: any = {
+      upgradePackages: [{
+        uid: 'p',
+        sections: [{
+          id: 's', label: 'Replace exactly two Rifles', variant: 'replace',
+          affects: { type: 'exactly', value: 2 },
+          targets: ['Rifles'],
+          options: [{
+            id: 'pr', label: 'Plasma Rifle', cost: 12,
+            gains: [{ type: 'ArmyBookWeapon', id: 'pr', name: 'Plasma Rifle', label: 'Plasma Rifle', count: 1, attacks: 2, range: 24, specialRules: [{ id: 'ap4', name: 'AP', rating: 4, label: 'AP(4)' }] }],
+          }],
+        }],
+      }],
+    };
+    const list = enumerateOptionLoadouts(unit, army, DEFAULT_BALVAL_CONFIG);
+    const pill = list.find(l => l.label === 'Plasma Rifle');
+    expect(pill).toBeDefined();
+    expect(pill!.state.weapons.find(w => w.id === 'r')!.count).toBe(3); // 5 - 2
+    expect(pill!.state.weapons.find(w => w.id === 'pr')!.count).toBe(2);
+    // 12 pts ONCE, not 12 × 2 = 24.
+    expect(pill!.state.cost).toBe(unit.cost + 12);
+  });
+
+  it('classifies a gain with no `range` field as melee, not ranged (Dual Sword-Flails regression)', () => {
+    // OPR ships melee gains with the `range` key omitted entirely. The engine
+    // used to do `weapon.range === 0` which is false for `undefined`, so the
+    // resulting weapon was scored as ranged — leading to "0 melee damage, 5
+    // ranged" for a melee-only loadout.
+    const unit: any = {
+      id: 'tw', name: 'True Witches', cost: 75, size: 3, quality: 3, defense: 5,
+      weapons: [
+        { id: 'bp', name: 'Barb Pistol', label: 'Barb Pistol', count: 3, attacks: 1, range: 12, specialRules: [] },
+        { id: 'ccw', name: 'CCW', label: 'CCW', count: 3, attacks: 2, range: 0, specialRules: [] },
+      ],
+      rules: [], upgrades: ['p'],
+    };
+    const army: any = {
+      upgradePackages: [{
+        uid: 'p',
+        sections: [{
+          id: 's', label: 'Replace any Barb Pistol and CCW', variant: 'replace',
+          affects: { type: 'any' },
+          targets: ['Barb Pistol', 'CCW'],
+          options: [{
+            id: 'flail', label: 'Dual Sword-Flails', cost: 5,
+            // Note: NO `range` key on the gain — mirrors real OPR data shape.
+            gains: [{
+              type: 'ArmyBookWeapon', id: 'flail', name: 'Dual Sword-Flails',
+              label: 'Dual Sword-Flails', count: 1, attacks: 1,
+              specialRules: [
+                { id: 'ap2', name: 'AP', rating: 2, label: 'AP(2)' },
+                { id: 'b3', name: 'Blast', rating: 3, label: 'Blast(3)' },
+              ],
+            }],
+          }],
+        }],
+      }],
+    };
+    const list = enumerateOptionLoadouts(unit, army, DEFAULT_BALVAL_CONFIG);
+    const flailLoadout = list.find((l) => l.label.includes('Dual Sword-Flails'));
+    expect(flailLoadout).toBeDefined();
+    // 3× Dual Sword-Flails should be classified as MELEE output.
+    expect(flailLoadout!.meleeOffense).toBeGreaterThan(0);
+    expect(flailLoadout!.meleeAttacks).toBeGreaterThan(0);
+    // No ranged from the Flails themselves (the 3 Barb Pistols were consumed).
+    expect(flailLoadout!.rangedOffense).toBe(0);
+    expect(flailLoadout!.rangedAttacks).toBe(0);
+    // And the stored weapon should now have a normalized numeric range of 0.
+    const flailWeapon = flailLoadout!.state.weapons.find((w) => w.name === 'Dual Sword-Flails');
+    expect(flailWeapon!.range).toBe(0);
+  });
+
+  it('does not leave a model on the default loadout when the reserved sgt chain is unprofitable (True Witches regression)', () => {
+    // Real-world bug: True Witches (3 models, 3× Barb Pistol + 3× CCW) had
+    // section 0 "Replace any Barb Pistol and CCW" with Dual Sword-Flails as
+    // an option (A1, AP(2), Blast(3) — a melee mass-killer). Section 1 is
+    // a sgt that needs one (Barb Pistol + CCW) pair; section 2 upgrades the
+    // sgt's pistol with EMP / Plas-Blaster. With unconditional reservation,
+    // section 0 was capped at k=2 (one pair held back for the sgt). The sgt
+    // chain then evaluated as unprofitable and was skipped — leaving the
+    // reserved pair untouched, ending with 2× Flails + 1× default pair.
+    //
+    // The two-path search must pick the unreserved path here (3× Flails)
+    // because the sgt chain isn't worth its slot.
+    const trueWitches: any = {
+      id: 'tw', name: 'True Witches', cost: 75, size: 3, quality: 3, defense: 5,
+      weapons: [
+        { id: 'bp', name: 'Barb Pistol', label: 'Barb Pistol', count: 3, attacks: 1, range: 12, specialRules: [{ id: 'lac', name: 'Lacerate', label: 'Lacerate' }] },
+        { id: 'ccw', name: 'CCW', label: 'CCW', count: 3, attacks: 2, range: 0, specialRules: [] },
+      ],
+      rules: [],
+      upgrades: ['p1'],
+    };
+    const army: any = {
+      upgradePackages: [{
+        uid: 'p1',
+        sections: [
+          {
+            id: 's0', label: 'Replace any Barb Pistol and CCW', variant: 'replace',
+            affects: { type: 'any' },
+            targets: ['Barb Pistol', 'CCW'],
+            options: [{
+              id: 'flail', label: 'Dual Sword-Flails', cost: 5,
+              gains: [{ type: 'ArmyBookWeapon', id: 'flail', name: 'Dual Sword-Flails', label: 'Dual Sword-Flails', count: 1, attacks: 1, range: 0, specialRules: [
+                { id: 'ap2', name: 'AP', rating: 2, label: 'AP(2)' },
+                { id: 'b3', name: 'Blast', rating: 3, label: 'Blast(3)' },
+              ] }],
+            }],
+          },
+          {
+            id: 's1', label: 'Replace one Barb Pistol and CCW', variant: 'replace',
+            affects: { type: 'exactly', value: 1 },
+            targets: ['Barb Pistol', 'CCW'],
+            options: [{
+              id: 'sgt', label: 'Sgt loadout', cost: 10,
+              gains: [
+                { type: 'ArmyBookWeapon', id: 'sbp', name: 'Sgt. Barb Pistol', label: 'Sgt. Barb Pistol', count: 1, attacks: 1, range: 12, specialRules: [{ id: 'lac', name: 'Lacerate', label: 'Lacerate' }] },
+                { type: 'ArmyBookWeapon', id: 'es', name: 'Energy Sword', label: 'Energy Sword', count: 1, attacks: 2, range: 0, specialRules: [
+                  { id: 'ap1', name: 'AP', rating: 1, label: 'AP(1)' },
+                  { id: 'rend', name: 'Rending', label: 'Rending' },
+                ] },
+              ],
+            }],
+          },
+          {
+            id: 's2', label: 'Replace Sgt. Barb Pistol', variant: 'replace',
+            targets: ['Sgt. Barb Pistol'],
+            options: [{
+              id: 'emp', label: 'EMP Pistol', cost: 5,
+              gains: [{ type: 'ArmyBookWeapon', id: 'emp', name: 'EMP Pistol', label: 'EMP Pistol', count: 1, attacks: 2, range: 9, specialRules: [{ id: 'rend', name: 'Rending', label: 'Rending' }] }],
+            }],
+          },
+        ],
+      }],
+    };
+
+    const best = findBestLoadout(trueWitches, army, DEFAULT_BALVAL_CONFIG);
+    // Expected: 3 Dual Sword-Flails consume all 3 (Barb Pistol + CCW) pairs.
+    // No model left with the default Barb Pistol + CCW.
+    const flails = best.weapons.find(w => w.id === 'flail');
+    expect(flails).toBeDefined();
+    expect(flails!.count).toBe(3);
+    expect(best.weapons.find(w => w.id === 'bp')).toBeUndefined();
+    expect(best.weapons.find(w => w.id === 'ccw')).toBeUndefined();
+    // Sgt chain should NOT have fired (no reserved slot was profitable).
+    expect(best.applications.find(a => a.optionLabel === 'Sgt loadout')).toBeUndefined();
+    expect(best.applications.find(a => a.optionLabel === 'EMP Pistol')).toBeUndefined();
+  });
+
+  it('DOES multiply cost by k for affects:up to (per-model selections)', () => {
+    const unit: any = {
+      id: 'u', name: 'U', cost: 100, size: 5, quality: 4, defense: 4,
+      weapons: [{ id: 'p', name: 'Pistol', label: 'Pistol', count: 5, attacks: 1, range: 12, specialRules: [] }],
+      rules: [],
+      upgrades: ['p1'],
+    };
+    const army: any = {
+      upgradePackages: [{
+        uid: 'p1',
+        sections: [{
+          id: 's', label: 'Replace up to two Pistols', variant: 'replace',
+          affects: { type: 'up to', value: 2 },
+          targets: ['Pistols'],
+          options: [{
+            id: 'fr', label: 'Fusion Rifle', cost: 15,
+            gains: [{ type: 'ArmyBookWeapon', id: 'fr', name: 'Fusion Rifle', label: 'Fusion Rifle', count: 1, attacks: 1, range: 12, specialRules: [{ id: 'ap4', name: 'AP', rating: 4, label: 'AP(4)' }] }],
+          }],
+        }],
+      }],
+    };
+    const list = enumerateOptionLoadouts(unit, army, DEFAULT_BALVAL_CONFIG);
+    const k1 = list.find(l => l.label.includes('×1'));
+    const k2 = list.find(l => l.label.includes('×2'));
+    expect(k1).toBeDefined();
+    expect(k2).toBeDefined();
+    // affects:up to is per-model elective — each selection costs 15.
+    expect(k1!.state.cost).toBe(unit.cost + 15);
+    expect(k2!.state.cost).toBe(unit.cost + 30);
+  });
+
   it('returns null when "Nx " target exceeds pool', () => {
     const pool = [w({ id: 'c', name: 'CCW', count: 1 })];
     const unit = {
@@ -529,10 +782,13 @@ describe('findBestLoadout', () => {
     expect(best.cost).toBe(100);
   });
 
-  it('reserves a model for a future sgt section (witches scenario)', () => {
-    // Sec1: per-model "Replace one Barb Pistol and CCW" with razor flails (free, big damage gain).
-    // Sec2: sgt-creating "Replace one Barb Pistol and CCW" with sgt loadout (Sgt. Barb Pistol + Energy Sword).
-    // Sec3: "Replace Sgt. Barb Pistol" → EMP Pistol.
+  it('picks 4 Razor Flails + Sgt + EMP over 5 Razor Flails when the sgt chain unlocks a Blast(5) ranged source (witches scenario)', () => {
+    // Sec0: per-model "Replace any Barb Pistol and CCW" with razor flails (free, big damage gain).
+    // Sec1: "Replace one Barb Pistol and CCW" with sgt loadout (Sgt. Barb Pistol + Energy Sword).
+    // Sec2: "Replace Sgt. Barb Pistol" → EMP Pistol (Blast(5), AP(4)).
+    // The search enumerates every (k, option, skip) combination across all three
+    // sections and ranks by efficiency. No reservation logic — the chain wins
+    // because its EMP ranged output beats the marginal 5th flail.
     const witchUnit: any = {
       id: 'witch', name: 'Witches', cost: 105, size: 5, quality: 3, defense: 5,
       weapons: [
@@ -571,6 +827,7 @@ describe('findBestLoadout', () => {
           },
           {
             id: 's3', label: 'Replace Sgt. Barb Pistol', variant: 'replace',
+            targets: ['Sgt. Barb Pistol'],
             options: [{
               // Tuned to be strongly profitable so chain-aware optimizer picks
               // sgt + EMP even though the sgt step alone is roughly neutral.
@@ -643,11 +900,13 @@ describe('findBestLoadout', () => {
     expect(k2!.state.cost).toBe(unit.cost + 5 * 2);
   });
 
-  it('reserves a barb rifle when sec0 is "Replace any Barb Rifle" and a future sgt section needs one (raider scenario)', () => {
-    // Same shape as the raiders unit in the screenshot — sec0 swaps individual
-    // rifles, sec1 is the sgt (compound replace one Barb Rifle and CCW), sec2
-    // upgrades the sgt's pistol. Reservation must keep at least one rifle in
-    // pool so the sgt section can apply.
+  it('respects "sgt chain implies at most poolMax-1 in the producer section" via search, not reservation (raider scenario)', () => {
+    // Sec0 sweeps barb rifles → Scrappers. Sec1 sgt needs 1 BR+CCW pair.
+    // Sec2 upgrades the sgt's pistol to EMP. The search will naturally try
+    // k=3 (sgt fails, no pair left), k=2 (sgt+EMP apply, 2 Scrappers), k=1,
+    // and k=0; it picks whichever scores highest. The invariant we assert is
+    // structural: EMP can only appear with Sgt, and Sgt can only appear when
+    // sec0 left at least one BR+CCW pair behind.
     const raider: any = {
       id: 'raider', name: 'Raiders', cost: 105, size: 3, quality: 4, defense: 5,
       weapons: [
@@ -663,6 +922,8 @@ describe('findBestLoadout', () => {
         sections: [
           {
             id: 's0', label: 'Replace any Barb Rifle', variant: 'replace',
+            affects: { type: 'any' },
+            targets: ['Barb Rifle'],
             options: [{
               id: 'scrap', label: 'Scrapper', cost: 0,
               gains: [{ type: 'ArmyBookWeapon', id: 'scrap', name: 'Scrapper', label: 'Scrapper', count: 1, attacks: 1, range: 12, specialRules: [{ id: 'b3', name: 'Blast', rating: 3, label: 'Blast(3)' }] }],
@@ -670,6 +931,8 @@ describe('findBestLoadout', () => {
           },
           {
             id: 's1', label: 'Replace one Barb Rifle and CCW', variant: 'replace',
+            affects: { type: 'exactly', value: 1 },
+            targets: ['Barb Rifle', 'CCW'],
             options: [{
               id: 'sgt', label: 'Sgt loadout', cost: 0,
               gains: [
@@ -680,6 +943,7 @@ describe('findBestLoadout', () => {
           },
           {
             id: 's2', label: 'Replace Sgt. Barb Pistol', variant: 'replace',
+            targets: ['Sgt. Barb Pistol'],
             options: [{
               id: 'emp', label: 'EMP Pistol', cost: 0,
               gains: [{
@@ -733,6 +997,8 @@ describe('findBestLoadout', () => {
           // No future sgt section → sec0 doesn't reserve, consumes all 3 rifles.
           {
             id: 's0', label: 'Replace all Barb Rifles', variant: 'replace',
+            affects: { type: 'all' },
+            targets: ['Barb Rifles'],
             options: [{
               id: 'scrap', label: 'Scrapper', cost: 0,
               gains: [{ type: 'ArmyBookWeapon', id: 'scrap', name: 'Scrapper', label: 'Scrapper', count: 1, attacks: 1, range: 12, specialRules: [{ id: 'b3', name: 'Blast', rating: 3, label: 'Blast(3)' }] }],
@@ -740,6 +1006,8 @@ describe('findBestLoadout', () => {
           },
           {
             id: 's1', label: 'Replace one Barb Rifle and CCW', variant: 'replace',
+            affects: { type: 'exactly', value: 1 },
+            targets: ['Barb Rifle', 'CCW'],
             options: [{
               id: 'sgt', label: 'Sgt', cost: 0,
               gains: [

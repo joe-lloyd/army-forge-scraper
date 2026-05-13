@@ -228,14 +228,30 @@ export function applyOption(
 
   const added: Weapon[] = [];
   for (const gain of weaponGains) {
-    const w = { ...gain, count: (gain.count || 1) * perInstance } as Weapon;
+    // OPR ships melee gains without a `range` field at all (Dual Sword-Flails,
+    // Energy Sword, etc.). Normalize to 0 so downstream code sees a proper
+    // numeric range and doesn't have to defensively `?? 0` everywhere.
+    const w = {
+      ...gain,
+      range: typeof gain.range === 'number' ? gain.range : 0,
+      count: (gain.count || 1) * perInstance,
+    } as Weapon;
     newWeapons.push(w);
     added.push(w);
   }
 
-  // 4. Cost.
+  // 4. Cost. `option.cost` is the price PER SELECTION, not per model affected.
+  //   - affects:all     → one selection covers every matching model     → cost × 1
+  //   - affects:exactly → one selection covers N models at the listed price → cost × 1
+  //   - affects:any     → each selection swaps one model, k selections   → cost × k
+  //   - affects:up to   → up to N selections, each swaps one model       → cost × k
+  // The Novice Sisters "Replace all Dual CCWs → Great Weapon" case (30pts,
+  // affects:all) used to charge 30 × 10 = 300 because we multiplied every
+  // case by k. Now it correctly charges 30 once.
+  const affectsType = section?.affects?.type;
+  const isSingleSelection = affectsType === 'all' || affectsType === 'exactly';
   const costPer = getOptionCost(option, unit);
-  const costApplied = costPer * perInstance;
+  const costApplied = isSingleSelection ? costPer : costPer * perInstance;
 
   const application: UpgradeApplication = {
     packageUid: pkgUid,
@@ -269,7 +285,10 @@ export function scoreLoadout(state: LoadoutState, unit: Unit, config: BalValConf
       config.targetToughness,
       config.assault,
     );
-    if (w.range === 0) melee += o;
+    // OPR omits `range` entirely on melee gains (e.g. Dual Sword-Flails),
+    // so a strict `=== 0` check falsely classifies them as ranged. Treat
+    // missing/0/undefined as melee.
+    if (!w.range) melee += o;
     else ranged += o;
   }
   // Assault → combined activation; otherwise pick the bigger mode.
@@ -286,98 +305,58 @@ interface OrderedSection {
   section: any;
 }
 
-function collectSections(unit: Unit, army: any): OrderedSection[] {
+// Minimal shape for the army-book payload — we only read `upgradePackages` in
+// this file.
+interface ArmyBookLike {
+  upgradePackages?: { uid: string; sections?: unknown[] }[];
+}
+
+function collectSections(unit: Unit, army: ArmyBookLike): OrderedSection[] {
   const out: OrderedSection[] = [];
   for (const pkgUid of unit.upgrades || []) {
-    const pkg = army.upgradePackages?.find((p: any) => p.uid === pkgUid);
+    const pkg = army.upgradePackages?.find((p) => p.uid === pkgUid);
     if (!pkg) continue;
     for (const section of pkg.sections || []) out.push({ pkgUid, section });
   }
   return out;
 }
 
-// A "sgt-creating" section is one whose gained weapons are referenced by a later
-// section's label — meaning that later section depends on this one having been
-// applied. By OPR convention only one sergeant exists per unit, so these
-// sections are restricted to a single application.
-function isSgtCreatingSection(idx: number, sections: OrderedSection[]): boolean {
-  const section = sections[idx].section;
-  const gainNames = new Set<string>();
-  for (const opt of section.options || []) {
-    for (const g of opt.gains || []) {
-      if (g?.type === 'ArmyBookWeapon' && g.name) gainNames.add(g.name.toLowerCase());
-    }
-  }
-  if (gainNames.size === 0) return false;
-  for (let j = idx + 1; j < sections.length; j++) {
-    const lbl = (sections[j].section.label || '').toLowerCase();
-    for (const nm of gainNames) {
-      if (lbl.includes(nm)) return true;
-    }
-  }
-  return false;
-}
-
-// Number of models a future sgt section needs to reserve from the current pool —
-// based on which of OUR matched weapons appear in that future section's label.
-function reservedForFutureSgts(
-  idx: number,
-  sections: OrderedSection[],
-  matchedNames: string[],
-): number {
-  let reserved = 0;
-  for (let j = idx + 1; j < sections.length; j++) {
-    if (!isSgtCreatingSection(j, sections)) continue;
-    const futLbl = (sections[j].section.label || '').toLowerCase();
-    if (matchedNames.some(n => futLbl.includes(n))) reserved += 1;
-  }
-  return reserved;
-}
-
-// Determine the candidate application counts (k values) to try for one section.
-// Driven by army-forge's `affects` field which is the authoritative source:
-//   exactly N → [N × instances]                (forced count)
-//   up to N  → [1 .. min(N × instances, pool)]
-//   any      → [1 .. pool]                     (per-model elective)
-//   all      → [pool]                          (whole stack)
-//   null     → [1]                             (fallback: singleton)
-// Sgt-creating sections always force a single application (per stacked
-// instance). Reservation for downstream sgt sections is applied uniformly.
+// Candidate `k` values for a single section against the current pool. Pure
+// function of `(section, state, unit, opts)` — no heuristics, no reservation,
+// no awareness of other sections. The optimizer's search loop trials every
+// returned k value, so any "leave a model behind for a future section" decision
+// falls out of the search structure rather than being baked in here.
+//
+// k = number of times the option is applied to this section in one go. For
+// per-model elective ("any") and capped ("up to") sections, k is the number
+// of separate selections by the player. For mass replaces ("all") and forced
+// counts ("exactly"), one selection covers the full count.
 function candidateCounts(
-  idx: number,
-  sections: OrderedSection[],
+  section: { variant?: string; affects?: { type?: string; value?: number }; select?: { type?: string; value?: number }; targets?: string[] },
   state: LoadoutState,
   unit: Unit,
-  isSgt: boolean,
   opts: ApplyOpts,
 ): number[] {
-  const { section } = sections[idx];
   const a = section.affects;
   const instances = opts.isDoubled ? 2 : 1;
   const isReplace = section.variant === 'replace';
 
-  // Pool floor + reserved seats for downstream sgt sections. For replaces with
-  // a "Nx " target prefix, each application consumes N of that weapon, so the
-  // effective pool floor is floor(count / N) — applications, not raw weapons.
+  // Pool floor. For replaces, the floor is the number of complete target sets
+  // we can take from the pool. With a "Nx " target prefix each application
+  // consumes N of that weapon, so the cap is floor(count / N).
   let poolFloor = unit.size * instances;
-  let matchedNames: string[] = [];
   if (isReplace) {
     const matches = findTargetedWeapons(section, state.weapons);
     if (matches.length === 0) return [];
     poolFloor = Math.min(
       ...matches.map((m) => Math.floor(m.weapon.count / Math.max(1, m.perApplicationCount))),
     );
-    matchedNames = matches.map((m) => (m.weapon.name || '').toLowerCase());
   }
-  const reserved = isReplace ? reservedForFutureSgts(idx, sections, matchedNames) : 0;
-  let usableMax = Math.max(0, poolFloor - reserved);
+  let usableMax = Math.max(0, poolFloor);
 
   // `section.select` caps how many copies of the option can land per model.
-  // Combined with `affects`, AF's own engine treats `select` as the inner
-  // multiplier and `affects` as the outer (model-count) limit:
-  //   affects: any        × select: exactly 1  → up to (size × 1) total
-  //   affects: any        × select: up to N    → up to (size × N) total
-  //   affects: exactly M  × select: up to N    → up to (M × N) total
+  //   affects: any        × select: exactly|up-to N → up to (size × N) total
+  //   affects: exactly M  × select: exactly|up-to N → up to (M × N) total
   // For non-replace variants where there's no pool to consume, `select` is the
   // primary cap. We intersect the select cap into usableMax.
   const sel = section.select;
@@ -388,21 +367,12 @@ function candidateCounts(
       if (a?.type === 'any') selectCap = unit.size * instances * v;
       else if (a?.type === 'exactly' || a?.type === 'up to') selectCap = (a.value || 1) * instances * v;
       else selectCap = v * instances;
-    } else if (sel.type === 'any') {
-      // 'select: any' alone means no inner cap; affects still governs.
-      selectCap = Infinity;
     }
     if (Number.isFinite(selectCap)) usableMax = Math.min(usableMax, selectCap);
   }
 
-  if (isSgt) {
-    return usableMax >= instances ? [instances] : [];
-  }
-
   if (a) {
-    if (a.type === 'all') {
-      return usableMax > 0 ? [usableMax] : [];
-    }
+    if (a.type === 'all') return usableMax > 0 ? [usableMax] : [];
     if (a.type === 'exactly') {
       const k = Math.max(1, (a.value || 1) * instances);
       return usableMax >= k ? [k] : [];
@@ -412,13 +382,22 @@ function candidateCounts(
       return top >= 1 ? Array.from({ length: top }, (_, i) => i + 1) : [];
     }
     if (a.type === 'any') {
-      return usableMax >= 1 ? Array.from({ length: usableMax }, (_, i) => i + 1) : [];
+      if (usableMax < 1) return [];
+      // For "any" we'd otherwise sweep 1..usableMax exhaustively. For a size-N
+      // unit with three "any" sections that's 41^3 paths — too many. The only
+      // reason to take fewer than max is to leave pool room for downstream
+      // sections; in OPR data those downstream needs are typically small (one
+      // sgt swap, occasionally two). So we sample the boundary: 1, max-2,
+      // max-1, max. Covers the realistic reservation amounts without an
+      // explicit reservation step.
+      const ks = new Set<number>([1, usableMax]);
+      if (usableMax >= 2) ks.add(usableMax - 1);
+      if (usableMax >= 3) ks.add(usableMax - 2);
+      return [...ks].sort((x, y) => x - y);
     }
   }
 
-  // No `affects`: fall back to `select` when present (sgt-style "Replace Sgt.
-  // Barb Pistol" sections often have only `select: {type: 'exactly', value: 1}`)
-  // otherwise a single swap.
+  // No `affects`: fall back to `select` when present, otherwise a single swap.
   if (sel?.type === 'up to' && typeof sel.value === 'number') {
     const top = Math.min(sel.value * instances, usableMax);
     return top >= 1 ? Array.from({ length: top }, (_, i) => i + 1) : [];
@@ -430,147 +409,78 @@ function candidateCounts(
   return usableMax >= 1 ? [1] : [];
 }
 
-// Indices of sections whose label references a weapon that THIS sgt section
-// adds — they form the sergeant chain (e.g. "Replace Sgt. Barb Pistol" depends
-// on the sgt section adding a Sgt. Barb Pistol).
-function findDependentIndices(sgtIdx: number, sections: OrderedSection[]): number[] {
-  const gainNames = new Set<string>();
-  for (const opt of sections[sgtIdx].section.options || []) {
-    for (const g of opt.gains || []) {
-      if (g?.type === 'ArmyBookWeapon' && g.name) gainNames.add(g.name.toLowerCase());
-    }
-  }
-  const deps: number[] = [];
-  for (let j = sgtIdx + 1; j < sections.length; j++) {
-    const lbl = (sections[j].section.label || '').toLowerCase();
-    for (const nm of gainNames) {
-      if (lbl.includes(nm)) {
-        deps.push(j);
-        break;
-      }
-    }
-  }
-  return deps;
+function applicationsSignature(apps: UpgradeApplication[]): string {
+  return apps.map((a) => `${a.sectionId}:${a.optionId}:${a.quantity}`).join('|') || 'base';
 }
 
-// Evaluate a sgt section together with all its dependent sections as a single
-// compound choice. Required because sgt loadouts often have neutral standalone
-// efficiency but unlock a profitable downstream upgrade (e.g. Sgt → EMP
-// Pistol). Greedy single-section evaluation would miss that and skip the chain.
-function evaluateSgtChain(
-  state: LoadoutState,
-  sgtIdx: number,
-  depIndices: number[],
-  sections: OrderedSection[],
+// Pure DFS through the unit's upgrade sections. At each section we branch on
+// "skip" plus every (option, k) the section permits given the current pool.
+// Returns every unique terminal state — the caller scores and ranks. No
+// reservation, no sgt heuristics, no producer/consumer detection: a chain
+// like "sec0 leaves a pair → sec1 sgt swap → sec2 sgt upgrade" emerges as
+// one path among many, scored on its own merits.
+//
+// Path count is bounded by candidateCounts using sparse k sampling for "any"
+// sections (1, max-2, max-1, max). For typical OPR units this stays under
+// a few thousand paths — fast enough for interactive use.
+export function searchLoadouts(
   unit: Unit,
-  config: BalValConfig,
-  opts: ApplyOpts,
-): LoadoutState {
-  const sgtSection = sections[sgtIdx];
-  const instances = opts.isDoubled ? 2 : 1;
-  let bestState = state;
-  let bestEff = scoreLoadout(state, unit, config).efficiency;
-
-  for (const sgtOpt of sgtSection.section.options || []) {
-    const afterSgt = applyOption(state, sgtSection.pkgUid, sgtSection.section, sgtOpt, unit, config, {
-      ...opts,
-      applicationCount: instances,
-    });
-    if (!afterSgt) continue;
-
-    let cur = afterSgt;
-    for (const di of depIndices) {
-      const ds = sections[di];
-      // Dependent sections inherit sgt-only semantics (singleton per stacked
-      // instance); honour any explicit affects info if present.
-      const depCands = candidateCounts(di, sections, cur, unit, true, opts);
-      const depK = depCands.length ? Math.max(...depCands) : instances;
-
-      let chosenSub: LoadoutState | null = null;
-      let chosenSubEff = scoreLoadout(cur, unit, config).efficiency;
-      for (const depOpt of ds.section.options || []) {
-        const next = applyOption(cur, ds.pkgUid, ds.section, depOpt, unit, config, {
-          ...opts,
-          applicationCount: depK,
-        });
-        if (!next) continue;
-        const eff = scoreLoadout(next, unit, config).efficiency;
-        if (eff > chosenSubEff) {
-          chosenSubEff = eff;
-          chosenSub = next;
-        }
-      }
-      if (chosenSub) cur = chosenSub;
-    }
-
-    const finalEff = scoreLoadout(cur, unit, config).efficiency;
-    if (finalEff > bestEff) {
-      bestEff = finalEff;
-      bestState = cur;
-    }
-  }
-  return bestState;
-}
-
-// Greedy section-by-section optimizer. For each section sweeps both options AND
-// application counts, picks the (option, k) that maximally improves efficiency
-// over the current state. Reserves models for downstream sgt sections so chains
-// like "all squad → razor flails + 1 sgt + sgt pistol → EMP" stay consistent,
-// and evaluates sgt + dependent sections as a single compound choice so chains
-// with neutral sgt-step but profitable downstream still get applied.
-export function findBestLoadout(
-  unit: Unit,
-  army: any,
+  army: ArmyBookLike,
   config: BalValConfig,
   opts: ApplyOpts = {},
-): LoadoutState {
-  let state = buildBaseLoadout(unit);
-  let bestEff = scoreLoadout(state, unit, config).efficiency;
-
+): LoadoutState[] {
   const sections = collectSections(unit, army);
-  const processed = new Set<number>();
+  const results: LoadoutState[] = [];
+  const seen = new Set<string>();
 
-  for (let i = 0; i < sections.length; i++) {
-    if (processed.has(i)) continue;
-    const isSgt = isSgtCreatingSection(i, sections);
-
-    if (isSgt) {
-      const deps = findDependentIndices(i, sections);
-      [i, ...deps].forEach(idx => processed.add(idx));
-      const next = evaluateSgtChain(state, i, deps, sections, unit, config, opts);
-      const nextEff = scoreLoadout(next, unit, config).efficiency;
-      if (nextEff > bestEff) {
-        state = next;
-        bestEff = nextEff;
-      }
-      continue;
+  function recurse(state: LoadoutState, idx: number): void {
+    if (idx >= sections.length) {
+      const sig = applicationsSignature(state.applications);
+      if (seen.has(sig)) return;
+      seen.add(sig);
+      results.push(state);
+      return;
     }
 
-    const counts = candidateCounts(i, sections, state, unit, isSgt, opts);
-    if (counts.length === 0) continue;
+    const { pkgUid, section } = sections[idx];
 
-    let chosenState: LoadoutState | null = null;
-    let chosenEff = bestEff;
-    for (const option of sections[i].section.options || []) {
-      for (const k of counts) {
-        const candidate = applyOption(state, sections[i].pkgUid, sections[i].section, option, unit, config, {
+    // Branch 1: skip this section entirely.
+    recurse(state, idx + 1);
+
+    // Branch 2: every (option, k) that's legal against the current pool.
+    const ks = candidateCounts(section, state, unit, opts);
+    if (ks.length === 0) return;
+    for (const option of section.options || []) {
+      for (const k of ks) {
+        const next = applyOption(state, pkgUid, section, option, unit, config, {
           ...opts,
           applicationCount: k,
         });
-        if (!candidate) continue;
-        const eff = scoreLoadout(candidate, unit, config).efficiency;
-        if (eff > chosenEff) {
-          chosenEff = eff;
-          chosenState = candidate;
-        }
+        if (next) recurse(next, idx + 1);
       }
     }
-    if (chosenState) {
-      state = chosenState;
-      bestEff = chosenEff;
-    }
   }
-  return state;
+
+  recurse(buildBaseLoadout(unit), 0);
+
+  // Sort by efficiency descending — caller picks [0] for best, slices for
+  // alternatives.
+  return results.sort(
+    (a, b) =>
+      scoreLoadout(b, unit, config).efficiency - scoreLoadout(a, unit, config).efficiency,
+  );
+}
+
+// Best loadout = top of the search results. The search already enumerated and
+// scored every legal path, so this is just a tip-of-the-iceberg accessor.
+export function findBestLoadout(
+  unit: Unit,
+  army: ArmyBookLike,
+  config: BalValConfig,
+  opts: ApplyOpts = {},
+): LoadoutState {
+  const all = searchLoadouts(unit, army, config, opts);
+  return all[0] || buildBaseLoadout(unit);
 }
 
 function makeOption(
@@ -588,6 +498,13 @@ function makeOption(
   const efficiencyDelta = baseScore.efficiency > 0
     ? (score.efficiency - baseScore.efficiency) / baseScore.efficiency
     : 0;
+  let meleeAttacks = 0;
+  let rangedAttacks = 0;
+  for (const w of state.weapons) {
+    const shots = (w.count || 0) * (w.attacks || 0);
+    if ((w.range || 0) === 0) meleeAttacks += shots;
+    else rangedAttacks += shots;
+  }
   return {
     id,
     label,
@@ -596,173 +513,117 @@ function makeOption(
     rangedOffense: score.rangedOffense,
     offense: score.offense,
     efficiency: score.efficiency,
+    meleeAttacks,
+    rangedAttacks,
+    totalAttacks: meleeAttacks + rangedAttacks,
     baseEfficiency: baseScore.efficiency,
     efficiencyDelta,
     offenseDelta: score.offense - baseScore.offense,
     costDelta: state.cost - baseCost,
     isBase,
     isBestCombo,
+    isMostOutput: false,
+    isMostMelee: false,
+    isMostRanged: false,
     applications: state.applications,
   };
 }
 
-// Application counts to surface in the per-option preview.
-//   exactly N → [N]
-//   up to N  → [1, 2, ..., N]   ← every step gets its own pill so users can
-//                                 compare "swap 1 model" vs "swap 2 models"
-//   any      → [pool max]       (per-model elective; single pill avoids
-//                                 a 5+ pill explosion)
-//   all      → [pool]
-//   null     → [1]
-function previewKValues(
-  sectionIdx: number,
-  sections: OrderedSection[],
-  isSgt: boolean,
-  base: LoadoutState,
-  unit: Unit,
-  opts: ApplyOpts,
-): number[] {
-  const cands = candidateCounts(sectionIdx, sections, base, unit, isSgt, opts);
-  if (cands.length === 0) return [];
-  const a = sections[sectionIdx].section.affects;
-  if (a?.type === 'up to' && cands.length > 1) return cands;
-  return [Math.max(...cands)];
+// Turn an applied UpgradeApplication list into a human-readable pill label.
+//   no apps          → "Default Loadout"
+//   one app          → option.label
+//   chained apps     → "OptA + OptB" (joined by " + ")
+function labelForApplications(apps: UpgradeApplication[]): string {
+  if (apps.length === 0) return 'Default Loadout';
+  return apps
+    .map((a) => (a.quantity > 1 ? `${a.optionLabel} (×${a.quantity})` : a.optionLabel))
+    .join(' + ');
 }
 
-// One loadout per option, applied to the BASE state at the maximum legal
-// application count so users see the biggest swing each option offers (e.g.
-// "all 3 models swap to Razor Flails" rather than "1 model swaps").
-//
-// Also enumerates 2-deep chain loadouts: when a downstream section depends on
-// weapons that a prior section adds (so the downstream section can't apply to
-// base alone), every (parent option × child option) pair is added so otherwise
-// hidden upgrade trees become visible. Example: Gene-Warriors sec0 adds Barb
-// Pistol + CCW, then sec1 "Replace one Barb Pistol" → Bone Gun / Arcane Rifle
-// surface as chain pills.
+function idForApplications(apps: UpgradeApplication[]): string {
+  if (apps.length === 0) return 'base';
+  return apps.map((a) => `${a.sectionId}:${a.optionId}:${a.quantity}`).join('__');
+}
+
+// Every legal loadout the search found, returned as pills. The first entry is
+// always the base (default) loadout — if it doesn't naturally appear in the
+// search results (it should, via the all-skip path), it's prepended. The
+// highest-efficiency result is flagged isBestCombo. Otherwise no curation:
+// the UI can sort/filter however it likes.
 export function enumerateOptionLoadouts(
   unit: Unit,
-  army: any,
+  army: ArmyBookLike,
   config: BalValConfig,
   opts: ApplyOpts = {},
 ): LoadoutOption[] {
   const base = buildBaseLoadout(unit);
   const baseScore = scoreLoadout(base, unit, config);
-  const out: LoadoutOption[] = [
-    makeOption('base', 'Default Loadout', base, unit, config, baseScore, base.cost, true, false),
-  ];
+  const all = searchLoadouts(unit, army, config, opts);
 
-  const sections = collectSections(unit, army);
-  const standaloneApplicable = new Set<number>();
-
-  // Pass 1: standalone option loadouts. For "up to N" sections we emit one
-  // pill per k (e.g. Gene-Warriors sec0 "Replace up to two Dual CCWs" gets
-  // two pills per option: ×1 and ×2). Other types get a single max-k pill.
-  for (let i = 0; i < sections.length; i++) {
-    const { pkgUid, section } = sections[i];
-    const isSgt = isSgtCreatingSection(i, sections);
-    const ks = previewKValues(i, sections, isSgt, base, unit, opts);
-    if (ks.length === 0) continue;
-    standaloneApplicable.add(i);
-    const showK = ks.length > 1;
-
-    for (const option of section.options || []) {
-      for (const k of ks) {
-        const next = applyOption(base, pkgUid, section, option, unit, config, {
-          ...opts,
-          applicationCount: k,
-        });
-        if (!next) continue;
-        const id = `${section.id || section.label || pkgUid}_${option.id}${showK ? `_k${k}` : ''}`;
-        const label = showK ? `${option.label} (×${k})` : option.label;
-        out.push(makeOption(id, label, next, unit, config, baseScore, base.cost, false, false));
-      }
-    }
-  }
-
-  // Pass 2: 2-deep chains. Parent applied at max k (chains stay flat to avoid
-  // pill explosion). Each downstream child that isn't standalone-applicable
-  // contributes one pill per child option.
-  for (const parentIdx of standaloneApplicable) {
-    const parent = sections[parentIdx];
-    const parentIsSgt = isSgtCreatingSection(parentIdx, sections);
-    const parentKs = previewKValues(parentIdx, sections, parentIsSgt, base, unit, opts);
-    const parentK = parentKs.length ? Math.max(...parentKs) : 0;
-    if (parentK <= 0) continue;
-
-    for (const parentOption of parent.section.options || []) {
-      const after = applyOption(base, parent.pkgUid, parent.section, parentOption, unit, config, {
-        ...opts,
-        applicationCount: parentK,
-      });
-      if (!after) continue;
-
-      for (let j = parentIdx + 1; j < sections.length; j++) {
-        if (standaloneApplicable.has(j)) continue;
-        const child = sections[j];
-        const childIsSgt = isSgtCreatingSection(j, sections);
-        const childKs = previewKValues(j, sections, childIsSgt, after, unit, opts);
-        const childK = childKs.length ? Math.max(...childKs) : 0;
-        if (childK <= 0) continue;
-
-        for (const childOption of child.section.options || []) {
-          const final = applyOption(after, child.pkgUid, child.section, childOption, unit, config, {
-            ...opts,
-            applicationCount: childK,
-          });
-          if (!final) continue;
-          const id = `chain_${parentIdx}_${parentOption.id}__${j}_${childOption.id}`;
-          const label = `${parentOption.label} → ${childOption.label}`;
-          out.push(makeOption(id, label, final, unit, config, baseScore, base.cost, false, false));
-        }
-      }
-    }
-  }
-
-  return out;
-}
-
-function applicationsSignature(apps: UpgradeApplication[]): string {
-  return apps.map(a => `${a.sectionId}:${a.optionId}:${a.quantity}`).join('|');
-}
-
-// All single-option loadouts plus the greedy best-combo (deduplicated by full
-// applications signature so chain loadouts that already match best-combo get
-// flagged in place rather than duplicated).
-export function getAllLoadouts(
-  unit: Unit,
-  army: any,
-  config: BalValConfig,
-  opts: ApplyOpts = {},
-): LoadoutOption[] {
-  const singles = enumerateOptionLoadouts(unit, army, config, opts);
-  const best = findBestLoadout(unit, army, config, opts);
-
-  if (best.applications.length === 0) {
-    singles[0].isBestCombo = true;
-    return singles;
-  }
-
-  const bestSig = applicationsSignature(best.applications);
-  const matched = singles.find(s => applicationsSignature(s.applications) === bestSig);
-  if (matched) {
-    matched.isBestCombo = true;
-    return singles;
-  }
-
-  const base = buildBaseLoadout(unit);
-  const baseScore = scoreLoadout(base, unit, config);
-  singles.push(
-    makeOption(
-      'best-combo',
-      best.applications.map(a => a.optionLabel).join(' + '),
-      best,
+  const out: LoadoutOption[] = all.map((state, i) => {
+    const isBase = state.applications.length === 0;
+    return makeOption(
+      idForApplications(state.applications),
+      labelForApplications(state.applications),
+      state,
       unit,
       config,
       baseScore,
       base.cost,
-      false,
-      true,
-    ),
-  );
-  return singles;
+      isBase,
+      i === 0,
+    );
+  });
+
+  // Guarantee a base pill at the top even if the all-skip path somehow
+  // didn't surface (defensive — searchLoadouts always includes it).
+  if (!out.some((o) => o.isBase)) {
+    out.unshift(
+      makeOption('base', 'Default Loadout', base, unit, config, baseScore, base.cost, true, all.length === 0),
+    );
+  }
+
+  // Niche markers. Each one tags exactly one loadout — the winner by raw
+  // attack volume in that category, with expected damage as the tiebreaker
+  // (so e.g. 3 attacks AP(3) beats 3 attacks AP(0)). A single loadout can
+  // win multiple categories. Skips loadouts with 0 attacks in the relevant
+  // bucket so a melee-only build doesn't get falsely flagged as "best ranged".
+  pickWinner(out, (o) => o.totalAttacks, (o) => o.offense, 'isMostOutput');
+  pickWinner(out, (o) => o.meleeAttacks, (o) => o.meleeOffense, 'isMostMelee');
+  pickWinner(out, (o) => o.rangedAttacks, (o) => o.rangedOffense, 'isMostRanged');
+
+  return out;
+}
+
+// Pick the loadout that maxes `primary` (with `tiebreak` resolving ties) and
+// stamp the named flag on it. No-op when no loadout has any output in the
+// category (e.g. all-melee unit → no ranged winner).
+function pickWinner(
+  options: LoadoutOption[],
+  primary: (o: LoadoutOption) => number,
+  tiebreak: (o: LoadoutOption) => number,
+  flag: 'isMostOutput' | 'isMostMelee' | 'isMostRanged',
+): void {
+  let winner: LoadoutOption | null = null;
+  for (const o of options) {
+    if (primary(o) <= 0) continue;
+    if (!winner) { winner = o; continue; }
+    const pCur = primary(o), pBest = primary(winner);
+    if (pCur > pBest) { winner = o; continue; }
+    if (pCur === pBest && tiebreak(o) > tiebreak(winner)) winner = o;
+  }
+  if (winner) winner[flag] = true;
+}
+
+// Currently identical to enumerateOptionLoadouts — both expose the full search
+// space. Kept as a separate export for callers that want a semantic hook (e.g.
+// "give me everything plus the best, with best flagged") if we need to tweak
+// either later.
+export function getAllLoadouts(
+  unit: Unit,
+  army: ArmyBookLike,
+  config: BalValConfig,
+  opts: ApplyOpts = {},
+): LoadoutOption[] {
+  return enumerateOptionLoadouts(unit, army, config, opts);
 }

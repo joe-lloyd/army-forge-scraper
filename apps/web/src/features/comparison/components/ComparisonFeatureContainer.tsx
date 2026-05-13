@@ -52,6 +52,7 @@ export function ComparisonFeatureContainer() {
             dataA={armyDataA}
             dataB={armyDataB}
             versions={{ a: versionA, b: versionB }}
+            systemSlug={selectedSystem}
             hideHeader
           />
         )}

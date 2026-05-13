@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import type { ArmyData, Unit, Spell, SpecialRule } from '../types';
 import { createRulesDict } from '../utils/diffHelpers';
+import { useCommonRules } from '@/features/explorer/hooks/useCommonRules';
 import { CollapsibleSection } from './CollapsibleSection';
 import { TextDiff } from './TextDiff';
 import { UnitBaseCard } from './UnitBaseCard';
@@ -10,10 +11,11 @@ interface DiffViewProps {
   dataA: ArmyData;
   dataB: ArmyData;
   versions?: { a: string; b: string };
+  systemSlug?: string;
   hideHeader?: boolean;
 }
 
-export default function DiffView({ dataA, dataB, versions, hideHeader }: DiffViewProps) {
+export default function DiffView({ dataA, dataB, versions, systemSlug, hideHeader }: DiffViewProps) {
   const [collapsed, setCollapsed] = useState<Record<string, boolean>>({
     'Special Rules': true,
   });
@@ -22,7 +24,16 @@ export default function DiffView({ dataA, dataB, versions, hideHeader }: DiffVie
     setCollapsed((prev) => ({ ...prev, [section]: !prev[section] }));
   };
 
-  const rulesDict = createRulesDict(dataA, dataB);
+  // Layer: common rules (foundational — Rending, AP, Blast, etc.) under each
+  // army book's own specialRules. Book-specific descriptions win on collisions
+  // so faction-flavoured wording (e.g. a unit-rule named "Stealth" with
+  // book-specific phrasing) takes precedence over the generic common-rules
+  // text.
+  const { dict: commonDict } = useCommonRules(systemSlug);
+  const rulesDict = useMemo(
+    () => ({ ...commonDict, ...createRulesDict(dataA, dataB) }),
+    [commonDict, dataA, dataB],
+  );
 
   // Logic to map and sort units
   const mapUnits = (units: Unit[]) => {

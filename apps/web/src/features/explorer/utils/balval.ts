@@ -188,7 +188,9 @@ export function calculateUnitOffense(
       config.targetToughness,
       config.assault,
     );
-    if (weapon.range === 0) meleeOffense += wOffense;
+    // Missing range on a gain (OPR omits it for melee, e.g. Dual Sword-Flails)
+    // → treat as melee. Same fix as in scoreLoadout.
+    if (!weapon.range) meleeOffense += wOffense;
     else rangedOffense += wOffense;
   }
   const totalOffense = config.assault
