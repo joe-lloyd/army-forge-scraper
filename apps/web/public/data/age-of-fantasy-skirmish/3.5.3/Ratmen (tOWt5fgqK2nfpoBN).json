@@ -1233,7 +1233,7 @@
       "hint": "Battle Master",
       "sections": [
         {
-          "id": "FzPvuLX",
+          "id": "3x9t5d1",
           "uid": "EqmxUyv",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1403,7 +1403,7 @@
           ]
         },
         {
-          "id": "1uCwvH7",
+          "id": "QjCls-U",
           "uid": "uf6HcFD",
           "label": "Upgrade with one",
           "options": [
@@ -1642,6 +1642,79 @@
               "label": "War Throne (Crew Attacks (A4, AP(1), Rending), Defense Debuff, Tough(3))",
               "parentSectionId": "uf6HcFD",
               "id": "p-bstvd"
+            },
+            {
+              "uid": "qa-nB",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "bl380Vc",
+                  "cost": 175
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Great Beast",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Great Beast (Rending Claws (A6, Rending), Armor(3), Fast, Fear(1), Strider, Tough(6))",
+                  "content": [
+                    {
+                      "id": "uiKhi6Ok",
+                      "name": "Rending Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "HXmtQukA",
+                      "specialRules": [
+                        {
+                          "id": "cavWDboL4ubs",
+                          "name": "Rending",
+                          "type": "ArmyBookRule"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Rending Claws (A6, Rending)"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Great Beast (Rending Claws (A6, Rending), Armor(3), Fast, Fear(1), Strider, Tough(6))",
+              "parentSectionId": "uf6HcFD",
+              "id": "qa-nB"
             }
           ],
           "parentPackageUid": "A1",
@@ -1660,7 +1733,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "obyBJoG",
+          "id": "x5D0NSl",
           "uid": "pidfdEj",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1850,7 +1923,7 @@
           ]
         },
         {
-          "id": "daKjzvv",
+          "id": "U_EVXW5",
           "uid": "i2fLp",
           "label": "Upgrade with one",
           "options": [
@@ -2113,7 +2186,7 @@
           }
         },
         {
-          "id": "DKsGXR2",
+          "id": "7zgCaad",
           "uid": "1Q2ocFid",
           "label": "Upgrade with",
           "options": [
@@ -2160,7 +2233,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "K6X-ANe",
+          "id": "346Cc_e",
           "uid": "8WqtKtU",
           "label": "Upgrade one model with one",
           "options": [
@@ -2285,7 +2358,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "wsqJfvY",
+          "id": "AJzThtr",
           "uid": "IbwdvTo",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2370,406 +2443,6 @@
           "targets": [
             "Hand Weapons"
           ]
-        },
-        {
-          "id": "eyFACG9",
-          "uid": "uL69Z",
-          "label": "Replace one Hand Weapon",
-          "options": [
-            {
-              "uid": "qflnR",
-              "cost": 25,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "BUbrjeh",
-                  "cost": 30
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Weapon Team",
-                  "type": "ArmyBookItem",
-                  "label": "Weapon Team (Crew (A1), Heavy Drill (A1, AP(4), Deadly(3)), Tough(3))",
-                  "content": [
-                    {
-                      "name": "Heavy Drill",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 0,
-                      "attacks": 1,
-                      "weaponId": "ESfMmujC",
-                      "specialRules": [
-                        {
-                          "id": "17crjK7P6_w6",
-                          "name": "AP",
-                          "rating": 4
-                        },
-                        {
-                          "id": "_mrPya5SXSqW",
-                          "name": "Deadly",
-                          "rating": 3
-                        }
-                      ],
-                      "attacksMultiplier": 1,
-                      "label": "Heavy Drill (A1, AP(4), Deadly(3))"
-                    },
-                    {
-                      "name": "Crew",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 0,
-                      "attacks": 1,
-                      "weaponId": "5bdTXzzH",
-                      "specialRules": [],
-                      "attacksMultiplier": 1,
-                      "label": "Crew (A1)"
-                    },
-                    {
-                      "id": "a0YtInGiUDd6",
-                      "name": "Tough",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Weapon Team (Crew (A1), Heavy Drill (A1, AP(4), Deadly(3)), Tough(3))",
-              "parentPackageUid": "E1",
-              "parentSectionUid": "uL69Z",
-              "parentSectionId": "uL69Z",
-              "id": "qflnR"
-            },
-            {
-              "uid": "jKnsu",
-              "cost": 30,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "BUbrjeh",
-                  "cost": 30
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Weapon Team",
-                  "type": "ArmyBookItem",
-                  "label": "Weapon Team (Flamethrower (12\", A1, Blast(3), Reliable), Crew (A1), Tough(3))",
-                  "content": [
-                    {
-                      "name": "Flamethrower",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 12,
-                      "attacks": 1,
-                      "weaponId": "k3WApfNG",
-                      "specialRules": [
-                        {
-                          "id": "w_vX0mi58KKt",
-                          "name": "Blast",
-                          "type": "ArmyBookRule",
-                          "rating": 3
-                        },
-                        {
-                          "id": "Zx4mWN0SbmK8",
-                          "name": "Reliable",
-                          "type": "ArmyBookRule"
-                        }
-                      ],
-                      "attacksMultiplier": 1,
-                      "label": "Flamethrower (12\", A1, Blast(3), Reliable)"
-                    },
-                    {
-                      "name": "Crew",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 0,
-                      "attacks": 1,
-                      "weaponId": "5bdTXzzH",
-                      "specialRules": [],
-                      "attacksMultiplier": 1,
-                      "label": "Crew (A1)"
-                    },
-                    {
-                      "id": "a0YtInGiUDd6",
-                      "name": "Tough",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Weapon Team (Flamethrower (12\", A1, Blast(3), Reliable), Crew (A1), Tough(3))",
-              "parentPackageUid": "E1",
-              "parentSectionUid": "uL69Z",
-              "parentSectionId": "uL69Z",
-              "id": "jKnsu"
-            },
-            {
-              "uid": "qZhjk",
-              "cost": 30,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "BUbrjeh",
-                  "cost": 30
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Weapon Team",
-                  "type": "ArmyBookItem",
-                  "label": "Weapon Team (Toxin Mortar (24\", A1, Blast(3), Indirect, Bane), Crew (A1), Tough(3))",
-                  "content": [
-                    {
-                      "name": "Toxin Mortar",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 24,
-                      "attacks": 1,
-                      "weaponId": "v3xGoOjn",
-                      "specialRules": [
-                        {
-                          "id": "w_vX0mi58KKt",
-                          "name": "Blast",
-                          "rating": 3
-                        },
-                        {
-                          "id": "Naqc5mga9Uha",
-                          "name": "Bane"
-                        },
-                        {
-                          "id": "8Ck9GAwUK824",
-                          "name": "Indirect"
-                        }
-                      ],
-                      "attacksMultiplier": 1,
-                      "label": "Toxin Mortar (24\", A1, Blast(3), Indirect, Bane)"
-                    },
-                    {
-                      "name": "Crew",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 0,
-                      "attacks": 1,
-                      "weaponId": "5bdTXzzH",
-                      "specialRules": [],
-                      "attacksMultiplier": 1,
-                      "label": "Crew (A1)"
-                    },
-                    {
-                      "id": "a0YtInGiUDd6",
-                      "name": "Tough",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Weapon Team (Toxin Mortar (24\", A1, Blast(3), Indirect, Bane), Crew (A1), Tough(3))",
-              "parentPackageUid": "E1",
-              "parentSectionUid": "uL69Z",
-              "parentSectionId": "uL69Z",
-              "id": "qZhjk"
-            },
-            {
-              "uid": "kCh-m",
-              "cost": 35,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "BUbrjeh",
-                  "cost": 35
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Weapon Team",
-                  "type": "ArmyBookItem",
-                  "label": "Weapon Team (Gatling Gun (18\", A4, AP(1)), Crew (A1), Tough(3))",
-                  "content": [
-                    {
-                      "name": "Gatling Gun",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 18,
-                      "attacks": 4,
-                      "weaponId": "xpLVuWlR",
-                      "specialRules": [
-                        {
-                          "id": "17crjK7P6_w6",
-                          "name": "AP",
-                          "type": "ArmyBookRule",
-                          "rating": 1
-                        }
-                      ],
-                      "attacksMultiplier": 1,
-                      "label": "Gatling Gun (18\", A4, AP(1))"
-                    },
-                    {
-                      "name": "Crew",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 0,
-                      "attacks": 1,
-                      "weaponId": "5bdTXzzH",
-                      "specialRules": [],
-                      "attacksMultiplier": 1,
-                      "label": "Crew (A1)"
-                    },
-                    {
-                      "id": "a0YtInGiUDd6",
-                      "name": "Tough",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Weapon Team (Gatling Gun (18\", A4, AP(1)), Crew (A1), Tough(3))",
-              "parentPackageUid": "E1",
-              "parentSectionUid": "uL69Z",
-              "parentSectionId": "uL69Z",
-              "id": "kCh-m"
-            },
-            {
-              "uid": "UUosb",
-              "cost": 30,
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "BUbrjeh",
-                  "cost": 35
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Weapon Team",
-                  "type": "ArmyBookItem",
-                  "label": "Weapon Team (Crew (A1), Death Roller (A3, AP(2), Thrust), Tough(3))",
-                  "content": [
-                    {
-                      "name": "Death Roller",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 0,
-                      "attacks": 3,
-                      "weaponId": "arrUZza-",
-                      "specialRules": [
-                        {
-                          "id": "umbiz4tnEyF8",
-                          "name": "Thrust"
-                        },
-                        {
-                          "id": "17crjK7P6_w6",
-                          "name": "AP",
-                          "rating": 2
-                        }
-                      ],
-                      "attacksMultiplier": 1,
-                      "label": "Death Roller (A3, AP(2), Thrust)"
-                    },
-                    {
-                      "name": "Crew",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 0,
-                      "attacks": 1,
-                      "weaponId": "5bdTXzzH",
-                      "specialRules": [],
-                      "attacksMultiplier": 1,
-                      "label": "Crew (A1)"
-                    },
-                    {
-                      "id": "a0YtInGiUDd6",
-                      "name": "Tough",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Weapon Team (Crew (A1), Death Roller (A3, AP(2), Thrust), Tough(3))",
-              "parentPackageUid": "E1",
-              "parentSectionUid": "uL69Z",
-              "parentSectionId": "uL69Z",
-              "id": "UUosb"
-            },
-            {
-              "uid": "3D5HyhwS86",
-              "type": "ArmyBookUpgradeOption",
-              "costs": [
-                {
-                  "unitId": "BUbrjeh",
-                  "cost": 40
-                }
-              ],
-              "gains": [
-                {
-                  "name": "Weapon Team",
-                  "type": "ArmyBookItem",
-                  "bases": null,
-                  "label": "Weapon Team (Overtuned Gatling Gun (18\", A4, Hazardous), Crew (A1), Tough(3))",
-                  "content": [
-                    {
-                      "id": "MYwuKFCu",
-                      "name": "Overtuned Gatling Gun",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 18,
-                      "attacks": 4,
-                      "weaponId": "4tdpdEhK",
-                      "specialRules": [
-                        {
-                          "id": "gVRt_wk8DktW",
-                          "name": "Hazardous"
-                        }
-                      ],
-                      "attacksMultiplier": 1,
-                      "label": "Overtuned Gatling Gun (18\", A4, Hazardous)"
-                    },
-                    {
-                      "id": "VTdGla4H",
-                      "name": "Crew",
-                      "type": "ArmyBookWeapon",
-                      "count": 1,
-                      "range": 0,
-                      "attacks": 1,
-                      "weaponId": "5bdTXzzH",
-                      "specialRules": [],
-                      "attacksMultiplier": 1,
-                      "label": "Crew (A1)"
-                    },
-                    {
-                      "id": "a0YtInGiUDd6",
-                      "name": "Tough",
-                      "type": "ArmyBookRule",
-                      "rating": 3
-                    }
-                  ],
-                  "count": 1
-                }
-              ],
-              "label": "Weapon Team (Overtuned Gatling Gun (18\", A4, Hazardous), Crew (A1), Tough(3))",
-              "parentSectionId": "uL69Z",
-              "id": "3D5HyhwS86"
-            }
-          ],
-          "parentPackageUid": "E1",
-          "type": "ArmyBookUpgradeSection",
-          "variant": "replace",
-          "affects": {
-            "type": "exactly",
-            "value": 1
-          },
-          "targets": [
-            "Hand Weapon"
-          ]
         }
       ],
       "calcErrors": false
@@ -2779,7 +2452,7 @@
       "hint": "Weapon Teams",
       "sections": [
         {
-          "id": "PHTm2ZC",
+          "id": "ktSZPOG",
           "uid": "MwsXsbn",
           "label": "Replace any Heavy Drill",
           "options": [
@@ -2993,7 +2666,7 @@
       "hint": "Storm Veterans",
       "sections": [
         {
-          "id": "2PoZFT8",
+          "id": "rFCLEFu",
           "uid": "id2O4yN",
           "label": "Replace Heavy Halberd",
           "options": [
@@ -3050,7 +2723,7 @@
       "hint": "Night Scouts",
       "sections": [
         {
-          "id": "8yqt_fC",
+          "id": "U3tVPgI",
           "uid": "O0mg6",
           "label": "Replace Dual Hand Weapon",
           "options": [
@@ -3105,7 +2778,7 @@
           ]
         },
         {
-          "id": "AiV8b4-",
+          "id": "pqYwUrx",
           "uid": "eM3wrCi",
           "label": "Upgrade with",
           "options": [
@@ -3182,7 +2855,7 @@
       "hint": "Monks",
       "sections": [
         {
-          "id": "zK2egQd",
+          "id": "cuEiJ4T",
           "uid": "9M_V_-G",
           "label": "Replace all Censer Flails",
           "options": [
@@ -3232,7 +2905,7 @@
       "hint": "Rat Master",
       "sections": [
         {
-          "id": "i4GdPSg",
+          "id": "2937-1e",
           "uid": "b56i15q",
           "label": "Upgrade all models with one",
           "options": [
@@ -3332,7 +3005,7 @@
       "hint": "Storm Ogres",
       "sections": [
         {
-          "id": "G5NEU-_",
+          "id": "vNc3uw5",
           "uid": "kzBI-P6",
           "label": "Replace any Flame-Fist and Bash",
           "options": [
@@ -3621,7 +3294,7 @@
       "hint": "Grenadiers",
       "sections": [
         {
-          "id": "ok2wqG1",
+          "id": "IQM3W7W",
           "uid": "-q66o",
           "label": "Replace Toxin Bomb",
           "options": [
@@ -3713,7 +3386,7 @@
       "hint": "Rat Ogres",
       "sections": [
         {
-          "id": "RJqpKha",
+          "id": "E1LGHzI",
           "uid": "7lJr6",
           "label": "Replace Rending Claws",
           "options": [
@@ -3763,7 +3436,7 @@
           ]
         },
         {
-          "id": "hYWYn6F",
+          "id": "RiHRi8k",
           "uid": "DyM55",
           "label": "Upgrade with",
           "options": [
@@ -3823,7 +3496,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "1miakfS",
+          "id": "Igw5rSa",
           "uid": "9yrnNpKY",
           "label": "Upgrade with one",
           "options": [
@@ -4027,7 +3700,7 @@
       "hint": "Horde of Rats",
       "sections": [
         {
-          "id": "W72KybR",
+          "id": "L02TP00",
           "uid": "ZVCi5_ufOx",
           "label": "Upgrade all models with",
           "options": [
@@ -4086,7 +3759,7 @@
       "hint": "Snipers",
       "sections": [
         {
-          "id": "jLjv6Qp",
+          "id": "pnpvYwb",
           "uid": "fEYsY1C8QA",
           "label": "Replace Sniper Rifle",
           "options": [
@@ -4135,7 +3808,7 @@
           ]
         },
         {
-          "id": "_wB115b",
+          "id": "YMq9Wjt",
           "uid": "WbgY51VFak",
           "label": "Upgrade with",
           "options": [
@@ -4186,7 +3859,7 @@
       "hint": "Specialists - Master",
       "sections": [
         {
-          "id": "DM_MDnJ",
+          "id": "HRArst_",
           "uid": "Ua-AGMEW",
           "label": "Upgrade with one",
           "options": [
@@ -5018,6 +4691,15 @@
       "targetType": 1
     },
     {
+      "id": "74RjQ1k41DoO",
+      "name": "Armor",
+      "aliasedRuleId": null,
+      "description": "Counts as having Defense X+.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "C6MzEy1CnxTs",
       "name": "Repel Ambushers",
       "aliasedRuleId": null,
@@ -5187,6 +4869,15 @@
       "hasRating": true,
       "coreType": 1,
       "targetType": 2
+    },
+    {
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
+      "aliasedRuleId": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
     },
     {
       "id": "6mJw5IdqSqNC",

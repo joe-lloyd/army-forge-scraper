@@ -295,6 +295,56 @@ describe('findReplacedWeapons', () => {
     const matched = findReplacedWeapons('Replace all CCWs', pool);
     expect(matched.map(m => m.id)).toEqual(['ccw']);
   });
+
+  it('singularizes irregular plurals: pool "Custodian Axes" ↔ fragment "Custodian Axe"', () => {
+    const pool = [w({ id: 'ax', name: 'Custodian Axes' })];
+    const matched = findReplacedWeapons('Replace one Custodian Axe', pool);
+    expect(matched.map(m => m.id)).toEqual(['ax']);
+  });
+
+  it('singularizes -ies plurals: "Forward Sentries" ↔ "Forward Sentry"', () => {
+    const pool = [w({ id: 's', name: 'Forward Sentry' })];
+    const matched = findReplacedWeapons('Replace one Forward Sentries', pool);
+    expect(matched.map(m => m.id)).toEqual(['s']);
+  });
+});
+
+describe('parseSectionTargets / Nx prefix', () => {
+  it('parses "Nx " prefix into a per-application count', () => {
+    // Direct test of findTargetedWeapons via applyOption — using a pool with 4
+    // CCWs and a target "2x CCW", k=1 should remove 2 CCWs.
+    const pool = [w({ id: 'p', name: 'Lord Gauss Pistol', count: 1 }), w({ id: 'c', name: 'CCW', count: 4 })];
+    const unit = {
+      id: 'u', name: 'Lord', cost: 100, size: 1, quality: 3, defense: 3,
+      weapons: pool, rules: [],
+    } as unknown as Unit;
+    const section = { id: 's', label: 'Replace Lord Gauss Pistol and 2x CCW', variant: 'replace', targets: ['Lord Gauss Pistol', '2x CCW'] };
+    const option = {
+      id: 'o', label: 'Twin Heat Claws', cost: 10,
+      gains: [{ type: 'ArmyBookWeapon', id: 'thc', name: 'Twin Heat Claws', label: 'Twin Heat Claws', count: 1, attacks: 4, range: 0, specialRules: [] }],
+    };
+    const base = buildBaseLoadout(unit);
+    const next = applyOption(base, 'pkg', section, option, unit, DEFAULT_BALVAL_CONFIG, { applicationCount: 1 })!;
+    expect(next).not.toBeNull();
+    expect(next.weapons.find(w => w.id === 'p')).toBeUndefined();
+    expect(next.weapons.find(w => w.id === 'c')!.count).toBe(2); // 4 - 2 = 2
+    expect(next.weapons.find(w => w.id === 'thc')!.count).toBe(1);
+  });
+
+  it('returns null when "Nx " target exceeds pool', () => {
+    const pool = [w({ id: 'c', name: 'CCW', count: 1 })];
+    const unit = {
+      id: 'u', name: 'U', cost: 50, size: 1, quality: 3, defense: 3,
+      weapons: pool, rules: [],
+    } as unknown as Unit;
+    const section = { id: 's', label: 'Replace 2x CCW', variant: 'replace', targets: ['2x CCW'] };
+    const option = {
+      id: 'o', label: 'Big', cost: 5,
+      gains: [{ type: 'ArmyBookWeapon', id: 'b', name: 'Big', label: 'Big', count: 1, attacks: 2, range: 0, specialRules: [] }],
+    };
+    const base = buildBaseLoadout(unit);
+    expect(applyOption(base, 'pkg', section, option, unit, DEFAULT_BALVAL_CONFIG, { applicationCount: 1 })).toBeNull();
+  });
 });
 
 describe('getOptionCost', () => {

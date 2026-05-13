@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "update-data": "node ../../scripts/generate-manifests.js && rm -rf public/data && mkdir -p public/data && cp -R ../../data/* public/data/",
+    "update-data": "mkdir -p public/data && cp -R ../../data/. public/data/ && node ../../scripts/generate-manifests.js public/data",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run"

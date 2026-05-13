@@ -14,6 +14,191 @@
   "backgroundFull": "The Goblins long dwelt deep beneath the surface of their world, emerging to the surface only in times of desperation to forage and hunt what they could from the surface. None know for certain what initially drove them underground; some Goblin legends speak of a great war, but most claim that their ancestors have always lived this way. For much of their history, their world was ignored by the larger species until it came to be settled by a group of Human renegades seeking a world where they could operate outside of the confines of the Great Human Alliance.\n\nThe Goblins readily embraced their new neighbours, emerging at night to visit the ever-growing Human cities. The Humans and Goblins formed a strange friendship, with Goblins offering help and supplies to the newly settled colonists while the Humans gave them gadgets and tools. Close to a century of collaboration ended with a series of earth-shaking explosions that nearly sealed them forever inside of their caves.\n\nSeeking to escape their now crumbling homes, the Goblins fled onto the surface. There, they discovered that the Humans had disappeared but left behind a wealth of technology and infrastructure for them to use, though much of it was badly in need of their unique touch for repairs, and other parts seemed to bring on strange changes in the Goblins. Some saw this as another odd gift left by their former companions, while others exercised greater caution.\n\nRemembering that the Humans came from the stars, the Goblins wasted no time in seeking out and assembling space-worthy ships to seek out their companions. Eventually, they did encounter Humans among the stars, but these ones didn’t recognise the Goblins and had little time for their antics, treating them as annoyances rather than friends. Dejected but not unwilling to give up hope of reunion, the Goblins continue to seek out their old friends and new gadgets among the stars, even as many find their chaotic outlook to be more dangerous than endearing.\n\nWhat treasures will you find among the stars?",
   "units": [
     {
+      "id": "E8xb3jd",
+      "cost": 155,
+      "name": "Death Walker Champ",
+      "size": 1,
+      "bases": {
+        "round": "50",
+        "square": "50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "rblJ2IkYaFon",
+          "name": "Mischievous",
+          "label": "Mischievous"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "oY-8OBeM",
+          "name": "Rapid Rocket Launcher",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 18,
+          "attacks": 2,
+          "weaponId": "_kRmfz9d",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Rapid Rocket Launcher (18\", A2, AP(2), Deadly(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "5HrEUnYw",
+          "name": "Heavy Claw",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 6,
+          "weaponId": "fHfG_5JF",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Heavy Claw (A6, AP(1))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "E1",
+        "uedZbXye",
+        "JPh9UHhO"
+      ],
+      "genericName": "Mini-Walker Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "z5hi0Bk",
+      "cost": 140,
+      "name": "Killer Tank Champ",
+      "size": 1,
+      "bases": {
+        "round": "60",
+        "square": "50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "KdgwlPb8LuD2",
+          "name": "Fast",
+          "label": "Fast"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "rblJ2IkYaFon",
+          "name": "Mischievous",
+          "label": "Mischievous"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "qqU_FYg7",
+          "name": "Rapid Rocket Launcher",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 18,
+          "attacks": 2,
+          "weaponId": "_kRmfz9d",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Rapid Rocket Launcher (18\", A2, AP(2), Deadly(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "5HrEUnYw",
+          "name": "Crew",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "uGIqWrDI",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Crew (A2)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "E1",
+        "uedZbXye",
+        "9-1LtObf"
+      ],
+      "genericName": "Mini-Tank Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "F8XwFML",
       "cost": 35,
       "name": "Boss Champ",
@@ -1021,7 +1206,7 @@
       "hint": "Specialists",
       "sections": [
         {
-          "id": "S34SBkD",
+          "id": "PYfLu1f",
           "uid": "FrtCkJc",
           "label": "Upgrade with one",
           "options": [
@@ -1029,6 +1214,14 @@
               "uid": "ZP5Xs",
               "type": "ArmyBookUpgradeOption",
               "costs": [
+                {
+                  "unitId": "E8xb3jd",
+                  "cost": 10
+                },
+                {
+                  "unitId": "z5hi0Bk",
+                  "cost": 10
+                },
                 {
                   "unitId": "F8XwFML",
                   "cost": 10
@@ -1061,6 +1254,14 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
+                  "unitId": "E8xb3jd",
+                  "cost": 15
+                },
+                {
+                  "unitId": "z5hi0Bk",
+                  "cost": 15
+                },
+                {
                   "unitId": "F8XwFML",
                   "cost": 15
                 }
@@ -1089,6 +1290,14 @@
               "uid": "2ppNqeHIiv",
               "type": "ArmyBookUpgradeOption",
               "costs": [
+                {
+                  "unitId": "E8xb3jd",
+                  "cost": 15
+                },
+                {
+                  "unitId": "z5hi0Bk",
+                  "cost": 15
+                },
                 {
                   "unitId": "F8XwFML",
                   "cost": 15
@@ -1119,6 +1328,14 @@
               "type": "ArmyBookUpgradeOption",
               "costs": [
                 {
+                  "unitId": "E8xb3jd",
+                  "cost": 35
+                },
+                {
+                  "unitId": "z5hi0Bk",
+                  "cost": 35
+                },
+                {
                   "unitId": "F8XwFML",
                   "cost": 35
                 }
@@ -1148,6 +1365,14 @@
               "uid": "RFuPL",
               "type": "ArmyBookUpgradeOption",
               "costs": [
+                {
+                  "unitId": "E8xb3jd",
+                  "cost": 35
+                },
+                {
+                  "unitId": "z5hi0Bk",
+                  "cost": 35
+                },
                 {
                   "unitId": "F8XwFML",
                   "cost": 35
@@ -1191,7 +1416,7 @@
       "hint": "Storm Mob",
       "sections": [
         {
-          "id": "5FueAz2",
+          "id": "vJx8q_u",
           "uid": "ym3iLDS",
           "label": "Replace one Pistols",
           "options": [
@@ -1392,7 +1617,7 @@
           ]
         },
         {
-          "id": "lkYoo4P",
+          "id": "DUoQZxJ",
           "uid": "tMYvR",
           "label": "Replace one Pistols and CCWS",
           "options": [
@@ -1634,7 +1859,7 @@
           ]
         },
         {
-          "id": "7KViYMr",
+          "id": "g4_q7WQ",
           "uid": "d4Fdl",
           "label": "Upgrade all models with",
           "options": [
@@ -1689,7 +1914,7 @@
       "hint": "Replace Rocket Launcher",
       "sections": [
         {
-          "id": "uwsR2qH",
+          "id": "j6idYGV",
           "uid": "whHTnPm",
           "label": "Replace any Rocket Launcher",
           "options": [
@@ -1884,7 +2109,7 @@
       "hint": "Death Walkers",
       "sections": [
         {
-          "id": "T_AXA2D",
+          "id": "Nd6Fuu6",
           "uid": "5fEvSs_",
           "label": "Replace any Mini-Claw",
           "options": [
@@ -1948,7 +2173,7 @@
       "hint": "Champ Upgrades",
       "sections": [
         {
-          "id": "AZ9YKMG",
+          "id": "VTjOign",
           "uid": "605oW",
           "label": "Replace Boss Pistol and CCW",
           "options": [
@@ -1997,7 +2222,7 @@
           ]
         },
         {
-          "id": "b73Rgey",
+          "id": "EJkGGbJ",
           "uid": "HxNSG",
           "label": "Replace Boss Pistol",
           "options": [
@@ -2255,7 +2480,7 @@
           ]
         },
         {
-          "id": "6K9CjeS",
+          "id": "TKxYUJu",
           "uid": "Vr4UW",
           "label": "Replace CCW",
           "options": [
@@ -2417,7 +2642,7 @@
           ]
         },
         {
-          "id": "dUZ9TIn",
+          "id": "8f42R67",
           "uid": "d9-aT7cU",
           "label": "Upgrade with",
           "options": [
@@ -2457,7 +2682,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "YLhX1Fo",
+          "id": "TBnkqA6",
           "uid": "HcJ1LM6z",
           "label": "Upgrade with one",
           "options": [
@@ -2694,7 +2919,7 @@
       "hint": "Shooter Mob",
       "sections": [
         {
-          "id": "7bhkB7O",
+          "id": "Euo3mWp",
           "uid": "V2mAO",
           "label": "Replace one Scrap Guns",
           "options": [
@@ -2901,7 +3126,7 @@
       "hint": "Commandos",
       "sections": [
         {
-          "id": "CSvE6m-",
+          "id": "JoF3-tt",
           "uid": "u1vYO",
           "label": "Replace all Scrap Guns and CCWS",
           "options": [
@@ -3002,7 +3227,7 @@
           ]
         },
         {
-          "id": "BmXayKR",
+          "id": "dsQDo5k",
           "uid": "Ni8MN",
           "label": "Replace one Scrap Gun",
           "options": [
@@ -3202,7 +3427,7 @@
           ]
         },
         {
-          "id": "bp9q0Tn",
+          "id": "pP9a0r7",
           "uid": "7gmn5",
           "label": "Replace one Scrap Guns",
           "options": [
@@ -3256,7 +3481,7 @@
           ]
         },
         {
-          "id": "kYPpcor",
+          "id": "iku8ZgE",
           "uid": "-H-M_",
           "label": "Upgrade all models with",
           "options": [
@@ -3308,7 +3533,7 @@
       "hint": "Boss Mob",
       "sections": [
         {
-          "id": "8EUTmoB",
+          "id": "FXRPbN_",
           "uid": "K7TTu",
           "label": "Replace any Boss Pistol",
           "options": [
@@ -3388,7 +3613,7 @@
           ]
         },
         {
-          "id": "LdAZ8E0",
+          "id": "-rDdrlN",
           "uid": "JCxXJ",
           "label": "Replace Boss Pistol",
           "options": [
@@ -3584,7 +3809,7 @@
           ]
         },
         {
-          "id": "fJRf2Dn",
+          "id": "ividoNU",
           "uid": "My00h",
           "label": "Take one Boss Carbine attachment",
           "options": [
@@ -3763,7 +3988,7 @@
           ]
         },
         {
-          "id": "hereTzB",
+          "id": "vlUfdqw",
           "uid": "vdY6f",
           "label": "Replace CCW",
           "options": [
@@ -3932,7 +4157,7 @@
       "hint": "Squad Upgrades",
       "sections": [
         {
-          "id": "IjZaQow",
+          "id": "qp_eh20",
           "uid": "UdQZ1",
           "label": "Upgrade one model with one",
           "options": [
@@ -4024,7 +4249,7 @@
       "hint": "Looters",
       "sections": [
         {
-          "id": "oGVn0wU",
+          "id": "g1eOa09",
           "uid": "Udzqn",
           "label": "Replace any Heavy Machinegun",
           "options": [
@@ -4236,7 +4461,7 @@
       "hint": "Freaks",
       "sections": [
         {
-          "id": "tUK036s",
+          "id": "T9ieu2y",
           "uid": "woY8V",
           "label": "Upgrade with",
           "options": [
@@ -4284,7 +4509,7 @@
       "hint": "Scout Bikers",
       "sections": [
         {
-          "id": "WqcP5Gm",
+          "id": "o1YzCPL",
           "uid": "48U6R",
           "label": "Replace one Pistol",
           "options": [
@@ -4491,7 +4716,7 @@
           ]
         },
         {
-          "id": "WqR00NI",
+          "id": "8ndgk__",
           "uid": "ksuiQ",
           "label": "Replace one Pistol and CCW",
           "options": [
@@ -4706,7 +4931,7 @@
           ]
         },
         {
-          "id": "galucki",
+          "id": "GOzPloo",
           "uid": "JwtWdsSHe7",
           "label": "Replace all Trekker Tires",
           "options": [
@@ -4763,7 +4988,7 @@
       "hint": "Bug Riders",
       "sections": [
         {
-          "id": "XiKAHvy",
+          "id": "qZzwSJa",
           "uid": "HOn2w",
           "label": "Replace any Scrap Gun",
           "options": [
@@ -4975,7 +5200,7 @@
       "hint": "Ramshackle Crew",
       "sections": [
         {
-          "id": "IHyXfuK",
+          "id": "zNc9JjZ",
           "uid": "EiLXz",
           "label": "Upgrade all models with",
           "options": [
@@ -5040,7 +5265,7 @@
       "hint": "Trash Goggles",
       "sections": [
         {
-          "id": "zLyAe-Q",
+          "id": "EVwBCIY",
           "uid": "J7Q-OgHj8J",
           "label": "Upgrade all models with",
           "options": [
@@ -5118,7 +5343,7 @@
       "hint": "Specialists - Champ",
       "sections": [
         {
-          "id": "lpbdCYF",
+          "id": "Hf-O1rC",
           "uid": "SzbcJiHl",
           "label": "Upgrade with one",
           "options": [
@@ -5292,7 +5517,7 @@
       "hint": "Boss Champ Upgrades",
       "sections": [
         {
-          "id": "7QiJxHv",
+          "id": "Efj1elZ",
           "uid": "io9FXH3R",
           "label": "Replace Boss Pistol and CCW",
           "options": [
@@ -5341,7 +5566,7 @@
           ]
         },
         {
-          "id": "wUmhXke",
+          "id": "oX3bAIn",
           "uid": "rpIiu2iU",
           "label": "Replace Boss Pistol",
           "options": [
@@ -5603,7 +5828,7 @@
           ]
         },
         {
-          "id": "6LgQh1h",
+          "id": "9Q8YFRV",
           "uid": "S3wzfbYs",
           "label": "Take one Boss Carbine attachment",
           "options": [
@@ -5788,7 +6013,7 @@
           ]
         },
         {
-          "id": "4hai37B",
+          "id": "XcRl9z7",
           "uid": "56r-32YA",
           "label": "Replace CCW",
           "options": [
@@ -5950,7 +6175,7 @@
           ]
         },
         {
-          "id": "OeDTja8",
+          "id": "dq8DJtp",
           "uid": "n9bPOv_Y",
           "label": "Upgrade with one",
           "options": [
@@ -6177,11 +6402,264 @@
       "calcErrors": false
     },
     {
+      "uid": "uedZbXye",
+      "hint": "Replace Rapid Rocket Launcher",
+      "sections": [
+        {
+          "id": "HYNMqyY",
+          "uid": "kuZC4g4x",
+          "label": "Replace Rapid Rocket Launcher",
+          "options": [
+            {
+              "uid": "_ZAYQnWK",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "E8xb3jd",
+                  "cost": 5
+                },
+                {
+                  "unitId": "z5hi0Bk",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Rapid Heavy Flamer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 2,
+                  "weaponId": "s-D9OpeR",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rapid Heavy Flamer (12\", A2, AP(1), Blast(3), Reliable)"
+                }
+              ],
+              "label": "Rapid Heavy Flamer (12\", A2, AP(1), Blast(3), Reliable)",
+              "parentSectionId": "kuZC4g4x",
+              "parentPackageUid": "nx-cs1HA",
+              "parentSectionUid": "whHTnPm",
+              "id": "_ZAYQnWK"
+            },
+            {
+              "uid": "YiZ65vow",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "E8xb3jd",
+                  "cost": 25
+                },
+                {
+                  "unitId": "z5hi0Bk",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": "_OuuPXyd",
+                  "name": "Rapid Heavy Machinegun",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 6,
+                  "weaponId": "l0FXjwb_",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rapid Heavy Machinegun (30\", A6, AP(1))"
+                }
+              ],
+              "label": "Rapid Heavy Machinegun (30\", A6, AP(1))",
+              "parentSectionId": "kuZC4g4x",
+              "parentPackageUid": "nx-cs1HA",
+              "parentSectionUid": "whHTnPm",
+              "id": "YiZ65vow"
+            },
+            {
+              "uid": "XZdDXzx3",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "E8xb3jd",
+                  "cost": 30
+                },
+                {
+                  "unitId": "z5hi0Bk",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Bubble Cannon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 1,
+                  "weaponId": "MTCjrw4X",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 6
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Bubble Cannon (30\", A1, AP(4), Blast(6))"
+                }
+              ],
+              "label": "Heavy Bubble Cannon (30\", A1, AP(4), Blast(6))",
+              "parentSectionId": "kuZC4g4x",
+              "parentPackageUid": "nx-cs1HA",
+              "parentSectionUid": "whHTnPm",
+              "id": "XZdDXzx3"
+            },
+            {
+              "uid": "mwHXLrAo",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "E8xb3jd",
+                  "cost": 55
+                },
+                {
+                  "unitId": "z5hi0Bk",
+                  "cost": 55
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Chucker Cannon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 8,
+                  "weaponId": "A6lMzAz6",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Chucker Cannon (24\", A8, Rending)"
+                }
+              ],
+              "label": "Heavy Chucker Cannon (24\", A8, Rending)",
+              "parentSectionId": "kuZC4g4x",
+              "parentPackageUid": "nx-cs1HA",
+              "parentSectionUid": "whHTnPm",
+              "id": "mwHXLrAo"
+            }
+          ],
+          "parentPackageUid": "nx-cs1HA",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Rapid Rocket Launcher"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "JPh9UHhO",
+      "hint": "Death Walkers Champ",
+      "sections": [
+        {
+          "id": "atEPb48",
+          "uid": "XqaC-evj",
+          "label": "Replace Heavy Claw",
+          "options": [
+            {
+              "uid": "wgqk8rR2",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "E8xb3jd",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "yJu8g7H4",
+                  "name": "Heavy Saw",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "2I_2I3cw",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Saw (A2, AP(2), Deadly(3))"
+                }
+              ],
+              "label": "Heavy Saw (A2, AP(2), Deadly(3))",
+              "parentSectionId": "XqaC-evj",
+              "parentPackageUid": "UbAQZhQH",
+              "parentSectionUid": "5fEvSs_",
+              "id": "wgqk8rR2"
+            }
+          ],
+          "parentPackageUid": "UbAQZhQH",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Heavy Claw"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "jzpf-arg",
       "hint": "Killer Tanks",
       "sections": [
         {
-          "id": "O3rrpO6",
+          "id": "6VuGtNq",
           "uid": "sIpPmKBR1l",
           "label": "Upgrade with",
           "options": [
@@ -6218,6 +6696,54 @@
           ],
           "isLowPrio": true,
           "parentPackageUid": "jzpf-arg",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "9-1LtObf",
+      "hint": "Killer Tank Champ",
+      "sections": [
+        {
+          "id": "SE2RiPN",
+          "uid": "V67U162O-x",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "8u5hxirlMD",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "z5hi0Bk",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Self-Destruction Payload",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Self-Destruction Payload (Deathstrike(6))",
+                  "content": [
+                    {
+                      "id": "N0JRcI01vSBT",
+                      "name": "Deathstrike",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Self-Destruction Payload (Deathstrike(6))",
+              "parentSectionId": "V67U162O-x",
+              "id": "8u5hxirlMD"
+            }
+          ],
+          "isLowPrio": true,
+          "parentPackageUid": "9-1LtObf",
           "type": "ArmyBookUpgradeSection",
           "variant": "upgrade"
         }

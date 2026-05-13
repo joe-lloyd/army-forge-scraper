@@ -226,6 +226,97 @@
       "disabledUpgradeSections": []
     },
     {
+      "id": "CvN76df",
+      "cost": 115,
+      "name": "Harbinger of Havoc",
+      "size": 1,
+      "bases": {
+        "round": "60",
+        "square": "50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "wjTOj41tskFD",
+          "name": "Havocbound",
+          "label": "Havocbound"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "ZTSyiYU9",
+          "name": "Daemon Hammer",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "ukndQrmT",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "2x Daemon Hammer (A1, Blast(3))",
+          "originalCount": 2
+        },
+        {
+          "id": "QiySZXJJ",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "hyB0WaAL",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Stomp (A2, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "C1"
+      ],
+      "genericName": "Heavy Daemon Lord",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "8LD0dh8",
       "cost": 15,
       "name": "Barbarian Horseman",
@@ -1135,7 +1226,7 @@
       "hint": "Havoc Master",
       "sections": [
         {
-          "id": "Gk8wGW9",
+          "id": "egs29z4",
           "uid": "qPsrtux",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1321,7 +1412,7 @@
           ]
         },
         {
-          "id": "tQKU2gr",
+          "id": "lCc_Q0F",
           "uid": "YVgJPFp",
           "label": "Upgrade with one",
           "options": [
@@ -1438,6 +1529,207 @@
               "label": "Daemon Mount (Heavy Claws (A1, AP(1)), Fast, Fear(1), Impact(2), Tough(3))",
               "parentSectionId": "YVgJPFp",
               "id": "7gHEUZM"
+            },
+            {
+              "uid": "IqVrJ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vnS2q8Z",
+                  "cost": 135
+                },
+                {
+                  "unitId": "OJyY0_j",
+                  "cost": 130
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Chariot (Hooves (A2), Fast, Impact(4), Tough(6))",
+                  "content": [
+                    {
+                      "id": null,
+                      "name": "Hooves",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 2,
+                      "weaponId": "syIXEXrR",
+                      "specialRules": [],
+                      "attacksMultiplier": 1,
+                      "label": "Hooves (A2)"
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Chariot (Hooves (A2), Fast, Impact(4), Tough(6))",
+              "parentSectionId": "YVgJPFp",
+              "id": "IqVrJ"
+            },
+            {
+              "uid": "MGH9S",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vnS2q8Z",
+                  "cost": 150
+                },
+                {
+                  "unitId": "OJyY0_j",
+                  "cost": 145
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Beast Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Beast Chariot (Heavy Claws (A2, AP(1)), Fast, Fear(1), Impact(4), Tough(6))",
+                  "content": [
+                    {
+                      "id": null,
+                      "name": "Heavy Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 2,
+                      "weaponId": "-psCHjQv",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "type": "ArmyBookRule",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Heavy Claws (A2, AP(1))"
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Beast Chariot (Heavy Claws (A2, AP(1)), Fast, Fear(1), Impact(4), Tough(6))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "YVgJPFp",
+              "parentSectionId": "YVgJPFp",
+              "id": "MGH9S"
+            },
+            {
+              "uid": "iOGKJV4",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vnS2q8Z",
+                  "cost": 180
+                },
+                {
+                  "unitId": "OJyY0_j",
+                  "cost": 165
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Manticore",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Manticore (Rending Claws (A6, Rending), Fear(1), Flying, Tough(6))",
+                  "content": [
+                    {
+                      "id": "IcQtuXcb",
+                      "name": "Rending Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "HXmtQukA",
+                      "specialRules": [
+                        {
+                          "id": "cavWDboL4ubs",
+                          "name": "Rending",
+                          "type": "ArmyBookRule"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Rending Claws (A6, Rending)"
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Manticore (Rending Claws (A6, Rending), Fear(1), Flying, Tough(6))",
+              "parentSectionId": "YVgJPFp",
+              "id": "iOGKJV4"
             }
           ],
           "parentPackageUid": "A1",
@@ -1456,7 +1748,7 @@
       "hint": "Barbarian Champion",
       "sections": [
         {
-          "id": "8kP-k_s",
+          "id": "XvOxRw7",
           "uid": "XA68TNV",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1607,7 +1899,7 @@
           ]
         },
         {
-          "id": "ljAualW",
+          "id": "J38njg-",
           "uid": "wNlvXlQsHs",
           "label": "Upgrade with one",
           "options": [
@@ -1685,7 +1977,7 @@
           }
         },
         {
-          "id": "W6M668T",
+          "id": "X9nRiya",
           "uid": "UC7mK79",
           "label": "Replace Raid Master",
           "options": [
@@ -1744,11 +2036,284 @@
       "calcErrors": false
     },
     {
+      "uid": "C1",
+      "hint": "Harbinger of Havoc",
+      "sections": [
+        {
+          "id": "7cA58Bj",
+          "uid": "zGnYp",
+          "label": "Replace any Daemon Hammer",
+          "options": [
+            {
+              "uid": "LxL-N",
+              "cost": 0,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CvN76df",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Daemon Chain",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 3,
+                  "weaponId": "jh2KBhR2",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Daemon Chain (12\", A3)"
+                }
+              ],
+              "label": "Daemon Chain (12\", A3)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "zGnYp",
+              "parentSectionId": "zGnYp",
+              "id": "LxL-N"
+            },
+            {
+              "uid": "XLwzd",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CvN76df",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "JKmqHirS",
+                  "name": "Daemon Spear",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "JKmqHirS",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Daemon Spear (A1, AP(2), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Daemon Spear (A1, AP(2), Deadly(3))",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "zGnYp",
+              "parentSectionId": "zGnYp",
+              "id": "XLwzd"
+            },
+            {
+              "uid": "B54hC",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CvN76df",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "ukndQrmT",
+                  "name": "Daemon Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 3,
+                  "weaponId": "ZTSyiYU9",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Daemon Sword (A3, AP(1), Rending)"
+                }
+              ],
+              "label": "Daemon Sword (A3, AP(1), Rending)",
+              "parentSectionId": "zGnYp",
+              "id": "B54hC"
+            },
+            {
+              "uid": "PNXcvDx",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CvN76df",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "id": "wjxExpX9",
+                  "name": "Daemon Gauntlet",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "wjxExpX9",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Daemon Gauntlet (A3, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Daemon Gauntlet (A3, AP(4))",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "zGnYp",
+              "parentSectionId": "zGnYp",
+              "id": "PNXcvDx"
+            }
+          ],
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Daemon Hammer"
+          ]
+        },
+        {
+          "id": "tq3-9V0",
+          "uid": "F0meGiD",
+          "label": "Upgrade with any",
+          "options": [
+            {
+              "uid": "igk49az",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CvN76df",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Daemonic Incursion",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Daemonic Incursion (Ambush)",
+                  "content": [
+                    {
+                      "id": "6mJw5IdqSqNC",
+                      "name": "Ambush",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Daemonic Incursion (Ambush)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "F0meGiD",
+              "parentSectionId": "F0meGiD",
+              "id": "igk49az"
+            },
+            {
+              "uid": "y3CDm08xXt",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CvN76df",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Wings",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Wings (Flying)",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Wings (Flying)",
+              "parentSectionId": "F0meGiD",
+              "id": "y3CDm08xXt"
+            },
+            {
+              "uid": "PdHmRY1",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "CvN76df",
+                  "cost": 65
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Lore of Havoc",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Lore of Havoc (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Lore of Havoc (Caster(3))",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "F0meGiD",
+              "parentSectionId": "F0meGiD",
+              "id": "PdHmRY1"
+            }
+          ],
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "any"
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "D1",
       "hint": "Command Group",
       "sections": [
         {
-          "id": "PphVwbx",
+          "id": "3sWHx9V",
           "uid": "73zh5cY",
           "label": "Upgrade one model with one",
           "options": [
@@ -1909,7 +2474,7 @@
       "hint": "Barbarian Raiders",
       "sections": [
         {
-          "id": "E_mvLyj",
+          "id": "bti31xN",
           "uid": "BPYTscQ",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2001,7 +2566,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "C-qIAKh",
+          "id": "EPcxYLw",
           "uid": "02QBHyf",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -2149,7 +2714,7 @@
       "hint": "Havoc Ogres",
       "sections": [
         {
-          "id": "54KtfUf",
+          "id": "scS1z68",
           "uid": "dXSq7kE",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2206,7 +2771,7 @@
       "hint": "Drake-Centaurs",
       "sections": [
         {
-          "id": "s2CJxKM",
+          "id": "1KW4FrB",
           "uid": "4bPr2xl",
           "label": "Replace Heavy Great Weapons and Stomp",
           "options": [
@@ -2264,7 +2829,7 @@
       "hint": "Havoc Hounds",
       "sections": [
         {
-          "id": "pggSz9R",
+          "id": "d_E-8mT",
           "uid": "RV8hzBv",
           "label": "Upgrade with",
           "options": [
@@ -2306,7 +2871,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "nnbMDAM",
+          "id": "6DLSeV_",
           "uid": "EOhd7SF0j7",
           "label": "Replace Malicious Predator",
           "options": [
@@ -2358,7 +2923,7 @@
       "hint": "Barbarian Horsemen",
       "sections": [
         {
-          "id": "XuHZvYX",
+          "id": "rHRghTx",
           "uid": "MX73VVV",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2407,7 +2972,7 @@
           ]
         },
         {
-          "id": "F4sW3LH",
+          "id": "v8-D1G6",
           "uid": "ABClf49",
           "label": "Upgrade with one",
           "options": [
@@ -2495,7 +3060,7 @@
       "hint": "Havoc Knights",
       "sections": [
         {
-          "id": "AeuEjsq",
+          "id": "DRIrYrt",
           "uid": "5CxcNHu",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -2557,7 +3122,7 @@
       "hint": "Daemonic Guard Knights",
       "sections": [
         {
-          "id": "CCXzb6_",
+          "id": "vby0Ehe",
           "uid": "9l9eAVf",
           "label": "Replace Hexed Weapon",
           "options": [
@@ -2619,7 +3184,7 @@
       "hint": "Havoc Furies",
       "sections": [
         {
-          "id": "KjjG8X4",
+          "id": "4oAcYke",
           "uid": "tDjVk",
           "label": "Replace all Armblades",
           "options": [
@@ -2678,7 +3243,7 @@
       "hint": "Havoc Soul Spawns",
       "sections": [
         {
-          "id": "ijZygYu",
+          "id": "8RJCwmw",
           "uid": "BdL0x",
           "label": "Replace Mutated Claws",
           "options": [
@@ -2730,7 +3295,7 @@
       "hint": "Specialists - Master",
       "sections": [
         {
-          "id": "MqKmQX4",
+          "id": "K25ESrg",
           "uid": "Qs1WZj0f",
           "label": "Upgrade with one",
           "options": [
@@ -2995,7 +3560,7 @@
       "hint": "Icon of Havoc",
       "sections": [
         {
-          "id": "GoXlUs_",
+          "id": "cByfic-",
           "uid": "PJHzBo6L",
           "label": "Upgrade one model with one",
           "options": [
@@ -3120,7 +3685,7 @@
       "hint": "Specialists - Barbarian",
       "sections": [
         {
-          "id": "gELhW2S",
+          "id": "eLgiLIg",
           "uid": "veEZsw1h",
           "label": "Upgrade with one",
           "options": [
@@ -3294,7 +3859,7 @@
       "hint": "Barbarian Hunters",
       "sections": [
         {
-          "id": "bpVuSnK",
+          "id": "hAJrlfs",
           "uid": "NpBqV1sJ",
           "label": "Replace all Shortbows",
           "options": [

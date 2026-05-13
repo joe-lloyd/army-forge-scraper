@@ -15,6 +15,106 @@
   "backgroundFull": "Rift Daemons are born from the last survivors of a pantheon of dying gods, known to Tyria as the Havoc Gods. Desperate to survive, these gods sought out followers from the lost and desperate, and offered them power in exchange for worship. Those who rejected these gods came to know them as Havoc Gods due to the zealotry of their followers and the unrest that they caused. \n\nThe Havoc Gods came to Tyria soon after Voidgates had been discovered. As mages and adventurers activated Voidgates throughout the land, the influence of Havoc began to spread. The Havoc Gods saw Tyria as a fascinating plane due to the diversity of its peoples, where they could find all sorts of different new followers. \n\nDaemons were sent into Tyria by their gods, spreading throughout the plane. They sought out followers for their Gods, either through promises of power, or shows of force. They found followers throughout Tyria, whom they guided to conquer others. Treachery, war, and bloodshed became commonplace as the Havoc Wars began. Daemons were seen throughout the continent, fighting alone or alongside mortal allies, as they and their masters threatened to overrun the plane.\n\nThe Havoc Gods were on the verge of victory when they fell into a desperate trap set by their enemies. The most powerful mages of Tyria gave their lives in a ritual that managed to seal the Havoc Gods into the Orb of Fate. Suddenly severed from their creators, the forces of Havoc were defeated. The surviving Daemons fled and hid throughout Tyria, escaping wherever they could, while their foes enjoyed an era of peace and prosperity. \n\nThis peace was brought to an abrupt end when, centuries later, the orb was broken by the heirs of the most powerful Human Empire in Tyria. The Havoc Gods were freed, and the power unleashed by the broken orb tore through the heart of Tyria, scarring the land and opening a massive fissure, cutting through much of the plane. This great scar became known as the Rift, and from it, the Daemons began to emerge once more into Tyria. \n\nThe Rift Daemons are eager to return to their masters and avenge their defeat. They have already spread throughout many corners of Tyria, and their hordes grow steadily with each passing day. With their old foes complacent and divided, there are few who can stand against them while they are ready to once more bend Tyria to the will of their gods. \n\nHow will you bring glory to your god?",
   "units": [
     {
+      "id": "vB9x-hR",
+      "cost": 120,
+      "name": "Harbinger of Plague",
+      "size": 1,
+      "bases": {
+        "round": "90x52",
+        "square": "75x50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "additional": false,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "additional": false,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "O_wrvW7FiJWX",
+          "name": "Plaguebound",
+          "label": "Plaguebound"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "zsXPFW_r",
+          "name": "Plague Hammer",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": null,
+          "attacks": 1,
+          "weaponId": "QfG9sehC",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "Naqc5mga9Uha",
+              "name": "Bane",
+              "label": "Bane"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "2x Plague Hammer (A1, Blast(3), Bane)",
+          "originalCount": 2
+        },
+        {
+          "id": "BsqHZ6FD",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "hyB0WaAL",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Stomp (A2, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "VWRrd",
+        "NV-_X09O"
+      ],
+      "genericName": "Plague Heavy Daemon Lord",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "7NfheZg",
       "cost": 40,
       "name": "Champion of Plague",
@@ -786,7 +886,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "SXb025b",
+          "id": "apYsfgP",
           "uid": "6VwJPph",
           "label": "Upgrade one model with one",
           "options": [
@@ -911,7 +1011,7 @@
       "hint": "Plague Warriors",
       "sections": [
         {
-          "id": "_oXieD3",
+          "id": "UntBxOJ",
           "uid": "97DeS-1",
           "label": "Replace all Infected Swords",
           "options": [
@@ -1112,7 +1212,7 @@
           ]
         },
         {
-          "id": "0FGz5k1",
+          "id": "Uip1d1X",
           "uid": "2KxLhuHf",
           "label": "Upgrade all models with",
           "options": [
@@ -1157,7 +1257,7 @@
           }
         },
         {
-          "id": "AXU50EG",
+          "id": "CrpIazm",
           "uid": "HT8ocIZ",
           "label": "Upgrade one model with",
           "options": [
@@ -1210,7 +1310,7 @@
       "hint": "Plague Fly Riders",
       "sections": [
         {
-          "id": "mTtAGy9",
+          "id": "fUR8e19",
           "uid": "qO9zQ",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1257,7 +1357,7 @@
           ]
         },
         {
-          "id": "j2dkcP9",
+          "id": "trFZXeH",
           "uid": "QJ9Phbz",
           "label": "Replace Stinger",
           "options": [
@@ -1310,7 +1410,7 @@
           ]
         },
         {
-          "id": "2AZoVZT",
+          "id": "y6LtF9e",
           "uid": "dEZjAIW",
           "label": "Upgrade with any",
           "options": [
@@ -1397,7 +1497,7 @@
       "hint": "Furies",
       "sections": [
         {
-          "id": "HyoofnF",
+          "id": "KLYdZ23",
           "uid": "fpyuQ",
           "label": "Replace Infected Claws",
           "options": [
@@ -1488,11 +1588,398 @@
       "calcErrors": false
     },
     {
+      "uid": "VWRrd",
+      "hint": "Harbinger",
+      "sections": [
+        {
+          "id": "T-VsUzp",
+          "uid": "YXfsx",
+          "label": "Replace any Plague Hammer",
+          "options": [
+            {
+              "uid": "V826f",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Infected Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "SR6kgqwm",
+                  "specialRules": [
+                    {
+                      "id": "5v6oaGfrdf29",
+                      "name": "Surge"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Infected Sword (A3, Surge)"
+                }
+              ],
+              "label": "Heavy Infected Sword (A3, Surge)",
+              "parentPackageUid": "VWRrd",
+              "parentSectionUid": "YXfsx",
+              "parentSectionId": "YXfsx",
+              "id": "V826f"
+            },
+            {
+              "uid": "AzxWr",
+              "cost": 0,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Scatter-Sling",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 4,
+                  "weaponId": "dR7aPSjZ",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Scatter-Sling (12\", A4, Bane)"
+                }
+              ],
+              "label": "Scatter-Sling (12\", A4, Bane)",
+              "parentPackageUid": "VWRrd",
+              "parentSectionUid": "YXfsx",
+              "parentSectionId": "YXfsx",
+              "id": "AzxWr"
+            },
+            {
+              "uid": "WuI3a1bGgW",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Sling",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "BJ2JhuJR",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sling (18\", A2, AP(1), Bane)"
+                }
+              ],
+              "label": "Sling (18\", A2, AP(1), Bane)",
+              "parentSectionId": "YXfsx",
+              "id": "WuI3a1bGgW"
+            },
+            {
+              "uid": "ES-5c",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Plague Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "ZfTuqwZd",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Plague Sword (A3, Rending, Bane)"
+                }
+              ],
+              "label": "Heavy Plague Sword (A3, Rending, Bane)",
+              "parentSectionId": "YXfsx",
+              "id": "ES-5c"
+            },
+            {
+              "uid": "hnhLQ",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Plague Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 1,
+                  "weaponId": "-L0mo2Fo",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Plague Spear (A1, AP(2), Deadly(3), Bane)"
+                }
+              ],
+              "label": "Plague Spear (A1, AP(2), Deadly(3), Bane)",
+              "parentPackageUid": "VWRrd",
+              "parentSectionUid": "YXfsx",
+              "parentSectionId": "YXfsx",
+              "id": "hnhLQ"
+            },
+            {
+              "uid": "1z3rE",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Plague Gauntlet",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "lAF8Q7sY",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Plague Gauntlet (A3, AP(3), Bane)"
+                }
+              ],
+              "label": "Heavy Plague Gauntlet (A3, AP(3), Bane)",
+              "parentPackageUid": "VWRrd",
+              "parentSectionUid": "YXfsx",
+              "parentSectionId": "YXfsx",
+              "id": "1z3rE"
+            }
+          ],
+          "parentPackageUid": "VWRrd",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Plague Hammer"
+          ]
+        },
+        {
+          "id": "8JNkyhA",
+          "uid": "A8Q5M",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "X67C8FJjZj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "rKzE-h8",
+                  "name": "Plague Boon",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Plague Boon (Fortified Growth)",
+                  "content": [
+                    {
+                      "id": "hGd-1A2fPuyh",
+                      "name": "Fortified Growth",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Plague Boon (Fortified Growth)",
+              "parentSectionId": "A8Q5M",
+              "id": "X67C8FJjZj"
+            },
+            {
+              "uid": "Jt4vwD_y3J",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "BTkInHf",
+                  "name": "Daemonic Incursion",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Daemonic Incursion (Ambush Aura)",
+                  "content": [
+                    {
+                      "id": "gOFh4u_LGrwP",
+                      "name": "Ambush Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Daemonic Incursion (Ambush Aura)",
+              "parentSectionId": "A8Q5M",
+              "parentPackageUid": "mw-3qPx9",
+              "id": "Jt4vwD_y3J"
+            },
+            {
+              "uid": "cIGLG",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Wings",
+                  "type": "ArmyBookItem",
+                  "label": "Wings (Flying)",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Wings (Flying)",
+              "parentPackageUid": "VWRrd",
+              "parentSectionUid": "A8Q5M",
+              "parentSectionId": "A8Q5M",
+              "id": "cIGLG"
+            },
+            {
+              "uid": "hhwNs9uZ6s",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fury Wings",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Fury Wings (Flying, Scout)",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Fury Wings (Flying, Scout)",
+              "parentSectionId": "A8Q5M",
+              "id": "hhwNs9uZ6s"
+            }
+          ],
+          "parentPackageUid": "VWRrd",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "78g-I",
       "hint": "Champion",
       "sections": [
         {
-          "id": "S4MhgB9",
+          "id": "EgV46Dt",
           "uid": "9txt0",
           "label": "Replace Sword and Plague Hammer",
           "options": [
@@ -1701,7 +2188,7 @@
           ]
         },
         {
-          "id": "Y6Wrh_d",
+          "id": "g9CVN-t",
           "uid": "9eW-I",
           "label": "Replace any Infected Sword",
           "options": [
@@ -1794,7 +2281,7 @@
           ]
         },
         {
-          "id": "9s_2J9j",
+          "id": "u5JqOPU",
           "uid": "H5nRE",
           "label": "Upgrade with one",
           "options": [
@@ -1987,7 +2474,7 @@
       "hint": "Fury Champion",
       "sections": [
         {
-          "id": "qz2UBQO",
+          "id": "q10qjwM",
           "uid": "rhph_",
           "label": "Replace Sword and Plague Hammer",
           "options": [
@@ -2198,7 +2685,7 @@
           ]
         },
         {
-          "id": "lj_sSam",
+          "id": "8Cvfs52",
           "uid": "vZMlo",
           "label": "Replace any Infected Sword",
           "options": [
@@ -2298,7 +2785,7 @@
       "hint": "Plague Soul Spawns",
       "sections": [
         {
-          "id": "P39uD2D",
+          "id": "-7IWoIi",
           "uid": "RDNe3",
           "label": "Replace Mutated Infected Claws",
           "options": [
@@ -2386,7 +2873,7 @@
       "hint": "Plague Slingers",
       "sections": [
         {
-          "id": "QDhVVSF",
+          "id": "yGiBU8Z",
           "uid": "Pvjn7YT0",
           "label": "Replace Scatter-Sling",
           "options": [
@@ -2437,7 +2924,7 @@
           ]
         },
         {
-          "id": "qLo59bE",
+          "id": "bk1UaN3",
           "uid": "tY_yT",
           "label": "Upgrade with",
           "options": [
@@ -2485,7 +2972,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "jwfwqoX",
+          "id": "HtLcxXG",
           "uid": "wBhze",
           "label": "Upgrade with one",
           "options": [
@@ -2695,7 +3182,7 @@
       "hint": "Plague Harvester",
       "sections": [
         {
-          "id": "956fJUz",
+          "id": "Z2J5QdG",
           "uid": "5m7d0Sdu",
           "label": "Upgrade with",
           "options": [
@@ -2743,7 +3230,7 @@
       "hint": "Sling-Furies",
       "sections": [
         {
-          "id": "Yd8LmOJ",
+          "id": "8BqEv38",
           "uid": "_67V3vG8Sd",
           "label": "Replace Scatter-Sling",
           "options": [
@@ -2800,7 +3287,7 @@
       "hint": "Specialists - Fury",
       "sections": [
         {
-          "id": "llx_Hwj",
+          "id": "a7kQOCB",
           "uid": "vu8Exo4S",
           "label": "Upgrade with one",
           "options": [
@@ -2931,6 +3418,184 @@
           ],
           "isHeroUpgrade": true,
           "parentPackageUid": "tZ1SihPd",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "NV-_X09O",
+      "hint": "Specialists - Harbinger",
+      "sections": [
+        {
+          "id": "XoUMsZe",
+          "uid": "TzynHYY2",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "tfQ-yoL6",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Symbol of Plague",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Symbol of Plague (Steadfast Aura)",
+                  "content": [
+                    {
+                      "id": "ePlgVfji1dy6",
+                      "name": "Steadfast Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Symbol of Plague (Steadfast Aura)",
+              "parentSectionId": "TzynHYY2",
+              "parentPackageUid": "QLRuzKFa",
+              "parentSectionUid": "wBhze",
+              "id": "tfQ-yoL6"
+            },
+            {
+              "uid": "-Lj5r9tB",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Plague Favour",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Plague Favour (Plaguebound Boost Aura)",
+                  "content": [
+                    {
+                      "id": "U9p9FtWR84GU",
+                      "name": "Plaguebound Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Plague Favour (Plaguebound Boost Aura)",
+              "parentSectionId": "TzynHYY2",
+              "parentPackageUid": "QLRuzKFa",
+              "parentSectionUid": "wBhze",
+              "id": "-Lj5r9tB"
+            },
+            {
+              "uid": "CI6DI-L6",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Gift of Plague",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Gift of Plague (Regeneration Aura)",
+                  "content": [
+                    {
+                      "id": "V3YzPPkZm8at",
+                      "name": "Regeneration Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Gift of Plague (Regeneration Aura)",
+              "parentSectionId": "TzynHYY2",
+              "parentPackageUid": "QLRuzKFa",
+              "parentSectionUid": "wBhze",
+              "id": "CI6DI-L6"
+            },
+            {
+              "uid": "X-DblyWd",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Envoy of Plague",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Envoy of Plague (Rending in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "-05w6vRgH2k9",
+                      "name": "Rending in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Envoy of Plague (Rending in Melee Aura)",
+              "parentSectionId": "TzynHYY2",
+              "parentPackageUid": "QLRuzKFa",
+              "parentSectionUid": "wBhze",
+              "id": "X-DblyWd"
+            },
+            {
+              "uid": "3fZ8gBl9",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vB9x-hR",
+                  "cost": 60
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Lore of Plague",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Lore of Plague (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Lore of Plague (Caster(3))",
+              "parentSectionId": "TzynHYY2",
+              "parentPackageUid": "QLRuzKFa",
+              "parentSectionUid": "wBhze",
+              "id": "3fZ8gBl9"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "QLRuzKFa",
           "type": "ArmyBookUpgradeSection",
           "variant": "upgrade",
           "select": {

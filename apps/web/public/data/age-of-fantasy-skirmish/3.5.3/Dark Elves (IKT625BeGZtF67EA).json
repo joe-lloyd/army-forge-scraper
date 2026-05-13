@@ -15,6 +15,82 @@
   "backgroundFull": "Before the High Elves arrived, the Dark Isles were only known through sailors’ legends and tales, which spoke of the waters as dangerous and infested with sea beasts. High Elf sailors discovered the islands during their voyages, and soon found the islands were rich in spices and gold. The High Elven Kings sought out colonists to claim these once-mythical islands, but only the most daring and desperate Elves would venture out to the isles, since most ships sent to the isles were lost to the creatures beneath the waves. The colonists who arrived on the islands had to learn to survive independently, as shipments were often lost to the sea and many colonies were lost completely.\n\nThose who did survive did so with the help of the Snake-Elves. The Snake-Elves had lived on the isles for centuries, and learnt how to tame many of the islands’ creatures. The settlers developed close relations with these Snake-Elves, trading wealth and weapons from the mainland in exchange for the Snake-Elve’s knowledge and skills. The High Elves took a more cautious approach, viewing the Snake-Elves with scorn and attempting to subdue the sea-beasts by force.\n\nDespite the dangers of the Dark Isles, the Elven Kings and their merchants expected their share of profit from the colonies. Colonists resented paying taxes to the supply ships that often were lost at sea before they arrived, because as ships left port, heavy with the wealth of the islands, they became tempting targets. Many settlers took on a life of piracy, returning with wealth that otherwise would have been sent to the homelands. These pirates soon filled the moneyed class of the islands, overtaking the old nobility in wealth and power.\n\nThe colonists rejected the taxes imposed on them to fight the distant Havoc Wars, and many began to speak of independence, calling themselves Dark Elves. The High Elves then sent a diplomatic mission to negotiate with the colonists, only to have their diplomats slaughtered, and the High Elven navy was thoroughly defeated by a coalition of pirates and Snake-Elves using the monsters beneath the waves.\n\nThe Pirate Lords’ ambitions have only grown since they won their independence, and they have begun to pillage along Tyria’s coasts and through its Voidgates. Now it is unclear whether the Pirates’ alliance will last, or if the fiercely independent Dark Elves will collapse into civil war.\n\nHow will you bring fortune to the Isles?",
   "units": [
     {
+      "id": "arB63Yj",
+      "cost": 120,
+      "name": "Snake Lady",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "2xUH_d7T_Zfv",
+          "name": "Harassing",
+          "label": "Harassing"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "pOGeCnV2",
+          "name": "Great Glaive",
+          "type": "ArmyBookWeapon",
+          "range": null,
+          "attacks": 4,
+          "weaponId": "pOGeCnV2",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Great Glaive (A4, AP(1), Rending)",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "C1",
+        "feAxYOtm"
+      ],
+      "genericName": "Snakeman Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "hqL6cA1",
       "cost": 55,
       "name": "Dark Captain",
@@ -1022,7 +1098,7 @@
       "hint": "Dark Captain",
       "sections": [
         {
-          "id": "L1hPdvm",
+          "id": "zWC_oH6",
           "uid": "6O15LLi",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1271,7 +1347,7 @@
           ]
         },
         {
-          "id": "-0Qb-6S",
+          "id": "uhbT5cp",
           "uid": "s0bvI-V",
           "label": "Upgrade with one",
           "options": [
@@ -1417,7 +1493,7 @@
           }
         },
         {
-          "id": "bqF3l0-",
+          "id": "uqm-CTX",
           "uid": "88srmw_",
           "label": "Upgrade with one",
           "options": [
@@ -1707,6 +1783,141 @@
               "label": "Black Pegasus (Heavy Hooves (A1, AP(1)), Fast, Flying, Impact(2), Tough(3))",
               "parentSectionId": "88srmw_",
               "id": "_i-MiAZ"
+            },
+            {
+              "uid": "OzM9ROe",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "hqL6cA1",
+                  "cost": 165
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Cauldron Wagon",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x60"
+                  },
+                  "label": "Cauldron Wagon (Crew Attacks (A4), Armor(3), Fear(1), Piercing Assault Buff, Regeneration, Tough(6))",
+                  "content": [
+                    {
+                      "id": "GkJdEaaj",
+                      "name": "Crew Attacks",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 4,
+                      "weaponId": "o5u89atI",
+                      "specialRules": [],
+                      "attacksMultiplier": 1,
+                      "label": "Crew Attacks (A4)"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "aXv--rtEBGLj",
+                      "name": "Piercing Assault Buff",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "8KujvrTG8k9p",
+                      "name": "Regeneration",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Cauldron Wagon (Crew Attacks (A4), Armor(3), Fear(1), Piercing Assault Buff, Regeneration, Tough(6))",
+              "parentSectionId": "88srmw_",
+              "id": "OzM9ROe"
+            },
+            {
+              "uid": "VID8oh2",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "hqL6cA1",
+                  "cost": 175
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Manticore",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x60"
+                  },
+                  "label": "Manticore (Rending Claws (A6, Rending), Armor(3), Fear(1), Flying, Tough(6))",
+                  "content": [
+                    {
+                      "id": "D0IKy7J2",
+                      "name": "Rending Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "HXmtQukA",
+                      "specialRules": [
+                        {
+                          "id": "cavWDboL4ubs",
+                          "name": "Rending",
+                          "type": "ArmyBookRule"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Rending Claws (A6, Rending)"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Manticore (Rending Claws (A6, Rending), Armor(3), Fear(1), Flying, Tough(6))",
+              "parentSectionId": "88srmw_",
+              "id": "VID8oh2"
             }
           ],
           "parentPackageUid": "A1",
@@ -1721,11 +1932,83 @@
       "calcErrors": false
     },
     {
+      "uid": "C1",
+      "hint": "Snake Lady",
+      "sections": [
+        {
+          "id": "ksTVdAO",
+          "uid": "Lgi5jw0",
+          "label": "Replace Great Glaive",
+          "options": [
+            {
+              "uid": "bdeMI6o",
+              "cost": 45,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "arB63Yj",
+                  "cost": 50
+                }
+              ],
+              "gains": [
+                {
+                  "id": "qC0NuR3z",
+                  "name": "Hand Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "LrcnOP7B",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Hand Weapon (A3)",
+                  "count": 1
+                },
+                {
+                  "id": "JxoV5QDM",
+                  "name": "Great Seeker Bow",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 4,
+                  "weaponId": "JxoV5QDM",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Seeker Bow (24\", A4, AP(1), Bane)",
+                  "count": 1
+                }
+              ],
+              "label": "Great Seeker Bow (24\", A4, AP(1), Bane), Hand Weapon (A3)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "Lgi5jw0",
+              "parentSectionId": "Lgi5jw0",
+              "id": "bdeMI6o"
+            }
+          ],
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Great Glaive"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "D1",
       "hint": "Champion",
       "sections": [
         {
-          "id": "HO9klxt",
+          "id": "aRT66sI",
           "uid": "A5tmu",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1976,7 +2259,7 @@
           ]
         },
         {
-          "id": "gvhK2pv",
+          "id": "IIsv4Xw",
           "uid": "c0mkJaefj4",
           "label": "Upgrade with one",
           "options": [
@@ -2118,7 +2401,7 @@
           }
         },
         {
-          "id": "cmQGZYc",
+          "id": "-57TKBg",
           "uid": "jixsFPa",
           "label": "Upgrade with one",
           "options": [
@@ -2388,7 +2671,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "6H1yAp2",
+          "id": "79fGX7s",
           "uid": "T7P8u4a",
           "label": "Upgrade one model with one",
           "options": [
@@ -2597,7 +2880,7 @@
       "hint": "Dark Warriors",
       "sections": [
         {
-          "id": "h69r607",
+          "id": "Hvx1W8z",
           "uid": "3lGAe7j",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2723,7 +3006,7 @@
       "hint": "Corsairs",
       "sections": [
         {
-          "id": "W0S8yU4",
+          "id": "Qabf_Is",
           "uid": "gEQMxjN",
           "label": "Replace Dual Hand Weapon",
           "options": [
@@ -2835,7 +3118,7 @@
       "hint": "Winged Sisters",
       "sections": [
         {
-          "id": "hygCTC5",
+          "id": "6vFJIbo",
           "uid": "9hV3aiy",
           "label": "Replace Dual Hand Weapon",
           "options": [
@@ -2903,7 +3186,7 @@
       "hint": "Snake Sisters",
       "sections": [
         {
-          "id": "-d4SiAH",
+          "id": "FpcS8_-",
           "uid": "Iw16rwT",
           "label": "Replace Blood Glaive",
           "options": [
@@ -2970,7 +3253,7 @@
       "hint": "Dark Horsemen",
       "sections": [
         {
-          "id": "YCEMAey",
+          "id": "3G70sfa",
           "uid": "ZBZLQOY",
           "label": "Replace Lance",
           "options": [
@@ -3082,7 +3365,7 @@
       "hint": "Warlock Riders",
       "sections": [
         {
-          "id": "GzHlKvk",
+          "id": "9JB8t9e",
           "uid": "g_JIY7r",
           "label": "Upgrade with",
           "options": [
@@ -3132,7 +3415,7 @@
       "hint": "Boarding Attack + Looting Frenzy",
       "sections": [
         {
-          "id": "k4PENnu",
+          "id": "_1XDG2z",
           "uid": "6Ug7dggUsz",
           "label": "Upgrade with any",
           "options": [
@@ -3237,7 +3520,7 @@
       "hint": "Dark Shooters",
       "sections": [
         {
-          "id": "lgmrFqf",
+          "id": "ffLNgKh",
           "uid": "7tlIHSSTpE",
           "label": "Replace Repeater Crossbow",
           "options": [
@@ -3289,7 +3572,7 @@
       "hint": "Shade Scouts",
       "sections": [
         {
-          "id": "c9riG5u",
+          "id": "3IViYjl",
           "uid": "qCzlE3wzqy",
           "label": "Replace Repeater Handbow",
           "options": [
@@ -3337,11 +3620,215 @@
       "calcErrors": false
     },
     {
+      "uid": "feAxYOtm",
+      "hint": "Specialists - Snake Lady",
+      "sections": [
+        {
+          "id": "RTuQ-t7",
+          "uid": "Bc4wepyO",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "nIJHQzDD",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "arB63Yj",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Quartermaster",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Quartermaster (Melee Shrouding Aura)",
+                  "content": [
+                    {
+                      "id": "0dZak5jae8F0",
+                      "name": "Melee Shrouding Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Quartermaster (Melee Shrouding Aura)",
+              "parentSectionId": "Bc4wepyO",
+              "parentPackageUid": "GxSz-NEI",
+              "id": "nIJHQzDD"
+            },
+            {
+              "uid": "zyX92wTe",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "arB63Yj",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Dark Tyrant",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Dark Tyrant (Rapid Charge Aura)",
+                  "content": [
+                    {
+                      "id": "1cykqbg4xn6o",
+                      "name": "Rapid Charge Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Dark Tyrant (Rapid Charge Aura)",
+              "parentSectionId": "Bc4wepyO",
+              "parentPackageUid": "GxSz-NEI",
+              "id": "zyX92wTe"
+            },
+            {
+              "uid": "9bhY06qh",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "arB63Yj",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Boarding Expert",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Boarding Expert (Harassing Boost Aura)",
+                  "content": [
+                    {
+                      "id": "RUS7R0SwaBUj",
+                      "name": "Harassing Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Boarding Expert (Harassing Boost Aura)",
+              "parentSectionId": "Bc4wepyO",
+              "parentPackageUid": "GxSz-NEI",
+              "id": "9bhY06qh"
+            },
+            {
+              "uid": "fBQFr3lB",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "arB63Yj",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Freebooter Captain",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Freebooter Captain (Quick Shot Aura)",
+                  "content": [
+                    {
+                      "id": "a9j1Pje6TLBi",
+                      "name": "Quick Shot Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Freebooter Captain (Quick Shot Aura)",
+              "parentSectionId": "Bc4wepyO",
+              "parentPackageUid": "GxSz-NEI",
+              "id": "fBQFr3lB"
+            },
+            {
+              "uid": "TXx3sFwe",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "arB63Yj",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sorcerer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sorcerer (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sorcerer (Caster(2))",
+              "parentSectionId": "Bc4wepyO",
+              "parentPackageUid": "GxSz-NEI",
+              "id": "TXx3sFwe"
+            },
+            {
+              "uid": "8qy80PGZ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "arB63Yj",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Sorcerer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Master Sorcerer (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Sorcerer (Caster(3))",
+              "parentSectionId": "Bc4wepyO",
+              "parentPackageUid": "GxSz-NEI",
+              "id": "8qy80PGZ"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "GxSz-NEI",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "TZZYRyWq",
       "hint": "Specialists - Captain",
       "sections": [
         {
-          "id": "dfZ0E8i",
+          "id": "UB5Y7rU",
           "uid": "tUKPXZ0f",
           "label": "Upgrade with one",
           "options": [
@@ -3543,7 +4030,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "h5ygP6X",
+          "id": "ydU48f1",
           "uid": "Yejpwjpr",
           "label": "Upgrade with one",
           "options": [
@@ -3747,7 +4234,7 @@
       "hint": "Boarding Attack",
       "sections": [
         {
-          "id": "d3bflB_",
+          "id": "FCjzb-S",
           "uid": "XqeTs_87nX",
           "label": "Upgrade all models with",
           "options": [
@@ -3818,7 +4305,7 @@
       "hint": "Boarding Attack (Heroes)",
       "sections": [
         {
-          "id": "F6_a_A6",
+          "id": "ZT8THFb",
           "uid": "Dga2utB-",
           "label": "Upgrade with",
           "options": [
@@ -4585,6 +5072,15 @@
       "targetType": 1
     },
     {
+      "id": "aXv--rtEBGLj",
+      "name": "Piercing Assault Buff",
+      "aliasedRuleId": null,
+      "description": "Once per activation, before attacking, pick up to 4 friendly units within 12\", which gets Piercing Assault once (next time the effect would apply).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "0dZak5jae8F0",
       "name": "Melee Shrouding Aura",
       "aliasedRuleId": null,
@@ -4679,6 +5175,15 @@
       "name": "Harassing Boost",
       "aliasedRuleId": null,
       "description": "If most models in this unit have Harassing, they may move by up to 6\" from Harassing (instead of only 3\").",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "DhLjIDRrWz6-",
+      "name": "Piercing Assault",
+      "aliasedRuleId": null,
+      "description": "This model gets AP(+1) when charging.",
       "hasRating": false,
       "coreType": null,
       "targetType": 1

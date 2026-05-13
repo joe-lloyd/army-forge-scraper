@@ -1,6 +1,10 @@
 import { useMemo } from 'react';
+import { useParams } from 'react-router-dom';
 import type { BalValConfig, BalValResult, LoadoutOption } from '../utils/types';
 import { getAllLoadouts } from '../utils/balval';
+import { GAME_SYSTEMS } from '../hooks/useArmyList';
+import { useCommonRules } from '../hooks/useCommonRules';
+import { RuleList } from '@/components/ui/RuleText';
 
 interface UnitCardDetailsProps {
   unit: any;
@@ -21,6 +25,12 @@ export function UnitCardDetails({
     () => getAllLoadouts(unit, army, balValConfig, { isDoubled }),
     [unit, army, balValConfig, isDoubled],
   );
+
+  // Resolve game system slug from the URL so we can load that system's
+  // common-rules dict for weapon-rule tooltips (Rending, AP, Blast, ...).
+  const { systemId } = useParams<{ systemId: string }>();
+  const systemSlug = GAME_SYSTEMS.find((s) => s.id === Number(systemId))?.slug;
+  const { dict } = useCommonRules(systemSlug);
 
   const visible = useMemo(() => {
     const base = loadouts.find(l => l.isBase);
@@ -76,7 +86,7 @@ export function UnitCardDetails({
         </span>
         <div className="space-y-3">
           {visible.map(l => (
-            <LoadoutRow key={l.id} loadout={l} />
+            <LoadoutRow key={l.id} loadout={l} rulesDict={dict} />
           ))}
         </div>
       </section>
@@ -104,7 +114,13 @@ function MiniStat({
   );
 }
 
-function LoadoutRow({ loadout }: { loadout: LoadoutOption }) {
+function LoadoutRow({
+  loadout,
+  rulesDict,
+}: {
+  loadout: LoadoutOption;
+  rulesDict?: Record<string, string>;
+}) {
   const isUp = loadout.efficiencyDelta > 0.02;
   const isDown = loadout.efficiencyDelta < -0.02;
   const isBest = loadout.isBestCombo;
@@ -132,7 +148,7 @@ function LoadoutRow({ loadout }: { loadout: LoadoutOption }) {
               {w.count}x {w.name} (A{w.attacks})
             </span>
             <span className="text-slate-500 shrink-0 text-right">
-              {w.specialRules?.map((r: any) => r.label).join(', ')}
+              <RuleList rules={w.specialRules || []} specialRulesDict={rulesDict} />
             </span>
           </div>
         ))}

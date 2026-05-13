@@ -15,6 +15,106 @@
   "backgroundFull": "Rift Daemons are born from the last survivors of a pantheon of dying gods, known to Tyria as the Havoc Gods. Desperate to survive, these gods sought out followers from the lost and desperate, and offered them power in exchange for worship. Those who rejected these gods came to know them as Havoc Gods due to the zealotry of their followers and the unrest that they caused. \n\nThe Havoc Gods came to Tyria soon after Voidgates had been discovered. As mages and adventurers activated Voidgates throughout the land, the influence of Havoc began to spread. The Havoc Gods saw Tyria as a fascinating plane due to the diversity of its peoples, where they could find all sorts of different new followers. \n\nDaemons were sent into Tyria by their gods, spreading throughout the plane. They sought out followers for their Gods, either through promises of power, or shows of force. They found followers throughout Tyria, whom they guided to conquer others. Treachery, war, and bloodshed became commonplace as the Havoc Wars began. Daemons were seen throughout the continent, fighting alone or alongside mortal allies, as they and their masters threatened to overrun the plane.\n\nThe Havoc Gods were on the verge of victory when they fell into a desperate trap set by their enemies. The most powerful mages of Tyria gave their lives in a ritual that managed to seal the Havoc Gods into the Orb of Fate. Suddenly severed from their creators, the forces of Havoc were defeated. The surviving Daemons fled and hid throughout Tyria, escaping wherever they could, while their foes enjoyed an era of peace and prosperity. \n\nThis peace was brought to an abrupt end when, centuries later, the orb was broken by the heirs of the most powerful Human Empire in Tyria. The Havoc Gods were freed, and the power unleashed by the broken orb tore through the heart of Tyria, scarring the land and opening a massive fissure, cutting through much of the plane. This great scar became known as the Rift, and from it, the Daemons began to emerge once more into Tyria. \n\nThe Rift Daemons are eager to return to their masters and avenge their defeat. They have already spread throughout many corners of Tyria, and their hordes grow steadily with each passing day. With their old foes complacent and divided, there are few who can stand against them while they are ready to once more bend Tyria to the will of their gods. \n\nHow will you bring glory to your god?",
   "units": [
     {
+      "id": "x5U5JgA",
+      "cost": 110,
+      "name": "Harbinger of Lust",
+      "size": 1,
+      "bases": {
+        "round": "60",
+        "square": "50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "additional": false,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "additional": false,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "yis0utoPMclv",
+          "name": "Lustbound",
+          "label": "Lustbound"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "dNx3HWV7",
+          "name": "Ritual Hammer",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "Bd0ZnobX",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "5v6oaGfrdf29",
+              "name": "Surge",
+              "label": "Surge"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "2x Ritual Hammer (A1, Blast(3), Surge)",
+          "originalCount": 2
+        },
+        {
+          "id": "5FCF8EZ9",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "hyB0WaAL",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Stomp (A2, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "FkCgO",
+        "4j9W8lgY"
+      ],
+      "genericName": "Lust Heavy Daemon Lord",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "E0VMxeY",
       "cost": 35,
       "name": "Champion of Lust",
@@ -969,7 +1069,7 @@
       "hint": "Infernal Siren",
       "sections": [
         {
-          "id": "K_jfgZJ",
+          "id": "-4sGx20",
           "uid": "ze7zWH1",
           "label": "Upgrade with one",
           "options": [
@@ -1042,7 +1142,7 @@
           }
         },
         {
-          "id": "xKoQK2N",
+          "id": "NDq6NGq",
           "uid": "n4GNWEws",
           "label": "Upgrade with",
           "options": [
@@ -1091,7 +1191,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "LGdyYfk",
+          "id": "sAqfKEE",
           "uid": "KSZLB29",
           "label": "Upgrade one model with one",
           "options": [
@@ -1216,7 +1316,7 @@
       "hint": "Lust Warriors",
       "sections": [
         {
-          "id": "JyKcBum",
+          "id": "98iJMDc",
           "uid": "LjNRRMd",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1407,7 +1507,7 @@
           ]
         },
         {
-          "id": "doXVcAr",
+          "id": "pxczf3B",
           "uid": "AlGfRorZ",
           "label": "Upgrade all models with",
           "options": [
@@ -1453,7 +1553,7 @@
           }
         },
         {
-          "id": "mQYU7Sk",
+          "id": "aLrW74N",
           "uid": "OYY-LpL",
           "label": "Upgrade one model with",
           "options": [
@@ -1504,7 +1604,7 @@
       "hint": "Furies",
       "sections": [
         {
-          "id": "OInDO2Z",
+          "id": "TXBJDhn",
           "uid": "Kyyvl",
           "label": "Replace Perfect Claws",
           "options": [
@@ -1592,11 +1692,411 @@
       "calcErrors": false
     },
     {
+      "uid": "FkCgO",
+      "hint": "Harbinger",
+      "sections": [
+        {
+          "id": "oDuHD4c",
+          "uid": "Qh1x7",
+          "label": "Replace any Ritual Hammer",
+          "options": [
+            {
+              "uid": "zTUca",
+              "cost": -5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Ritual Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "I7oI8kQy",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    },
+                    {
+                      "id": "5v6oaGfrdf29",
+                      "name": "Surge"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Ritual Spear (A1, AP(1), Deadly(3), Surge)"
+                }
+              ],
+              "label": "Ritual Spear (A1, AP(1), Deadly(3), Surge)",
+              "parentPackageUid": "FkCgO",
+              "parentSectionUid": "Qh1x7",
+              "parentSectionId": "Qh1x7",
+              "id": "zTUca"
+            },
+            {
+              "uid": "NiGs0",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Ritual Blade",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "D4Ym0ARP",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    },
+                    {
+                      "id": "5v6oaGfrdf29",
+                      "name": "Surge"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Ritual Blade (A3, Rending, Surge)"
+                }
+              ],
+              "label": "Heavy Ritual Blade (A3, Rending, Surge)",
+              "parentSectionId": "Qh1x7",
+              "id": "NiGs0"
+            },
+            {
+              "uid": "pkLpy",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Perfect Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "nqzF5aDr",
+                  "specialRules": [
+                    {
+                      "id": "7F4391rzKx2g",
+                      "name": "Shatter"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Perfect Sword (A3, Shatter)"
+                }
+              ],
+              "label": "Heavy Perfect Sword (A3, Shatter)",
+              "parentPackageUid": "FkCgO",
+              "parentSectionUid": "Qh1x7",
+              "parentSectionId": "Qh1x7",
+              "id": "pkLpy"
+            },
+            {
+              "uid": "SRcmF",
+              "cost": 0,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Arm-Crossbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 4,
+                  "weaponId": "UKiLVM5c",
+                  "specialRules": [
+                    {
+                      "id": "5v6oaGfrdf29",
+                      "name": "Surge"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Arm-Crossbow (12\", A4, Surge)"
+                }
+              ],
+              "label": "Arm-Crossbow (12\", A4, Surge)",
+              "parentPackageUid": "FkCgO",
+              "parentSectionUid": "Qh1x7",
+              "parentSectionId": "Qh1x7",
+              "id": "SRcmF"
+            },
+            {
+              "uid": "84krjv1icE",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Crossbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "pH-aNQhO",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "5v6oaGfrdf29",
+                      "name": "Surge"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Crossbow (18\", A2, AP(1), Surge)"
+                }
+              ],
+              "label": "Crossbow (18\", A2, AP(1), Surge)",
+              "parentSectionId": "Qh1x7",
+              "id": "84krjv1icE"
+            },
+            {
+              "uid": "aKapG",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Ritual Gauntlet",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "N2rmHthP",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    },
+                    {
+                      "id": "5v6oaGfrdf29",
+                      "name": "Surge"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Ritual Gauntlet (A3, AP(3), Surge)"
+                }
+              ],
+              "label": "Heavy Ritual Gauntlet (A3, AP(3), Surge)",
+              "parentPackageUid": "FkCgO",
+              "parentSectionUid": "Qh1x7",
+              "parentSectionId": "Qh1x7",
+              "id": "aKapG"
+            }
+          ],
+          "parentPackageUid": "FkCgO",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Ritual Hammer"
+          ]
+        },
+        {
+          "id": "ahODAGE",
+          "uid": "0mzHTFy6",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "Fb3NrZ9W",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "WC4v-2p",
+                  "name": "Lust Boon",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Lust Boon (Retaliate(1))",
+                  "content": [
+                    {
+                      "id": "zCjAFXut7Gsg",
+                      "name": "Retaliate",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Lust Boon (Retaliate(1))",
+              "parentSectionId": "0mzHTFy6",
+              "parentPackageUid": "_Hva_Lrq",
+              "parentSectionUid": "ncdsU",
+              "id": "Fb3NrZ9W"
+            }
+          ],
+          "parentPackageUid": "_Hva_Lrq",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        },
+        {
+          "id": "GN6RbYn",
+          "uid": "nP_r4",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "Ua3VaJP5Ei",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "zgMFVvl",
+                  "name": "Daemonic Incursion",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Daemonic Incursion (Ambush Aura)",
+                  "content": [
+                    {
+                      "id": "gOFh4u_LGrwP",
+                      "name": "Ambush Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Daemonic Incursion (Ambush Aura)",
+              "parentSectionId": "nP_r4",
+              "parentPackageUid": "_Hva_Lrq",
+              "id": "Ua3VaJP5Ei"
+            },
+            {
+              "uid": "JQVhi",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Wings",
+                  "type": "ArmyBookItem",
+                  "label": "Wings (Flying)",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Wings (Flying)",
+              "parentPackageUid": "FkCgO",
+              "parentSectionUid": "nP_r4",
+              "parentSectionId": "nP_r4",
+              "id": "JQVhi"
+            },
+            {
+              "uid": "Om1vI8M4Ij",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fury Wings",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Fury Wings (Flying, Scout)",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Fury Wings (Flying, Scout)",
+              "parentSectionId": "nP_r4",
+              "id": "Om1vI8M4Ij"
+            }
+          ],
+          "parentPackageUid": "FkCgO",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "gwQ59",
       "hint": "Champion",
       "sections": [
         {
-          "id": "IzP2R7S",
+          "id": "yNt-QhK",
           "uid": "zH0vW",
           "label": "Replace Ritual Hammer and Blade",
           "options": [
@@ -1807,7 +2307,7 @@
           ]
         },
         {
-          "id": "wURhI9z",
+          "id": "CWVNKCN",
           "uid": "kt_EW",
           "label": "Replace any Perfect Sword",
           "options": [
@@ -1898,7 +2398,7 @@
           ]
         },
         {
-          "id": "OTiEPmj",
+          "id": "IxzoK0U",
           "uid": "CjOCGrrj",
           "label": "Upgrade with",
           "options": [
@@ -1941,7 +2441,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "E8j7wmN",
+          "id": "244Noiy",
           "uid": "MYPav",
           "label": "Upgrade with one",
           "options": [
@@ -2024,6 +2524,129 @@
               "parentSectionId": "MYPav",
               "parentPackageUid": "pTBhhd9t",
               "id": "9LLVpP0SVX"
+            },
+            {
+              "uid": "0TNUv",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "E0VMxeY",
+                  "cost": 135
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Razor-Flail Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Razor-Flail Chariot (Armor(3), Fast, Fear(1), Impact(6), Tough(6))",
+                  "content": [
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Razor-Flail Chariot (Armor(3), Fast, Fear(1), Impact(6), Tough(6))",
+              "parentSectionId": "MYPav",
+              "id": "0TNUv"
+            },
+            {
+              "uid": "Zr4RG",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "E0VMxeY",
+                  "cost": 145
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Bonded Harbinger",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "90x52",
+                    "square": "75x50"
+                  },
+                  "label": "Bonded Harbinger (Great Claws (A6, AP(1), Surge), Armor(2), Fear(1), Tough(6))",
+                  "content": [
+                    {
+                      "id": null,
+                      "name": "Great Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "ro16AsAY",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 1
+                        },
+                        {
+                          "id": "5v6oaGfrdf29",
+                          "name": "Surge"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Great Claws (A6, AP(1), Surge)"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Bonded Harbinger (Great Claws (A6, AP(1), Surge), Armor(2), Fear(1), Tough(6))",
+              "parentSectionId": "MYPav",
+              "id": "Zr4RG"
             }
           ],
           "parentPackageUid": "gwQ59",
@@ -2042,7 +2665,7 @@
       "hint": "Fury Champion",
       "sections": [
         {
-          "id": "ksmZNQR",
+          "id": "jzOUhZw",
           "uid": "V6bq3",
           "label": "Replace Ritual Hammer and Blade",
           "options": [
@@ -2255,7 +2878,7 @@
           ]
         },
         {
-          "id": "zlDQaCE",
+          "id": "9V4VibH",
           "uid": "pjHVc",
           "label": "Replace any Perfect Sword",
           "options": [
@@ -2355,7 +2978,7 @@
       "hint": "Lust Soul Spawns",
       "sections": [
         {
-          "id": "8Idqgkj",
+          "id": "5GmQKRn",
           "uid": "eBEe1",
           "label": "Replace Mutated Claws",
           "options": [
@@ -2447,7 +3070,7 @@
       "hint": "Lust Beast Riders",
       "sections": [
         {
-          "id": "7E1Gp-T",
+          "id": "aGK5PCi",
           "uid": "T2Fu_",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2494,7 +3117,7 @@
           ]
         },
         {
-          "id": "JedShbH",
+          "id": "5t_yK_a",
           "uid": "wUc6fzdq",
           "label": "Upgrade with",
           "options": [
@@ -2543,7 +3166,7 @@
       "hint": "Lust Shooters",
       "sections": [
         {
-          "id": "G2CbApf",
+          "id": "2VQ6RBN",
           "uid": "csxQQqtF",
           "label": "Replace Arm-Crossbow",
           "options": [
@@ -2594,7 +3217,7 @@
           ]
         },
         {
-          "id": "FEk3Yyx",
+          "id": "AGHQ7Lz",
           "uid": "ncdsU",
           "label": "Upgrade with",
           "options": [
@@ -2643,7 +3266,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "5Rd4204",
+          "id": "d-DD4zf",
           "uid": "o5ZSE",
           "label": "Upgrade with one",
           "options": [
@@ -2851,7 +3474,7 @@
       "hint": "Specialists - Fury",
       "sections": [
         {
-          "id": "BpM-NCV",
+          "id": "YLL8zGC",
           "uid": "PdNi_",
           "label": "Upgrade with one",
           "options": [
@@ -2995,7 +3618,7 @@
       "hint": "Shooter-Furies",
       "sections": [
         {
-          "id": "sBFdfXl",
+          "id": "RJzp45o",
           "uid": "cxYAmgqiYa",
           "label": "Replace Arm-Crossbow",
           "options": [
@@ -3043,6 +3666,183 @@
           "targets": [
             "Arm-Crossbow"
           ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "4j9W8lgY",
+      "hint": "Specialists - Harbinger",
+      "sections": [
+        {
+          "id": "PyD9xhE",
+          "uid": "VwM4qPoa",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "A8K-E5rI",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Symbol of Lust",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Symbol of Lust (Hit & Run Fighter Aura)",
+                  "content": [
+                    {
+                      "id": "uwrXuhqYepEd",
+                      "name": "Hit & Run Fighter Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Symbol of Lust (Hit & Run Fighter Aura)",
+              "parentSectionId": "VwM4qPoa",
+              "parentPackageUid": "RsNgKj7e",
+              "id": "A8K-E5rI"
+            },
+            {
+              "uid": "TXtIW7i_",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Lust Favour",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Lust Favour (Lustbound Boost Aura)",
+                  "content": [
+                    {
+                      "id": "o7GHhVCO4LB1",
+                      "name": "Lustbound Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Lust Favour (Lustbound Boost Aura)",
+              "parentSectionId": "VwM4qPoa",
+              "parentPackageUid": "RsNgKj7e",
+              "parentSectionUid": "o5ZSE",
+              "id": "TXtIW7i_"
+            },
+            {
+              "uid": "FDd7doj-",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Gift of Lust",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Gift of Lust (Counter-Attack Aura)",
+                  "content": [
+                    {
+                      "id": "Aw2kbPkBywee",
+                      "name": "Counter-Attack Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Gift of Lust (Counter-Attack Aura)",
+              "parentSectionId": "VwM4qPoa",
+              "parentPackageUid": "RsNgKj7e",
+              "parentSectionUid": "o5ZSE",
+              "id": "FDd7doj-"
+            },
+            {
+              "uid": "nbd2awUp",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Envoy of Lust",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Envoy of Lust (Piercing Assault Aura)",
+                  "content": [
+                    {
+                      "id": "L--qMjlm2g4Q",
+                      "name": "Piercing Assault Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Envoy of Lust (Piercing Assault Aura)",
+              "parentSectionId": "VwM4qPoa",
+              "parentPackageUid": "RsNgKj7e",
+              "parentSectionUid": "o5ZSE",
+              "id": "nbd2awUp"
+            },
+            {
+              "uid": "tQ_k3yVR",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "x5U5JgA",
+                  "cost": 60
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Lore of Lust",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Lore of Lust (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Lore of Lust (Caster(3))",
+              "parentSectionId": "VwM4qPoa",
+              "parentPackageUid": "RsNgKj7e",
+              "parentSectionUid": "o5ZSE",
+              "id": "tQ_k3yVR"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "RsNgKj7e",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
         }
       ],
       "calcErrors": false
@@ -3666,6 +4466,15 @@
       "targetType": 1
     },
     {
+      "id": "74RjQ1k41DoO",
+      "name": "Armor",
+      "aliasedRuleId": null,
+      "description": "Counts as having Defense X+.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "gOFh4u_LGrwP",
       "name": "Ambush Aura",
       "aliasedRuleId": null,
@@ -3789,6 +4598,15 @@
       "description": "This model and up to 3 friendly units picked before the start of the game get Piercing Assault. If this model is killed, picked models that are deployed lose the rule.",
       "hasRating": false,
       "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
+      "aliasedRuleId": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
       "targetType": 1
     },
     {

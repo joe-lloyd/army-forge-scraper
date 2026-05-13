@@ -15,6 +15,79 @@
   "backgroundFull": "The Vampiric Undead originate from the western reaches of the Empire. Their lands were divided into a handful of counties made up of small villages scattered over the Western Steppes, beyond the Dwarven Mountains. Far from the centre of the Old Empire, these lands were undeveloped and often overlooked, raided by nomadic Ogres and other neighbours. \n\nWhen the Havoc Wars began, most of the armies and nobility of the Steppes were summoned, along with the rest of the Imperial vassals, to defend the Empire’s northern borders. The Steppe was left largely unguarded, and it was soon overrun by marauding neighbours and outlaws. Desperate to defend their lands, the remaining nobles began to listen to the promises of an exiled wizard, known as the Great Necromancer. This wizard offered these nobles the armies that they needed, in exchange for an oath of loyalty to his mysterious patrons. Those nobles who accepted his offer would see their enemies driven out and their graveyards emptied, as the wizard raised the dead to fight. \n\nThe Great Necromancer introduced the nobles to his patrons, strange and lifeless beings from another plane. These patrons offered the nobility the secret of immortality if the nobles would give them a piece of Tyria to live in. The nobles eagerly accepted the pact and began using their undead armies to conquer their neighbours to carve out a new realm. Yet, when the time came to complete the deal, they betrayed the wizard and his patrons, severing the link between the planes, and stealing the knowledge for themselves. \n\nThey eagerly attempted the ritual, sacrificing the wizard in the process. However, the ritual did not result in their immortality, but instead turned them into the first generation of Tyrian Vampires. The Vampiric Nobles, lacking a clear leader, shifted the blame on each other for the ritual’s failure, and soon fought for dominance over the rest. These Vampires viewed their mortal subjects as mere cattle, useful only as nourishment and a means to create more undead. \n\nWhen the Rift opened, some whispered that the Great Necromancer’s old patrons had returned, seeking revenge. Meanwhile, from the east, one of the Emperor’s own children arrived in the steppes as an undead immortal. Desperate and weary of their endless internal conflicts, many Vampires have submitted to him, hoping that they might unite together to protect themselves and expand their realms once more. \n\nHow will you harness your power over death itself?",
   "units": [
     {
+      "id": "DmUheiD",
+      "cost": 145,
+      "name": "Werewolf Champion",
+      "size": 1,
+      "bases": {
+        "round": "50",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "FAMbscK5vhSu",
+          "name": "Scout",
+          "label": "Scout"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "rMIqZuIjiy1e",
+          "name": "Cursed Undead",
+          "label": "Cursed Undead"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "Ifb7n0FX",
+          "name": "Razor Blades",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "-B8A6z3D",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "Zx4mWN0SbmK8",
+              "name": "Reliable",
+              "label": "Reliable"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "2x Razor Blades (A3, Reliable)",
+          "originalCount": 2
+        }
+      ],
+      "upgrades": [
+        "8Hcou",
+        "Pt4ZZxgt"
+      ],
+      "genericName": "Werewolf Leader",
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "hYgOS5j",
       "cost": 55,
       "name": "Vampire Master",
@@ -1826,7 +1899,7 @@
       "hint": "Vampire Master",
       "sections": [
         {
-          "id": "oHOHT7W",
+          "id": "_9R1hk-",
           "uid": "quD1jbr",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -2038,7 +2111,7 @@
           ]
         },
         {
-          "id": "rJJFw18",
+          "id": "f88BSS5",
           "uid": "lpuN_gM",
           "label": "Upgrade with one",
           "options": [
@@ -2253,7 +2326,7 @@
       "hint": "Skeleton Champion",
       "sections": [
         {
-          "id": "tDoRLNT",
+          "id": "fyvn4RP",
           "uid": "qTsvOKZ",
           "label": "Replace Cursed Sword",
           "options": [
@@ -2443,7 +2516,7 @@
           ]
         },
         {
-          "id": "-kDLXqV",
+          "id": "Dq8TXqf",
           "uid": "Wp6mc",
           "label": "Upgrade with",
           "options": [
@@ -2491,7 +2564,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "MgbQuiF",
+          "id": "TlTYUmy",
           "uid": "PVk_SwE",
           "label": "Upgrade with one",
           "options": [
@@ -2533,6 +2606,76 @@
               "label": "Skeletal Steed (Fast, Impact(1))",
               "parentSectionId": "PVk_SwE",
               "id": "7MF4a"
+            },
+            {
+              "uid": "22mei",
+              "cost": 160,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "IFoiX6E",
+                  "cost": 135
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Abyssal Beast",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "90x52",
+                    "square": "75x50"
+                  },
+                  "label": "Abyssal Beast (Heavy Claws (A6, AP(1)), Armor(3), Fear(1), Strider, Tough(6))",
+                  "content": [
+                    {
+                      "id": "UEG-mz2e",
+                      "name": "Heavy Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "LX7V18fJ",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "type": "ArmyBookRule",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Heavy Claws (A6, AP(1))"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Abyssal Beast (Heavy Claws (A6, AP(1)), Armor(3), Fear(1), Strider, Tough(6))",
+              "parentSectionId": "PVk_SwE",
+              "id": "22mei"
             }
           ],
           "parentPackageUid": "C1",
@@ -2551,7 +2694,7 @@
       "hint": "Ghoul Champion",
       "sections": [
         {
-          "id": "PBAMgL8",
+          "id": "9VK8qYx",
           "uid": "OjxqK",
           "label": "Replace Toxin Claw",
           "options": [
@@ -2633,7 +2776,7 @@
           ]
         },
         {
-          "id": "wCTvfNy",
+          "id": "WGmDgXW",
           "uid": "HyC7CwcaQt",
           "label": "Upgrade with",
           "options": [
@@ -2670,7 +2813,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "ZmK4tX2",
+          "id": "9aH2aWn",
           "uid": "yS1Efx8",
           "label": "Upgrade with one",
           "options": [
@@ -2753,6 +2896,83 @@
               "label": "Winged Beast (Flying, Impact(2), Tough(3))",
               "parentSectionId": "yS1Efx8",
               "id": "A4zn9"
+            },
+            {
+              "uid": "LWNBi",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ounVlif",
+                  "cost": 215
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Bat Beast",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "60",
+                    "square": "50"
+                  },
+                  "label": "Bat Beast (Deadly Fangs (A6, Shred), Ambush, Armor(3), Fear(1), Flying, Furious, Tough(6))",
+                  "content": [
+                    {
+                      "id": "xzruz_cB",
+                      "name": "Deadly Fangs",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": null,
+                      "attacks": 6,
+                      "weaponId": "3hftgaWE",
+                      "specialRules": [
+                        {
+                          "id": "IEJp3a4vE0CB",
+                          "name": "Shred"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Deadly Fangs (A6, Shred)"
+                    },
+                    {
+                      "id": "6mJw5IdqSqNC",
+                      "name": "Ambush",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "JoOCVPx1xT1G",
+                      "name": "Furious",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Bat Beast (Deadly Fangs (A6, Shred), Ambush, Armor(3), Fear(1), Flying, Furious, Tough(6))",
+              "parentSectionId": "yS1Efx8",
+              "id": "LWNBi"
             }
           ],
           "parentPackageUid": "D1",
@@ -2771,7 +2991,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "Y8za47f",
+          "id": "O2wv1Ow",
           "uid": "4ReuvzS",
           "label": "Upgrade one model with one",
           "options": [
@@ -2968,7 +3188,7 @@
       "hint": "Soldiers",
       "sections": [
         {
-          "id": "CmJrYvX",
+          "id": "3c0a3hX",
           "uid": "sL89-5a",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -3059,7 +3279,7 @@
       "hint": "Skeleton Guard",
       "sections": [
         {
-          "id": "WCMX1sb",
+          "id": "cgUGv12",
           "uid": "E3n_HoM",
           "label": "Replace all Cursed Swords",
           "options": [
@@ -3195,7 +3415,7 @@
       "hint": "Vampire Knights",
       "sections": [
         {
-          "id": "B1CZFDm",
+          "id": "lvZ3LhY",
           "uid": "Vmldy-Z",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -3254,7 +3474,7 @@
       "hint": "Werewolves",
       "sections": [
         {
-          "id": "lQIXIco",
+          "id": "69YJYoc",
           "uid": "GCG2U",
           "label": "Replace Heavy Rending Claws",
           "options": [
@@ -3306,11 +3526,117 @@
       "calcErrors": false
     },
     {
+      "uid": "8Hcou",
+      "hint": "Werewolf Champion",
+      "sections": [
+        {
+          "id": "XdhtetL",
+          "uid": "OKV5n",
+          "label": "Replace 2x Razor Blade",
+          "options": [
+            {
+              "uid": "901bS",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DmUheiD",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Rending Claws",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "p0bAZMEQ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Rending Claws (A6, AP(1), Rending)"
+                }
+              ],
+              "label": "Heavy Rending Claws (A6, AP(1), Rending)",
+              "parentSectionId": "OKV5n",
+              "id": "901bS"
+            },
+            {
+              "uid": "CL7cl",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DmUheiD",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Great Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "yzgAfoQ7",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Sword (A3, AP(4))"
+                },
+                {
+                  "name": "Razor Blades",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "-B8A6z3D",
+                  "specialRules": [
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Razor Blades (A3, Reliable)"
+                }
+              ],
+              "label": "Great Sword (A3, AP(4)), Razor Blades (A3, Reliable)",
+              "parentSectionId": "OKV5n",
+              "id": "CL7cl"
+            }
+          ],
+          "parentPackageUid": "8Hcou",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "2x Razor Blade"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "PXdja",
       "hint": "Drained Leader",
       "sections": [
         {
-          "id": "FKtblGQ",
+          "id": "IXeerlP",
           "uid": "1hBQR",
           "label": "Replace Hand Weapon",
           "options": [
@@ -3462,7 +3788,7 @@
           ]
         },
         {
-          "id": "sE7ZAZa",
+          "id": "Uvj7TrR",
           "uid": "vw_8l0h-yq",
           "label": "Upgrade with",
           "options": [
@@ -3499,7 +3825,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "LOjQBdt",
+          "id": "SOXZTlM",
           "uid": "ELX-t",
           "label": "Upgrade with one",
           "options": [
@@ -3587,7 +3913,7 @@
       "hint": "Stitched Butchers",
       "sections": [
         {
-          "id": "8l6hMJk",
+          "id": "5OM3CEG",
           "uid": "WEyga",
           "label": "Replace Slicing Blade",
           "options": [
@@ -3639,7 +3965,7 @@
       "hint": "Ghouls",
       "sections": [
         {
-          "id": "2WrZSmQ",
+          "id": "IkXINbu",
           "uid": "m6DC4",
           "label": "Replace all Toxin Claws",
           "options": [
@@ -3769,7 +4095,7 @@
       "hint": "Specialists - Vampire Master",
       "sections": [
         {
-          "id": "oHMpO0E",
+          "id": "OJXUEb4",
           "uid": "ARgGTxwO",
           "label": "Upgrade with one",
           "options": [
@@ -4003,7 +4329,7 @@
           }
         },
         {
-          "id": "x7Z8gKx",
+          "id": "UNb872X",
           "uid": "GU7B8iAsh4",
           "label": "Upgrade with",
           "options": [
@@ -4049,7 +4375,7 @@
       "hint": "Stitched Zombies",
       "sections": [
         {
-          "id": "Yz8Vvyg",
+          "id": "IzIO91u",
           "uid": "ALly4SbQc2",
           "label": "Upgrade all models with",
           "options": [
@@ -4099,7 +4425,7 @@
       "hint": "Specialists - Drained",
       "sections": [
         {
-          "id": "dET3Ocj",
+          "id": "JKU2HnG",
           "uid": "DEJhz4I6",
           "label": "Upgrade with one",
           "options": [
@@ -4339,7 +4665,7 @@
       "hint": "Specialists - Ghoul",
       "sections": [
         {
-          "id": "lcaZQOl",
+          "id": "H9sBhvx",
           "uid": "Ri_Bw1lw",
           "label": "Upgrade with one",
           "options": [
@@ -4515,7 +4841,7 @@
       "hint": "Specialists - Skeleton",
       "sections": [
         {
-          "id": "ebuFbnl",
+          "id": "dpJ2FkY",
           "uid": "fiYJy1A9",
           "label": "Upgrade with one",
           "options": [
@@ -4720,11 +5046,156 @@
       "calcErrors": false
     },
     {
+      "uid": "Pt4ZZxgt",
+      "hint": "Specialists - Werewolf",
+      "sections": [
+        {
+          "id": "qoATXsG",
+          "uid": "As1Yhnyx",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "vDvTrPLd1m",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DmUheiD",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "King's Gift Bearer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "King's Gift Bearer (Cursed Undead Boost Buff)",
+                  "content": [
+                    {
+                      "id": "E0qBVMoArk5C",
+                      "name": "Cursed Undead Boost Buff",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "King's Gift Bearer (Cursed Undead Boost Buff)",
+              "parentSectionId": "As1Yhnyx",
+              "id": "vDvTrPLd1m"
+            },
+            {
+              "uid": "pl7kqpqx",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DmUheiD",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Aspiring Lord",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Aspiring Lord (Shred in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "muH3OhuC6eK4",
+                      "name": "Shred in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Aspiring Lord (Shred in Melee Aura)",
+              "parentSectionId": "As1Yhnyx",
+              "parentPackageUid": "343vVwNK",
+              "id": "pl7kqpqx"
+            },
+            {
+              "uid": "jd6ntV-T",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DmUheiD",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Night Bringer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Night Bringer (Stealth Aura)",
+                  "content": [
+                    {
+                      "id": "8haZ36fXvnzn",
+                      "name": "Stealth Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Night Bringer (Stealth Aura)",
+              "parentSectionId": "As1Yhnyx",
+              "parentPackageUid": "343vVwNK",
+              "parentSectionUid": "T-uJY",
+              "id": "jd6ntV-T"
+            },
+            {
+              "uid": "l7IJpA0zVv",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DmUheiD",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "TVqFSvk",
+                  "name": "Commander",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Commander (No Retreat Aura)",
+                  "content": [
+                    {
+                      "id": "QMU04E_1bAVC",
+                      "name": "No Retreat Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Commander (No Retreat Aura)",
+              "parentSectionId": "As1Yhnyx",
+              "parentPackageUid": "343vVwNK",
+              "id": "l7IJpA0zVv"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "343vVwNK",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "DGLuXTjS",
       "hint": "Zombie Wolves",
       "sections": [
         {
-          "id": "EdcCB5m",
+          "id": "22WeGsq",
           "uid": "VLMoXGNCgN",
           "label": "Replace all Blood-Scent Trackers",
           "options": [
@@ -5429,6 +5900,15 @@
       "targetType": 1
     },
     {
+      "id": "74RjQ1k41DoO",
+      "name": "Armor",
+      "aliasedRuleId": null,
+      "description": "Counts as having Defense X+.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "C6MzEy1CnxTs",
       "name": "Repel Ambushers",
       "aliasedRuleId": null,
@@ -5573,6 +6053,15 @@
       "targetType": 1
     },
     {
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
+      "aliasedRuleId": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "6mJw5IdqSqNC",
       "name": "Ambush",
       "aliasedRuleId": null,
@@ -5633,15 +6122,6 @@
       "description": "When a unit where all models have this rule takes wounds, roll one die for each. On a 5+ it is ignored.",
       "hasRating": false,
       "coreType": 1,
-      "targetType": 1
-    },
-    {
-      "id": "s6MgSfmgylXU",
-      "name": "Defense",
-      "aliasedRuleId": null,
-      "description": "This model gets +X to defense rolls.",
-      "hasRating": true,
-      "coreType": 5,
       "targetType": 1
     },
     {

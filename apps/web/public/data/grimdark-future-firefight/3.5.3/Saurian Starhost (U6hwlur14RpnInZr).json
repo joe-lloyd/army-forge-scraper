@@ -14,6 +14,203 @@
   "backgroundFull": "Saurians claim that the Frog-Mages who created them existed before time began. Their Mages teach them that their purpose is to fulfill a great prophecy which they have held from the beginning: in time, the fabric of reality would break, and their fate would be to save it. The Frog-Mages created cryo-pyramids and scattered themselves through the galaxy to ensure that they would be ready to fulfill their purpose when their time came.\n \nIn their absence, a number of new species began to explore and settle throughout the galaxy. This led to a surge of psychic power which awoke one of the dormant Frog-Mages, who was now alone in the galaxy. The lone Frog-Mage found a galaxy at war, and fearing that this was the beginning of the end, he hoped to awaken his fellow Mages before it was too late.\n\nThe Frog-Mage gathered a conclave of helpers, but it was soon clear that they would not be able to succeed alone. The Mages used their vast knowledge of genetic engineering and psychic abilities to create new allies, in order to seek out the rest of their kind. Together, they created the first Starhost. Each member of a Starhost has their fate defined by the Frog-Mages at birth, and they are created to fulfill this single mission in order to help the Frog-Mages complete the prophecy. These missions define much of the culture of the various species in each Starhost.\n\nThe first Starhost began to seek out and awaken other Mages. The newly awakened Mages would create additional Starhosts in order to fulfill their purpose, who would then create their own Starhosts in order to seek out more of their kind throughout the galaxy, including in the Sirius Sector.  Much has changed in the galaxy since the Saurians first entered the cyro-pyramids however, and rediscovering the pyramids has proven a more difficult task than expected. Some cryo-pyramids have been destroyed by exploding stars or marauding treasure hunters, others have been buried beneath deserts, oceans or even cities. Worse still, some have begun to fail on their own, leaving the Frog-Mages inside to die. \n\nThese setbacks have cast doubt on the reliability of the Frog-Mages and their prophecies, while others are beginning to fear that the Frog-Mages have already failed in their great prophecy.\n\nHow will you face your destiny?",
   "units": [
     {
+      "id": "igyAK4c",
+      "cost": 195,
+      "name": "Frog-Mage",
+      "size": 1,
+      "bases": {
+        "round": "60",
+        "square": "50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "47CAqf7ySlfc",
+          "name": "Caster",
+          "rating": 3,
+          "label": "Caster(3)"
+        },
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "PBP94ujaST4y",
+          "name": "Primal",
+          "label": "Primal"
+        },
+        {
+          "id": "2atvlmICQSCV",
+          "name": "Fearless",
+          "label": "Fearless"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "maEgI3pD",
+          "name": "Magic Shock",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 18,
+          "attacks": 3,
+          "weaponId": "13lUGYBl",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Magic Shock (18\", A3)",
+          "originalCount": 1
+        },
+        {
+          "id": "JaF9ZXjK",
+          "name": "Heavy Pulse",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 6,
+          "weaponId": "x_ggbGVD",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Heavy Pulse (A6)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "A1",
+        "CJhthuW4"
+      ],
+      "genericName": "Psychic Frog Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "d5xE-v0",
+      "cost": 115,
+      "name": "Gator Veteran",
+      "size": 1,
+      "bases": {
+        "round": "50",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "2atvlmICQSCV",
+          "name": "Fearless",
+          "label": "Fearless"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "additional": false,
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "PBP94ujaST4y",
+          "name": "Primal",
+          "label": "Primal"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "EhzRBAfj",
+          "name": "Heavy Mace",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "a7YyepQE",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "2x Heavy Mace (A1, AP(1), Blast(3))",
+          "originalCount": 2
+        },
+        {
+          "id": "ViKb0EiK",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "hyB0WaAL",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Stomp (A2, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "D1",
+        "dMe0HVxL"
+      ],
+      "genericName": "Great Croc Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "RpQgbmd",
       "cost": 55,
       "name": "Saurian Veteran",
@@ -1174,11 +1371,234 @@
   ],
   "upgradePackages": [
     {
+      "uid": "A1",
+      "hint": "Frog-Mage",
+      "sections": [
+        {
+          "id": "3oP1PTG",
+          "uid": "gggsShU",
+          "label": "Replace Magic Shock",
+          "options": [
+            {
+              "uid": "35vAMyq",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "igyAK4c",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": "13lUGYBl",
+                  "name": "Magic Blast",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 3,
+                  "weaponId": "maEgI3pD",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Magic Blast (12\", A3, Rending)"
+                }
+              ],
+              "label": "Magic Blast (12\", A3, Rending)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "gggsShU",
+              "parentSectionId": "gggsShU",
+              "id": "35vAMyq"
+            },
+            {
+              "uid": "_qi5gmT",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "igyAK4c",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "JuOmX522",
+                  "name": "Magic Beam",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "JuOmX522",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    },
+                    {
+                      "id": "1qiGNqpxKb24",
+                      "name": "Disintegrate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Magic Beam (12\", A1, AP(2), Deadly(3), Disintegrate)",
+                  "count": 1
+                }
+              ],
+              "label": "Magic Beam (12\", A1, AP(2), Deadly(3), Disintegrate)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "gggsShU",
+              "parentSectionId": "gggsShU",
+              "id": "_qi5gmT"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Magic Shock"
+          ]
+        },
+        {
+          "id": "RaXs_Sq",
+          "uid": "ttfyh",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "o2tzANFw9m",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "igyAK4c",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "s-7mS07",
+                  "name": "Sacred Destiny",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sacred Destiny (Protection Feat)",
+                  "content": [
+                    {
+                      "id": "TU7fkKrcAvop",
+                      "name": "Protection Feat",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sacred Destiny (Protection Feat)",
+              "parentSectionId": "ttfyh",
+              "parentPackageUid": "Y8UV9g5D",
+              "parentSectionUid": "bbXr-",
+              "id": "o2tzANFw9m"
+            },
+            {
+              "uid": "EKuk9",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "igyAK4c",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Magic Protection",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Magic Protection (Fortified)",
+                  "content": [
+                    {
+                      "id": "IyLY1212wacW",
+                      "name": "Fortified",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Magic Protection (Fortified)",
+              "parentSectionId": "ttfyh",
+              "id": "EKuk9"
+            },
+            {
+              "uid": "taW-gG_08W",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "igyAK4c",
+                  "cost": 80
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Ancient Palanquin",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Ancient Palanquin (Magic Pulse (A3), Caster(1), Tough(3))",
+                  "content": [
+                    {
+                      "id": "zN3e_nSh",
+                      "name": "Magic Pulse",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": null,
+                      "attacks": 3,
+                      "weaponId": "pWO7epP3",
+                      "specialRules": [],
+                      "attacksMultiplier": 1,
+                      "label": "Magic Pulse (A3)"
+                    },
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Ancient Palanquin (Magic Pulse (A3), Caster(1), Tough(3))",
+              "parentSectionId": "ttfyh",
+              "id": "taW-gG_08W"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "B1",
       "hint": "Saurian Veteran",
       "sections": [
         {
-          "id": "csSpLki",
+          "id": "JnTmn7b",
           "uid": "IU-NuTc",
           "label": "Replace Veteran Pistol",
           "options": [
@@ -1255,7 +1675,7 @@
           ]
         },
         {
-          "id": "f4lDIDm",
+          "id": "9H8hY5X",
           "uid": "swAt6cr",
           "label": "Replace CCW",
           "options": [
@@ -1379,7 +1799,7 @@
           ]
         },
         {
-          "id": "TeDidmP",
+          "id": "G93xxkf",
           "uid": "pUO9oa0",
           "label": "Upgrade with one",
           "options": [
@@ -1499,7 +1919,7 @@
       "hint": "Gecko Champion",
       "sections": [
         {
-          "id": "CbOOXJ2",
+          "id": "kDMtCzG",
           "uid": "xDgt3Qe",
           "label": "Replace Champion Burst Gun and CCW",
           "options": [
@@ -1612,7 +2032,7 @@
           ]
         },
         {
-          "id": "JI6siPJ",
+          "id": "eOSsvi0",
           "uid": "dxvgKq9",
           "label": "Replace Champion Burst Gun",
           "options": [
@@ -1734,7 +2154,7 @@
           ]
         },
         {
-          "id": "05vPQz4",
+          "id": "u2PrMBo",
           "uid": "DNikFnW",
           "label": "Replace CCW",
           "options": [
@@ -1823,7 +2243,7 @@
           ]
         },
         {
-          "id": "5B3RrGQ",
+          "id": "hiuhkaD",
           "uid": "nckeinr",
           "label": "Upgrade with one",
           "options": [
@@ -2179,11 +2599,225 @@
       "calcErrors": false
     },
     {
+      "uid": "D1",
+      "hint": "Gator Veteran",
+      "sections": [
+        {
+          "id": "oUBg_AH",
+          "uid": "7KNMY",
+          "label": "Replace any Heavy Mace",
+          "options": [
+            {
+              "uid": "C5b8B",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "d5xE-v0",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Power Knuckle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 3,
+                  "weaponId": "EhzRBAfj",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Power Knuckle (A3, AP(2))"
+                }
+              ],
+              "label": "Power Knuckle (A3, AP(2))",
+              "parentSectionId": "7KNMY",
+              "id": "C5b8B"
+            },
+            {
+              "uid": "JcK1ECXAfg",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "d5xE-v0",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Shooter",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 4,
+                  "weaponId": "WmBWqyql",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Shooter (12\", A4, AP(1))"
+                }
+              ],
+              "label": "Heavy Shooter (12\", A4, AP(1))",
+              "parentSectionId": "7KNMY",
+              "id": "JcK1ECXAfg"
+            },
+            {
+              "uid": "s8P_7",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "d5xE-v0",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "fFdM0A-Z",
+                  "name": "Power Spike",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "fFdM0A-Z",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Power Spike (A1, AP(4), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Power Spike (A1, AP(4), Deadly(3))",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "7KNMY",
+              "parentSectionId": "7KNMY",
+              "id": "s8P_7"
+            }
+          ],
+          "parentPackageUid": "D1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Heavy Mace"
+          ]
+        },
+        {
+          "id": "5aYSv27",
+          "uid": "7MJH_",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "6KHvK",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "d5xE-v0",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "n6o-97Bk",
+                  "name": "Rapid Missile Pod",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 3,
+                  "weaponId": "n6o-97Bk",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "QXyt-zV_bjpg",
+                      "name": "Unstoppable"
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rapid Missile Pod (18\", A3, AP(1), Limited, Unstoppable)",
+                  "count": 1
+                }
+              ],
+              "label": "Rapid Missile Pod (18\", A3, AP(1), Limited, Unstoppable)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "7MJH_",
+              "parentSectionId": "7MJH_",
+              "id": "6KHvK"
+            },
+            {
+              "uid": "qEWMz_J4",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "d5xE-v0",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sacred Destiny",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sacred Destiny (Protection Feat)",
+                  "content": [
+                    {
+                      "id": "TU7fkKrcAvop",
+                      "name": "Protection Feat",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sacred Destiny (Protection Feat)",
+              "parentSectionId": "7MJH_",
+              "parentPackageUid": "3G-vfxfF",
+              "parentSectionUid": "bbXr-",
+              "id": "qEWMz_J4"
+            }
+          ],
+          "parentPackageUid": "D1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "E1",
       "hint": "Saurian Warriors",
       "sections": [
         {
-          "id": "3CR8i70",
+          "id": "X1Ozrbd",
           "uid": "BPcXFyf",
           "label": "Replace Pistols and CCW",
           "options": [
@@ -2239,7 +2873,7 @@
           ]
         },
         {
-          "id": "hI7f1K7",
+          "id": "22epBSf",
           "uid": "Ssgra6M",
           "label": "Replace Pistol",
           "options": [
@@ -2417,7 +3051,7 @@
       "hint": "Saurian Guardians",
       "sections": [
         {
-          "id": "dxR0uRI",
+          "id": "o89xbMj",
           "uid": "8Op_oL2",
           "label": "Replace Hammer",
           "options": [
@@ -2519,7 +3153,7 @@
           ]
         },
         {
-          "id": "I_a98f_",
+          "id": "O0rJgr5",
           "uid": "I5dh_",
           "label": "Upgrade with",
           "options": [
@@ -2565,7 +3199,7 @@
       "hint": "Raptor Riders",
       "sections": [
         {
-          "id": "DmK8w8e",
+          "id": "oMQoS-e",
           "uid": "m9oeMXT",
           "label": "Replace any Pistol",
           "options": [
@@ -2616,7 +3250,7 @@
           ]
         },
         {
-          "id": "S3h567S",
+          "id": "kvTnPqd",
           "uid": "hGkUEh-",
           "label": "Replace any CCW",
           "options": [
@@ -2752,7 +3386,7 @@
       "hint": "Gators",
       "sections": [
         {
-          "id": "0Yx9dTG",
+          "id": "a-QDIrq",
           "uid": "6vJTRlk",
           "label": "Replace any Bludgeon",
           "options": [
@@ -2877,7 +3511,7 @@
           ]
         },
         {
-          "id": "PBUKH8B",
+          "id": "br-OlgB",
           "uid": "zNDQCVf",
           "label": "Upgrade with",
           "options": [
@@ -2938,7 +3572,7 @@
       "hint": "Chameleons",
       "sections": [
         {
-          "id": "ADb2dED",
+          "id": "XOOF7P_",
           "uid": "0HddzH8Pqz",
           "label": "Replace Burst Gun",
           "options": [
@@ -2988,7 +3622,7 @@
           ]
         },
         {
-          "id": "gRYs2QQ",
+          "id": "Sw5Or0F",
           "uid": "OPqJAnyp5n",
           "label": "Upgrade with",
           "options": [
@@ -3034,7 +3668,7 @@
       "hint": "Deinonychus Riders",
       "sections": [
         {
-          "id": "vYBMNuY",
+          "id": "iIlfnbD",
           "uid": "1Jbhh",
           "label": "Replace Shock Lance",
           "options": [
@@ -3099,7 +3733,7 @@
       "hint": "Gecko Cohort",
       "sections": [
         {
-          "id": "FLyrH80",
+          "id": "-ezsccz",
           "uid": "Xyi3I",
           "label": "Replace Energy Shield",
           "options": [
@@ -3141,7 +3775,7 @@
           ]
         },
         {
-          "id": "3WndIbw",
+          "id": "XR9PBoG",
           "uid": "8H3-y",
           "label": "Upgrade with",
           "options": [
@@ -3190,7 +3824,7 @@
       "hint": "Sacred Destiny",
       "sections": [
         {
-          "id": "k19jaCo",
+          "id": "Snpy3t7",
           "uid": "bbXr-",
           "label": "Upgrade with",
           "options": [
@@ -3251,7 +3885,7 @@
       "hint": "Ripjawdactyl Riders",
       "sections": [
         {
-          "id": "PFUpV5o",
+          "id": "RUSK79m",
           "uid": "brZdxynR",
           "label": "Replace Energy Shields and CCW",
           "options": [
@@ -3347,7 +3981,7 @@
           ]
         },
         {
-          "id": "Gvpc8U1",
+          "id": "6AQVAij",
           "uid": "8fJhNM1YVP",
           "label": "Upgrade with",
           "options": [
@@ -3394,7 +4028,7 @@
       "hint": "Pterodactyl Riders",
       "sections": [
         {
-          "id": "mEU60xV",
+          "id": "_SdSFyR",
           "uid": "6yz98eov",
           "label": "Replace Energy Shields and CCW",
           "options": [
@@ -3490,7 +4124,7 @@
           ]
         },
         {
-          "id": "3Q7Rh30",
+          "id": "xGPa0tJ",
           "uid": "22PoQ2Vhez",
           "label": "Upgrade with",
           "options": [
@@ -3557,7 +4191,7 @@
       "hint": "Specialists - Gecko",
       "sections": [
         {
-          "id": "K6Xs3b5",
+          "id": "zWDvCvN",
           "uid": "ZjT4i3az",
           "label": "Upgrade with one",
           "options": [
@@ -3729,11 +4363,332 @@
       "calcErrors": false
     },
     {
+      "uid": "dMe0HVxL",
+      "hint": "Specialists - Gator",
+      "sections": [
+        {
+          "id": "iaITunS",
+          "uid": "XPqzbAZ_",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "oSsw_Xtx",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "d5xE-v0",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Primal Roar",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Primal Roar (Primal Boost Buff)",
+                  "content": [
+                    {
+                      "id": "0B7GlGWBl7FF",
+                      "name": "Primal Boost Buff",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Primal Roar (Primal Boost Buff)",
+              "parentSectionId": "XPqzbAZ_",
+              "parentPackageUid": "QagByTr_",
+              "id": "oSsw_Xtx"
+            },
+            {
+              "uid": "1GDlchmL",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "d5xE-v0",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Storm Leader",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Storm Leader (Rapid Charge Aura)",
+                  "content": [
+                    {
+                      "id": "1cykqbg4xn6o",
+                      "name": "Rapid Charge Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Storm Leader (Rapid Charge Aura)",
+              "parentSectionId": "XPqzbAZ_",
+              "parentPackageUid": "QagByTr_",
+              "parentSectionUid": "2K5J-",
+              "id": "1GDlchmL"
+            },
+            {
+              "uid": "2XorpnZZ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "d5xE-v0",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Zealot",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Zealot (Scout Aura)",
+                  "content": [
+                    {
+                      "id": "Tdyu4Tn-rFN6",
+                      "name": "Scout Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Zealot (Scout Aura)",
+              "parentSectionId": "XPqzbAZ_",
+              "parentPackageUid": "QagByTr_",
+              "parentSectionUid": "2K5J-",
+              "id": "2XorpnZZ"
+            },
+            {
+              "uid": "W2j62Pq0",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "d5xE-v0",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Crusader",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Crusader (Rending when Shooting Aura)",
+                  "content": [
+                    {
+                      "id": "AfGDQgn8r8O1",
+                      "name": "Rending when Shooting Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Crusader (Rending when Shooting Aura)",
+              "parentSectionId": "XPqzbAZ_",
+              "parentPackageUid": "QagByTr_",
+              "parentSectionUid": "2K5J-",
+              "id": "W2j62Pq0"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "QagByTr_",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "CJhthuW4",
+      "hint": "Specialists - Frog-Mage",
+      "sections": [
+        {
+          "id": "B4WlktR",
+          "uid": "0aUG-hDK",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "hluryzSt",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "igyAK4c",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Primal Guidance",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Primal Guidance (Primal Boost Buff)",
+                  "content": [
+                    {
+                      "id": "0B7GlGWBl7FF",
+                      "name": "Primal Boost Buff",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Primal Guidance (Primal Boost Buff)",
+              "parentSectionId": "0aUG-hDK",
+              "parentPackageUid": "8BF5gNt1",
+              "id": "hluryzSt"
+            },
+            {
+              "uid": "fWElA1me",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "igyAK4c",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Enlightened Mage",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Enlightened Mage (Caster(1))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Enlightened Mage (Caster(1))",
+              "parentSectionId": "0aUG-hDK",
+              "parentPackageUid": "8BF5gNt1",
+              "id": "fWElA1me"
+            },
+            {
+              "uid": "mtPZfCvF",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "igyAK4c",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Temple Guardian",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Temple Guardian (Counter-Attack Aura)",
+                  "content": [
+                    {
+                      "id": "Aw2kbPkBywee",
+                      "name": "Counter-Attack Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Temple Guardian (Counter-Attack Aura)",
+              "parentSectionId": "0aUG-hDK",
+              "parentPackageUid": "8BF5gNt1",
+              "parentSectionUid": "2K5J-",
+              "id": "mtPZfCvF"
+            },
+            {
+              "uid": "0pjWBxF8",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "igyAK4c",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Zealot",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Zealot (Scout Aura)",
+                  "content": [
+                    {
+                      "id": "Tdyu4Tn-rFN6",
+                      "name": "Scout Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Zealot (Scout Aura)",
+              "parentSectionId": "0aUG-hDK",
+              "parentPackageUid": "8BF5gNt1",
+              "parentSectionUid": "2K5J-",
+              "id": "0pjWBxF8"
+            },
+            {
+              "uid": "yOtlu01_",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "igyAK4c",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Crusader",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Crusader (Rending when Shooting Aura)",
+                  "content": [
+                    {
+                      "id": "AfGDQgn8r8O1",
+                      "name": "Rending when Shooting Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Crusader (Rending when Shooting Aura)",
+              "parentSectionId": "0aUG-hDK",
+              "parentPackageUid": "8BF5gNt1",
+              "parentSectionUid": "2K5J-",
+              "id": "yOtlu01_"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "8BF5gNt1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "jnsJnyP5",
       "hint": "Specialists - Saurian",
       "sections": [
         {
-          "id": "DOx3j0d",
+          "id": "0P2aY1h",
           "uid": "MqEj0RAg",
           "label": "Upgrade with one",
           "options": [

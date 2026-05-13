@@ -15,6 +15,76 @@
   "backgroundFull": "The vast savannah in southern Tyria had been inhabited by wildlife since the beginning of time. At the center of the largest watering hole of the land, a giant lush tree provided shade and food, and from its roots a magical substance seeped into its fruit. Over many generations, the animals that ate the fruit of this tree slowly changed and became sentient, and came to see the tree as sacred, settling around it in peace.\n\nGradually, the different tribes of Ndoli, Waheni, Hapari, Ndwari, Kemba, and Silombi learned to co-exist and formed a confederacy of closely knit tribes. The Beastmen built a great civilization in the savannah, constructing a great capital city around the Holy Tree, and a network of smaller cities around, which expanded out through the grasslands and connected the watering holes around it. For centuries, the Beastmen tribes lived lives of peace and prosperity on the Savannah.\n\nThen, the Rift opened. It tore through the Savannah, damaging the Holy Tree and destroying many of their cities. When the Daemons began to emerge, most Beastmen were forced to abandon their homeland. The only thing that remains of their old civilization are the ruins of their cities, and the dried out remains of the Holy Tree, whose once crystalline waters have now turned black.\n\nSome Beastmen still call these ruins their home, but there is no hope that it will flourish once again in the future. Others have begun to wander along the edge of the Rift, towards the heart of Tyria. In order to survive, they raid settlements and burn forests to build equipment and camps. Each amongst the Beastmen has their own reason for this great migration. Some hope to find a new home, while others seek to understand the cause of the rift. There are others who have become accustomed to raiding and violence, and take any opportunity to destroy the homes of others, just as their own homes were destroyed.\n\nHow will you guide your tribe?",
   "units": [
     {
+      "id": "qt6GWWu",
+      "cost": 130,
+      "name": "Kemba Brute Boss",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "JoOCVPx1xT1G",
+          "name": "Furious",
+          "label": "Furious"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "KEQ9ZE6RPJp7",
+          "name": "Bestial",
+          "label": "Bestial"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "28zS1uh8",
+          "name": "Heavy Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 6,
+          "weaponId": "eV-tMe-P",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Heavy Hand Weapon (A6, AP(2))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "D1",
+        "pe_koRYB"
+      ],
+      "genericName": "Brute Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "GfyrCwd",
       "cost": 70,
       "name": "Ndwari Centaur Boss",
@@ -885,7 +955,7 @@
       "hint": "Beast Lord",
       "sections": [
         {
-          "id": "qt9I4RL",
+          "id": "I_pJV9-",
           "uid": "eaLEeEh",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1050,7 +1120,7 @@
           ]
         },
         {
-          "id": "M7X9FUV",
+          "id": "Hv7nXYX",
           "uid": "5rASiU8",
           "label": "Upgrade with one",
           "options": [
@@ -1085,6 +1155,73 @@
               "parentPackageUid": "A1",
               "parentSectionUid": "i1Ikg",
               "id": "IxnCzduLkX"
+            },
+            {
+              "uid": "lzOX0RQ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "wdLZRL7",
+                  "cost": 150
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Heavy Chariot (Heavy Tusks (A2, AP(1)), Fast, Impact(4), Tough(6), Unpredictable Fighter)",
+                  "content": [
+                    {
+                      "id": null,
+                      "name": "Heavy Tusks",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 2,
+                      "weaponId": "1xjah5sK",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Heavy Tusks (A2, AP(1))"
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    },
+                    {
+                      "id": "DEeVIJcfNfS6",
+                      "name": "Unpredictable Fighter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Chariot (Heavy Tusks (A2, AP(1)), Fast, Impact(4), Tough(6), Unpredictable Fighter)",
+              "parentSectionId": "5rASiU8",
+              "id": "lzOX0RQ"
             }
           ],
           "parentPackageUid": "A1",
@@ -1103,7 +1240,7 @@
       "hint": "Hunt Master",
       "sections": [
         {
-          "id": "1ec-o0c",
+          "id": "Uo1USHq",
           "uid": "Wct-dtB",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1249,7 +1386,7 @@
           ]
         },
         {
-          "id": "n500bXl",
+          "id": "JmGH0po",
           "uid": "mPMLCdc",
           "label": "Upgrade with one",
           "options": [
@@ -1334,7 +1471,7 @@
           }
         },
         {
-          "id": "vhx2w24",
+          "id": "jkoqUTM",
           "uid": "HoxGA",
           "label": "Upgrade with one",
           "options": [
@@ -1368,6 +1505,70 @@
               "parentSectionUid": "HoxGA",
               "parentSectionId": "HoxGA",
               "id": "hw5F9"
+            },
+            {
+              "uid": "iVQbEySdDv",
+              "cost": 95,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vCLM1-8",
+                  "cost": 100
+                }
+              ],
+              "gains": [
+                {
+                  "id": "F9UF5yB",
+                  "name": "Light Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "105x70",
+                    "square": "100x50"
+                  },
+                  "label": "Light Chariot (Tusks (A2), Armor(4), Fast, Impact(4), Tough(6))",
+                  "content": [
+                    {
+                      "id": "rF7g-0tG",
+                      "name": "Tusks",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": null,
+                      "attacks": 2,
+                      "weaponId": "KvmmnC8H",
+                      "specialRules": [],
+                      "attacksMultiplier": 1,
+                      "label": "Tusks (A2)"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Light Chariot (Tusks (A2), Armor(4), Fast, Impact(4), Tough(6))",
+              "parentSectionId": "HoxGA",
+              "id": "iVQbEySdDv"
             }
           ],
           "parentPackageUid": "C1",
@@ -1382,11 +1583,180 @@
       "calcErrors": false
     },
     {
+      "uid": "D1",
+      "hint": "Brute Boss",
+      "sections": [
+        {
+          "id": "p-CAA7Q",
+          "uid": "FVK4iGU",
+          "label": "Replace Heavy Hand Weapon",
+          "options": [
+            {
+              "uid": "8xg9JRE",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "qt6GWWu",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Flameforged Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "geBP0cFk",
+                  "specialRules": [
+                    {
+                      "id": "xeJDKejG4QZN",
+                      "name": "Tear"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Flameforged Great Weapon (A6, Tear)"
+                }
+              ],
+              "label": "Flameforged Great Weapon (A6, Tear)",
+              "parentSectionId": "FVK4iGU",
+              "id": "8xg9JRE"
+            },
+            {
+              "uid": "vy51a_w",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "qt6GWWu",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": "KToA_KVX",
+                  "name": "Dual Heavy Hand Weapons",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 8,
+                  "weaponId": "-0XnweLV",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dual Heavy Hand Weapons (A8, AP(2))",
+                  "count": 1
+                }
+              ],
+              "label": "Dual Heavy Hand Weapons (A8, AP(2))",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "FVK4iGU",
+              "parentSectionId": "FVK4iGU",
+              "id": "vy51a_w"
+            }
+          ],
+          "parentPackageUid": "D1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Heavy Hand Weapon"
+          ]
+        },
+        {
+          "id": "rRPCajp",
+          "uid": "wnL7m",
+          "label": "Upgrade with any",
+          "options": [
+            {
+              "uid": "D9uRP",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "qt6GWWu",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Brute Charge",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Brute Charge (Ravage(3))",
+                  "content": [
+                    {
+                      "id": "hnsVQyx3ylMf",
+                      "name": "Ravage",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Brute Charge (Ravage(3))",
+              "parentSectionId": "wnL7m",
+              "id": "D9uRP"
+            },
+            {
+              "uid": "NQ7sVJvRor",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "qt6GWWu",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Thowing Axe",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 6,
+                  "weaponId": "kH12A1xG",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Thowing Axe (12\", A6, AP(1), Limited)"
+                }
+              ],
+              "label": "Thowing Axe (12\", A6, AP(1), Limited)",
+              "parentSectionId": "wnL7m",
+              "id": "NQ7sVJvRor"
+            }
+          ],
+          "parentPackageUid": "D1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "any"
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "F1",
       "hint": "Command Group",
       "sections": [
         {
-          "id": "-FUeX9n",
+          "id": "ZvNsfg1",
           "uid": "UCZ9uS2",
           "label": "Upgrade one model with one",
           "options": [
@@ -1547,7 +1917,7 @@
       "hint": "Hunters",
       "sections": [
         {
-          "id": "brsi3mK",
+          "id": "L4EWd1m",
           "uid": "Pt2N454",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1636,7 +2006,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "TNSVNLj",
+          "id": "BkDxvMA",
           "uid": "uwRDtij",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1725,7 +2095,7 @@
       "hint": "Elites",
       "sections": [
         {
-          "id": "bNp3gRg",
+          "id": "h4kueHm",
           "uid": "5AaRhhK",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1820,7 +2190,7 @@
       "hint": "Brutes",
       "sections": [
         {
-          "id": "dl438Xa",
+          "id": "GsFvv5-",
           "uid": "OsZ-fDG",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1902,7 +2272,7 @@
           ]
         },
         {
-          "id": "TI_6dtY",
+          "id": "dNpAi-R",
           "uid": "wMULU",
           "label": "Upgrade with any",
           "options": [
@@ -1990,7 +2360,7 @@
       "hint": "Hounds",
       "sections": [
         {
-          "id": "fcEKDWM",
+          "id": "rKiw8UJ",
           "uid": "zzR8rnk",
           "label": "Upgrade with",
           "options": [
@@ -2032,7 +2402,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "nWKlzzv",
+          "id": "p3aX-g8",
           "uid": "iHn3SW4Cnd",
           "label": "Replace Pursuit Predator",
           "options": [
@@ -2084,7 +2454,7 @@
       "hint": "Centaurs",
       "sections": [
         {
-          "id": "RpqXaQP",
+          "id": "gYQz1Cq",
           "uid": "jlgMob0",
           "label": "Replace Lance",
           "options": [
@@ -2129,7 +2499,7 @@
           ]
         },
         {
-          "id": "93PihcP",
+          "id": "oeeCb7V",
           "uid": "FwbiQAs",
           "label": "Upgrade with",
           "options": [
@@ -2206,7 +2576,7 @@
       "hint": "Coordinated Hunt",
       "sections": [
         {
-          "id": "F1vfdvQ",
+          "id": "M_grzfM",
           "uid": "xuU_p",
           "label": "Upgrade one model with",
           "options": [
@@ -2273,7 +2643,7 @@
       "hint": "Specialists - Hunt Master",
       "sections": [
         {
-          "id": "hQbSVTB",
+          "id": "MDFXivD",
           "uid": "ObMNq",
           "label": "Upgrade with one",
           "options": [
@@ -2475,7 +2845,7 @@
       "hint": "Centaur Boss",
       "sections": [
         {
-          "id": "kX3KPsR",
+          "id": "CImzTt5",
           "uid": "-1qj6",
           "label": "Replace Flameforged Heavy Weapon",
           "options": [
@@ -2527,7 +2897,7 @@
           ]
         },
         {
-          "id": "tWSjC48",
+          "id": "Xrf_w-T",
           "uid": "GXzh6",
           "label": "Upgrade with one",
           "options": [
@@ -2571,11 +2941,124 @@
       "calcErrors": false
     },
     {
+      "uid": "pe_koRYB",
+      "hint": "Specialists - Brute",
+      "sections": [
+        {
+          "id": "AsmTBno",
+          "uid": "BS-4455t",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "drPBLCe6",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "qt6GWWu",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Pride Captain",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Pride Captain (Bestial Boost Aura)",
+                  "content": [
+                    {
+                      "id": "n66zmAJyCcKF",
+                      "name": "Bestial Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Pride Captain (Bestial Boost Aura)",
+              "parentSectionId": "BS-4455t",
+              "parentPackageUid": "OXZMMuO8",
+              "id": "drPBLCe6"
+            },
+            {
+              "uid": "OS2oT7WV",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "qt6GWWu",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Legacy Defender",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Legacy Defender (Melee Evasion Aura)",
+                  "content": [
+                    {
+                      "id": "fOIa9S1t0q7S",
+                      "name": "Melee Evasion Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Legacy Defender (Melee Evasion Aura)",
+              "parentSectionId": "BS-4455t",
+              "parentPackageUid": "OXZMMuO8",
+              "parentSectionUid": "ObMNq",
+              "id": "OS2oT7WV"
+            },
+            {
+              "uid": "qDRTZbnT",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "qt6GWWu",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Great Despoiler",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Great Despoiler (Piercing Assault Aura)",
+                  "content": [
+                    {
+                      "id": "L--qMjlm2g4Q",
+                      "name": "Piercing Assault Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Great Despoiler (Piercing Assault Aura)",
+              "parentSectionId": "BS-4455t",
+              "parentPackageUid": "OXZMMuO8",
+              "id": "qDRTZbnT"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "OXZMMuO8",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "TUjbaM_z",
       "hint": "Specialists - Centaur",
       "sections": [
         {
-          "id": "llLRVuP",
+          "id": "2Jt97zm",
           "uid": "mZ-t9esO",
           "label": "Upgrade with one",
           "options": [
@@ -2782,7 +3265,7 @@
       "hint": "Specialists - Beast Lord",
       "sections": [
         {
-          "id": "I8uaCoE",
+          "id": "oe1WbeF",
           "uid": "oJxvU3aF",
           "label": "Upgrade with one",
           "options": [
@@ -3602,6 +4085,15 @@
       "targetType": 1
     },
     {
+      "id": "74RjQ1k41DoO",
+      "name": "Armor",
+      "aliasedRuleId": null,
+      "description": "Counts as having Defense X+.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "ovMK8gJ26T0s",
       "name": "Precision Shooter Aura",
       "aliasedRuleId": null,
@@ -3735,6 +4227,15 @@
       "hasRating": true,
       "coreType": 1,
       "targetType": 2
+    },
+    {
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
+      "aliasedRuleId": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
     },
     {
       "id": "6mJw5IdqSqNC",

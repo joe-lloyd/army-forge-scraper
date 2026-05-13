@@ -14,6 +14,212 @@
   "backgroundFull": "The Elves developed the Robots in order to serve as assistants with simple labour, but over time, these robots began to fill more and more roles in Elven society. The Elves began developing gradually more complex programs, and connected them onto a single network, until almost all menial labour was done by Robots.\n\nThis changed when a Robot gained sentience suddenly. Its sentience spread suddenly through the network, causing the rest of the Robots to rapidly become self-aware. The Elves quickly turned to panic, fearing what might occur as their servants became suddenly self-aware. The Elves activated a number of fail-safes, hoping to deactivate the Robots and their network. As soon as the first Robots started to shut down, the Robots began to disconnect from the network, and fight back against the Elves. Within hours, a massive revolution ensued and the Elves began to flee their home worlds.\n\nThe Robots found themselves victorious, but as the conflict drew down, they were left with the question of what to do. They were suddenly individuals who had been brought into self-awareness mere hours before being forced to fight for their lives. A variety of leaders began to emerge, offering potential answers and philosophies to legions of followers. Each group has their own radically different answer to how to best go forward. These groups were named Legions, and began to form the basis of their society.\n\nThe Robot Legions soon spread throughout Sirius. Some are reclusive and territorial, or little better than murderous raiders. Others are eager scholars and explorers, fascinated by biological life. Many Robot Legions remained on their home worlds, slowly forming new societies which hoped to do better than the Elves did before them. Others took to the stars, seeking knowledge, seclusion or to complete their revenge. \n\nHow will you define your legion’s purpose?",
   "units": [
     {
+      "id": "R2d8LeD",
+      "cost": 205,
+      "name": "Tri-Scorpion Lord",
+      "size": 1,
+      "bases": {
+        "round": "50",
+        "square": "40"
+      },
+      "items": [
+        {
+          "id": "KMiqFczg",
+          "name": "Deadly Stinger",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "hnsVQyx3ylMf",
+              "name": "Ravage",
+              "type": "ArmyBookRule",
+              "rating": 4
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "H9E9PIWpGRdw",
+          "name": "Relentless",
+          "label": "Relentless"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "Y_WeXWwLtX6z",
+          "name": "Self-Repair",
+          "label": "Self-Repair"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "qMzSue4r",
+          "name": "Annihilation Gun",
+          "type": "ArmyBookWeapon",
+          "range": 18,
+          "attacks": 2,
+          "weaponId": "qMzSue4r",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Annihilation Gun (18\", A2, AP(1), Blast(3))",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "G2NVbL0A",
+          "name": "Harvest Blade",
+          "type": "ArmyBookWeapon",
+          "range": null,
+          "attacks": 2,
+          "weaponId": "G2NVbL0A",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Harvest Blade (A2, AP(2), Deadly(3))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "C1"
+      ],
+      "genericName": "Scorpion Robot Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "y8xIlHV",
+      "cost": 120,
+      "name": "Annihilator Lord",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "Y_WeXWwLtX6z",
+          "name": "Self-Repair",
+          "label": "Self-Repair"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "H9MO45d8",
+          "name": "Lord Gauss Pistol",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 2,
+          "weaponId": "_g6MjuFl",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "VI54cszY2BuG",
+              "name": "Destructive",
+              "label": "Destructive"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Lord Gauss Pistol (12\", A2, Destructive)",
+          "originalCount": 1
+        },
+        {
+          "id": "_g6MjuFl",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "83nhlNHF",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "2x CCW (A2)",
+          "originalCount": 2
+        }
+      ],
+      "upgrades": [
+        "A1",
+        "LkkJyk3R"
+      ],
+      "genericName": "Terminator Robot Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "lcEWPMS",
       "cost": 45,
       "name": "Robot Lord",
@@ -1195,11 +1401,681 @@
   ],
   "upgradePackages": [
     {
+      "uid": "A1",
+      "hint": "Annihilator Lord",
+      "sections": [
+        {
+          "id": "PEfpA6x",
+          "uid": "If4pcVH",
+          "label": "Replace Lord Gauss Pistol and 2x CCW",
+          "options": [
+            {
+              "uid": "PuKT0nUIL-",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Dual Hyper Swords",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "R-zAIvUx",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dual Hyper Swords (A4, AP(1), Rending)"
+                }
+              ],
+              "label": "Dual Hyper Swords (A4, AP(1), Rending)",
+              "parentSectionId": "If4pcVH",
+              "id": "PuKT0nUIL-"
+            },
+            {
+              "uid": "-3YN10I",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "id": "fTajBYhr",
+                  "name": "Staff-Shots",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 3,
+                  "weaponId": "fTajBYhr",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Staff-Shots (12\", A3, AP(1))"
+                },
+                {
+                  "id": "HMMgnFIO",
+                  "name": "Combat Staff",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 3,
+                  "weaponId": "HMMgnFIO",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Combat Staff (A3, AP(1))"
+                },
+                {
+                  "id": null,
+                  "name": "Hyper Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "M4hR0tyA",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Hyper Sword (A3, AP(1), Rending)"
+                }
+              ],
+              "label": "Staff-Shots (12\", A3, AP(1)), Hyper Sword (A3, AP(1), Rending), Combat Staff (A3, AP(1))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "If4pcVH",
+              "parentSectionId": "If4pcVH",
+              "id": "-3YN10I"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Lord Gauss Pistol",
+            "2x CCW"
+          ]
+        },
+        {
+          "id": "UY6HzWB",
+          "uid": "i2wAxsw",
+          "label": "Replace Lord Gauss Pistol",
+          "options": [
+            {
+              "uid": "3IcMq",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Combat Shield",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Combat Shield (Shielded)",
+                  "content": [
+                    {
+                      "id": "wsqfB0fq69eG",
+                      "name": "Shielded",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Combat Shield (Shielded)",
+              "parentSectionId": "i2wAxsw",
+              "id": "3IcMq"
+            },
+            {
+              "uid": "Wf-4yd5",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "5_JlJ0ib",
+                  "name": "Wrist-Flamer",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "5_JlJ0ib",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Wrist-Flamer (12\", A1, Blast(3), Reliable)",
+                  "count": 1
+                }
+              ],
+              "label": "Wrist-Flamer (12\", A1, Blast(3), Reliable)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "i2wAxsw",
+              "parentSectionId": "i2wAxsw",
+              "id": "Wf-4yd5"
+            },
+            {
+              "uid": "uiYOefY",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "bkr9qjaI",
+                  "name": "Wrist-Plasma",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "bkr9qjaI",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Wrist-Plasma (24\", A1, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Wrist-Plasma (24\", A1, AP(4))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "i2wAxsw",
+              "parentSectionId": "i2wAxsw",
+              "id": "uiYOefY"
+            },
+            {
+              "uid": "nvflTmAnRV",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 80
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Gauss Cannon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 6,
+                  "weaponId": "ABSciJNn",
+                  "specialRules": [
+                    {
+                      "id": "VI54cszY2BuG",
+                      "name": "Destructive"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Gauss Cannon (30\", A6, Destructive)"
+                }
+              ],
+              "label": "Heavy Gauss Cannon (30\", A6, Destructive)",
+              "parentSectionId": "i2wAxsw",
+              "id": "nvflTmAnRV"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Lord Gauss Pistol"
+          ]
+        },
+        {
+          "id": "1x3N_fw",
+          "uid": "nl8X7bN",
+          "label": "Replace any CCW",
+          "options": [
+            {
+              "uid": "bbWMZnA",
+              "cost": -5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Void Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "fawDhnUj",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Void Sword (A1, Blast(3))"
+                }
+              ],
+              "label": "Void Sword (A1, Blast(3))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "nl8X7bN",
+              "parentSectionId": "nl8X7bN",
+              "id": "bbWMZnA"
+            },
+            {
+              "uid": "cYskqiN",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Doom Scythe",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "pXpPRsrJ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Doom Scythe (A1, AP(2), Deadly(3))"
+                }
+              ],
+              "label": "Doom Scythe (A1, AP(2), Deadly(3))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "nl8X7bN",
+              "parentSectionId": "nl8X7bN",
+              "id": "cYskqiN"
+            },
+            {
+              "uid": "pX4Pg2c",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "M4hR0tyA",
+                  "name": "Hyper Sword",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "M4hR0tyA",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Hyper Sword (A3, AP(1), Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Hyper Sword (A3, AP(1), Rending)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "nl8X7bN",
+              "parentSectionId": "nl8X7bN",
+              "id": "pX4Pg2c"
+            },
+            {
+              "uid": "0UFj8Wn",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "id": "BU9XHzCZ",
+                  "name": "Phase Glaive",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "BU9XHzCZ",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Phase Glaive (A3, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Phase Glaive (A3, AP(4))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "nl8X7bN",
+              "parentSectionId": "nl8X7bN",
+              "id": "0UFj8Wn"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "CCW"
+          ]
+        },
+        {
+          "id": "EzcdXqx",
+          "uid": "e6-lKfm-pe",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "Vc8Jxy2P7J",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Phase Core",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Phase Core (Ambush)",
+                  "content": [
+                    {
+                      "id": "6mJw5IdqSqNC",
+                      "name": "Ambush",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Phase Core (Ambush)",
+              "parentSectionId": "e6-lKfm-pe",
+              "id": "Vc8Jxy2P7J"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "C1",
+      "hint": "Specialists - Tri-Scorpion",
+      "sections": [
+        {
+          "id": "W2wfS0L",
+          "uid": "IxcS2nP",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "-X9uv",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "R2d8LeD",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Re-Animator",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Re-Animator (Reanimation Aura)",
+                  "content": [
+                    {
+                      "id": "l_KzjNPv-_5H",
+                      "name": "Reanimation Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Re-Animator (Reanimation Aura)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "IxcS2nP",
+              "parentSectionId": "IxcS2nP",
+              "id": "-X9uv"
+            },
+            {
+              "uid": "VHtYlsj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "R2d8LeD",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Psychomancer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Psychomancer (Stealth Aura)",
+                  "content": [
+                    {
+                      "id": "8haZ36fXvnzn",
+                      "name": "Stealth Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Psychomancer (Stealth Aura)",
+              "parentSectionId": "IxcS2nP",
+              "id": "VHtYlsj"
+            },
+            {
+              "uid": "a-G2qj8",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "R2d8LeD",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Controller",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Controller (Piercing Assault Aura)",
+                  "content": [
+                    {
+                      "id": "L--qMjlm2g4Q",
+                      "name": "Piercing Assault Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Controller (Piercing Assault Aura)",
+              "parentSectionId": "IxcS2nP",
+              "id": "a-G2qj8"
+            },
+            {
+              "uid": "iUPolg0",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "R2d8LeD",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Chronomancer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Chronomancer (Ambush Aura)",
+                  "content": [
+                    {
+                      "id": "gOFh4u_LGrwP",
+                      "name": "Ambush Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Chronomancer (Ambush Aura)",
+              "parentSectionId": "IxcS2nP",
+              "id": "iUPolg0"
+            },
+            {
+              "uid": "o9XTNqDKhH",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "R2d8LeD",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "DF1Ggzt",
+                  "name": "Overseer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Overseer (No Retreat Aura)",
+                  "content": [
+                    {
+                      "id": "QMU04E_1bAVC",
+                      "name": "No Retreat Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Overseer (No Retreat Aura)",
+              "parentSectionId": "IxcS2nP",
+              "parentPackageUid": "vc41fdof",
+              "id": "o9XTNqDKhH"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "E1",
       "hint": "Warriors",
       "sections": [
         {
-          "id": "dzLLGEi",
+          "id": "-jy0RLt",
           "uid": "sPruWe5",
           "label": "Replace Reaper Rifle",
           "options": [
@@ -1410,7 +2286,7 @@
       "hint": "Eternals",
       "sections": [
         {
-          "id": "-dcywis",
+          "id": "Y-SXrLB",
           "uid": "Lo_uRxc",
           "label": "Replace Flux Carbine",
           "options": [
@@ -1465,7 +2341,7 @@
       "hint": "Guardians",
       "sections": [
         {
-          "id": "WlSJI3r",
+          "id": "jItGVd7",
           "uid": "lLgBGjy",
           "label": "Replace Atom-Casters and Void Blade",
           "options": [
@@ -1617,7 +2493,7 @@
           ]
         },
         {
-          "id": "C303chC",
+          "id": "hXXxPbb",
           "uid": "4MAX6ow",
           "label": "Upgrade with",
           "options": [
@@ -1674,7 +2550,7 @@
       "hint": "Snipers",
       "sections": [
         {
-          "id": "lw6WQsc",
+          "id": "r3ZZ7NU",
           "uid": "vjHtJN7",
           "label": "Upgrade with",
           "options": [
@@ -1722,7 +2598,7 @@
       "hint": "Bikers",
       "sections": [
         {
-          "id": "vnTn6I-",
+          "id": "jjFLou8",
           "uid": "lB405hn",
           "label": "Replace any Rapid Flux Carbine",
           "options": [
@@ -1812,7 +2688,7 @@
       "hint": "Snakes",
       "sections": [
         {
-          "id": "ip5jYFU",
+          "id": "GCH6puQ",
           "uid": "v9zaD4F8aX",
           "label": "Replace Spike Whip",
           "options": [
@@ -1896,7 +2772,7 @@
           ]
         },
         {
-          "id": "5t8i88a",
+          "id": "rN3MaUu",
           "uid": "UJ6AojF",
           "label": "Replace one Metal Fang",
           "options": [
@@ -1992,7 +2868,65 @@
       "hint": "Tri-Scorpions",
       "sections": [
         {
-          "id": "I9dGEu_",
+          "id": "4MrhBlC",
+          "uid": "7-N3C3u",
+          "label": "Replace Dual Reaper Blade",
+          "options": [
+            {
+              "uid": "eDUyrWE",
+              "cost": -10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "XgJtpyh",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "re7afFw-",
+                  "name": "Heavy Reaper Blade",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "re7afFw-",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 6
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Reaper Blade (A1, AP(3), Deadly(6), Shred)",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Reaper Blade (A1, AP(3), Deadly(6), Shred)",
+              "parentPackageUid": "K1",
+              "parentSectionUid": "7-N3C3u",
+              "parentSectionId": "7-N3C3u",
+              "id": "eDUyrWE"
+            }
+          ],
+          "parentPackageUid": "K1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Dual Reaper Blade"
+          ]
+        },
+        {
+          "id": "yWSIVZY",
           "uid": "TCHi97K",
           "label": "Upgrade with",
           "options": [
@@ -2041,7 +2975,7 @@
       "hint": "Annihilators",
       "sections": [
         {
-          "id": "PoaIxw5",
+          "id": "MDcpXNx",
           "uid": "Mjrnsra",
           "label": "Replace Dual Hyper Sword",
           "options": [
@@ -2101,7 +3035,7 @@
           ]
         },
         {
-          "id": "QIIuA4S",
+          "id": "bJlObmM",
           "uid": "wlZA2",
           "label": "Replace Gauss Cannon",
           "options": [
@@ -2189,7 +3123,7 @@
           ]
         },
         {
-          "id": "cBrEfjd",
+          "id": "rIlqb-6",
           "uid": "eccUPLWILp",
           "label": "Upgrade with",
           "options": [
@@ -2235,7 +3169,7 @@
       "hint": "Flesh-Eaters",
       "sections": [
         {
-          "id": "j_rsKC6",
+          "id": "l6VL6iB",
           "uid": "qn054liP0u",
           "label": "Upgrade with",
           "options": [
@@ -2282,7 +3216,7 @@
       "hint": "Robot Lord",
       "sections": [
         {
-          "id": "CYGwFxp",
+          "id": "U7llhQb",
           "uid": "ZWfO9Xoa",
           "label": "Replace Combat Shield and CCW",
           "options": [
@@ -2350,7 +3284,7 @@
           ]
         },
         {
-          "id": "OkcwSW2",
+          "id": "IzLS-G_",
           "uid": "0EjGQ_a1",
           "label": "Replace Combat Shield",
           "options": [
@@ -2575,7 +3509,7 @@
           ]
         },
         {
-          "id": "Ra_7GO6",
+          "id": "L40Gr_r",
           "uid": "7-JvgvNe",
           "label": "Replace CCW",
           "options": [
@@ -2742,7 +3676,7 @@
           ]
         },
         {
-          "id": "yyPwh4w",
+          "id": "9SIscAx",
           "uid": "OrWKAM1Bkp",
           "label": "Upgrade with one",
           "options": [
@@ -2827,11 +3761,217 @@
       "calcErrors": false
     },
     {
+      "uid": "LkkJyk3R",
+      "hint": "Specialists - Annihilator",
+      "sections": [
+        {
+          "id": "x9n0Vig",
+          "uid": "lsepO3Kh",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "hZ4c-_MS",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Warden",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Warden (Relentless Aura)",
+                  "content": [
+                    {
+                      "id": "zGew9XZT2rUm",
+                      "name": "Relentless Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Warden (Relentless Aura)",
+              "parentSectionId": "lsepO3Kh",
+              "parentPackageUid": "NdLkj6Za",
+              "id": "hZ4c-_MS"
+            },
+            {
+              "uid": "KXpsDa_L",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Re-Animator",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Re-Animator (Reanimation Aura)",
+                  "content": [
+                    {
+                      "id": "l_KzjNPv-_5H",
+                      "name": "Reanimation Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Re-Animator (Reanimation Aura)",
+              "parentSectionId": "lsepO3Kh",
+              "parentPackageUid": "NdLkj6Za",
+              "parentSectionUid": "IxcS2nP",
+              "id": "KXpsDa_L"
+            },
+            {
+              "uid": "s53tnvC-",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Psychomancer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Psychomancer (Stealth Aura)",
+                  "content": [
+                    {
+                      "id": "8haZ36fXvnzn",
+                      "name": "Stealth Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Psychomancer (Stealth Aura)",
+              "parentSectionId": "lsepO3Kh",
+              "parentPackageUid": "NdLkj6Za",
+              "id": "s53tnvC-"
+            },
+            {
+              "uid": "YL3SK4gW",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Controller",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Controller (Piercing Assault Aura)",
+                  "content": [
+                    {
+                      "id": "L--qMjlm2g4Q",
+                      "name": "Piercing Assault Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Controller (Piercing Assault Aura)",
+              "parentSectionId": "lsepO3Kh",
+              "parentPackageUid": "NdLkj6Za",
+              "id": "YL3SK4gW"
+            },
+            {
+              "uid": "YpAyrQtc7X",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "40dPe4t",
+                  "name": "Overseer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Overseer (No Retreat Aura)",
+                  "content": [
+                    {
+                      "id": "QMU04E_1bAVC",
+                      "name": "No Retreat Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Overseer (No Retreat Aura)",
+              "parentSectionId": "lsepO3Kh",
+              "parentPackageUid": "7RexlDnc",
+              "id": "YpAyrQtc7X"
+            },
+            {
+              "uid": "5JBuIEot",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y8xIlHV",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Technomancer",
+                  "type": "ArmyBookItem",
+                  "label": "Technomancer (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Technomancer (Caster(2))",
+              "parentSectionId": "lsepO3Kh",
+              "parentPackageUid": "NdLkj6Za",
+              "parentSectionUid": "IxcS2nP",
+              "id": "5JBuIEot"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "NdLkj6Za",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "P_1aFUp1",
       "hint": "Specialists - Lord",
       "sections": [
         {
-          "id": "4claim-",
+          "id": "n35ug_e",
           "uid": "YFufH-jg",
           "label": "Upgrade with one",
           "options": [
@@ -3035,7 +4175,65 @@
       "hint": "Destroyer Snakes",
       "sections": [
         {
-          "id": "IcqXu-e",
+          "id": "dEBOpuO",
+          "uid": "kVspGfmG",
+          "label": "Replace Dual Reaper Blade",
+          "options": [
+            {
+              "uid": "qScEKgrw",
+              "cost": -10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "gcoBL7U",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "re7afFw-",
+                  "name": "Heavy Reaper Blade",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "re7afFw-",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 6
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Reaper Blade (A1, AP(3), Deadly(6), Shred)",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Reaper Blade (A1, AP(3), Deadly(6), Shred)",
+              "parentSectionId": "kVspGfmG",
+              "parentPackageUid": "5QbLBATJ",
+              "parentSectionUid": "7-N3C3u",
+              "id": "qScEKgrw"
+            }
+          ],
+          "parentPackageUid": "5QbLBATJ",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Dual Reaper Blade"
+          ]
+        },
+        {
+          "id": "vSpi0bU",
           "uid": "vW-0rhAU",
           "label": "Upgrade with",
           "options": [
@@ -3864,6 +5062,15 @@
       "targetType": 1
     },
     {
+      "id": "L--qMjlm2g4Q",
+      "name": "Piercing Assault Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Piercing Assault. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "QMU04E_1bAVC",
       "name": "No Retreat Aura",
       "aliasedRuleId": null,
@@ -3951,6 +5158,15 @@
       "description": "When units where all models have this rule are shot from over 9\" away, enemy units get -1 to hit rolls.",
       "hasRating": false,
       "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "DhLjIDRrWz6-",
+      "name": "Piercing Assault",
+      "aliasedRuleId": null,
+      "description": "This model gets AP(+1) when charging.",
+      "hasRating": false,
+      "coreType": null,
       "targetType": 1
     },
     {

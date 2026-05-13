@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo, type ReactNode } from 'react';
+import { useParams } from 'react-router-dom';
 import type { BalValConfig, BalValResult, LoadoutOption, Tier } from '../utils/types';
 import {
   getAllLoadouts,
@@ -9,6 +10,9 @@ import {
   getDamageMultiplier,
 } from '../utils/balval';
 import { TIER_THRESHOLDS } from '../utils/types';
+import { GAME_SYSTEMS } from '../hooks/useArmyList';
+import { useCommonRules } from '../hooks/useCommonRules';
+import { RuleList } from '@/components/ui/RuleText';
 
 interface UnitDetailSidebarProps {
   selectedUnit: any | null;
@@ -332,6 +336,20 @@ export function UnitDetailSidebar({
 }: UnitDetailSidebarProps) {
   const [selectedLoadoutId, setSelectedLoadoutId] = useState('base');
 
+  const { systemId } = useParams<{ systemId: string }>();
+  const systemSlug = GAME_SYSTEMS.find((s) => s.id === Number(systemId))?.slug;
+  const { dict: commonRulesDict } = useCommonRules(systemSlug);
+
+  // Merge army-book-specific rules (faction rules) over the common-rules dict
+  // so book-level rules take precedence if any names collide.
+  const rulesDict = useMemo<Record<string, string>>(() => {
+    const out: Record<string, string> = { ...commonRulesDict };
+    for (const r of army?.specialRules || []) {
+      if (r?.name && r?.description) out[r.name] = r.description;
+    }
+    return out;
+  }, [commonRulesDict, army?.specialRules]);
+
   const loadouts = useMemo<LoadoutOption[]>(() => {
     if (!selectedUnit || !army) return [];
     return getAllLoadouts(selectedUnit, army, balValConfig, { isDoubled });
@@ -542,7 +560,7 @@ export function UnitDetailSidebar({
         {/* Armory: full weapon detail for the active loadout */}
         {active && (
           <section className="animate-in fade-in slide-in-from-bottom-2 duration-300">
-            <ArmoryBreakdown active={active} unit={selectedUnit} balValConfig={balValConfig} />
+            <ArmoryBreakdown active={active} unit={selectedUnit} balValConfig={balValConfig} rulesDict={rulesDict} />
           </section>
         )}
       </div>
@@ -819,10 +837,12 @@ function ArmoryBreakdown({
   active,
   unit,
   balValConfig,
+  rulesDict,
 }: {
   active: LoadoutOption;
   unit: any;
   balValConfig: BalValConfig;
+  rulesDict?: Record<string, string>;
 }) {
   return (
     <div className="rounded-xl border border-white/10 bg-white/5 overflow-hidden">
@@ -874,9 +894,11 @@ function ArmoryBreakdown({
                   <div className="flex flex-col">
                     <span>Special Rules</span>
                     <span className="text-white truncate">
-                      {w.specialRules?.length > 0
-                        ? w.specialRules.map((r: any) => r.label).join(', ')
-                        : 'None'}
+                      {w.specialRules?.length > 0 ? (
+                        <RuleList rules={w.specialRules} specialRulesDict={rulesDict} />
+                      ) : (
+                        'None'
+                      )}
                     </span>
                   </div>
                 </div>

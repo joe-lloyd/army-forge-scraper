@@ -14,6 +14,96 @@
   "backgroundFull": "The Dwarves originated on a mineral rich but inhospitable world. In order to escape the harsh conditions of the surface, their civilization developed underground where conditions were more stable. As their civilization continued to grow, they started to discover and innovate new uses for the ores and resources they uncovered as they dug their cities. Guilds of miners arose to stake claims on these ores, and soon, Guild Lords became the richest and most powerful Dwarves on their planets, holding absolute control of the ore which their society depended on.\n\nThe Guilds were driven by a demand for constant growth and competition with rival Guilds, causing them to mine ever deeper into their home world’s crust. The Guilds continued until they had stripped their world nearly bare, before turning toward space. They expanded rapidly outwards, their wealth grew as Guilds competed to stake claims over new systems. \n\nThis rapid expansion only slowed when the Dwarves began to encounter more powerful factions. After some initial tension, the Dwarves struck up an alliance with the Elves. The Elves conceded a number of border worlds to the Dwarves while trade between the factions of Sirius flourished. Noticing the disunity of the Orcs, the Guilds used a Orc raids as a pretext to begin expanding into their territory.\n\nAfter their initial success, the Guilds became more ambitious and began to expand deep into Orc territory. The Orcs united against them and quickly began to turn the tide. The Dwarves became desperate to recover what resources as they retreated, stripping many planets bare. Dwarves became increasingly desperate for resources and sought to create a wormhole that would allow them to rapidly extract resources from distant worlds, even other galaxies. \n\nWhen they activated their machine, something went terribly wrong. The Radiance Cascade tore through much of Sirius in an instant, destroying most of their worlds and killing most of those residing in Guild territory. The survivors were largely miners working on systems at the edge of their space. Following the Cascade, the Guilds moved quickly to evacuate survivors and adapt to a space born life. \n\nMost Dwarves now live on mobile mining fleets. These fleets travel through their territory extracting everything they can from a system before abandoning it. The Dwarves have also taken an interest in the Zone, contending that they have exclusive rights of salvage there.\n\nHow will you extract your fortune from the Sirius Sector?",
   "units": [
     {
+      "id": "5op34S_",
+      "cost": 125,
+      "name": "Powersuit Champion",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [
+        {
+          "id": "SkEV9",
+          "name": "Combat Shield",
+          "type": "ArmyBookItem",
+          "bases": null,
+          "content": [
+            {
+              "id": "IyLY1212wacW",
+              "name": "Fortified",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "djJahpu0Ciut",
+          "name": "Infiltrate",
+          "label": "Infiltrate"
+        },
+        {
+          "id": "Ldhtmr4H8b6G",
+          "name": "Slow",
+          "label": "Slow"
+        },
+        {
+          "id": "gD2_znglqhNw",
+          "name": "Sturdy",
+          "label": "Sturdy"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "xriOR9J9",
+          "name": "Shock Hammer",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "GDaUWndE",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Shock Hammer (A2, Blast(3))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "ZpmpO",
+        "knt9G"
+      ],
+      "genericName": "Powersuit Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "ILXnjbU",
       "cost": 45,
       "name": "Dwarf Champion",
@@ -1247,7 +1337,7 @@
       "hint": "Dwarf Champion",
       "sections": [
         {
-          "id": "BS98atg",
+          "id": "kBUXe1L",
           "uid": "S_B7YLe",
           "label": "Replace Combat Shield and CCW",
           "options": [
@@ -1343,7 +1433,7 @@
           ]
         },
         {
-          "id": "_tMQHH0",
+          "id": "_wmH_EE",
           "uid": "ORLpfxN",
           "label": "Replace Combat Shield",
           "options": [
@@ -1707,7 +1797,7 @@
           ]
         },
         {
-          "id": "DrO7BQS",
+          "id": "DiF_53n",
           "uid": "JpHd7QH",
           "label": "Replace CCW",
           "options": [
@@ -1949,7 +2039,7 @@
           ]
         },
         {
-          "id": "Y9P6dtX",
+          "id": "lVKU1T9",
           "uid": "Ok_UjYBy",
           "label": "Upgrade with one",
           "options": [
@@ -2089,6 +2179,129 @@
               "parentSectionId": "Ok_UjYBy",
               "parentPackageUid": "VgOJGjRG",
               "id": "6OU6g_9Z"
+            },
+            {
+              "uid": "J7ZxXY_Y",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ILXnjbU",
+                  "cost": 100
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Combat Bike",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "60x35",
+                    "square": "50x25"
+                  },
+                  "label": "Combat Bike (Auto-Gun (24\", A2, AP(1)), Fast, Swift, Tough(3))",
+                  "content": [
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "leFm23MTiJxO",
+                      "name": "Swift",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "name": "Auto-Gun",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 24,
+                      "attacks": 2,
+                      "weaponId": "ig-Kih6q",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Auto-Gun (24\", A2, AP(1))"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Combat Bike (Auto-Gun (24\", A2, AP(1)), Fast, Swift, Tough(3))",
+              "parentSectionId": "Ok_UjYBy",
+              "parentPackageUid": "VgOJGjRG",
+              "id": "J7ZxXY_Y"
+            },
+            {
+              "uid": "bC6VjBjw",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ILXnjbU",
+                  "cost": 100
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Pioneer Bike",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "60x35",
+                    "square": "50x25"
+                  },
+                  "label": "Pioneer Bike (Auto-Gun (24\", A2, AP(1)), Scout, Swift, Tough(3))",
+                  "content": [
+                    {
+                      "id": "93Wg6-Jf",
+                      "name": "Auto-Gun",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 24,
+                      "attacks": 2,
+                      "weaponId": "ig-Kih6q",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Auto-Gun (24\", A2, AP(1))"
+                    },
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "leFm23MTiJxO",
+                      "name": "Swift",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Pioneer Bike (Auto-Gun (24\", A2, AP(1)), Scout, Swift, Tough(3))",
+              "parentSectionId": "Ok_UjYBy",
+              "parentPackageUid": "VgOJGjRG",
+              "id": "bC6VjBjw"
             }
           ],
           "parentPackageUid": "VgOJGjRG",
@@ -2107,7 +2320,7 @@
       "hint": "Berserk Veteran",
       "sections": [
         {
-          "id": "mck4rKM",
+          "id": "9y9Dsio",
           "uid": "1zfkbL9",
           "label": "Replace Heavy Great Axe",
           "options": [
@@ -2232,7 +2445,7 @@
           ]
         },
         {
-          "id": "SfrcJyG",
+          "id": "zT74DfW",
           "uid": "6CrnLdc",
           "label": "Upgrade with any",
           "options": [
@@ -2313,7 +2526,7 @@
       "hint": "Dwarf Warriors",
       "sections": [
         {
-          "id": "47XbVMi",
+          "id": "Gx_e-Ss",
           "uid": "9OYqdhM",
           "label": "Replace Rifle",
           "options": [
@@ -2678,7 +2891,7 @@
           ]
         },
         {
-          "id": "uRUN3GM",
+          "id": "O0p3W4K",
           "uid": "9w7T_",
           "label": "Upgrade with one",
           "options": [
@@ -2750,7 +2963,7 @@
           }
         },
         {
-          "id": "PUkW1pT",
+          "id": "ZYUvIv-",
           "uid": "OG15ve7y",
           "label": "Replace Rifle and CCW",
           "options": [
@@ -2818,7 +3031,7 @@
           ]
         },
         {
-          "id": "cxIKs57",
+          "id": "A_uJyNs",
           "uid": "TAvrndAH",
           "label": "Replace Sgt. Pistol",
           "options": [
@@ -2935,7 +3148,7 @@
           ]
         },
         {
-          "id": "YeMGIwJ",
+          "id": "1nDPqNy",
           "uid": "QanCyYea",
           "label": "Replace Plasma Sword",
           "options": [
@@ -2991,7 +3204,7 @@
       "hint": "Jetpack Warriors",
       "sections": [
         {
-          "id": "2aD5WWq",
+          "id": "LSxiIHp",
           "uid": "Sr2MG",
           "label": "Replace Pistols and CCW",
           "options": [
@@ -3045,7 +3258,7 @@
           ]
         },
         {
-          "id": "ukWw8T-",
+          "id": "qW78mZa",
           "uid": "_i1BBt0",
           "label": "Replace any Pistol",
           "options": [
@@ -3169,7 +3382,7 @@
           ]
         },
         {
-          "id": "KKrPPXS",
+          "id": "IoBG49P",
           "uid": "gEBtl",
           "label": "Replace Pistol",
           "options": [
@@ -3223,7 +3436,7 @@
           ]
         },
         {
-          "id": "DTUPfSx",
+          "id": "nOtLZqz",
           "uid": "y-z1B_Z",
           "label": "Replace any CCW",
           "options": [
@@ -3318,7 +3531,7 @@
           ]
         },
         {
-          "id": "F9jK6IN",
+          "id": "xjZPCoA",
           "uid": "UF5Ov",
           "label": "Replace CCW",
           "options": [
@@ -3413,7 +3626,7 @@
       "hint": "Miners",
       "sections": [
         {
-          "id": "b3efZBh",
+          "id": "XwBl0Oh",
           "uid": "QQ9ammn",
           "label": "Replace any Iron Pistol",
           "options": [
@@ -3465,7 +3678,7 @@
           ]
         },
         {
-          "id": "Pc_19k7",
+          "id": "krb0q4K",
           "uid": "1l-W2ox",
           "label": "Replace Iron Pistol",
           "options": [
@@ -3605,7 +3818,7 @@
           ]
         },
         {
-          "id": "XAqeT0f",
+          "id": "b94eNle",
           "uid": "pGaRZ",
           "label": "Replace Iron Pistol and CCW",
           "options": [
@@ -3719,7 +3932,7 @@
           ]
         },
         {
-          "id": "YYKFqvG",
+          "id": "FdLC4BL",
           "uid": "i0r-_qtM",
           "label": "Replace Sgt. Iron Pistol",
           "options": [
@@ -3801,7 +4014,7 @@
           ]
         },
         {
-          "id": "VqKtntG",
+          "id": "rmQtES6",
           "uid": "f-2zJLKo",
           "label": "Replace Plasma Sword",
           "options": [
@@ -3857,7 +4070,7 @@
       "hint": "Powersuit Guard",
       "sections": [
         {
-          "id": "fvlLjeq",
+          "id": "5iuuzbR",
           "uid": "ZSiEL",
           "label": "Replace Combat Shield",
           "options": [
@@ -3903,7 +4116,7 @@
           ]
         },
         {
-          "id": "nyM0Q-_",
+          "id": "0gKpDd0",
           "uid": "wGO1Fkv",
           "label": "Replace any Iron Pistol",
           "options": [
@@ -4026,7 +4239,7 @@
           ]
         },
         {
-          "id": "YG-bn1C",
+          "id": "Kykz2b7",
           "uid": "Z1alZY-",
           "label": "Replace Iron Pistol",
           "options": [
@@ -4159,7 +4372,7 @@
           ]
         },
         {
-          "id": "OjH_4ny",
+          "id": "BN99Dgv",
           "uid": "OiGDU",
           "label": "Replace any Shock Hammer",
           "options": [
@@ -4293,7 +4506,7 @@
           ]
         },
         {
-          "id": "kN-Oxij",
+          "id": "7CtacfV",
           "uid": "afzan",
           "label": "Upgrade with",
           "options": [
@@ -4349,7 +4562,7 @@
       "hint": "Thunder Support",
       "sections": [
         {
-          "id": "YJX-RYP",
+          "id": "poR_KuB",
           "uid": "DtZ8Ek7",
           "label": "Replace any Mortar",
           "options": [
@@ -4558,7 +4771,7 @@
           ]
         },
         {
-          "id": "tPI5Hs9",
+          "id": "Z5YLL-T",
           "uid": "YIDaU",
           "label": "Upgrade with",
           "options": [
@@ -4604,7 +4817,7 @@
       "hint": "Dwarf Bikers",
       "sections": [
         {
-          "id": "ZdHJC6z",
+          "id": "qkKFDkD",
           "uid": "Utcr6OS",
           "label": "Replace any Iron Pistol",
           "options": [
@@ -4692,7 +4905,7 @@
           ]
         },
         {
-          "id": "PIDrpKZ",
+          "id": "QrfbzXM",
           "uid": "bVnWU",
           "label": "Replace Lead Foot",
           "options": [
@@ -4743,7 +4956,7 @@
       "hint": "Berserkers",
       "sections": [
         {
-          "id": "dbOAPW3",
+          "id": "OV0RaOu",
           "uid": "2T4dB",
           "label": "Replace all Great Axes",
           "options": [
@@ -4825,7 +5038,7 @@
           ]
         },
         {
-          "id": "-stYX3x",
+          "id": "4h22eJ3",
           "uid": "V4K6q",
           "label": "Replace one Great Axe",
           "options": [
@@ -4887,7 +5100,7 @@
           ]
         },
         {
-          "id": "f-Mui3e",
+          "id": "A1cQnws",
           "uid": "DB4SL",
           "label": "Upgrade all models with",
           "options": [
@@ -4939,7 +5152,7 @@
       "hint": "Iron Veterans",
       "sections": [
         {
-          "id": "Vyv090T",
+          "id": "LjaHobH",
           "uid": "Ah-Dz",
           "label": "Replace Iron Shotgun",
           "options": [
@@ -5156,7 +5369,7 @@
           ]
         },
         {
-          "id": "hY-KODN",
+          "id": "3tv4MD8",
           "uid": "yghnc",
           "label": "Upgrade with one",
           "options": [
@@ -5228,7 +5441,7 @@
           }
         },
         {
-          "id": "jpRUpOv",
+          "id": "pJ4LdOq",
           "uid": "gp8bFs0S",
           "label": "Replace Iron Shotgun and CCW",
           "options": [
@@ -5302,7 +5515,7 @@
           ]
         },
         {
-          "id": "AEJwFn_",
+          "id": "oKDmMpY",
           "uid": "DCqciUjp",
           "label": "Replace Sgt. Iron Pistol",
           "options": [
@@ -5384,7 +5597,7 @@
           ]
         },
         {
-          "id": "eqP_9__",
+          "id": "xfmTqPs",
           "uid": "vQyObCHe",
           "label": "Replace Plasma Sword",
           "options": [
@@ -5440,7 +5653,7 @@
       "hint": "Sniper Team",
       "sections": [
         {
-          "id": "U6Xem5S",
+          "id": "N3lCiJy",
           "uid": "9IrZu",
           "label": "Upgrade with one",
           "options": [
@@ -5515,11 +5728,525 @@
       "calcErrors": false
     },
     {
+      "uid": "ZpmpO",
+      "hint": "Powersuit Champion",
+      "sections": [
+        {
+          "id": "-e1mlN0",
+          "uid": "9lMup",
+          "label": "Replace Combat Shield",
+          "options": [
+            {
+              "uid": "J4o6I",
+              "cost": -5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Champion H-Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 9,
+                  "attacks": 3,
+                  "weaponId": "dfdgchWD",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Champion H-Pistol (9\", A3, Rending)"
+                }
+              ],
+              "label": "Champion H-Pistol (9\", A3, Rending)",
+              "parentPackageUid": "ZpmpO",
+              "parentSectionUid": "9lMup",
+              "parentSectionId": "9lMup",
+              "id": "J4o6I"
+            },
+            {
+              "uid": "j-H8d",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Champion Iron Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 9,
+                  "attacks": 4,
+                  "weaponId": "yJzVgUTS",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Champion Iron Pistol (9\", A4, AP(1))"
+                }
+              ],
+              "label": "Champion Iron Pistol (9\", A4, AP(1))",
+              "parentSectionId": "9lMup",
+              "id": "j-H8d"
+            },
+            {
+              "uid": "fWz0j",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Champion Plasma Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 2,
+                  "weaponId": "5WBl165k",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Champion Plasma Pistol (12\", A2, AP(4))"
+                }
+              ],
+              "label": "Champion Plasma Pistol (12\", A2, AP(4))",
+              "parentPackageUid": "ZpmpO",
+              "parentSectionUid": "9lMup",
+              "parentSectionId": "9lMup",
+              "id": "fWz0j"
+            },
+            {
+              "uid": "A_xFd",
+              "cost": 65,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 80
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Rapid Storm Rifle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 6,
+                  "weaponId": "uE5a4fFB",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rapid Storm Rifle (24\", A6, AP(1))"
+                }
+              ],
+              "label": "Rapid Storm Rifle (24\", A6, AP(1))",
+              "parentPackageUid": "ZpmpO",
+              "parentSectionUid": "9lMup",
+              "parentSectionId": "9lMup",
+              "id": "A_xFd"
+            }
+          ],
+          "parentPackageUid": "ZpmpO",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Combat Shield"
+          ]
+        },
+        {
+          "id": "RMt-b-9",
+          "uid": "PLKp0",
+          "label": "Replace Shock Hammer",
+          "options": [
+            {
+              "uid": "AHtrO",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Plasma Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "Yr5VINe7",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Plasma Sword (A4, AP(1), Rending)"
+                }
+              ],
+              "label": "Plasma Sword (A4, AP(1), Rending)",
+              "parentPackageUid": "ZpmpO",
+              "parentSectionUid": "PLKp0",
+              "parentSectionId": "PLKp0",
+              "id": "AHtrO"
+            },
+            {
+              "uid": "6e9Ts",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Plasma Axe",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "QGC-iW54",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Plasma Axe (A2, AP(2), Deadly(3))"
+                }
+              ],
+              "label": "Plasma Axe (A2, AP(2), Deadly(3))",
+              "parentPackageUid": "ZpmpO",
+              "parentSectionUid": "PLKp0",
+              "parentSectionId": "PLKp0",
+              "id": "6e9Ts"
+            },
+            {
+              "uid": "4wreH",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Shock Gauntlet",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "l8HI_8hW",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Shock Gauntlet (A4, AP(4))"
+                }
+              ],
+              "label": "Shock Gauntlet (A4, AP(4))",
+              "parentPackageUid": "ZpmpO",
+              "parentSectionUid": "PLKp0",
+              "parentSectionId": "PLKp0",
+              "id": "4wreH"
+            }
+          ],
+          "parentPackageUid": "ZpmpO",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Shock Hammer"
+          ]
+        },
+        {
+          "id": "vieaWj5",
+          "uid": "1jNaC",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "5cVKH",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Exo-GL",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "yS53yWly",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Exo-GL (18\", A1, Blast(3), Limited)"
+                }
+              ],
+              "label": "Exo-GL (18\", A1, Blast(3), Limited)",
+              "parentPackageUid": "ZpmpO",
+              "parentSectionUid": "1jNaC",
+              "parentSectionId": "1jNaC",
+              "id": "5cVKH"
+            }
+          ],
+          "parentPackageUid": "ZpmpO",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "knt9G",
+      "hint": "Specialists - Powersuit",
+      "sections": [
+        {
+          "id": "zjzwjJj",
+          "uid": "zXajR",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "oV1zx",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "tlePLcHQ",
+                  "name": "Guild Lord",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Guild Lord (Sturdy Boost Aura)",
+                  "content": [
+                    {
+                      "id": "BOSZqK98Ncka",
+                      "name": "Sturdy Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Guild Lord (Sturdy Boost Aura)",
+              "parentSectionId": "zXajR",
+              "id": "oV1zx"
+            },
+            {
+              "uid": "uwL9C",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Foreman",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Foreman (Swift Aura)",
+                  "content": [
+                    {
+                      "id": "amQphBHWOeJs",
+                      "name": "Swift Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Foreman (Swift Aura)",
+              "parentSectionId": "zXajR",
+              "id": "uwL9C"
+            },
+            {
+              "uid": "KgDA_MFUYn",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Runesmith",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Runesmith (Stealth Aura)",
+                  "content": [
+                    {
+                      "id": "8haZ36fXvnzn",
+                      "name": "Stealth Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Runesmith (Stealth Aura)",
+              "parentSectionId": "zXajR",
+              "id": "KgDA_MFUYn"
+            },
+            {
+              "uid": "EsB6q",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Forge Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Forge Master (Increased Shooting Range Aura)",
+                  "content": [
+                    {
+                      "id": "QWzGAg9RpE2D",
+                      "name": "Increased Shooting Range Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Forge Master (Increased Shooting Range Aura)",
+              "parentPackageUid": "knt9G",
+              "parentSectionUid": "zXajR",
+              "parentSectionId": "zXajR",
+              "id": "EsB6q"
+            },
+            {
+              "uid": "u0HDt",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "5op34S_",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "id": "98cmbiBd",
+                  "name": "Rune Master",
+                  "type": "ArmyBookItem",
+                  "label": "Rune Master (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Rune Master (Caster(2))",
+              "parentPackageUid": "knt9G",
+              "parentSectionUid": "zXajR",
+              "parentSectionId": "zXajR",
+              "id": "u0HDt"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "knt9G",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "cp4t1",
       "hint": "Guardians",
       "sections": [
         {
-          "id": "muEaQVY",
+          "id": "k0FQNV-",
           "uid": "01_X1",
           "label": "Replace all Pistols and Bashes",
           "options": [
@@ -5651,7 +6378,7 @@
       "hint": "Elites",
       "sections": [
         {
-          "id": "P1JQcOQ",
+          "id": "5ZxhIam",
           "uid": "X3Mhe",
           "label": "Replace any Heat Hammer",
           "options": [
@@ -5701,7 +6428,7 @@
           ]
         },
         {
-          "id": "axHhNHm",
+          "id": "wmr8lyu",
           "uid": "-9Ht9",
           "label": "Replace Heat Hammer",
           "options": [
@@ -5765,7 +6492,7 @@
       "hint": "Guild Bounty",
       "sections": [
         {
-          "id": "gVF3G6t",
+          "id": "bPWPOHT",
           "uid": "1Qft6",
           "label": "Upgrade all models with",
           "options": [
@@ -5827,7 +6554,7 @@
       "hint": "Specialists - Berserker",
       "sections": [
         {
-          "id": "t96hZzr",
+          "id": "MwFf6Te",
           "uid": "GCZwRkRj",
           "label": "Upgrade with one",
           "options": [
@@ -5969,7 +6696,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "FlbhgMI",
+          "id": "WogM9VF",
           "uid": "LKKF3Vxy",
           "label": "Upgrade with one",
           "options": [
@@ -6178,7 +6905,7 @@
       "hint": "Mine-Bot Guard",
       "sections": [
         {
-          "id": "sgFmykR",
+          "id": "UFhbyhE",
           "uid": "b3UR15AIrK",
           "label": "Replace Light Iron Cannons and CCW",
           "options": [

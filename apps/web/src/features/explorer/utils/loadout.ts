@@ -1,5 +1,10 @@
 import type { Unit, Weapon } from '@opr-api/shared';
 import { calculateWeaponOffense, calculateEffectiveHP } from './balval';
+import {
+  compareEquipmentToTarget,
+  parseSectionTargets,
+  type ParsedTarget,
+} from './weaponNames';
 import type {
   BalValConfig,
   LoadoutState,
@@ -8,6 +13,12 @@ import type {
   ParsedSectionLabel,
   UpgradeApplication,
 } from './types';
+
+// This module is the shared OPR upgrade engine — imported by both the army
+// detail view (preview / best-loadout suggestions) and the analyzer (when a
+// list's selectedUpgrades need to be re-applied against the source army book).
+// All target-name matching goes through `weaponNames.ts` so we stay aligned
+// with how Army Forge's own production bundle resolves replaces.
 
 const NUM_WORDS: Record<string, number> = {
   one: 1,
@@ -57,30 +68,42 @@ function extractWeaponFragments(label: string): string[] {
 }
 
 
-// Strict pool matcher driven by an explicit list of target weapon names. army-
-// forge stores `section.targets` (array of weapon names) authoritatively — way
-// more reliable than parsing labels. Optional plural-s tolerance both ways.
-// Returns [] if any target is missing from the pool.
-export function findTargetedWeapons(section: any, pool: Weapon[]): Weapon[] {
-  const targets: string[] = Array.isArray(section?.targets) ? section.targets : [];
-  if (targets.length === 0) return findReplacedWeapons(section?.label || '', pool);
+// Strict pool matcher driven by `section.targets` — Army Forge's own engine
+// reads this same field. Each returned entry carries a `perApplicationCount`
+// extracted from a leading "Nx " prefix (e.g. "2x CCW" → 2 swaps per
+// application). Matching is singularized on both sides so "Heavy Pistols" in a
+// label finds "Heavy Pistol" in the pool and vice versa.
+//
+// Returns [] if any target is missing from the pool (compound replaces must
+// match all named targets — partial application is not allowed).
+export interface MatchedTarget {
+  weapon: Weapon;
+  perApplicationCount: number;
+}
 
+export function findTargetedWeapons(section: any, pool: Weapon[]): MatchedTarget[] {
+  const parsed: ParsedTarget[] = parseSectionTargets(section);
+  if (parsed.length === 0) {
+    const fallback = findReplacedWeapons(section?.label || '', pool);
+    return fallback.map((w) => ({ weapon: w, perApplicationCount: 1 }));
+  }
+
+  // Sort longest-first so "Sgt. Barb Pistol" is preferred over "Barb Pistol"
+  // when both appear in the pool.
   const sortedPool = [...pool].sort((a, b) => (b.name || '').length - (a.name || '').length);
   const consumed = new Set<string>();
-  const matched: Weapon[] = [];
-  for (const t of targets) {
-    const tn = (t || '').toLowerCase();
+  const matched: MatchedTarget[] = [];
+  for (const t of parsed) {
     let found: Weapon | null = null;
     for (const w of sortedPool) {
       if (consumed.has(w.id) || w.count <= 0 || !w.name) continue;
-      const wn = w.name.toLowerCase();
-      if (wn === tn || wn === `${tn}s` || `${wn}s` === tn) {
+      if (compareEquipmentToTarget(w, t.name)) {
         found = w;
         break;
       }
     }
     if (!found) return [];
-    matched.push(found);
+    matched.push({ weapon: found, perApplicationCount: t.count });
     consumed.add(found.id);
   }
   return matched;
@@ -101,11 +124,9 @@ export function findReplacedWeapons(label: string, pool: Weapon[]): Weapon[] {
     let found: Weapon | null = null;
     for (const w of sortedPool) {
       if (consumedIds.has(w.id) || w.count <= 0 || !w.name) continue;
-      const nm = w.name.toLowerCase();
-      // Exact-fragment match (with optional plural "s") so "barb pistol" from
-      // pool only matches a fragment of "barb pistol", never the longer
-      // "sgt. barb pistol".
-      if (frag === nm || frag === nm + 's') {
+      // Singularize both sides so "barb pistols" matches pool "Barb Pistol"
+      // and pool "Custodian Axes" matches fragment "custodian axe".
+      if (compareEquipmentToTarget(w, frag)) {
         found = w;
         break;
       }
@@ -181,9 +202,13 @@ export function applyOption(
   if (isReplace) {
     const matches = findTargetedWeapons(section, state.weapons);
     if (matches.length === 0) return null;
-    for (const w of matches) {
-      if (w.count < k) return null;
-      removed.push({ weapon: w, count: k });
+    for (const m of matches) {
+      // Per-target "Nx " multiplier scales the per-application removal count.
+      // e.g. "Replace Lord Gauss Pistol and 2x CCW" with k=1 removes 1 pistol
+      // and 2 CCWs.
+      const needed = k * m.perApplicationCount;
+      if (m.weapon.count < needed) return null;
+      removed.push({ weapon: m.weapon, count: needed });
     }
   }
   const perInstance = k;
@@ -331,17 +356,44 @@ function candidateCounts(
   const instances = opts.isDoubled ? 2 : 1;
   const isReplace = section.variant === 'replace';
 
-  // Pool floor + reserved seats for downstream sgt sections.
+  // Pool floor + reserved seats for downstream sgt sections. For replaces with
+  // a "Nx " target prefix, each application consumes N of that weapon, so the
+  // effective pool floor is floor(count / N) — applications, not raw weapons.
   let poolFloor = unit.size * instances;
   let matchedNames: string[] = [];
   if (isReplace) {
     const matches = findTargetedWeapons(section, state.weapons);
     if (matches.length === 0) return [];
-    poolFloor = Math.min(...matches.map(w => w.count));
-    matchedNames = matches.map(m => (m.name || '').toLowerCase());
+    poolFloor = Math.min(
+      ...matches.map((m) => Math.floor(m.weapon.count / Math.max(1, m.perApplicationCount))),
+    );
+    matchedNames = matches.map((m) => (m.weapon.name || '').toLowerCase());
   }
   const reserved = isReplace ? reservedForFutureSgts(idx, sections, matchedNames) : 0;
-  const usableMax = Math.max(0, poolFloor - reserved);
+  let usableMax = Math.max(0, poolFloor - reserved);
+
+  // `section.select` caps how many copies of the option can land per model.
+  // Combined with `affects`, AF's own engine treats `select` as the inner
+  // multiplier and `affects` as the outer (model-count) limit:
+  //   affects: any        × select: exactly 1  → up to (size × 1) total
+  //   affects: any        × select: up to N    → up to (size × N) total
+  //   affects: exactly M  × select: up to N    → up to (M × N) total
+  // For non-replace variants where there's no pool to consume, `select` is the
+  // primary cap. We intersect the select cap into usableMax.
+  const sel = section.select;
+  if (sel && typeof sel === 'object') {
+    let selectCap = Infinity;
+    const v = typeof sel.value === 'number' ? sel.value : 1;
+    if (sel.type === 'exactly' || sel.type === 'up to') {
+      if (a?.type === 'any') selectCap = unit.size * instances * v;
+      else if (a?.type === 'exactly' || a?.type === 'up to') selectCap = (a.value || 1) * instances * v;
+      else selectCap = v * instances;
+    } else if (sel.type === 'any') {
+      // 'select: any' alone means no inner cap; affects still governs.
+      selectCap = Infinity;
+    }
+    if (Number.isFinite(selectCap)) usableMax = Math.min(usableMax, selectCap);
+  }
 
   if (isSgt) {
     return usableMax >= instances ? [instances] : [];
@@ -364,8 +416,17 @@ function candidateCounts(
     }
   }
 
-  // Fallback: when affects is null, default to a single swap (matches the
-  // singleton sgt-replace pattern, e.g. "Replace Sgt. Barb Pistol").
+  // No `affects`: fall back to `select` when present (sgt-style "Replace Sgt.
+  // Barb Pistol" sections often have only `select: {type: 'exactly', value: 1}`)
+  // otherwise a single swap.
+  if (sel?.type === 'up to' && typeof sel.value === 'number') {
+    const top = Math.min(sel.value * instances, usableMax);
+    return top >= 1 ? Array.from({ length: top }, (_, i) => i + 1) : [];
+  }
+  if (sel?.type === 'exactly' && typeof sel.value === 'number') {
+    const k = Math.max(1, sel.value * instances);
+    return usableMax >= k ? [k] : [];
+  }
   return usableMax >= 1 ? [1] : [];
 }
 

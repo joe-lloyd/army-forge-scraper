@@ -14,6 +14,98 @@
   "backgroundFull": "The Machine Cult trace their origins to old Earth. Their cult has long believed that the advancement of technology is inevitable and eventually humanity itself will be surpassed by the machine in an event called the Singularity, which would have absolute power to determine the fate of humanity. The Cult believes that only by embracing the machine can humanity remain relevant, and their cult rejected the Founder and his plan for humanity, believing that his genetic enhancements were mere distractions from the inevitable machine Singularity. The Founder in turn banned their cult, and as a result, many Machine Cultists eagerly joined the refugee fleet.\n\nWhen humanity arrived in Sirius, the Machine Cult and its members were scattered throughout many of the surviving colonies. Though far apart, they were united in their faith and their fascination with augmentation. The Cult gained adherents from those who believed that their upgrades were the best way to adapt to new worlds. Driven on by discoveries in Sirius and trade with newly encountered species, the Machine Cult began to augment themselves in ways which could not have been imagined previously.\n\nAs augmentation became more easily obtained, many of its adherents began to augment themselves beyond anything that they were capable of on Earth, seeking to embrace the machine in new ways. As they did so, the adherents of the cult began to grow apart from other colonists. Others began to see the Cult and their followers as strange and inhuman. Some even began to leave the cult, embittered by augmentation failures or haunted by a feeling that they had lost some part of humanity.\n \nAs a result, the Machine Cult began to petition the Great Human Alliance for settlement rights. Their augmentations and robots allowed them to settle a number of inhospitable worlds which were otherwise not suited for settlements. The Machine Cult’s detachment and isolation meant that few were surprised when the Cult demanded independence from the Alliance. The Alliance were not interested in resettling or occupying the worlds the Cult had claimed and saw little to gain from war, and as such, the Machine Cults gained their final independence diplomatically, rather than through war.\n\nThe Machine Cults still maintain their eternal vigil, awaiting the transcendence of technology and the ascension of the machine. Their forces search throughout the Sector, seeking hidden and lost technologies that might help this come about or allow them to more fully embrace the machine.\n\nHow will you guide your people towards the Singularity?",
   "units": [
     {
+      "id": "4ajpg-M",
+      "cost": 155,
+      "name": "High Cyborg-Priest",
+      "size": 1,
+      "bases": {
+        "round": "32",
+        "square": "30"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "S8IZt-d0Sgwk",
+          "name": "Machine-Fog",
+          "label": "Machine-Fog"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "BBQCG",
+          "name": "Revolver",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 3,
+          "weaponId": "i8NKogRV",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 3,
+          "label": "Revolver (12\", A3, AP(1))",
+          "originalCount": 1
+        },
+        {
+          "id": "yemqTC6X",
+          "name": "Axe-Halberd",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 6,
+          "weaponId": "yemqTC6X",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 4,
+              "label": "AP(4)"
+            }
+          ],
+          "attacksMultiplier": 2,
+          "label": "Axe-Halberd (A6, AP(4))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "A1",
+        "C1",
+        "6li5aLJ-"
+      ],
+      "genericName": "Great Cult Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "hvRc6eE",
       "key": "new-unit",
       "cost": 70,
@@ -881,11 +973,257 @@
   ],
   "upgradePackages": [
     {
+      "uid": "A1",
+      "hint": "High Cyborg-Priest",
+      "sections": [
+        {
+          "id": "DcwvLiR",
+          "uid": "NUPTdiS",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "h7nsn",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Macro Pistol",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 3,
+                  "weaponId": "PcsS3LsK",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Macro Pistol (12\", A3)"
+                }
+              ],
+              "label": "Macro Pistol (12\", A3)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "NUPTdiS",
+              "parentSectionId": "NUPTdiS",
+              "id": "h7nsn"
+            },
+            {
+              "uid": "twMAC",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "P-Repeater",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "G5-WbE2v",
+                  "specialRules": [
+                    {
+                      "id": "WcOMD7QgPYXZ",
+                      "name": "Lacerate"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "P-Repeater (18\", A2, Lacerate)"
+                }
+              ],
+              "label": "P-Repeater (18\", A2, Lacerate)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "NUPTdiS",
+              "parentSectionId": "NUPTdiS",
+              "id": "twMAC"
+            },
+            {
+              "uid": "EfxfRzv",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": "xYAliRWy",
+                  "name": "Supersonic Cannon",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "xYAliRWy",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Supersonic Cannon (12\", A1, AP(1), Blast(3), Reliable)",
+                  "count": 1
+                }
+              ],
+              "label": "Supersonic Cannon (12\", A1, AP(1), Blast(3), Reliable)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "NUPTdiS",
+              "parentSectionId": "NUPTdiS",
+              "id": "EfxfRzv"
+            },
+            {
+              "uid": "s5489-S",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": "NA4dM54H",
+                  "name": "Eradicator",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "NA4dM54H",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Eradicator (24\", A1, AP(1), Blast(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Eradicator (24\", A1, AP(1), Blast(3))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "NUPTdiS",
+              "parentSectionId": "NUPTdiS",
+              "id": "s5489-S"
+            },
+            {
+              "uid": "flEV7Ce",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "id": "hh-k29Z0",
+                  "name": "Rail Gun",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "hh-k29Z0",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rail Gun (18\", A1, AP(3), Deadly(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Rail Gun (18\", A1, AP(3), Deadly(3))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "NUPTdiS",
+              "parentSectionId": "NUPTdiS",
+              "id": "flEV7Ce"
+            },
+            {
+              "uid": "q4RQjlT",
+              "cost": 45,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "id": "9g8-aNeA",
+                  "name": "V-Blaster",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 3,
+                  "weaponId": "9g8-aNeA",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "V-Blaster (24\", A3, Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "V-Blaster (24\", A3, Rending)",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "NUPTdiS",
+              "parentSectionId": "NUPTdiS",
+              "id": "q4RQjlT"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "B1",
       "hint": "Cult Leader",
       "sections": [
         {
-          "id": "3rWcDg1",
+          "id": "6GvJNtJ",
           "uid": "FdiNqBV",
           "label": "Replace Leader R-Pistol",
           "options": [
@@ -1151,7 +1489,7 @@
           ]
         },
         {
-          "id": "Yogi7Z2",
+          "id": "PsT-HBs",
           "uid": "qsc_Mty",
           "label": "Replace Tech-Sword",
           "options": [
@@ -1317,7 +1655,7 @@
           ]
         },
         {
-          "id": "JeGRHaY",
+          "id": "IS45rpW",
           "uid": "mihBb",
           "label": "Upgrade with one",
           "options": [
@@ -1523,11 +1861,240 @@
       "calcErrors": false
     },
     {
+      "uid": "C1",
+      "hint": "Specialists - High Priest",
+      "sections": [
+        {
+          "id": "wbMPhdL",
+          "uid": "ilLvqMc",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "p5tKI",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Machine-Preserver",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Machine-Preserver (Melee Shrouding Aura)",
+                  "content": [
+                    {
+                      "id": "0dZak5jae8F0",
+                      "name": "Melee Shrouding Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Machine-Preserver (Melee Shrouding Aura)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "ilLvqMc",
+              "parentSectionId": "ilLvqMc",
+              "id": "p5tKI"
+            },
+            {
+              "uid": "7Ch1QrX",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Preacher",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Preacher (Unpredictable Fighter Aura)",
+                  "content": [
+                    {
+                      "id": "8zBpM3Wjey08",
+                      "name": "Unpredictable Fighter Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Preacher (Unpredictable Fighter Aura)",
+              "parentSectionId": "ilLvqMc",
+              "id": "7Ch1QrX"
+            },
+            {
+              "uid": "8-_4e_gBKu",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Canticle Chanter",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Canticle Chanter (Machine-Fog Boost Aura)",
+                  "content": [
+                    {
+                      "id": "engi9zFdRht9",
+                      "name": "Machine-Fog Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Canticle Chanter (Machine-Fog Boost Aura)",
+              "parentSectionId": "ilLvqMc",
+              "id": "8-_4e_gBKu"
+            },
+            {
+              "uid": "5ccN_w1",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Deacon",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Deacon (Rending when Shooting Aura)",
+                  "content": [
+                    {
+                      "id": "AfGDQgn8r8O1",
+                      "name": "Rending when Shooting Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Deacon (Rending when Shooting Aura)",
+              "parentSectionId": "ilLvqMc",
+              "id": "5ccN_w1"
+            },
+            {
+              "uid": "WMrFSXc",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Engineer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Engineer (Mend)",
+                  "content": [
+                    {
+                      "id": "mETdyZ__yMVj",
+                      "name": "Mend",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Engineer (Mend)",
+              "parentSectionId": "ilLvqMc",
+              "id": "WMrFSXc"
+            },
+            {
+              "uid": "VC9Z-lM",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Psy-Hacker",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Psy-Hacker (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Psy-Hacker (Caster(2))",
+              "parentSectionId": "ilLvqMc",
+              "id": "VC9Z-lM"
+            },
+            {
+              "uid": "DwEgGb9",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 60
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Psy-Hacker",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Master Psy-Hacker (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Psy-Hacker (Caster(3))",
+              "parentSectionId": "ilLvqMc",
+              "id": "DwEgGb9"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "D1",
       "hint": "Cult Rangers",
       "sections": [
         {
-          "id": "rD4sI3z",
+          "id": "o6xBdJZ",
           "uid": "jtkAN",
           "label": "Replace R-Fusil",
           "options": [
@@ -1775,7 +2342,7 @@
           ]
         },
         {
-          "id": "uPomjGi",
+          "id": "rrdHtu8",
           "uid": "MibQBmOt",
           "label": "Replace R-Fusil and CCW",
           "options": [
@@ -1841,7 +2408,7 @@
           ]
         },
         {
-          "id": "5xnSODL",
+          "id": "kjdXd6U",
           "uid": "fOf0mEbm",
           "label": "Replace R-Pistol",
           "options": [
@@ -1996,7 +2563,7 @@
           ]
         },
         {
-          "id": "rNG1u1M",
+          "id": "IVUzZsN",
           "uid": "oXtFrUHh",
           "label": "Replace Taser Sword",
           "options": [
@@ -2135,7 +2702,7 @@
       "hint": "Shock Priests",
       "sections": [
         {
-          "id": "_qWQfKr",
+          "id": "AKkJ1lY",
           "uid": "HBKp5-4",
           "label": "Replace Shock Staff",
           "options": [
@@ -2207,7 +2774,7 @@
       "hint": "Sect Stalkers",
       "sections": [
         {
-          "id": "o9qHE99",
+          "id": "G9Lk6W1",
           "uid": "KssNAUH",
           "label": "Replace Dual S-Blade",
           "options": [
@@ -2253,7 +2820,7 @@
           ]
         },
         {
-          "id": "yekxemI",
+          "id": "0-VuXs_",
           "uid": "qNTyplh",
           "label": "Upgrade with",
           "options": [
@@ -2315,7 +2882,7 @@
       "hint": "Sect Infiltrators",
       "sections": [
         {
-          "id": "FX2Ja5i",
+          "id": "1xhv20W",
           "uid": "UC1mTQ1",
           "label": "Replace F-Blasters and Taser Sword",
           "options": [
@@ -2390,7 +2957,7 @@
       "hint": "Sky Stalkers",
       "sections": [
         {
-          "id": "wlLLmP7",
+          "id": "5SC9IFT",
           "uid": "V2B5fR0",
           "label": "Replace F-Carbine",
           "options": [
@@ -2442,7 +3009,7 @@
           ]
         },
         {
-          "id": "lQc43la",
+          "id": "2FeSLU8",
           "uid": "mxNTNak",
           "label": "Replace F-Carbine and CCW",
           "options": [
@@ -2503,7 +3070,7 @@
           ]
         },
         {
-          "id": "iERnJsP",
+          "id": "7bzUA7D",
           "uid": "ODkU-GS",
           "label": "Upgrade with",
           "options": [
@@ -2550,7 +3117,7 @@
       "hint": "Raider Cavalry",
       "sections": [
         {
-          "id": "wBo9aJ0",
+          "id": "C4-ZuXn",
           "uid": "yDCGAfm",
           "label": "Replace any Twin P-Pistol",
           "options": [
@@ -2599,7 +3166,7 @@
           ]
         },
         {
-          "id": "4rjDYV_",
+          "id": "BqD4U27",
           "uid": "ekjvoHy",
           "label": "Replace G-Carbine",
           "options": [
@@ -2647,7 +3214,7 @@
           ]
         },
         {
-          "id": "Jk4hkC0",
+          "id": "W1e4b2Z",
           "uid": "E7mP9Rk",
           "label": "Replace G-Carbine and CCW",
           "options": [
@@ -2774,7 +3341,7 @@
           ]
         },
         {
-          "id": "R1_27Dk",
+          "id": "DBT86Cz",
           "uid": "X9vaIfW",
           "label": "Upgrade with",
           "options": [
@@ -2820,7 +3387,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "DlzYAff",
+          "id": "obDmfXF",
           "uid": "CXZ2KEzFAe",
           "label": "Replace Cyborg Hoof",
           "options": [
@@ -2869,7 +3436,7 @@
       "hint": "Breacher Cyborgs",
       "sections": [
         {
-          "id": "zdg4a0Q",
+          "id": "agsC8UJ",
           "uid": "DyBty90",
           "label": "Replace any Contortion Cannon",
           "options": [
@@ -2917,7 +3484,7 @@
           ]
         },
         {
-          "id": "unzf1Nn",
+          "id": "Bfz4HeM",
           "uid": "3mPJtGl",
           "label": "Replace Cyborg Claws",
           "options": [
@@ -2979,7 +3546,7 @@
       "hint": "Destroyer Cyborgs",
       "sections": [
         {
-          "id": "9BkZMv0",
+          "id": "MeBfYuK",
           "uid": "p0WKxi1",
           "label": "Replace any G-Cannon",
           "options": [
@@ -3036,7 +3603,7 @@
           ]
         },
         {
-          "id": "702srmX",
+          "id": "syLSC2B",
           "uid": "pwNOmnc",
           "label": "Replace G-Cannon",
           "options": [
@@ -3171,7 +3738,7 @@
       "hint": "Sect Leader",
       "sections": [
         {
-          "id": "Z9ZFo1v",
+          "id": "4U8BGHz",
           "uid": "zKY3v",
           "label": "Replace Leader F-Blaster and Leader Taser Sword",
           "options": [
@@ -3312,7 +3879,7 @@
           ]
         },
         {
-          "id": "nxoOHPa",
+          "id": "dzUMKme",
           "uid": "owP6g",
           "label": "Upgrade with one",
           "options": [
@@ -3407,7 +3974,7 @@
       "hint": "Machine-Creed Canticles",
       "sections": [
         {
-          "id": "QhrDQqL",
+          "id": "VSbgeLS",
           "uid": "Hfkuk",
           "label": "Upgrade with",
           "options": [
@@ -3467,7 +4034,7 @@
       "hint": "Specialists - Cult Leader",
       "sections": [
         {
-          "id": "_asBYs0",
+          "id": "WnbrKbb",
           "uid": "ZBvyPvJ-",
           "label": "Upgrade with one",
           "options": [
@@ -3672,7 +4239,7 @@
       "hint": "Specialists - Sect Leader",
       "sections": [
         {
-          "id": "Q-UiVUd",
+          "id": "clO1c8g",
           "uid": "PA1zOWSs",
           "label": "Upgrade with one",
           "options": [
@@ -3847,7 +4414,7 @@
       "hint": "Cult Gunners",
       "sections": [
         {
-          "id": "A4poVid",
+          "id": "NYEFFrJ",
           "uid": "XjuVJfboem",
           "label": "Replace any Eraser Beam",
           "options": [
@@ -3903,7 +4470,7 @@
           ]
         },
         {
-          "id": "5YRM76J",
+          "id": "q1MOSzV",
           "uid": "gkjrgXU9rp",
           "label": "Upgrade with one",
           "options": [
@@ -3990,7 +4557,7 @@
       "hint": "Machine-Creed Canticles (One Model)",
       "sections": [
         {
-          "id": "_EAC5bM",
+          "id": "PgeCr0R",
           "uid": "ttPAB7xE",
           "label": "Upgrade with",
           "options": [
@@ -3998,6 +4565,10 @@
               "uid": "TdAV29qe",
               "type": "ArmyBookUpgradeOption",
               "costs": [
+                {
+                  "unitId": "4ajpg-M",
+                  "cost": 15
+                },
                 {
                   "unitId": "iGyqlfa",
                   "cost": 5

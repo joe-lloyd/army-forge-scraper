@@ -1012,7 +1012,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "fgD5zXM",
+          "id": "SnEQciP",
           "uid": "cge6fZx",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1224,7 +1224,7 @@
           ]
         },
         {
-          "id": "VPektmK",
+          "id": "pCXxQMe",
           "uid": "zSbP4DqS7H",
           "label": "Upgrade with one",
           "options": [
@@ -1313,7 +1313,7 @@
           }
         },
         {
-          "id": "zjId9Fs",
+          "id": "tBKFQOF",
           "uid": "9t7DZv_",
           "label": "Upgrade with one",
           "options": [
@@ -1527,6 +1527,233 @@
               "parentSectionUid": "9t7DZv_",
               "parentSectionId": "9t7DZv_",
               "id": "4gbQlud"
+            },
+            {
+              "uid": "nqb0Gko",
+              "cost": 110,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "gjLy2pX",
+                  "cost": 100
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Pig Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "105x70",
+                    "square": "100x50"
+                  },
+                  "label": "Pig Chariot (Claws (A2), Armor(3), Impact(4), Swift, Tough(6))",
+                  "content": [
+                    {
+                      "id": "x7x6niC2",
+                      "name": "Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 2,
+                      "weaponId": "LZQtxZh5",
+                      "specialRules": [],
+                      "attacksMultiplier": 1,
+                      "label": "Claws (A2)"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "leFm23MTiJxO",
+                      "name": "Swift",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Pig Chariot (Claws (A2), Armor(3), Impact(4), Swift, Tough(6))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "9t7DZv_",
+              "parentSectionId": "9t7DZv_",
+              "id": "nqb0Gko"
+            },
+            {
+              "uid": "GPnXQg2",
+              "cost": 130,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "gjLy2pX",
+                  "cost": 130
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Winged Hound",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "40",
+                    "square": "40"
+                  },
+                  "label": "Winged Hound (Heavy Bite (A6, AP(1)), Armor(3), Flying, Swift, Tough(6))",
+                  "content": [
+                    {
+                      "id": "3qwUBWMF",
+                      "name": "Heavy Bite",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "3qwUBWMF",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Heavy Bite (A6, AP(1))"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "leFm23MTiJxO",
+                      "name": "Swift",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Winged Hound (Heavy Bite (A6, AP(1)), Armor(3), Flying, Swift, Tough(6))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "9t7DZv_",
+              "parentSectionId": "9t7DZv_",
+              "id": "GPnXQg2"
+            },
+            {
+              "uid": "Rbg73",
+              "cost": 130,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "gjLy2pX",
+                  "cost": 135
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Cockatrice",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x60"
+                  },
+                  "label": "Cockatrice (Sharp Claws (A4, Rending), Sharp Beak (A1, AP(2), Deadly(3)), Fear(1), Flying, Swift, Tough(6))",
+                  "content": [
+                    {
+                      "id": "pqHPw2Ol",
+                      "name": "Sharp Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": null,
+                      "attacks": 4,
+                      "weaponId": "pqHPw2Ol",
+                      "specialRules": [
+                        {
+                          "id": "cavWDboL4ubs",
+                          "name": "Rending"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Sharp Claws (A4, Rending)"
+                    },
+                    {
+                      "id": "tpTpIaLj",
+                      "name": "Sharp Beak",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": null,
+                      "attacks": 1,
+                      "weaponId": "tpTpIaLj",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 2
+                        },
+                        {
+                          "id": "_mrPya5SXSqW",
+                          "name": "Deadly",
+                          "rating": 3
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Sharp Beak (A1, AP(2), Deadly(3))"
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "leFm23MTiJxO",
+                      "name": "Swift",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Cockatrice (Sharp Claws (A4, Rending), Sharp Beak (A1, AP(2), Deadly(3)), Fear(1), Flying, Swift, Tough(6))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "9t7DZv_",
+              "parentSectionId": "9t7DZv_",
+              "id": "Rbg73"
             }
           ],
           "parentPackageUid": "A1",
@@ -1545,7 +1772,7 @@
       "hint": "Leader",
       "sections": [
         {
-          "id": "-kE8mVB",
+          "id": "uDWgGO4",
           "uid": "F9DZrNC",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1732,7 +1959,7 @@
           ]
         },
         {
-          "id": "x9LSKd7",
+          "id": "a-UdvVS",
           "uid": "xv6CZz8",
           "label": "Upgrade with one",
           "options": [
@@ -1822,7 +2049,7 @@
           }
         },
         {
-          "id": "b2IBbU8",
+          "id": "o-8bRN_",
           "uid": "pV1ud1X",
           "label": "Upgrade with one",
           "options": [
@@ -2096,7 +2323,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "HlfjVSM",
+          "id": "JWKKxMX",
           "uid": "FClLCl9",
           "label": "Upgrade one model with one",
           "options": [
@@ -2233,7 +2460,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "sur5wpd",
+          "id": "cwXAPX1",
           "uid": "e6sUln_",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2328,7 +2555,7 @@
       "hint": "Thieves",
       "sections": [
         {
-          "id": "0mP8woE",
+          "id": "WI6inVF",
           "uid": "diuiRCg",
           "label": "Replace Dual Hand Weapon",
           "options": [
@@ -2434,7 +2661,7 @@
           ]
         },
         {
-          "id": "ujKAj3W",
+          "id": "N9_bZkI",
           "uid": "Oj1t5",
           "label": "Upgrade with one",
           "options": [
@@ -2518,7 +2745,7 @@
       "hint": "Marksmen",
       "sections": [
         {
-          "id": "9-7J1CP",
+          "id": "Yop4a9_",
           "uid": "UDNFFyM",
           "label": "Replace all Shortbows",
           "options": [
@@ -2612,7 +2839,7 @@
       "hint": "Beast Riders",
       "sections": [
         {
-          "id": "U9YcoHg",
+          "id": "OXe656S",
           "uid": "Pw8gcW7",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2664,7 +2891,7 @@
           ]
         },
         {
-          "id": "r65-5g5",
+          "id": "deufqQ1",
           "uid": "dt9ab2D",
           "label": "Upgrade all models with one",
           "options": [
@@ -2748,7 +2975,7 @@
           }
         },
         {
-          "id": "ZzxJfSy",
+          "id": "x2w07py",
           "uid": "G6XLfq-",
           "label": "Replace all Dog Mounts",
           "options": [
@@ -2881,7 +3108,7 @@
       "hint": "Golems",
       "sections": [
         {
-          "id": "oSPyfPX",
+          "id": "ziVYvBv",
           "uid": "2a4gS-V",
           "label": "Replace Rock Breed",
           "options": [
@@ -2972,7 +3199,7 @@
       "hint": "Kin Bond",
       "sections": [
         {
-          "id": "FIR3Qyn",
+          "id": "IqAby0R",
           "uid": "PQviO_dieY",
           "label": "Upgrade one model with",
           "options": [
@@ -3035,7 +3262,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "LcrS63U",
+          "id": "iAbz_fW",
           "uid": "ebFZSnUC",
           "label": "Upgrade with one",
           "options": [
@@ -3206,7 +3433,7 @@
       "hint": "Drunks",
       "sections": [
         {
-          "id": "H43nu3_",
+          "id": "Pq8KBUU",
           "uid": "7a7CfCMTKG",
           "label": "Upgrade with",
           "options": [
@@ -3265,7 +3492,7 @@
       "hint": "Jetpack Troopers",
       "sections": [
         {
-          "id": "hNMqq8t",
+          "id": "ULNsTtp",
           "uid": "0xXTFm1M2A",
           "label": "Replace Grenade",
           "options": [
@@ -3327,7 +3554,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "Krl9bgk",
+          "id": "0Uv5GYs",
           "uid": "2O-uQMYQ",
           "label": "Upgrade with one",
           "options": [

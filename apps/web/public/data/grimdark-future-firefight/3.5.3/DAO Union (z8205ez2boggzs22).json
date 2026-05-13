@@ -14,6 +14,124 @@
   "backgroundFull": "From its very foundation, DAO society required every role and member to co-operate in order to survive. Much thought was put into how best to divide both work and resources between the DAO people. As their society advanced, they embraced logic as a core tenet. The wisest DAO served as Sages, who divided the necessary work and resources as efficiently and logically as possible. Everyone in this society had a precise role to fill, and together they formed the DAO Union.\n\nAs technology progressed, the Sages created artificial intelligences in order to manage their society. Initially, these AIs were merely an expansion of their extensive bureaucracy, processing data with far greater efficiency than had previously been imagined possible. The Sages gradually expanded the AIs’ role, as they became convinced that AIs would be able to maximize efficiency without falling prey to the bias and error.\n\nUnder the guidance of these systems, the DAO expanded beyond their home system. As the scale of their society continued to grow, their AIs grew increasingly interconnected and complex. Many came to trust in the AI implicitly, as it came to organize in their lives everything from manufacturing to diplomacy.\n\nThe DAO avoided the worst of the Radiance Cascade due to their distance, but their AI began to act differently. Slowly, it began to deem a number of citizens “redundant”, assigning machines to their former roles. This caused social unrest as many DAO people found themselves suddenly without the jobs that once gave them purpose. \n\nThis continued until the AI locked out the Sages, claiming their input was no longer required. This caused outrage throughout the DAOU, and many began to sabotage infrastructure to undermine the system. The AI was not ready for this spontaneous reaction and acted too late to save itself. After this, the Sages ruled AI should never be able to perform a DAO's role.\n\nThis conflict was highly destructive to DAO society. Many felt despondent at the loss of the AI which had once given their lives direction. Sages stepped up once more, salvaging what records and infrastructure they could to guide reconstruction. Most of those living in the DAOU find their purpose in their job and social role, which have been highly systematized. Yet some feel that they are just repeating the logic that nearly drove their people into obsolescence.\n\nHow will you bring direction to a disordered galaxy?",
   "units": [
     {
+      "id": "ZLsGVby",
+      "cost": 155,
+      "name": "Battle Suit Elite",
+      "size": 1,
+      "bases": {
+        "round": "60",
+        "square": "50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "-QJdqJEKjIpE",
+          "name": "Flying",
+          "label": "Flying"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "hjaNnUHsY3f5",
+          "name": "Targeting Visor",
+          "label": "Targeting Visor"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "A0EYz",
+          "name": "Suit-Burst",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 18,
+          "attacks": 1,
+          "weaponId": "RUWQuEpU",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "2x Suit-Burst (18\", A1, Rending)",
+          "originalCount": 2
+        },
+        {
+          "id": "UwVdr3ko",
+          "name": "Suit-Flamer",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 12,
+          "attacks": 1,
+          "weaponId": "UkbXjF_m",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "Zx4mWN0SbmK8",
+              "name": "Reliable",
+              "label": "Reliable"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "2x Suit-Flamer (12\", A1, Blast(3), Reliable)",
+          "originalCount": 2
+        },
+        {
+          "id": "QnrnAIok",
+          "name": "Bash",
+          "type": "ArmyBookWeapon",
+          "range": null,
+          "attacks": 4,
+          "weaponId": "QnrnAIok",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Bash (A4, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "B1",
+        "UA0trVt1",
+        "PPFyeuLW"
+      ],
+      "genericName": "Battlesuit Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "wbcHuwv",
       "cost": 25,
       "name": "Grunt Leader",
@@ -618,7 +736,7 @@
       "hint": "Hero Gun-Drone",
       "sections": [
         {
-          "id": "C21mN0m",
+          "id": "CUkFtPa",
           "uid": "3xQhLUS",
           "label": "Upgrade with",
           "options": [
@@ -627,6 +745,10 @@
               "cost": 5,
               "type": "ArmyBookUpgradeOption",
               "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 5
+                },
                 {
                   "unitId": "wbcHuwv",
                   "cost": 5
@@ -681,7 +803,7 @@
       "hint": "Grunt Leader",
       "sections": [
         {
-          "id": "JKu2saD",
+          "id": "IGPxgRS",
           "uid": "5Ff9NqI",
           "label": "Replace Holy Baton",
           "options": [
@@ -858,7 +980,7 @@
           ]
         },
         {
-          "id": "eGSWB4D",
+          "id": "6fmJr0C",
           "uid": "j_qj_",
           "label": "Replace Leader Pulse Pistol",
           "options": [
@@ -976,7 +1098,7 @@
           ]
         },
         {
-          "id": "YgOf7w0",
+          "id": "1B5gLcl",
           "uid": "Wq3ab",
           "label": "Replace CCW",
           "options": [
@@ -1066,7 +1188,7 @@
           ]
         },
         {
-          "id": "_pGRDDW",
+          "id": "30ja-ai",
           "uid": "pjFkcJ1UAp",
           "label": "Upgrade with one",
           "options": [
@@ -1145,7 +1267,7 @@
       "hint": "Squad Drones",
       "sections": [
         {
-          "id": "jxkkeV_",
+          "id": "Y7wBL6f",
           "uid": "mzzuwjj",
           "label": "Upgrade with one",
           "options": [
@@ -1282,7 +1404,7 @@
       "hint": "Tactical Grunts",
       "sections": [
         {
-          "id": "dDPIx9M",
+          "id": "Ijhvp9H",
           "uid": "AF-khuL",
           "label": "Replace Pulse Rifle",
           "options": [
@@ -1574,7 +1696,7 @@
           ]
         },
         {
-          "id": "eZ23kIY",
+          "id": "aQUR20P",
           "uid": "qOJSH_EY",
           "label": "Replace Pulse Rifle and CCW",
           "options": [
@@ -1648,7 +1770,7 @@
           ]
         },
         {
-          "id": "T3wyjJo",
+          "id": "eI-KUPD",
           "uid": "RlrNGmB-",
           "label": "Replace Pulse Pistol",
           "options": [
@@ -1729,7 +1851,7 @@
           ]
         },
         {
-          "id": "gyymSUb",
+          "id": "yzCnzAC",
           "uid": "88Z5zzBP",
           "label": "Replace Plasma Sword",
           "options": [
@@ -1786,7 +1908,7 @@
       "hint": "Spotter Squad",
       "sections": [
         {
-          "id": "g7L4eB7",
+          "id": "nanH6P_",
           "uid": "R-JP0jg",
           "label": "Replace any Pulse Carbine",
           "options": [
@@ -1843,7 +1965,7 @@
           ]
         },
         {
-          "id": "72zlLDW",
+          "id": "k6QG8hY",
           "uid": "3qsnL",
           "label": "Replace Scoped Rifle",
           "options": [
@@ -1936,7 +2058,7 @@
           ]
         },
         {
-          "id": "oTAMzRX",
+          "id": "cbJVfEq",
           "uid": "FH9s50n",
           "label": "Upgrade any model with",
           "options": [
@@ -1979,7 +2101,7 @@
           }
         },
         {
-          "id": "wJuCDrU",
+          "id": "UuzIDkJ",
           "uid": "wQtljUJB",
           "label": "Upgrade with one",
           "options": [
@@ -2166,7 +2288,7 @@
       "hint": "Stealth Suits",
       "sections": [
         {
-          "id": "iHV4aFW",
+          "id": "WMaN7Mf",
           "uid": "lpDJiG3",
           "label": "Replace any Rapid Burst Carbine",
           "options": [
@@ -2223,7 +2345,7 @@
           ]
         },
         {
-          "id": "GbjpzB1",
+          "id": "Y5H4L2l",
           "uid": "PhO8OOB",
           "label": "Upgrade with one",
           "options": [
@@ -2295,7 +2417,7 @@
           }
         },
         {
-          "id": "0qNG5hW",
+          "id": "gucJ1xy",
           "uid": "2QFXz",
           "label": "Upgrade with",
           "options": [
@@ -2341,7 +2463,7 @@
       "hint": "Battle Suits",
       "sections": [
         {
-          "id": "htsrUyb",
+          "id": "x7pm2Zc",
           "uid": "hr2hx0I",
           "label": "Replace any Suit-Burst",
           "options": [
@@ -2432,7 +2554,7 @@
           ]
         },
         {
-          "id": "jplgzTs",
+          "id": "wF31jFN",
           "uid": "o_FY2",
           "label": "Replace Suit-Burst",
           "options": [
@@ -2605,7 +2727,7 @@
           ]
         },
         {
-          "id": "xWAER-q",
+          "id": "dw-d-XD",
           "uid": "I1VXs",
           "label": "Replace 2x Suit-Burst",
           "options": [
@@ -2831,7 +2953,7 @@
           ]
         },
         {
-          "id": "z7amFEC",
+          "id": "JeqJw-W",
           "uid": "vO6ldL7W5V",
           "label": "Upgrade with",
           "options": [
@@ -2877,7 +2999,7 @@
       "hint": "Gun Drones",
       "sections": [
         {
-          "id": "s_C0wC9",
+          "id": "pavts1S",
           "uid": "frhNnWL",
           "label": "Upgrade with one",
           "options": [
@@ -2949,7 +3071,7 @@
           }
         },
         {
-          "id": "vWEf9Jp",
+          "id": "rI8Nktw",
           "uid": "tR3wHPf",
           "label": "Upgrade with",
           "options": [
@@ -2997,7 +3119,7 @@
       "hint": "Specialists - Grunt",
       "sections": [
         {
-          "id": "_cYB7UV",
+          "id": "y_8AKn7",
           "uid": "QUDL_",
           "label": "Upgrade with one",
           "options": [
@@ -3170,7 +3292,7 @@
       "hint": "Security Grunts",
       "sections": [
         {
-          "id": "vOZ_poD",
+          "id": "0JJdn4u",
           "uid": "EUORmuCn",
           "label": "Replace Pulse Shotgun",
           "options": [
@@ -3337,7 +3459,7 @@
           ]
         },
         {
-          "id": "OVLjyDE",
+          "id": "ow3Y4v8",
           "uid": "a77ijnMW2x",
           "label": "Upgrade with",
           "options": [
@@ -3376,7 +3498,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "iA507RE",
+          "id": "dTgKri4",
           "uid": "6QqGAT1K",
           "label": "Replace Pulse Shotgun and CCW",
           "options": [
@@ -3450,7 +3572,7 @@
           ]
         },
         {
-          "id": "qWnvQTK",
+          "id": "7zu0Yox",
           "uid": "AUDOdUzC",
           "label": "Replace Plasma Sword",
           "options": [
@@ -3507,7 +3629,7 @@
       "hint": "Security Grunts Drones",
       "sections": [
         {
-          "id": "4HS3YAi",
+          "id": "5O9QP39",
           "uid": "sRNZNMp5",
           "label": "Upgrade with one",
           "options": [
@@ -3649,6 +3771,645 @@
             }
           ],
           "parentPackageUid": "KiQfldBo",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "UA0trVt1",
+      "hint": "Battle Suit Elite",
+      "sections": [
+        {
+          "id": "m_xyszg",
+          "uid": "NBIB42tt",
+          "label": "Replace any Suit-Flamers and Suit-Burst",
+          "options": [
+            {
+              "uid": "6nSPBvoI",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "0E_s3lhM",
+                  "name": "Suit-Ion",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "0E_s3lhM",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Suit-Ion (18\", A1, AP(1), Blast(3))"
+                },
+                {
+                  "id": null,
+                  "name": "Suit-Burst",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "RUWQuEpU",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Suit-Burst (18\", A1, Rending)"
+                }
+              ],
+              "label": "Suit-Burst (18\", A1, Rending), Suit-Ion (18\", A1, AP(1), Blast(3))",
+              "parentSectionId": "NBIB42tt",
+              "parentPackageUid": "1LEjjwYo",
+              "parentSectionUid": "lm6DJab",
+              "id": "6nSPBvoI"
+            },
+            {
+              "uid": "SuyiFLUx",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "4vku-Vos",
+                  "name": "Suit-Fuse",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "4vku-Vos",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Suit-Fuse (12\", A1, AP(4), Deadly(3))"
+                },
+                {
+                  "id": null,
+                  "name": "Suit-Burst",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "RUWQuEpU",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Suit-Burst (18\", A1, Rending)"
+                }
+              ],
+              "label": "Suit-Burst (18\", A1, Rending), Suit-Fuse (12\", A1, AP(4), Deadly(3))",
+              "parentSectionId": "NBIB42tt",
+              "parentPackageUid": "1LEjjwYo",
+              "parentSectionUid": "lm6DJab",
+              "id": "SuyiFLUx"
+            },
+            {
+              "uid": "ot02rcpF",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "7XbawLxX",
+                  "name": "Suit-Frag",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "7XbawLxX",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "8Ck9GAwUK824",
+                      "name": "Indirect"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Suit-Frag (24\", A1, Blast(3), Indirect)"
+                },
+                {
+                  "id": null,
+                  "name": "Suit-Burst",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "RUWQuEpU",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Suit-Burst (18\", A1, Rending)"
+                }
+              ],
+              "label": "Suit-Frag (24\", A1, Blast(3), Indirect), Suit-Burst (18\", A1, Rending)",
+              "parentSectionId": "NBIB42tt",
+              "parentPackageUid": "1LEjjwYo",
+              "parentSectionUid": "lm6DJab",
+              "id": "ot02rcpF"
+            },
+            {
+              "uid": "vm3S40f7",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Rapid Suit-Burst",
+                  "type": "ArmyBookWeapon",
+                  "count": 2,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "LlJ0CYi5",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "2x Rapid Suit-Burst (18\", A2, Rending)"
+                }
+              ],
+              "label": "2x Rapid Suit-Burst (18\", A2, Rending)",
+              "parentSectionId": "NBIB42tt",
+              "parentPackageUid": "1LEjjwYo",
+              "id": "vm3S40f7"
+            }
+          ],
+          "parentPackageUid": "1LEjjwYo",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Suit-Flamers",
+            "Suit-Burst"
+          ]
+        },
+        {
+          "id": "mz8w3Ur",
+          "uid": "DBd4Xb5Q",
+          "label": "Replace 2x Suit-Flamer and 2x Suit-Burst",
+          "options": [
+            {
+              "uid": "t9RhXJzh",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Plasma Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "DZr5_RKB",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Plasma Sword (A4, AP(1), Rending)"
+                },
+                {
+                  "name": "Energy Shield",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Energy Shield (Shielded)",
+                  "content": [
+                    {
+                      "id": "wsqfB0fq69eG",
+                      "name": "Shielded",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                },
+                {
+                  "id": null,
+                  "name": "Rapid Suit-Burst",
+                  "type": "ArmyBookWeapon",
+                  "count": 2,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "LlJ0CYi5",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "2x Rapid Suit-Burst (18\", A2, Rending)"
+                }
+              ],
+              "label": "2x Rapid Suit-Burst (18\", A2, Rending), Plasma Sword (A4, AP(1), Rending), Energy Shield (Shielded)",
+              "parentSectionId": "DBd4Xb5Q",
+              "parentPackageUid": "1LEjjwYo",
+              "parentSectionUid": "-2iHl",
+              "id": "t9RhXJzh"
+            },
+            {
+              "uid": "x9d2cOxT",
+              "cost": 45,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 65
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Rapid Heavy Suit-Burst",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 6,
+                  "weaponId": "a-Ku3VQb",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rapid Heavy Suit-Burst (24\", A6, AP(1), Rending)"
+                },
+                {
+                  "id": null,
+                  "name": "Rapid Suit-Burst",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "LlJ0CYi5",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rapid Suit-Burst (18\", A2, Rending)"
+                }
+              ],
+              "label": "Rapid Heavy Suit-Burst (24\", A6, AP(1), Rending), Rapid Suit-Burst (18\", A2, Rending)",
+              "parentSectionId": "DBd4Xb5Q",
+              "parentPackageUid": "1LEjjwYo",
+              "id": "x9d2cOxT"
+            }
+          ],
+          "parentPackageUid": "1LEjjwYo",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "2x Suit-Flamer",
+            "2x Suit-Burst"
+          ]
+        },
+        {
+          "id": "36CDaMk",
+          "uid": "-ITNVwG-Uh",
+          "label": "Replace any Rapid Suit-Burst",
+          "options": [
+            {
+              "uid": "ITHh4cdBWX",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Rapid Suit-Missiles",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 30,
+                  "attacks": 2,
+                  "weaponId": "tmIE4mKy",
+                  "specialRules": [
+                    {
+                      "id": "1qiGNqpxKb24",
+                      "name": "Disintegrate"
+                    },
+                    {
+                      "id": "QXyt-zV_bjpg",
+                      "name": "Unstoppable"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rapid Suit-Missiles (30\", A2, Disintegrate, Unstoppable)"
+                }
+              ],
+              "label": "Rapid Suit-Missiles (30\", A2, Disintegrate, Unstoppable)",
+              "parentSectionId": "-ITNVwG-Uh",
+              "id": "ITHh4cdBWX"
+            },
+            {
+              "uid": "qSm4Wq9SGG",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Rapid Suit-Plasma",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "A06ZOAgc",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rapid Suit-Plasma (24\", A2, AP(4))"
+                }
+              ],
+              "label": "Rapid Suit-Plasma (24\", A2, AP(4))",
+              "parentSectionId": "-ITNVwG-Uh",
+              "id": "qSm4Wq9SGG"
+            }
+          ],
+          "parentPackageUid": "UA0trVt1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Rapid Suit-Burst"
+          ]
+        },
+        {
+          "id": "qHfs2uE",
+          "uid": "I-TiE9L5",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "ciwiVu13",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Drop-Thrusters",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Drop-Thrusters (Ambush)",
+                  "content": [
+                    {
+                      "id": "6mJw5IdqSqNC",
+                      "name": "Ambush",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Drop-Thrusters (Ambush)",
+              "parentSectionId": "I-TiE9L5",
+              "parentPackageUid": "1LEjjwYo",
+              "id": "ciwiVu13"
+            }
+          ],
+          "parentPackageUid": "1LEjjwYo",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "PPFyeuLW",
+      "hint": "Specialists - Battlesuit",
+      "sections": [
+        {
+          "id": "MzAVPyG",
+          "uid": "c3WBDvuN",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "AwnmY6ch",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Storm Leader",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Storm Leader (Hit & Run Shooter Aura)",
+                  "content": [
+                    {
+                      "id": "rVZfbTlIyt7L",
+                      "name": "Hit & Run Shooter Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Storm Leader (Hit & Run Shooter Aura)",
+              "parentSectionId": "c3WBDvuN",
+              "parentPackageUid": "9LoSPof-",
+              "id": "AwnmY6ch"
+            },
+            {
+              "uid": "Nnvd8tMy",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Captain",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Captain (Targeting Visor Boost Aura)",
+                  "content": [
+                    {
+                      "id": "R4q13TqqwTPC",
+                      "name": "Targeting Visor Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Captain (Targeting Visor Boost Aura)",
+              "parentSectionId": "c3WBDvuN",
+              "parentPackageUid": "9LoSPof-",
+              "id": "Nnvd8tMy"
+            },
+            {
+              "uid": "vxAyPM6Fm-",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Armorer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Master Armorer (Counter-Attack Aura)",
+                  "content": [
+                    {
+                      "id": "Aw2kbPkBywee",
+                      "name": "Counter-Attack Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Armorer (Counter-Attack Aura)",
+              "parentSectionId": "c3WBDvuN",
+              "id": "vxAyPM6Fm-"
+            },
+            {
+              "uid": "tE_rHW29",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "ZLsGVby",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Big Game Hunter",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Big Game Hunter (Ranged Slayer Aura)",
+                  "content": [
+                    {
+                      "id": "sScPMcGqrk5Q",
+                      "name": "Ranged Slayer Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Big Game Hunter (Ranged Slayer Aura)",
+              "parentSectionId": "c3WBDvuN",
+              "parentPackageUid": "9LoSPof-",
+              "id": "tE_rHW29"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "9LoSPof-",
           "type": "ArmyBookUpgradeSection",
           "variant": "upgrade",
           "select": {
@@ -4306,6 +5067,15 @@
       "targetType": 1
     },
     {
+      "id": "rVZfbTlIyt7L",
+      "name": "Hit & Run Shooter Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Hit & Run Shooter. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "hjaNnUHsY3f5",
       "name": "Targeting Visor",
       "aliasedRuleId": "lwWYwB3HRTPi",
@@ -4430,6 +5200,24 @@
       "hasRating": false,
       "coreType": null,
       "targetType": 2
+    },
+    {
+      "id": "rkGri9GAybaZ",
+      "name": "Hit & Run Shooter",
+      "aliasedRuleId": null,
+      "description": "Once per round, units where all models have this rule may move by up to 3\" after shooting.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "ozCLWcof36wD",
+      "name": "Hit & Run",
+      "aliasedRuleId": null,
+      "description": "Once per round, units where all models have this rule may move by up to 3\" after shooting or being in melee.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
     },
     {
       "id": "IyLY1212wacW",

@@ -15,6 +15,90 @@
   "backgroundFull": "Shadow Stalkers lived in relative harmony in their strange, lightless plane, known to them as the Labyrinth. They dwelt in cities scattered among the ancient winding paths, using their plane’s ambient magical aura to navigate in the darkness. This changed when the Voidgates began to appear in their plane. \n\nThe Voidgates interfered with the Labyrinth’s magic. The fungi and mosses near the newly opened gates withered and animals shunned them. Shadow Stalkers who lingered close to these Voidgates too long became weak and ill. Soon it was discovered that the magic permeating the Labyrinth was slowly draining life from the Plane through the gate and unless action was taken, their home would become uninhabitable.\n\nThe Shadow Stalkers began to investigate the other side of the Voidgate. Near the Voidgates, there were traces of the Labyrinth’s magic, manifesting as a faint miasma which allowed them to sense their surroundings. As they moved further, however, they discovered that magic in Tyria operated very differently than in the Labyrinth. Rather than permeating the plane like air, magical power in Tyria was far more concentrated, and magic users were like bright lights in total darkness. They were able to detect these magic users opening new Voidgates throughout their plane, heedless of the damage their spells caused. \n\nOn discovering the cause of the disturbance in their Plane, the Shadow Stalkers sought out volunteers to explore the plane of Tyria and shut the gates. They prepared relics that would allow them to sense things in Tyria, projecting their own magical auras which they could use to sense things. Soon, they were ready and began to pour out through Voidgates, destroying the gates behind them. \n\nThey surged through the old Ogre Kingdoms, sealing any Voidgates they found which might connect to their world. The destruction of these gates left the Shadow Stalkers with no way of returning home, and they were now trapped in Tyria. Some Shadow Stalkers hid in the ruins of the cities which they seized, slowly learning to adapt to the new plane, some pursued the Ogres and their Shamans hoping to prevent them from opening new gates, while others sought a way to return home. \n\nHow will you navigate this strange plane?",
   "units": [
     {
+      "id": "BzhKtzr",
+      "cost": 140,
+      "name": "Butcher Champion",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "hnsVQyx3ylMf",
+          "name": "Ravage",
+          "rating": 1,
+          "label": "Ravage(1)"
+        },
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "df-9jrAw7ytM",
+          "name": "Shadowborn",
+          "label": "Shadowborn"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "MWyUp0x-",
+          "name": "Butcher Blade",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 6,
+          "weaponId": "iRAw017Y",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Butcher Blade (A6, AP(1), Rending)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "byJFE",
+        "Op1ye6Cn",
+        "5-TJWMav"
+      ],
+      "genericName": "Brute Horror Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "y2ZMfy4",
       "cost": 65,
       "name": "Reaper Champion",
@@ -74,6 +158,7 @@
         }
       ],
       "upgrades": [
+        "YUvTY",
         "Xy1wyZTe",
         "5-TJWMav"
       ],
@@ -1126,7 +1211,7 @@
       "hint": "Scourge Champion",
       "sections": [
         {
-          "id": "95ULLwO",
+          "id": "S9qzTkU",
           "uid": "LOgjMcD",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1296,7 +1381,7 @@
           ]
         },
         {
-          "id": "A07kI4Y",
+          "id": "7Fz1EGn",
           "uid": "4Mp2w",
           "label": "Upgrade with",
           "options": [
@@ -1374,7 +1459,7 @@
       "hint": "Scourges",
       "sections": [
         {
-          "id": "0HlF9Ws",
+          "id": "_ACsqax",
           "uid": "aFNgEzy",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1468,7 +1553,7 @@
       "hint": "Shadow Hounds",
       "sections": [
         {
-          "id": "EyldaYF",
+          "id": "bKHeWuS",
           "uid": "pT5GuGb",
           "label": "Upgrade all models with",
           "options": [
@@ -1511,7 +1596,7 @@
           }
         },
         {
-          "id": "qvnQkN9",
+          "id": "zTBoO2v",
           "uid": "hmLlwL5Dui",
           "label": "Replace all Leaping Advances",
           "options": [
@@ -1567,7 +1652,7 @@
       "hint": "Fang Swarms",
       "sections": [
         {
-          "id": "ZsDdX3u",
+          "id": "m-eWb0A",
           "uid": "Flsc9SA9yL",
           "label": "Upgrade with one",
           "options": [
@@ -1681,7 +1766,7 @@
       "hint": "Butchers",
       "sections": [
         {
-          "id": "gf2agWE",
+          "id": "KHebLh5",
           "uid": "PR_bK8j",
           "label": "Replace Butcher Blade",
           "options": [
@@ -1778,11 +1863,109 @@
       "calcErrors": false
     },
     {
+      "uid": "byJFE",
+      "hint": "Butcher Champion",
+      "sections": [
+        {
+          "id": "C6eZjAm",
+          "uid": "D8vyf",
+          "label": "Replace Butcher Blade",
+          "options": [
+            {
+              "uid": "kPlVy",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "BzhKtzr",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Throwing Spears",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 6,
+                  "weaponId": "s_NO3G0r",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Throwing Spears (12\", A6, AP(1))"
+                },
+                {
+                  "name": "Bash",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "1sWyzVXt",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Bash (A4)"
+                }
+              ],
+              "label": "Throwing Spears (12\", A6, AP(1)), Bash (A4)",
+              "parentSectionId": "D8vyf",
+              "id": "kPlVy"
+            },
+            {
+              "uid": "ggge6",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "BzhKtzr",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "JHqCQLwh",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Great Weapon (A6, AP(3))"
+                }
+              ],
+              "label": "Heavy Great Weapon (A6, AP(3))",
+              "parentSectionId": "D8vyf",
+              "id": "ggge6"
+            }
+          ],
+          "parentPackageUid": "byJFE",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Butcher Blade"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "-I9Od",
       "hint": "Command Group",
       "sections": [
         {
-          "id": "lIqcXv0",
+          "id": "Y3lOYBi",
           "uid": "wS6BD",
           "label": "Upgrade one model with one",
           "options": [
@@ -1907,7 +2090,7 @@
       "hint": "Spectre Champion",
       "sections": [
         {
-          "id": "erlPdPd",
+          "id": "xLlpSNC",
           "uid": "t4IzS",
           "label": "Replace Champion Stalker Staff",
           "options": [
@@ -2027,7 +2210,7 @@
       "hint": "Spectres",
       "sections": [
         {
-          "id": "GX5pJ00",
+          "id": "Y0rWqV-",
           "uid": "hCmBX",
           "label": "Replace Stalker Wand",
           "options": [
@@ -2148,11 +2331,100 @@
       "calcErrors": false
     },
     {
+      "uid": "YUvTY",
+      "hint": "Reaper Champion",
+      "sections": [
+        {
+          "id": "6HSu_-T",
+          "uid": "A4vwo",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "K_pJd",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "y2ZMfy4",
+                  "cost": 160
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Great Flayer",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "75x46",
+                    "square": "75x50"
+                  },
+                  "label": "Great Flayer (Heavy Claws (A2, AP(1)), Fast, Impact(4), Melee Evasion, Tough(6))",
+                  "content": [
+                    {
+                      "id": "EgdF_3MSddXR",
+                      "name": "Melee Evasion",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    },
+                    {
+                      "id": null,
+                      "name": "Heavy Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 2,
+                      "weaponId": "-psCHjQv",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "type": "ArmyBookRule",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Heavy Claws (A2, AP(1))"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Great Flayer (Heavy Claws (A2, AP(1)), Fast, Impact(4), Melee Evasion, Tough(6))",
+              "parentSectionId": "A4vwo",
+              "id": "K_pJd"
+            }
+          ],
+          "parentPackageUid": "YUvTY",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "9oFgk",
       "hint": "Flayer Cavalry",
       "sections": [
         {
-          "id": "mkm26eS",
+          "id": "QZ4HgSo",
           "uid": "FGMuH",
           "label": "Replace Great Weapon",
           "options": [
@@ -2205,7 +2477,7 @@
       "hint": "Tormentors",
       "sections": [
         {
-          "id": "PpeU8OZ",
+          "id": "qbMeiRR",
           "uid": "o4NcP",
           "label": "Upgrade with",
           "options": [
@@ -2261,7 +2533,7 @@
       "hint": "Fiends",
       "sections": [
         {
-          "id": "7XCkhLu",
+          "id": "G_IKaqF",
           "uid": "w4W10",
           "label": "Upgrade with one",
           "options": [
@@ -2348,7 +2620,7 @@
       "hint": "Reapers",
       "sections": [
         {
-          "id": "D6fhohN",
+          "id": "MIR1Cc1",
           "uid": "zisrT",
           "label": "Replace Halberd",
           "options": [
@@ -2401,7 +2673,7 @@
       "hint": "Phantoms",
       "sections": [
         {
-          "id": "3-Rb-S1",
+          "id": "QixUR4k",
           "uid": "06FL3",
           "label": "Replace Throwing Spears and Hand Weapon",
           "options": [
@@ -2453,7 +2725,7 @@
       "hint": "Phantom Champion",
       "sections": [
         {
-          "id": "a5q4HGX",
+          "id": "_Cp5xdU",
           "uid": "hdE__",
           "label": "Replace Throwing Spear and Hand Weapon",
           "options": [
@@ -2512,7 +2784,7 @@
       "hint": "Specialists - Spectre/Phantom",
       "sections": [
         {
-          "id": "-tyXm3H",
+          "id": "QyNyDe0",
           "uid": "VeLxEIRT",
           "label": "Upgrade with one",
           "options": [
@@ -2703,11 +2975,157 @@
       "calcErrors": false
     },
     {
+      "uid": "Op1ye6Cn",
+      "hint": "Specialists - Butcher",
+      "sections": [
+        {
+          "id": "k47fv7g",
+          "uid": "YbcHJ2TB",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "0hw6BT2a",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "BzhKtzr",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Maze Walker",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Maze Walker (Strider Aura)",
+                  "content": [
+                    {
+                      "id": "VfLmwEDxxLao",
+                      "name": "Strider Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Maze Walker (Strider Aura)",
+              "parentSectionId": "YbcHJ2TB",
+              "parentPackageUid": "MG55BPVg",
+              "id": "0hw6BT2a"
+            },
+            {
+              "uid": "69Wxd4Yz",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "BzhKtzr",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Shadow Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Shadow Master (Shadowborn Boost Aura)",
+                  "content": [
+                    {
+                      "id": "3oGVnDhS1udb",
+                      "name": "Shadowborn Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Shadow Master (Shadowborn Boost Aura)",
+              "parentSectionId": "YbcHJ2TB",
+              "parentPackageUid": "MG55BPVg",
+              "id": "69Wxd4Yz"
+            },
+            {
+              "uid": "QhrP5pWF",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "BzhKtzr",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Dream Stalker",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Dream Stalker (Thrust in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "38s_V6mXkYX-",
+                      "name": "Thrust in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Dream Stalker (Thrust in Melee Aura)",
+              "parentSectionId": "YbcHJ2TB",
+              "parentPackageUid": "MG55BPVg",
+              "parentSectionUid": "awSXeod",
+              "id": "QhrP5pWF"
+            },
+            {
+              "uid": "pibehgt-",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "BzhKtzr",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Night Shade",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Night Shade (Counter-Attack Aura)",
+                  "content": [
+                    {
+                      "id": "Aw2kbPkBywee",
+                      "name": "Counter-Attack Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Night Shade (Counter-Attack Aura)",
+              "parentSectionId": "YbcHJ2TB",
+              "parentPackageUid": "MG55BPVg",
+              "id": "pibehgt-"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "MG55BPVg",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "Xy1wyZTe",
       "hint": "Specialists - Scourge/Reaper",
       "sections": [
         {
-          "id": "Gw1nnte",
+          "id": "euJswPG",
           "uid": "3FmPlCWR",
           "label": "Upgrade with one",
           "options": [
@@ -2903,7 +3321,7 @@
       "hint": "Shadow Censer (One Model)",
       "sections": [
         {
-          "id": "4yvBNUh",
+          "id": "VG0byxr",
           "uid": "1upjsgPf",
           "label": "Upgrade with",
           "options": [
@@ -2912,6 +3330,10 @@
               "cost": 10,
               "type": "ArmyBookUpgradeOption",
               "costs": [
+                {
+                  "unitId": "BzhKtzr",
+                  "cost": 10
+                },
                 {
                   "unitId": "y2ZMfy4",
                   "cost": 10
@@ -2965,7 +3387,7 @@
       "hint": "Scourging Censer",
       "sections": [
         {
-          "id": "II6DPWl",
+          "id": "SEcuBAd",
           "uid": "JPmynOit",
           "label": "Upgrade one model with",
           "options": [
@@ -3022,7 +3444,7 @@
       "hint": "Shadow Censer",
       "sections": [
         {
-          "id": "4SVXaqT",
+          "id": "0Wmaceu",
           "uid": "db7hVyco",
           "label": "Upgrade one model with",
           "options": [
@@ -3089,7 +3511,7 @@
       "hint": "Soul-Hunter Censer",
       "sections": [
         {
-          "id": "6xoy7kH",
+          "id": "at8qaZl",
           "uid": "f-Q__Tjh",
           "label": "Upgrade with",
           "options": [

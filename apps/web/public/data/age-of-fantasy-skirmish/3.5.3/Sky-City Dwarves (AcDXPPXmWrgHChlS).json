@@ -15,6 +15,157 @@
   "backgroundFull": "The Dwarven tribes were once spread throughout Tyria, but as the plains were settled by humanity and Orcs and Giants came to the grasslands, the Dwarves retreated into the mountains. They made their homes in their mountains, creating powerful fortresses surrounded by terrace farms on the heights, and dug mines deep below. For most of their history, Dwarves had to travel overland, often through hostile territory, to visit and trade with other Dwarfholds. \n\nThey experimented with ways to travel safely, until they discovered powered flight, and their helicopter convoys became a common sight between the mountains of Tyria. In order to facilitate this travel, large ships held aloft by lighter than air balloons were built to serve as way-stations for helicopter convoys. These were the first Sky-Ports, which offered fuel, supplies, and safety to any Dwarves who visited. \n\nWhen the Orcs conquered the mountain Dwarfholds, some Dwarves were already living and working in these early Sky-Ports. The inhabitants of these Sky-Ports were workers, traders, and engineers with little arms or equipment. Without soldiers or weapons, the Dwarves living in the Sky-Ports decided to take in what refugees they could find before fleeing from the Orc armies. \n\nThese Dwarves discovered new resources that could be sifted from the clouds, which allowed them to remain aloft indefinitely. The sky-fairing Dwarves began to trade with others in order to get the metal, canvas, and wood they needed to maintain their ships and build new ones. Slowly, as they amassed more wealth, Sky-Ports continued to grow, until they formed self sustaining settlements called Sky-Cities. Though it took generations to become self-sustaining, the Sky-City Dwarves still remembered their conquered kin. They began to develop weapons to fight the Orcs and sought out allies to help them. \n\nThe Sky-City Dwarves were still preparing their army when the Rift tore through Tyria. They retreated to the skies, only to discover that the Rift had damaged a number of the old Dwarfholds, and gave their kin the chance to rise up against the Orcs. They sent envoys, eager to reunite with their kin, but to their surprise, the Sky-City Dwarves were greeted with bitterness and hostility, as the other Dwarves felt that they had been abandoned. Now the Sky-City Dwarves have returned to the skies, leaving their estranged kinsfolk to rebuild the old holds, while they went back to their new way of life in the clouds. \n\nHow will you follow the ever-shifting winds to prosperity?",
   "units": [
     {
+      "id": "vzAMpIv",
+      "cost": 170,
+      "name": "Balloon Master",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "-QJdqJEKjIpE",
+          "name": "Flying",
+          "label": "Flying"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "FAMbscK5vhSu",
+          "name": "Scout",
+          "label": "Scout"
+        },
+        {
+          "id": "h_TEDAiM7Cy-",
+          "name": "Buccaneer",
+          "label": "Buccaneer"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "0m6W7reT",
+          "name": "Cannon-Gun",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 18,
+          "attacks": 1,
+          "weaponId": "LqGGWiZa",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Cannon-Gun (18\", A1, AP(2), Deadly(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "Cn9z-PHK",
+          "name": "Twin Sky-Pistol",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 2,
+          "weaponId": "f6Qjg9XI",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Twin Sky-Pistol (12\", A2, AP(1))",
+          "originalCount": 1
+        },
+        {
+          "id": "Xvqr1I5o",
+          "name": "Weapon-Rig",
+          "type": "ArmyBookWeapon",
+          "range": 12,
+          "attacks": 2,
+          "weaponId": "Xvqr1I5o",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Weapon-Rig (12\", A2, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "YrXoE",
+          "name": "Chain-Sword",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": null,
+          "attacks": 4,
+          "weaponId": "fopg200L",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Chain-Sword (A4, AP(1), Rending)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "B1",
+        "S2bCarml"
+      ],
+      "genericName": "Jetpack Sky Dwarf Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "PHMSpuh",
       "cost": 35,
       "name": "Sky-Captain",
@@ -576,7 +727,7 @@
       "hint": "Sky-Captain",
       "sections": [
         {
-          "id": "RmV9k4B",
+          "id": "dV7Gsai",
           "uid": "WjqeBx8",
           "label": "Replace Hand Weapon",
           "options": [
@@ -666,7 +817,7 @@
           ]
         },
         {
-          "id": "GjrLQ6D",
+          "id": "YYutarK",
           "uid": "s2J9-lm",
           "label": "Replace Flame Pistol",
           "options": [
@@ -791,11 +942,160 @@
       "calcErrors": false
     },
     {
+      "uid": "B1",
+      "hint": "Balloon Master",
+      "sections": [
+        {
+          "id": "RgovnPQ",
+          "uid": "I5OEqqH",
+          "label": "Replace Twin Sky-Pistol",
+          "options": [
+            {
+              "uid": "bvw9nkL",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vzAMpIv",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "AfwOLjaT",
+                  "name": "Rivet Gun",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 2,
+                  "weaponId": "AfwOLjaT",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rivet Gun (12\", A2, Rending)",
+                  "count": 1
+                }
+              ],
+              "label": "Rivet Gun (12\", A2, Rending)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "I5OEqqH",
+              "parentSectionId": "I5OEqqH",
+              "id": "bvw9nkL"
+            }
+          ],
+          "parentPackageUid": "B1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Twin Sky-Pistol"
+          ]
+        },
+        {
+          "id": "AQ3eKEA",
+          "uid": "KIFxcya",
+          "label": "Replace Chain-Sword",
+          "options": [
+            {
+              "uid": "hL6A6",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vzAMpIv",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "QVDDqAfA",
+                  "name": "Sky-Pike",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "QVDDqAfA",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Sky-Pike (A4, AP(3))",
+                  "count": 1
+                }
+              ],
+              "label": "Sky-Pike (A4, AP(3))",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "KIFxcya",
+              "parentSectionId": "KIFxcya",
+              "id": "hL6A6"
+            }
+          ],
+          "parentPackageUid": "B1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Chain-Sword"
+          ]
+        },
+        {
+          "id": "-iFGHaF",
+          "uid": "ucy-lCHVpa",
+          "label": "Replace Cannon-Gun",
+          "options": [
+            {
+              "uid": "-kMeKuhoJt",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vzAMpIv",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Aether-Gun",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 3,
+                  "weaponId": "YNkade2x",
+                  "specialRules": [
+                    {
+                      "id": "7F4391rzKx2g",
+                      "name": "Shatter"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Aether-Gun (18\", A3, Shatter)"
+                }
+              ],
+              "label": "Aether-Gun (18\", A3, Shatter)",
+              "parentSectionId": "ucy-lCHVpa",
+              "id": "-kMeKuhoJt"
+            }
+          ],
+          "parentPackageUid": "B1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Cannon-Gun"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "C1",
       "hint": "Crew",
       "sections": [
         {
-          "id": "eZTE6LR",
+          "id": "L_6W7M8",
           "uid": "7JOZWl_",
           "label": "Replace one Sky-Pistol and Hand Weapon",
           "options": [
@@ -849,7 +1149,7 @@
           ]
         },
         {
-          "id": "gv8iV10",
+          "id": "gNXMwmB",
           "uid": "ZzFOs4A",
           "label": "Replace one Sky-Pistol",
           "options": [
@@ -1017,7 +1317,7 @@
           ]
         },
         {
-          "id": "2Eb4hGu",
+          "id": "cS_CXU7",
           "uid": "2vqaepYO",
           "label": "Upgrade all models with",
           "options": [
@@ -1068,7 +1368,7 @@
       "hint": "Gunners",
       "sections": [
         {
-          "id": "JR5w15D",
+          "id": "OvxpvHS",
           "uid": "uqWLpcm",
           "label": "Replace Sky-Rifle",
           "options": [
@@ -1156,7 +1456,7 @@
       "hint": "Balloon Wardens",
       "sections": [
         {
-          "id": "NiVQqnN",
+          "id": "XFlPqYk",
           "uid": "bwsJF0f",
           "label": "Replace Twin Sky-Pistol and Sky-Pike",
           "options": [
@@ -1384,7 +1684,7 @@
           ]
         },
         {
-          "id": "3zdyObw",
+          "id": "eTndGpo",
           "uid": "_qP8yWY",
           "label": "Replace Twin Sky-Pistol",
           "options": [
@@ -1445,7 +1745,7 @@
           ]
         },
         {
-          "id": "LPSUvSA",
+          "id": "8SKB-1C",
           "uid": "H80ZVwv",
           "label": "Upgrade with",
           "options": [
@@ -1492,7 +1792,7 @@
       "hint": "Balloon Riggers",
       "sections": [
         {
-          "id": "AUYS_ZV",
+          "id": "-WxB_A0",
           "uid": "d1erjdr",
           "label": "Replace Rivet Gun and Chain-Sword",
           "options": [
@@ -1720,7 +2020,7 @@
           ]
         },
         {
-          "id": "UUe7oQB",
+          "id": "-WMujgG",
           "uid": "TWzJDPU3",
           "label": "Upgrade with",
           "options": [
@@ -1798,7 +2098,7 @@
       "hint": "Heavy Gunners",
       "sections": [
         {
-          "id": "1mn1z2X",
+          "id": "q04OiY-",
           "uid": "2RGFC",
           "label": "Replace any Flame-Gun",
           "options": [
@@ -1970,7 +2270,7 @@
       "hint": "Specialists - Captain",
       "sections": [
         {
-          "id": "OIs_26z",
+          "id": "mxtkG17",
           "uid": "a-6XqPOW",
           "label": "Upgrade with one",
           "options": [
@@ -2176,7 +2476,7 @@
           }
         },
         {
-          "id": "MBFY08d",
+          "id": "IiSp1xR",
           "uid": "KotRNFDE",
           "label": "Upgrade with",
           "options": [
@@ -2219,11 +2519,230 @@
       "calcErrors": false
     },
     {
+      "uid": "S2bCarml",
+      "hint": "Specialists - Balloon Master",
+      "sections": [
+        {
+          "id": "4c_TVqQ",
+          "uid": "fwdDVxjl",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "dswaiyC1",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vzAMpIv",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Admiral",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Admiral (Buccaneer Boost Aura)",
+                  "content": [
+                    {
+                      "id": "Mtcp44LF96k9",
+                      "name": "Buccaneer Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Admiral (Buccaneer Boost Aura)",
+              "parentSectionId": "fwdDVxjl",
+              "parentPackageUid": "8B_Qr8Ht",
+              "parentSectionUid": "vGolSX9",
+              "id": "dswaiyC1"
+            },
+            {
+              "uid": "PDaHHtms",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vzAMpIv",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Code Enforcer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Code Enforcer (Shred in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "muH3OhuC6eK4",
+                      "name": "Shred in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Code Enforcer (Shred in Melee Aura)",
+              "parentSectionId": "fwdDVxjl",
+              "parentPackageUid": "8B_Qr8Ht",
+              "id": "PDaHHtms"
+            },
+            {
+              "uid": "4QFVLc6f",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vzAMpIv",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sky-Seer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sky-Seer (Resistance Aura)",
+                  "content": [
+                    {
+                      "id": "b7V48Z1W-EfP",
+                      "name": "Resistance Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sky-Seer (Resistance Aura)",
+              "parentSectionId": "fwdDVxjl",
+              "parentPackageUid": "8B_Qr8Ht",
+              "parentSectionUid": "vGolSX9",
+              "id": "4QFVLc6f"
+            },
+            {
+              "uid": "oVcUyFkD",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vzAMpIv",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Chemist",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Master Chemist (Rending when Shooting Aura)",
+                  "content": [
+                    {
+                      "id": "AfGDQgn8r8O1",
+                      "name": "Rending when Shooting Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Chemist (Rending when Shooting Aura)",
+              "parentSectionId": "fwdDVxjl",
+              "parentPackageUid": "8B_Qr8Ht",
+              "parentSectionUid": "vGolSX9",
+              "id": "oVcUyFkD"
+            },
+            {
+              "uid": "CGozQzcp",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vzAMpIv",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Engine Master",
+                  "type": "ArmyBookItem",
+                  "label": "Engine Master (Mend)",
+                  "content": [
+                    {
+                      "id": "mETdyZ__yMVj",
+                      "name": "Mend",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Engine Master (Mend)",
+              "parentSectionId": "fwdDVxjl",
+              "parentPackageUid": "8B_Qr8Ht",
+              "parentSectionUid": "vGolSX9",
+              "id": "CGozQzcp"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "8B_Qr8Ht",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        },
+        {
+          "id": "7NGkoGw",
+          "uid": "jh3a10jL",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "CMS4yeY9",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vzAMpIv",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fine-Tuned Weapons",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Fine-Tuned Weapons (Versatile Reach)",
+                  "content": [
+                    {
+                      "id": "y47PXwakTSji",
+                      "name": "Versatile Reach",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Fine-Tuned Weapons (Versatile Reach)",
+              "parentSectionId": "jh3a10jL",
+              "parentPackageUid": "GlIngp8U",
+              "id": "CMS4yeY9"
+            }
+          ],
+          "parentPackageUid": "GlIngp8U",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "kMOacEuq",
       "hint": "Balloon Hunters",
       "sections": [
         {
-          "id": "ANp81kC",
+          "id": "u7euIA8",
           "uid": "pzIgfXI6",
           "label": "Upgrade with one",
           "options": [
@@ -2318,7 +2837,7 @@
           }
         },
         {
-          "id": "zfwn1ep",
+          "id": "mpccd9y",
           "uid": "k3jRU67N",
           "label": "Upgrade with",
           "options": [
@@ -3041,6 +3560,15 @@
       "targetType": 1
     },
     {
+      "id": "muH3OhuC6eK4",
+      "name": "Shred in Melee Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Shred in melee. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "7F4391rzKx2g",
       "name": "Shatter",
       "aliasedRuleId": null,
@@ -3131,6 +3659,15 @@
       "targetType": 1
     },
     {
+      "id": "IEJp3a4vE0CB",
+      "name": "Shred",
+      "aliasedRuleId": null,
+      "description": "On unmodified results of 1 to block hits, this weapon deals 1 extra wound.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
       "id": "17crjK7P6_w6",
       "name": "AP",
       "aliasedRuleId": null,
@@ -3156,15 +3693,6 @@
       "hasRating": false,
       "coreType": null,
       "targetType": 1
-    },
-    {
-      "id": "IEJp3a4vE0CB",
-      "name": "Shred",
-      "aliasedRuleId": null,
-      "description": "On unmodified results of 1 to block hits, this weapon deals 1 extra wound.",
-      "hasRating": false,
-      "coreType": null,
-      "targetType": 2
     }
   ],
   "username": "onepagerules",

@@ -15,6 +15,106 @@
   "backgroundFull": "Rift Daemons are born from the last survivors of a pantheon of dying gods, known to Tyria as the Havoc Gods. Desperate to survive, these gods sought out followers from the lost and desperate, and offered them power in exchange for worship. Those who rejected these gods came to know them as Havoc Gods due to the zealotry of their followers and the unrest that they caused. \n\nThe Havoc Gods came to Tyria soon after Voidgates had been discovered. As mages and adventurers activated Voidgates throughout the land, the influence of Havoc began to spread. The Havoc Gods saw Tyria as a fascinating plane due to the diversity of its peoples, where they could find all sorts of different new followers. \n\nDaemons were sent into Tyria by their gods, spreading throughout the plane. They sought out followers for their Gods, either through promises of power, or shows of force. They found followers throughout Tyria, whom they guided to conquer others. Treachery, war, and bloodshed became commonplace as the Havoc Wars began. Daemons were seen throughout the continent, fighting alone or alongside mortal allies, as they and their masters threatened to overrun the plane.\n\nThe Havoc Gods were on the verge of victory when they fell into a desperate trap set by their enemies. The most powerful mages of Tyria gave their lives in a ritual that managed to seal the Havoc Gods into the Orb of Fate. Suddenly severed from their creators, the forces of Havoc were defeated. The surviving Daemons fled and hid throughout Tyria, escaping wherever they could, while their foes enjoyed an era of peace and prosperity. \n\nThis peace was brought to an abrupt end when, centuries later, the orb was broken by the heirs of the most powerful Human Empire in Tyria. The Havoc Gods were freed, and the power unleashed by the broken orb tore through the heart of Tyria, scarring the land and opening a massive fissure, cutting through much of the plane. This great scar became known as the Rift, and from it, the Daemons began to emerge once more into Tyria. \n\nThe Rift Daemons are eager to return to their masters and avenge their defeat. They have already spread throughout many corners of Tyria, and their hordes grow steadily with each passing day. With their old foes complacent and divided, there are few who can stand against them while they are ready to once more bend Tyria to the will of their gods. \n\nHow will you bring glory to your god?",
   "units": [
     {
+      "id": "F0XvHTF",
+      "cost": 140,
+      "name": "Harbinger of Change",
+      "size": 1,
+      "bases": {
+        "round": "60",
+        "square": "50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "additional": false,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "additional": false,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "4mB0rwGnMVgJ",
+          "name": "Changebound",
+          "label": "Changebound"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "iGYRvcjX",
+          "name": "Power Hammer",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "lLqYocFF",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "IEJp3a4vE0CB",
+              "name": "Shred",
+              "label": "Shred"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "2x Power Hammer (A1, Blast(3), Shred)",
+          "originalCount": 2
+        },
+        {
+          "id": "OxWEYBRf",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "hyB0WaAL",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Stomp (A2, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "C1",
+        "W8zTJ6PC"
+      ],
+      "genericName": "Change Heavy Daemon Lord",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "MvLZSIo",
       "cost": 50,
       "name": "Champion of Change",
@@ -1015,11 +1115,412 @@
   ],
   "upgradePackages": [
     {
+      "uid": "C1",
+      "hint": "Harbinger",
+      "sections": [
+        {
+          "id": "HiX-vht",
+          "uid": "Dvq_9BW",
+          "label": "Replace any Power Hammer",
+          "options": [
+            {
+              "uid": "DShv5BG",
+              "cost": -5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "p0FUPij7",
+                  "name": "Power Spear",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "p0FUPij7",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Power Spear (A1, AP(1), Deadly(3), Shred)",
+                  "count": 1
+                }
+              ],
+              "label": "Power Spear (A1, AP(1), Deadly(3), Shred)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "Dvq_9BW",
+              "parentSectionId": "Dvq_9BW",
+              "id": "DShv5BG"
+            },
+            {
+              "uid": "9CJkU",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Hexed Chakram",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 3,
+                  "weaponId": "OE1wwdGg",
+                  "specialRules": [
+                    {
+                      "id": "5v6oaGfrdf29",
+                      "name": "Surge"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Hexed Chakram (18\", A3, Surge)"
+                }
+              ],
+              "label": "Heavy Hexed Chakram (18\", A3, Surge)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "Dvq_9BW",
+              "parentSectionId": "Dvq_9BW",
+              "id": "9CJkU"
+            },
+            {
+              "uid": "NSZNoEyusd",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Magic Bolt",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "wSQqAisA",
+                  "specialRules": [
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Magic Bolt (18\", A2, AP(1), Shred)"
+                }
+              ],
+              "label": "Magic Bolt (18\", A2, AP(1), Shred)",
+              "parentSectionId": "Dvq_9BW",
+              "id": "NSZNoEyusd"
+            },
+            {
+              "uid": "2iTr0vc",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "lLqYocFF",
+                  "name": "Heavy Power Staff",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "jKIewy-6",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Power Staff (A3, Rending, Shred)"
+                }
+              ],
+              "label": "Heavy Power Staff (A3, Rending, Shred)",
+              "parentSectionId": "Dvq_9BW",
+              "id": "2iTr0vc"
+            },
+            {
+              "uid": "8IfRQ",
+              "cost": 0,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Magic Blast",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 4,
+                  "weaponId": "PAe0VqXu",
+                  "specialRules": [
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Magic Blast (12\", A4, Shred)"
+                }
+              ],
+              "label": "Magic Blast (12\", A4, Shred)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "Dvq_9BW",
+              "parentSectionId": "Dvq_9BW",
+              "id": "8IfRQ"
+            },
+            {
+              "uid": "Stf-yjZ",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Power Gauntlet",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "rJR8n49B",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 3
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Power Gauntlet (A3, AP(3), Shred)"
+                }
+              ],
+              "label": "Heavy Power Gauntlet (A3, AP(3), Shred)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "Dvq_9BW",
+              "parentSectionId": "Dvq_9BW",
+              "id": "Stf-yjZ"
+            }
+          ],
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Power Hammer"
+          ]
+        },
+        {
+          "id": "lgBJcsh",
+          "uid": "dXJyLZnJ",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "XJlNNFwW",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gzM3xTB",
+                  "name": "Change Boon",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Change Boon (Spell Accumulator(1))",
+                  "content": [
+                    {
+                      "id": "sHIDSc5b37Jm",
+                      "name": "Spell Accumulator",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Change Boon (Spell Accumulator(1))",
+              "parentSectionId": "dXJyLZnJ",
+              "parentPackageUid": "wnaNXyaW",
+              "parentSectionUid": "SNMn2",
+              "id": "XJlNNFwW"
+            }
+          ],
+          "parentPackageUid": "wnaNXyaW",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        },
+        {
+          "id": "ixMkd_2",
+          "uid": "wAzfP",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "gU7RH8WOlN",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "uoiqfpa",
+                  "name": "Daemonic Incursion",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Daemonic Incursion (Ambush Aura)",
+                  "content": [
+                    {
+                      "id": "gOFh4u_LGrwP",
+                      "name": "Ambush Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Daemonic Incursion (Ambush Aura)",
+              "parentSectionId": "wAzfP",
+              "parentPackageUid": "wnaNXyaW",
+              "id": "gU7RH8WOlN"
+            },
+            {
+              "uid": "svDYy",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Wings",
+                  "type": "ArmyBookItem",
+                  "label": "Wings (Flying)",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Wings (Flying)",
+              "parentPackageUid": "C1",
+              "parentSectionUid": "wAzfP",
+              "parentSectionId": "wAzfP",
+              "id": "svDYy"
+            },
+            {
+              "uid": "BewDGtFF0p",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fury Wings",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Fury Wings (Flying, Scout)",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Fury Wings (Flying, Scout)",
+              "parentSectionId": "wAzfP",
+              "id": "BewDGtFF0p"
+            }
+          ],
+          "parentPackageUid": "C1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "D1",
       "hint": "Command Group",
       "sections": [
         {
-          "id": "yw7gck0",
+          "id": "3IzFYR5",
           "uid": "qlNM8hz",
           "label": "Upgrade with one",
           "options": [
@@ -1139,7 +1640,7 @@
       "hint": "Change Warriors",
       "sections": [
         {
-          "id": "OBKxkIX",
+          "id": "8CzyGys",
           "uid": "9xmu_Bn",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1305,7 +1806,7 @@
           ]
         },
         {
-          "id": "kliWLSW",
+          "id": "T3g0lO0",
           "uid": "ATYkq59",
           "label": "Upgrade with",
           "options": [
@@ -1348,7 +1849,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "gPFKENw",
+          "id": "IUbuVRI",
           "uid": "z_2Ss5S",
           "label": "Upgrade with any",
           "options": [
@@ -1430,7 +1931,7 @@
       "hint": "Furies",
       "sections": [
         {
-          "id": "ngXO8a8",
+          "id": "8Uubsel",
           "uid": "uVvec",
           "label": "Replace Armblade",
           "options": [
@@ -1488,7 +1989,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "5cWsJw8",
+          "id": "yaGoMp5",
           "uid": "g-b1R",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -1764,7 +2265,7 @@
           ]
         },
         {
-          "id": "mYXjWFm",
+          "id": "PvwmqLF",
           "uid": "DJTr1",
           "label": "Replace any Power Staff",
           "options": [
@@ -1820,7 +2321,7 @@
           ]
         },
         {
-          "id": "dbcTuJF",
+          "id": "yQkItVA",
           "uid": "Jo1qEI68",
           "label": "Upgrade with",
           "options": [
@@ -1863,7 +2364,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "U5PHRcC",
+          "id": "y1n7tDA",
           "uid": "z3G3m",
           "label": "Upgrade with one",
           "options": [
@@ -1940,6 +2441,73 @@
               "label": "Disc of Change (Fast, Strider, Tough(3))",
               "parentSectionId": "z3G3m",
               "id": "NuPAk"
+            },
+            {
+              "uid": "gwiTt",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "MvLZSIo",
+                  "cost": 170
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Screecher Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Screecher Chariot (Sharp Beak (A6, AP(2)), Armor(3), Fast, Strider, Tough(6))",
+                  "content": [
+                    {
+                      "id": "cDN10OKL",
+                      "name": "Sharp Beak",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": null,
+                      "attacks": 6,
+                      "weaponId": "t7bizu2D",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 2
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Sharp Beak (A6, AP(2))"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Screecher Chariot (Sharp Beak (A6, AP(2)), Armor(3), Fast, Strider, Tough(6))",
+              "parentSectionId": "z3G3m",
+              "id": "gwiTt"
             }
           ],
           "parentPackageUid": "C3UuL",
@@ -1958,7 +2526,7 @@
       "hint": "Fury Champion",
       "sections": [
         {
-          "id": "nNrwF-I",
+          "id": "T4OZbXC",
           "uid": "k6phA",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -2236,7 +2804,7 @@
           ]
         },
         {
-          "id": "iuM1wo1",
+          "id": "usurHCD",
           "uid": "dzk31",
           "label": "Replace any Power Staff",
           "options": [
@@ -2299,7 +2867,7 @@
       "hint": "Change Soul Spawns",
       "sections": [
         {
-          "id": "6h2SyLM",
+          "id": "Qm1enI7",
           "uid": "rU0Lr",
           "label": "Replace Hexed Spikes and Claws",
           "options": [
@@ -2396,7 +2964,7 @@
       "hint": "Horror Champion",
       "sections": [
         {
-          "id": "paSAwb4",
+          "id": "2tVww8Y",
           "uid": "jJcCY",
           "label": "Replace Power Hammer and Staff",
           "options": [
@@ -2672,7 +3240,7 @@
           ]
         },
         {
-          "id": "aABiYYJ",
+          "id": "dQF9MFp",
           "uid": "HsNci",
           "label": "Replace any Power Staff",
           "options": [
@@ -2728,7 +3296,7 @@
           ]
         },
         {
-          "id": "QJS1z4t",
+          "id": "dL_1rLm",
           "uid": "XPKDTNVO",
           "label": "Upgrade with",
           "options": [
@@ -2777,7 +3345,7 @@
       "hint": "Change Horrors",
       "sections": [
         {
-          "id": "nUP1rOT",
+          "id": "Mr3ilYO",
           "uid": "SNMn2",
           "label": "Upgrade with",
           "options": [
@@ -2826,7 +3394,7 @@
       "hint": "Change Hexers",
       "sections": [
         {
-          "id": "oL-ccZR",
+          "id": "2oD7SNo",
           "uid": "LRymxjDasP",
           "label": "Replace Magic Bolt",
           "options": [
@@ -2903,7 +3471,7 @@
           ]
         },
         {
-          "id": "raZDldS",
+          "id": "aqiKys9",
           "uid": "9Fwehorm",
           "label": "Upgrade with",
           "options": [
@@ -2952,7 +3520,7 @@
       "hint": "Specialists - Fury ",
       "sections": [
         {
-          "id": "AM1lmIO",
+          "id": "N2ZAVjk",
           "uid": "Gf_HZfpw",
           "label": "Upgrade with one",
           "options": [
@@ -3095,7 +3663,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "14z4COt",
+          "id": "bERUhbh",
           "uid": "_dk0Vr2A",
           "label": "Upgrade with one",
           "options": [
@@ -3299,11 +3867,187 @@
       "calcErrors": false
     },
     {
+      "uid": "W8zTJ6PC",
+      "hint": "Specialists - Harbinger",
+      "sections": [
+        {
+          "id": "SuYlOV_",
+          "uid": "tS0BQRSo",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "82aHu8eT",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Envoy of Change",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Envoy of Change (Unstoppable in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "AB3FAl-SEUYP",
+                      "name": "Unstoppable in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Envoy of Change (Unstoppable in Melee Aura)",
+              "parentSectionId": "tS0BQRSo",
+              "parentPackageUid": "5uaediew",
+              "id": "82aHu8eT"
+            },
+            {
+              "uid": "fNzEy5ph",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Symbol of Change",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Symbol of Change (Fearless Aura)",
+                  "content": [
+                    {
+                      "id": "C0UHMLhvoXXj",
+                      "name": "Fearless Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Symbol of Change (Fearless Aura)",
+              "parentSectionId": "tS0BQRSo",
+              "parentPackageUid": "5uaediew",
+              "parentSectionUid": "KqfZo",
+              "id": "fNzEy5ph"
+            },
+            {
+              "uid": "8GoTP6wq",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Gift of Change",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Gift of Change (Resistance Aura)",
+                  "content": [
+                    {
+                      "id": "b7V48Z1W-EfP",
+                      "name": "Resistance Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Gift of Change (Resistance Aura)",
+              "parentSectionId": "tS0BQRSo",
+              "parentPackageUid": "5uaediew",
+              "id": "8GoTP6wq"
+            },
+            {
+              "uid": "xRY5xIsW",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Change Favour",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Change Favour (Changebound Boost Aura)",
+                  "content": [
+                    {
+                      "id": "nU2aNk56ZJ8H",
+                      "name": "Changebound Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Change Favour (Changebound Boost Aura)",
+              "parentSectionId": "tS0BQRSo",
+              "parentPackageUid": "5uaediew",
+              "parentSectionUid": "KqfZo",
+              "id": "xRY5xIsW"
+            },
+            {
+              "uid": "qWbrUAmp",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F0XvHTF",
+                  "cost": 60
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Lore of Change",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Lore of Change (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Lore of Change (Caster(3))",
+              "parentSectionId": "tS0BQRSo",
+              "parentPackageUid": "5uaediew",
+              "parentSectionUid": "KqfZo",
+              "id": "qWbrUAmp"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "5uaediew",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "YXGkS3db",
       "hint": "Hex-Furies",
       "sections": [
         {
-          "id": "y0E-AgC",
+          "id": "lSmOKOQ",
           "uid": "q9KrL2Mw",
           "label": "Replace Magic Blast",
           "options": [
@@ -4025,6 +4769,15 @@
       "targetType": 1
     },
     {
+      "id": "74RjQ1k41DoO",
+      "name": "Armor",
+      "aliasedRuleId": null,
+      "description": "Counts as having Defense X+.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "sHIDSc5b37Jm",
       "name": "Spell Accumulator",
       "aliasedRuleId": null,
@@ -4139,6 +4892,15 @@
       "description": "After this model is deployed, it may be placed anywhere fully within 9” of its position.",
       "hasRating": false,
       "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
+      "aliasedRuleId": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
       "targetType": 1
     },
     {

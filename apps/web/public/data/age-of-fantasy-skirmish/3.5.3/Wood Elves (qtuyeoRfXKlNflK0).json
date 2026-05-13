@@ -15,6 +15,115 @@
   "backgroundFull": "The ancestors of the Wood Elves migrated to the Heartwoods to find a new home, as human tribes had begun to encroach on their ancestral lands. Here, they met the Treelords, powerful beings who dwelt in the Heartwoods, and the two forged a pact. The Elves would protect and nurture the forest, never harming it without need, and in exchange, the Treelords would protect and provide for them. \n\nWhen Humans arrived at the edge of the forest, they cleared land for farming and cut trees for fuel. Together, the Elves and Treelords drove the humans back, though the humans held onto the land which they had cleared. While many Elves viewed the humans and their ways with distrust, others learned from their foe, taking metal weapons and tools from them, and they even began trading with them. They called themselves High Elves, as they built stone towers and carved out Kingdoms in the Heartwoods, claiming the forest lands for themselves. The remaining Wood Elves and their allied Treelords fought back against their former kin.\n\nThe Wood Elves won a costly victory, exiling the High Elves, and leaving their old towers to fall to ruin. The Wood Elves renewed their pacts and clung closely to their traditions, distrusting any who strayed from them. So it was that the Wood Elves remained in isolation for centuries, maintaining their old ways of life until the Havoc Gods arrived.\n\nThe followers of the Havoc Gods raided the forests, taking lumber for their weapons of war, and burning what they did not need. The Wood Elves fought desperately to drive them back, but it was soon clear that their enemies were too many. So, when the High Elves offered an alliance, the Wood Elves reluctantly accepted it. This alliance quickly grew, and the Wood Elves conceded large parts of their forest to give their allies lumber for weapons, ships, and fortifications. \n\nYet when victory came, the Wood Elves had little to show for it, as their former allies claimed the land where the woods had once been, and some even sought to encroach further. Now, the Wood Elves fiercely guard what remains, but the forest continues to shrink with each passing year. Even some Treelords believe that their days are numbered as the forest continues to shrink. \n\nHow will you uphold the ancient pacts of your people?",
   "units": [
     {
+      "id": "J_QVrUH",
+      "cost": 260,
+      "name": "Eternal Guardian Ancient",
+      "size": 1,
+      "bases": {
+        "round": "105x70",
+        "square": "100x60"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 2,
+          "label": "Fear(2)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "EgdF_3MSddXR",
+          "name": "Melee Evasion",
+          "label": "Melee Evasion"
+        },
+        {
+          "id": "JSKVyurtWIyW",
+          "name": "Strider",
+          "label": "Strider"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 9,
+          "label": "Tough(9)"
+        },
+        {
+          "id": "4rzxsYvWU9Ge",
+          "name": "Wild Veil",
+          "label": "Wild Veil"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "ust_W",
+          "name": "Great Hammer",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "yJnjc7Ud",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Great Hammer (A3, AP(2), Blast(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "zn36b",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "-iQKsJot",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Stomp (A3, AP(1))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "bC7ik",
+        "VYQeN8dU"
+      ],
+      "genericName": "Great Dryad Leader",
+      "isNarrative": false,
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "DDfHPmh",
       "cost": 60,
       "name": "Grove Champion",
@@ -1631,7 +1740,7 @@
       "hint": "Grove Champion",
       "sections": [
         {
-          "id": "I_J8Wdg",
+          "id": "iYl4K-7",
           "uid": "Vjp3qwy",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1840,7 +1949,7 @@
           ]
         },
         {
-          "id": "lVCg56A",
+          "id": "mi1T0t6",
           "uid": "D_M_3AL",
           "label": "Upgrade with one",
           "options": [
@@ -2089,6 +2198,73 @@
               "label": "Great Stag (Fast, Impact(3), Tough(3))",
               "parentSectionId": "D_M_3AL",
               "id": "BxGiHN7"
+            },
+            {
+              "uid": "jTLA0Kq",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DDfHPmh",
+                  "cost": 100
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Giant Owl",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "40",
+                    "square": "40"
+                  },
+                  "label": "Giant Owl (Rending Claws (A1, Rending), Fast, Flying, Impact(2), Tough(3))",
+                  "content": [
+                    {
+                      "id": null,
+                      "name": "Rending Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 1,
+                      "weaponId": "pQsRznpX",
+                      "specialRules": [
+                        {
+                          "id": "cavWDboL4ubs",
+                          "name": "Rending",
+                          "type": "ArmyBookRule"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Rending Claws (A1, Rending)"
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": "3"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Giant Owl (Rending Claws (A1, Rending), Fast, Flying, Impact(2), Tough(3))",
+              "parentSectionId": "D_M_3AL",
+              "id": "jTLA0Kq"
             }
           ],
           "parentPackageUid": "A1",
@@ -2107,7 +2283,7 @@
       "hint": "Treeman Elder",
       "sections": [
         {
-          "id": "yEb2bc5",
+          "id": "pN5cIu1",
           "uid": "CB-xgP3",
           "label": "Replace Branch Mace",
           "options": [
@@ -2234,7 +2410,7 @@
       "hint": "Eternal Elder",
       "sections": [
         {
-          "id": "I3Y4K_S",
+          "id": "llxulh9",
           "uid": "tDmRH",
           "label": "Replace Heavy Claws",
           "options": [
@@ -2353,7 +2529,7 @@
           ]
         },
         {
-          "id": "SoR6X77",
+          "id": "no0ERDg",
           "uid": "rgF5cH8",
           "label": "Upgrade with one",
           "options": [
@@ -2432,7 +2608,7 @@
           }
         },
         {
-          "id": "XPOTpjR",
+          "id": "1wHSxJa",
           "uid": "RG3-vo7",
           "label": "Upgrade with",
           "options": [
@@ -2478,7 +2654,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "3RRu64s",
+          "id": "gSyRDEH",
           "uid": "n_dfpbj",
           "label": "Upgrade one model with one",
           "options": [
@@ -2675,7 +2851,7 @@
       "hint": "Eternal Revenants",
       "sections": [
         {
-          "id": "ZoEXbX3",
+          "id": "GMqk4fA",
           "uid": "aLRWyAI",
           "label": "Replace Heavy Claws",
           "options": [
@@ -2809,7 +2985,7 @@
           ]
         },
         {
-          "id": "BQdEFUs",
+          "id": "PJnbmTN",
           "uid": "XguCo",
           "label": "Replace Spite Blade",
           "options": [
@@ -2861,7 +3037,7 @@
           ]
         },
         {
-          "id": "NniwLR3",
+          "id": "wZO3i4d",
           "uid": "RRxae",
           "label": "Upgrade with",
           "options": [
@@ -2909,7 +3085,7 @@
       "hint": "Glade Guardians",
       "sections": [
         {
-          "id": "fYINB4P",
+          "id": "ksC8zY8",
           "uid": "rXr_aSk",
           "label": "Upgrade all Longbows with one",
           "options": [
@@ -3092,7 +3268,7 @@
       "hint": "Deer Riders",
       "sections": [
         {
-          "id": "bNnUnZ0",
+          "id": "UJ30CCf",
           "uid": "JpRJni8",
           "label": "Replace Lance",
           "options": [
@@ -3191,7 +3367,7 @@
           ]
         },
         {
-          "id": "08eIEtm",
+          "id": "8E8ZVeB",
           "uid": "2Ccpbv6j_p",
           "label": "Replace Swift Defender",
           "options": [
@@ -3240,7 +3416,7 @@
       "hint": "Mounted Weavers",
       "sections": [
         {
-          "id": "9bbrMln",
+          "id": "8yks_R3",
           "uid": "fw2m1",
           "label": "Replace Hand Weapon",
           "options": [
@@ -3288,7 +3464,7 @@
           ]
         },
         {
-          "id": "REBhfxD",
+          "id": "eXEUarB",
           "uid": "Lqn2Nor",
           "label": "Upgrade with",
           "options": [
@@ -3338,7 +3514,7 @@
       "hint": "Eternal Hunters",
       "sections": [
         {
-          "id": "Sj06mXf",
+          "id": "PmglAIo",
           "uid": "WCrOJF8",
           "label": "Replace Great Weapon",
           "options": [
@@ -3489,7 +3665,7 @@
       "hint": "Owl Riders",
       "sections": [
         {
-          "id": "TAS6HkK",
+          "id": "Z7A0mMc",
           "uid": "r1xs560",
           "label": "Replace Lance",
           "options": [
@@ -3571,7 +3747,7 @@
       "hint": "Glade Defenders",
       "sections": [
         {
-          "id": "Qc5g7In",
+          "id": "UQ0O_CE",
           "uid": "q3JsK",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -3665,7 +3841,7 @@
       "hint": "Glade Leader",
       "sections": [
         {
-          "id": "RfwBTk9",
+          "id": "PZDcw0X",
           "uid": "JwMH_",
           "label": "Replace Hand Weapon",
           "options": [
@@ -3852,7 +4028,7 @@
           ]
         },
         {
-          "id": "WYOiK73",
+          "id": "qTqJVIm",
           "uid": "zL2aq",
           "label": "Upgrade with one",
           "options": [
@@ -4135,7 +4311,7 @@
       "hint": "Eternal Bug Riders",
       "sections": [
         {
-          "id": "5VmgOKa",
+          "id": "i5zLaOi",
           "uid": "nY20P",
           "label": "Replace Lance",
           "options": [
@@ -4187,7 +4363,7 @@
       "hint": "Treeman Brutes",
       "sections": [
         {
-          "id": "EKzZOPE",
+          "id": "C1XlWGs",
           "uid": "bXlW3",
           "label": "Replace Branch Mace",
           "options": [
@@ -4241,7 +4417,7 @@
       "hint": "Treemen",
       "sections": [
         {
-          "id": "7-sa7Lb",
+          "id": "rJnl__u",
           "uid": "17uIZ",
           "label": "Replace all Heavy Claws",
           "options": [
@@ -4337,7 +4513,7 @@
       "hint": "War Dancers",
       "sections": [
         {
-          "id": "y1WHIjy",
+          "id": "334dvoL",
           "uid": "7rho4",
           "label": "Upgrade with",
           "options": [
@@ -4381,11 +4557,189 @@
       "calcErrors": false
     },
     {
+      "uid": "bC7ik",
+      "hint": "Eternal Guardian Ancient",
+      "sections": [
+        {
+          "id": "fFm2JS2",
+          "uid": "1AB_u",
+          "label": "Replace Great Hammer",
+          "options": [
+            {
+              "uid": "5L8rF",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "J_QVrUH",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Glaive",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 9,
+                  "weaponId": "tVEwPXmY",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Glaive (A9, AP(1), Rending)"
+                }
+              ],
+              "label": "Heavy Glaive (A9, AP(1), Rending)",
+              "parentSectionId": "1AB_u",
+              "id": "5L8rF"
+            }
+          ],
+          "parentPackageUid": "bC7ik",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Great Hammer"
+          ]
+        },
+        {
+          "id": "A8UuugN",
+          "uid": "k1QVb",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "XQHLq",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "J_QVrUH",
+                  "cost": 55
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Squirm-fly",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 9,
+                  "weaponId": "hH0eFXeg",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Squirm-fly (12\", A9, Bane)"
+                }
+              ],
+              "label": "Squirm-fly (12\", A9, Bane)",
+              "parentPackageUid": "bC7ik",
+              "parentSectionUid": "k1QVb",
+              "parentSectionId": "k1QVb",
+              "id": "XQHLq"
+            },
+            {
+              "uid": "SGc9a",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "J_QVrUH",
+                  "cost": 65
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fury-fly",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 6,
+                  "weaponId": "wDwE_x92",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Fury-fly (18\", A6, Rending)"
+                }
+              ],
+              "label": "Fury-fly (18\", A6, Rending)",
+              "parentPackageUid": "bC7ik",
+              "parentSectionUid": "k1QVb",
+              "parentSectionId": "k1QVb",
+              "id": "SGc9a"
+            }
+          ],
+          "parentPackageUid": "bC7ik",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        },
+        {
+          "id": "LS7hOAj",
+          "uid": "tx2OQ",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "nZ7Si",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "J_QVrUH",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "id": "hZiWHRiD",
+                  "name": "Wings",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Wings (Flying)",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Wings (Flying)",
+              "parentPackageUid": "bC7ik",
+              "parentSectionUid": "tx2OQ",
+              "parentSectionId": "tx2OQ",
+              "id": "nZ7Si"
+            }
+          ],
+          "parentPackageUid": "bC7ik",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "cyTDX",
       "hint": "Leader Upgrades",
       "sections": [
         {
-          "id": "M-PEUX8",
+          "id": "hyAWiuw",
           "uid": "AfuG4",
           "label": "Upgrade with one",
           "options": [
@@ -4573,7 +4927,7 @@
       "hint": "Glow-Fairy Dust",
       "sections": [
         {
-          "id": "mYgq75L",
+          "id": "9Q9yGL2",
           "uid": "jpBb6vrorJ",
           "label": "Upgrade one model with",
           "options": [
@@ -4641,7 +4995,7 @@
       "hint": "Glade Scouts",
       "sections": [
         {
-          "id": "lRHbQPf",
+          "id": "xwEo6t5",
           "uid": "lSSW5fzytg",
           "label": "Replace Hunting Longbow",
           "options": [
@@ -4688,7 +5042,7 @@
       "hint": "Forest Watch",
       "sections": [
         {
-          "id": "u_E91hT",
+          "id": "YL5ai6Z",
           "uid": "j2O3vc6E-6",
           "label": "Replace Hunting Bow",
           "options": [
@@ -4735,7 +5089,7 @@
       "hint": "Specialists - Grove",
       "sections": [
         {
-          "id": "n3iS6Zg",
+          "id": "v4HJqRf",
           "uid": "lDtx9fA4",
           "label": "Upgrade with one",
           "options": [
@@ -4941,7 +5295,7 @@
       "hint": "Specialists - Eternal",
       "sections": [
         {
-          "id": "FYvx001",
+          "id": "E6t-OXZ",
           "uid": "pyTo0hZl",
           "label": "Upgrade with one",
           "options": [
@@ -5146,7 +5500,7 @@
       "hint": "Specialists - Treeman",
       "sections": [
         {
-          "id": "HBLemRG",
+          "id": "uF8D5eI",
           "uid": "8pPMMneJ",
           "label": "Upgrade with one",
           "options": [
@@ -5385,7 +5739,7 @@
       "hint": "Specialists - Glade",
       "sections": [
         {
-          "id": "mA_uA76",
+          "id": "EBkHsOw",
           "uid": "dv1QctMw",
           "label": "Upgrade with one",
           "options": [
@@ -5609,6 +5963,184 @@
           ],
           "isHeroUpgrade": true,
           "parentPackageUid": "F8nF5Fhq",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "VYQeN8dU",
+      "hint": "Specialists - Guardian Ancient",
+      "sections": [
+        {
+          "id": "sqg2AzZ",
+          "uid": "Aq4vZ0UU",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "mc-HbZBA",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "J_QVrUH",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "War Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "War Master (Piercing Assault)",
+                  "content": [
+                    {
+                      "id": "DhLjIDRrWz6-",
+                      "name": "Piercing Assault",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "War Master (Piercing Assault)",
+              "parentSectionId": "Aq4vZ0UU",
+              "parentPackageUid": "XdMwBH0r",
+              "id": "mc-HbZBA"
+            },
+            {
+              "uid": "F70DA3oh",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "J_QVrUH",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heartwood Defender",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Heartwood Defender (Wild Veil Boost)",
+                  "content": [
+                    {
+                      "id": "qQNXJkFzIjyq",
+                      "name": "Wild Veil Boost",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Heartwood Defender (Wild Veil Boost)",
+              "parentSectionId": "Aq4vZ0UU",
+              "parentPackageUid": "XdMwBH0r",
+              "id": "F70DA3oh"
+            },
+            {
+              "uid": "u9xIlx0d",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "J_QVrUH",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Stalk Master",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Stalk Master (Hit & Run Shooter)",
+                  "content": [
+                    {
+                      "id": "rkGri9GAybaZ",
+                      "name": "Hit & Run Shooter",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Stalk Master (Hit & Run Shooter)",
+              "parentSectionId": "Aq4vZ0UU",
+              "parentPackageUid": "XdMwBH0r",
+              "id": "u9xIlx0d"
+            },
+            {
+              "uid": "shOvP1l8",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "J_QVrUH",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Spell Weaver",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Spell Weaver (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Spell Weaver (Caster(2))",
+              "parentSectionId": "Aq4vZ0UU",
+              "parentPackageUid": "XdMwBH0r",
+              "parentSectionUid": "gfp_3",
+              "id": "shOvP1l8"
+            },
+            {
+              "uid": "yPE7Zigt",
+              "cost": 60,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "J_QVrUH",
+                  "cost": 60
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Spell Weaver",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Master Spell Weaver (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Spell Weaver (Caster(3))",
+              "parentSectionId": "Aq4vZ0UU",
+              "parentPackageUid": "XdMwBH0r",
+              "parentSectionUid": "gfp_3",
+              "id": "yPE7Zigt"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "XdMwBH0r",
           "type": "ArmyBookUpgradeSection",
           "variant": "upgrade",
           "select": {
@@ -6294,6 +6826,15 @@
       "targetType": 2
     },
     {
+      "id": "rkGri9GAybaZ",
+      "name": "Hit & Run Shooter",
+      "aliasedRuleId": null,
+      "description": "Once per round, units where all models have this rule may move by up to 3\" after shooting.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "C6MzEy1CnxTs",
       "name": "Repel Ambushers",
       "aliasedRuleId": null,
@@ -6348,6 +6889,15 @@
       "targetType": 1
     },
     {
+      "id": "qQNXJkFzIjyq",
+      "name": "Wild Veil Boost",
+      "aliasedRuleId": null,
+      "description": "If all models in this unit have Wild Veil, enemies get -8\" range to a min. of 6\" when shooting  them, and -4\" movement to a min. of 6\" when charging them from Wild Veil (instead of only -4\" and -2\").",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "h-Cj1XrX00JE",
       "name": "Resistance",
       "aliasedRuleId": null,
@@ -6370,6 +6920,15 @@
       "name": "Piercing Assault Aura",
       "aliasedRuleId": null,
       "description": "This model and up to 3 friendly units picked before the start of the game get Piercing Assault. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "DhLjIDRrWz6-",
+      "name": "Piercing Assault",
+      "aliasedRuleId": null,
+      "description": "This model gets AP(+1) when charging.",
       "hasRating": false,
       "coreType": null,
       "targetType": 1
@@ -6456,15 +7015,6 @@
       "targetType": 1
     },
     {
-      "id": "rkGri9GAybaZ",
-      "name": "Hit & Run Shooter",
-      "aliasedRuleId": null,
-      "description": "Once per round, units where all models have this rule may move by up to 3\" after shooting.",
-      "hasRating": false,
-      "coreType": null,
-      "targetType": 1
-    },
-    {
       "id": "ozCLWcof36wD",
       "name": "Hit & Run",
       "aliasedRuleId": null,
@@ -6483,30 +7033,12 @@
       "targetType": 1
     },
     {
-      "id": "DhLjIDRrWz6-",
-      "name": "Piercing Assault",
-      "aliasedRuleId": null,
-      "description": "This model gets AP(+1) when charging.",
-      "hasRating": false,
-      "coreType": null,
-      "targetType": 1
-    },
-    {
       "id": "a0YtInGiUDd6",
       "name": "Tough",
       "aliasedRuleId": null,
       "description": "This model only rolls to check wound effects once it has taken at least X wounds, and is only Knocked Out on rolls of 5+X or more.",
       "hasRating": true,
       "coreType": 1,
-      "targetType": 1
-    },
-    {
-      "id": "qQNXJkFzIjyq",
-      "name": "Wild Veil Boost",
-      "aliasedRuleId": null,
-      "description": "If all models in this unit have Wild Veil, enemies get -8\" range to a min. of 6\" when shooting  them, and -4\" movement to a min. of 6\" when charging them from Wild Veil (instead of only -4\" and -2\").",
-      "hasRating": false,
-      "coreType": null,
       "targetType": 1
     },
     {

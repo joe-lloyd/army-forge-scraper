@@ -603,7 +603,7 @@
       "hint": "Magma Champion",
       "sections": [
         {
-          "id": "Gu_4gnx",
+          "id": "2TG1liW",
           "uid": "C8uw9MG",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -769,7 +769,7 @@
           ]
         },
         {
-          "id": "q399Ow2",
+          "id": "nsOvmf1",
           "uid": "xBdCrYI",
           "label": "Upgrade with one",
           "options": [
@@ -923,7 +923,7 @@
           }
         },
         {
-          "id": "YFh7R-e",
+          "id": "0VPKLmg",
           "uid": "_jenN1wN",
           "label": "Upgrade with",
           "options": [
@@ -963,7 +963,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "0JX5PYI",
+          "id": "R9ufKas",
           "uid": "fX2JnxU",
           "label": "Upgrade with one",
           "options": [
@@ -1013,7 +1013,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "92OvrXK",
+          "id": "-6PId92",
           "uid": "UkxBvgO",
           "label": "Upgrade one model with one",
           "options": [
@@ -1138,7 +1138,7 @@
       "hint": "Shield Berserkers",
       "sections": [
         {
-          "id": "MijGIPk",
+          "id": "2YzWvXY",
           "uid": "899dra9",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1189,7 +1189,7 @@
           ]
         },
         {
-          "id": "935fRL8",
+          "id": "KlqM9Kw",
           "uid": "L5cHI-NG",
           "label": "Upgrade one model with",
           "options": [
@@ -1241,7 +1241,7 @@
       "hint": "Auric Marksmen",
       "sections": [
         {
-          "id": "xT29K0h",
+          "id": "dYd9GgR",
           "uid": "9fpVdqy",
           "label": "Replace Lava Long-Shooter",
           "options": [
@@ -1362,7 +1362,7 @@
           ]
         },
         {
-          "id": "m0lG-jc",
+          "id": "8MqnMNL",
           "uid": "G5Yn46IT",
           "label": "Upgrade with any",
           "options": [
@@ -1443,7 +1443,7 @@
       "hint": "Volcanic Leader",
       "sections": [
         {
-          "id": "wOpWyjo",
+          "id": "PD_3Eih",
           "uid": "RXMUz",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1632,7 +1632,7 @@
           ]
         },
         {
-          "id": "CZn_16D",
+          "id": "_oTczE8",
           "uid": "EgRgr",
           "label": "Upgrade with one",
           "options": [
@@ -1745,7 +1745,7 @@
           }
         },
         {
-          "id": "wBPapRC",
+          "id": "Qd-bpUg",
           "uid": "RMf1cXfd",
           "label": "Upgrade with",
           "options": [
@@ -1785,7 +1785,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "o6OU-wV",
+          "id": "_98sa6k",
           "uid": "28UXeAqdEg",
           "label": "Upgrade with one",
           "options": [
@@ -1817,6 +1817,99 @@
               "label": "Shield Leader (Shielded)",
               "parentSectionId": "28UXeAqdEg",
               "id": "_-wy4ZGdbi"
+            },
+            {
+              "uid": "IJSX1C1pmc",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "v2vdu9x",
+                  "cost": 175
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Volcanic Lizard",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Volcanic Lizard (Spit Lava (12\", A2, Blast(3), Destructive), Heavy Claws (A3, AP(1)), Armor(3), Fear(1), Strider, Swift, Tough(6))",
+                  "content": [
+                    {
+                      "id": "dJPRID_4",
+                      "name": "Spit Lava",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 12,
+                      "attacks": 2,
+                      "weaponId": "8vluPtBy",
+                      "specialRules": [
+                        {
+                          "id": "w_vX0mi58KKt",
+                          "name": "Blast",
+                          "rating": 3
+                        },
+                        {
+                          "id": "VI54cszY2BuG",
+                          "name": "Destructive"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Spit Lava (12\", A2, Blast(3), Destructive)"
+                    },
+                    {
+                      "id": "H8P0ZPl3",
+                      "name": "Heavy Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 3,
+                      "weaponId": "LXNVnfEZ",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "type": "ArmyBookRule",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Heavy Claws (A3, AP(1))"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "leFm23MTiJxO",
+                      "name": "Swift",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Volcanic Lizard (Spit Lava (12\", A2, Blast(3), Destructive), Heavy Claws (A3, AP(1)), Armor(3), Fear(1), Strider, Swift, Tough(6))",
+              "parentSectionId": "28UXeAqdEg",
+              "id": "IJSX1C1pmc"
             }
           ],
           "parentPackageUid": "yCGL_",
@@ -1835,7 +1928,7 @@
       "hint": "Volcanic Berserkers",
       "sections": [
         {
-          "id": "BtjNEhJ",
+          "id": "nylLEid",
           "uid": "qc3b9uoEo4",
           "label": "Upgrade with any",
           "options": [
@@ -1915,7 +2008,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "lhRw1qX",
+          "id": "5oT7YiH",
           "uid": "pWVmRL-Q",
           "label": "Upgrade with one",
           "options": [
@@ -2091,7 +2184,7 @@
       "hint": "Berserker Throwers",
       "sections": [
         {
-          "id": "yBiTMV_",
+          "id": "cueZfNn",
           "uid": "taqnmDVr",
           "label": "Upgrade with",
           "options": [
@@ -2168,7 +2261,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "gDEK2iS",
+          "id": "DtJWwqe",
           "uid": "J0HqF1rw",
           "label": "Upgrade with one",
           "options": [
@@ -2376,7 +2469,7 @@
       "hint": "Berserker Guards",
       "sections": [
         {
-          "id": "O9iXEKq",
+          "id": "RDvfc07",
           "uid": "inbQ23gjQz",
           "label": "Replace Spear",
           "options": [
@@ -2422,7 +2515,7 @@
           ]
         },
         {
-          "id": "78uwykX",
+          "id": "3U-EK5w",
           "uid": "rgKAGnRP",
           "label": "Upgrade with",
           "options": [
@@ -3096,12 +3189,30 @@
       "targetType": 1
     },
     {
+      "id": "leFm23MTiJxO",
+      "name": "Swift",
+      "aliasedRuleId": null,
+      "description": "This model may ignore the Slow rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "eyMkgYDVrP7C",
       "name": "Takedown Strike",
       "aliasedRuleId": null,
       "description": "Once per game, when it's this model's turn to attack in melee, it may make one attack at Quality 2+ with AP(2), Deadly(3), and Takedown.",
       "hasRating": false,
       "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "74RjQ1k41DoO",
+      "name": "Armor",
+      "aliasedRuleId": null,
+      "description": "Counts as having Defense X+.",
+      "hasRating": true,
+      "coreType": 5,
       "targetType": 1
     },
     {
@@ -3213,6 +3324,15 @@
       "targetType": 1
     },
     {
+      "id": "Ldhtmr4H8b6G",
+      "name": "Slow",
+      "aliasedRuleId": null,
+      "description": "Moves -2\" when using Advance, and -4” when using Rush/Charge.",
+      "hasRating": false,
+      "coreType": 1,
+      "targetType": 1
+    },
+    {
       "id": "8Hjy54TYtwb7",
       "name": "Takedown",
       "aliasedRuleId": null,
@@ -3240,12 +3360,12 @@
       "targetType": 2
     },
     {
-      "id": "leFm23MTiJxO",
-      "name": "Swift",
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
       "aliasedRuleId": null,
-      "description": "This model may ignore the Slow rule.",
-      "hasRating": false,
-      "coreType": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
       "targetType": 1
     },
     {

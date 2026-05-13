@@ -1,7 +1,20 @@
 const fs = require("fs");
 const path = require("path");
 
-const DATA_DIR = path.join(__dirname, "../data");
+// Accept the data root as a CLI arg so we can re-index `apps/web/public/data`
+// after the copy step (which is the union of the current scrape + every
+// previously-committed legacy version). Defaults to repo-root `data/` for
+// anyone running the script standalone.
+const argDir = process.argv[2];
+const DATA_DIR = argDir
+  ? path.resolve(process.cwd(), argDir)
+  : path.join(__dirname, "../data");
+
+if (!fs.existsSync(DATA_DIR)) {
+  console.error(`Data dir not found: ${DATA_DIR}`);
+  process.exit(1);
+}
+console.log(`Generating manifests against: ${DATA_DIR}`);
 
 function getDirectories(source) {
   return fs

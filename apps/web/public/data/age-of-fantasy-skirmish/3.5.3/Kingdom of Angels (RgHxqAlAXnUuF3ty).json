@@ -15,6 +15,82 @@
   "backgroundFull": "When the Great Rift opened, its consequences were felt throughout Tyria. However, in one remote province along the southern border of the Empire, these consequences were particularly severe. The people of this province faced a series of catastrophes, as floods, hail, and wild fires raged throughout the region, destroying homes and crops, while the Rift cut them off from much of the Empire and their neighbours. \n\nIt was in this time of catastrophe that the Angels revealed themselves. They presented themselves to the people and offered to take those who would follow them to a city in the sky, far from the destruction, so that they might return to rebuild in harmony with the Angels. The people came to know their new home as the Celestial City and they soon came to worship the Twin Gods of the Angels and obey their will as it was told to them by the Angels. They worked to improve their new city, their hands always guided by the watchful eyes of their angelic saviours. The youths were taught to view the Angels as saviours and protectors, and to trust in the words of their new guardians completely. After nearly two generations away, the Angel finally returned to Tyria with their followers. \n\nThe people found their old homes abandoned and ruined, and the Angels instructed them to destroy what little remained, and sever any connections with their ancestors’ lives. Under the close supervision of the Angels, the people began to raise new temples and homes in the style of the Celestial City. These cities would serve as the core of their new realm in Tyria, and soon the Angels were ready to expand their flock. \n\nThe Angels and their armies took to converting those who had come to the land in their absence. They offered rewards and favour to those who showed devotion and adopted the faith willingly, while crushing anyone who rebelled against them. Soon, the Angelic Kingdom began to look beyond its old provincial boundaries, seeking out strange magical relics and converting new followers, whether through preaching or conquest. They keep a close eye over their people, inspiring them forever towards greater faith in return for their salvation. \n\nWhile their followers profess the benevolence of their Angelic leaders, others in Tyria view the close supervision and strict commands of the Angels with suspicion, and some have begun to speculate that the Angels are working towards some secret ends beyond the knowledge of their followers. \n\nHow will you spread the new faith?",
   "units": [
     {
+      "id": "r4Z1aBG",
+      "cost": 140,
+      "name": "High Angel",
+      "size": 1,
+      "bases": {
+        "round": "60",
+        "square": "50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "-QJdqJEKjIpE",
+          "name": "Flying",
+          "label": "Flying"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "mCYGI3sU3jKI",
+          "name": "Angelic Blessing",
+          "label": "Angelic Blessing"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "sVDjIsik",
+          "name": "Heavy Blessed Greatsword",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "E6Zf4EeT",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "xeJDKejG4QZN",
+              "name": "Tear",
+              "label": "Tear"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Heavy Blessed Greatsword (A2, Deadly(3), Tear)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "A1",
+        "rzds1i9r"
+      ],
+      "genericName": "Angel Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "pLjX5pT",
       "cost": 55,
       "name": "Champion",
@@ -950,11 +1026,482 @@
   ],
   "upgradePackages": [
     {
+      "uid": "A1",
+      "hint": "High Angel",
+      "sections": [
+        {
+          "id": "RSrGGuq",
+          "uid": "m5PBHz-",
+          "label": "Replace Heavy Blessed Greatsword",
+          "options": [
+            {
+              "uid": "-MqFiOC",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Flame Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 6,
+                  "weaponId": "PO_k22Lq",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Flame Sword (A6, AP(1), Bane)"
+                }
+              ],
+              "label": "Heavy Flame Sword (A6, AP(1), Bane)",
+              "parentSectionId": "m5PBHz-",
+              "id": "-MqFiOC"
+            },
+            {
+              "uid": "NbEtlWfQ8k",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Ice Halberd",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "Gz2wm38m",
+                  "specialRules": [
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Ice Halberd (A6, Rending, Shred)"
+                }
+              ],
+              "label": "Heavy Ice Halberd (A6, Rending, Shred)",
+              "parentSectionId": "m5PBHz-",
+              "id": "NbEtlWfQ8k"
+            },
+            {
+              "uid": "5xWsxNU",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Ice Blade",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": null,
+                  "attacks": 6,
+                  "weaponId": "Yvm8GoWp",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "IEJp3a4vE0CB",
+                      "name": "Shred"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Ice Blade (A6, AP(1), Shred)"
+                }
+              ],
+              "label": "Heavy Ice Blade (A6, AP(1), Shred)",
+              "parentSectionId": "m5PBHz-",
+              "id": "5xWsxNU"
+            },
+            {
+              "uid": "p1Bv-otH_r",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "PXQuJVxy",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Weapon (A6, AP(2))"
+                }
+              ],
+              "label": "Great Weapon (A6, AP(2))",
+              "parentSectionId": "m5PBHz-",
+              "id": "p1Bv-otH_r"
+            },
+            {
+              "uid": "rkD2UnlSkG",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Flame Spear",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "im3ODV6U",
+                  "specialRules": [
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane"
+                    },
+                    {
+                      "id": "c45Fw0D2oGOk",
+                      "name": "Counter"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Flame Spear (A6, Counter, Bane)"
+                }
+              ],
+              "label": "Heavy Flame Spear (A6, Counter, Bane)",
+              "parentSectionId": "m5PBHz-",
+              "id": "rkD2UnlSkG"
+            },
+            {
+              "uid": "ZyNvWe0tny",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Greatbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 6,
+                  "weaponId": "fmn6YkUp",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Greatbow (24\", A6)"
+                },
+                {
+                  "id": null,
+                  "name": "Heavy Hand Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "V2TzS_Jf",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Hand Weapon (A2, AP(1))"
+                }
+              ],
+              "label": "Heavy Greatbow (24\", A6), Heavy Hand Weapon (A2, AP(1))",
+              "parentSectionId": "m5PBHz-",
+              "id": "ZyNvWe0tny"
+            },
+            {
+              "uid": "wwbJQ_zj9V",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 70
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Blessed Greatbow",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 2,
+                  "weaponId": "UPaT9YjX",
+                  "specialRules": [
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 3
+                    },
+                    {
+                      "id": "xeJDKejG4QZN",
+                      "name": "Tear"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Blessed Greatbow (24\", A2, Deadly(3), Tear)"
+                },
+                {
+                  "id": null,
+                  "name": "Heavy Hand Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "V2TzS_Jf",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Hand Weapon (A2, AP(1))"
+                }
+              ],
+              "label": "Heavy Blessed Greatbow (24\", A2, Deadly(3), Tear), Heavy Hand Weapon (A2, AP(1))",
+              "parentSectionId": "m5PBHz-",
+              "id": "wwbJQ_zj9V"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Heavy Blessed Greatsword"
+          ]
+        },
+        {
+          "id": "UFbYZzL",
+          "uid": "D0OONUDx9n",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "BmSVeE_xVJ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "40GRjuU1",
+                  "name": "Ember Strike",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "FVQ9Ndzx",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "Hdm9ry6kJvzb",
+                      "name": "Strafing",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Ember Strike (A1, AP(1), Blast(3), Limited, Strafing)"
+                }
+              ],
+              "label": "Ember Strike (A1, AP(1), Blast(3), Limited, Strafing)",
+              "parentSectionId": "D0OONUDx9n",
+              "id": "BmSVeE_xVJ"
+            },
+            {
+              "uid": "LjOwZUpG8w",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Frost Strike",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Frost Strike (Precision Debuff)",
+                  "content": [
+                    {
+                      "id": "1elLRhGK7ETb",
+                      "name": "Precision Debuff",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Frost Strike (Precision Debuff)",
+              "parentSectionId": "D0OONUDx9n",
+              "id": "LjOwZUpG8w"
+            }
+          ],
+          "parentPackageUid": "A1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        },
+        {
+          "id": "ug2jBat",
+          "uid": "FtjrcXlm",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "wce-yJhN",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Angelic Protector",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Angelic Protector (Angelic Blessing Boost Buff)",
+                  "content": [
+                    {
+                      "id": "E8tvOAPUp2lA",
+                      "name": "Angelic Blessing Boost Buff",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Angelic Protector (Angelic Blessing Boost Buff)",
+              "parentSectionId": "FtjrcXlm",
+              "parentPackageUid": "kfcPS7Wd",
+              "id": "wce-yJhN"
+            },
+            {
+              "uid": "oSzafLDl",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Angelic Benefactor",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Angelic Benefactor (Versatile Attack Buff)",
+                  "content": [
+                    {
+                      "id": "M6r8eZ54PXbo",
+                      "name": "Versatile Attack Buff",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Angelic Benefactor (Versatile Attack Buff)",
+              "parentSectionId": "FtjrcXlm",
+              "parentPackageUid": "kfcPS7Wd",
+              "id": "oSzafLDl"
+            }
+          ],
+          "parentPackageUid": "kfcPS7Wd",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "B1",
       "hint": "Champion",
       "sections": [
         {
-          "id": "-oZeAxa",
+          "id": "oC1FcUo",
           "uid": "5WtRrTd",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1169,7 +1716,7 @@
           ]
         },
         {
-          "id": "phnYHA_",
+          "id": "Lhl7k1D",
           "uid": "KPs1q0VH6B",
           "label": "Upgrade with",
           "options": [
@@ -1212,7 +1759,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "GmQdhzi",
+          "id": "CXJzBed",
           "uid": "fiKmlZM",
           "label": "Upgrade with one",
           "options": [
@@ -1315,6 +1862,79 @@
               "label": "Lion (Heavy Claws (A3, AP(1)), Fast, Fear(1), Tough(3))",
               "parentSectionId": "fiKmlZM",
               "id": "jPiDfWU"
+            },
+            {
+              "uid": "nSXHG",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "pLjX5pT",
+                  "cost": 205
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Griffon",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Griffon (Rending Claws (A6, Rending), Armor(3), Fast, Fear(1), Flying, Tough(6))",
+                  "content": [
+                    {
+                      "id": "6t9SgmHD",
+                      "name": "Rending Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "HXmtQukA",
+                      "specialRules": [
+                        {
+                          "id": "cavWDboL4ubs",
+                          "name": "Rending",
+                          "type": "ArmyBookRule"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Rending Claws (A6, Rending)"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Griffon (Rending Claws (A6, Rending), Armor(3), Fast, Fear(1), Flying, Tough(6))",
+              "parentSectionId": "fiKmlZM",
+              "id": "nSXHG"
             }
           ],
           "parentPackageUid": "B1",
@@ -1333,7 +1953,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "ktsOc_7",
+          "id": "cv--oPH",
           "uid": "-8FL3Mz",
           "label": "Upgrade with one",
           "options": [
@@ -1542,7 +2162,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "U7jaJoG",
+          "id": "H_ydBfb",
           "uid": "pPweu7S",
           "label": "Upgrade one model with one",
           "options": [
@@ -1739,7 +2359,7 @@
       "hint": "Infantry",
       "sections": [
         {
-          "id": "R5fRGTX",
+          "id": "P5d5sFW",
           "uid": "tVELJ2O",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1833,7 +2453,7 @@
       "hint": "Abbess",
       "sections": [
         {
-          "id": "oKMEeF9",
+          "id": "fhqtAXZ",
           "uid": "jNdSQ",
           "label": "Replace Heavy Blessed Glaive",
           "options": [
@@ -1921,7 +2541,7 @@
           ]
         },
         {
-          "id": "YC26CHu",
+          "id": "RqV1YsF",
           "uid": "xYE8NSTRU6",
           "label": "Upgrade with",
           "options": [
@@ -1958,7 +2578,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "JjYQZZK",
+          "id": "u0ZnNLg",
           "uid": "v5q6V",
           "label": "Upgrade with one",
           "options": [
@@ -2038,6 +2658,73 @@
               "label": "Panther (Claws (A1), Fast, Strider)",
               "parentSectionId": "v5q6V",
               "id": "SDfMC"
+            },
+            {
+              "uid": "SHN8G",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "qcD_87C",
+                  "cost": 155
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Panther Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Panther Chariot (Claws (A2), Armor(3), Fast, Impact(4), Strider, Tough(6))",
+                  "content": [
+                    {
+                      "id": "qObCGQ3f",
+                      "name": "Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 2,
+                      "weaponId": "LZQtxZh5",
+                      "specialRules": [],
+                      "attacksMultiplier": 1,
+                      "label": "Claws (A2)"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Panther Chariot (Claws (A2), Armor(3), Fast, Impact(4), Strider, Tough(6))",
+              "parentSectionId": "v5q6V",
+              "id": "SHN8G"
             }
           ],
           "parentPackageUid": "xcsxB",
@@ -2056,7 +2743,7 @@
       "hint": "Burning Angels",
       "sections": [
         {
-          "id": "m6S_lHQ",
+          "id": "WDJBs1g",
           "uid": "Fl8YGOdIn1",
           "label": "Replace Flame Sword",
           "options": [
@@ -2105,7 +2792,7 @@
           ]
         },
         {
-          "id": "Fejz1Js",
+          "id": "310daEi",
           "uid": "YQx_MLJiX_",
           "label": "Upgrade with",
           "options": [
@@ -2172,7 +2859,7 @@
       "hint": "Frozen Angels",
       "sections": [
         {
-          "id": "yQ2rjY5",
+          "id": "QakfKYt",
           "uid": "LFJ-h1xlga",
           "label": "Replace Ice Halberd",
           "options": [
@@ -2222,7 +2909,7 @@
           ]
         },
         {
-          "id": "ddXfFTl",
+          "id": "lNMUjDZ",
           "uid": "OvcrWYj3VZ",
           "label": "Upgrade with",
           "options": [
@@ -2268,7 +2955,7 @@
       "hint": "Palace Guard",
       "sections": [
         {
-          "id": "smhwvjM",
+          "id": "krtei4h",
           "uid": "_BVhaZqC5i",
           "label": "Replace Blessed Greatsword",
           "options": [
@@ -2361,7 +3048,7 @@
       "hint": "Paladins",
       "sections": [
         {
-          "id": "BvMv8sV",
+          "id": "rYEqT8q",
           "uid": "h-pg5GAZel",
           "label": "Replace Great Weapon",
           "options": [
@@ -2418,7 +3105,7 @@
       "hint": "Battle Angels",
       "sections": [
         {
-          "id": "gWxzzyt",
+          "id": "jA0p-Rh",
           "uid": "qGrgz26AEK",
           "label": "Replace Blessed Greatsword",
           "options": [
@@ -2567,7 +3254,7 @@
           ]
         },
         {
-          "id": "uXg4jte",
+          "id": "Jz92TAD",
           "uid": "dUy76son",
           "label": "Upgrade with one",
           "options": [
@@ -2648,7 +3335,7 @@
       "hint": "Panther Riders",
       "sections": [
         {
-          "id": "FdQUj_9",
+          "id": "SLoDIfa",
           "uid": "R6K-BxUCsW",
           "label": "Replace Shortbow",
           "options": [
@@ -2733,7 +3420,7 @@
       "hint": "Penitents",
       "sections": [
         {
-          "id": "KGynwwm",
+          "id": "wHjb-q2",
           "uid": "yS6eRCjpiU",
           "label": "Upgrade all models with",
           "options": [
@@ -2784,7 +3471,7 @@
       "hint": "Paladin Knights",
       "sections": [
         {
-          "id": "hBqNN5T",
+          "id": "4KcTW5Z",
           "uid": "tFoJacJ6Os",
           "label": "Replace Lance",
           "options": [
@@ -2830,7 +3517,7 @@
           ]
         },
         {
-          "id": "DHjtE9r",
+          "id": "K32p1O9",
           "uid": "1MCGaCaDLO",
           "label": "Replace Great Weapon",
           "options": [
@@ -2883,11 +3570,215 @@
       "calcErrors": false
     },
     {
+      "uid": "rzds1i9r",
+      "hint": "Specialists - Angel",
+      "sections": [
+        {
+          "id": "rOVBP-K",
+          "uid": "Uxv1lPvU",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "1WfcrWJD",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Overseer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Overseer (Furious Aura)",
+                  "content": [
+                    {
+                      "id": "CK9TIa7vdehO",
+                      "name": "Furious Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Overseer (Furious Aura)",
+              "parentSectionId": "Uxv1lPvU",
+              "parentPackageUid": "Xtn97eZK",
+              "id": "1WfcrWJD"
+            },
+            {
+              "uid": "5K5ScPI6",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Guardian",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Guardian (Fortified Aura)",
+                  "content": [
+                    {
+                      "id": "B-9jnnFp54f9",
+                      "name": "Fortified Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Guardian (Fortified Aura)",
+              "parentSectionId": "Uxv1lPvU",
+              "parentPackageUid": "Xtn97eZK",
+              "id": "5K5ScPI6"
+            },
+            {
+              "uid": "Xf1oMapF",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Tyrant",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Tyrant (No Retreat Aura)",
+                  "content": [
+                    {
+                      "id": "QMU04E_1bAVC",
+                      "name": "No Retreat Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Tyrant (No Retreat Aura)",
+              "parentSectionId": "Uxv1lPvU",
+              "parentPackageUid": "Xtn97eZK",
+              "id": "Xf1oMapF"
+            },
+            {
+              "uid": "gilx2izi",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Judge",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Judge (Piercing Hunter Aura)",
+                  "content": [
+                    {
+                      "id": "1m7a9ADI-D_g",
+                      "name": "Piercing Hunter Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Judge (Piercing Hunter Aura)",
+              "parentSectionId": "Uxv1lPvU",
+              "parentPackageUid": "Xtn97eZK",
+              "id": "gilx2izi"
+            },
+            {
+              "uid": "dReiaPfH",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Sorcerer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Sorcerer (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Sorcerer (Caster(2))",
+              "parentSectionId": "Uxv1lPvU",
+              "parentPackageUid": "Xtn97eZK",
+              "id": "dReiaPfH"
+            },
+            {
+              "uid": "G2iSeluL",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "r4Z1aBG",
+                  "cost": 55
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Sorcerer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Master Sorcerer (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Sorcerer (Caster(3))",
+              "parentSectionId": "Uxv1lPvU",
+              "parentPackageUid": "Xtn97eZK",
+              "id": "G2iSeluL"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "Xtn97eZK",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "Ki-_c8f-",
       "hint": "Specialists - Abbess",
       "sections": [
         {
-          "id": "Uv1CZpU",
+          "id": "p6f9NNm",
           "uid": "LxCeB3dC",
           "label": "Upgrade with one",
           "options": [
@@ -3679,6 +4570,15 @@
       "targetType": 1
     },
     {
+      "id": "74RjQ1k41DoO",
+      "name": "Armor",
+      "aliasedRuleId": null,
+      "description": "Counts as having Defense X+.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "IEJp3a4vE0CB",
       "name": "Shred",
       "aliasedRuleId": null,
@@ -3775,6 +4675,15 @@
       "description": "Gets X spell tokens at the start of each round, but can’t hold more than 6 tokens at once. At any point before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). Roll one die, on 4+ resolve the effect on a target in line of sight. Models within 18” in line of sight of the caster’s unit may spend any number of spell tokens at the same time before rolling, to give the caster +1/-1 to the roll per token.",
       "hasRating": true,
       "coreType": 1,
+      "targetType": 1
+    },
+    {
+      "id": "s6MgSfmgylXU",
+      "name": "Defense",
+      "aliasedRuleId": null,
+      "description": "This model gets +X to defense rolls.",
+      "hasRating": true,
+      "coreType": 5,
       "targetType": 1
     },
     {

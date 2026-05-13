@@ -1092,7 +1092,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "RNUXINa",
+          "id": "-hYYyjd",
           "uid": "qPsrtux",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1278,7 +1278,7 @@
           ]
         },
         {
-          "id": "A_VywGS",
+          "id": "_YvaoDh",
           "uid": "YVgJPFp",
           "label": "Upgrade with one",
           "options": [
@@ -1447,6 +1447,207 @@
               "label": "Daemon Mount (Heavy Claws (A1, AP(1)), Fast, Fear(1), Impact(2), Tough(3))",
               "parentSectionId": "YVgJPFp",
               "id": "7gHEUZM"
+            },
+            {
+              "uid": "IqVrJ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4K3NmPPwg",
+                  "cost": 135
+                },
+                {
+                  "unitId": "vTGyRu4YC",
+                  "cost": 130
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Chariot (Hooves (A2), Fast, Impact(4), Tough(6))",
+                  "content": [
+                    {
+                      "id": null,
+                      "name": "Hooves",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 2,
+                      "weaponId": "syIXEXrR",
+                      "specialRules": [],
+                      "attacksMultiplier": 1,
+                      "label": "Hooves (A2)"
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Chariot (Hooves (A2), Fast, Impact(4), Tough(6))",
+              "parentSectionId": "YVgJPFp",
+              "id": "IqVrJ"
+            },
+            {
+              "uid": "MGH9S",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4K3NmPPwg",
+                  "cost": 150
+                },
+                {
+                  "unitId": "vTGyRu4YC",
+                  "cost": 145
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Beast Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Beast Chariot (Heavy Claws (A2, AP(1)), Fast, Fear(1), Impact(4), Tough(6))",
+                  "content": [
+                    {
+                      "id": null,
+                      "name": "Heavy Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 2,
+                      "weaponId": "-psCHjQv",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "type": "ArmyBookRule",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Heavy Claws (A2, AP(1))"
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Beast Chariot (Heavy Claws (A2, AP(1)), Fast, Fear(1), Impact(4), Tough(6))",
+              "parentPackageUid": "A1",
+              "parentSectionUid": "YVgJPFp",
+              "parentSectionId": "YVgJPFp",
+              "id": "MGH9S"
+            },
+            {
+              "uid": "iOGKJV4",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4K3NmPPwg",
+                  "cost": 170
+                },
+                {
+                  "unitId": "vTGyRu4YC",
+                  "cost": 155
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Manticore",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Manticore (Rending Claws (A6, Rending), Fear(1), Flying, Tough(6))",
+                  "content": [
+                    {
+                      "id": "IcQtuXcb",
+                      "name": "Rending Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "HXmtQukA",
+                      "specialRules": [
+                        {
+                          "id": "cavWDboL4ubs",
+                          "name": "Rending",
+                          "type": "ArmyBookRule"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Rending Claws (A6, Rending)"
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Manticore (Rending Claws (A6, Rending), Fear(1), Flying, Tough(6))",
+              "parentSectionId": "YVgJPFp",
+              "id": "iOGKJV4"
             }
           ],
           "parentPackageUid": "A1",
@@ -1466,7 +1667,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "5-trOUS",
+          "id": "82B8z-C",
           "uid": "XA68TNV",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1617,7 +1818,7 @@
           ]
         },
         {
-          "id": "mWT0GDz",
+          "id": "XJpr4Jt",
           "uid": "wNlvXlQsHs",
           "label": "Upgrade with one",
           "options": [
@@ -1695,7 +1896,7 @@
           }
         },
         {
-          "id": "X5tJS27",
+          "id": "3VxhG9L",
           "uid": "UC7mK79",
           "label": "Replace Raid Master",
           "options": [
@@ -1759,7 +1960,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "OTQno8c",
+          "id": "1Tw6OEv",
           "uid": "73zh5cY",
           "label": "Upgrade one model with one",
           "options": [
@@ -1921,7 +2122,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "jYep_iH",
+          "id": "B76N2df",
           "uid": "BPYTscQ",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2014,7 +2215,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "dJ6Wrgj",
+          "id": "ty7B-py",
           "uid": "02QBHyf",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -2163,7 +2364,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "AG3kd5L",
+          "id": "kJer0nX",
           "uid": "RV8hzBv",
           "label": "Upgrade with",
           "options": [
@@ -2205,7 +2406,7 @@
           "variant": "upgrade"
         },
         {
-          "id": "Xn7NiE3",
+          "id": "X8cAIxK",
           "uid": "EOhd7SF0j7",
           "label": "Replace Malicious Predator",
           "options": [
@@ -2258,7 +2459,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "z0y7XV0",
+          "id": "-9yHSdZ",
           "uid": "MX73VVV",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2307,7 +2508,7 @@
           ]
         },
         {
-          "id": "z_zD7Hg",
+          "id": "L05pYaj",
           "uid": "ABClf49",
           "label": "Upgrade with one",
           "options": [
@@ -2396,7 +2597,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "fawEwv7",
+          "id": "Fie_ha8",
           "uid": "5CxcNHu",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -2458,7 +2659,7 @@
       "hint": "Lust Twin Warriors",
       "sections": [
         {
-          "id": "hA6jQr7",
+          "id": "0m6xKHc",
           "uid": "KiBJL",
           "label": "Replace any Great Weapon",
           "options": [
@@ -2510,7 +2711,7 @@
       "hint": "Lust Bliss Beast Riders",
       "sections": [
         {
-          "id": "ug_4k5m",
+          "id": "jsuIWC9",
           "uid": "Jxp7E",
           "label": "Replace all Lances",
           "options": [
@@ -2617,7 +2818,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "1uEA-Cd",
+          "id": "bvvfhim",
           "uid": "Qs1WZj0f",
           "label": "Upgrade with one",
           "options": [
@@ -2883,7 +3084,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "4nfc1A9",
+          "id": "gYZagwY",
           "uid": "PJHzBo6L",
           "label": "Upgrade one model with one",
           "options": [
@@ -3009,7 +3210,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "XnV8UCZ",
+          "id": "XRRi7M4",
           "uid": "veEZsw1h",
           "label": "Upgrade with one",
           "options": [
@@ -3183,7 +3384,7 @@
       "sync": "PGxKcq4R571OtwqD",
       "sections": [
         {
-          "id": "lot7y5N",
+          "id": "3PpW89-",
           "uid": "NpBqV1sJ",
           "label": "Replace all Shortbows",
           "options": [

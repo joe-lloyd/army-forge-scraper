@@ -14,6 +14,104 @@
   "backgroundFull": "The rise of a gene-scientist, known to history as the Founder, to supreme ruler of humanity, resulted in a devastating war that soon engulfed Earth and its colonies. As the war grew more devastating, many survivors began to seek a means to escape. A desperate group of refugees commandeered the Founder’s own flagship in order to escape the conflict, leading a fleet of like-minded survivors. \n\nThe Founder caught the refugee fleet and forced an engagement on the edge of known space. Seeking to recapture his ship, his forces lead a number of boarding attacks on the refugee fleet. The Battle Brothers easily outmatched most refugee forces, until a mysterious young woman began to rally them together, displaying an almost supernatural ability to inspire confidence in her forces and fear in her foes. Together they repelled the initial attack, and some began to hope that they might manage to escape. \n\nThen, a massive wormhole formed around the fleets. In an instant, both fleets were further damaged and separated by the wormhole. The colony fleet was scattered, but many sought out and followed the mysterious woman, looking out for suitable worlds to settle. Under her command, a makeshift fleet settled a few dispersed worlds where her diplomatic skills allowed them to thrive in relative peace. \n\nSoon after arriving in Sirius, she began to develop psychic abilities. These abilities drew many acolytes and followers, inspiring many to name her their God-Queen. Fearful of the return of the Battle Brothers, the God-Queen decided to focus on training her own band of hand picked warriors. These became the Blessed Sisters and many of them came to truly believe she was divine.\n\nAfter she sacrificed herself to kill an Avatar of Lust, worship of the God-Queen spread, and many new orders formed in her honour. These orders are often called on to protect allied worlds as peace-keepers and as arbitrators.  The Blessed Sisters rely on volunteers, supplies and other donations from faithful worlds and followers. \n\nMany worlds take their help for granted, making donations hard to come by, and forcing their orders to go through long periods of fasting and self-reflection to survive. When all else fails, the orders find themselves forced to turn on those they were seeking to protect, and establish martial law in order to survive.\n\nHow will you remain a beacon of hope in this grimdark future?",
   "units": [
     {
+      "id": "JzHY_1g",
+      "cost": 185,
+      "name": "Exo-Suit High Sister",
+      "size": 1,
+      "bases": {
+        "round": "60",
+        "square": "50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 2,
+          "label": "Fear(2)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 9,
+          "label": "Tough(9)"
+        },
+        {
+          "id": "gnpURIvLqjw9",
+          "name": "Devout",
+          "label": "Devout"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "UrqqI8fS",
+          "name": "Great Energy Sword",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": null,
+          "attacks": 6,
+          "weaponId": "UrqqI8fS",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Great Energy Sword (A6, AP(2), Rending)",
+          "originalCount": 1
+        },
+        {
+          "id": "ywxRIDQs",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "-iQKsJot",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Stomp (A3, AP(1))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "EDMfI",
+        "zF03yszs"
+      ],
+      "genericName": "Heavy Exo-Suit Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "sF4ltO_",
       "cost": 85,
       "name": "High Destroyer Sister",
@@ -1438,7 +1536,7 @@
       "hint": "Leader Weapons",
       "sections": [
         {
-          "id": "5M-dT1p",
+          "id": "JRu0Ewr",
           "uid": "JGCchEK",
           "label": "Replace Combat Shield and CCW",
           "options": [
@@ -1544,7 +1642,7 @@
           ]
         },
         {
-          "id": "XXpmyvk",
+          "id": "n4ZGn3R",
           "uid": "QiaDUvj",
           "label": "Replace Combat Shield",
           "options": [
@@ -2009,7 +2107,7 @@
           ]
         },
         {
-          "id": "_W2eV5L",
+          "id": "kgcZcky",
           "uid": "JktpG-q",
           "label": "Take one Master Heavy Rifle attachment",
           "options": [
@@ -2236,7 +2334,7 @@
           ]
         },
         {
-          "id": "VyiAmCP",
+          "id": "MTKf2ni",
           "uid": "9LBlxtK",
           "label": "Replace CCW",
           "options": [
@@ -2500,7 +2598,7 @@
       "hint": "Specialists - Fanatic",
       "sections": [
         {
-          "id": "d3etFVl",
+          "id": "4-M5EFI",
           "uid": "jDPiWW0",
           "label": "Upgrade with one",
           "options": [
@@ -2669,7 +2767,7 @@
       "hint": "Leader Upgrades",
       "sections": [
         {
-          "id": "kiguIgx",
+          "id": "lBYVArV",
           "uid": "5z9UHa0",
           "label": "Upgrade with one",
           "options": [
@@ -2877,7 +2975,7 @@
       "hint": "Warrior Sisters",
       "sections": [
         {
-          "id": "DHV_Uba",
+          "id": "SXI8G6z",
           "uid": "rwrkjbz",
           "label": "Replace Heavy Rifle",
           "options": [
@@ -3197,7 +3295,7 @@
           ]
         },
         {
-          "id": "UUTh6Vf",
+          "id": "C-qxrF1",
           "uid": "dz6vC7ts",
           "label": "Replace Heavy Rifle and CCW",
           "options": [
@@ -3272,7 +3370,7 @@
           ]
         },
         {
-          "id": "rRYu4xt",
+          "id": "eUw1sWa",
           "uid": "nRd7AXBw",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -3355,7 +3453,7 @@
           ]
         },
         {
-          "id": "p6k1IIW",
+          "id": "X8-2blA",
           "uid": "rlpKCnsk",
           "label": "Replace Energy Sword",
           "options": [
@@ -3412,7 +3510,7 @@
       "hint": "Support Sisters",
       "sections": [
         {
-          "id": "kPTTwM3",
+          "id": "iushkvz",
           "uid": "Pgv_F8-",
           "label": "Replace any Blessed Flamer",
           "options": [
@@ -3511,7 +3609,7 @@
       "hint": "Vanguard Sisters",
       "sections": [
         {
-          "id": "S5YYqyk",
+          "id": "Wmydopp",
           "uid": "v6bcNOr",
           "label": "Replace Heavy Rifle",
           "options": [
@@ -3715,7 +3813,7 @@
           ]
         },
         {
-          "id": "GyWURgm",
+          "id": "T52IbXg",
           "uid": "No7molA",
           "label": "Replace any Heavy Rifle",
           "options": [
@@ -3802,7 +3900,7 @@
           ]
         },
         {
-          "id": "Vt4qipz",
+          "id": "oB5NceZ",
           "uid": "77hK40l6",
           "label": "Replace Heavy Rifle and CCW",
           "options": [
@@ -3877,7 +3975,7 @@
           ]
         },
         {
-          "id": "fyP6lUb",
+          "id": "u02N3FE",
           "uid": "Aj-EQXm4",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -3960,7 +4058,7 @@
           ]
         },
         {
-          "id": "L0ZZNbm",
+          "id": "ojt9RYo",
           "uid": "y1e5VJ4F",
           "label": "Replace Energy Sword",
           "options": [
@@ -4017,7 +4115,7 @@
       "hint": "Fanatic Sisters",
       "sections": [
         {
-          "id": "TFV6AxJ",
+          "id": "l_B6tq0",
           "uid": "kNZAW",
           "label": "Replace Chainsaw Sword",
           "options": [
@@ -4065,7 +4163,7 @@
           ]
         },
         {
-          "id": "YAUK0ta",
+          "id": "Uf6H8Qp",
           "uid": "Zl_L3",
           "label": "Upgrade with",
           "options": [
@@ -4113,7 +4211,7 @@
       "hint": "Protector Sisters",
       "sections": [
         {
-          "id": "n4ml0s_",
+          "id": "X8ixY04",
           "uid": "pHyTb",
           "label": "Replace Halberds and Heavy Pistol",
           "options": [
@@ -4168,7 +4266,7 @@
           ]
         },
         {
-          "id": "qFVBi6b",
+          "id": "TFi8860",
           "uid": "ruvyw7M",
           "label": "Replace Halberd",
           "options": [
@@ -4293,7 +4391,7 @@
           ]
         },
         {
-          "id": "TAGVO0q",
+          "id": "jlMcf5S",
           "uid": "2XYSqZr",
           "label": "Replace Heavy Pistol",
           "options": [
@@ -4429,7 +4527,7 @@
           ]
         },
         {
-          "id": "JJ68P9-",
+          "id": "VgMPKMn",
           "uid": "hEW1rd3DRM",
           "label": "Upgrade with",
           "options": [
@@ -4476,7 +4574,7 @@
       "hint": "Pistoleer Sisters",
       "sections": [
         {
-          "id": "Pyx2aFW",
+          "id": "kVwvXYl",
           "uid": "rk0A5Zg",
           "label": "Replace any Twin Heavy Pistol",
           "options": [
@@ -4600,7 +4698,7 @@
           ]
         },
         {
-          "id": "KD7GWTp",
+          "id": "a_EbAnW",
           "uid": "H1Ka5oX",
           "label": "Replace Twin Heavy Pistols and CCW",
           "options": [
@@ -4673,7 +4771,7 @@
           ]
         },
         {
-          "id": "e_k16UV",
+          "id": "Czu8C7M",
           "uid": "VIce1",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -4814,7 +4912,7 @@
       "hint": "Assault Sisters",
       "sections": [
         {
-          "id": "r3ZgOm-",
+          "id": "dH3aCY5",
           "uid": "EnlXKF1",
           "label": "Replace Heavy Pistol",
           "options": [
@@ -4957,7 +5055,7 @@
       "hint": "Destroyer Sisters",
       "sections": [
         {
-          "id": "U_WYBCL",
+          "id": "NcmO8bj",
           "uid": "saRiMbg",
           "label": "Replace Combat Shields and CCW",
           "options": [
@@ -5048,7 +5146,7 @@
           ]
         },
         {
-          "id": "1Ip5HAm",
+          "id": "XcStFfW",
           "uid": "BfN-JDW",
           "label": "Replace Storm Rifle",
           "options": [
@@ -5145,7 +5243,7 @@
           ]
         },
         {
-          "id": "KOFw_ob",
+          "id": "dAYirRp",
           "uid": "TNUc16_",
           "label": "Replace any CCW",
           "options": [
@@ -5364,7 +5462,7 @@
       "hint": "Biker Sisters",
       "sections": [
         {
-          "id": "hLGB5dC",
+          "id": "-0ShPxA",
           "uid": "nGspWUx",
           "label": "Replace Heavy Pistols and CCW",
           "options": [
@@ -5468,7 +5566,7 @@
           ]
         },
         {
-          "id": "Z9VdxxS",
+          "id": "O-5N5N0",
           "uid": "O1aUjAW",
           "label": "Replace Heavy Rifle",
           "options": [
@@ -5600,7 +5698,7 @@
           ]
         },
         {
-          "id": "uME7k6Z",
+          "id": "l1XnTq8",
           "uid": "xDwOUk5h",
           "label": "Replace Heavy Pistol and CCW",
           "options": [
@@ -5675,7 +5773,7 @@
           ]
         },
         {
-          "id": "u82p1fy",
+          "id": "L15htqw",
           "uid": "_NO63icm",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -5757,7 +5855,7 @@
           ]
         },
         {
-          "id": "G0OCKvV",
+          "id": "wHX4xXM",
           "uid": "0nRWt53H",
           "label": "Replace Energy Sword",
           "options": [
@@ -5813,7 +5911,7 @@
       "hint": "Novice Sisters",
       "sections": [
         {
-          "id": "_y6Ajew",
+          "id": "zeFQxoL",
           "uid": "delH8",
           "label": "Replace all Dual CCWs",
           "options": [
@@ -5942,7 +6040,7 @@
           ]
         },
         {
-          "id": "3CdskzW",
+          "id": "ply8a5y",
           "uid": "Z9Q_Z",
           "label": "Replace one Pistols",
           "options": [
@@ -6049,7 +6147,7 @@
       "hint": "Squad Upgrades",
       "sections": [
         {
-          "id": "8Q1yB04",
+          "id": "HxsNFY-",
           "uid": "ta_zE",
           "label": "Upgrade one model with one",
           "options": [
@@ -6207,11 +6305,291 @@
       "calcErrors": false
     },
     {
+      "uid": "EDMfI",
+      "hint": "Exo-Suit High Sister",
+      "sections": [
+        {
+          "id": "ASUjMbj",
+          "uid": "arzM7",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "j5gim",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Blessed Flamer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "IPTu-FgD",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "1qiGNqpxKb24",
+                      "name": "Disintegrate"
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Blessed Flamer (12\", A1, Blast(3), Reliable, Disintegrate)"
+                }
+              ],
+              "label": "Blessed Flamer (12\", A1, Blast(3), Reliable, Disintegrate)",
+              "parentSectionId": "arzM7",
+              "id": "j5gim"
+            },
+            {
+              "uid": "dzxTx",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "id": "_OuuPXyd",
+                  "name": "Heavy Machinegun",
+                  "type": "ArmyBookWeapon",
+                  "range": 30,
+                  "attacks": 3,
+                  "weaponId": "_OuuPXyd",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Machinegun (30\", A3, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Machinegun (30\", A3, AP(1))",
+              "parentPackageUid": "EDMfI",
+              "parentSectionUid": "arzM7",
+              "parentSectionId": "arzM7",
+              "id": "dzxTx"
+            },
+            {
+              "uid": "VsRyOfp",
+              "cost": 70,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 65
+                }
+              ],
+              "gains": [
+                {
+                  "id": "aKYGt0b5",
+                  "name": "Super-Heavy Fusion Rifle",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 1,
+                  "weaponId": "aKYGt0b5",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "rating": 6
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Super-Heavy Fusion Rifle (18\", A1, AP(4), Deadly(6))",
+                  "count": 1
+                }
+              ],
+              "label": "Super-Heavy Fusion Rifle (18\", A1, AP(4), Deadly(6))",
+              "parentPackageUid": "EDMfI",
+              "parentSectionUid": "arzM7",
+              "parentSectionId": "arzM7",
+              "id": "VsRyOfp"
+            }
+          ],
+          "parentPackageUid": "EDMfI",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        },
+        {
+          "id": "uMaD7rg",
+          "uid": "x10Rh",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "bD-v1",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": "WVaN72Uv",
+                  "name": "GL-Mod",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "WVaN72Uv",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "GL-Mod (24\", A1, Blast(3))",
+                  "count": 1
+                }
+              ],
+              "label": "GL-Mod (24\", A1, Blast(3))",
+              "parentPackageUid": "EDMfI",
+              "parentSectionUid": "x10Rh",
+              "parentSectionId": "x10Rh",
+              "id": "bD-v1"
+            },
+            {
+              "uid": "6CtQl",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "id": "0FhlJKQK",
+                  "name": "Storm-Mod",
+                  "type": "ArmyBookWeapon",
+                  "range": 18,
+                  "attacks": 3,
+                  "weaponId": "0FhlJKQK",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Storm-Mod (18\", A3, AP(1))",
+                  "count": 1
+                }
+              ],
+              "label": "Storm-Mod (18\", A3, AP(1))",
+              "parentPackageUid": "EDMfI",
+              "parentSectionUid": "x10Rh",
+              "parentSectionId": "x10Rh",
+              "id": "6CtQl"
+            }
+          ],
+          "parentPackageUid": "EDMfI",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        },
+        {
+          "id": "S39wGgQ",
+          "uid": "cGbNf",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "LrzRO",
+              "cost": 45,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "id": "KzpTPrkj",
+                  "name": "Backpack Missiles",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "KzpTPrkj",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    },
+                    {
+                      "id": "8Ck9GAwUK824",
+                      "name": "Indirect"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Backpack Missiles (24\", A1, AP(1), Blast(3), Indirect)"
+                }
+              ],
+              "label": "Backpack Missiles (24\", A1, AP(1), Blast(3), Indirect)",
+              "parentPackageUid": "EDMfI",
+              "parentSectionUid": "cGbNf",
+              "parentSectionId": "cGbNf",
+              "id": "LrzRO"
+            }
+          ],
+          "parentPackageUid": "EDMfI",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "qApWS",
       "hint": "High Destroyer Sister",
       "sections": [
         {
-          "id": "9jxViWU",
+          "id": "9nO395C",
           "uid": "NsP4S",
           "label": "Replace Combat Shield and CCW",
           "options": [
@@ -6303,7 +6681,7 @@
           ]
         },
         {
-          "id": "dPMyLTY",
+          "id": "KCsk6c2",
           "uid": "ok6yv",
           "label": "Replace CCW",
           "options": [
@@ -6484,7 +6862,7 @@
       "hint": "Fanatic Superior",
       "sections": [
         {
-          "id": "XveCkwF",
+          "id": "CVpXWZl",
           "uid": "B_mke",
           "label": "Replace Dual Shock Whip",
           "options": [
@@ -6614,7 +6992,7 @@
           ]
         },
         {
-          "id": "wzOq5J0",
+          "id": "9HK903y",
           "uid": "aTqmX",
           "label": "Upgrade with",
           "options": [
@@ -6662,7 +7040,7 @@
       "hint": "Celestial Warrior Sisters",
       "sections": [
         {
-          "id": "RYxcz1P",
+          "id": "VZ1jCFn",
           "uid": "30Wd-",
           "label": "Replace any Heavy Rifle",
           "options": [
@@ -6986,7 +7364,7 @@
           ]
         },
         {
-          "id": "GMhumqE",
+          "id": "7tkMl1y",
           "uid": "cTD6s6xs",
           "label": "Replace Heavy Rifle and CCW",
           "options": [
@@ -7061,7 +7439,7 @@
           ]
         },
         {
-          "id": "Dq2isyq",
+          "id": "ZKda2I5",
           "uid": "aYA1Muzh",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -7144,7 +7522,7 @@
           ]
         },
         {
-          "id": "sBp9lOs",
+          "id": "9QRgrpd",
           "uid": "RXFfUVha",
           "label": "Replace Energy Sword",
           "options": [
@@ -7201,7 +7579,7 @@
       "hint": "Specialists - Destroyer",
       "sections": [
         {
-          "id": "Wo10MxD",
+          "id": "97AftQ4",
           "uid": "-w_Xg80q",
           "label": "Upgrade with one",
           "options": [
@@ -7406,7 +7784,7 @@
       "hint": "Specialists - High Sister",
       "sections": [
         {
-          "id": "HhBuZ_R",
+          "id": "nX6UjmE",
           "uid": "mIKx-g_2",
           "label": "Upgrade with one",
           "options": [
@@ -7631,11 +8009,215 @@
       "calcErrors": false
     },
     {
+      "uid": "zF03yszs",
+      "hint": "Specialists - Exo-Suit",
+      "sections": [
+        {
+          "id": "jZi90El",
+          "uid": "Unu8KAHW",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "dK23rFon",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Superior",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Superior (Devout Boost)",
+                  "content": [
+                    {
+                      "id": "w7sENXkksVpG",
+                      "name": "Devout Boost",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Superior (Devout Boost)",
+              "parentSectionId": "Unu8KAHW",
+              "parentPackageUid": "4zZYSkSq",
+              "id": "dK23rFon"
+            },
+            {
+              "uid": "eFnesNrU",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Priestess",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Priestess (Shred in Melee)",
+                  "content": [
+                    {
+                      "id": "249Oc2_1eOx6",
+                      "name": "Shred in Melee",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Priestess (Shred in Melee)",
+              "parentSectionId": "Unu8KAHW",
+              "parentPackageUid": "4zZYSkSq",
+              "id": "eFnesNrU"
+            },
+            {
+              "uid": "OkqAxoi1t8",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Abbess",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Abbess (Fast)",
+                  "content": [
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Abbess (Fast)",
+              "parentSectionId": "Unu8KAHW",
+              "id": "OkqAxoi1t8"
+            },
+            {
+              "uid": "KmYHVp9X42",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Reverend",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Reverend (Fortified)",
+                  "content": [
+                    {
+                      "id": "IyLY1212wacW",
+                      "name": "Fortified",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Reverend (Fortified)",
+              "parentSectionId": "Unu8KAHW",
+              "id": "KmYHVp9X42"
+            },
+            {
+              "uid": "EkcOHi8t",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Witch",
+                  "type": "ArmyBookItem",
+                  "label": "Witch (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Witch (Caster(2))",
+              "parentSectionId": "Unu8KAHW",
+              "parentPackageUid": "4zZYSkSq",
+              "parentSectionUid": "jDPiWW0",
+              "id": "EkcOHi8t"
+            },
+            {
+              "uid": "PJHZYISh",
+              "cost": 60,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "JzHY_1g",
+                  "cost": 65
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Witch",
+                  "type": "ArmyBookItem",
+                  "label": "Master Witch (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Witch (Caster(3))",
+              "parentSectionId": "Unu8KAHW",
+              "parentPackageUid": "4zZYSkSq",
+              "parentSectionUid": "jDPiWW0",
+              "id": "PJHZYISh"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "4zZYSkSq",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "iY6FrGVl",
       "hint": "Specialists - Novice",
       "sections": [
         {
-          "id": "cWThcGi",
+          "id": "7XpGwuM",
           "uid": "9fVL6pnV",
           "label": "Upgrade with one",
           "options": [
@@ -8561,6 +9143,15 @@
       "targetType": 1
     },
     {
+      "id": "249Oc2_1eOx6",
+      "name": "Shred in Melee",
+      "aliasedRuleId": null,
+      "description": "This model gets Shred in melee.",
+      "hasRating": false,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "1qiGNqpxKb24",
       "name": "Disintegrate",
       "aliasedRuleId": null,
@@ -8592,6 +9183,15 @@
       "name": "Courage Aura",
       "aliasedRuleId": null,
       "description": "This model and up to 3 friendly units picked before the start of the game get +1 to morale test rolls. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "IyLY1212wacW",
+      "name": "Fortified",
+      "aliasedRuleId": null,
+      "description": "When units where all models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).",
       "hasRating": false,
       "coreType": null,
       "targetType": 1
@@ -8633,13 +9233,13 @@
       "targetType": 1
     },
     {
-      "id": "IyLY1212wacW",
-      "name": "Fortified",
+      "id": "IEJp3a4vE0CB",
+      "name": "Shred",
       "aliasedRuleId": null,
-      "description": "When units where all models have this rule take hits, those hits count as having AP(-1), to a min. of AP(0).",
+      "description": "On unmodified results of 1 to block hits, this weapon deals 1 extra wound.",
       "hasRating": false,
       "coreType": null,
-      "targetType": 1
+      "targetType": 2
     },
     {
       "id": "0TfnG5G4JEv0",
@@ -8676,15 +9276,6 @@
       "hasRating": false,
       "coreType": null,
       "targetType": 1
-    },
-    {
-      "id": "IEJp3a4vE0CB",
-      "name": "Shred",
-      "aliasedRuleId": null,
-      "description": "On unmodified results of 1 to block hits, this weapon deals 1 extra wound.",
-      "hasRating": false,
-      "coreType": null,
-      "targetType": 2
     },
     {
       "id": "dlk9Q7howUDr",

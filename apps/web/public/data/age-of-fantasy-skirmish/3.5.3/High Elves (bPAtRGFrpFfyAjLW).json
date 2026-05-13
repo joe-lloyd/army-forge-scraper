@@ -926,7 +926,7 @@
       "hint": "High Noble",
       "sections": [
         {
-          "id": "eYypIxZ",
+          "id": "67klaiD",
           "uid": "YMqi8Z-",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1138,7 +1138,7 @@
           ]
         },
         {
-          "id": "IzpZibl",
+          "id": "cIzrAoz",
           "uid": "nZ0WOJQ",
           "label": "Upgrade with one",
           "options": [
@@ -1447,7 +1447,7 @@
           }
         },
         {
-          "id": "ZJoJGeI",
+          "id": "iaZwPro",
           "uid": "2_E_Q0i",
           "label": "Upgrade with one",
           "options": [
@@ -1500,6 +1500,263 @@
               "label": "Dragon Steed (Armor(3), Fast, Fearless, Impact(1))",
               "parentSectionId": "2_E_Q0i",
               "id": "bl3FSwp"
+            },
+            {
+              "uid": "kncOIPq",
+              "cost": 185,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "QZAWm8g",
+                  "cost": 200
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Griffon",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "60",
+                    "square": "50"
+                  },
+                  "label": "Griffon (Rending Claws (A6, Rending), Armor(3), Fast, Fear(1), Flying, Tough(6))",
+                  "content": [
+                    {
+                      "id": "q3clcNB7",
+                      "name": "Rending Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "HXmtQukA",
+                      "specialRules": [
+                        {
+                          "id": "cavWDboL4ubs",
+                          "name": "Rending",
+                          "type": "ArmyBookRule"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Rending Claws (A6, Rending)"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Griffon (Rending Claws (A6, Rending), Armor(3), Fast, Fear(1), Flying, Tough(6))",
+              "parentSectionId": "2_E_Q0i",
+              "id": "kncOIPq"
+            },
+            {
+              "uid": "XMhFkIo",
+              "cost": 230,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "QZAWm8g",
+                  "cost": 220
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fire Phoenix",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Fire Phoenix (Ember Storm (A1, AP(1), Blast(3), Strafing), Flame Claws (A4, Reliable, Rending), Armor(3), Fear(1), Flying, Regeneration, Tough(6))",
+                  "content": [
+                    {
+                      "id": "03EgaFQC",
+                      "name": "Ember Storm",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 1,
+                      "weaponId": "lw5gnIMY",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 1
+                        },
+                        {
+                          "id": "w_vX0mi58KKt",
+                          "name": "Blast",
+                          "rating": 3
+                        },
+                        {
+                          "id": "Hdm9ry6kJvzb",
+                          "name": "Strafing"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Ember Storm (A1, AP(1), Blast(3), Strafing)"
+                    },
+                    {
+                      "id": "Qkds2VGE",
+                      "name": "Flame Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": null,
+                      "attacks": 4,
+                      "weaponId": "7VGIzkIC",
+                      "specialRules": [
+                        {
+                          "id": "cavWDboL4ubs",
+                          "name": "Rending"
+                        },
+                        {
+                          "id": "Zx4mWN0SbmK8",
+                          "name": "Reliable"
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Flame Claws (A4, Reliable, Rending)"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "8KujvrTG8k9p",
+                      "name": "Regeneration",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Fire Phoenix (Ember Storm (A1, AP(1), Blast(3), Strafing), Flame Claws (A4, Reliable, Rending), Armor(3), Fear(1), Flying, Regeneration, Tough(6))",
+              "parentSectionId": "2_E_Q0i",
+              "id": "XMhFkIo"
+            },
+            {
+              "uid": "LxTFq3m",
+              "cost": 220,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "QZAWm8g",
+                  "cost": 230
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Ice Phoenix",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Ice Phoenix (Ice Claws (A6, AP(1)), Armor(3), Fear(1), Flying, Precision Debuff, Regeneration, Tough(6))",
+                  "content": [
+                    {
+                      "id": "qQiBQhB7",
+                      "name": "Ice Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": null,
+                      "attacks": 6,
+                      "weaponId": "rBPhYXfi",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Ice Claws (A6, AP(1))"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "1elLRhGK7ETb",
+                      "name": "Precision Debuff",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "8KujvrTG8k9p",
+                      "name": "Regeneration",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Ice Phoenix (Ice Claws (A6, AP(1)), Armor(3), Fear(1), Flying, Precision Debuff, Regeneration, Tough(6))",
+              "parentSectionId": "2_E_Q0i",
+              "id": "LxTFq3m"
             }
           ],
           "parentPackageUid": "A1",
@@ -1518,7 +1775,7 @@
       "hint": "Champion",
       "sections": [
         {
-          "id": "n0UJ1sI",
+          "id": "3jfefPw",
           "uid": "DL_vLs_",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1705,7 +1962,7 @@
           ]
         },
         {
-          "id": "jnoGWOy",
+          "id": "__-rAJG",
           "uid": "1XLW-Jh",
           "label": "Upgrade with one",
           "options": [
@@ -1851,7 +2108,7 @@
           }
         },
         {
-          "id": "Pd4LsNn",
+          "id": "S93oZgf",
           "uid": "VpnooFN",
           "label": "Upgrade with one",
           "options": [
@@ -2080,7 +2337,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "EFq7P8f",
+          "id": "cqJaAUH",
           "uid": "1E77oC9",
           "label": "Upgrade one model with one",
           "options": [
@@ -2277,7 +2534,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "E5-vPXm",
+          "id": "lMHqgYh",
           "uid": "Nvi-W50",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2371,7 +2628,7 @@
       "hint": "Weapon Masters",
       "sections": [
         {
-          "id": "MC9QQkN",
+          "id": "3Tx-vqM",
           "uid": "Yu6OcUq",
           "label": "Replace Great Weapon",
           "options": [
@@ -2414,7 +2671,7 @@
           ]
         },
         {
-          "id": "di5Q_Km",
+          "id": "s_xpTvQ",
           "uid": "WVd1R",
           "label": "Upgrade with",
           "options": [
@@ -2464,7 +2721,7 @@
       "hint": "Reaver Cavalry",
       "sections": [
         {
-          "id": "wH538Zd",
+          "id": "WqXYWYu",
           "uid": "wqJ6irvcFU",
           "label": "Replace Master-Crafted Shortbow",
           "options": [
@@ -2504,7 +2761,7 @@
           ]
         },
         {
-          "id": "8kY5D8J",
+          "id": "QGSZ4J7",
           "uid": "RRwwi120Gb",
           "label": "Replace Hand Weapon",
           "options": [
@@ -2550,7 +2807,7 @@
           ]
         },
         {
-          "id": "qvMawjI",
+          "id": "8O2MFz6",
           "uid": "fIw9UIv",
           "label": "Replace Beast Mount",
           "options": [
@@ -2608,7 +2865,7 @@
       "hint": "Specialists - Noble",
       "sections": [
         {
-          "id": "N-9IIEV",
+          "id": "UKOqN0k",
           "uid": "TTOKZQQ7",
           "label": "Upgrade with one",
           "options": [
@@ -2848,7 +3105,7 @@
       "hint": "Light-Beacon Conjurer",
       "sections": [
         {
-          "id": "bIgh0EL",
+          "id": "vUynFZA",
           "uid": "6ULoLqW6q4",
           "label": "Upgrade with",
           "options": [
@@ -2908,7 +3165,7 @@
       "hint": "Archers",
       "sections": [
         {
-          "id": "J2X9_bb",
+          "id": "_8Vtjsk",
           "uid": "pPiCrlZxnN",
           "label": "Replace Longbow",
           "options": [
@@ -2953,7 +3210,7 @@
           ]
         },
         {
-          "id": "uYu2YAE",
+          "id": "gVff33w",
           "uid": "ONfVLzkh",
           "label": "Upgrade with",
           "options": [
@@ -3000,7 +3257,7 @@
       "hint": "Coast Guard",
       "sections": [
         {
-          "id": "mAvWANi",
+          "id": "-k5t_ce",
           "uid": "jZm6Rec9Za",
           "label": "Replace Master-Crafted Shortbow",
           "options": [
@@ -3040,7 +3297,7 @@
           ]
         },
         {
-          "id": "ndhDHGW",
+          "id": "XfkUHci",
           "uid": "NaS1qWYw",
           "label": "Upgrade with",
           "options": [
@@ -3087,7 +3344,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "GEl5ZYE",
+          "id": "B5pBd-r",
           "uid": "757Q2Fb0",
           "label": "Upgrade with one",
           "options": [
@@ -4022,6 +4279,15 @@
       "targetType": 1
     },
     {
+      "id": "Hdm9ry6kJvzb",
+      "name": "Strafing",
+      "aliasedRuleId": null,
+      "description": "Once per activation, when this model moves through enemy units, pick one of them and attack it with this weapon as if it was shooting. This weapon may only be used in this way.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 2
+    },
+    {
       "id": "JSnFcm3SCiMD",
       "name": "Crack",
       "aliasedRuleId": null,
@@ -4090,6 +4356,15 @@
       "aliasedRuleId": null,
       "description": "Once per game, during this model's activation, pick one enemy unit within 24\" and in line of sight of it, and place X markers on it. When attacking, friendly units may remove markers from their target before rolling to block to get +AP(Y) on their weapons, where Y is the number of removed markers.",
       "hasRating": true,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "1elLRhGK7ETb",
+      "name": "Precision Debuff",
+      "aliasedRuleId": null,
+      "description": "Once per activation, before attacking, pick up to 4 enemy units within 18\" in line of sight, which gets -1 to hit rolls when attacking once (next time the effect would apply).",
+      "hasRating": false,
       "coreType": null,
       "targetType": 1
     },

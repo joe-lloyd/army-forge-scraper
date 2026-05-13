@@ -1490,6 +1490,90 @@
       "hasBalanceInvalid": false,
       "originalSize": 3,
       "disabledUpgradeSections": []
+    },
+    {
+      "id": "Cfl-Phe",
+      "cost": 100,
+      "name": "Automa Brute",
+      "size": 1,
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 3,
+          "label": "Tough(3)"
+        },
+        {
+          "id": "2Ut-u9mj5a2t",
+          "name": "Vinci Tech",
+          "label": "Vinci Tech"
+        },
+        {
+          "id": "2atvlmICQSCV",
+          "name": "Fearless",
+          "label": "Fearless"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "R60eunqV",
+          "name": "Heavy Handbow",
+          "type": "ArmyBookWeapon",
+          "range": 18,
+          "attacks": 4,
+          "weaponId": "R60eunqV",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "cavWDboL4ubs",
+              "name": "Rending",
+              "label": "Rending"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Heavy Handbow (18\", A4, Rending)",
+          "count": 1,
+          "originalCount": 1
+        },
+        {
+          "id": "XxJQ5ZVT",
+          "name": "Brute Lance",
+          "type": "ArmyBookWeapon",
+          "range": null,
+          "attacks": 3,
+          "weaponId": "XxJQ5ZVT",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Brute Lance (A3, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "L1"
+      ],
+      "genericName": "Heavy Robots",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 3,
+      "disabledUpgradeSections": []
     }
   ],
   "upgradePackages": [
@@ -1498,7 +1582,7 @@
       "hint": "Vinci Leader",
       "sections": [
         {
-          "id": "gMQUFzC",
+          "id": "e9g6R3J",
           "uid": "QvkCayk",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1588,7 +1672,7 @@
           ]
         },
         {
-          "id": "c4CX3vo",
+          "id": "rQwp4-E",
           "uid": "C4X0ZxT",
           "label": "Upgrade with one",
           "options": [
@@ -1702,7 +1786,7 @@
           }
         },
         {
-          "id": "kT2qCsr",
+          "id": "KaOCN-l",
           "uid": "evfGrzA",
           "label": "Upgrade with one",
           "options": [
@@ -1877,6 +1961,75 @@
               "label": "Automa Boar (Metal Tusks (A1, AP(1)), Armor(3), Fast, Impact(2), Tough(3))",
               "parentSectionId": "evfGrzA",
               "id": "sro5XIS"
+            },
+            {
+              "uid": "eLlNVCX",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "4xFAaqz",
+                  "cost": 140
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Automa Bird",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "105x70",
+                    "square": "100x50"
+                  },
+                  "label": "Automa Bird (Heavy Claws (A6, AP(1)), Armor(3), Fear(1), Flying, Tough(6))",
+                  "content": [
+                    {
+                      "id": "oKX_Vty2",
+                      "name": "Heavy Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "LX7V18fJ",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "type": "ArmyBookRule",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Heavy Claws (A6, AP(1))"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Automa Bird (Heavy Claws (A6, AP(1)), Armor(3), Fear(1), Flying, Tough(6))",
+              "parentSectionId": "evfGrzA",
+              "id": "eLlNVCX"
             }
           ],
           "parentPackageUid": "A1",
@@ -1888,7 +2041,7 @@
           }
         },
         {
-          "id": "zAoPMsQ",
+          "id": "9KPpAgl",
           "uid": "LlFvM0v1",
           "label": "Upgrade with one",
           "options": [
@@ -1992,7 +2145,7 @@
       "hint": "Vinci Scholar",
       "sections": [
         {
-          "id": "D2KDYKe",
+          "id": "lwIP0JS",
           "uid": "oVyyXe-",
           "label": "Upgrade with one",
           "options": [
@@ -2078,7 +2231,7 @@
           }
         },
         {
-          "id": "LRMGOXf",
+          "id": "0conlso",
           "uid": "yEliPsU",
           "label": "Upgrade with one",
           "options": [
@@ -2191,7 +2344,7 @@
           }
         },
         {
-          "id": "dr_c4DN",
+          "id": "45g2BCQ",
           "uid": "DpnvaVHz",
           "label": "Upgrade with one",
           "options": [
@@ -2295,7 +2448,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "9w2zEu7",
+          "id": "rah1Ama",
           "uid": "QmLjsVI",
           "label": "Upgrade one model with one",
           "options": [
@@ -2396,7 +2549,7 @@
       "hint": "Militia",
       "sections": [
         {
-          "id": "6zGd6z1",
+          "id": "bNXxV2G",
           "uid": "2VpkPl1",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2480,7 +2633,7 @@
           ]
         },
         {
-          "id": "MSn73HK",
+          "id": "FiCAHkL",
           "uid": "f6nDqHZG",
           "label": "Upgrade up to two models with one",
           "options": [
@@ -2619,7 +2772,7 @@
       "hint": "Automa Guard",
       "sections": [
         {
-          "id": "YpnzdG7",
+          "id": "oLrjUbt",
           "uid": "NPjF3S3",
           "label": "Upgrade with",
           "options": [
@@ -2667,7 +2820,7 @@
       "hint": "Harlequins",
       "sections": [
         {
-          "id": "XOHtGdO",
+          "id": "EXbplOd",
           "uid": "me5pz6m",
           "label": "Replace all Juggler Bombs and Knives",
           "options": [
@@ -2723,7 +2876,7 @@
       "hint": "Assassins",
       "sections": [
         {
-          "id": "dqlDmXP",
+          "id": "Av5uqnt",
           "uid": "IR-uXDc",
           "label": "Upgrade with any",
           "options": [
@@ -2805,7 +2958,7 @@
       "hint": "City Guard",
       "sections": [
         {
-          "id": "JWiK-QD",
+          "id": "D1ACy-d",
           "uid": "oYBeBoS",
           "label": "Replace any Slayerbolt Crossbow",
           "options": [
@@ -2893,7 +3046,7 @@
           ]
         },
         {
-          "id": "7PGf898",
+          "id": "HYMBSKn",
           "uid": "oUH0xyT",
           "label": "Upgrade all Crossbows with one",
           "options": [
@@ -2976,7 +3129,7 @@
           ]
         },
         {
-          "id": "D4wVQRZ",
+          "id": "J2lanDc",
           "uid": "W8u17l_n",
           "label": "Upgrade with one",
           "options": [
@@ -3110,7 +3263,7 @@
       "hint": "Scouts",
       "sections": [
         {
-          "id": "-bvY4nk",
+          "id": "uh1RAWk",
           "uid": "QEYYPUG",
           "label": "Upgrade with any",
           "options": [
@@ -3191,7 +3344,7 @@
           }
         },
         {
-          "id": "cllBw01",
+          "id": "Jh78M9T",
           "uid": "gDvTu9c7",
           "label": "Replace Hand Weapon",
           "options": [
@@ -3273,7 +3426,7 @@
           ]
         },
         {
-          "id": "CgoRn4u",
+          "id": "WsuM-zQ",
           "uid": "GVpWJpHy",
           "label": "Upgrade with one",
           "options": [
@@ -3407,7 +3560,7 @@
       "hint": "Automa Drones",
       "sections": [
         {
-          "id": "Cgj7qi5",
+          "id": "LB3Tq-x",
           "uid": "Q8ekmWq",
           "label": "Replace Bot-Sawblade",
           "options": [
@@ -3474,7 +3627,7 @@
       "hint": "Aerea Guard",
       "sections": [
         {
-          "id": "MyP30UH",
+          "id": "h_6qmIk",
           "uid": "uLIcX",
           "label": "Replace Dual Heavy Claws",
           "options": [
@@ -3531,7 +3684,7 @@
           ]
         },
         {
-          "id": "Pk4nJ5q",
+          "id": "oJG8Dhm",
           "uid": "87jZfgm",
           "label": "Replace any Heavy Slayerbolt Crossbow",
           "options": [
@@ -3619,7 +3772,7 @@
           ]
         },
         {
-          "id": "hUJ_Zfo",
+          "id": "ek3qRAO",
           "uid": "HDgRUNm",
           "label": "Upgrade all Heavy Crossbows with one",
           "options": [
@@ -3705,11 +3858,59 @@
       "calcErrors": false
     },
     {
+      "uid": "L1",
+      "hint": "Automa Brutes",
+      "sections": [
+        {
+          "id": "Bue8i4_",
+          "uid": "nH1BGwB",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "9V-1GCI",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "Cfl-Phe",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Self-Repairing",
+                  "type": "ArmyBookItem",
+                  "label": "Self-Repairing (Regeneration)",
+                  "content": [
+                    {
+                      "id": "8KujvrTG8k9p",
+                      "name": "Regeneration",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Self-Repairing (Regeneration)",
+              "parentPackageUid": "L1",
+              "parentSectionUid": "nH1BGwB",
+              "parentSectionId": "nH1BGwB",
+              "id": "9V-1GCI"
+            }
+          ],
+          "parentPackageUid": "L1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "M1",
       "hint": "Automa Cavalry",
       "sections": [
         {
-          "id": "qo6kR-s",
+          "id": "Uyi6qX8",
           "uid": "LZcQJHj",
           "label": "Replace Lance",
           "options": [
@@ -3777,7 +3978,7 @@
       "hint": "Snipers",
       "sections": [
         {
-          "id": "S6fJSBE",
+          "id": "E2vc-Ig",
           "uid": "1bJaatzvgA",
           "label": "Replace any Slayerbolt Snipebow",
           "options": [
@@ -3831,7 +4032,7 @@
           ]
         },
         {
-          "id": "JDDrVeo",
+          "id": "JxLY8Fo",
           "uid": "l3hLNDcYf_",
           "label": "Upgrade with",
           "options": [
@@ -3911,7 +4112,7 @@
       "hint": "Specialists - Scholar",
       "sections": [
         {
-          "id": "E8fvW6z",
+          "id": "uqwf8f2",
           "uid": "hSIm0ulB",
           "label": "Upgrade with one",
           "options": [
@@ -4084,7 +4285,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "Yi3Y8U7",
+          "id": "AiRplhP",
           "uid": "SvgUWPAQ",
           "label": "Upgrade with one",
           "options": [

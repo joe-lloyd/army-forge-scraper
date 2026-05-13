@@ -14,6 +14,94 @@
   "backgroundFull": "On arriving in the Sirius Sector, the Founder’s fleet was scattered and damaged. Most of these ships and their crews were discounted as destroyed, but had in fact arrived safely in Sirius far from the rest of humanity. Many believed themselves to be the sole survivors of the fleet and that they were likely the only humans in this strange new galaxy. Without any idea of how they might return to Earth, most of the scattered Battle Brothers were forced to contend with their inevitable deaths in a strange new galaxy.\n\nHumanity was not alone in this galaxy however, and the arrival of these strange interlopers drew the eyes of powerful entities in Sirius: the Havoc Gods. These gods bided their time and reached out to the Battle Brothers in their most desperate moments. Each Havoc God sought to sway these new arrivals to their influence through various gifts and boons.\n\nThe God of War offered strength, allowing its Disciples to triumph over their foes. Change granted its followers knowledge and secrets, necessary for understanding their place in this new galaxy. Plague offered renewed vitality to those taken by disease. While Lust offered redemption and power to those cast out by the Battle Brothers. \n\nThose who accepted the pact were granted powerful boons by their patrons, who reforged them in their image. These Havoc Disciples repaid their gifts with a fanatical loyalty, willing to devote their lives to the god who had chosen them. Disciples began to seek each other out, forming new bands utterly dedicated to their respective god. \n\nYet the fanaticism demanded by their faith was often at odds with the discipline required to maintain their cohesion as a unit. While some Disciples recognized organization as a necessary means to achieving their God’s goals against powerful foes, others viewed it as a mere distraction, and cared little about structure that once defined their lives as Battle Brothers. As a result, many bands are held together through brute force, as leaders struggle to preserve order amongst fanatics. Others have collapsed into marauding hordes of zealots, roving blindly through the sector as they spread havoc in the name of their god.\n\nHow will your devotion guide you?",
   "units": [
     {
+      "id": "TQltfZCx9",
+      "cost": 145,
+      "name": "Plague Destroyer Champion",
+      "size": 1,
+      "sync": {
+        "unitId": "E3FXCAQ",
+        "syncAutomatic": true,
+        "parentArmyBookId": "7o6om21wxlvvy3hq"
+      },
+      "bases": {
+        "round": "40",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "6mJw5IdqSqNC",
+          "name": "Ambush",
+          "label": "Ambush"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "O_wrvW7FiJWX",
+          "name": "Plaguebound",
+          "label": "Plaguebound"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "5iI_mC7q",
+          "name": "Champion Heavy Rifle",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 24,
+          "attacks": 2,
+          "weaponId": "wgORq8vP",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Champion Heavy Rifle (24\", A2, AP(1))",
+          "originalCount": 1
+        },
+        {
+          "id": "nv6qM",
+          "name": "CCW",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "KAsYqgPq",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "CCW (A4)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "vXRdV",
+        "5JvjxB5-"
+      ],
+      "genericName": "Havoc Exo-Suit Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "B265fzzBt",
       "cost": 60,
       "name": "Chosen Plague Champion",
@@ -1011,7 +1099,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "lUy-x-O",
+          "id": "YiqozOT",
           "uid": "-2GgkX2",
           "label": "Replace Flamer Pistol and CCW",
           "options": [
@@ -1103,7 +1191,7 @@
           ]
         },
         {
-          "id": "XF2ScNt",
+          "id": "7EfTGEh",
           "uid": "0tRGmMk",
           "label": "Replace Flamer Pistol",
           "options": [
@@ -1358,7 +1446,7 @@
           ]
         },
         {
-          "id": "3VnPbEk",
+          "id": "61Gd0KP",
           "uid": "6Fac0p_",
           "label": "Take one Champion Heavy Rifle attachment",
           "options": [
@@ -1565,7 +1653,7 @@
           ]
         },
         {
-          "id": "1XzBj8J",
+          "id": "bUHKt8G",
           "uid": "mEjKUEy",
           "label": "Replace CCW",
           "options": [
@@ -1845,7 +1933,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "2QEJrb0",
+          "id": "JIkmCxi",
           "uid": "jODK4zi",
           "label": "Upgrade with one",
           "options": [
@@ -1967,7 +2055,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "VfN3DVA",
+          "id": "bJgETph",
           "uid": "R3s-sc-",
           "label": "Upgrade with one",
           "options": [
@@ -2264,7 +2352,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "WgeQYyI",
+          "id": "zb3pF2D",
           "uid": "yYe_G",
           "label": "Replace Champion Pistol and CCW",
           "options": [
@@ -2316,7 +2404,7 @@
           ]
         },
         {
-          "id": "GlZQYS6",
+          "id": "fuijpTA",
           "uid": "8qQrz",
           "label": "Replace Champion Pistol",
           "options": [
@@ -2511,7 +2599,7 @@
           ]
         },
         {
-          "id": "0frhELb",
+          "id": "msdwudY",
           "uid": "q2YVO",
           "label": "Replace CCW",
           "options": [
@@ -2573,7 +2661,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "5dzA-97",
+          "id": "3ZqPTLw",
           "uid": "kwOteGj",
           "label": "Replace all Rifles and CCWS",
           "options": [
@@ -2632,7 +2720,7 @@
           ]
         },
         {
-          "id": "V1ttNYJ",
+          "id": "cGiPzBw",
           "uid": "DwZ_3PT",
           "label": "Replace one Rifles",
           "options": [
@@ -2913,7 +3001,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "_fucqIf",
+          "id": "TQxOnrg",
           "uid": "xP8BcAh",
           "label": "Replace Heavy Rifles and CCW",
           "options": [
@@ -3012,7 +3100,7 @@
           ]
         },
         {
-          "id": "skHrzIt",
+          "id": "MG6mZdy",
           "uid": "hxSNT2U",
           "label": "Replace Heavy Rifle",
           "options": [
@@ -3457,7 +3545,7 @@
           ]
         },
         {
-          "id": "K6YsX3m",
+          "id": "5uE2h8a",
           "uid": "qgOaoqCf",
           "label": "Replace Heavy Rifle and CCW",
           "options": [
@@ -3532,7 +3620,7 @@
           ]
         },
         {
-          "id": "Q2JrSeN",
+          "id": "gx4pU2w",
           "uid": "hLLX2aCI",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -3581,7 +3669,7 @@
           ]
         },
         {
-          "id": "R4Hkv0d",
+          "id": "qixx2EZ",
           "uid": "joKX5Q3m",
           "label": "Replace Energy Sword",
           "options": [
@@ -3679,7 +3767,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "zbOiUF0",
+          "id": "kOk32JL",
           "uid": "JxBta2M",
           "label": "Replace any Heavy Flamer",
           "options": [
@@ -4059,7 +4147,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "0vMZDqC",
+          "id": "PIFb5yC",
           "uid": "caNbtB6",
           "label": "Replace Dual Energy Claws",
           "options": [
@@ -4261,7 +4349,7 @@
           ]
         },
         {
-          "id": "aOEjqfe",
+          "id": "zex8bhA",
           "uid": "EnBZHMj",
           "label": "Replace any Flamer-Mod",
           "options": [
@@ -4399,7 +4487,7 @@
           ]
         },
         {
-          "id": "yhkTmut",
+          "id": "tuwLjxs",
           "uid": "9o_VxP4",
           "label": "Replace Storm Rifle",
           "options": [
@@ -4579,7 +4667,7 @@
           ]
         },
         {
-          "id": "8k0R9YJ",
+          "id": "MSa3F5q",
           "uid": "0wbQf-t",
           "label": "Replace any CCW",
           "options": [
@@ -4797,7 +4885,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "FF4UQwh",
+          "id": "z1AAjDX",
           "uid": "1rSfJZ8",
           "label": "Replace Heavy Pistols and CCW",
           "options": [
@@ -4859,7 +4947,7 @@
           ]
         },
         {
-          "id": "KkLsHDw",
+          "id": "zp_9mhe",
           "uid": "cbj3DdV",
           "label": "Replace Heavy Rifle",
           "options": [
@@ -4991,7 +5079,7 @@
           ]
         },
         {
-          "id": "nYNKTj7",
+          "id": "siL3NAQ",
           "uid": "EvrXbq27",
           "label": "Replace Heavy Pistol and CCW",
           "options": [
@@ -5066,7 +5154,7 @@
           ]
         },
         {
-          "id": "1oWtGBR",
+          "id": "PC4y6Mk",
           "uid": "SpMhjLIC",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -5114,7 +5202,7 @@
           ]
         },
         {
-          "id": "Girh-8T",
+          "id": "OM2-tT-",
           "uid": "04-IBd18",
           "label": "Replace Energy Sword",
           "options": [
@@ -5210,7 +5298,7 @@
       "hint": "Havoc Destroyers - Plague",
       "sections": [
         {
-          "id": "VHqyHI9",
+          "id": "Cx7cMmK",
           "uid": "d1t7U",
           "label": "Replace Dual Energy Claws",
           "options": [
@@ -5270,11 +5358,616 @@
       "calcErrors": false
     },
     {
+      "uid": "vXRdV",
+      "hint": "Havoc Destroyer Champion",
+      "sync": "7o6om21wxlvvy3hq",
+      "sections": [
+        {
+          "id": "rbZyxoz",
+          "uid": "6VjpK",
+          "label": "Replace Champion Heavy Rifle and CCW",
+          "options": [
+            {
+              "uid": "2dvMhWR",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": -10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Great Plague Flail",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "CG5jboYH",
+                  "nameOverride": "",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Great Plague Flail (A2, AP(1), Blast(3), Bane)"
+                }
+              ],
+              "label": "Great Plague Flail (A2, AP(1), Blast(3), Bane)",
+              "parentSectionId": "6VjpK",
+              "id": "2dvMhWR"
+            },
+            {
+              "uid": "5Ax_e",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Dual Energy Claws",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 8,
+                  "weaponId": "C1Xff_mG",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Dual Energy Claws (A8, Rending)"
+                }
+              ],
+              "label": "Dual Energy Claws (A8, Rending)",
+              "parentSectionId": "6VjpK",
+              "id": "5Ax_e"
+            },
+            {
+              "uid": "a0ksJHj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Great Scythe",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "label": "Great Scythe (A2, AP(4), Deadly(3))",
+                  "range": 0,
+                  "attacks": "2",
+                  "weaponId": "uX5frcw0",
+                  "newWeapon": false,
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ]
+                }
+              ],
+              "label": "Great Scythe (A2, AP(4), Deadly(3))",
+              "parentSectionId": "6VjpK",
+              "id": "a0ksJHj"
+            },
+            {
+              "uid": "xZGhjR-",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Twin Plague Sprayer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 2,
+                  "weaponId": "iYDp8M_v",
+                  "nameOverride": "",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "Naqc5mga9Uha",
+                      "name": "Bane",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": null,
+                  "label": "Twin Plague Sprayer (12\", A2, Blast(3), Reliable, Bane)"
+                },
+                {
+                  "id": null,
+                  "name": "CCW",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "KAsYqgPq",
+                  "nameOverride": "",
+                  "specialRules": [],
+                  "attacksMultiplier": null,
+                  "label": "CCW (A4)"
+                }
+              ],
+              "label": "Twin Plague Sprayer (12\", A2, Blast(3), Reliable, Bane), CCW (A4)",
+              "parentSectionId": "6VjpK",
+              "id": "xZGhjR-"
+            },
+            {
+              "uid": "OXvOM",
+              "cost": 50,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 60
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Rapid Storm Rifle",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 24,
+                  "attacks": 6,
+                  "weaponId": "cm9Y9fDc",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Rapid Storm Rifle (24\", A6, AP(1))"
+                },
+                {
+                  "name": "CCW",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "KAsYqgPq",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "CCW (A4)"
+                }
+              ],
+              "label": "Rapid Storm Rifle (24\", A6, AP(1)), CCW (A4)",
+              "parentPackageUid": "vXRdV",
+              "parentSectionUid": "6VjpK",
+              "parentSectionId": "6VjpK",
+              "id": "OXvOM"
+            }
+          ],
+          "parentPackageUid": "vXRdV",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Champion Heavy Rifle",
+            "CCW"
+          ]
+        },
+        {
+          "id": "bWHsYyv",
+          "uid": "dxCix",
+          "label": "Take one Champion Heavy Rifle attachment",
+          "options": [
+            {
+              "uid": "fAY2m",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Flamer-Mod",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "mwWKIwKI",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "Zx4mWN0SbmK8",
+                      "name": "Reliable",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Flamer-Mod (12\", A1, Blast(3), Limited, Reliable)"
+                }
+              ],
+              "label": "Flamer-Mod (12\", A1, Blast(3), Limited, Reliable)",
+              "parentPackageUid": "vXRdV",
+              "parentSectionUid": "dxCix",
+              "parentSectionId": "dxCix",
+              "id": "fAY2m"
+            },
+            {
+              "uid": "5f-k3",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "BZG6UMoC",
+                  "name": "Plasma-Mod",
+                  "type": "ArmyBookWeapon",
+                  "range": 24,
+                  "attacks": 1,
+                  "weaponId": "ZAiPbvUy",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Plasma-Mod (24\", A1, AP(4), Limited)",
+                  "count": 1
+                }
+              ],
+              "label": "Plasma-Mod (24\", A1, AP(4), Limited)",
+              "parentPackageUid": "vXRdV",
+              "parentSectionUid": "dxCix",
+              "parentSectionId": "dxCix",
+              "id": "5f-k3"
+            },
+            {
+              "uid": "ul9Pc",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Shred-Mod",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "03cs-EII",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Shred-Mod (18\", A2, Limited, Rending)"
+                }
+              ],
+              "label": "Shred-Mod (18\", A2, Limited, Rending)",
+              "parentPackageUid": "vXRdV",
+              "parentSectionUid": "dxCix",
+              "parentSectionId": "dxCix",
+              "id": "ul9Pc"
+            },
+            {
+              "uid": "N6IIj",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "SYc-DIHO",
+                  "name": "Fusion-Mod",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 1,
+                  "weaponId": "bqCLJdNS",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "9042COVrLCsI",
+                      "name": "Limited",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Fusion-Mod (12\", A1, AP(4), Deadly(3), Limited)",
+                  "count": 1
+                }
+              ],
+              "label": "Fusion-Mod (12\", A1, AP(4), Deadly(3), Limited)",
+              "parentPackageUid": "vXRdV",
+              "parentSectionUid": "dxCix",
+              "parentSectionId": "dxCix",
+              "id": "N6IIj"
+            }
+          ],
+          "parentPackageUid": "vXRdV",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "attachment",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          },
+          "targets": [
+            "Champion Heavy Rifle"
+          ]
+        },
+        {
+          "id": "fF6co5b",
+          "uid": "67woP",
+          "label": "Replace CCW",
+          "options": [
+            {
+              "uid": "WzIKq",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Energy Hammer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "MQdyfs84",
+                  "specialRules": [
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Energy Hammer (A2, Blast(3))"
+                }
+              ],
+              "label": "Energy Hammer (A2, Blast(3))",
+              "parentPackageUid": "vXRdV",
+              "parentSectionUid": "67woP",
+              "parentSectionId": "67woP",
+              "id": "WzIKq"
+            },
+            {
+              "uid": "Ku1A9",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Energy Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "mh9dOuMu",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Energy Sword (A4, AP(1), Rending)"
+                }
+              ],
+              "label": "Energy Sword (A4, AP(1), Rending)",
+              "parentPackageUid": "vXRdV",
+              "parentSectionUid": "67woP",
+              "parentSectionId": "67woP",
+              "id": "Ku1A9"
+            },
+            {
+              "uid": "kSrhB",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Energy Axe",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 2,
+                  "weaponId": "tKvafZ9a",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    },
+                    {
+                      "id": "_mrPya5SXSqW",
+                      "name": "Deadly",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Energy Axe (A2, AP(2), Deadly(3))"
+                }
+              ],
+              "label": "Energy Axe (A2, AP(2), Deadly(3))",
+              "parentPackageUid": "vXRdV",
+              "parentSectionUid": "67woP",
+              "parentSectionId": "67woP",
+              "id": "kSrhB"
+            },
+            {
+              "uid": "E9AsU",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Energy Fist",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "Syx54IfK",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Energy Fist (A4, AP(4))"
+                }
+              ],
+              "label": "Energy Fist (A4, AP(4))",
+              "parentPackageUid": "vXRdV",
+              "parentSectionUid": "67woP",
+              "parentSectionId": "67woP",
+              "id": "E9AsU"
+            }
+          ],
+          "parentPackageUid": "vXRdV",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "CCW"
+          ]
+        }
+      ],
+      "calcErrors": true
+    },
+    {
       "uid": "8sl8S",
       "hint": "Havoc Brothers - Plague",
       "sections": [
         {
-          "id": "jWfbiA7",
+          "id": "3Q48iBI",
           "uid": "6kkYy",
           "label": "Replace Heavy Rifle and CCW",
           "options": [
@@ -5344,7 +6037,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "Ral4TOa",
+          "id": "JVvDTKG",
           "uid": "8UPkioA",
           "label": "Replace Mutant Leg",
           "options": [
@@ -5402,7 +6095,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "BiNq9PA",
+          "id": "EjlbnEp",
           "uid": "ZoPZq",
           "label": "Replace any Heavy Rifle and CCW",
           "options": [
@@ -5543,7 +6236,7 @@
           ]
         },
         {
-          "id": "cJiK0BR",
+          "id": "SPMJ_CE",
           "uid": "FzhKY",
           "label": "Replace any Heavy Rifle",
           "options": [
@@ -5992,7 +6685,7 @@
           ]
         },
         {
-          "id": "KKwl3w5",
+          "id": "XrEzIQm",
           "uid": "knG7r",
           "label": "Any model may take one Heavy Rifle attachment",
           "options": [
@@ -6183,7 +6876,7 @@
           ]
         },
         {
-          "id": "JFHjF1r",
+          "id": "mpowu-t",
           "uid": "m4TJPbpY",
           "label": "Replace Heavy Rifle and CCW",
           "options": [
@@ -6258,7 +6951,7 @@
           ]
         },
         {
-          "id": "FJhRiLv",
+          "id": "YHA7SuI",
           "uid": "SDhA2DSW",
           "label": "Replace Sgt. Heavy Pistol",
           "options": [
@@ -6307,7 +7000,7 @@
           ]
         },
         {
-          "id": "ufsP2_S",
+          "id": "GxWVxjY",
           "uid": "Zh9BwY3H",
           "label": "Replace Energy Sword",
           "options": [
@@ -6405,7 +7098,7 @@
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "7KIT0r3",
+          "id": "9JW2D7j",
           "uid": "6Rv1P",
           "label": "Upgrade one model with one",
           "options": [
@@ -6512,12 +7205,248 @@
       "calcErrors": false
     },
     {
+      "uid": "5JvjxB5-",
+      "hint": "Specialists - Destroyer",
+      "sync": "7o6om21wxlvvy3hq",
+      "sections": [
+        {
+          "id": "SNVePtx",
+          "uid": "zP6hvmuQ",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "mOC3hVrF",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Executioner",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Executioner (Furious Aura)",
+                  "content": [
+                    {
+                      "id": "CK9TIa7vdehO",
+                      "name": "Furious Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Executioner (Furious Aura)",
+              "parentSectionId": "zP6hvmuQ",
+              "parentPackageUid": "-ZeIlkTf",
+              "id": "mOC3hVrF"
+            },
+            {
+              "uid": "yshbWEXO",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Apostle",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Apostle (Relentless Aura)",
+                  "content": [
+                    {
+                      "id": "zGew9XZT2rUm",
+                      "name": "Relentless Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Apostle (Relentless Aura)",
+              "parentSectionId": "zP6hvmuQ",
+              "parentPackageUid": "-ZeIlkTf",
+              "id": "yshbWEXO"
+            },
+            {
+              "uid": "yeTi6-bvPI",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Lord of Plague",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "content": [
+                    {
+                      "id": "U9p9FtWR84GU",
+                      "name": "Plaguebound Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "label": "Lord of Plague (Plaguebound Boost Aura)",
+                  "count": 1
+                }
+              ],
+              "label": "Lord of Plague (Plaguebound Boost Aura)",
+              "parentSectionId": "zP6hvmuQ",
+              "id": "yeTi6-bvPI"
+            },
+            {
+              "uid": "vzl0Nlsr5S",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Icon Bearer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Icon Bearer (Resistance Aura)",
+                  "content": [
+                    {
+                      "id": "b7V48Z1W-EfP",
+                      "name": "Resistance Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Icon Bearer (Resistance Aura)",
+              "parentSectionId": "zP6hvmuQ",
+              "id": "vzl0Nlsr5S"
+            },
+            {
+              "uid": "GhEve9EO",
+              "cost": 35,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Dark Smith",
+                  "type": "ArmyBookItem",
+                  "label": "Dark Smith (Mend)",
+                  "content": [
+                    {
+                      "id": "mETdyZ__yMVj",
+                      "name": "Mend",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Dark Smith (Mend)",
+              "parentSectionId": "zP6hvmuQ",
+              "parentPackageUid": "-ZeIlkTf",
+              "parentSectionUid": "R3s-sc-",
+              "id": "GhEve9EO"
+            },
+            {
+              "uid": "bABQt8xN",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Warlock",
+                  "type": "ArmyBookItem",
+                  "label": "Warlock (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Warlock (Caster(2))",
+              "parentSectionId": "zP6hvmuQ",
+              "parentPackageUid": "-ZeIlkTf",
+              "parentSectionUid": "R3s-sc-",
+              "id": "bABQt8xN"
+            },
+            {
+              "uid": "-XpxVzLH",
+              "cost": 60,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "TQltfZCx9",
+                  "cost": 60
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Master Warlock",
+                  "type": "ArmyBookItem",
+                  "label": "Master Warlock (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Master Warlock (Caster(3))",
+              "parentSectionId": "zP6hvmuQ",
+              "parentPackageUid": "-ZeIlkTf",
+              "parentSectionUid": "R3s-sc-",
+              "id": "-XpxVzLH"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "-ZeIlkTf",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "qEX_dhcM",
       "hint": "Specialists - Cultist",
       "sync": "7o6om21wxlvvy3hq",
       "sections": [
         {
-          "id": "RrmcTJn",
+          "id": "Bo60RFe",
           "uid": "T0E5JUl9",
           "label": "Upgrade with one",
           "options": [

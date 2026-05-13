@@ -15,6 +15,106 @@
   "backgroundFull": "Rift Daemons are born from the last survivors of a pantheon of dying gods, known to Tyria as the Havoc Gods. Desperate to survive, these gods sought out followers from the lost and desperate, and offered them power in exchange for worship. Those who rejected these gods came to know them as Havoc Gods due to the zealotry of their followers and the unrest that they caused. \n\nThe Havoc Gods came to Tyria soon after Voidgates had been discovered. As mages and adventurers activated Voidgates throughout the land, the influence of Havoc began to spread. The Havoc Gods saw Tyria as a fascinating plane due to the diversity of its peoples, where they could find all sorts of different new followers. \n\nDaemons were sent into Tyria by their gods, spreading throughout the plane. They sought out followers for their Gods, either through promises of power, or shows of force. They found followers throughout Tyria, whom they guided to conquer others. Treachery, war, and bloodshed became commonplace as the Havoc Wars began. Daemons were seen throughout the continent, fighting alone or alongside mortal allies, as they and their masters threatened to overrun the plane.\n\nThe Havoc Gods were on the verge of victory when they fell into a desperate trap set by their enemies. The most powerful mages of Tyria gave their lives in a ritual that managed to seal the Havoc Gods into the Orb of Fate. Suddenly severed from their creators, the forces of Havoc were defeated. The surviving Daemons fled and hid throughout Tyria, escaping wherever they could, while their foes enjoyed an era of peace and prosperity. \n\nThis peace was brought to an abrupt end when, centuries later, the orb was broken by the heirs of the most powerful Human Empire in Tyria. The Havoc Gods were freed, and the power unleashed by the broken orb tore through the heart of Tyria, scarring the land and opening a massive fissure, cutting through much of the plane. This great scar became known as the Rift, and from it, the Daemons began to emerge once more into Tyria. \n\nThe Rift Daemons are eager to return to their masters and avenge their defeat. They have already spread throughout many corners of Tyria, and their hordes grow steadily with each passing day. With their old foes complacent and divided, there are few who can stand against them while they are ready to once more bend Tyria to the will of their gods. \n\nHow will you bring glory to your god?",
   "units": [
     {
+      "id": "_vrCvso",
+      "cost": 140,
+      "name": "Harbinger of War",
+      "size": 1,
+      "bases": {
+        "round": "50",
+        "square": "40"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "additional": false,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "jbhpErfecvEY",
+          "name": "Warbound",
+          "label": "Warbound"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "GyP1mkAK",
+          "name": "Flame Spear",
+          "type": "ArmyBookWeapon",
+          "count": 2,
+          "range": 0,
+          "attacks": 1,
+          "weaponId": "DnQvk0d1",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "_mrPya5SXSqW",
+              "name": "Deadly",
+              "rating": 3,
+              "label": "Deadly(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "2x Flame Spear (A1, AP(1), Deadly(3))",
+          "originalCount": 2
+        },
+        {
+          "id": "FSKqbuSJ",
+          "name": "Stomp",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 2,
+          "weaponId": "hyB0WaAL",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Stomp (A2, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "p5qpq",
+        "Egao10Zx"
+      ],
+      "genericName": "War Heavy Daemon Lord",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "pl2kj2o",
       "cost": 45,
       "name": "Champion of War",
@@ -208,6 +308,90 @@
       "disabledSections": [
         "b3CEu"
       ],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
+      "id": "F-hxnBM",
+      "cost": 135,
+      "name": "Tri-Hound Champion",
+      "size": 1,
+      "bases": {
+        "round": "50",
+        "square": "40"
+      },
+      "items": [
+        {
+          "id": "ZmljNw_P",
+          "name": "Malicious Predator",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "KdgwlPb8LuD2",
+              "name": "Fast",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "jbhpErfecvEY",
+          "name": "Warbound",
+          "label": "Warbound"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "8L7ZhPF-",
+          "name": "Frenzied Bites",
+          "type": "ArmyBookWeapon",
+          "range": null,
+          "attacks": 6,
+          "weaponId": "8L7ZhPF-",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Frenzied Bites (A6, AP(1))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "D1"
+      ],
+      "genericName": "War Cerberus Hound",
+      "hasCustomRule": false,
+      "disabledSections": [],
       "hasBalanceInvalid": false,
       "originalSize": 1,
       "disabledUpgradeSections": []
@@ -1000,11 +1184,197 @@
   ],
   "upgradePackages": [
     {
+      "uid": "D1",
+      "hint": "Tri-Hound Champion",
+      "sections": [
+        {
+          "id": "GKXwXhL",
+          "uid": "IpPRcDU",
+          "label": "Upgrade with any",
+          "options": [
+            {
+              "uid": "t4gFJgCC7E",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F-hxnBM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": "3EMCWpO",
+                  "name": "War Boon",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "War Boon (Defensive Frenzy)",
+                  "content": [
+                    {
+                      "id": "n8vjv0oBZDAL",
+                      "name": "Defensive Frenzy",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "War Boon (Defensive Frenzy)",
+              "parentSectionId": "IpPRcDU",
+              "parentPackageUid": "fOeZFZwN",
+              "parentSectionUid": "BEQmU",
+              "id": "t4gFJgCC7E"
+            },
+            {
+              "uid": "SAxzitc",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F-hxnBM",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Spiked Collar",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Spiked Collar (Ravage(3))",
+                  "content": [
+                    {
+                      "id": "hnsVQyx3ylMf",
+                      "name": "Ravage",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Spiked Collar (Ravage(3))",
+              "parentSectionId": "IpPRcDU",
+              "id": "SAxzitc"
+            },
+            {
+              "uid": "8Gw4z",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F-hxnBM",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Guard Beast",
+                  "type": "ArmyBookItem",
+                  "label": "Guard Beast (Repel Ambushers)",
+                  "content": [
+                    {
+                      "id": "C6MzEy1CnxTs",
+                      "name": "Repel Ambushers",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Guard Beast (Repel Ambushers)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "IpPRcDU",
+              "parentSectionId": "IpPRcDU",
+              "id": "8Gw4z"
+            },
+            {
+              "uid": "5NXJ1IC",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F-hxnBM",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Anti-Wizard Collar",
+                  "type": "ArmyBookItem",
+                  "label": "Anti-Wizard Collar (Resistance)",
+                  "content": [
+                    {
+                      "id": "h-Cj1XrX00JE",
+                      "name": "Resistance",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Anti-Wizard Collar (Resistance)",
+              "parentPackageUid": "D1",
+              "parentSectionUid": "IpPRcDU",
+              "parentSectionId": "IpPRcDU",
+              "id": "5NXJ1IC"
+            }
+          ],
+          "parentPackageUid": "D1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "any"
+          }
+        },
+        {
+          "id": "lH8ifux",
+          "uid": "_eZZWz6SmB",
+          "label": "Replace Malicious Predator",
+          "options": [
+            {
+              "uid": "2s7hAXHqiq",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "F-hxnBM",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Bounding Advance",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Bounding Advance (Scout)",
+                  "content": [
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Bounding Advance (Scout)",
+              "parentSectionId": "_eZZWz6SmB",
+              "id": "2s7hAXHqiq"
+            }
+          ],
+          "parentPackageUid": "D1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Malicious Predator"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "E1",
       "hint": "Command Group",
       "sections": [
         {
-          "id": "n1wrGSK",
+          "id": "BkxHQwn",
           "uid": "PCrKoJL",
           "label": "Upgrade one model with one",
           "options": [
@@ -1129,7 +1499,7 @@
       "hint": "Blood Warriors",
       "sections": [
         {
-          "id": "owfK1-Q",
+          "id": "x5zeS_V",
           "uid": "-e4L6hc",
           "label": "Replace all Blood Swords",
           "options": [
@@ -1332,7 +1702,7 @@
           ]
         },
         {
-          "id": "90Jrwbl",
+          "id": "C5V3hk2",
           "uid": "nCSVgK0k",
           "label": "Upgrade all models with",
           "options": [
@@ -1377,7 +1747,7 @@
           }
         },
         {
-          "id": "oFJ57OM",
+          "id": "1ZiLa94",
           "uid": "dMI9WK7",
           "label": "Upgrade one model with",
           "options": [
@@ -1428,7 +1798,7 @@
       "hint": "Blood Hounds",
       "sections": [
         {
-          "id": "Yz0n18Y",
+          "id": "plj4mUN",
           "uid": "v8kryNt",
           "label": "Upgrade with any",
           "options": [
@@ -1535,7 +1905,7 @@
           }
         },
         {
-          "id": "X9kYh0W",
+          "id": "NFqigeh",
           "uid": "eCXK0r1F1i",
           "label": "Replace Malicious Predator",
           "options": [
@@ -1584,7 +1954,7 @@
       "hint": "Beast Riders",
       "sections": [
         {
-          "id": "L2lylOC",
+          "id": "eA6AwlC",
           "uid": "PxsZX",
           "label": "Replace Blood Sword",
           "options": [
@@ -1708,7 +2078,7 @@
           ]
         },
         {
-          "id": "oBL90tv",
+          "id": "MesK73N",
           "uid": "-gU2jVQA",
           "label": "Upgrade with",
           "options": [
@@ -1756,7 +2126,7 @@
       "hint": "Furies",
       "sections": [
         {
-          "id": "NBx9RXf",
+          "id": "dELmEeM",
           "uid": "b3CEu",
           "label": "Replace Blood Claws",
           "options": [
@@ -1844,11 +2214,391 @@
       "calcErrors": false
     },
     {
+      "uid": "p5qpq",
+      "hint": "Harbinger",
+      "sections": [
+        {
+          "id": "rqRO--T",
+          "uid": "p6hGf",
+          "label": "Replace any Flame Spear",
+          "options": [
+            {
+              "uid": "Q1-3U",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 0
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Flame Hammer",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 1,
+                  "weaponId": "Lunyf_vH",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "w_vX0mi58KKt",
+                      "name": "Blast",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Flame Hammer (A1, AP(1), Blast(3))"
+                }
+              ],
+              "label": "Flame Hammer (A1, AP(1), Blast(3))",
+              "parentPackageUid": "p5qpq",
+              "parentSectionUid": "p6hGf",
+              "parentSectionId": "p6hGf",
+              "id": "Q1-3U"
+            },
+            {
+              "uid": "MXCIe",
+              "cost": 5,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Blood Sword",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "Abfhtg9Z",
+                  "specialRules": [
+                    {
+                      "id": "JSnFcm3SCiMD",
+                      "name": "Crack"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Blood Sword (A3, Crack)"
+                }
+              ],
+              "label": "Heavy Blood Sword (A3, Crack)",
+              "parentPackageUid": "p5qpq",
+              "parentSectionUid": "p6hGf",
+              "parentSectionId": "p6hGf",
+              "id": "MXCIe"
+            },
+            {
+              "uid": "4otRd",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Flame Axe",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "IftkcRvg",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    },
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Flame Axe (A3, AP(1), Rending)"
+                }
+              ],
+              "label": "Heavy Flame Axe (A3, AP(1), Rending)",
+              "parentSectionId": "p6hGf",
+              "id": "4otRd"
+            },
+            {
+              "uid": "Qfl7ePy3Xh",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Long Whip",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 18,
+                  "attacks": 2,
+                  "weaponId": "4-MDwCBM",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 2
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Long Whip (18\", A2, AP(2))"
+                }
+              ],
+              "label": "Long Whip (18\", A2, AP(2))",
+              "parentSectionId": "p6hGf",
+              "id": "Qfl7ePy3Xh"
+            },
+            {
+              "uid": "r7IAt",
+              "cost": 0,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "War Whip",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 4,
+                  "weaponId": "KdWhjz8-",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "War Whip (12\", A4, AP(1))"
+                }
+              ],
+              "label": "War Whip (12\", A4, AP(1))",
+              "parentPackageUid": "p5qpq",
+              "parentSectionUid": "p6hGf",
+              "parentSectionId": "p6hGf",
+              "id": "r7IAt"
+            },
+            {
+              "uid": "eVxru",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Heavy Flame Gauntlet",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 3,
+                  "weaponId": "N8DiV4nm",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Flame Gauntlet (A3, AP(4))"
+                }
+              ],
+              "label": "Heavy Flame Gauntlet (A3, AP(4))",
+              "parentPackageUid": "p5qpq",
+              "parentSectionUid": "p6hGf",
+              "parentSectionId": "p6hGf",
+              "id": "eVxru"
+            }
+          ],
+          "parentPackageUid": "p5qpq",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "affects": {
+            "type": "any"
+          },
+          "targets": [
+            "Flame Spear"
+          ]
+        },
+        {
+          "id": "kTpZuzt",
+          "uid": "F63nH",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "oGr-v1lMNm",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "id": "wL-2v8U",
+                  "name": "War Boon",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "War Boon (Defensive Frenzy)",
+                  "content": [
+                    {
+                      "id": "n8vjv0oBZDAL",
+                      "name": "Defensive Frenzy",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "War Boon (Defensive Frenzy)",
+              "parentSectionId": "F63nH",
+              "parentPackageUid": "TeEq2k18",
+              "parentSectionUid": "BEQmU",
+              "id": "oGr-v1lMNm"
+            },
+            {
+              "uid": "lmgPY38zMB",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "e1btMw6",
+                  "name": "Daemonic Incursion",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Daemonic Incursion (Ambush Aura)",
+                  "content": [
+                    {
+                      "id": "gOFh4u_LGrwP",
+                      "name": "Ambush Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Daemonic Incursion (Ambush Aura)",
+              "parentSectionId": "F63nH",
+              "parentPackageUid": "TeEq2k18",
+              "id": "lmgPY38zMB"
+            },
+            {
+              "uid": "flNGf",
+              "cost": 15,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Wings",
+                  "type": "ArmyBookItem",
+                  "label": "Wings (Flying)",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Wings (Flying)",
+              "parentPackageUid": "p5qpq",
+              "parentSectionUid": "F63nH",
+              "parentSectionId": "F63nH",
+              "id": "flNGf"
+            },
+            {
+              "uid": "1QQchK__e4",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 45
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Fury Wings",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Fury Wings (Flying, Scout)",
+                  "content": [
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Fury Wings (Flying, Scout)",
+              "parentSectionId": "F63nH",
+              "id": "1QQchK__e4"
+            }
+          ],
+          "parentPackageUid": "p5qpq",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "olHRf",
       "hint": "Champion",
       "sections": [
         {
-          "id": "1QoH37N",
+          "id": "i5PRMM_",
           "uid": "alruA",
           "label": "Replace Axe and Flame Spear",
           "options": [
@@ -2055,7 +2805,7 @@
           ]
         },
         {
-          "id": "b6h47DE",
+          "id": "HQAus9N",
           "uid": "8S6mX",
           "label": "Replace any Blood Sword",
           "options": [
@@ -2145,7 +2895,7 @@
           ]
         },
         {
-          "id": "-tbVChh",
+          "id": "3Aqgt5K",
           "uid": "QkCe1",
           "label": "Upgrade with one",
           "options": [
@@ -2280,6 +3030,69 @@
               "label": "Great Beast (Heavy Claws (A1, AP(1)), Armor(3), Fast, Impact(2), Tough(3))",
               "parentSectionId": "QkCe1",
               "id": "riUJi"
+            },
+            {
+              "uid": "xwhSK",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "pl2kj2o",
+                  "cost": 115
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Throne of Blood",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Throne of Blood (Claws (A6, AP(1)), Armor(3), Fear(1), Tough(6))",
+                  "content": [
+                    {
+                      "id": "nCyvss1_",
+                      "name": "Claws",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "ngoJICOR",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Claws (A6, AP(1))"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Throne of Blood (Claws (A6, AP(1)), Armor(3), Fear(1), Tough(6))",
+              "parentSectionId": "QkCe1",
+              "id": "xwhSK"
             }
           ],
           "parentPackageUid": "olHRf",
@@ -2298,7 +3111,7 @@
       "hint": "Fury Champion",
       "sections": [
         {
-          "id": "gBf0h20",
+          "id": "ILYbB6W",
           "uid": "odFVA",
           "label": "Replace Axe and Flame Spear",
           "options": [
@@ -2505,7 +3318,7 @@
           ]
         },
         {
-          "id": "3JDomfc",
+          "id": "cedgRYs",
           "uid": "xDDXZ",
           "label": "Replace any Blood Sword",
           "options": [
@@ -2602,7 +3415,7 @@
       "hint": "War Soul Spawns",
       "sections": [
         {
-          "id": "zs4MPXS",
+          "id": "lzShZcc",
           "uid": "Bugbm",
           "label": "Replace Mutated Blood Claws",
           "options": [
@@ -2694,7 +3507,7 @@
       "hint": "Blood Whippers",
       "sections": [
         {
-          "id": "P3rRw_i",
+          "id": "Lb-ydqn",
           "uid": "v_useRq1",
           "label": "Replace Long Whip",
           "options": [
@@ -2741,7 +3554,7 @@
           ]
         },
         {
-          "id": "hzCTvYy",
+          "id": "AXR_2uE",
           "uid": "BEQmU",
           "label": "Upgrade with",
           "options": [
@@ -2789,7 +3602,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "7iSC0WO",
+          "id": "rHva_J6",
           "uid": "rfZvv",
           "label": "Upgrade with one",
           "options": [
@@ -2999,7 +3812,7 @@
       "hint": "Whip-Furies",
       "sections": [
         {
-          "id": "PBlh07w",
+          "id": "dZj0BjQ",
           "uid": "VN1pdCPsN_",
           "label": "Replace Long Whip",
           "options": [
@@ -3052,7 +3865,7 @@
       "hint": "Specialists - Fury",
       "sections": [
         {
-          "id": "TPqDtbL",
+          "id": "VXvH72M",
           "uid": "y8Mfke0z",
           "label": "Upgrade with one",
           "options": [
@@ -3183,6 +3996,184 @@
           ],
           "isHeroUpgrade": true,
           "parentPackageUid": "OdtXsEgs",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "Egao10Zx",
+      "hint": "Specialists - Harbinger",
+      "sections": [
+        {
+          "id": "HJP76vG",
+          "uid": "lLNDmBWW",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "m0TEqFhx",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Envoy of War",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Envoy of War (Furious Aura)",
+                  "content": [
+                    {
+                      "id": "CK9TIa7vdehO",
+                      "name": "Furious Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Envoy of War (Furious Aura)",
+              "parentSectionId": "lLNDmBWW",
+              "parentPackageUid": "nDpv9ki_",
+              "parentSectionUid": "rfZvv",
+              "id": "m0TEqFhx"
+            },
+            {
+              "uid": "4N77P1tj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Gift of War",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Gift of War (Shielded Aura)",
+                  "content": [
+                    {
+                      "id": "ZW_Zv-kkBt2q",
+                      "name": "Shielded Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Gift of War (Shielded Aura)",
+              "parentSectionId": "lLNDmBWW",
+              "parentPackageUid": "nDpv9ki_",
+              "parentSectionUid": "rfZvv",
+              "id": "4N77P1tj"
+            },
+            {
+              "uid": "BcOdrSTz",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Symbol of War",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Symbol of War (Rapid Charge Aura)",
+                  "content": [
+                    {
+                      "id": "1cykqbg4xn6o",
+                      "name": "Rapid Charge Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Symbol of War (Rapid Charge Aura)",
+              "parentSectionId": "lLNDmBWW",
+              "parentPackageUid": "nDpv9ki_",
+              "parentSectionUid": "rfZvv",
+              "id": "BcOdrSTz"
+            },
+            {
+              "uid": "rlrNr3Zr",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "War Favour",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "War Favour (Warbound Boost Aura)",
+                  "content": [
+                    {
+                      "id": "dNOZEOSJ-DyX",
+                      "name": "Warbound Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "War Favour (Warbound Boost Aura)",
+              "parentSectionId": "lLNDmBWW",
+              "parentPackageUid": "nDpv9ki_",
+              "parentSectionUid": "rfZvv",
+              "id": "rlrNr3Zr"
+            },
+            {
+              "uid": "ZkAPsvkH",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "_vrCvso",
+                  "cost": 50
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Lore of War",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Lore of War (Caster(3))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Lore of War (Caster(3))",
+              "parentSectionId": "lLNDmBWW",
+              "parentPackageUid": "nDpv9ki_",
+              "parentSectionUid": "rfZvv",
+              "id": "ZkAPsvkH"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "nDpv9ki_",
           "type": "ArmyBookUpgradeSection",
           "variant": "upgrade",
           "select": {
@@ -3851,6 +4842,15 @@
       "description": "Counts as having Defense X+.",
       "hasRating": true,
       "coreType": 5,
+      "targetType": 1
+    },
+    {
+      "id": "C6MzEy1CnxTs",
+      "name": "Repel Ambushers",
+      "aliasedRuleId": null,
+      "description": "Enemy units using Ambush must be set up over 12\" away from this model's unit.",
+      "hasRating": false,
+      "coreType": null,
       "targetType": 1
     },
     {

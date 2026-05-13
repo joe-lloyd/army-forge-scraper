@@ -15,6 +15,96 @@
   "backgroundFull": "Goblins are one of the most widespread and adaptable species in Tyria, who refer to most other species in Tyria as “big folk”, tending to look at them warily. Many big folk tend to view Goblins as thieves and pests, hunting them on sight. Goblins avoid them, except to take what the big folk leave behind and to protect their homes. There are exceptions to this rule, as a Goblin’s friendship is won easily with a little respect, or even just food. \n\nWhile the tribes and nations of big folk claimed valuable lands and built nations throughout Tyria, the minute Goblins were pushed into whatever places remained. Goblins have adapted to live in these remote locations, like forests, caves and other hidden places. This has given rise to many Goblin clans with radically different cultures, outlooks, and even gods, all influenced by their homelands. These clans vary greatly, from the forest dwelling Spider Clan who allied with the beasts of their native forest, to the plains dwelling Wolf Clan, and the eccentric Bat Clan who made their homes throughout the caves and mountains of Tyria. For most of their history, the Goblins held loyalty only to their own clan and cared little for the others.\n\nThe Goblin clans were forced to come out of the shadows, however, when the Havoc Wars began. The Havoc Gods began to destroy caves and forests and rampage through the open plains, forcing many Goblins to flee. Many different clan leaders met together and agreed to unite against this common enemy. The Goblins sent envoys to the Empire and Elves, applying to join the Grand Alliance, but were initially ignored. Yet, as Grand Alliance armies were slowly being driven back, the Goblins were winning small victories and launching raids from behind enemy lines. Goblin troops proved their worth in the war, working as expert scouts, ambushers, and raiders. For a short time, Goblins were treated almost as equals by the big folk of Tyria. \n\nThe Goblin Clans soon lost their hard earned respect though, as once the Havoc Wars ended and the danger passed, few Humans or Elves were interested in the Goblins or their concerns. The Goblins were simply expected to return to their forgotten corners of Tyria, and they were once again treated as pests and thieves when they tried to take anything more. The Goblins, however, remained united even as they returned to their different homes, with clan leaders continuing to meet in order to exchange aid and trade goods. \n\nHow will you bring respect to your clan?",
   "units": [
     {
+      "id": "DQ5jgGa",
+      "cost": 105,
+      "name": "Troll Boss",
+      "size": 1,
+      "bases": {
+        "round": "60",
+        "square": "50"
+      },
+      "items": [
+        {
+          "id": "2xIMbNah",
+          "name": "Cave Tribe",
+          "type": "ArmyBookItem",
+          "content": [
+            {
+              "id": "JoOCVPx1xT1G",
+              "name": "Furious",
+              "type": "ArmyBookRule"
+            },
+            {
+              "id": "249Oc2_1eOx6",
+              "name": "Shred in Melee",
+              "type": "ArmyBookRule"
+            }
+          ],
+          "count": 1
+        }
+      ],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "8KujvrTG8k9p",
+          "name": "Regeneration",
+          "label": "Regeneration"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "rblJ2IkYaFon",
+          "name": "Mischievous",
+          "label": "Mischievous"
+        }
+      ],
+      "valid": true,
+      "defense": 4,
+      "quality": 4,
+      "weapons": [
+        {
+          "id": "f8iUNjCR",
+          "name": "Heavy Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "nA7U2stE",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 2,
+              "label": "AP(2)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Heavy Hand Weapon (A4, AP(2))",
+          "count": 1,
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "B1",
+        "iUDhFVim",
+        "UP8jGi06"
+      ],
+      "genericName": "Troll Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "MhIwX30",
       "cost": 25,
       "name": "Goblin Leader",
@@ -571,7 +661,8 @@
         {
           "id": "nLQCr5OiSlYz",
           "name": "Caster Group",
-          "label": "Caster Group"
+          "label": "Caster Group(1)",
+          "rating": 1
         },
         {
           "id": "rblJ2IkYaFon",
@@ -966,7 +1057,7 @@
       "hint": "Goblin Leader",
       "sections": [
         {
-          "id": "GjKTyKN",
+          "id": "R5o_CXh",
           "uid": "QEuodiy",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1153,7 +1244,7 @@
           ]
         },
         {
-          "id": "vVrbwBi",
+          "id": "PhrzO5B",
           "uid": "ySuPu",
           "label": "Upgrade with one",
           "options": [
@@ -1227,7 +1318,7 @@
           }
         },
         {
-          "id": "B3U3gMF",
+          "id": "RDRRkj1",
           "uid": "T5l2tXXz",
           "label": "Replace Spider Clan",
           "options": [
@@ -1306,7 +1397,7 @@
           ]
         },
         {
-          "id": "l_uVSXV",
+          "id": "AMZcNdg",
           "uid": "YWic_Bu",
           "label": "Upgrade with one",
           "options": [
@@ -1655,6 +1746,71 @@
               "label": "Great Cave-Beast (Vicious Bites (A3, Rending), Bounding, Tough(3))",
               "parentSectionId": "YWic_Bu",
               "id": "6ShJKux"
+            },
+            {
+              "uid": "jtWAnQGmbD",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "MhIwX30",
+                  "cost": 115
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Wolf Chariot",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Wolf Chariot (Heavy Bites (A2, AP(1)), Armor(3), Fast, Impact(4), Tough(6))",
+                  "content": [
+                    {
+                      "id": "SB4C5dIf",
+                      "name": "Heavy Bites",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": null,
+                      "attacks": 2,
+                      "weaponId": "SBa59ZF2",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 1
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Heavy Bites (A2, AP(1))"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "KdgwlPb8LuD2",
+                      "name": "Fast",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "62-mYKVM9MLd",
+                      "name": "Impact",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Wolf Chariot (Heavy Bites (A2, AP(1)), Armor(3), Fast, Impact(4), Tough(6))",
+              "parentSectionId": "YWic_Bu",
+              "id": "jtWAnQGmbD"
             }
           ],
           "parentPackageUid": "A1",
@@ -1669,11 +1825,116 @@
       "calcErrors": false
     },
     {
+      "uid": "B1",
+      "hint": "Troll Boss",
+      "sections": [
+        {
+          "id": "cZyOj8y",
+          "uid": "CKsGUAK",
+          "label": "Replace Heavy Hand Weapon",
+          "options": [
+            {
+              "uid": "nq95rp2",
+              "cost": 10,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DQ5jgGa",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": "gfFHInft",
+                  "name": "Heavy Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "_FOfqfiL",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 4
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Great Weapon (A4, AP(4))",
+                  "count": 1
+                }
+              ],
+              "label": "Heavy Great Weapon (A4, AP(4))",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "CKsGUAK",
+              "parentSectionId": "CKsGUAK",
+              "id": "nq95rp2"
+            },
+            {
+              "uid": "EkbWy",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DQ5jgGa",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "id": "H6VTBBq9",
+                  "name": "Throw Stones",
+                  "type": "ArmyBookWeapon",
+                  "range": 12,
+                  "attacks": 6,
+                  "weaponId": "H6VTBBq9",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Throw Stones (12\", A6, AP(1))",
+                  "count": 1
+                },
+                {
+                  "id": "-nms2WZg",
+                  "name": "Bash",
+                  "type": "ArmyBookWeapon",
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "1sWyzVXt",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Bash (A4)",
+                  "count": 1
+                }
+              ],
+              "label": "Throw Stones (12\", A6, AP(1)), Bash (A4)",
+              "parentPackageUid": "B1",
+              "parentSectionUid": "CKsGUAK",
+              "parentSectionId": "CKsGUAK",
+              "id": "EkbWy"
+            }
+          ],
+          "parentPackageUid": "B1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Heavy Hand Weapon"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "C1",
       "hint": "Command Group",
       "sections": [
         {
-          "id": "QFSks4W",
+          "id": "Z_fX_6p",
           "uid": "4O3HF3X",
           "label": "Upgrade one model with one",
           "options": [
@@ -1798,7 +2059,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "TxLxcOx",
+          "id": "1tmILm2",
           "uid": "D0UPSBz",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1892,7 +2153,7 @@
       "hint": "Cave-Beast Herd",
       "sections": [
         {
-          "id": "YTvLb2G",
+          "id": "IgOODwB",
           "uid": "XkbUmjk",
           "label": "Upgrade with",
           "options": [
@@ -1941,7 +2202,7 @@
       "hint": "Trolls",
       "sections": [
         {
-          "id": "p7G-YXn",
+          "id": "MitwYK6",
           "uid": "Rh_FVkf",
           "label": "Replace any Heavy Hand Weapon",
           "options": [
@@ -2049,7 +2310,7 @@
       "hint": "Shooters",
       "sections": [
         {
-          "id": "gysIIfK",
+          "id": "jr49qks",
           "uid": "w-BvhSq",
           "label": "Replace all Shortbows",
           "options": [
@@ -2100,7 +2361,7 @@
           ]
         },
         {
-          "id": "Tnca0Uc",
+          "id": "UAJ_64F",
           "uid": "6bbV6QdVwk",
           "label": "Replace one Crossbow",
           "options": [
@@ -2161,7 +2422,7 @@
       "hint": "Beast Riders",
       "sections": [
         {
-          "id": "GMlS6Q_",
+          "id": "PMo9sTv",
           "uid": "kFwU6Gx",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2213,7 +2474,7 @@
           ]
         },
         {
-          "id": "VEf9Uae",
+          "id": "RpBbAcl",
           "uid": "D1nZvrc",
           "label": "Upgrade all models with",
           "options": [
@@ -2257,7 +2518,7 @@
           }
         },
         {
-          "id": "_ztRfaE",
+          "id": "piG1gS_",
           "uid": "1RmQGxP-Vi",
           "label": "Replace all Spider Mounts",
           "options": [
@@ -2383,7 +2644,7 @@
       "hint": "Assassins",
       "sections": [
         {
-          "id": "P6yKJsx",
+          "id": "s7piGc9",
           "uid": "lQIMA",
           "label": "Upgrade with one",
           "options": [
@@ -2469,7 +2730,7 @@
       "hint": "Goblin Clans",
       "sections": [
         {
-          "id": "tkMVNvX",
+          "id": "FEw8AIp",
           "uid": "EGY6J",
           "label": "Replace all Bat Clans",
           "options": [
@@ -2562,7 +2823,7 @@
       "hint": "Troll Tribes",
       "sections": [
         {
-          "id": "bys1Ma_",
+          "id": "sVE09VN",
           "uid": "Iyx6jQs7",
           "label": "Replace Cave Tribe",
           "options": [
@@ -2654,7 +2915,7 @@
       "hint": "Shroom-Sniffers",
       "sections": [
         {
-          "id": "gtVcnWb",
+          "id": "lXcnGMp",
           "uid": "4DrwbhXbOG",
           "label": "Upgrade one model with",
           "options": [
@@ -2705,7 +2966,7 @@
       "hint": "Specialists - Goblin",
       "sections": [
         {
-          "id": "L0wwbo6",
+          "id": "punTOrs",
           "uid": "emHHCMa9",
           "label": "Upgrade with one",
           "options": [
@@ -2912,11 +3173,103 @@
       "calcErrors": false
     },
     {
+      "uid": "iUDhFVim",
+      "hint": "Troll Tribes (One Model)",
+      "sections": [
+        {
+          "id": "N6MT91O",
+          "uid": "QqSo16iC",
+          "label": "Replace Cave Tribe",
+          "options": [
+            {
+              "uid": "x68eqkOk",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DQ5jgGa",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Stone Tribe",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Stone Tribe (Armor(3), Fearless)",
+                  "content": [
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "2atvlmICQSCV",
+                      "name": "Fearless",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Stone Tribe (Armor(3), Fearless)",
+              "parentSectionId": "QqSo16iC",
+              "parentPackageUid": "mUyGvjwK",
+              "parentSectionUid": "UBS_ovr",
+              "id": "x68eqkOk"
+            },
+            {
+              "uid": "ieNO5AMB7C",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DQ5jgGa",
+                  "cost": 20
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Forest Tribe",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Forest Tribe (Scout, Strider)",
+                  "content": [
+                    {
+                      "id": "FAMbscK5vhSu",
+                      "name": "Scout",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "JSKVyurtWIyW",
+                      "name": "Strider",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Forest Tribe (Scout, Strider)",
+              "parentSectionId": "QqSo16iC",
+              "id": "ieNO5AMB7C"
+            }
+          ],
+          "parentPackageUid": "mUyGvjwK",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Cave Tribe"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "tNRza3iu",
       "hint": "Mob Madness",
       "sections": [
         {
-          "id": "yuy-lB7",
+          "id": "EBooBMb",
           "uid": "1spFIyAt",
           "label": "Upgrade all models with",
           "options": [
@@ -2969,6 +3322,186 @@
           "model": true,
           "affects": {
             "type": "all"
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
+      "uid": "UP8jGi06",
+      "hint": "Specialists - Troll",
+      "sections": [
+        {
+          "id": "ScIUCGu",
+          "uid": "nT2DEwH8",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "FGnXOW_U",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DQ5jgGa",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Trailmaster",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Trailmaster (Rapid Charge Aura)",
+                  "content": [
+                    {
+                      "id": "1cykqbg4xn6o",
+                      "name": "Rapid Charge Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Trailmaster (Rapid Charge Aura)",
+              "parentSectionId": "nT2DEwH8",
+              "parentPackageUid": "s07A-Oxa",
+              "parentSectionUid": "c1ZBnwe",
+              "id": "FGnXOW_U"
+            },
+            {
+              "uid": "azVeni6N",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DQ5jgGa",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Instigator",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Instigator (Mischievous Boost Aura)",
+                  "content": [
+                    {
+                      "id": "sQQhss7F6nCs",
+                      "name": "Mischievous Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Instigator (Mischievous Boost Aura)",
+              "parentSectionId": "nT2DEwH8",
+              "parentPackageUid": "s07A-Oxa",
+              "id": "azVeni6N"
+            },
+            {
+              "uid": "nfMJFHVE",
+              "cost": 30,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DQ5jgGa",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Brewer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Brewer (Melee Evasion Aura)",
+                  "content": [
+                    {
+                      "id": "fOIa9S1t0q7S",
+                      "name": "Melee Evasion Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Brewer (Melee Evasion Aura)",
+              "parentSectionId": "nT2DEwH8",
+              "parentPackageUid": "s07A-Oxa",
+              "parentSectionUid": "c1ZBnwe",
+              "id": "nfMJFHVE"
+            },
+            {
+              "uid": "pmK1-SLo",
+              "cost": 50,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DQ5jgGa",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Big Boss",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Big Boss (Thrust in Melee Aura)",
+                  "content": [
+                    {
+                      "id": "38s_V6mXkYX-",
+                      "name": "Thrust in Melee Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Big Boss (Thrust in Melee Aura)",
+              "parentSectionId": "nT2DEwH8",
+              "parentPackageUid": "s07A-Oxa",
+              "parentSectionUid": "c1ZBnwe",
+              "id": "pmK1-SLo"
+            },
+            {
+              "uid": "cUTKTkh-",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "DQ5jgGa",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Shaman",
+                  "type": "ArmyBookItem",
+                  "label": "Shaman (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Shaman (Caster(2))",
+              "parentSectionId": "nT2DEwH8",
+              "parentPackageUid": "s07A-Oxa",
+              "parentSectionUid": "c1ZBnwe",
+              "id": "cUTKTkh-"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "s07A-Oxa",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
           }
         }
       ],
@@ -3679,6 +4212,15 @@
       "targetType": 1
     },
     {
+      "id": "sQQhss7F6nCs",
+      "name": "Mischievous Boost Aura",
+      "aliasedRuleId": null,
+      "description": "This model and up to 3 friendly units picked before the start of the game get Mischievous Boost. If this model is killed, picked models that are deployed lose the rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "38s_V6mXkYX-",
       "name": "Thrust in Melee Aura",
       "aliasedRuleId": null,
@@ -3832,6 +4374,15 @@
       "targetType": 1
     },
     {
+      "id": "pUt7fqbSTNWP",
+      "name": "Mischievous Boost",
+      "aliasedRuleId": null,
+      "description": "If this model has Mischievous, when it shoots or charges enemies over 9\" away, enemies taking hits from it must re-roll successful unmodified defense results of 5-6 from Mischievous (instead of only on 6).",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
       "id": "umbiz4tnEyF8",
       "name": "Thrust",
       "aliasedRuleId": null,
@@ -3892,15 +4443,6 @@
       "description": "Gets X spell tokens at the start of each round, but can’t hold more than 6 tokens at once. At any point before attacking, spend as many tokens as the spell’s value to try casting one or more spells (only one try per spell). Roll one die, on 4+ resolve the effect on a target in line of sight. Models within 18” in line of sight of the caster’s unit may spend any number of spell tokens at the same time before rolling, to give the caster +1/-1 to the roll per token.",
       "hasRating": true,
       "coreType": 1,
-      "targetType": 1
-    },
-    {
-      "id": "pUt7fqbSTNWP",
-      "name": "Mischievous Boost",
-      "aliasedRuleId": null,
-      "description": "If this model has Mischievous, when it shoots or charges enemies over 9\" away, enemies taking hits from it must re-roll successful unmodified defense results of 5-6 from Mischievous (instead of only on 6).",
-      "hasRating": false,
-      "coreType": null,
       "targetType": 1
     },
     {

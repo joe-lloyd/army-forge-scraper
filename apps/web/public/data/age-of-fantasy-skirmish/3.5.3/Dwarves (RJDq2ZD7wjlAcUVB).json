@@ -15,6 +15,101 @@
   "backgroundFull": "The Dwarven tribes were once spread throughout Tyria, but as the plains were settled by humanity and Orcs came to the grasslands, the Dwarves retreated into the mountains. They made their homes in their mountains, creating powerful fortresses surrounded by terrace farms on the heights, and dug mines deep below. For most of their history, Dwarves had to travel overland, often through hostile territory, to visit and trade with other Dwarfholds. They began to experiment with ways to travel safely, until they discovered powered flight, and their helicopter convoys became a common sight between the mountains of Tyria. \n\nWhen Havoc arrived in Tyria, the Northern Dwarfholds were soon overrun. The northern Dwarves fought back even after losing their homes, and the southern Dwarves joined with the Great Alliance to protect their homes. With the Dwarven armies on campaign against Havoc, the Orcs attacked and soon conquered the Dwarfholds. The Dwarven armies were forced to return home right before the final confrontation with Havoc in order to save their families, however they were unable to defeat the Orcs who turned their own defences against them. \n\nThe remaining Dwarves had a difficult life under the Orcs. The Orcs drove the Dwarves out of their holds and took whatever they wished from their subjects. The Dwarves held little status, reduced to performing hard labour in the fields and mines, and with their former allies too weakened to help, they lived under cruel Orc rule for generations. \n\nThen the Great Rift tore through the land, destroying many of the ancient holds. Many Orcs were killed by cave-ins, whilst the rest were forced to abandon the holds, leaving behind much of their armour and weapons. The Dwarves took the opportunity to rise up, using whatever weapons and tools they could find to seize back their destroyed holds. Much of their ancient wealth was lost, either buried, carried away by Orcs, or traded away long ago. Despite this, the Dwarves were determined to rebuild. \n\nDwarves soon developed industries and new technologies like coal-powered Constructs and factories. Their once glorious holds laden with gold and gems are now polluted ruins, supported by steel and steam, and they venture out only to take what they need and settle old grudges. No matter what, the Dwarves will not allow their homes to fall again. \n\nHow will you defend your hold?",
   "units": [
     {
+      "id": "rJMWIC1",
+      "cost": 130,
+      "name": "Steam-Suit Champion",
+      "size": 1,
+      "bases": {
+        "round": "50",
+        "square": "50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "label": "Hero"
+        },
+        {
+          "id": "Ldhtmr4H8b6G",
+          "name": "Slow",
+          "label": "Slow"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "2atvlmICQSCV",
+          "name": "Fearless",
+          "label": "Fearless"
+        },
+        {
+          "id": "gD2_znglqhNw",
+          "name": "Sturdy",
+          "label": "Sturdy"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "YpjwaOTH",
+          "name": "Champion Steam-Gun",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 12,
+          "attacks": 2,
+          "weaponId": "-ZjVgFCL",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            },
+            {
+              "type": "ArmyBookRule",
+              "id": "w_vX0mi58KKt",
+              "name": "Blast",
+              "rating": 3,
+              "label": "Blast(3)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Champion Steam-Gun (12\", A2, AP(1), Blast(3))",
+          "originalCount": 1
+        },
+        {
+          "id": "1mJJg_Ij",
+          "name": "Hand Weapon",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 3,
+          "weaponId": "LrcnOP7B",
+          "specialRules": [],
+          "attacksMultiplier": 1,
+          "label": "Hand Weapon (A3)",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "n-rf0GIS",
+        "IwbewFdg"
+      ],
+      "genericName": "Steam-Suit Leader",
+      "hasCustomRule": false,
+      "disabledSections": [],
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "1ifiBs3",
       "cost": 50,
       "name": "Dwarf Champion",
@@ -1178,7 +1273,7 @@
       "hint": "Dwarf Champion",
       "sections": [
         {
-          "id": "L4t0dgX",
+          "id": "77X2_90",
           "uid": "8XUur92",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1385,7 +1480,7 @@
           ]
         },
         {
-          "id": "b4QKaBi",
+          "id": "EDvaWfa",
           "uid": "DbqO2fr",
           "label": "Upgrade with one",
           "options": [
@@ -1574,7 +1669,7 @@
           }
         },
         {
-          "id": "ma4kLaF",
+          "id": "77rfo4u",
           "uid": "-Q0HOSy",
           "label": "Upgrade with one",
           "options": [
@@ -1928,7 +2023,7 @@
       "hint": "Berserker Lord",
       "sections": [
         {
-          "id": "2TSSKAZ",
+          "id": "LbXIkZK",
           "uid": "ncRPP6e",
           "label": "Replace Great Hammer",
           "options": [
@@ -2007,7 +2102,7 @@
           ]
         },
         {
-          "id": "4_5jx5X",
+          "id": "vXa3Oc2",
           "uid": "cdL5y",
           "label": "Upgrade with any",
           "options": [
@@ -2094,7 +2189,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "iW4VEPp",
+          "id": "O-aiMRT",
           "uid": "d_e48C7",
           "label": "Upgrade one model with one",
           "options": [
@@ -2315,7 +2410,7 @@
       "hint": "Mountain Warriors",
       "sections": [
         {
-          "id": "b3pybAS",
+          "id": "U0BQmMg",
           "uid": "DpXiu0e",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -2409,7 +2504,7 @@
       "hint": "Coal Miners",
       "sections": [
         {
-          "id": "ougWjLf",
+          "id": "YVJ9Khm",
           "uid": "Geu_8qm",
           "label": "Upgrade all models with",
           "options": [
@@ -2458,7 +2553,7 @@
           }
         },
         {
-          "id": "F0EZ90_",
+          "id": "p-vufr0",
           "uid": "i5044jR",
           "label": "Replace one Pick",
           "options": [
@@ -2523,7 +2618,7 @@
       "hint": "Bearded Veterans",
       "sections": [
         {
-          "id": "8C4cLCe",
+          "id": "qoedsFj",
           "uid": "wKeQbV0",
           "label": "Replace all Heavy Hand Weapons",
           "options": [
@@ -2625,7 +2720,7 @@
       "hint": "Iron Warriors",
       "sections": [
         {
-          "id": "-5eXblF",
+          "id": "3EfmF39",
           "uid": "8IZK_w1",
           "label": "Upgrade one model with one",
           "options": [
@@ -2727,7 +2822,7 @@
       "hint": "Steam-Suits",
       "sections": [
         {
-          "id": "11yhpBA",
+          "id": "CfGauEf",
           "uid": "rxZo25e",
           "label": "Replace Steam-Guns and Hand Weapon",
           "options": [
@@ -2835,7 +2930,7 @@
       "hint": "Marksmen",
       "sections": [
         {
-          "id": "tvo-fGT",
+          "id": "NWG5iQP",
           "uid": "3Zfehlu",
           "label": "Replace Rifle",
           "options": [
@@ -2926,7 +3021,7 @@
       "hint": "Rangers",
       "sections": [
         {
-          "id": "qUCLd0C",
+          "id": "iQ4a4nS",
           "uid": "jW4t63Q",
           "label": "Replace Throwing Pick",
           "options": [
@@ -3021,7 +3116,7 @@
       "hint": "Iron Marksmen",
       "sections": [
         {
-          "id": "NWOfeks",
+          "id": "c9LmxUT",
           "uid": "U9CZczA",
           "label": "Replace Fire Rifle",
           "options": [
@@ -3157,7 +3252,7 @@
       "hint": "Beast-Construct Riders",
       "sections": [
         {
-          "id": "165_xqp",
+          "id": "ciBxg-P",
           "uid": "qAcH95P",
           "label": "Replace Hand Weapon",
           "options": [
@@ -3217,7 +3312,7 @@
       "hint": "Coal Golems",
       "sections": [
         {
-          "id": "fpCvPTW",
+          "id": "IRQpHme",
           "uid": "RKfzm",
           "label": "Replace Great Mace",
           "options": [
@@ -3307,11 +3402,117 @@
       "calcErrors": false
     },
     {
+      "uid": "n-rf0GIS",
+      "hint": "Steam-Suit Champion",
+      "sections": [
+        {
+          "id": "ZvJahRa",
+          "uid": "Y0pduNdsBI",
+          "label": "Replace Champion Steam-Gun and Hand Weapon",
+          "options": [
+            {
+              "uid": "b2cL6Tw1gQ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "rJMWIC1",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 6,
+                  "weaponId": "PXQuJVxy",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Great Weapon (A6, AP(2))"
+                },
+                {
+                  "name": "Heavy Shield",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Heavy Shield (Fortified)",
+                  "content": [
+                    {
+                      "id": "IyLY1212wacW",
+                      "name": "Fortified",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Great Weapon (A6, AP(2)), Heavy Shield (Fortified)",
+              "parentSectionId": "Y0pduNdsBI",
+              "id": "b2cL6Tw1gQ"
+            },
+            {
+              "uid": "esZrePBFAQ",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "rJMWIC1",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Fists",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 8,
+                  "weaponId": "Nd603h36",
+                  "specialRules": [
+                    {
+                      "id": "cavWDboL4ubs",
+                      "name": "Rending"
+                    },
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "rating": 1
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Fists (A8, AP(1), Rending)"
+                }
+              ],
+              "label": "Heavy Fists (A8, AP(1), Rending)",
+              "parentSectionId": "Y0pduNdsBI",
+              "id": "esZrePBFAQ"
+            }
+          ],
+          "parentPackageUid": "n-rf0GIS",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Champion Steam-Gun",
+            "Hand Weapon"
+          ]
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "2sGfpUP0",
       "hint": "Rune of Power",
       "sections": [
         {
-          "id": "D47KOv1",
+          "id": "Vp-mMnV",
           "uid": "P2mV7q_EQB",
           "label": "Upgrade all models with",
           "options": [
@@ -3373,11 +3574,183 @@
       "calcErrors": false
     },
     {
+      "uid": "IwbewFdg",
+      "hint": "Specialists - Steam-Suit",
+      "sections": [
+        {
+          "id": "kEfq4Id",
+          "uid": "znkVTQTi",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "frg0Mmkk2c",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "rJMWIC1",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Iron Forger",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Iron Forger (Sturdy Boost Aura)",
+                  "content": [
+                    {
+                      "id": "BOSZqK98Ncka",
+                      "name": "Sturdy Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Iron Forger (Sturdy Boost Aura)",
+              "parentSectionId": "znkVTQTi",
+              "id": "frg0Mmkk2c"
+            },
+            {
+              "uid": "K3x8BzhF3v",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "rJMWIC1",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Artificer",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Artificer (Relentless Aura)",
+                  "content": [
+                    {
+                      "id": "zGew9XZT2rUm",
+                      "name": "Relentless Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Artificer (Relentless Aura)",
+              "parentSectionId": "znkVTQTi",
+              "id": "K3x8BzhF3v"
+            },
+            {
+              "uid": "Q3FRXbQb",
+              "cost": 25,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "rJMWIC1",
+                  "cost": 10
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Pathfinder",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Pathfinder (Swift Aura)",
+                  "content": [
+                    {
+                      "id": "amQphBHWOeJs",
+                      "name": "Swift Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Pathfinder (Swift Aura)",
+              "parentSectionId": "znkVTQTi",
+              "parentPackageUid": "KHnKMIi8",
+              "id": "Q3FRXbQb"
+            },
+            {
+              "uid": "pjaoO7umXj",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "rJMWIC1",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Prospector",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Prospector (Resistance Aura)",
+                  "content": [
+                    {
+                      "id": "b7V48Z1W-EfP",
+                      "name": "Resistance Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Prospector (Resistance Aura)",
+              "parentSectionId": "znkVTQTi",
+              "id": "pjaoO7umXj"
+            },
+            {
+              "uid": "oi9UjwMR",
+              "cost": 40,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "rJMWIC1",
+                  "cost": 35
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Rune Lord",
+                  "type": "ArmyBookItem",
+                  "label": "Rune Lord (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Rune Lord (Caster(2))",
+              "parentSectionId": "znkVTQTi",
+              "parentPackageUid": "KHnKMIi8",
+              "parentSectionUid": "HchN9yj",
+              "id": "oi9UjwMR"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "KHnKMIi8",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "ZrJ3ixPR",
       "hint": "Berserkers",
       "sections": [
         {
-          "id": "MU36NYh",
+          "id": "-FiIPVy",
           "uid": "Xd2p4WUtbS",
           "label": "Replace Dual Hand Weapon",
           "options": [
@@ -3433,7 +3806,7 @@
       "hint": "Specialists - Berserker",
       "sections": [
         {
-          "id": "u71qDCL",
+          "id": "WzvO-PV",
           "uid": "YKTazAc-",
           "label": "Upgrade with one",
           "options": [
@@ -3608,7 +3981,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "qFeigxF",
+          "id": "OlTE4LL",
           "uid": "PfEyObf7",
           "label": "Upgrade with one",
           "options": [

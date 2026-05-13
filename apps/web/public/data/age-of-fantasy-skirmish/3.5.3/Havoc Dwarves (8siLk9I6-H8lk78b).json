@@ -15,6 +15,93 @@
   "backgroundFull": "The Dwarven tribes were once spread throughout Tyria, but as the plains were settled by humanity and Orcs came to the steppe, the Dwarves retreated into the mountains, building the Dwarfholds. The Dwarves’ ability to channel magic was limited compared to other species, so instead Dwarves became crafters and inventors, using runes to enchant items and imbue them with magic which their Rune Masters could later use.\n\nWhen Havoc arrived in Tyria, the northern Dwarfholds were overrun by followers of Havoc, while the southern Dwarves joined the campaign against Havoc. Seeing their opportunity, the Orcs attacked and soon conquered the southern Dwarfholds. The southern Dwarves had a difficult life under the Orcs. The Orcs drove the Dwarves out of their holds and took whatever they wished from their subjects. The Dwarves held little status, reduced to performing hard labour in the fields and mines, and with their former allies too weakened to help, they lived under cruel Orc rule for generations.‍\n\nWhen the Great Rift opened, it tore through much of the Dwarven lands. Many Orcs were killed by cave-ins, whilst the rest were forced to abandon the holds, leaving behind much of their armour and weapons, and the Dwarves rose up and drove away any Orcs who remained. Some Dwarves began to follow the Havoc Gods, claiming that it was Havoc who liberated them while their former allies abandoned them. These Havoc-worshipping Dwarves consolidated in the northern Dwarfholds.\n\nWhen the Havoc Gods saw the lack of arcane potential in their Dwarven followers, their attention shifted to other mortal followers. While their gifts still appeared amongst the Havoc Dwarves, it was far more difficult for the Dwarves to catch the attention of their new patrons. In order to account for their lack of Magic, they began to use captives as conduits for powerful rituals and magic. Through this experimentation, they have discovered how to use blood magic to overcome their natural weakness. Some Havoc Dwarves have managed to catch the attention of their gods once more using this magic. However, Havoc Gods’ interest is ever-fleeting. \n\nTo further impress the Havoc Gods, the Dwarves have used their mechanical knowledge to build more powerful war-machines, golems, and weapons. They do this in the vain hope that the blood they shed and the empires that they build may finally satisfy their aloof patrons. \n\nHow will you appease the uncaring Gods?",
   "units": [
     {
+      "id": "vdDNuUB",
+      "cost": 150,
+      "name": "Bull Centaur Champion",
+      "size": 1,
+      "bases": {
+        "round": "90x52",
+        "square": "75x50"
+      },
+      "items": [],
+      "rules": [
+        {
+          "id": "dIQ3SGl2J2Ew",
+          "name": "Fear",
+          "rating": 1,
+          "label": "Fear(1)"
+        },
+        {
+          "id": "JoOCVPx1xT1G",
+          "name": "Furious",
+          "label": "Furious"
+        },
+        {
+          "id": "wjTOj41tskFD",
+          "name": "Havocbound",
+          "label": "Havocbound"
+        },
+        {
+          "id": "T08VkBuVmNZ_",
+          "name": "Hero",
+          "additional": false,
+          "label": "Hero"
+        },
+        {
+          "id": "62-mYKVM9MLd",
+          "name": "Impact",
+          "rating": 4,
+          "label": "Impact(4)"
+        },
+        {
+          "id": "a0YtInGiUDd6",
+          "name": "Tough",
+          "rating": 6,
+          "label": "Tough(6)"
+        },
+        {
+          "id": "FAMbscK5vhSu",
+          "name": "Scout",
+          "label": "Scout"
+        }
+      ],
+      "valid": true,
+      "defense": 3,
+      "quality": 3,
+      "weapons": [
+        {
+          "id": "MSS3CepG",
+          "name": "Dual Heavy Hand Weapons",
+          "type": "ArmyBookWeapon",
+          "count": 1,
+          "range": 0,
+          "attacks": 4,
+          "weaponId": "Ai9AtHvU",
+          "specialRules": [
+            {
+              "type": "ArmyBookRule",
+              "id": "17crjK7P6_w6",
+              "name": "AP",
+              "rating": 1,
+              "label": "AP(1)"
+            }
+          ],
+          "attacksMultiplier": 1,
+          "label": "Dual Heavy Hand Weapons (A4, AP(1))",
+          "originalCount": 1
+        }
+      ],
+      "upgrades": [
+        "W3nSUFoZ",
+        "BfzXcguU"
+      ],
+      "genericName": "Elite Centaur Leader",
+      "hasCustomRule": false,
+      "hasBalanceInvalid": false,
+      "originalSize": 1,
+      "disabledUpgradeSections": []
+    },
+    {
       "id": "mUV7hLd",
       "cost": 45,
       "name": "Iron Champion",
@@ -1011,7 +1098,7 @@
       "hint": "Iron Champion",
       "sections": [
         {
-          "id": "hE57-jF",
+          "id": "-Zc5klv",
           "uid": "PPILfoz",
           "label": "Replace Heavy Hand Weapon",
           "options": [
@@ -1181,7 +1268,7 @@
           ]
         },
         {
-          "id": "2wo69I6",
+          "id": "CkSNw23",
           "uid": "xUyXW9E",
           "label": "Upgrade with one",
           "options": [
@@ -1358,7 +1445,7 @@
           }
         },
         {
-          "id": "wgs5kkK",
+          "id": "sOOMFUd",
           "uid": "BYsDwO_",
           "label": "Upgrade with one",
           "options": [
@@ -1390,6 +1477,79 @@
               "label": "Immortals Leader (Regeneration)",
               "parentSectionId": "BYsDwO_",
               "id": "4x1EmwgIex"
+            },
+            {
+              "uid": "Ah4wUpW",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "mUV7hLd",
+                  "cost": 185
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Great Winged Beast",
+                  "type": "ArmyBookItem",
+                  "bases": {
+                    "round": "120x92",
+                    "square": "100x50"
+                  },
+                  "label": "Great Winged Beast (Horn (A6, AP(2)), Armor(3), Fear(1), Flying, Swift, Tough(6))",
+                  "content": [
+                    {
+                      "id": "s0Ao4RXm",
+                      "name": "Horn",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "jImSCr8B",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 2
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Horn (A6, AP(2))"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "leFm23MTiJxO",
+                      "name": "Swift",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Great Winged Beast (Horn (A6, AP(2)), Armor(3), Fear(1), Flying, Swift, Tough(6))",
+              "parentSectionId": "BYsDwO_",
+              "id": "Ah4wUpW"
             }
           ],
           "parentPackageUid": "A1",
@@ -1408,7 +1568,7 @@
       "hint": "Abyssal Leader",
       "sections": [
         {
-          "id": "yBEGgR4",
+          "id": "1IQWTJj",
           "uid": "cR43IcB",
           "label": "Replace Hand Weapon",
           "options": [
@@ -1559,7 +1719,7 @@
           ]
         },
         {
-          "id": "9cUNhW3",
+          "id": "XwjglTR",
           "uid": "egImqqn",
           "label": "Upgrade with one",
           "options": [
@@ -1667,6 +1827,86 @@
             "type": "exactly",
             "value": 1
           }
+        },
+        {
+          "id": "hDVZdEy",
+          "uid": "mSO5_M11lT",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "tt_lmdStvh",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "QKGF3-r",
+                  "cost": 155
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Great Winged Beast",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Great Winged Beast (Horn (A6, AP(2)), Armor(3), Fear(1), Flying, Swift, Tough(6))",
+                  "content": [
+                    {
+                      "id": "OKLNPleu",
+                      "name": "Horn",
+                      "type": "ArmyBookWeapon",
+                      "count": 1,
+                      "range": 0,
+                      "attacks": 6,
+                      "weaponId": "jImSCr8B",
+                      "specialRules": [
+                        {
+                          "id": "17crjK7P6_w6",
+                          "name": "AP",
+                          "rating": 2
+                        }
+                      ],
+                      "attacksMultiplier": 1,
+                      "label": "Horn (A6, AP(2))"
+                    },
+                    {
+                      "id": "74RjQ1k41DoO",
+                      "name": "Armor",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    },
+                    {
+                      "id": "dIQ3SGl2J2Ew",
+                      "name": "Fear",
+                      "type": "ArmyBookRule",
+                      "rating": 1
+                    },
+                    {
+                      "id": "-QJdqJEKjIpE",
+                      "name": "Flying",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "leFm23MTiJxO",
+                      "name": "Swift",
+                      "type": "ArmyBookRule"
+                    },
+                    {
+                      "id": "a0YtInGiUDd6",
+                      "name": "Tough",
+                      "type": "ArmyBookRule",
+                      "rating": 6
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Great Winged Beast (Horn (A6, AP(2)), Armor(3), Fear(1), Flying, Swift, Tough(6))",
+              "parentSectionId": "mSO5_M11lT",
+              "id": "tt_lmdStvh"
+            }
+          ],
+          "parentPackageUid": "B1",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
         }
       ],
       "calcErrors": false
@@ -1676,7 +1916,7 @@
       "hint": "Command Group",
       "sections": [
         {
-          "id": "MP6VYnv",
+          "id": "3HsL4IJ",
           "uid": "mt6z4_6",
           "label": "Upgrade one model with one",
           "options": [
@@ -1813,7 +2053,7 @@
       "hint": "Warriors",
       "sections": [
         {
-          "id": "Wiw4iDb",
+          "id": "hAJeEwH",
           "uid": "RWxDSi5",
           "label": "Replace all Hand Weapons",
           "options": [
@@ -1900,7 +2140,7 @@
           ]
         },
         {
-          "id": "RhUEX1c",
+          "id": "DxlpEFX",
           "uid": "TjsOnssfL2",
           "label": "Upgrade all models with",
           "options": [
@@ -1950,7 +2190,7 @@
       "hint": "Berserker",
       "sections": [
         {
-          "id": "BxgBxdj",
+          "id": "qxofxE5",
           "uid": "W0aS8Tw",
           "label": "Replace all Great Weapons",
           "options": [
@@ -1999,7 +2239,7 @@
       "hint": "Shooters",
       "sections": [
         {
-          "id": "h7jINxC",
+          "id": "DgEuH18",
           "uid": "mRkZM-A",
           "label": "Replace Shotgun",
           "options": [
@@ -2119,7 +2359,7 @@
       "hint": "Weapon Teams",
       "sections": [
         {
-          "id": "rztlwXy",
+          "id": "AgGvqt6",
           "uid": "UGAMgAo",
           "label": "Replace Flamethrower",
           "options": [
@@ -2211,7 +2451,7 @@
       "hint": "Flame Spirits",
       "sections": [
         {
-          "id": "ycm1i6p",
+          "id": "-nLTTLR",
           "uid": "_wfQVZk",
           "label": "Replace Dual Hand Weapon",
           "options": [
@@ -2285,7 +2525,7 @@
       "hint": "Specialists - Champion",
       "sections": [
         {
-          "id": "OXKKc9A",
+          "id": "jrH3bYA",
           "uid": "fi7j-wU5",
           "label": "Upgrade with one",
           "options": [
@@ -2462,7 +2702,7 @@
       "hint": "Specialists - Leader",
       "sections": [
         {
-          "id": "kxQUtqu",
+          "id": "zP5vfEI",
           "uid": "g2aS30gU",
           "label": "Upgrade with one",
           "options": [
@@ -2664,11 +2904,156 @@
       "calcErrors": false
     },
     {
+      "uid": "W3nSUFoZ",
+      "hint": "Specialists - Centaur",
+      "sections": [
+        {
+          "id": "wXZ6yNm",
+          "uid": "BsmZCQUl",
+          "label": "Upgrade with one",
+          "options": [
+            {
+              "uid": "tnAG0nai",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vdDNuUB",
+                  "cost": 5
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Flame Keeper",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Flame Keeper (Melee Shrouding Aura)",
+                  "content": [
+                    {
+                      "id": "0dZak5jae8F0",
+                      "name": "Melee Shrouding Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Flame Keeper (Melee Shrouding Aura)",
+              "parentSectionId": "BsmZCQUl",
+              "parentPackageUid": "Qd1LmUJi",
+              "id": "tnAG0nai"
+            },
+            {
+              "uid": "p0lPx1Kw",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vdDNuUB",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Pain Forger",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Pain Forger (Melee Slayer Aura)",
+                  "content": [
+                    {
+                      "id": "OzqjA_sxgVd5",
+                      "name": "Melee Slayer Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Pain Forger (Melee Slayer Aura)",
+              "parentSectionId": "BsmZCQUl",
+              "parentPackageUid": "Qd1LmUJi",
+              "id": "p0lPx1Kw"
+            },
+            {
+              "uid": "dCvC-mff",
+              "cost": 20,
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vdDNuUB",
+                  "cost": 30
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Ashen Lord",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Ashen Lord (Havocbound Boost Aura)",
+                  "content": [
+                    {
+                      "id": "Zi1Zgge5ptMw",
+                      "name": "Havocbound Boost Aura",
+                      "type": "ArmyBookRule"
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Ashen Lord (Havocbound Boost Aura)",
+              "parentSectionId": "BsmZCQUl",
+              "parentPackageUid": "Qd1LmUJi",
+              "parentSectionUid": "tijJN9c",
+              "id": "dCvC-mff"
+            },
+            {
+              "uid": "D4G9Mk9E",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vdDNuUB",
+                  "cost": 40
+                }
+              ],
+              "gains": [
+                {
+                  "name": "Hex Caster",
+                  "type": "ArmyBookItem",
+                  "bases": null,
+                  "label": "Hex Caster (Caster(2))",
+                  "content": [
+                    {
+                      "id": "47CAqf7ySlfc",
+                      "name": "Caster",
+                      "type": "ArmyBookRule",
+                      "rating": 2
+                    }
+                  ],
+                  "count": 1
+                }
+              ],
+              "label": "Hex Caster (Caster(2))",
+              "parentSectionId": "BsmZCQUl",
+              "parentPackageUid": "Qd1LmUJi",
+              "id": "D4G9Mk9E"
+            }
+          ],
+          "isHeroUpgrade": true,
+          "parentPackageUid": "Qd1LmUJi",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade",
+          "select": {
+            "type": "exactly",
+            "value": 1
+          }
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "Fu-m-xut",
       "hint": "Sentinel Centaurs",
       "sections": [
         {
-          "id": "1Fnzv53",
+          "id": "KaF3E8q",
           "uid": "Q18_aJZt4y",
           "label": "Replace Great Weapon",
           "options": [
@@ -2871,7 +3256,7 @@
       "hint": "Bull Centaurs",
       "sections": [
         {
-          "id": "7tz3uDT",
+          "id": "EewYVj1",
           "uid": "hLyG4f6Kt5",
           "label": "Upgrade with",
           "options": [
@@ -2911,11 +3296,102 @@
       "calcErrors": false
     },
     {
+      "uid": "BfzXcguU",
+      "hint": "Bull Centaur Champion",
+      "sections": [
+        {
+          "id": "cjIdgGh",
+          "uid": "bKt38TTh8l",
+          "label": "Replace Dual Heavy Hand Weapon",
+          "options": [
+            {
+              "uid": "3Sg_RH0ZU-",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vdDNuUB",
+                  "cost": 15
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Heavy Great Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 0,
+                  "attacks": 4,
+                  "weaponId": "MyZm7lHh",
+                  "specialRules": [
+                    {
+                      "id": "17crjK7P6_w6",
+                      "name": "AP",
+                      "type": "ArmyBookRule",
+                      "rating": 3
+                    }
+                  ],
+                  "attacksMultiplier": 1,
+                  "label": "Heavy Great Weapon (A4, AP(3))"
+                }
+              ],
+              "label": "Heavy Great Weapon (A4, AP(3))",
+              "parentSectionId": "bKt38TTh8l",
+              "id": "3Sg_RH0ZU-"
+            }
+          ],
+          "parentPackageUid": "BfzXcguU",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "replace",
+          "targets": [
+            "Dual Heavy Hand Weapon"
+          ]
+        },
+        {
+          "id": "7DUn3FB",
+          "uid": "LBC4K1Bbag",
+          "label": "Upgrade with",
+          "options": [
+            {
+              "uid": "HzD1KZEFY3",
+              "type": "ArmyBookUpgradeOption",
+              "costs": [
+                {
+                  "unitId": "vdDNuUB",
+                  "cost": 25
+                }
+              ],
+              "gains": [
+                {
+                  "id": null,
+                  "name": "Throwing Weapon",
+                  "type": "ArmyBookWeapon",
+                  "count": 1,
+                  "range": 12,
+                  "attacks": 4,
+                  "weaponId": "vWeYOzlp",
+                  "specialRules": [],
+                  "attacksMultiplier": 1,
+                  "label": "Throwing Weapon (12\", A4)"
+                }
+              ],
+              "label": "Throwing Weapon (12\", A4)",
+              "parentSectionId": "LBC4K1Bbag",
+              "id": "HzD1KZEFY3"
+            }
+          ],
+          "parentPackageUid": "BfzXcguU",
+          "type": "ArmyBookUpgradeSection",
+          "variant": "upgrade"
+        }
+      ],
+      "calcErrors": false
+    },
+    {
       "uid": "vNStSdEC",
       "hint": "Infernal Shooters",
       "sections": [
         {
-          "id": "uqPdZp9",
+          "id": "6881GsY",
           "uid": "8lLAEjTsBn",
           "label": "Replace Blunderbuss",
           "options": [
@@ -3006,7 +3482,7 @@
       "hint": "Squad Upgrades",
       "sections": [
         {
-          "id": "_go0uld",
+          "id": "I9LyzzL",
           "uid": "KxFQPkNV",
           "label": "Upgrade one model with one",
           "options": [
@@ -3117,7 +3593,7 @@
       "hint": "Hex Banner",
       "sections": [
         {
-          "id": "6NoFjrm",
+          "id": "Y5oETQn",
           "uid": "8ouyfvOz",
           "label": "Upgrade with",
           "options": [
@@ -3766,6 +4242,24 @@
       "targetType": 1
     },
     {
+      "id": "leFm23MTiJxO",
+      "name": "Swift",
+      "aliasedRuleId": null,
+      "description": "This model may ignore the Slow rule.",
+      "hasRating": false,
+      "coreType": null,
+      "targetType": 1
+    },
+    {
+      "id": "74RjQ1k41DoO",
+      "name": "Armor",
+      "aliasedRuleId": null,
+      "description": "Counts as having Defense X+.",
+      "hasRating": true,
+      "coreType": 5,
+      "targetType": 1
+    },
+    {
       "id": "Zi1Zgge5ptMw",
       "name": "Havocbound Boost Aura",
       "aliasedRuleId": null,
@@ -3874,12 +4368,12 @@
       "targetType": 1
     },
     {
-      "id": "ZqYITWnZUc45",
-      "name": "Havocbound Boost",
+      "id": "Ldhtmr4H8b6G",
+      "name": "Slow",
       "aliasedRuleId": null,
-      "description": "If this model has Havocbound, it always gets AP(+1) from Havocbound (instead of only when shooting over 9\" away, or when charging).",
+      "description": "Moves -2\" when using Advance, and -4” when using Rush/Charge.",
       "hasRating": false,
-      "coreType": null,
+      "coreType": 1,
       "targetType": 1
     },
     {
@@ -3892,19 +4386,19 @@
       "targetType": 1
     },
     {
-      "id": "eXtrmDIR9dEp",
-      "name": "Versatile Defense",
+      "id": "ZqYITWnZUc45",
+      "name": "Havocbound Boost",
       "aliasedRuleId": null,
-      "description": "When a unit where all models have this rule is deployed or activated, pick one effect: when shot or charged from over 9\" away, the unit either gets +1 to defense rolls, or enemy units get -1 to hit rolls against it. This effect lasts until the units' next activation.\n",
+      "description": "If this model has Havocbound, it always gets AP(+1) from Havocbound (instead of only when shooting over 9\" away, or when charging).",
       "hasRating": false,
       "coreType": null,
       "targetType": 1
     },
     {
-      "id": "leFm23MTiJxO",
-      "name": "Swift",
+      "id": "eXtrmDIR9dEp",
+      "name": "Versatile Defense",
       "aliasedRuleId": null,
-      "description": "This model may ignore the Slow rule.",
+      "description": "When a unit where all models have this rule is deployed or activated, pick one effect: when shot or charged from over 9\" away, the unit either gets +1 to defense rolls, or enemy units get -1 to hit rolls against it. This effect lasts until the units' next activation.\n",
       "hasRating": false,
       "coreType": null,
       "targetType": 1
