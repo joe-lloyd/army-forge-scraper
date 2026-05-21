@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { GAME_SYSTEMS } from "../hooks/useArmyList";
 import { UnitCard } from "./UnitCard";
@@ -28,6 +29,28 @@ export function ArmyDetailView({
   const { systemId } = useParams<{ systemId: string }>();
   const navigate = useNavigate();
   const system = GAME_SYSTEMS.find((s) => s.id === Number(systemId));
+
+  // Slider drafts: the live value the user is dragging. Committed to
+  // balValConfig only on release (mouseup/touchend/keyup). Whole-army BalVal
+  // recompute is expensive (Poisson CDF × every unit × every loadout), so we
+  // avoid firing it on every intermediate frame.
+  const [defenseDraft, setDefenseDraft] = useState(balValConfig.targetDefense);
+  const [sizeDraft, setSizeDraft] = useState(balValConfig.targetSize);
+  const [toughDraft, setToughDraft] = useState(balValConfig.targetToughness);
+  // Keep drafts in sync when config changes from elsewhere (e.g. preset reset).
+  useEffect(() => setDefenseDraft(balValConfig.targetDefense), [balValConfig.targetDefense]);
+  useEffect(() => setSizeDraft(balValConfig.targetSize), [balValConfig.targetSize]);
+  useEffect(() => setToughDraft(balValConfig.targetToughness), [balValConfig.targetToughness]);
+
+  const commitDefense = (v: number) => {
+    if (v !== balValConfig.targetDefense) setBalValConfig({ ...balValConfig, targetDefense: v });
+  };
+  const commitSize = (v: number) => {
+    if (v !== balValConfig.targetSize) setBalValConfig({ ...balValConfig, targetSize: v });
+  };
+  const commitTough = (v: number) => {
+    if (v !== balValConfig.targetToughness) setBalValConfig({ ...balValConfig, targetToughness: v });
+  };
 
   const heroes =
     army.units?.filter((u: any) =>
@@ -87,13 +110,16 @@ export function ArmyDetailView({
             </h3>
           </div>
 
-          <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+          <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
             {/* Target Defense */}
             <div>
               <label className="text-[10px] text-slate-400 mb-0.5 flex justify-between">
                 <span>Defense</span>
                 <span className="text-white font-bold">
-                  {balValConfig.targetDefense}+
+                  {defenseDraft}+
+                  {defenseDraft !== balValConfig.targetDefense && (
+                    <span className="ml-1 text-amber-400" title="Release to apply">·</span>
+                  )}
                 </span>
               </label>
               <input
@@ -101,13 +127,11 @@ export function ArmyDetailView({
                 min="2"
                 max="6"
                 step="1"
-                value={balValConfig.targetDefense}
-                onChange={(e) =>
-                  setBalValConfig({
-                    ...balValConfig,
-                    targetDefense: Number(e.target.value),
-                  })
-                }
+                value={defenseDraft}
+                onChange={(e) => setDefenseDraft(Number(e.target.value))}
+                onMouseUp={(e) => commitDefense(Number(e.currentTarget.value))}
+                onTouchEnd={(e) => commitDefense(Number(e.currentTarget.value))}
+                onKeyUp={(e) => commitDefense(Number(e.currentTarget.value))}
                 className="w-full accent-sky-400 h-1.5"
               />
             </div>
@@ -117,7 +141,10 @@ export function ArmyDetailView({
               <label className="text-[10px] text-slate-400 mb-0.5 flex justify-between">
                 <span>Size (Blast)</span>
                 <span className="text-white font-bold">
-                  {balValConfig.targetSize}
+                  {sizeDraft}
+                  {sizeDraft !== balValConfig.targetSize && (
+                    <span className="ml-1 text-amber-400" title="Release to apply">·</span>
+                  )}
                 </span>
               </label>
               <input
@@ -125,13 +152,11 @@ export function ArmyDetailView({
                 min="1"
                 max="20"
                 step="1"
-                value={balValConfig.targetSize}
-                onChange={(e) =>
-                  setBalValConfig({
-                    ...balValConfig,
-                    targetSize: Number(e.target.value),
-                  })
-                }
+                value={sizeDraft}
+                onChange={(e) => setSizeDraft(Number(e.target.value))}
+                onMouseUp={(e) => commitSize(Number(e.currentTarget.value))}
+                onTouchEnd={(e) => commitSize(Number(e.currentTarget.value))}
+                onKeyUp={(e) => commitSize(Number(e.currentTarget.value))}
                 className="w-full accent-sky-400 h-1.5"
               />
             </div>
@@ -141,9 +166,10 @@ export function ArmyDetailView({
               <label className="text-[10px] text-slate-400 mb-0.5 flex justify-between">
                 <span className="truncate">Tough (Deadly)</span>
                 <span className="text-white font-bold pl-1">
-                  {balValConfig.targetToughness === 1
-                    ? "1"
-                    : `T(${balValConfig.targetToughness})`}
+                  {toughDraft === 1 ? "1" : `T(${toughDraft})`}
+                  {toughDraft !== balValConfig.targetToughness && (
+                    <span className="ml-1 text-amber-400" title="Release to apply">·</span>
+                  )}
                 </span>
               </label>
               <input
@@ -152,49 +178,28 @@ export function ArmyDetailView({
                 max="7"
                 step="1"
                 value={
-                  [1, 3, 6, 9, 12, 15, 18, 21].indexOf(
-                    balValConfig.targetToughness,
-                  ) === -1
+                  [1, 3, 6, 9, 12, 15, 18, 21].indexOf(toughDraft) === -1
                     ? 0
-                    : [1, 3, 6, 9, 12, 15, 18, 21].indexOf(
-                        balValConfig.targetToughness,
-                      )
+                    : [1, 3, 6, 9, 12, 15, 18, 21].indexOf(toughDraft)
                 }
                 onChange={(e) => {
                   const values = [1, 3, 6, 9, 12, 15, 18, 21];
-                  setBalValConfig({
-                    ...balValConfig,
-                    targetToughness: values[Number(e.target.value)],
-                  });
+                  setToughDraft(values[Number(e.target.value)]);
+                }}
+                onMouseUp={(e) => {
+                  const values = [1, 3, 6, 9, 12, 15, 18, 21];
+                  commitTough(values[Number(e.currentTarget.value)]);
+                }}
+                onTouchEnd={(e) => {
+                  const values = [1, 3, 6, 9, 12, 15, 18, 21];
+                  commitTough(values[Number(e.currentTarget.value)]);
+                }}
+                onKeyUp={(e) => {
+                  const values = [1, 3, 6, 9, 12, 15, 18, 21];
+                  commitTough(values[Number(e.currentTarget.value)]);
                 }}
                 className="w-full accent-sky-400 h-1.5"
               />
-            </div>
-            {/* Assault Toggle */}
-            <div>
-              <label className="text-[10px] text-slate-400 mb-0.5 flex justify-between">
-                <span>Assault Action</span>
-              </label>
-              <div className="flex items-center h-5 mt-1">
-                <input
-                  type="checkbox"
-                  id="assault-toggle"
-                  checked={balValConfig.assault}
-                  onChange={(e) =>
-                    setBalValConfig({
-                      ...balValConfig,
-                      assault: e.target.checked,
-                    })
-                  }
-                  className="w-4 h-4 rounded border-slate-600 bg-slate-800 text-sky-500 focus:ring-sky-500 focus:ring-offset-slate-900"
-                />
-                <label
-                  htmlFor="assault-toggle"
-                  className="ml-2 text-xs font-semibold text-white select-none cursor-pointer"
-                >
-                  -1 to hit
-                </label>
-              </div>
             </div>
             {/* Most Effective Toggle */}
             <div>

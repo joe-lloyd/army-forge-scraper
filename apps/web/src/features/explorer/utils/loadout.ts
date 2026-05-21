@@ -1,5 +1,14 @@
 import type { Unit, Weapon } from '@opr-api/shared';
-import { calculateWeaponOffense, calculateEffectiveHP } from './balval';
+import {
+  calculateWeaponOffense,
+  calculateEffectiveHP,
+  targetHP,
+  cumulativeKillCurve,
+  cumulativeMoraleCurve,
+  expectedRoundOfEvent,
+  activationsToKill,
+  pointsToKill,
+} from './balval';
 import {
   compareEquipmentToTarget,
   parseSectionTargets,
@@ -283,7 +292,6 @@ export function scoreLoadout(state: LoadoutState, unit: Unit, config: BalValConf
       config.targetDefense,
       config.targetSize,
       config.targetToughness,
-      config.assault,
     );
     // OPR omits `range` entirely on melee gains (e.g. Dual Sword-Flails),
     // so a strict `=== 0` check falsely classifies them as ranged. Treat
@@ -291,13 +299,58 @@ export function scoreLoadout(state: LoadoutState, unit: Unit, config: BalValConf
     if (!w.range) melee += o;
     else ranged += o;
   }
-  // Assault → combined activation; otherwise pick the bigger mode.
-  const offense = config.assault ? melee + ranged : Math.max(melee, ranged);
+  const offense = Math.max(melee, ranged);
   const ehp = calculateEffectiveHP(unit);
   const efficiency = state.cost > 0
     ? (offense / state.cost) * config.offenseWeight + (ehp / state.cost) * (1 - config.offenseWeight)
     : 0;
-  return { meleeOffense: melee, rangedOffense: ranged, offense, efficiency };
+
+  // Effectiveness: round-weighted (R1 kill > R4 kill) sum of kill + half-value
+  // morale (shaken) probabilities, per point spent. A loadout that kills early
+  // or reliably forces a morale check scores high; one that "eventually kills
+  // by R4 if you're lucky" scores low. Combined score averages with classic
+  // efficiency so neither dominates — used by findBestLoadout.
+  const hp = targetHP(config);
+  const killCurve = cumulativeKillCurve(offense, hp);
+  const moraleCurve = cumulativeMoraleCurve(offense, hp);
+  const killProbByGameEnd = killCurve[3];
+  const moraleProbByGameEnd = moraleCurve[3];
+  const expectedRoundToKill = expectedRoundOfEvent(killCurve);
+  const expectedRoundToMorale = expectedRoundOfEvent(moraleCurve);
+  const atk = activationsToKill(offense, hp);
+  const ptk = pointsToKill(state.cost, atk);
+  const ROUND_WEIGHTS = [4, 3, 2, 1] as const;
+  const MORALE_VALUE_FRACTION = 0.5;
+  let value = 0;
+  let killPrev = 0;
+  let moralePrev = 0;
+  for (let r = 0; r < 4; r++) {
+    const killMarg = Math.max(0, killCurve[r] - killPrev);
+    const moraleMarg = Math.max(0, moraleCurve[r] - moralePrev);
+    const moraleOnlyMarg = Math.max(0, moraleMarg - killMarg);
+    value += ROUND_WEIGHTS[r] * (killMarg + MORALE_VALUE_FRACTION * moraleOnlyMarg);
+    killPrev = killCurve[r];
+    moralePrev = moraleCurve[r];
+  }
+  const effectivenessScore = Number.isFinite(ptk) ? value / Math.max(state.cost, 1) : 0;
+  const combinedScore = (efficiency + effectivenessScore) / 2;
+
+  return {
+    meleeOffense: melee,
+    rangedOffense: ranged,
+    offense,
+    efficiency,
+    killProbByGameEnd,
+    moraleProbByGameEnd,
+    cumulativeKillProb: killCurve,
+    cumulativeMoraleProb: moraleCurve,
+    expectedRoundToKill,
+    expectedRoundToMorale,
+    activationsToKill: atk,
+    pointsToKill: ptk,
+    effectivenessScore,
+    combinedScore,
+  };
 }
 
 interface OrderedSection {
@@ -463,11 +516,12 @@ export function searchLoadouts(
 
   recurse(buildBaseLoadout(unit), 0);
 
-  // Sort by efficiency descending — caller picks [0] for best, slices for
-  // alternatives.
+  // Sort by combined effectiveness+efficiency descending — caller picks [0]
+  // for best, slices for alternatives. Combined score balances "kills the
+  // target within the 4-round game" with classic damage-per-point.
   return results.sort(
     (a, b) =>
-      scoreLoadout(b, unit, config).efficiency - scoreLoadout(a, unit, config).efficiency,
+      scoreLoadout(b, unit, config).combinedScore - scoreLoadout(a, unit, config).combinedScore,
   );
 }
 
@@ -498,6 +552,13 @@ function makeOption(
   const efficiencyDelta = baseScore.efficiency > 0
     ? (score.efficiency - baseScore.efficiency) / baseScore.efficiency
     : 0;
+  // Combined delta = relative change in (efficiency + effectiveness) avg vs
+  // the base loadout. Drives the row up/down colouring so a swap that buys
+  // damage at slightly worse efficiency-per-point still reads "green" when
+  // its kill-probability gain outweighs the cost bump.
+  const combinedDelta = baseScore.combinedScore > 0
+    ? (score.combinedScore - baseScore.combinedScore) / baseScore.combinedScore
+    : score.combinedScore > 0 ? 1 : 0;
   let meleeAttacks = 0;
   let rangedAttacks = 0;
   for (const w of state.weapons) {
@@ -513,11 +574,23 @@ function makeOption(
     rangedOffense: score.rangedOffense,
     offense: score.offense,
     efficiency: score.efficiency,
+    killProbByGameEnd: score.killProbByGameEnd,
+    moraleProbByGameEnd: score.moraleProbByGameEnd,
+    cumulativeKillProb: score.cumulativeKillProb,
+    cumulativeMoraleProb: score.cumulativeMoraleProb,
+    expectedRoundToKill: score.expectedRoundToKill,
+    expectedRoundToMorale: score.expectedRoundToMorale,
+    activationsToKill: score.activationsToKill,
+    pointsToKill: score.pointsToKill,
+    effectivenessScore: score.effectivenessScore,
+    combinedScore: score.combinedScore,
     meleeAttacks,
     rangedAttacks,
     totalAttacks: meleeAttacks + rangedAttacks,
     baseEfficiency: baseScore.efficiency,
     efficiencyDelta,
+    baseCombinedScore: baseScore.combinedScore,
+    combinedDelta,
     offenseDelta: score.offense - baseScore.offense,
     costDelta: state.cost - baseCost,
     isBase,

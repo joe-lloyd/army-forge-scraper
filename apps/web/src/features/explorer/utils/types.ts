@@ -9,8 +9,6 @@ export interface BalValConfig {
   targetToughness: number;
   /** Offense vs defense weight (0–1, default 0.6) */
   offenseWeight: number;
-  /** Assault advanced rule active (-1 to hit) */
-  assault: boolean;
   /** Auto-apply most efficient loadout per unit */
   mostEffective: boolean;
 }
@@ -42,6 +40,34 @@ export interface BalValResult {
   /** Survivability tier — percentile rank of defense efficiency within the army. */
   survivabilityTier: Tier;
   survivabilityPercentile: number;
+
+  // ---- Effectiveness model (probabilistic kill against the configured target).
+  /** ceil(targetHP / expectedWounds); Infinity when expectedWounds < 0.1. */
+  activationsToKill: number;
+  /** unit.cost × activationsToKill; Infinity when ATK is Infinity. */
+  pointsToKill: number;
+  /** P(wounds >= targetHP) per activation, via Poisson(λ = expectedWounds). */
+  killProbPerActivation: number;
+  /** Per-round cumulative kill probability across the 4-round game. */
+  cumulativeKillProb: [number, number, number, number];
+  /** cumulativeKillProb[3] — chance the target is removed by end of round 4. */
+  killProbByGameEnd: number;
+  /** Per-round cumulative P(target taken to ≤ half HP → must take morale / be shaken). */
+  cumulativeMoraleProb: [number, number, number, number];
+  /** cumulativeMoraleProb[3] — chance the target was at least shaken by end of round 4. */
+  moraleProbByGameEnd: number;
+  /** Expected round of first kill (1..4). Infinity if game-end kill prob < 5%. */
+  expectedRoundToKill: number;
+  /** Expected round of first morale trigger (1..4). Infinity if game-end morale prob < 5%. */
+  expectedRoundToMorale: number;
+  /** Raw effectiveness — round-weighted kill + morale value per point. */
+  effectivenessScore: number;
+  /** Percentile rank of effectivenessScore within the army. */
+  effectivenessPercentile: number;
+  effectivenessTier: Tier;
+  /** Percentile rank of (damagePercentile + effectivenessPercentile) / 2. */
+  combinedPercentile: number;
+  combinedTier: Tier;
 }
 
 export const TIER_THRESHOLDS = {
@@ -57,7 +83,6 @@ export const DEFAULT_BALVAL_CONFIG: BalValConfig = {
   targetSize: 5,
   targetToughness: 1,
   offenseWeight: 0.6,
-  assault: false,
   mostEffective: false,
 };
 
@@ -93,6 +118,16 @@ export interface LoadoutScore {
   rangedOffense: number;
   offense: number;
   efficiency: number;
+  killProbByGameEnd: number;
+  moraleProbByGameEnd: number;
+  cumulativeKillProb: [number, number, number, number];
+  cumulativeMoraleProb: [number, number, number, number];
+  expectedRoundToKill: number;
+  expectedRoundToMorale: number;
+  activationsToKill: number;
+  pointsToKill: number;
+  effectivenessScore: number;
+  combinedScore: number;
 }
 
 export interface LoadoutOption {
@@ -105,6 +140,17 @@ export interface LoadoutOption {
   offense: number;
   efficiency: number;
 
+  killProbByGameEnd: number;
+  moraleProbByGameEnd: number;
+  cumulativeKillProb: [number, number, number, number];
+  cumulativeMoraleProb: [number, number, number, number];
+  expectedRoundToKill: number;
+  expectedRoundToMorale: number;
+  activationsToKill: number;
+  pointsToKill: number;
+  effectivenessScore: number;
+  combinedScore: number;
+
   // Raw shot volume (count × attacks) summed across the loadout's weapons.
   // Damage already factors in AP via blockChance; these counts ignore AP so
   // they capture "swing volume" — useful when a player wants to flood targets
@@ -115,11 +161,15 @@ export interface LoadoutOption {
 
   baseEfficiency: number;
   efficiencyDelta: number;
+  /** Base combined score (efficiency + effectiveness average) for delta math. */
+  baseCombinedScore: number;
+  /** Combined-score delta vs base — used for loadout up/down colouring. */
+  combinedDelta: number;
   offenseDelta: number;
   costDelta: number;
 
   isBase: boolean;
-  // Highest efficiency (dmg per point) — the current ⭐ flag.
+  // Highest combined effectiveness+efficiency score — the current ⭐ flag.
   isBestCombo: boolean;
   // Highest total attack count, with expected damage as tiebreaker. AP wins
   // via the damage tiebreaker (3 attacks AP(3) > 3 attacks AP(0)).

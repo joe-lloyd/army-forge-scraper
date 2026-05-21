@@ -13,8 +13,20 @@ import {
   getBlockChance,
   getWeaponAP,
   getDamageMultiplier,
+  effectivenessTierAbsolute,
 } from "../utils/balval";
 import { TIER_THRESHOLDS } from "../utils/types";
+
+// Absolute tier → display value mapping; mirrors balval's TIER_VALUE.
+const TIER_VALUE_DISPLAY: Record<Tier, number> = { S: 1, A: 0.75, B: 0.5, C: 0.25, D: 0 };
+
+function tierForPercentile(p: number): Tier {
+  if (p >= TIER_THRESHOLDS.S) return 'S';
+  if (p >= TIER_THRESHOLDS.A) return 'A';
+  if (p >= TIER_THRESHOLDS.B) return 'B';
+  if (p >= TIER_THRESHOLDS.C) return 'C';
+  return 'D';
+}
 import { GAME_SYSTEMS } from "../hooks/useArmyList";
 import { useCommonRules } from "../hooks/useCommonRules";
 import { RuleList } from "@/components/ui/RuleText";
@@ -55,7 +67,7 @@ function Tooltip({
     >
       {children}
       {open && (
-        <div className="absolute z-50 left-0 right-0 top-full mt-2 bg-slate-950/98 border border-sky-500/40 rounded-lg shadow-2xl shadow-sky-500/10 p-3 text-[11px] text-slate-200 leading-relaxed backdrop-blur-md">
+        <div className="absolute z-50 right-0 top-full mt-2 w-[min(22rem,calc(100vw-2rem))] max-w-[22rem] bg-slate-950/98 border border-sky-500/40 rounded-lg shadow-2xl shadow-sky-500/10 p-4 text-[11px] text-slate-200 leading-relaxed backdrop-blur-md">
           {content}
         </div>
       )}
@@ -149,7 +161,7 @@ function weaponDmgRows(
   const filtered = weapons.filter((w) =>
     mode === "melee" ? w.range === 0 : w.range > 0,
   );
-  const effQual = config.assault ? unit.quality + 1 : unit.quality;
+  const effQual = unit.quality;
   const hit = getHitChance(effQual);
   return filtered.map((w) => {
     const ap = getWeaponAP(w);
@@ -210,11 +222,6 @@ function dmgPerTurnTooltip(
           <div className="text-slate-500 text-[10px]">
             Eff = {fmt(total)} / {cost} = {fmt(efficiency, 3)}
           </div>
-        </div>
-      )}
-      {config.assault && (
-        <div className="text-[10px] text-purple-300 italic">
-          Assault active: -1 to hit (Q{unit.quality}+ → Q{unit.quality + 1}+).
         </div>
       )}
     </div>
@@ -317,14 +324,10 @@ function bestActivationTooltip(
   ranged: number,
   offense: number,
   cost: number,
-  assault: boolean,
 ) {
   return (
     <div className="space-y-2">
-      <div className="font-bold text-white">
-        Best Activation ={" "}
-        {assault ? "Melee + Ranged (Assault)" : "max(Melee, Ranged)"}
-      </div>
+      <div className="font-bold text-white">Best Activation = max(Melee, Ranged)</div>
       <div className="font-mono space-y-0.5">
         <div className="flex justify-between">
           <span className="text-rose-400">Melee</span>
@@ -335,19 +338,13 @@ function bestActivationTooltip(
           <span className="text-slate-300">{fmt(ranged)}</span>
         </div>
         <div className="border-t border-slate-700 pt-1 flex justify-between text-white font-bold">
-          <span>{assault ? "Sum" : "Max"}</span>
+          <span>Max</span>
           <span>{fmt(offense)}</span>
         </div>
       </div>
       <div className="text-[10px] text-slate-500">
         cost = {cost}pts · {fmt((offense / cost) * 100, 2)} dmg / 100pts
       </div>
-      {!assault && (
-        <div className="text-[10px] text-sky-300 italic">
-          Toggle Assault in the bar above to fire melee + ranged in the same
-          activation (-1 to hit).
-        </div>
-      )}
     </div>
   );
 }
@@ -450,7 +447,31 @@ export function UnitDetailSidebar({
   const baseOffense = loadouts[0]?.offense ?? 0;
   const baseCost = loadouts[0]?.state.cost ?? selectedUnit.cost;
 
-  const isAssault = balValConfig.assault;
+  // Live tier values derived from the ACTIVE loadout, so switching loadout
+  // updates the header badges (not just the inline stats).
+  //   - Effectiveness: absolute (kill/morale probability + speed). Doesn't
+  //     depend on army roster — only on this loadout vs the configured target.
+  //   - Damage: percentile-rank ACTIVE efficiency vs the army's roster of
+  //     base offenseEfficiency values. Falls back to balValScore tier when
+  //     scores can't be derived.
+  //   - Survivability: unit-level (eHP), unaffected by loadout choice — keep
+  //     balValScore's tier.
+  const activeEffEff = activeCost > 0 ? activeOffense / activeCost : 0;
+  const liveEffTier: Tier = active
+    ? effectivenessTierAbsolute(
+        active.killProbByGameEnd,
+        active.moraleProbByGameEnd,
+        active.expectedRoundToKill,
+        active.expectedRoundToMorale,
+      )
+    : (balValScore?.effectivenessTier ?? 'D');
+  const liveEffPct = TIER_VALUE_DISPLAY[liveEffTier];
+  const liveDmgPct = balValScore && balValScore.offenseEfficiency > 0
+    ? Math.min(1, Math.max(0, activeEffEff / balValScore.offenseEfficiency * balValScore.damagePercentile))
+    : (balValScore?.damagePercentile ?? 0);
+  const liveDmgTier: Tier = tierForPercentile(liveDmgPct);
+  const liveCombinedPct = (liveDmgPct + liveEffPct) / 2;
+  const liveCombinedTier: Tier = tierForPercentile(liveCombinedPct);
 
   return (
     <div className="glass-card flex flex-col sticky top-21 max-h-[calc(100vh-6rem)] overflow-hidden">
@@ -500,25 +521,61 @@ export function UnitDetailSidebar({
             <div className="flex flex-col items-end gap-2 shrink-0 ml-3">
               <div className="flex items-center gap-2">
                 <Tooltip
+                  content={
+                    <div className="space-y-2">
+                      <div className="font-bold text-white">
+                        Overall Rating <span className="text-[9px] text-slate-500 font-normal">(active loadout)</span>
+                      </div>
+                      <div className="font-mono text-[10px] text-slate-300 leading-snug">
+                        avg(Dmg/pt percentile within army, Kill% tier value)
+                      </div>
+                      <div className="font-mono text-[9px] text-slate-500 leading-snug">
+                        Kill% is absolute (S=1, A=0.75, B=0.5, C=0.25, D=0) — a unit that can't kill the target stays low regardless of army.
+                      </div>
+                      <div className="font-mono text-[10px] space-y-0.5 pt-1 border-t border-slate-800">
+                        <div className="flex justify-between">
+                          <span className="text-slate-400">Dmg/pt percentile</span>
+                          <span className="text-white">{(liveDmgPct * 100).toFixed(0)}%</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-slate-400">Kill% tier value</span>
+                          <span className="text-white">{(liveEffPct * 100).toFixed(0)}%</span>
+                        </div>
+                        <div className="flex justify-between text-white font-bold pt-1 border-t border-slate-700">
+                          <span>Combined</span>
+                          <span>{(liveCombinedPct * 100).toFixed(0)}%</span>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                >
+                  <TierBadge
+                    label="Overall"
+                    tier={liveCombinedTier}
+                    pct={liveCombinedPct}
+                    size="lg"
+                    primary
+                  />
+                </Tooltip>
+                <Tooltip
                   content={tierTooltip({
-                    metricName: "Damage Tier",
-                    formulaLabel: "Damage Eff = unitOffense / cost",
+                    metricName: "Damage / Point (active loadout)",
+                    formulaLabel: "Dmg/pt = activeOffense / activeCost",
                     numerator: {
                       label: "offense",
-                      value: balValScore.unitOffense,
+                      value: activeOffense,
                     },
-                    denominator: { label: "cost", value: balValScore.unitCost },
-                    efficiency: balValScore.offenseEfficiency,
-                    percentile: balValScore.damagePercentile,
-                    tier: balValScore.damageTier,
+                    denominator: { label: "cost", value: activeCost },
+                    efficiency: activeEffEff,
+                    percentile: liveDmgPct,
+                    tier: liveDmgTier,
                   })}
                 >
                   <TierBadge
-                    label="DMG"
-                    tier={balValScore.damageTier}
-                    pct={balValScore.damagePercentile}
-                    size="lg"
-                    primary
+                    label="Dmg/pt"
+                    tier={liveDmgTier}
+                    pct={liveDmgPct}
+                    size="md"
                   />
                 </Tooltip>
                 <Tooltip
@@ -533,9 +590,62 @@ export function UnitDetailSidebar({
                   })}
                 >
                   <TierBadge
-                    label="SURV"
+                    label="Tough"
                     tier={balValScore.survivabilityTier}
                     pct={balValScore.survivabilityPercentile}
+                    size="md"
+                  />
+                </Tooltip>
+                <Tooltip
+                  content={
+                    <div className="space-y-2">
+                      <div className="font-bold text-white">
+                        Effectiveness Tier <span className="text-[9px] text-slate-500 font-normal">(active loadout)</span>
+                      </div>
+                      <div className="font-mono text-[10px] text-slate-300 leading-snug">
+                        score = Σ round_weight × (kill_marginal + 0.5 × shake_only_marginal) / cost
+                      </div>
+                      <div className="font-mono text-[9px] text-slate-500 leading-snug">
+                        round weights = [4, 3, 2, 1] — R1 kill ≫ R4 kill (denies more activations).
+                        Shaken (≤ half HP) ≈ half a kill (denies one activation).
+                      </div>
+                      <div className="font-mono text-[10px] space-y-0.5 pt-1 border-t border-slate-800">
+                        <div className="flex justify-between">
+                          <span className="text-purple-300">Kill by R4</span>
+                          <span className="text-white">{((active?.killProbByGameEnd ?? 0) * 100).toFixed(1)}%</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-amber-300">Shaken by R4</span>
+                          <span className="text-white">{((active?.moraleProbByGameEnd ?? 0) * 100).toFixed(1)}%</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-slate-400">E[round to kill]</span>
+                          <span className="text-white">{active && Number.isFinite(active.expectedRoundToKill) ? active.expectedRoundToKill.toFixed(1) : '∞'}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-slate-400">E[round to shake]</span>
+                          <span className="text-white">{active && Number.isFinite(active.expectedRoundToMorale) ? active.expectedRoundToMorale.toFixed(1) : '∞'}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-slate-400">Activations to kill</span>
+                          <span className="text-white">{active && Number.isFinite(active.activationsToKill) ? active.activationsToKill : '∞'}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span className="text-slate-400">Points to kill</span>
+                          <span className="text-white">{active && Number.isFinite(active.pointsToKill) ? active.pointsToKill.toFixed(0) : '∞'}</span>
+                        </div>
+                        <div className="border-t border-slate-700 pt-1 flex justify-between text-white font-bold">
+                          <span>Tier value</span>
+                          <span>{(liveEffPct * 100).toFixed(0)}%</span>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                >
+                  <TierBadge
+                    label="Kill%"
+                    tier={liveEffTier}
+                    pct={liveEffPct}
                     size="md"
                   />
                 </Tooltip>
@@ -546,7 +656,7 @@ export function UnitDetailSidebar({
       </div>
 
       <div className="flex-1 overflow-y-auto p-6 space-y-8">
-        {/* Hero damage card — emphasized when assault combines */}
+        {/* Hero damage card */}
         <section>
           <Tooltip
             content={bestActivationTooltip(
@@ -554,11 +664,9 @@ export function UnitDetailSidebar({
               activeRanged,
               activeOffense,
               activeCost,
-              isAssault,
             )}
           >
             <HeroDamageCard
-              assault={isAssault}
               melee={activeMelee}
               ranged={activeRanged}
               offense={activeOffense}
@@ -586,7 +694,7 @@ export function UnitDetailSidebar({
                 value={activeMelee}
                 eff={activeMeleeEff}
                 barColor="bg-rose-500"
-                dim={!isAssault && activeMelee < activeRanged}
+                dim={activeMelee < activeRanged}
               />
             </Tooltip>
             <Tooltip
@@ -605,7 +713,7 @@ export function UnitDetailSidebar({
                 value={activeRanged}
                 eff={activeRangedEff}
                 barColor="bg-amber-500"
-                dim={!isAssault && activeRanged < activeMelee}
+                dim={activeRanged < activeMelee}
               />
             </Tooltip>
             <Tooltip
@@ -711,64 +819,16 @@ function TierBadge({
 }
 
 function HeroDamageCard({
-  assault,
   melee,
   ranged,
   offense,
   cost,
 }: {
-  assault: boolean;
   melee: number;
   ranged: number;
   offense: number;
   cost: number;
 }) {
-  if (assault && melee > 0 && ranged > 0) {
-    const meleeShare = melee / offense;
-    return (
-      <div className="rounded-xl border border-purple-400/40 bg-gradient-to-br from-purple-600/20 via-rose-500/15 to-amber-500/15 p-5 shadow-[0_0_24px_rgba(168,85,247,0.15)]">
-        <div className="flex items-center gap-2 mb-1">
-          <span className="px-2 py-0.5 rounded bg-purple-400/20 text-purple-200 text-[10px] font-black uppercase tracking-widest border border-purple-400/40">
-            ⚔ + 🔫 Assault Action
-          </span>
-          <span className="text-[10px] text-purple-200/70 italic">
-            Melee + Ranged combined this turn (-1 to hit)
-          </span>
-        </div>
-        <div className="flex items-end gap-3 mt-2">
-          <div className="text-5xl font-black text-white leading-none">
-            {offense.toFixed(2)}
-          </div>
-          <div className="text-xs text-slate-300 pb-1.5">
-            <span className="text-rose-400 font-bold">{melee.toFixed(2)}</span>
-            <span className="text-slate-500"> melee + </span>
-            <span className="text-amber-400 font-bold">
-              {ranged.toFixed(2)}
-            </span>
-            <span className="text-slate-500"> ranged</span>
-          </div>
-        </div>
-        {/* Stacked bar */}
-        <div className="mt-3 h-2 rounded-full overflow-hidden bg-slate-800 flex">
-          <div
-            className="bg-rose-500"
-            style={{ width: `${meleeShare * 100}%` }}
-            title={`Melee: ${melee.toFixed(2)}`}
-          />
-          <div
-            className="bg-amber-500"
-            style={{ width: `${(1 - meleeShare) * 100}%` }}
-            title={`Ranged: ${ranged.toFixed(2)}`}
-          />
-        </div>
-        <div className="mt-3 text-[10px] text-purple-200/70 font-mono">
-          {((offense / cost) * 100).toFixed(2)} dmg / 100pts · {cost}pts total
-        </div>
-      </div>
-    );
-  }
-
-  // Non-assault: pick the active mode (max).
   const isMelee = melee >= ranged;
   return (
     <div className="rounded-xl border border-sky-400/30 bg-sky-500/10 p-5">
@@ -776,9 +836,7 @@ function HeroDamageCard({
         <span className="text-[10px] font-bold uppercase tracking-widest text-sky-400">
           Best Activation · {isMelee ? "Melee" : "Ranged"}
         </span>
-        <span className="text-[10px] text-sky-200/60 italic">
-          Max(melee, ranged) — toggle Assault to combine
-        </span>
+        <span className="text-[10px] text-sky-200/60 italic">max(melee, ranged)</span>
       </div>
       <div className="flex items-end gap-3 mt-2">
         <div className="text-5xl font-black text-white leading-none">
@@ -865,9 +923,26 @@ function LoadoutPill({
   selected: boolean;
   onClick: () => void;
 }) {
-  const delta = loadout.efficiencyDelta;
-  const isUp = delta > 0.02;
-  const isDown = delta < -0.02;
+  // Two-axis classification vs base:
+  //   Dmg/pt better AND raw Dmg better                → green (strict win)
+  //   Dmg/pt worse  AND raw Dmg worse                 → red   (strict loss)
+  //   one up, one down                                → blue  (notable tradeoff)
+  //   both within ±2% of base                         → neutral
+  // The combined delta the optimizer uses to pick "best" is still its own thing
+  // (★ flag); this colouring is about what the player sees changing.
+  const effThr = 0.02;
+  const dmgThr = 0.02;
+  const baseDmg = loadout.baseEfficiency > 0
+    ? loadout.offense - loadout.offenseDelta // = base offense
+    : loadout.offense;
+  const dmgRel = baseDmg > 0 ? loadout.offenseDelta / baseDmg : 0;
+  const effUp = loadout.efficiencyDelta > effThr;
+  const effDown = loadout.efficiencyDelta < -effThr;
+  const dmgUp = dmgRel > dmgThr;
+  const dmgDown = dmgRel < -dmgThr;
+  const isStrictUp = effUp && dmgUp;
+  const isStrictDown = effDown && dmgDown;
+  const isTradeoff = !isStrictUp && !isStrictDown && (effUp || effDown || dmgUp || dmgDown);
   const isBest = loadout.isBestCombo;
 
   let ringClass = "border-slate-700 bg-slate-800/50 text-slate-300";
@@ -876,14 +951,18 @@ function LoadoutPill({
   if (loadout.isBase) {
     ringClass = "border-slate-600 bg-slate-800/60 text-slate-200";
     badgeClass = "text-slate-400";
-  } else if (isUp) {
+  } else if (isStrictUp) {
     ringClass =
       "border-emerald-500/40 bg-emerald-500/5 text-emerald-200 hover:border-emerald-400";
     badgeClass = "text-emerald-400";
-  } else if (isDown) {
+  } else if (isStrictDown) {
     ringClass =
       "border-rose-500/30 bg-rose-500/5 text-rose-200/80 hover:border-rose-400";
     badgeClass = "text-rose-400";
+  } else if (isTradeoff) {
+    ringClass =
+      "border-sky-500/40 bg-sky-500/5 text-sky-200 hover:border-sky-400";
+    badgeClass = "text-sky-400";
   } else {
     ringClass =
       "border-slate-700 bg-slate-800/40 text-slate-400 hover:border-slate-500";
@@ -920,9 +999,14 @@ function LoadoutPill({
         {!loadout.isBase && (
           <>
             <span className="opacity-50">·</span>
-            <span>
-              {delta >= 0 ? "+" : ""}
-              {(delta * 100).toFixed(0)}%
+            <span title="Damage / point efficiency vs base">
+              {loadout.efficiencyDelta >= 0 ? "+" : ""}
+              {(loadout.efficiencyDelta * 100).toFixed(0)}% eff
+            </span>
+            <span className="opacity-50">·</span>
+            <span title="Raw expected damage vs base">
+              {dmgRel >= 0 ? "+" : ""}
+              {(dmgRel * 100).toFixed(0)}% dmg
             </span>
           </>
         )}
@@ -1027,7 +1111,7 @@ function ArmoryBreakdown({
         <div className="space-y-3">
           {active.state.weapons.map((w: any, idx: number) => {
             const quality = unit.quality;
-            const effQual = balValConfig.assault ? quality + 1 : quality;
+            const effQual = quality;
             const hitChance = Math.min(
               5 / 6,
               Math.max(1 / 6, (7 - effQual) / 6),
@@ -1101,8 +1185,6 @@ function ArmoryBreakdown({
         * Expected wounds vs target with Defense {balValConfig.targetDefense}+ /
         Toughness {balValConfig.targetToughness} / Size{" "}
         {balValConfig.targetSize}.
-        {balValConfig.assault &&
-          " · Assault: melee + ranged combined, -1 to hit on all attacks."}
       </div>
     </div>
   );

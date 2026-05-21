@@ -2,12 +2,18 @@ import { describe, it, expect } from 'vitest';
 import {
   getHitChance,
   getBlockChance,
+  blockChanceWithReroll,
   getDamageMultiplier,
   getWeaponAP,
   calculateWeaponOffense,
   calculateUnitOffense,
   calculateEffectiveHP,
   calculateArmyBalVal,
+  targetHP,
+  killProbabilityPerActivation,
+  cumulativeKillCurve,
+  activationsToKill,
+  pointsToKill,
 } from './balval';
 import {
   parseSectionLabel,
@@ -36,6 +42,14 @@ describe('Math-Hammer BalVal Engine', () => {
       expect(getHitChance(1)).toBeCloseTo(5 / 6);
       expect(getHitChance(7)).toBeCloseTo(1 / 6);
     });
+
+    it('floors at 1/6 (natural 6 always hits) and caps at 5/6 (natural 1 always misses)', () => {
+      expect(getHitChance(0)).toBeCloseTo(5 / 6);
+      expect(getHitChance(1)).toBeCloseTo(5 / 6);
+      expect(getHitChance(2)).toBeCloseTo(5 / 6);
+      expect(getHitChance(6)).toBeCloseTo(1 / 6);
+      expect(getHitChance(7)).toBeCloseTo(1 / 6);
+    });
   });
 
   describe('getBlockChance', () => {
@@ -54,6 +68,31 @@ describe('Math-Hammer BalVal Engine', () => {
       expect(getBlockChance(4, 3)).toBeCloseTo(1 / 6);
       expect(getBlockChance(5, 4)).toBeCloseTo(1 / 6);
       expect(getBlockChance(2, 10)).toBeCloseTo(1 / 6);
+    });
+
+    it('keeps the 1/6 natural-6 save floor across the audited (def, ap) suite', () => {
+      expect(getBlockChance(2, 0)).toBeCloseTo(5 / 6);
+      expect(getBlockChance(2, 4)).toBeCloseTo(1 / 6);
+      expect(getBlockChance(5, 0)).toBeCloseTo(2 / 6);
+      expect(getBlockChance(5, 4)).toBeCloseTo(1 / 6);
+      expect(getBlockChance(6, 4)).toBeCloseTo(1 / 6);
+    });
+  });
+
+  describe('blockChanceWithReroll', () => {
+    it('returns base block chance when reroll flag is off', () => {
+      expect(blockChanceWithReroll(4, 0, false)).toBeCloseTo(0.5);
+    });
+
+    it('cuts the natural-6 saves with Bane/Lacerate reroll (Def 2+ vs AP 4)', () => {
+      // base block = 1/6 (floor); rerolling that 1/6 of saves at the same
+      // block prob: (1/6) * 7/6 - 1/6 = 7/36 - 6/36 = 1/36.
+      expect(blockChanceWithReroll(2, 4, true)).toBeCloseTo(1 / 36);
+    });
+
+    it('shaves the natural-6 saves cleanly when block prob is finite', () => {
+      // Def 4+, AP 0 → block = 0.5. Reroll: 0.5 * 7/6 - 1/6 = 7/12 - 2/12 = 5/12.
+      expect(blockChanceWithReroll(4, 0, true)).toBeCloseTo(5 / 12);
     });
   });
 
@@ -129,36 +168,31 @@ describe('Math-Hammer BalVal Engine', () => {
       expect(calculateWeaponOffense(weapon, 4, 4, 1, 1)).toBeCloseTo(2.0833);
     });
 
-    it('applies the Assault penalty (-1 to hit)', () => {
-      const weapon: Weapon = { id: 'w1', label: 'Rifle', name: 'Rifle', attacks: 1, count: 5, range: 24, specialRules: [] };
-      expect(calculateWeaponOffense(weapon, 4, 4, 1, 1, true)).toBeCloseTo(0.8333);
+    it('applies Reliable + Hazardous together: Q2 unit, hit chance 5/6 and effective AP +4', () => {
+      // Reliable forces hit to getHitChance(2) = 5/6. Hazardous adds AP+4 on top
+      // of the weapon's own AP. Against Def 4+ that pushes block to the 1/6 floor.
+      const weapon: Weapon = {
+        id: 'w1', label: 'Haz Rifle', name: 'Haz Rifle', attacks: 1, count: 6, range: 24,
+        specialRules: [
+          { id: 'r1', name: 'Reliable' } as Rule,
+          { id: 'r2', name: 'Hazardous' } as Rule,
+        ],
+      };
+      // 6 shots × 5/6 hit × (1 − 1/6 block) × 1 = 6 × 5/6 × 5/6 = 25/6 ≈ 4.1667.
+      expect(calculateWeaponOffense(weapon, 2, 4, 1, 1)).toBeCloseTo(25 / 6);
     });
   });
 
   describe('calculateUnitOffense', () => {
-    it('splits melee and ranged damage correctly (no assault → max of the two)', () => {
+    it('splits melee and ranged damage correctly (total = max of the two)', () => {
       const rangedWeapon = { id: 'w1', label: 'Rifle', name: 'Rifle', attacks: 1, count: 5, range: 24, specialRules: [] } as Weapon;
       const meleeWeapon = { id: 'w2', label: 'Sword', name: 'Sword', attacks: 2, count: 5, range: 0, specialRules: [] } as Weapon;
       const unit = { weapons: [rangedWeapon, meleeWeapon], quality: 4 } as unknown as Unit;
-      const config = { targetDefense: 4, targetSize: 1, targetToughness: 1, offenseWeight: 0.5, assault: false, mostEffective: false };
+      const config = { targetDefense: 4, targetSize: 1, targetToughness: 1, offenseWeight: 0.5, mostEffective: false };
       const { meleeOffense, rangedOffense, totalOffense } = calculateUnitOffense(unit, config);
       expect(rangedOffense).toBeCloseTo(1.25);
       expect(meleeOffense).toBeCloseTo(2.5);
       expect(totalOffense).toBeCloseTo(2.5);
-    });
-
-    it('combines melee + ranged when assault is enabled (with -1 to hit)', () => {
-      const rangedWeapon = { id: 'w1', label: 'Rifle', name: 'Rifle', attacks: 1, count: 5, range: 24, specialRules: [] } as Weapon;
-      const meleeWeapon = { id: 'w2', label: 'Sword', name: 'Sword', attacks: 2, count: 5, range: 0, specialRules: [] } as Weapon;
-      const unit = { weapons: [rangedWeapon, meleeWeapon], quality: 4 } as unknown as Unit;
-      const config = { targetDefense: 4, targetSize: 1, targetToughness: 1, offenseWeight: 0.5, assault: true, mostEffective: false };
-      const { meleeOffense, rangedOffense, totalOffense } = calculateUnitOffense(unit, config);
-      // Q4+ → -1 → Q5+ (1/3 hit), Def 4+ (0.5 block, 0.5 wound) → wound chance 1/6
-      expect(rangedOffense).toBeCloseTo(5 * (1 / 3) * 0.5);
-      expect(meleeOffense).toBeCloseTo(10 * (1 / 3) * 0.5);
-      expect(totalOffense).toBeCloseTo(meleeOffense + rangedOffense);
-      // Combined output beats picking the bigger single mode.
-      expect(totalOffense).toBeGreaterThan(Math.max(meleeOffense, rangedOffense));
     });
   });
 
@@ -229,6 +263,144 @@ describe('Math-Hammer BalVal Engine', () => {
       } as unknown as Unit;
       expect(calculateEffectiveHP(unit)).toBeCloseTo(15);
     });
+  });
+});
+
+describe('Effectiveness helpers', () => {
+  it('targetHP = size × max(1, toughness)', () => {
+    expect(targetHP({ targetDefense: 4, targetSize: 5, targetToughness: 1, offenseWeight: 0.6, mostEffective: false })).toBe(5);
+    expect(targetHP({ targetDefense: 2, targetSize: 1, targetToughness: 12, offenseWeight: 0.6, mostEffective: false })).toBe(12);
+  });
+
+  it('killProbabilityPerActivation: λ=2, HP=12 → near zero', () => {
+    // Poisson(2) virtually never produces ≥12 events.
+    expect(killProbabilityPerActivation(2, 12)).toBeLessThan(0.001);
+  });
+
+  it('killProbabilityPerActivation: λ=8, HP=12 → meaningful chance', () => {
+    const p = killProbabilityPerActivation(8, 12);
+    expect(p).toBeGreaterThan(0.05);
+    expect(p).toBeLessThan(0.5);
+  });
+
+  it('killProbabilityPerActivation returns 0 when expected wounds below floor', () => {
+    expect(killProbabilityPerActivation(0.05, 5)).toBe(0);
+    expect(killProbabilityPerActivation(0, 5)).toBe(0);
+  });
+
+  it('cumulativeKillCurve: wounds accumulate across rounds (Poisson(R × λ))', () => {
+    // λ=4 wounds/activation vs HP=12. By R3 expected total = 12, ≈ 50/50 kill.
+    // By R4 expected total = 16, strongly favoured.
+    const curve = cumulativeKillCurve(4, 12);
+    expect(curve[0]).toBeLessThan(0.05);   // 1 round of λ=4 → P(X≥12) tiny
+    expect(curve[2]).toBeGreaterThan(0.3); // 3 rounds → roughly coin-flip
+    expect(curve[2]).toBeLessThan(0.7);
+    expect(curve[3]).toBeGreaterThan(0.7); // 4 rounds → likely
+  });
+
+  it('cumulativeKillCurve is monotonic non-decreasing', () => {
+    const curve = cumulativeKillCurve(3, 12);
+    expect(curve[1]).toBeGreaterThanOrEqual(curve[0]);
+    expect(curve[2]).toBeGreaterThanOrEqual(curve[1]);
+    expect(curve[3]).toBeGreaterThanOrEqual(curve[2]);
+  });
+
+  it('activationsToKill: ceil(HP / w) when wounds ≥ 0.1; Infinity otherwise', () => {
+    expect(activationsToKill(4, 12)).toBe(3);
+    expect(activationsToKill(2, 12)).toBe(6);
+    expect(activationsToKill(0.05, 12)).toBe(Infinity);
+    expect(activationsToKill(0, 12)).toBe(Infinity);
+  });
+
+  it('pointsToKill: cost × ATK with Infinity propagation', () => {
+    expect(pointsToKill(100, 3)).toBe(300);
+    expect(pointsToKill(100, Infinity)).toBe(Infinity);
+  });
+});
+
+describe('Worked-example regressions (proposal acceptance criteria)', () => {
+  // 20-strong Q5+ infantry, 40 melee attacks, AP 0, vs Def 2+ Size 1 Tough 12.
+  // Numbers should reproduce the user's hand-calculation: ~13 hits, ~2 unsaved
+  // wounds per activation → realistic ATK ≥ 6 → low killProbByGameEnd.
+  const sisters: any = {
+    id: 'sisters', name: 'Novice Sisters', cost: 150, size: 20, quality: 5, defense: 5,
+    weapons: [
+      { id: 'ccw', name: 'Dual CCWs', label: 'Dual CCWs', count: 20, attacks: 2, range: 0, specialRules: [] },
+    ],
+    rules: [],
+  };
+  // Battle Tank w/ 3× Heavy Fusion Rifle (Q4+, AP 4, Deadly 3) + Deadly(6) cannon.
+  const tank: any = {
+    id: 'tank', name: 'Battle Tank', cost: 320, size: 1, quality: 4, defense: 2,
+    weapons: [
+      {
+        id: 'hfr', name: 'Heavy Fusion Rifle', label: 'Heavy Fusion Rifle',
+        count: 3, attacks: 1, range: 18,
+        specialRules: [
+          { id: 'ap4', name: 'AP', rating: 4, label: 'AP(4)' },
+          { id: 'd3', name: 'Deadly', rating: 3, label: 'Deadly(3)' },
+        ],
+      },
+      {
+        id: 'cannon', name: 'Tank Cannon', label: 'Tank Cannon',
+        count: 1, attacks: 2, range: 36,
+        specialRules: [
+          { id: 'ap2', name: 'AP', rating: 2, label: 'AP(2)' },
+          { id: 'd6', name: 'Deadly', rating: 6, label: 'Deadly(6)' },
+        ],
+      },
+    ],
+    rules: [{ id: 'tough', name: 'Tough', rating: 12, label: 'Tough(12)' }],
+  };
+
+  const armouredTarget = {
+    targetDefense: 2, targetSize: 1, targetToughness: 12, offenseWeight: 0.6, mostEffective: false,
+  };
+
+  it('20 Sisters vs Tough(12) Def 2+: ~2 wounds/activation, ATK ≥ 6, low killProbByGameEnd', () => {
+    const res = calculateArmyBalVal([sisters, tank], armouredTarget)['sisters'];
+    expect(res.unitOffense).toBeGreaterThan(1.5);
+    expect(res.unitOffense).toBeLessThan(3);
+    expect(res.activationsToKill).toBeGreaterThanOrEqual(6);
+    // ~2 wounds/round × 4 rounds = 8 expected wounds vs HP 12. Poisson tail
+    // gives a non-trivial but small chance; bound it at 0.3 (the qualitative
+    // intent is "this unit cannot reliably kill the target in the game").
+    expect(res.killProbByGameEnd).toBeLessThanOrEqual(0.3);
+  });
+
+  it('Battle Tank w/ HFR vs same target: ~6–9 wounds/activation, ATK ≤ 2, killProbByGameEnd ≥ 0.85', () => {
+    const res = calculateArmyBalVal([sisters, tank], armouredTarget)['tank'];
+    expect(res.unitOffense).toBeGreaterThan(5);
+    expect(res.unitOffense).toBeLessThan(12);
+    expect(res.activationsToKill).toBeLessThanOrEqual(2);
+    expect(res.killProbByGameEnd).toBeGreaterThanOrEqual(0.85);
+  });
+
+  it('Tank effectivenessTier ≥ Sisters effectivenessTier against armoured target', () => {
+    const results = calculateArmyBalVal([sisters, tank], armouredTarget);
+    const tierOrder: Record<string, number> = { D: 0, C: 1, B: 2, A: 3, S: 4 };
+    expect(tierOrder[results.tank.effectivenessTier]).toBeGreaterThan(tierOrder[results.sisters.effectivenessTier]);
+  });
+
+  it('Sisters get absolute D against armoured target — no percentile-rescue from a 2-unit roster', () => {
+    // Regression for the "least-bad-in-army gets S" bug. Tier is now absolute:
+    // if you can't reliably damage the target, you're D regardless of what
+    // else is in the roster.
+    const results = calculateArmyBalVal([sisters, tank], armouredTarget);
+    expect(results.sisters.effectivenessTier).toBe('D');
+  });
+
+  it('Tank gets A or S against armoured target — absolute thresholds, not relative', () => {
+    const results = calculateArmyBalVal([sisters, tank], armouredTarget);
+    expect(['A', 'S']).toContain(results.tank.effectivenessTier);
+  });
+
+  it('Sweeping tough 1 → 12: sisters killProbByGameEnd collapses; tank stays high', () => {
+    const softTarget = { targetDefense: 5, targetSize: 5, targetToughness: 1, offenseWeight: 0.6, mostEffective: false };
+    const soft = calculateArmyBalVal([sisters, tank], softTarget);
+    const hard = calculateArmyBalVal([sisters, tank], armouredTarget);
+    expect(soft.sisters.killProbByGameEnd).toBeGreaterThan(hard.sisters.killProbByGameEnd);
+    expect(hard.tank.killProbByGameEnd).toBeGreaterThan(0.5);
   });
 });
 

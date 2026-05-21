@@ -367,7 +367,6 @@ function analyzeUnit(unit: ParsedUnit, totalArmyPoints: number): UnitAnalysis {
       targetSize: p.modelsPerUnit,
       targetToughness: p.tough,
       offenseWeight: 0.6,
-      assault: false,
       mostEffective: false,
     });
     // expected wounds the unit deals in a single activation against ONE squad of

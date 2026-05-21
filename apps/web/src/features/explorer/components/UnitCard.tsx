@@ -24,9 +24,43 @@ function tierStyle(t?: Tier) {
   return TIER_STYLES[t ?? 'none'];
 }
 
+function LabelledTier({
+  caption,
+  tier,
+  pct,
+  styles,
+  ring,
+  size = 'sm',
+  title,
+}: {
+  caption: string;
+  tier: Tier;
+  pct: number;
+  styles: { text: string; bg: string };
+  ring: string;
+  size?: 'sm' | 'lg';
+  title: string;
+}) {
+  const dim = size === 'lg' ? 'w-7 h-7 text-sm' : 'w-5 h-5 text-[10px]';
+  return (
+    <div className="flex flex-col items-center gap-0.5" title={`${title} — top ${(pct * 100).toFixed(0)}%`}>
+      <span
+        className={`flex items-center justify-center ${dim} rounded font-black ${styles.bg} ${styles.text} ring-1 ${ring}`}
+      >
+        {tier}
+      </span>
+      <span className="text-[8px] font-bold uppercase tracking-wider text-slate-500 leading-none">
+        {caption}
+      </span>
+    </div>
+  );
+}
+
 export function UnitCard({ unit, army, isSelected, onSelect, balValScore, balValConfig, isDoubled }: UnitCardProps) {
   const dmg = tierStyle(balValScore?.damageTier);
   const surv = tierStyle(balValScore?.survivabilityTier);
+  const eff = tierStyle(balValScore?.effectivenessTier);
+  const combined = tierStyle(balValScore?.combinedTier);
 
   return (
     <div
@@ -41,19 +75,40 @@ export function UnitCard({ unit, army, isSelected, onSelect, balValScore, balVal
         <div className="flex items-start justify-between gap-2 w-full">
           <div className="flex items-center gap-2 min-w-0">
             {balValScore && (
-              <div className="flex items-center gap-1 shrink-0">
-                <span
-                  title={`Damage tier (top ${(balValScore.damagePercentile * 100).toFixed(0)}%)`}
-                  className={`flex items-center justify-center w-7 h-7 rounded text-sm font-black ${dmg.bg} ${dmg.text} ring-1 ring-rose-500/20`}
-                >
-                  {balValScore.damageTier}
-                </span>
-                <span
-                  title={`Survivability tier (top ${(balValScore.survivabilityPercentile * 100).toFixed(0)}%)`}
-                  className={`flex items-center justify-center w-5 h-5 rounded text-[10px] font-bold ${surv.bg} ${surv.text} ring-1 ring-emerald-500/20`}
-                >
-                  {balValScore.survivabilityTier}
-                </span>
+              <div className="flex items-end gap-1 shrink-0">
+                <LabelledTier
+                  caption="Overall"
+                  tier={balValScore.combinedTier}
+                  pct={balValScore.combinedPercentile}
+                  styles={combined}
+                  size="lg"
+                  ring="ring-sky-500/20"
+                  title="Overall rating — combined damage-per-point (efficiency) and chance-to-kill-target (effectiveness), ranked within this army"
+                />
+                <LabelledTier
+                  caption="Dmg/pt"
+                  tier={balValScore.damageTier}
+                  pct={balValScore.damagePercentile}
+                  styles={dmg}
+                  ring="ring-rose-500/20"
+                  title="Damage efficiency — expected wounds per point spent, ranked within this army"
+                />
+                <LabelledTier
+                  caption="Kill%"
+                  tier={balValScore.effectivenessTier}
+                  pct={balValScore.effectivenessPercentile}
+                  styles={eff}
+                  ring="ring-purple-500/20"
+                  title="Effectiveness — chance of removing the configured target within 4 rounds, weighted by points-to-kill"
+                />
+                <LabelledTier
+                  caption="Tough"
+                  tier={balValScore.survivabilityTier}
+                  pct={balValScore.survivabilityPercentile}
+                  styles={surv}
+                  ring="ring-emerald-500/20"
+                  title="Survivability — effective HP per point spent (EHP / cost)"
+                />
               </div>
             )}
             <h4 className="text-base font-bold text-white leading-snug truncate">{unit.name}</h4>
@@ -88,6 +143,20 @@ export function UnitCard({ unit, army, isSelected, onSelect, balValScore, balVal
               <span className="text-slate-600">·</span>
               <span className="text-emerald-400" title="Effective HP">
                 ♥ {balValScore.effectiveHP.toFixed(0)}
+              </span>
+              <span className="text-slate-600">·</span>
+              <span
+                className="text-amber-300"
+                title={`Chance to take the target to ≤ half HP (force morale / Shaken) by end of round ${Number.isFinite(balValScore.expectedRoundToMorale) ? balValScore.expectedRoundToMorale.toFixed(1) : '4'}`}
+              >
+                ⚠ {(balValScore.moraleProbByGameEnd * 100).toFixed(0)}%
+              </span>
+              <span className="text-slate-600">·</span>
+              <span
+                className="text-purple-300"
+                title={`Chance to kill the target by end of round 4. Expected round of kill: ${Number.isFinite(balValScore.expectedRoundToKill) ? balValScore.expectedRoundToKill.toFixed(1) : 'never in-game'}. ${Number.isFinite(balValScore.pointsToKill) ? `${balValScore.pointsToKill.toFixed(0)}pts to kill` : 'cannot damage'}`}
+              >
+                💀 {(balValScore.killProbByGameEnd * 100).toFixed(0)}%
               </span>
             </div>
           )}
