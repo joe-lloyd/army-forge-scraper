@@ -17,7 +17,6 @@ Derived: `targetHP = targetSize × max(1, targetToughness)`.
 `calculateWeaponOffense` returns expected wounds per activation for one weapon against the configured target. Handles AP, Deadly, Blast, Rending, Destructive, Bane/Lacerate, Reliable, Hazardous, Furious, Surge, Shred, Impact, Thrust.
 
 `calculateUnitOffense` sums per-weapon results, classifying by melee/ranged, and reports `totalOffense = max(meleeOffense, rangedOffense)`. (Assault is no longer modelled — a future weapon-rule update will supersede it.)
-
 Natural-roll floors are enforced in the primitives:
 
 - `getHitChance` clamps to `[1/6, 5/6]` — natural 6 always hits, natural 1 always misses.
@@ -68,6 +67,22 @@ This anchors **Overall** (combined) tier against absolute lethality: combined = 
 ## Loadout scoring
 
 `scoreLoadout` returns the same effectiveness + efficiency fields per loadout. `findBestLoadout` picks the highest `combinedScore = (efficiency + effectivenessScore) / 2`. `isMostOutput` / `isMostMelee` / `isMostRanged` remain driven by raw attack counts (swing-volume semantics unchanged).
+
+`scoreLoadout` deliberately does **not** reuse `calculateUnitOffense`'s `max(melee, ranged)`. That form assumes one mode for the whole unit, which only holds for a homogeneous pool. A model attacks with a single weapon per activation, so `scoreLoadout` instead gives each model its best available weapon — weapons ranked by per-model offense, greedily placed into `unit.size` slots — and sums the placements. A sgt holding a Blast(5) EMP Pistol next to four models with melee Flails now keeps its blast output instead of having it discarded because the melee sum is larger. For a homogeneous loadout (every base weapon has `count === unit.size`) the two agree exactly, so unchanged units score identically; `meleeOffense` / `rangedOffense` are still reported as raw per-weapon sums for the UI split.
+
+### Pill labels and ordering
+
+`enumerateOptionLoadouts` returns the base (default) loadout first — consumers read `loadouts[0]` as the baseline for deltas — then the rest in score order, with the top result flagged `isBestCombo`.
+
+A pill's `(×N)` suffix means "N separate selections", so it is shown only when the count is a selection count:
+
+| Section `affects` | `quantity` means | Label |
+| --- | --- | --- |
+| `any`, `up to` | selections taken | always suffixed (`Fusion Rifle (×1)`) |
+| `all`, `exactly` | models covered by one selection | never suffixed (`Great Weapon`) |
+| absent | models swapped | suffixed only when `> 1` |
+
+Chained applications join with `" + "`, mirroring the cost rule in `applyOption`.
 
 UI loadout rows colour on a two-axis test of `(efficiencyDelta, offenseDelta)`:
 

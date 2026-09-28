@@ -269,6 +269,7 @@ export function applyOption(
     optionId: option.id,
     optionLabel: option.label,
     variant,
+    affectsType,
     quantity: perInstance,
     costApplied,
     weaponsAdded: added,
@@ -283,23 +284,55 @@ export function applyOption(
 }
 
 export function scoreLoadout(state: LoadoutState, unit: Unit, config: BalValConfig): LoadoutScore {
+  // Per-weapon expected wounds, classified by mode. These stay as raw sums so
+  // the UI can show the melee/ranged split independently of the pooled total.
+  const scored: { count: number; offense: number; perModel: number; melee: boolean }[] =
+    state.weapons.map(w => {
+      const offense = calculateWeaponOffense(
+        w,
+        unit.quality,
+        config.targetDefense,
+        config.targetSize,
+        config.targetToughness,
+      );
+      const count = Math.max(0, w.count || 0);
+      return {
+        count,
+        offense,
+        // `calculateWeaponOffense` already totals every copy in the pool, so
+        // the single-model figure is the total spread back over that pool.
+        perModel: count > 0 ? offense / count : 0,
+        // OPR omits `range` entirely on melee gains (e.g. Dual Sword-Flails),
+        // so a strict `=== 0` check falsely classifies them as ranged. Treat
+        // missing/0/undefined as melee.
+        melee: !w.range,
+      };
+    });
   let melee = 0;
   let ranged = 0;
-  for (const w of state.weapons) {
-    const o = calculateWeaponOffense(
-      w,
-      unit.quality,
-      config.targetDefense,
-      config.targetSize,
-      config.targetToughness,
-    );
-    // OPR omits `range` entirely on melee gains (e.g. Dual Sword-Flails),
-    // so a strict `=== 0` check falsely classifies them as ranged. Treat
-    // missing/0/undefined as melee.
-    if (!w.range) melee += o;
-    else ranged += o;
+  for (const s of scored) {
+    if (s.melee) melee += s.offense;
+    else ranged += s.offense;
   }
-  const offense = Math.max(melee, ranged);
+
+  // A model attacks with ONE weapon per activation, so pooling every weapon
+  // into `max(sumMelee, sumRanged)` throws away output whenever a loadout is
+  // heterogeneous — e.g. 4 AP(2) Razor Flails on four models plus a sgt holding
+  // a Blast(5) EMP Pistol: the sgt's 13.9 ranged wounds vanish because the
+  // flails' 8.9 melee is "bigger". Hand each model its best weapon instead
+  // (greedy over descending per-model offense, which is optimal for this
+  // supply-limited matching problem) and sum. For a homogeneous loadout — every
+  // base weapon has count === unit.size — this collapses back to the old
+  // max(melee, ranged) exactly, so unchanged units score identically.
+  let modelsLeft = unit.size;
+  let offense = 0;
+  for (const s of [...scored].sort((a, b) => b.perModel - a.perModel)) {
+    if (modelsLeft <= 0) break;
+    const placed = Math.min(modelsLeft, s.count);
+    if (placed <= 0) continue;
+    offense += s.perModel * placed;
+    modelsLeft -= placed;
+  }
   const ehp = calculateEffectiveHP(unit);
   const efficiency = state.cost > 0
     ? (offense / state.cost) * config.offenseWeight + (ehp / state.cost) * (1 - config.offenseWeight)
@@ -606,11 +639,26 @@ function makeOption(
 //   no apps          → "Default Loadout"
 //   one app          → option.label
 //   chained apps     → "OptA + OptB" (joined by " + ")
+//   elective repeats → "Opt (×N)" — see `shouldShowQuantity`.
 function labelForApplications(apps: UpgradeApplication[]): string {
   if (apps.length === 0) return 'Default Loadout';
   return apps
-    .map((a) => (a.quantity > 1 ? `${a.optionLabel} (×${a.quantity})` : a.optionLabel))
+    .map((a) => (shouldShowQuantity(a) ? `${a.optionLabel} (×${a.quantity})` : a.optionLabel))
     .join(' + ');
+}
+
+// The "(×N)" suffix means "this option was selected N times". That's only
+// meaningful when the number is a SELECTION count:
+//   affects 'any' / 'up to' → per-model elective, quantity = selections taken.
+//   affects 'all' / 'exactly' → one selection already covers the quoted count,
+//     so "(×10)" would read as "ten Great Weapons bought" and is suppressed
+//     (mirrors the cost rule in `applyOption`).
+//   no `affects` → the swap is only ever taken once; show the count anyway if
+//     the search ever produced more than one.
+function shouldShowQuantity(app: UpgradeApplication): boolean {
+  const type = app.affectsType;
+  if (type === 'all' || type === 'exactly') return false;
+  return app.quantity > 1 || type === 'any' || type === 'up to';
 }
 
 function idForApplications(apps: UpgradeApplication[]): string {
@@ -618,11 +666,14 @@ function idForApplications(apps: UpgradeApplication[]): string {
   return apps.map((a) => `${a.sectionId}:${a.optionId}:${a.quantity}`).join('__');
 }
 
-// Every legal loadout the search found, returned as pills. The first entry is
-// always the base (default) loadout — if it doesn't naturally appear in the
-// search results (it should, via the all-skip path), it's prepended. The
-// highest-efficiency result is flagged isBestCombo. Otherwise no curation:
-// the UI can sort/filter however it likes.
+// Every legal loadout the search found, returned as pills, base first. The
+// search returns results ranked by combined score, but the base (default)
+// loadout leads the list: consumers (UnitDetailSidebar, UnitCardDetails) read
+// `loadouts[0]` as the baseline to compute deltas against, and a player's
+// "nothing upgraded" build is the first thing they should see. Everything after
+// the base keeps the search's score ranking. The highest-scoring result is
+// flagged isBestCombo. Otherwise no curation: the UI can sort/filter however
+// it likes.
 export function enumerateOptionLoadouts(
   unit: Unit,
   army: ArmyBookLike,
@@ -633,7 +684,7 @@ export function enumerateOptionLoadouts(
   const baseScore = scoreLoadout(base, unit, config);
   const all = searchLoadouts(unit, army, config, opts);
 
-  const out: LoadoutOption[] = all.map((state, i) => {
+  const ranked = all.map((state, i) => {
     const isBase = state.applications.length === 0;
     return makeOption(
       idForApplications(state.applications),
@@ -650,7 +701,12 @@ export function enumerateOptionLoadouts(
 
   // Guarantee a base pill at the top even if the all-skip path somehow
   // didn't surface (defensive — searchLoadouts always includes it).
-  if (!out.some((o) => o.isBase)) {
+  const baseIdx = ranked.findIndex((o) => o.isBase);
+  const out: LoadoutOption[] =
+    baseIdx <= 0
+      ? ranked
+      : [ranked[baseIdx], ...ranked.filter((_, i) => i !== baseIdx)];
+  if (baseIdx < 0) {
     out.unshift(
       makeOption('base', 'Default Loadout', base, unit, config, baseScore, base.cost, true, all.length === 0),
     );
