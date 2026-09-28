@@ -101,6 +101,14 @@ export interface UpgradeApplication {
   optionId: string;
   optionLabel: string;
   variant: string;
+  /**
+   * The section's `affects.type` verbatim ('all' | 'exactly' | 'any' | 'up to').
+   * Drives the label's "(×N)" marker: for 'any'/'up to' the quantity counts how
+   * many separate selections the player took, so it is always worth showing.
+   * For 'all'/'exactly' one selection already covers the whole quoted count, so
+   * the number would read as "N upgrades" and is suppressed.
+   */
+  affectsType?: string;
   quantity: number;
   costApplied: number;
   weaponsAdded: Weapon[];
