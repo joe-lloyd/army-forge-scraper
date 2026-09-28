@@ -15,6 +15,12 @@
     "start": {
       "dependsOn": ["build"],
       "persistent": true
+    },
+    "capture": {
+      "cache": false
+    },
+    "test": {
+      "dependsOn": ["^build"]
     }
   }
 }
