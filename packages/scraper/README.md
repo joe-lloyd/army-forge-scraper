@@ -423,10 +423,197 @@ capture of the same version is a new observation, not a duplicate copy.
 
 `releases/` is **not** gitignored, so these captures are part of the change and
 can be committed. The spec calls for release directories to be kept and never
-rewritten, which means they belong in history, not in a build artifact.
+rewritten, which means they belong in history, not a build artifact.
+
+# Release normalization
+
+`packages/scraper/src/normalize.js` turns one captured release directory into a
+single normalized JSON document. The raw payloads stay exactly as captured; this
+script only *adds* a file.
+
+| | |
+| --- | --- |
+| File | `packages/scraper/src/normalize.js` |
+| Run as | `packages/scraper/package.json:9` — `"normalize": "node src/normalize.js"` |
+| From repo root | `package.json:10` — `"normalize": "turbo run normalize --filter=@opr-api/scraper"` |
+| Tests | `packages/scraper/test/normalize.test.js`, `node --test` |
+| Arguments | Optional. A release directory name under `releases/`, or a path to one. Bare, it targets the most recently captured release, by the manifest's `capturedAt`. |
+| Network | None. See [No network](#no-network-access-is-tested-not-promised). |
+
+## Layout
+
+```
+releases/<version>__<n>/
+  manifest.json
+  normalized.json                              <-- added by the normalizer
+  <system>/<army name> (<uid>).json
+  <system>/common-rules.json
+```
+
+One document per release, not one per army, so a consumer loads the release
+once. Each of the three recorded captures now has one:
+
+| Release | `version` | Armies | Units | Weapons | Upgrade options | `normalized.json` | SHA-256 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| `releases/3.5.3/` | `3.5.3` | 186 | 3200 | 5381 | 19042 | 56 799 889 B | `a5e9b29133b5b3ea…` |
+| `releases/3.5.3__2/` | `3.5.3` | 186 | 3200 | 5381 | 19042 | 56 799 892 B | `f6becb3c44651ee6…` |
+| `releases/3.5.3__3/` | `3.5.3` | 186 | 3200 | 5381 | 19042 | 56 799 892 B | `8a746e68fde20f94…` |
+
+`versionHistogram` is `{"3.5.3": 178, "3.5.2": 8}` in all three, and
+`armiesBySystem` is `{"age-of-fantasy": 40, "age-of-fantasy-skirmish": 46,
+"grimdark-future": 47, "grimdark-future-firefight": 53}` — recomputed from the
+normalized armies, so the document can never disagree with its own contents.
+
+The document is **larger than the raw payloads it replaces** (57 MB against
+40 MB), and that is deliberate. It is indented with two spaces at a nesting
+depth of 15 so a `git diff` between two releases is a diff of army data rather
+than of re-indentation; minified, the same content is 22 MB. The differ that
+consumes this is what decides how much of it ships in the static bundle.
+
+## Why the document is pruned, and what it is not
+
+The raw payload is the full-fidelity record and is never modified. The
+normalized document carries army data and drops per-army bookkeeping that is
+not army data, so a diff is about armies:
+
+| Dropped | Why |
+| --- | --- |
+| `userId`, `username`, `creator`, `isCreator`, `popularity`, `downvotes`, `voted` | Account and vote state, not army data. |
+| `coverImagePath`, `bannerImagePath`, `loreUrl`, `visibility` | Presentation and access flags. |
+| `hint`, `background`, `backgroundFull`, `partnerSettings` | Army blurb prose. Editing a blurb is not a rules change. |
+| `balanceValidReason` | Prose. `balanceValid` itself is carried. |
+| `modifiedAt`, `editedAt`, `enabledGameSystems` | The capture's own bookkeeping; `capturedAt` on the document covers the when. |
+| `spells`, `transforms` | 1116 spells and 410 transforms in one release. They are real army rules that no unit, weapon or upgrade list references, so they would sit outside every comparison the spec asks for. Out of scope, and named here rather than dropped silently. `customRules` and `customWeapons` are also omitted, and those really are empty in all 558 captured payloads. |
+| `unit.sync`, `unit.loadout`, `unit.product` | Client-side sync marker, and a 3D-model store link on 2 and 6 units out of 9600 across the three captures. |
+| `aliasedRuleId` on rule references | The army's rule dictionary carries it, which is where a reference resolves. |
+
+## Key order
+
+The order is fixed, and identical in every release. `KEY_ORDER` in
+`normalize.js` is the contract; `normalize.test.js` hard-codes its own copy and
+walks a produced document against it, so reordering a literal without changing
+the contract fails the suite instead of silently reformatting every future
+diff.
+
+| Node | Key order |
+| --- | --- |
+| document | `schemaVersion`, `version`, `releaseDir`, `capturedAt`, `defaults`, `gameSystems`, `armyCount`, `armiesBySystem`, `versionHistogram`, `armies` |
+| army | `uid`, `name`, `system`, `systemId`, `versionString`, `factionName`, `raceGroup`, `official`, `balanceValid`, `specialRules`, `units`, `upgradePackages` |
+| army rule | `id`, `name`, `originalName`, `aliasedRuleId`, `hasRating`, `coreType`, `targetType`, `description` |
+| unit | `id`, `name`, `genericName`, `key`, `type`, `cost`, `size`, `originalSize`, `bases`, `defense`, `quality`, `valid`, `hasCustomRule`, `hasBalanceInvalid`, `isNarrative`, `upgradePackageUids`, `disabledSections`, `disabledUpgradeSections`, `weapons`, `items`, `rules` |
+| bases | `round`, `square` |
+| weapon-like | `type`, `id`, `name`, `nameOverride`, `label`, `count`, `originalCount`, `range`, `attacks`, `attacksMultiplier`, `weaponId`, `rating`, `newWeapon`, `bases`, `specialRules`, `content` |
+| item | `id`, `name`, `type`, `count`, `bases`, `content` |
+| rule reference | `id`, `name`, `label`, `type`, `rating`, `additional` |
+| upgrade package | `uid`, `hint`, `sections` |
+| upgrade section | `id`, `uid`, `label`, `variant`, `select`, `model`, `isHeroUpgrade`, `isLowPrio`, `targets`, `affects`, `options` |
+| upgrade option | `id`, `uid`, `label`, `cost`, `costs`, `gains` |
+| upgrade cost | `unitId`, `cost`, `exactCost` |
+| selection | `type`, `value` |
+
+One `weapon-like` shape covers unit weapons, item content entries and upgrade
+gains, because the payload uses one `ArmyBookWeapon` / `ArmyBookItem` /
+`ArmyBookRule` node for all three and only varies which keys it fills in. The
+`type` key is what tells a consumer which of the rest carry meaning.
+
+### List order, and which lists are sorted
+
+| List | Order | Why |
+| --- | --- | --- |
+| `units` | payload order | Roster order is the unit-count limit. Reordering it would invent a change. |
+| `weapons`, `items`, `rules`, `specialRules`, `sections`, `options`, `gains`, `costs`, `targets` | payload order | Order is data — an upgrade section's options are the alternatives, in the order the book lists them. |
+| `armies` | `(system, name, uid)` | A directory walk or a manifest order is an accident; the differ needs a stable one. |
+| `specialRules` (army dictionary), `upgradePackages`, `sections`, `options` | by `id` / `uid` | Lookup tables. Their order is an accident of the server and must not read as a change. |
+| `upgradePackageUids`, `disabledSections`, `disabledUpgradeSections` | sorted strings | Sets of ids. |
+
+Every comparison is by UTF-16 code unit, never `localeCompare`: two machines
+with different locale collation would otherwise emit different bytes for the
+same capture, and this file is compared and committed as bytes.
+
+## Defaults for absent fields
+
+A field the payload omits is **not dropped**. Its key is still present, holding
+the value below, and the whole table is embedded in every document under
+`defaults` (`DEFAULTS` in `normalize.js`, deep-cloned so a consumer cannot
+reach the module's constants). The rule for choosing a default:
+
+- **`null`** for scalars — ids, names, labels, and numbers. Absent means "the
+  site did not say", and a made-up number would be a lie the differ then reports
+  as a real balance change.
+- **`[]`** for lists. Absent means empty, which is true of every list the
+  payload omits. A `null` list in the payload becomes `[]`, never `null`, so a
+  consumer never has to null-check a list.
+- **`false`** for flags — with one exception, below.
+- **`{ "round": null, "square": null }`** for `bases`, which is always the
+  two-key object.
+
+`unit.valid` defaults to **`true`**, not `false`: an army book that reports
+nothing about a unit's validity is not reporting that the unit is invalid.
+
+Defaults that resolve a real question in the data:
+
+| Field | Default | Why |
+| --- | --- | --- |
+| `unit.key` | `null` | Absent on 8991 of 9600 units; only narrative-style units send it. |
+| `unit.type` | `null` | Absent on 9048 of 9600. |
+| `unit.originalSize` | `null` | Absent on 5451 of 9600. |
+| `unit.isNarrative` | `false` | Absent on 9267 of 9600. |
+| `unit.bases` | `{round: null, square: null}` | Sent on all 9600 captured units, with 8 distinct size pairs. Never assumed: both sizes are carried exactly as sent, and a unit that sends neither gets both `null`. |
+| `army.factionName` | `null` | Non-null on only 276 of 558 captured payloads. An army that declares no faction — Beastmen, for one — normalizes to `null` rather than to an empty string. |
+| `army.raceGroup` | `null` | Null on all 558 captured payloads, so this key is present in every document and always `null`. Kept because the payload has the field and a future release may populate it. |
+| `upgradeSection.select` | `null` | Absent on 13865 of 21111 sections. When present it is `{"type", "value"}` and `value` is `null` for `any` and `all`. |
+| `upgradeOption.cost` | `null` | Present on 30327 of 57126 options. The other half still prices itself through `costs[]`, which is always sent, so `null` is the honest value rather than `0`. |
+| `weaponLike.rating` | `null` | Absent on most weapons. **Never coerced**: the payload sends a number for a numeric rule and a string for a bespoke one (`"Spores [5]"`), and both are carried verbatim. |
+| `weaponLike.bases`, `item.bases` | `{round: null, square: null}` | A weapon's bases describe the model it is mounted on, and are absent on most. |
+
+A falsy value the payload really sends is never replaced by a default: `0`,
+`""` and `false` all survive. Only `undefined` and `null` fall back.
+
+### Two payload fields that do not mean what they look like
+
+- `units[].upgrades` holds the uids of the army's upgrade **packages** a unit
+  may draw from, not section ids. It is normalized to `upgradePackageUids` for
+  that reason: none of the 14289 entries in the three captures matches a section
+  `uid` or `id`, and all of them match a package uid.
+- `unit.quality` is the unit's stat-tier (3, 4, 5 …), not a data-quality flag.
+  `valid` is the data-quality flag.
+
+## How the raw payloads are protected
+
+The normalizer re-checks the capture's own integrity before and after writing,
+so "the raw data was not touched" is verified rather than promised:
+
+1. Every payload's SHA-256 is compared against `manifest.json`. A payload edited
+   after capture fails the run.
+2. Every file in the release directory is compared against the manifest's
+   payload list. An army payload in the directory that the manifest does not
+   list means the release was edited by hand, which the append-only contract
+   forbids, so the run stops rather than quietly dropping that army.
+3. A payload the manifest lists but the directory does not hold fails the run.
+4. Every payload goes through the same `validateArmyPayload` predicate the
+   capture used, so a payload that would have been rejected at fetch time is not
+   normalized from whatever survived on disk.
+5. The document is written to `.normalize-<pid>-<ts>` and moved into place with
+   a single rename, so an interrupted run leaves the previous document intact
+   rather than a truncated one. A leftover temp file from a killed run is swept
+   before the next one.
+6. The whole sequence runs again after the write, and every raw payload in all
+   three recorded releases was confirmed byte-identical (573 files, SHA-256
+   before and after).
+
+## No network access is tested, not promised
+
+Nothing in `normalize.js` requires an HTTP client or calls a fetch function.
+`axios` is in the process only because `validateArmyPayload` is imported from
+`capture.js`, and requiring a module is not requesting anything.
+
+The test makes that real rather than theoretical: it replaces `http.request`,
+`http.get`, `https.request`, `https.get`, `net.connect`,
+`net.Socket.prototype.connect`, `dns.lookup` and `dns.promises.lookup` with
+traps that fail the run, then normalizes a release through them. Any socket or
+any DNS lookup fails the suite.
 
 ## Deviations from the approved spec
-
 Both deviations recorded for `index.js` are resolved by `capture.js`, which is
 the entry point the release pipeline uses. `index.js` itself is unchanged in
 behaviour, including its documented in-place rewrite of `data/<system>/<version>/`.
