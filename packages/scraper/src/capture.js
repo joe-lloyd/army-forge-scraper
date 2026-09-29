@@ -44,6 +44,12 @@ const MANIFEST_FILE_NAME = "manifest.json";
 const COMMON_RULES_FILE_NAME = "common-rules.json";
 const STAGING_PREFIX = ".capture-";
 
+// Appended to the reason every aborted capture throws, so the guarantee travels
+// with the error rather than living only in the CLI banner. A caller that
+// catches this knows the run stopped and the releases directory is unchanged.
+const NOTHING_WRITTEN =
+  "No release directory was created, no release directory was modified, and the staging directory was removed.";
+
 // Pacing and retry defaults for this script. The legacy scrape in `index.js`
 // runs at 500ms with no retry; this capture is deliberately slower (one
 // request/second) and retries transient failures, because a single dropped
@@ -137,12 +143,30 @@ function assertReleaseDirsUnchanged(before, after) {
   );
 }
 
+// A body that is not JSON reaches us as a raw string, never as a thrown
+// SyntaxError: axios' default `transformResponse` swallows the parse error and
+// falls back to the unparsed text unless `strictJSONParsing` is set. So a
+// truncated response, an empty body and a 200 carrying an HTML error page all
+// arrive as strings. Report that as the parse failure it is, because
+// "expected an object" is indistinguishable from the site changing its payload
+// shape. Returns null for anything that is not a string.
+function unparseableBodyReason(payload) {
+  if (typeof payload !== "string") return null;
+  const body = payload.trim();
+  return body.length === 0
+    ? "payload failed JSON parse: empty response body"
+    : `payload failed JSON parse: body is not JSON (${body.length} bytes starting ${JSON.stringify(body.slice(0, 40))})`;
+}
+
 // A payload is only accepted if it looks like the army book we asked for. This
 // is the guard that stops a truncated or empty response from being captured:
 // axios resolves on any 2xx, including a 200 with a truncated body.
 function validateArmyPayload(payload, expected) {
   const fail = (reason) =>
     new Error(`payload for ${expected.name} (${expected.uid}) in ${expected.system} is unusable: ${reason}`);
+
+  const parseFailure = unparseableBodyReason(payload);
+  if (parseFailure) throw fail(parseFailure);
 
   if (payload === null || typeof payload !== "object" || Array.isArray(payload)) {
     throw fail(`expected an object, got ${payload === null ? "null" : Array.isArray(payload) ? "array" : typeof payload}`);
@@ -174,6 +198,8 @@ function validateArmyPayload(payload, expected) {
 function validateCommonRules(payload, system) {
   const fail = (reason) =>
     new Error(`common rules payload for ${system} is unusable: ${reason}`);
+  const parseFailure = unparseableBodyReason(payload);
+  if (parseFailure) throw fail(parseFailure);
   if (payload === null || typeof payload !== "object" || Array.isArray(payload)) {
     throw fail(`expected an object, got ${typeof payload}`);
   }
@@ -472,16 +498,27 @@ async function captureRelease(options = {}) {
     await fs.remove(stagingDir);
     const after = checksumReleaseDirs(root);
     assertReleaseDirsUnchanged(before, after);
-    throw error;
+    // Re-thrown with the guarantee spelled out, so a caller reading the error
+    // is told both which army failed and that the filesystem was left alone.
+    // The original message is kept verbatim at the front: it is the specific
+    // reason, this is the consequence. Newline-separated so the two read as two
+    // sentences in the CLI banner rather than running together.
+    throw new Error(`${error.message}\n${NOTHING_WRITTEN}`, { cause: error });
   }
 }
 
-async function main() {
+// Runs one capture and reports the process exit code rather than calling
+// `process.exit` itself, so the abort path is testable without a real network
+// run. `captureRelease` rejects with a message that already names the failing
+// army and states that nothing was written, so the banner only has to mark it
+// as an abort.
+async function main(options = {}) {
   try {
-    await captureRelease();
+    await captureRelease(options);
+    return 0;
   } catch (error) {
-    console.error(`\nCapture aborted, no release written: ${error.message}`);
-    process.exit(1);
+    console.error(`\nCapture aborted. ${error.message}`);
+    return 1;
   }
 }
 
@@ -489,6 +526,7 @@ module.exports = {
   COMMON_RULES_FILE_NAME,
   MANIFEST_FILE_NAME,
   MAX_ATTEMPTS,
+  NOTHING_WRITTEN,
   RELEASES_DIR_NAME,
   REQUEST_DELAY_MS,
   TERMINAL_STATUS,
@@ -507,5 +545,9 @@ module.exports = {
 };
 
 if (require.main === module) {
-  main();
+  // `process.exitCode` rather than `process.exit(1)`: a run that aborts late has
+  // buffered stderr to flush, and truncating it would hide the army that failed.
+  main().then((code) => {
+    process.exitCode = code;
+  });
 }

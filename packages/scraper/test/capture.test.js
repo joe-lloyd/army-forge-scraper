@@ -6,11 +6,13 @@ const path = require("node:path");
 const { test } = require("node:test");
 
 const {
+  NOTHING_WRITTEN,
   REQUEST_DELAY_MS,
   captureRelease,
   checksumDir,
   checksumReleaseDirs,
   listReleaseDirNames,
+  main,
   resolveReleaseDirName,
   resolveReleaseVersion,
   validateArmyPayload,
@@ -60,6 +62,8 @@ function fakeFetchers(options = {}) {
   };
   const details = options.details ?? {};
   const failures = options.failures ?? {};
+  const commonRules = options.commonRules ?? {};
+  const systems = options.gameSystems ?? SYSTEMS;
   const nameByUid = {};
   const versionByUid = {};
   for (const list of Object.values(listings)) {
@@ -94,6 +98,11 @@ function fakeFetchers(options = {}) {
       },
       async fetchCommonRules(id) {
         calls.commonRules.push(id);
+        const slug = systems.find((s) => s.id === id)?.slug ?? "unknown";
+        const override = commonRules[slug];
+        if (override !== undefined) {
+          return typeof override === "function" ? override() : override;
+        }
         return { rules: [{ id: "r1", name: "Rending" }], traits: [] };
       },
     },
@@ -105,6 +114,7 @@ function runCapture(root, overrides = {}) {
   const slept = [];
   return {
     calls,
+    fetchers,
     slept,
     promise: captureRelease({
       releasesRoot: root,
@@ -118,6 +128,22 @@ function runCapture(root, overrides = {}) {
       ...overrides.options,
     }),
   };
+}
+
+// Drives `main` with the same fakes `runCapture` uses, and returns its exit
+// code. `main` takes the whole `captureRelease` options bag, so this exercises
+// the real entry point's status handling without a network run.
+function runMain(root, overrides = {}) {
+  const { fetchers } = fakeFetchers(overrides);
+  return main({
+    releasesRoot: root,
+    gameSystems: SYSTEMS,
+    sleep: async () => {},
+    now: () => "2026-09-29T00:00:00.000Z",
+    log: () => {},
+    ...fetchers,
+    ...overrides.options,
+  });
 }
 
 function fileDigests(dir) {
@@ -460,4 +486,192 @@ test("staging directories are not mistaken for releases", (t) => {
   fs.mkdirSync(path.join(root, "3.5.3"));
   assert.deepEqual(listReleaseDirNames(root), ["3.5.3"]);
   assert.equal(resolveReleaseDirName("3.5.3", listReleaseDirNames(root)), "3.5.3__2");
+});
+
+// --- Abort on an empty or unparseable payload --------------------------
+//
+// The two acceptance cases for this item. Both assert the same three things:
+// the run exits nonzero, no release directory appears, and every pre-existing
+// release is byte-identical afterwards.
+
+// Leaves a decoy release in the root so "the old data survived" is a real
+// assertion rather than "the directory is empty either way".
+function seedOldRelease(root) {
+  const old = path.join(root, "3.5.2");
+  fs.mkdirSync(path.join(old, "grimdark-future"), { recursive: true });
+  fs.writeFileSync(path.join(old, "manifest.json"), '{"version":"3.5.2"}');
+  fs.writeFileSync(
+    path.join(old, "grimdark-future", "Old Army (old1).json"),
+    '{"uid":"old1"}',
+  );
+  return { old, bytes: fileDigests(old) };
+}
+
+const ABORT_CASES = [
+  {
+    title: "an empty payload",
+    detail: () => ({}),
+    reason: /unusable: empty object/,
+  },
+  {
+    title: "a null payload",
+    detail: () => null,
+    reason: /unusable: expected an object/,
+  },
+  {
+    title: "a payload that is not JSON at all",
+    detail: () => "<!DOCTYPE html><html>502 Bad Gateway</html>",
+    reason: /unusable: payload failed JSON parse: body is not JSON/,
+  },
+  {
+    title: "a truncated JSON payload",
+    detail: () => '{"uid":"bbb222","name":"Battle/Brothers","units":[',
+    reason: /unusable: payload failed JSON parse: body is not JSON/,
+  },
+  {
+    title: "an empty response body",
+    detail: () => "",
+    reason: /unusable: payload failed JSON parse: empty response body/,
+  },
+  {
+    title: "a whitespace-only response body",
+    detail: () => "   \n\t ",
+    reason: /unusable: payload failed JSON parse: empty response body/,
+  },
+  {
+    title: "a JSON array instead of an army book",
+    detail: () => [{ uid: "bbb222" }],
+    reason: /unusable: expected an object, got array/,
+  },
+];
+
+for (const { title, detail, reason } of ABORT_CASES) {
+  test(`${title} aborts the run, exits nonzero and writes no release`, async (t) => {
+    const root = tempRoot(t);
+    const { old, bytes } = seedOldRelease(root);
+
+    // The library throws...
+    await assert.rejects(runCapture(root, { details: { bbb222: detail } }).promise, reason);
+    // ...and the process reports a nonzero status.
+    assert.equal(await runMain(root, { details: { bbb222: detail } }), 1);
+
+    // No new release directory, no staging leftover.
+    assert.deepEqual(listReleaseDirNames(root), ["3.5.2"]);
+    assert.deepEqual(fs.readdirSync(root).sort(), ["3.5.2"]);
+    // The old release is byte-identical.
+    assert.deepEqual(fileDigests(old), bytes);
+  });
+}
+
+test("the abort error names the army and states that nothing was written", async (t) => {
+  const root = tempRoot(t);
+  const error = await runCapture(root, {
+    details: { bbb222: '{"uid":"bbb222","name":"Battle/Brothers","units":[' },
+  }).promise.then(
+    () => assert.fail("expected the capture to abort"),
+    (e) => e,
+  );
+
+  // Names the army that failed: both the list name and the uid, plus the system.
+  assert.match(error.message, /Battle\/Brothers/);
+  assert.match(error.message, /bbb222/);
+  assert.match(error.message, /grimdark-future/);
+  // And says the write did not happen, rather than leaving the caller to
+  // assume it did.
+  assert.match(error.message, /no release directory was created/i);
+  assert.match(error.message, /no release directory was modified/i);
+  assert.match(error.message, /staging directory was removed/i);
+  assert.equal(error.message.endsWith(NOTHING_WRITTEN), true);
+  // The reason is preserved ahead of the guarantee, not replaced by it.
+  assert.match(error.message, /failed JSON parse/);
+  assert.equal(error.cause.message, error.message.split("\n")[0]);
+});
+
+test("a common-rules payload that is not JSON aborts the run too", async (t) => {
+  const root = tempRoot(t);
+  const { old, bytes } = seedOldRelease(root);
+  await assert.rejects(
+    runCapture(root, {
+      commonRules: { "grimdark-future": "{\"rules\":[" },
+    }).promise,
+    /common rules payload for grimdark-future is unusable: payload failed JSON parse/,
+  );
+  assert.deepEqual(fs.readdirSync(root).sort(), ["3.5.2"]);
+  assert.deepEqual(fileDigests(old), bytes);
+});
+
+test("the release directory appears only after every payload has passed", async (t) => {
+  const root = tempRoot(t);
+  const seen = [];
+  // While the capture is still fetching, the release directory it is about to
+  // write must not exist. It is created by a single rename at the very end.
+  const options = {
+    listings: {
+      "grimdark-future": [
+        { uid: "aaa111", name: "Alien Hives", versionString: "3.5.3", modifiedAt: null },
+        { uid: "bbb222", name: "Battle/Brothers", versionString: "3.5.3", modifiedAt: null },
+      ],
+      "grimdark-future-firefight": [
+        { uid: "aaa111", name: "Alien Hives", versionString: "3.5.3", modifiedAt: null },
+        { uid: "ccc333", name: "Stale Book", versionString: "3.5.2", modifiedAt: null },
+      ],
+    },
+    options: {
+      async fetchArmyDetail(uid) {
+        seen.push(fs.existsSync(path.join(root, "3.5.3")));
+        return armyPayload(
+          uid,
+          uid === "aaa111" ? "Alien Hives" : uid === "bbb222" ? "Battle/Brothers" : "Stale Book",
+          "3.5.3",
+        );
+      },
+    },
+  };
+  const { releaseDirName } = await runCapture(root, options).promise;
+
+  assert.equal(releaseDirName, "3.5.3");
+  // Every single fetch happened before the release directory existed.
+  assert.equal(seen.length, 4);
+  assert.deepEqual(seen, [false, false, false, false]);
+  assert.ok(fs.existsSync(path.join(root, "3.5.3")));
+});
+
+test("a fully valid capture exits zero", async (t) => {
+  const root = tempRoot(t);
+  assert.equal(await runMain(root), 0);
+  assert.deepEqual(listReleaseDirNames(root), ["3.5.3"]);
+});
+
+// Guards the assumption the string branch in `validateArmyPayload` rests on.
+// axios' default `transformResponse` swallows the JSON.parse SyntaxError and
+// returns the unparsed body, so an unusable payload reaches validation as a
+// string instead of throwing. If this ever stops holding, the guard has to be
+// rewritten to catch parse errors rather than strings.
+test("axios hands back an unparseable body as a string instead of throwing", async (t) => {
+  const http = require("node:http");
+  const axios = require("axios");
+  const server = http.createServer((req, res) => {
+    if (req.url === "/truncated") {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end('{"uid":"a","units":[');
+    } else {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end("");
+    }
+  });
+  await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+  t.after(() => server.close());
+  const base = `http://127.0.0.1:${server.address().port}`;
+
+  for (const [route, expected] of [["/truncated", "string"], ["/empty", "string"]]) {
+    const response = await axios.get(`${base}${route}`, {
+      headers: { Accept: "application/json" },
+    });
+    assert.equal(typeof response.data, expected, `${route} must not throw`);
+    // And that is exactly what the validator has to reject.
+    assert.throws(
+      () => validateArmyPayload(response.data, { name: "X", uid: "a", system: "s" }),
+      /failed JSON parse/,
+    );
+  }
 });
