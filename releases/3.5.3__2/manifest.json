@@ -1,0 +1,1926 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-28T22:33:46.284Z",
+  "version": "3.5.3",
+  "versionStringSource": "versionString field of the captured army-book JSON payloads (`GET /api/army-books/<uid>`), resolved to the value reported by the plurality of payloads in the capture; the army-list summary `versionString` is recorded per army in payloads[].listedVersionString as a cross-check but is never used to name the release",
+  "releaseDir": "3.5.3__2",
+  "armyCount": 186,
+  "armiesBySystem": {
+    "grimdark-future": 47,
+    "grimdark-future-firefight": 53,
+    "age-of-fantasy": 40,
+    "age-of-fantasy-skirmish": 46
+  },
+  "versionHistogram": {
+    "3.5.3": 178,
+    "3.5.2": 8
+  },
+  "versionMismatches": [],
+  "commonRules": {
+    "grimdark-future": {
+      "file": "grimdark-future/common-rules.json",
+      "ruleCount": 37,
+      "traitCount": 36,
+      "sha256": "6ff41f6fcb2298f2cdb49f359b81a3aac38e93dc82cf1c2bf1322385d4433771"
+    },
+    "grimdark-future-firefight": {
+      "file": "grimdark-future-firefight/common-rules.json",
+      "ruleCount": 37,
+      "traitCount": 36,
+      "sha256": "c13ed069834b672f475d8c62d5bb92456cc9f26c9eed38ff259f46fff38f98fd"
+    },
+    "age-of-fantasy": {
+      "file": "age-of-fantasy/common-rules.json",
+      "ruleCount": 37,
+      "traitCount": 36,
+      "sha256": "6ff41f6fcb2298f2cdb49f359b81a3aac38e93dc82cf1c2bf1322385d4433771"
+    },
+    "age-of-fantasy-skirmish": {
+      "file": "age-of-fantasy-skirmish/common-rules.json",
+      "ruleCount": 37,
+      "traitCount": 36,
+      "sha256": "c13ed069834b672f475d8c62d5bb92456cc9f26c9eed38ff259f46fff38f98fd"
+    }
+  },
+  "request": {
+    "baseUrl": "https://army-forge.onepagerules.com",
+    "gameSystems": [
+      "grimdark-future",
+      "grimdark-future-firefight",
+      "age-of-fantasy",
+      "age-of-fantasy-skirmish"
+    ],
+    "detailMs": 1000,
+    "maxAttempts": 3,
+    "backoffMs": [
+      1000,
+      2000
+    ],
+    "terminalStatuses": [
+      404
+    ],
+    "armyCap": null
+  },
+  "payloads": [
+    {
+      "system": "grimdark-future",
+      "uid": "w7qor7b2kuifcyvk",
+      "name": "Alien Hives",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-31T12:44:58.618Z",
+      "file": "grimdark-future/Alien Hives (w7qor7b2kuifcyvk).json",
+      "bytes": 348675,
+      "sha256": "c414824c31dcc693aaf70f23f1f5961df7ebe9f4e53228980adae269be34bf34"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "78qp9l5alslt6yj8",
+      "name": "Battle Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-09-11T21:06:27.761Z",
+      "file": "grimdark-future/Battle Brothers (78qp9l5alslt6yj8).json",
+      "bytes": 466453,
+      "sha256": "a3d3f5a28aca32b528643f8c52977e87296b0ea32e1b8259ff4b72b1c3282efd"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "7oi8zeiqfamiur21",
+      "name": "Blessed Sisters",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.659Z",
+      "file": "grimdark-future/Blessed Sisters (7oi8zeiqfamiur21).json",
+      "bytes": 396744,
+      "sha256": "e0f9231a1a09006882d7ac869ef8d0d01261ab1cc2d0354e9d5d7ca1e8ba3950"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "xnnqhh1775kvmz2r",
+      "name": "Blood Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.675Z",
+      "file": "grimdark-future/Blood Brothers (xnnqhh1775kvmz2r).json",
+      "bytes": 504803,
+      "sha256": "c2dde533d3a685ac8f15713f387d696d2969d223484dc4bde8a55063da80a9b7"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "7ex2x15bpkmy1alv",
+      "name": "Blood Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.692Z",
+      "file": "grimdark-future/Blood Prime Brothers (7ex2x15bpkmy1alv).json",
+      "bytes": 426911,
+      "sha256": "0cf292f3c14dfedcab2af6e9d9f05787367b720bdeabbc47ce7ba7ebae7e0533"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "r6hr29338u4micfw",
+      "name": "Change Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.724Z",
+      "file": "grimdark-future/Change Disciples (r6hr29338u4micfw).json",
+      "bytes": 351754,
+      "sha256": "4f5ade438c241a7e1288fbe21b1b8e877f7d1dfcb7b6d3cdbd3509926f0dc70d"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "ewbra8nv3nq3k27p",
+      "name": "Custodian Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.772Z",
+      "file": "grimdark-future/Custodian Brothers (ewbra8nv3nq3k27p).json",
+      "bytes": 244989,
+      "sha256": "55c188a0817d519edc1d14ecea59eafbb565efa4a5df9dbeb4bf744f4cd29993"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "z8205ez2boggzs22",
+      "name": "DAO Union",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.784Z",
+      "file": "grimdark-future/DAO Union (z8205ez2boggzs22).json",
+      "bytes": 278619,
+      "sha256": "a459bcb9b8518271145fb50dd213c079630097e5790ebdab0d131ddc7c7090f4"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "xp5zwh73lg1uaym4",
+      "name": "Dark Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.798Z",
+      "file": "grimdark-future/Dark Brothers (xp5zwh73lg1uaym4).json",
+      "bytes": 497314,
+      "sha256": "a5c80564ada652c6b24efb5b1ba541bf04de7a48fc9414ffc5fa16edb6d985a4"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "q11la9v8h1heu9ja",
+      "name": "Dark Elf Raiders",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.814Z",
+      "file": "grimdark-future/Dark Elf Raiders (q11la9v8h1heu9ja).json",
+      "bytes": 288172,
+      "sha256": "0ef6b0314ec44fb744daaf8360f53b4285428099dbe8b196d90a3e97038dcd66"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "gk7me4sgn9s740kw",
+      "name": "Dark Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.838Z",
+      "file": "grimdark-future/Dark Prime Brothers (gk7me4sgn9s740kw).json",
+      "bytes": 429176,
+      "sha256": "1389663f57e1ca26e5c0523123ff7621935a64b8a624cf38ee0a41dbea7e4d7c"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "fk1mkbp8apvltu0z",
+      "name": "Dwarf Guilds",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.885Z",
+      "file": "grimdark-future/Dwarf Guilds (fk1mkbp8apvltu0z).json",
+      "bytes": 356274,
+      "sha256": "d27d2bdbe4c4cbf5dc65d1956bd9da9ccdb46c0c36e12f7017c67af3cf845fc2"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "nyh41t82jugcdq8m",
+      "name": "Elven Jesters",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.907Z",
+      "file": "grimdark-future/Elven Jesters (nyh41t82jugcdq8m).json",
+      "bytes": 102463,
+      "sha256": "2e139a63cf7d187b2ebcbd34c168ee487e5f5de08243b4f85f98dbeeba96522f"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "vux1Y5vvULmaxZ8P",
+      "name": "Eternal Dynasty",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.915Z",
+      "file": "grimdark-future/Eternal Dynasty (vux1Y5vvULmaxZ8P).json",
+      "bytes": 236678,
+      "sha256": "1903323e383c292d593e3c4e38df6522b84ded7636b299fc60c12947fa8efe7d"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "k5T0f2XIfpmPO28h",
+      "name": "Goblin Reclaimers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.995Z",
+      "file": "grimdark-future/Goblin Reclaimers (k5T0f2XIfpmPO28h).json",
+      "bytes": 276726,
+      "sha256": "4ec7d8fdd18918d6727079b38c63ef635f7adcb2ca323d288570ee711671ef41"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "7o6om21wxlvvy3hq",
+      "name": "Havoc Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.042Z",
+      "file": "grimdark-future/Havoc Brothers (7o6om21wxlvvy3hq).json",
+      "bytes": 339445,
+      "sha256": "25b409c156d3d53f2aa4bc30f807b9b618010fbfac65988aec3ab61e837c9d14"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "7i7blhft75q9zfdc",
+      "name": "High Elf Fleets",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.081Z",
+      "file": "grimdark-future/High Elf Fleets (7i7blhft75q9zfdc).json",
+      "bytes": 316380,
+      "sha256": "c8b69078b56ea5e2856e688f49731033377b4d163efe34f0a82a230b6c0f86cf"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "z65fgu0l29i4lnlu",
+      "name": "Human Defense Force",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.116Z",
+      "file": "grimdark-future/Human Defense Force (z65fgu0l29i4lnlu).json",
+      "bytes": 418892,
+      "sha256": "3a742ac3e22163fcd094689b9324ffabbb04110ee89e926f17b7ab64c4224790"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "jpc0kyil0juwy602",
+      "name": "Human Inquisition",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.144Z",
+      "file": "grimdark-future/Human Inquisition (jpc0kyil0juwy602).json",
+      "bytes": 259889,
+      "sha256": "c4d21575b1ba7c27c50b2d9f7ba2725eb2d7b9024d3ab250c396b1a0f6897d8c"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "dnthspt7c0klhmt8",
+      "name": "Infected Colonies",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.156Z",
+      "file": "grimdark-future/Infected Colonies (dnthspt7c0klhmt8).json",
+      "bytes": 170374,
+      "sha256": "4b0f94e104ce6ca3e59bd0ed503e9b94c6bbcebbbe4d29a4d7a1b1e205da6fa6"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "BKi_hJaJflN8ZorH",
+      "name": "Jackals",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.167Z",
+      "file": "grimdark-future/Jackals (BKi_hJaJflN8ZorH).json",
+      "bytes": 180893,
+      "sha256": "fe0827287ea4ef199b9cecdc1a70780e7e6f3c22de5920eca67d3078f5c890e0"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "w70ha3o85pa7nigq",
+      "name": "Knight Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.190Z",
+      "file": "grimdark-future/Knight Brothers (w70ha3o85pa7nigq).json",
+      "bytes": 299089,
+      "sha256": "2a6e46a543811b4e1ef9e84dd61309630f22859abce469b07115b79b52de5332"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "wopr4xvwa51xh3mc",
+      "name": "Knight Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.205Z",
+      "file": "grimdark-future/Knight Prime Brothers (wopr4xvwa51xh3mc).json",
+      "bytes": 428211,
+      "sha256": "71b0c5201ede88388b4d6baa5d0b93d8e523c0c3a8300d3678d084de9dcd3f91"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "drqw1iswxmuugp3d",
+      "name": "Lust Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.231Z",
+      "file": "grimdark-future/Lust Disciples (drqw1iswxmuugp3d).json",
+      "bytes": 338345,
+      "sha256": "188d58369abc5e264b92765d8cf0dc88d04d0d83a3139a68bcb1c9d42c70dd97"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "7el7k3hgy5pb9o9i",
+      "name": "Machine Cults",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.244Z",
+      "file": "grimdark-future/Machine Cults (7el7k3hgy5pb9o9i).json",
+      "bytes": 218902,
+      "sha256": "b43c957188603b25132655d30699386868dcd39c7de8909e07d03c634595ca70"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "1wj1ysgxpuuz9bc7",
+      "name": "Orc Marauders",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.324Z",
+      "file": "grimdark-future/Orc Marauders (1wj1ysgxpuuz9bc7).json",
+      "bytes": 402204,
+      "sha256": "30fc0566a4dfa8809697c0be523b8b8e9ea61b7824d896d5a0780a5495216d46"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "jlray7cwf8mvw5sn",
+      "name": "Plague Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.380Z",
+      "file": "grimdark-future/Plague Disciples (jlray7cwf8mvw5sn).json",
+      "bytes": 395021,
+      "sha256": "e98db0f214d9bcd49891bb6bc4504618af069eeaca6ebff980f25816c4342863"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "oqnnu0gk8q6hyyny",
+      "name": "Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.396Z",
+      "file": "grimdark-future/Prime Brothers (oqnnu0gk8q6hyyny).json",
+      "bytes": 415830,
+      "sha256": "ca1587e1049bf04b2963b669384229ce91994745dd2138e2dbc668128619f1c7"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "hk70l4d471plza00",
+      "name": "Ratmen Clans",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-31T11:12:15.042Z",
+      "file": "grimdark-future/Ratmen Clans (hk70l4d471plza00).json",
+      "bytes": 312404,
+      "sha256": "ae11b00fcf7ea88c1c523e3eb4a2bdfd487327ccfd728c69751ec22698914c24"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "5wbcv465hacdwvkb",
+      "name": "Rebel Guerrillas",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.443Z",
+      "file": "grimdark-future/Rebel Guerrillas (5wbcv465hacdwvkb).json",
+      "bytes": 208930,
+      "sha256": "4620fdffe6016c5d4203e2732e7280ca5aad75cf538a333c2b9f89ae311bbcd1"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "4k5amkxoybdiqotm",
+      "name": "Robot Legions",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.497Z",
+      "file": "grimdark-future/Robot Legions (4k5amkxoybdiqotm).json",
+      "bytes": 247704,
+      "sha256": "bff6d8af08a3bea088db7410b770d68c97d87ef6737a3812b645de63a4d93d43"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "U6hwlur14RpnInZr",
+      "name": "Saurian Starhost",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.510Z",
+      "file": "grimdark-future/Saurian Starhost (U6hwlur14RpnInZr).json",
+      "bytes": 223105,
+      "sha256": "ff11dde4dd3f3980bf3140f3e6b972cba74a1033a938c7fe777d823ab0304de3"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "zz3kp5ry7ks6mxcx",
+      "name": "Soul-Snatcher Cults",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.588Z",
+      "file": "grimdark-future/Soul-Snatcher Cults (zz3kp5ry7ks6mxcx).json",
+      "bytes": 244260,
+      "sha256": "aebaa072f3df04894e3a5a38b8c82b096c65f55f4f4171219872785cbfc2d707"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "3j10zage1lddt6sr",
+      "name": "Titan Lords",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.598Z",
+      "file": "grimdark-future/Titan Lords (3j10zage1lddt6sr).json",
+      "bytes": 164081,
+      "sha256": "8dea0ef356b941b6d0e8e51eccb2630a8b514515f4cfdcbeb2fe6608b03479e7"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "m0JXdcVTyo-WFrMF",
+      "name": "Titan Lords Change Disciples",
+      "versionString": "3.5.2",
+      "modifiedAt": "2026-07-14T11:27:44.608Z",
+      "file": "grimdark-future/Titan Lords Change Disciples (m0JXdcVTyo-WFrMF).json",
+      "bytes": 166604,
+      "sha256": "da4ae8dcebe7788c977a63dd341a2a5860f55c6f796f065efcec05d102bc84e1"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "YYIAF_LCwgJiyXYa",
+      "name": "Titan Lords Lust Disciples",
+      "versionString": "3.5.2",
+      "modifiedAt": "2026-07-14T11:27:44.619Z",
+      "file": "grimdark-future/Titan Lords Lust Disciples (YYIAF_LCwgJiyXYa).json",
+      "bytes": 166382,
+      "sha256": "ad796019c99bc20ba2dd19b8106225bdd5fec76221b887d57eac50ab755af82c"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "bf20fNmJEyUS-PIX",
+      "name": "Titan Lords Plague Disciples",
+      "versionString": "3.5.2",
+      "modifiedAt": "2026-07-14T11:27:44.628Z",
+      "file": "grimdark-future/Titan Lords Plague Disciples (bf20fNmJEyUS-PIX).json",
+      "bytes": 164761,
+      "sha256": "c1fb0fec5c0e892d98e28a93942522a3233f21b0236a8d5b6990f14d9cbfc965"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "iV_3U33NE1_ZTXBB",
+      "name": "Titan Lords War Disciples",
+      "versionString": "3.5.2",
+      "modifiedAt": "2026-07-14T11:27:44.637Z",
+      "file": "grimdark-future/Titan Lords War Disciples (iV_3U33NE1_ZTXBB).json",
+      "bytes": 166344,
+      "sha256": "edf67f0ef93396f6eaeeb39771d51ecf0577fa1132216f57f9821d523d698434"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "31xjrm9ivdimkjxp",
+      "name": "War Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-27T22:39:08.652Z",
+      "file": "grimdark-future/War Disciples (31xjrm9ivdimkjxp).json",
+      "bytes": 353100,
+      "sha256": "3de07c70042287ac7a3a6ea023bdea7dd3804abfcd969253895be56ace29b05d"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "rvvb3kdn2x2pqkki",
+      "name": "Watch Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.732Z",
+      "file": "grimdark-future/Watch Brothers (rvvb3kdn2x2pqkki).json",
+      "bytes": 270891,
+      "sha256": "bad9cb149cc06433eac376402bad15f255bc44b93df6ad6d048461858d53aae5"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "rl7ympklz4r0ls38",
+      "name": "Watch Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.746Z",
+      "file": "grimdark-future/Watch Prime Brothers (rl7ympklz4r0ls38).json",
+      "bytes": 353813,
+      "sha256": "f2e4541c828cc2c48413af25752d5e9d80ccfa03da0e84155582fe47b7838fe1"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "yxjboa8oma9bbdck",
+      "name": "Wolf Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.831Z",
+      "file": "grimdark-future/Wolf Brothers (yxjboa8oma9bbdck).json",
+      "bytes": 506206,
+      "sha256": "a49932fdfd67ed4f7f5d38e648e76951f401b479b4abaad98d5581536bedda40"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "e8mflytiz51kc4n6",
+      "name": "Wolf Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.849Z",
+      "file": "grimdark-future/Wolf Prime Brothers (e8mflytiz51kc4n6).json",
+      "bytes": 431718,
+      "sha256": "2934ff2a0193f25016f9f30d948ffe5d540f975f85ffbb48a48a213616b9573f"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "04z57ua0bwth37zh",
+      "name": "Wormhole Daemons of Change",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.885Z",
+      "file": "grimdark-future/Wormhole Daemons of Change (04z57ua0bwth37zh).json",
+      "bytes": 217027,
+      "sha256": "9ba013a201be1b6ba1a920e36a9f165c4427c6880c442274ad4f0d5da4de4902"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "9qvy1oufoangt2gl",
+      "name": "Wormhole Daemons of Lust",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.918Z",
+      "file": "grimdark-future/Wormhole Daemons of Lust (9qvy1oufoangt2gl).json",
+      "bytes": 203741,
+      "sha256": "78ef6b81bae2615538af445c2a8041aee7b36b79786114f19ab51f74068b316b"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "fmuqw5lr5l6dq0mq",
+      "name": "Wormhole Daemons of Plague",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.929Z",
+      "file": "grimdark-future/Wormhole Daemons of Plague (fmuqw5lr5l6dq0mq).json",
+      "bytes": 197885,
+      "sha256": "0d9ec19d5fe2c3221712c70f687ee4a806d5579765ae042da88513a8fd179dea"
+    },
+    {
+      "system": "grimdark-future",
+      "uid": "prsajf5ot936qznk",
+      "name": "Wormhole Daemons of War",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.940Z",
+      "file": "grimdark-future/Wormhole Daemons of War (prsajf5ot936qznk).json",
+      "bytes": 204921,
+      "sha256": "440cead2be8bc5ecd3cbc66593404a459a12b776951fa51bdb080e3c77346167"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "w7qor7b2kuifcyvk",
+      "name": "Alien Hives",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-31T12:44:58.618Z",
+      "file": "grimdark-future-firefight/Alien Hives (w7qor7b2kuifcyvk).json",
+      "bytes": 193370,
+      "sha256": "8cd65e335ed9bd41030f932f2c2cdbaf7271e8fdb77f836a6b7eed785a8b57e8"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "bF00yJmGNJ7VxfkN",
+      "name": "Badland Nomads",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.611Z",
+      "file": "grimdark-future-firefight/Badland Nomads (bF00yJmGNJ7VxfkN).json",
+      "bytes": 213108,
+      "sha256": "80d437129931204c3661485593493133ccd8a88b199acb62fec4740c350b7afc"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "78qp9l5alslt6yj8",
+      "name": "Battle Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-09-11T21:06:27.761Z",
+      "file": "grimdark-future-firefight/Battle Brothers (78qp9l5alslt6yj8).json",
+      "bytes": 339499,
+      "sha256": "736a40e77393388ba7803f2ddade2f480a14aeaa136e7ac36f5788a1e30eddc5"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "NiptqIlNnPHx7x-X",
+      "name": "Berserker Clans",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.647Z",
+      "file": "grimdark-future-firefight/Berserker Clans (NiptqIlNnPHx7x-X).json",
+      "bytes": 204752,
+      "sha256": "381b69b93342f812f91307e5987e268d60fe761c9b9473fea3bd4ee885788d83"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "7oi8zeiqfamiur21",
+      "name": "Blessed Sisters",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.659Z",
+      "file": "grimdark-future-firefight/Blessed Sisters (7oi8zeiqfamiur21).json",
+      "bytes": 284468,
+      "sha256": "25a8ce4331e7e6b6eed6ee60de0df45054c3997506fb21ed6a09f683f3a62656"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "xnnqhh1775kvmz2r",
+      "name": "Blood Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.675Z",
+      "file": "grimdark-future-firefight/Blood Brothers (xnnqhh1775kvmz2r).json",
+      "bytes": 379315,
+      "sha256": "cbe0d55d7e244238c571c2de372be359043b4e6eb32bca0e031a1ec023cbf567"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "7ex2x15bpkmy1alv",
+      "name": "Blood Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.692Z",
+      "file": "grimdark-future-firefight/Blood Prime Brothers (7ex2x15bpkmy1alv).json",
+      "bytes": 332932,
+      "sha256": "6eaff0474eea49c711084f368ee024a022ab3e8e2efb6923581c3d8b41d6cc2d"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "mI0ZlbFpoT0VqC3M",
+      "name": "Brute Coalitions",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.713Z",
+      "file": "grimdark-future-firefight/Brute Coalitions (mI0ZlbFpoT0VqC3M).json",
+      "bytes": 173618,
+      "sha256": "bc045012d5cc5fc0883ed0f2a54e51745060a30c79b6e2aaa5d66f18de5d5674"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "r6hr29338u4micfw",
+      "name": "Change Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.724Z",
+      "file": "grimdark-future-firefight/Change Disciples (r6hr29338u4micfw).json",
+      "bytes": 270976,
+      "sha256": "2c7b87c9470a7a11de64f46b6ec5b1c59ebc96e81078ac6239328eb332a6c477"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "_5ObRZWuPMwProbC",
+      "name": "City Runners",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.752Z",
+      "file": "grimdark-future-firefight/City Runners (_5ObRZWuPMwProbC).json",
+      "bytes": 231036,
+      "sha256": "d9622333a27eb9cf8083e76b3ece21eaf3cdfcefc67f5a79d277728f28bf4ccb"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "ewbra8nv3nq3k27p",
+      "name": "Custodian Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.772Z",
+      "file": "grimdark-future-firefight/Custodian Brothers (ewbra8nv3nq3k27p).json",
+      "bytes": 133628,
+      "sha256": "cc638194a06f59f2d5f43cd0df1844d717c54b3c1548d7825f8ce26215d8e10d"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "z8205ez2boggzs22",
+      "name": "DAO Union",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.784Z",
+      "file": "grimdark-future-firefight/DAO Union (z8205ez2boggzs22).json",
+      "bytes": 175288,
+      "sha256": "80e26131e4c1fe253a951ba83be61be1616a5cdc70fb78be0d95b2305aa2d9e8"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "xp5zwh73lg1uaym4",
+      "name": "Dark Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.798Z",
+      "file": "grimdark-future-firefight/Dark Brothers (xp5zwh73lg1uaym4).json",
+      "bytes": 371826,
+      "sha256": "5156c23b5a1bf6dcf1aa869210a1f41672cb853e4990186086ae226eb1884ad6"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "q11la9v8h1heu9ja",
+      "name": "Dark Elf Raiders",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.814Z",
+      "file": "grimdark-future-firefight/Dark Elf Raiders (q11la9v8h1heu9ja).json",
+      "bytes": 232291,
+      "sha256": "4ec6af68938ead28d82bf88b116d87bd85b7a1cc75da5873ba39015fd7f5ba31"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "gk7me4sgn9s740kw",
+      "name": "Dark Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.838Z",
+      "file": "grimdark-future-firefight/Dark Prime Brothers (gk7me4sgn9s740kw).json",
+      "bytes": 335097,
+      "sha256": "1dac3e58930e1c8c4cfbd21f22d2a9b6972c0934fadc17b2f5c88eefb37ec0cd"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "fk1mkbp8apvltu0z",
+      "name": "Dwarf Guilds",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.885Z",
+      "file": "grimdark-future-firefight/Dwarf Guilds (fk1mkbp8apvltu0z).json",
+      "bytes": 257821,
+      "sha256": "ab14f626329aa64ce4b4750cb4cf07f918022cef4d9c41d0034ead612a4ff11b"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "nyh41t82jugcdq8m",
+      "name": "Elven Jesters",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.907Z",
+      "file": "grimdark-future-firefight/Elven Jesters (nyh41t82jugcdq8m).json",
+      "bytes": 93501,
+      "sha256": "28b9870c1c620c3dd457365813d35247d0f4cd70a20b971724e33ff0e90d3668"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "vux1Y5vvULmaxZ8P",
+      "name": "Eternal Dynasty",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.915Z",
+      "file": "grimdark-future-firefight/Eternal Dynasty (vux1Y5vvULmaxZ8P).json",
+      "bytes": 179052,
+      "sha256": "c9b9f11e23461c06f62f48b4efd8bed73e24ee6f2eb59a0c86c34fc3fe5b10e7"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "k5T0f2XIfpmPO28h",
+      "name": "Goblin Reclaimers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.995Z",
+      "file": "grimdark-future-firefight/Goblin Reclaimers (k5T0f2XIfpmPO28h).json",
+      "bytes": 249435,
+      "sha256": "303ebdb2d029d347ca95be509740794f79735cd4490ba000598507ea374ed7b6"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "7o6om21wxlvvy3hq",
+      "name": "Havoc Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.042Z",
+      "file": "grimdark-future-firefight/Havoc Brothers (7o6om21wxlvvy3hq).json",
+      "bytes": 258124,
+      "sha256": "1a71818185be93d2f0a971674909f47734970dd7f9da64e31d933d124aa14f71"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "7i7blhft75q9zfdc",
+      "name": "High Elf Fleets",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.081Z",
+      "file": "grimdark-future-firefight/High Elf Fleets (7i7blhft75q9zfdc).json",
+      "bytes": 222427,
+      "sha256": "c5961b29f88137258d650e046322b05aa949249b0b3bd2ec17aa58ef2c17e88d"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "z65fgu0l29i4lnlu",
+      "name": "Human Defense Force",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.116Z",
+      "file": "grimdark-future-firefight/Human Defense Force (z65fgu0l29i4lnlu).json",
+      "bytes": 198230,
+      "sha256": "64e1ba3ab297248c25f07d5cbb256978eb155b26fdc1be4fac5b471397d8c784"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "jpc0kyil0juwy602",
+      "name": "Human Inquisition",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.144Z",
+      "file": "grimdark-future-firefight/Human Inquisition (jpc0kyil0juwy602).json",
+      "bytes": 246761,
+      "sha256": "e7c5ebb936123ec5adbd63ce3549d4147edfd4cc2962aab4fe37d350366e7e21"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "dnthspt7c0klhmt8",
+      "name": "Infected Colonies",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.156Z",
+      "file": "grimdark-future-firefight/Infected Colonies (dnthspt7c0klhmt8).json",
+      "bytes": 141323,
+      "sha256": "a556b67770d7713654daadeaaf574f3c52d10946eb9b5d591c7dd0edc845309b"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "BKi_hJaJflN8ZorH",
+      "name": "Jackals",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.167Z",
+      "file": "grimdark-future-firefight/Jackals (BKi_hJaJflN8ZorH).json",
+      "bytes": 159869,
+      "sha256": "ec4ed57cce79c8bbcad61d91304270de390b5a6d857b1073571cbbcf76499cbc"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "w70ha3o85pa7nigq",
+      "name": "Knight Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.190Z",
+      "file": "grimdark-future-firefight/Knight Brothers (w70ha3o85pa7nigq).json",
+      "bytes": 214431,
+      "sha256": "90a44c2bea4accb23b96c19381f212aac211f2c2e0f17b37c8d932fad56fe71b"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "wopr4xvwa51xh3mc",
+      "name": "Knight Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.205Z",
+      "file": "grimdark-future-firefight/Knight Prime Brothers (wopr4xvwa51xh3mc).json",
+      "bytes": 334189,
+      "sha256": "1592184542fc84941a7619f60840fd8acb9d5f1f5954a54b6ab1f07948cb5a09"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "drqw1iswxmuugp3d",
+      "name": "Lust Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.231Z",
+      "file": "grimdark-future-firefight/Lust Disciples (drqw1iswxmuugp3d).json",
+      "bytes": 267389,
+      "sha256": "eca1e02ffa4461ebb0fa761ff435c2d0dc591a87444f8d106ca3c01a1aa7cffb"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "7el7k3hgy5pb9o9i",
+      "name": "Machine Cults",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.244Z",
+      "file": "grimdark-future-firefight/Machine Cults (7el7k3hgy5pb9o9i).json",
+      "bytes": 176970,
+      "sha256": "236a1afff770f42fe40826ceb6a261a7db31633bcebdfc6215e45c8662f31820"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "qLonG2G2KzkRQoGf",
+      "name": "Mega-Corps",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.255Z",
+      "file": "grimdark-future-firefight/Mega-Corps (qLonG2G2KzkRQoGf).json",
+      "bytes": 245361,
+      "sha256": "966d789e8be7dfdcfc53398f65032d9a4e5a0a2227b1535b3b4f83b05ca9fdf0"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "cV1jqgtZj8sf57ld",
+      "name": "Mercenaries",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.273Z",
+      "file": "grimdark-future-firefight/Mercenaries (cV1jqgtZj8sf57ld).json",
+      "bytes": 161832,
+      "sha256": "cb1bebe276122fef59090fd9b49db22b0ef6db5b00647697490a4875aadbe00d"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "1wj1ysgxpuuz9bc7",
+      "name": "Orc Marauders",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.324Z",
+      "file": "grimdark-future-firefight/Orc Marauders (1wj1ysgxpuuz9bc7).json",
+      "bytes": 272250,
+      "sha256": "3186fcc1fffc6b7a494407e7133fda6d060c0893352836375fdffbf275583e92"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "jlray7cwf8mvw5sn",
+      "name": "Plague Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.380Z",
+      "file": "grimdark-future-firefight/Plague Disciples (jlray7cwf8mvw5sn).json",
+      "bytes": 310801,
+      "sha256": "fed11249a95c8499851031c288385bb10bf9e9cf751f3787b148777dd1daa4f2"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "oqnnu0gk8q6hyyny",
+      "name": "Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.396Z",
+      "file": "grimdark-future-firefight/Prime Brothers (oqnnu0gk8q6hyyny).json",
+      "bytes": 323505,
+      "sha256": "09b9d8bea7a62d90e0a0ebea8e8727adcb4b9dd273b9f31f6934ff6dc7dd4315"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "8P8zHTe_MQtawcCN",
+      "name": "Psycho Cults",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.410Z",
+      "file": "grimdark-future-firefight/Psycho Cults (8P8zHTe_MQtawcCN).json",
+      "bytes": 262955,
+      "sha256": "948f4d6152b8f71c25f63e6ee6c84a9f6d9915b36d96d60f9f16325dbc84665e"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "hk70l4d471plza00",
+      "name": "Ratmen Clans",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-31T11:12:15.042Z",
+      "file": "grimdark-future-firefight/Ratmen Clans (hk70l4d471plza00).json",
+      "bytes": 232961,
+      "sha256": "77fe7104e754992684abd53fa7da598f68559d8ec965c6d0232852d8c7cc0f9e"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "5wbcv465hacdwvkb",
+      "name": "Rebel Guerrillas",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.443Z",
+      "file": "grimdark-future-firefight/Rebel Guerrillas (5wbcv465hacdwvkb).json",
+      "bytes": 176994,
+      "sha256": "4e5c15dc9e127b672461f12f8a1537e51e988068ba7814eabbb1526292062cb8"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "4k5amkxoybdiqotm",
+      "name": "Robot Legions",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.497Z",
+      "file": "grimdark-future-firefight/Robot Legions (4k5amkxoybdiqotm).json",
+      "bytes": 162342,
+      "sha256": "a47aee79834b4790dcdd1b45880fc0d5ac509b21dc4e22741f41d00331018777"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "U6hwlur14RpnInZr",
+      "name": "Saurian Starhost",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.510Z",
+      "file": "grimdark-future-firefight/Saurian Starhost (U6hwlur14RpnInZr).json",
+      "bytes": 179864,
+      "sha256": "955656c71a9f92ea480a3731820d44edfb7ea71f3518c48e7397cb7e5ce90956"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "ukrBO4ITaKUpUFeO",
+      "name": "Security Forces",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.531Z",
+      "file": "grimdark-future-firefight/Security Forces (ukrBO4ITaKUpUFeO).json",
+      "bytes": 218751,
+      "sha256": "f240b3acba8ee5338e82a1d0f1ce2e284abed1960df9b0ab49f5211cbf41e8b2"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "o4D-c-28lvmybgc5",
+      "name": "Shadow Leagues",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.541Z",
+      "file": "grimdark-future-firefight/Shadow Leagues (o4D-c-28lvmybgc5).json",
+      "bytes": 220376,
+      "sha256": "b3305df81a2acd3f71e5b764f5dead3f9aaba39ec305ed8acdd2126a464e1cb7"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "G5uvPlnfxPg3EcYG",
+      "name": "Shortling Federations",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.568Z",
+      "file": "grimdark-future-firefight/Shortling Federations (G5uvPlnfxPg3EcYG).json",
+      "bytes": 164952,
+      "sha256": "b6256af4568fdecb81a4c1de24605d5b4230dd6aa102da2713f521837490c8d3"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "zz3kp5ry7ks6mxcx",
+      "name": "Soul-Snatcher Cults",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.588Z",
+      "file": "grimdark-future-firefight/Soul-Snatcher Cults (zz3kp5ry7ks6mxcx).json",
+      "bytes": 179322,
+      "sha256": "5b399581919a0d92586ec9d28ff58f0bafc3f1afff6050f635cc3b6c9470f5f9"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "31xjrm9ivdimkjxp",
+      "name": "War Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-27T22:39:08.652Z",
+      "file": "grimdark-future-firefight/War Disciples (31xjrm9ivdimkjxp).json",
+      "bytes": 274921,
+      "sha256": "f6d8ed8df00fa7e9808fb86ef5a26eddb704e3fbb9f00a0f4395d55de6272657"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "rvvb3kdn2x2pqkki",
+      "name": "Watch Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.732Z",
+      "file": "grimdark-future-firefight/Watch Brothers (rvvb3kdn2x2pqkki).json",
+      "bytes": 207304,
+      "sha256": "f1b6f21d58c8869a19c51a00bf9b754b8cf8d079ece1e7a8eea8bd26791cd74d"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "rl7ympklz4r0ls38",
+      "name": "Watch Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.746Z",
+      "file": "grimdark-future-firefight/Watch Prime Brothers (rl7ympklz4r0ls38).json",
+      "bytes": 256978,
+      "sha256": "372731307270853580a9c1ee5ee0134d3b68d68d31812bd85796a7da7d4fd675"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "yxjboa8oma9bbdck",
+      "name": "Wolf Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.831Z",
+      "file": "grimdark-future-firefight/Wolf Brothers (yxjboa8oma9bbdck).json",
+      "bytes": 380754,
+      "sha256": "3b70d379557ff30aec36e7b1eef923133dd8ee111d846187b8b83b16ba48b6a2"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "e8mflytiz51kc4n6",
+      "name": "Wolf Prime Brothers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.849Z",
+      "file": "grimdark-future-firefight/Wolf Prime Brothers (e8mflytiz51kc4n6).json",
+      "bytes": 337837,
+      "sha256": "d4373d0efb2f08a99f75d07ec5d60df22a156f92c8fa8efd2c2e5411417f4c8f"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "tH3gqRwsigE87z5H",
+      "name": "Worker Unions",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.875Z",
+      "file": "grimdark-future-firefight/Worker Unions (tH3gqRwsigE87z5H).json",
+      "bytes": 250021,
+      "sha256": "acf9f82f7f31a1cfd827f7a0c06d0c419876ee506ea80e29bfd68bc93cfad3ac"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "04z57ua0bwth37zh",
+      "name": "Wormhole Daemons of Change",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.885Z",
+      "file": "grimdark-future-firefight/Wormhole Daemons of Change (04z57ua0bwth37zh).json",
+      "bytes": 168531,
+      "sha256": "cbbb2c2b488f6062539807fdfc70446ea4659de17e3bbdc9e033ca314543c957"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "9qvy1oufoangt2gl",
+      "name": "Wormhole Daemons of Lust",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.918Z",
+      "file": "grimdark-future-firefight/Wormhole Daemons of Lust (9qvy1oufoangt2gl).json",
+      "bytes": 142493,
+      "sha256": "4692fea4e0f7725fd2e34a349c2f74dfd9e390e51ec68d60c822207356774002"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "fmuqw5lr5l6dq0mq",
+      "name": "Wormhole Daemons of Plague",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.929Z",
+      "file": "grimdark-future-firefight/Wormhole Daemons of Plague (fmuqw5lr5l6dq0mq).json",
+      "bytes": 144581,
+      "sha256": "044bffddefa8d709db492788906ee523fcfda6570b155a742620296fed4b7760"
+    },
+    {
+      "system": "grimdark-future-firefight",
+      "uid": "prsajf5ot936qznk",
+      "name": "Wormhole Daemons of War",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.940Z",
+      "file": "grimdark-future-firefight/Wormhole Daemons of War (prsajf5ot936qznk).json",
+      "bytes": 150724,
+      "sha256": "ac4b439cda777aa646ec4bcba57fcbda632237fe40bff3a931b12b5ecc9e49b7"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "TciwNI3AOMXAM-dr",
+      "name": "Beastmen",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.638Z",
+      "file": "age-of-fantasy/Beastmen (TciwNI3AOMXAM-dr).json",
+      "bytes": 169150,
+      "sha256": "b3ba9af77100086f06a15275a939d89ef58ce114442466a13cc8f0e9d0a76887"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "CNOmkR5Q2C7Dc4Nm",
+      "name": "Change Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.735Z",
+      "file": "age-of-fantasy/Change Disciples (CNOmkR5Q2C7Dc4Nm).json",
+      "bytes": 160324,
+      "sha256": "b9f8599ffae452c1846caa549163168292ce74f094d1ebb3235d6ff7b88ab9fe"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "FF4UemWHh60T1VRq",
+      "name": "Chivalrous Kingdoms",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.743Z",
+      "file": "age-of-fantasy/Chivalrous Kingdoms (FF4UemWHh60T1VRq).json",
+      "bytes": 126006,
+      "sha256": "a843d25171ea4cf5bc3a78a51f37f19adfbc852d7328820640d5cdcc01f3d2e9"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "IKT625BeGZtF67EA",
+      "name": "Dark Elves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.825Z",
+      "file": "age-of-fantasy/Dark Elves (IKT625BeGZtF67EA).json",
+      "bytes": 200617,
+      "sha256": "7c59615a7ab01489767048a201cb2d176408f711f1b564c964854522b437dec5"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "L1zCkfmeAongLj1X",
+      "name": "Deep-Sea Elves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.854Z",
+      "file": "age-of-fantasy/Deep-Sea Elves (L1zCkfmeAongLj1X).json",
+      "bytes": 144701,
+      "sha256": "0d60dfe1b35d1d47ac4a3f185fd96ec1d5ea93a3f04f8817631451a1ecceedd7"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "Lo39Hss3bevFj44V",
+      "name": "Dragon Empire",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.863Z",
+      "file": "age-of-fantasy/Dragon Empire (Lo39Hss3bevFj44V).json",
+      "bytes": 206660,
+      "sha256": "c8cca92cbea889a9e5fe82a20e0b723eeaf8eb299655d3cd1d0ccb0aea96c0ee"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "VU1EFPa2uODffW8D",
+      "name": "Duchies of Vinci",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.873Z",
+      "file": "age-of-fantasy/Duchies of Vinci (VU1EFPa2uODffW8D).json",
+      "bytes": 204880,
+      "sha256": "aa91f2fd67bb75b712b1015a4b5471341f5125aaaf55d567e5f69357b262585a"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "RJDq2ZD7wjlAcUVB",
+      "name": "Dwarves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.897Z",
+      "file": "age-of-fantasy/Dwarves (RJDq2ZD7wjlAcUVB).json",
+      "bytes": 188856,
+      "sha256": "821660e85d17cc853c03e9715586772c7f964bf1e1ad9fe07b0cbe94ec3de215"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "-MrGWaleoZR7pxIn",
+      "name": "Eternal Wardens",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-21T22:13:45.671Z",
+      "file": "age-of-fantasy/Eternal Wardens (-MrGWaleoZR7pxIn).json",
+      "bytes": 204004,
+      "sha256": "ec98980f57b8ad0a92471cea083226663199c00f9dce6b43ed766433e53bfea9"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "mdT4HVzHUmxGevc_",
+      "name": "Ghostly Undead",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.943Z",
+      "file": "age-of-fantasy/Ghostly Undead (mdT4HVzHUmxGevc_).json",
+      "bytes": 133170,
+      "sha256": "d7cc9997a349662c89c451ead841626fabd3ddb538014328bba14957147f9754"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "HjmV6_v6dmBmEdy7",
+      "name": "Giant Tribes",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.952Z",
+      "file": "age-of-fantasy/Giant Tribes (HjmV6_v6dmBmEdy7).json",
+      "bytes": 124657,
+      "sha256": "d75948bb4feff2f8f8adc7e04d463a0f17c539c859dd741ee1296aa2a4c3208f"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "cZEjmUJf-qCSdWSA",
+      "name": "Giant Tribes Change Disciples",
+      "versionString": "3.5.2",
+      "modifiedAt": "2026-07-14T11:27:43.959Z",
+      "file": "age-of-fantasy/Giant Tribes Change Disciples (cZEjmUJf-qCSdWSA).json",
+      "bytes": 126478,
+      "sha256": "7f3752aafbb237cf024f337ad089a7407a94d8b2c66fb79b7b8437fb15476bd6"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "KAmoZbLcBoqrt6ZS",
+      "name": "Giant Tribes Lust Disciples",
+      "versionString": "3.5.2",
+      "modifiedAt": "2026-07-14T11:27:43.967Z",
+      "file": "age-of-fantasy/Giant Tribes Lust Disciples (KAmoZbLcBoqrt6ZS).json",
+      "bytes": 126256,
+      "sha256": "7cf747c83701820675c9eadc4c0d73e7fe3feb51822695539ca0f8914dd4f7ca"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "EiBIYQlLB0-9V8W8",
+      "name": "Giant Tribes Plague Disciples",
+      "versionString": "3.5.2",
+      "modifiedAt": "2026-07-14T11:27:43.976Z",
+      "file": "age-of-fantasy/Giant Tribes Plague Disciples (EiBIYQlLB0-9V8W8).json",
+      "bytes": 124637,
+      "sha256": "74cf7974268ab2f854620b8a7bbb6bd48f4548a874a76bf1b0790242cc6e3beb"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "05ICj2EFntjZAPD9",
+      "name": "Giant Tribes War Disciples",
+      "versionString": "3.5.2",
+      "modifiedAt": "2026-07-14T11:27:43.984Z",
+      "file": "age-of-fantasy/Giant Tribes War Disciples (05ICj2EFntjZAPD9).json",
+      "bytes": 126112,
+      "sha256": "6bcc2e75f09f50d0558b0d7019eba370a5bb2ef35a396fdab3c759c352204581"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "q9BQlBp583ZuuOnQ",
+      "name": "Goblins",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.006Z",
+      "file": "age-of-fantasy/Goblins (q9BQlBp583ZuuOnQ).json",
+      "bytes": 179098,
+      "sha256": "d7e6330efc7fd0944fa9cbd68d96857e64eae1ecc0ea7f1133cc1cac6e9115b7"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "0EXXlzFwAk3q1n5e",
+      "name": "Halflings",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.029Z",
+      "file": "age-of-fantasy/Halflings (0EXXlzFwAk3q1n5e).json",
+      "bytes": 170967,
+      "sha256": "0922f606c7809d722699f862c66d12babeb5375aef20bc42944eac84524200f4"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "8siLk9I6-H8lk78b",
+      "name": "Havoc Dwarves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.054Z",
+      "file": "age-of-fantasy/Havoc Dwarves (8siLk9I6-H8lk78b).json",
+      "bytes": 158932,
+      "sha256": "4a25971ebc39a05ef0a9dd99bff309942fc6d2b03bb33875c6caf7798200568a"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "PGxKcq4R571OtwqD",
+      "name": "Havoc Warriors",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.062Z",
+      "file": "age-of-fantasy/Havoc Warriors (PGxKcq4R571OtwqD).json",
+      "bytes": 171668,
+      "sha256": "bc73fe9712451479454f8b9389741c35e0ea9be24d49f7c5b68ef04e85d13687"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "bPAtRGFrpFfyAjLW",
+      "name": "High Elves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.094Z",
+      "file": "age-of-fantasy/High Elves (bPAtRGFrpFfyAjLW).json",
+      "bytes": 174244,
+      "sha256": "46dbf2ca8978960915037c50a8468f3eb8cf22abf987806d40020a7ff6ec73a6"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "jZ02AVPLx_S48Mnb",
+      "name": "Human Empire",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.132Z",
+      "file": "age-of-fantasy/Human Empire (jZ02AVPLx_S48Mnb).json",
+      "bytes": 190328,
+      "sha256": "b43d2a07f595915b01a5db78bc618249f4f8f4078ada66428223909a177eb29d"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "RgHxqAlAXnUuF3ty",
+      "name": "Kingdom of Angels",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.178Z",
+      "file": "age-of-fantasy/Kingdom of Angels (RgHxqAlAXnUuF3ty).json",
+      "bytes": 167805,
+      "sha256": "5ff2be54eb30efe74a1df51363f51255d67b315c21cf004a061a344217a4261a"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "zZ3RNHVtFJIZqzzN",
+      "name": "Lust Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.220Z",
+      "file": "age-of-fantasy/Lust Disciples (zZ3RNHVtFJIZqzzN).json",
+      "bytes": 151125,
+      "sha256": "289de74a79c5f4326e2ae6542aa97fd7afbc0f3af776029c51efa2e35ad399ce"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "t-sIke2snonFSL6Q",
+      "name": "Mummified Undead",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.297Z",
+      "file": "age-of-fantasy/Mummified Undead (t-sIke2snonFSL6Q).json",
+      "bytes": 200222,
+      "sha256": "c598cdb084beec2f9b86a30128d3d35b554798ba68f57e6d7e8de7e27995f142"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "lpRj9EBwROpO1um7",
+      "name": "Ogres",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.311Z",
+      "file": "age-of-fantasy/Ogres (lpRj9EBwROpO1um7).json",
+      "bytes": 161948,
+      "sha256": "dceb4c207759efaad7546da06e12da29cb407952393025c8088892af2f4e1b61"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "AQSDPFVL1DiNNnSU",
+      "name": "Orcs",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-31T14:18:54.482Z",
+      "file": "age-of-fantasy/Orcs (AQSDPFVL1DiNNnSU).json",
+      "bytes": 235253,
+      "sha256": "cdc769cb781c05bfc9e84c3e92dd6f683274119d70440795d5a2d14601899ab7"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "a_HXTYv06IFtSs9G",
+      "name": "Ossified Undead",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-04T13:30:44.853Z",
+      "file": "age-of-fantasy/Ossified Undead (a_HXTYv06IFtSs9G).json",
+      "bytes": 148036,
+      "sha256": "3d0bbd02f33693fdc7a882e7bea0de4af694f91676f5e8b78294002dec80a738"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "upWNWC9UIXtQP2o_",
+      "name": "Plague Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.368Z",
+      "file": "age-of-fantasy/Plague Disciples (upWNWC9UIXtQP2o_).json",
+      "bytes": 159493,
+      "sha256": "38db5f5ceb45f55e6e598b76f2a6e19814776718028a3b74c1051cd3e3b793ab"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "tOWt5fgqK2nfpoBN",
+      "name": "Ratmen",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.420Z",
+      "file": "age-of-fantasy/Ratmen (tOWt5fgqK2nfpoBN).json",
+      "bytes": 204152,
+      "sha256": "66de44da4ff0c5437c6d2fcd47dac2a17c51ec8079b09fb923edd4b7bd026e39"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "yxVDySKYQYRhdEgA",
+      "name": "Rift Daemons of Change",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.454Z",
+      "file": "age-of-fantasy/Rift Daemons of Change (yxVDySKYQYRhdEgA).json",
+      "bytes": 206726,
+      "sha256": "333527a47e0a816e01466eb65e9f4407f8f0f0fc94bd9723db584c1224b82f7f"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "CuyCCyZTIHo5rc0Z",
+      "name": "Rift Daemons of Lust",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.464Z",
+      "file": "age-of-fantasy/Rift Daemons of Lust (CuyCCyZTIHo5rc0Z).json",
+      "bytes": 205434,
+      "sha256": "7370616d48e7ceb82e6e8e6957cba38d38e6f9af96b46075d893b635fc8d347a"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "vJuokTQpJWj3_MrJ",
+      "name": "Rift Daemons of Plague",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.474Z",
+      "file": "age-of-fantasy/Rift Daemons of Plague (vJuokTQpJWj3_MrJ).json",
+      "bytes": 187745,
+      "sha256": "cf41a6cae3276fe0df94faab507800fa891c80f3ca5edc9c2a14b93c86da6dd5"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "Q59-nh6A1AhRBrLR",
+      "name": "Rift Daemons of War",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.485Z",
+      "file": "age-of-fantasy/Rift Daemons of War (Q59-nh6A1AhRBrLR).json",
+      "bytes": 210114,
+      "sha256": "14de9c499bdcdd33c50048318042864c31174067aca96175124558c4ca9dede5"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "BubhE1kUpgYbqZvW",
+      "name": "Saurians",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-02T15:47:14.485Z",
+      "file": "age-of-fantasy/Saurians (BubhE1kUpgYbqZvW).json",
+      "bytes": 207096,
+      "sha256": "7ea44fe1ccc9e7773cd6eb70ad6088183ff0cf91b4b98e6f661cb4f9868cb2ea"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "gHTrjw-g76vfGCSt",
+      "name": "Shadow Stalkers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.551Z",
+      "file": "age-of-fantasy/Shadow Stalkers (gHTrjw-g76vfGCSt).json",
+      "bytes": 174806,
+      "sha256": "700fd8e99d93886f97bd9ff42d26d5adc5a70deeff5c8058bd51df1759731609"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "AcDXPPXmWrgHChlS",
+      "name": "Sky-City Dwarves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.577Z",
+      "file": "age-of-fantasy/Sky-City Dwarves (AcDXPPXmWrgHChlS).json",
+      "bytes": 145450,
+      "sha256": "6da552619e8bb82bec3be95a9ad8afea3e03c34dcc0093e988cdc44a23b9e5c1"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "qABIfXYbYxmA75yL",
+      "name": "Vampiric Undead",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.665Z",
+      "file": "age-of-fantasy/Vampiric Undead (qABIfXYbYxmA75yL).json",
+      "bytes": 220768,
+      "sha256": "d11e61be28e7c2e3ca7a8263996b223e6be3722bd1949ae5213999bedf18acbc"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "Ir5XtqTM8JS3YEAJ",
+      "name": "Volcanic Dwarves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.675Z",
+      "file": "age-of-fantasy/Volcanic Dwarves (Ir5XtqTM8JS3YEAJ).json",
+      "bytes": 126640,
+      "sha256": "5479880adfe50e095c806ec0bbbf56e242f952f7dbfa8dd639e58bee1588efea"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "TjNtGnCDVts3l3ER",
+      "name": "War Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.684Z",
+      "file": "age-of-fantasy/War Disciples (TjNtGnCDVts3l3ER).json",
+      "bytes": 158779,
+      "sha256": "5dde1ea07548b23661fd6cfb00a2efb526ade8d8a2401174d0c440f18f8160d3"
+    },
+    {
+      "system": "age-of-fantasy",
+      "uid": "qtuyeoRfXKlNflK0",
+      "name": "Wood Elves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.864Z",
+      "file": "age-of-fantasy/Wood Elves (qtuyeoRfXKlNflK0).json",
+      "bytes": 252269,
+      "sha256": "fa6483c7a8563064e14e3e646ab4061b7b773e805fb138921785309c47a72b6d"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "TciwNI3AOMXAM-dr",
+      "name": "Beastmen",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.638Z",
+      "file": "age-of-fantasy-skirmish/Beastmen (TciwNI3AOMXAM-dr).json",
+      "bytes": 129026,
+      "sha256": "9c8da737f0e24e5097ed44463beff854ac76f43075ac9bfe72157bdf53e98cd5"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "cF1dpwd4bhYsNhsf",
+      "name": "Brute Clans",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.706Z",
+      "file": "age-of-fantasy-skirmish/Brute Clans (cF1dpwd4bhYsNhsf).json",
+      "bytes": 114223,
+      "sha256": "b24ea1d2e97862aa9956aac9c06ecc957b4bd450cc6f02bc2f6f41d0009c2dc6"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "CNOmkR5Q2C7Dc4Nm",
+      "name": "Change Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.735Z",
+      "file": "age-of-fantasy-skirmish/Change Disciples (CNOmkR5Q2C7Dc4Nm).json",
+      "bytes": 141364,
+      "sha256": "32258581ca248f119ad63cc765be9f2f151480c2a1ddd25863347d0c8f21f330"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "FF4UemWHh60T1VRq",
+      "name": "Chivalrous Kingdoms",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.743Z",
+      "file": "age-of-fantasy-skirmish/Chivalrous Kingdoms (FF4UemWHh60T1VRq).json",
+      "bytes": 115392,
+      "sha256": "33717da5adeb45b894a03d4da4321c9af9d4a75674a1a219eecfc6fc1f4219a6"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "T0CE9PUv4YDjbrjJ",
+      "name": "Crazed Zealots",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.762Z",
+      "file": "age-of-fantasy-skirmish/Crazed Zealots (T0CE9PUv4YDjbrjJ).json",
+      "bytes": 163653,
+      "sha256": "69e5b4363e242a98eea008be4fbae2edec3ffb7a4e5fcc95e149ab3e4a1cef07"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "IKT625BeGZtF67EA",
+      "name": "Dark Elves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.825Z",
+      "file": "age-of-fantasy-skirmish/Dark Elves (IKT625BeGZtF67EA).json",
+      "bytes": 160921,
+      "sha256": "011ba0c71caaa469f3665b9958743c8ca633053ee51745108f8c2c0e2a82dfe6"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "L1zCkfmeAongLj1X",
+      "name": "Deep-Sea Elves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.854Z",
+      "file": "age-of-fantasy-skirmish/Deep-Sea Elves (L1zCkfmeAongLj1X).json",
+      "bytes": 121644,
+      "sha256": "e51ce74fa37dc0beec00f15d7dcd72e07c4a23c651fe58629f0eec079ca9d077"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "Lo39Hss3bevFj44V",
+      "name": "Dragon Empire",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.863Z",
+      "file": "age-of-fantasy-skirmish/Dragon Empire (Lo39Hss3bevFj44V).json",
+      "bytes": 157346,
+      "sha256": "9257187b5389f366eb878b18e82b989b82fbb32a45e8e2fc6edf9dc9b923d2e2"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "VU1EFPa2uODffW8D",
+      "name": "Duchies of Vinci",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.873Z",
+      "file": "age-of-fantasy-skirmish/Duchies of Vinci (VU1EFPa2uODffW8D).json",
+      "bytes": 165884,
+      "sha256": "3804b57cfbbe49a3ed7dd733506061dc2d1a3b098bc6b9cf238a9ab1b7ee41e3"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "RJDq2ZD7wjlAcUVB",
+      "name": "Dwarves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.897Z",
+      "file": "age-of-fantasy-skirmish/Dwarves (RJDq2ZD7wjlAcUVB).json",
+      "bytes": 158206,
+      "sha256": "0a1835c2731d71bc7069614d67b7a2e92a615c56dbffbca0cc4df51960ec7ee1"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "-MrGWaleoZR7pxIn",
+      "name": "Eternal Wardens",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-21T22:13:45.671Z",
+      "file": "age-of-fantasy-skirmish/Eternal Wardens (-MrGWaleoZR7pxIn).json",
+      "bytes": 169084,
+      "sha256": "5274821d177e012222ed7e4805e4997e9f73e15fa8b36ca4027ca2ff9d232def"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "ZORJcHSuqj4T4QP3",
+      "name": "Furious Tribes",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.935Z",
+      "file": "age-of-fantasy-skirmish/Furious Tribes (ZORJcHSuqj4T4QP3).json",
+      "bytes": 164649,
+      "sha256": "45e8700e0446e85d3f51a5273217c3d282eb76408a94301cdee31684343c0b59"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "mdT4HVzHUmxGevc_",
+      "name": "Ghostly Undead",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:43.943Z",
+      "file": "age-of-fantasy-skirmish/Ghostly Undead (mdT4HVzHUmxGevc_).json",
+      "bytes": 129808,
+      "sha256": "31866cee3375311e43e530a2f1f54e9d223769cf919cd94df8a5441b7b69e08a"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "q9BQlBp583ZuuOnQ",
+      "name": "Goblins",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.006Z",
+      "file": "age-of-fantasy-skirmish/Goblins (q9BQlBp583ZuuOnQ).json",
+      "bytes": 136196,
+      "sha256": "bf98c8b8eae95ed4bd09051ae5ca9d360db1abc9ce8b236c6920a89981f8e638"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "0EXXlzFwAk3q1n5e",
+      "name": "Halflings",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.029Z",
+      "file": "age-of-fantasy-skirmish/Halflings (0EXXlzFwAk3q1n5e).json",
+      "bytes": 139376,
+      "sha256": "47c5782a29b1728e17b30a6303647989c70743c9c297946642c5a9678878c228"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "8siLk9I6-H8lk78b",
+      "name": "Havoc Dwarves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.054Z",
+      "file": "age-of-fantasy-skirmish/Havoc Dwarves (8siLk9I6-H8lk78b).json",
+      "bytes": 134533,
+      "sha256": "de01e6a117e1f199bd21d7a711bab4e5cc27c70b4c835514dbcf0bdf01d4f44e"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "PGxKcq4R571OtwqD",
+      "name": "Havoc Warriors",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.062Z",
+      "file": "age-of-fantasy-skirmish/Havoc Warriors (PGxKcq4R571OtwqD).json",
+      "bytes": 138794,
+      "sha256": "24f6325731a9f31e3ffc32fe6771573f810ddf1ebff827800c4cd4ccaf4d0b51"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "TngTE5FtTZNKEHuG",
+      "name": "Hidden Syndicates",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.070Z",
+      "file": "age-of-fantasy-skirmish/Hidden Syndicates (TngTE5FtTZNKEHuG).json",
+      "bytes": 155478,
+      "sha256": "55fe3a951f16febd42b0c7cf44788f00b723fdc4d6002d512e36aea2e31d22c4"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "bPAtRGFrpFfyAjLW",
+      "name": "High Elves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.094Z",
+      "file": "age-of-fantasy-skirmish/High Elves (bPAtRGFrpFfyAjLW).json",
+      "bytes": 133645,
+      "sha256": "8a89f9a41dcfe423d8b90a1edf11ebb9ac14aefeb827cbc23c44539a2f4d7e60"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "_6i8hfKF0YvVL2K4",
+      "name": "Hired Guards",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.104Z",
+      "file": "age-of-fantasy-skirmish/Hired Guards (_6i8hfKF0YvVL2K4).json",
+      "bytes": 180996,
+      "sha256": "5135432827e7f8a735004d43703dd53d8a7200a41d738162da360a42b915f08c"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "jZ02AVPLx_S48Mnb",
+      "name": "Human Empire",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.132Z",
+      "file": "age-of-fantasy-skirmish/Human Empire (jZ02AVPLx_S48Mnb).json",
+      "bytes": 146623,
+      "sha256": "99fadcf7b28f622069d6ce6898f18128ac926d0250d4585ba761ed7b2f7c242e"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "RgHxqAlAXnUuF3ty",
+      "name": "Kingdom of Angels",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.178Z",
+      "file": "age-of-fantasy-skirmish/Kingdom of Angels (RgHxqAlAXnUuF3ty).json",
+      "bytes": 146490,
+      "sha256": "d137d1bda91bb457c0b7aa08b2ec9b7a124adde1a0dd69545b4d579f6e1bdb56"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "zZ3RNHVtFJIZqzzN",
+      "name": "Lust Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.220Z",
+      "file": "age-of-fantasy-skirmish/Lust Disciples (zZ3RNHVtFJIZqzzN).json",
+      "bytes": 131727,
+      "sha256": "a28880ef68bee8fd244f65b5ee3501931c50e39f89e1862eb062c41feb74b037"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "n_YscnPzKx93ekFl",
+      "name": "Mercenaries",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.265Z",
+      "file": "age-of-fantasy-skirmish/Mercenaries (n_YscnPzKx93ekFl).json",
+      "bytes": 123832,
+      "sha256": "2063f2585fdd6af90645343ff69c3f0ae49dc212c00bdca0e6d2ee14e23719a9"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "kQRIk8Zu_bQ58pnB",
+      "name": "Merchant Unions",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.283Z",
+      "file": "age-of-fantasy-skirmish/Merchant Unions (kQRIk8Zu_bQ58pnB).json",
+      "bytes": 187723,
+      "sha256": "6e45d48f848d36518ee44030534412dc17ceac071c5c65edb585e804c53a98e2"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "t-sIke2snonFSL6Q",
+      "name": "Mummified Undead",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.297Z",
+      "file": "age-of-fantasy-skirmish/Mummified Undead (t-sIke2snonFSL6Q).json",
+      "bytes": 140046,
+      "sha256": "cd7db79049fb5e3806df59b3a3fd42963b3900d4c3ffae3d1baff5f0491fa292"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "lpRj9EBwROpO1um7",
+      "name": "Ogres",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.311Z",
+      "file": "age-of-fantasy-skirmish/Ogres (lpRj9EBwROpO1um7).json",
+      "bytes": 115065,
+      "sha256": "27eacaff546d1d2a36db1c6a29e2d422482228ce2341e854d3499d546cecb2ff"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "AQSDPFVL1DiNNnSU",
+      "name": "Orcs",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-31T14:18:54.482Z",
+      "file": "age-of-fantasy-skirmish/Orcs (AQSDPFVL1DiNNnSU).json",
+      "bytes": 197355,
+      "sha256": "81049a13ded7e77d5bad288e96cca984734e14fa305872cd11b9972436adfb7e"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "a_HXTYv06IFtSs9G",
+      "name": "Ossified Undead",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-04T13:30:44.853Z",
+      "file": "age-of-fantasy-skirmish/Ossified Undead (a_HXTYv06IFtSs9G).json",
+      "bytes": 122146,
+      "sha256": "b5b7e9f240ea285b427d40d40e8a894968348890c9fe9582f98c02ade8c4b2d5"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "bNSIMUiXr93FhqJE",
+      "name": "Outskirt Raiders",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.359Z",
+      "file": "age-of-fantasy-skirmish/Outskirt Raiders (bNSIMUiXr93FhqJE).json",
+      "bytes": 185905,
+      "sha256": "88a6b44023b3369eeb87ca1978dad18a6fdc9e2bc832c1f5c15fd10c7f3a8283"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "upWNWC9UIXtQP2o_",
+      "name": "Plague Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.368Z",
+      "file": "age-of-fantasy-skirmish/Plague Disciples (upWNWC9UIXtQP2o_).json",
+      "bytes": 122223,
+      "sha256": "e7b9629e443e1703e4124b7a2a85e19a1ce07ca1dab5f964b37c5cd7bb05fffd"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "tOWt5fgqK2nfpoBN",
+      "name": "Ratmen",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.420Z",
+      "file": "age-of-fantasy-skirmish/Ratmen (tOWt5fgqK2nfpoBN).json",
+      "bytes": 153141,
+      "sha256": "09066332f1d8a6d0976d200ce0a03e2d8093e808bc02e4a9e2b99cd2363f2cb0"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "yxVDySKYQYRhdEgA",
+      "name": "Rift Daemons of Change",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.454Z",
+      "file": "age-of-fantasy-skirmish/Rift Daemons of Change (yxVDySKYQYRhdEgA).json",
+      "bytes": 158905,
+      "sha256": "1e22956a597989019f3093c80f169c57275a82072d1a9bcc459442d72ccacf89"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "CuyCCyZTIHo5rc0Z",
+      "name": "Rift Daemons of Lust",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.464Z",
+      "file": "age-of-fantasy-skirmish/Rift Daemons of Lust (CuyCCyZTIHo5rc0Z).json",
+      "bytes": 145356,
+      "sha256": "0a7d40730354373297efa641722acfeeb00196cec1707d9c5789c8ff9a006014"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "vJuokTQpJWj3_MrJ",
+      "name": "Rift Daemons of Plague",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.474Z",
+      "file": "age-of-fantasy-skirmish/Rift Daemons of Plague (vJuokTQpJWj3_MrJ).json",
+      "bytes": 138443,
+      "sha256": "e7614d3f2e613424f3c3dd11759b332c17585bd2fde44d26dc1a1b2b7cdc0817"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "Q59-nh6A1AhRBrLR",
+      "name": "Rift Daemons of War",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.485Z",
+      "file": "age-of-fantasy-skirmish/Rift Daemons of War (Q59-nh6A1AhRBrLR).json",
+      "bytes": 157250,
+      "sha256": "d1ce27f2c9d2a253b0a5e14bfb767ae64772aca4dc77e860704d8cb6cc35ee0a"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "BubhE1kUpgYbqZvW",
+      "name": "Saurians",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-08-02T15:47:14.485Z",
+      "file": "age-of-fantasy-skirmish/Saurians (BubhE1kUpgYbqZvW).json",
+      "bytes": 163342,
+      "sha256": "9152ec9c18bb6e28ca1dab80ab3f8c87d13e764738621572d0de96537c74f93f"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "gHTrjw-g76vfGCSt",
+      "name": "Shadow Stalkers",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.551Z",
+      "file": "age-of-fantasy-skirmish/Shadow Stalkers (gHTrjw-g76vfGCSt).json",
+      "bytes": 136063,
+      "sha256": "2df14a5fed578bdbd5280f9ddb827f4199d80fa20bed9bc0a0441b952d004a21"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "4ZMoS6P-3zRZUl51",
+      "name": "Shortling Alliances",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.560Z",
+      "file": "age-of-fantasy-skirmish/Shortling Alliances (4ZMoS6P-3zRZUl51).json",
+      "bytes": 107730,
+      "sha256": "5e85e18321c1c49d5e96c74020bd53fcc9f0f7c2bd6a3aca5d98decc6c4a9881"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "AcDXPPXmWrgHChlS",
+      "name": "Sky-City Dwarves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.577Z",
+      "file": "age-of-fantasy-skirmish/Sky-City Dwarves (AcDXPPXmWrgHChlS).json",
+      "bytes": 118783,
+      "sha256": "3c7a9107ffb4a3c7e650b6dff91e2b2f976f50c3e8c70d30add4530cfa08479a"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "Bsir5TSffxMozeGY",
+      "name": "Trade Federations",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.647Z",
+      "file": "age-of-fantasy-skirmish/Trade Federations (Bsir5TSffxMozeGY).json",
+      "bytes": 178178,
+      "sha256": "b7ae077064643a47821dee513c6db4cb83f2295242268ee172a56c7e5740e027"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "4SBY8ONErd3HUxle",
+      "name": "Treasure Hunters",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.656Z",
+      "file": "age-of-fantasy-skirmish/Treasure Hunters (4SBY8ONErd3HUxle).json",
+      "bytes": 159768,
+      "sha256": "f3f5f00f2ccf5ad7f83340672db7ba38d7a35a66fd3733fe2b2852d1a8bc7d4b"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "qABIfXYbYxmA75yL",
+      "name": "Vampiric Undead",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.665Z",
+      "file": "age-of-fantasy-skirmish/Vampiric Undead (qABIfXYbYxmA75yL).json",
+      "bytes": 184312,
+      "sha256": "f52d4f58960fc690587bac5743d5c176617fb11fe3935855f3e0b664934f4c37"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "Ir5XtqTM8JS3YEAJ",
+      "name": "Volcanic Dwarves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.675Z",
+      "file": "age-of-fantasy-skirmish/Volcanic Dwarves (Ir5XtqTM8JS3YEAJ).json",
+      "bytes": 106559,
+      "sha256": "e5fc9ea92a551fa89c91cae8137e008c488a32af805e84f031fc47e10136889c"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "TjNtGnCDVts3l3ER",
+      "name": "War Disciples",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.684Z",
+      "file": "age-of-fantasy-skirmish/War Disciples (TjNtGnCDVts3l3ER).json",
+      "bytes": 136667,
+      "sha256": "3a6316ba77af79d811af03c9956a56f336d4e3c07fe838df1dc0755e93c2a75f"
+    },
+    {
+      "system": "age-of-fantasy-skirmish",
+      "uid": "qtuyeoRfXKlNflK0",
+      "name": "Wood Elves",
+      "versionString": "3.5.3",
+      "modifiedAt": "2026-07-14T11:27:44.864Z",
+      "file": "age-of-fantasy-skirmish/Wood Elves (qtuyeoRfXKlNflK0).json",
+      "bytes": 205463,
+      "sha256": "b18e13a02471c0388a6cd0b1e2ea0cd5e52eba8d38d9d7489a88ebc7b31481ef"
+    }
+  ]
+}

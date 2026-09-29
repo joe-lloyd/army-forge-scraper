@@ -1,6 +1,18 @@
-const axios = require("axios");
 const fs = require("fs-extra");
 const path = require("path");
+
+// Endpoint URLs, headers, request params and the army filename rule all live in
+// `lib/army-forge.js` so that this scrape and the append-only release capture in
+// `capture.js` cannot drift apart. What each one does with the payloads is
+// still their own business.
+const {
+  GAME_SYSTEMS,
+  delay,
+  fetchArmyDetail,
+  fetchArmyList,
+  fetchCommonRules,
+  payloadFileName,
+} = require("./lib/army-forge");
 
 // LEGACY-PRESERVATION CONTRACT
 // ----------------------------
@@ -21,49 +33,6 @@ const path = require("path");
 // rm -rf) so legacy version dirs already published to public/data also stay.
 // If an army is removed from the OPR catalog entirely, its local file remains
 // permanently as the last known good snapshot for that version.
-const GAME_SYSTEMS = [
-  { id: 2, slug: "grimdark-future" },
-  { id: 3, slug: "grimdark-future-firefight" },
-  { id: 4, slug: "age-of-fantasy" },
-  { id: 5, slug: "age-of-fantasy-skirmish" },
-];
-
-async function fetchArmyDetail(armyId, gameSystemId) {
-  const response = await axios.get(
-    `https://army-forge.onepagerules.com/api/army-books/${armyId}`,
-    {
-      params: {
-        gameSystem: gameSystemId,
-        simpleMode: false,
-      },
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "User-Agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      },
-    },
-  );
-  return response.data;
-}
-
-// `/api/rules/common/{gameSystemId}` carries the official text of every common
-// special rule (Rending, AP, Blast, etc.) plus hero traits and their cost
-// formulas. The per-army-book payload only stores the rule NAME on each weapon
-// — descriptions live exclusively in this endpoint. We scrape it per game
-// system so the UI can render tooltips.
-async function fetchCommonRules(gameSystemId) {
-  const response = await axios.get(
-    `https://army-forge.onepagerules.com/api/rules/common/${gameSystemId}`,
-    {
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "User-Agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-      },
-    },
-  );
-  return response.data;
-}
 
 async function scrape() {
   const dataRootDir = path.join(__dirname, "..", "..", "..", "data");
@@ -96,26 +65,14 @@ async function scrape() {
         );
       }
 
-      const listUrl = `https://army-forge.onepagerules.com/api/army-books?filters=official&gameSystemSlug=${system.slug}&searchText=&page=1&unitCount=0&balanceValid=false&customRules=true&fans=false&sortBy=null`;
-      const listResponse = await axios.get(listUrl, {
-        headers: {
-          Accept: "application/json",
-          "User-Agent":
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        },
-      });
-
-      const armyList = listResponse.data;
+      const armyList = await fetchArmyList(system.slug);
       console.log(`Found ${armyList.length} armies.`);
 
       for (const armySummary of armyList) {
         try {
           const version = armySummary.versionString || "unknown";
           const outputDir = path.join(dataRootDir, system.slug, version);
-          const fileName = `${armySummary.name} (${armySummary.uid}).json`.replace(
-            /\//g,
-            "-",
-          );
+          const fileName = payloadFileName(armySummary.name, armySummary.uid);
           const filePath = path.join(outputDir, fileName);
 
           // Always re-fetch — OPR ships small balance patches that update
@@ -138,7 +95,7 @@ async function scrape() {
           });
 
           // Respectful delay
-          await new Promise((resolve) => setTimeout(resolve, 500));
+          await delay(500);
         } catch (error) {
           console.error(
             `Failed to fetch details for ${armySummary.name}:`,
