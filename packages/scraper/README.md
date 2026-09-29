@@ -328,7 +328,59 @@ requests would otherwise throw away the whole run.
 A release is all-or-nothing. If any army payload fails validation, any request
 still failing after 3 attempts, the army list is not an array, or a capture ends
 up with zero armies, the staging directory is deleted, no release directory is
-created, and the process exits 1 (`capture.js:410-417`).
+created, and the process exits 1 (`capture.js:496-508`, `capture.js:515-523`).
+
+Every payload is validated before the release directory exists, not just before
+it is written: the release comes into existence in a single `fs.move` of the
+staging directory after the last payload has been fetched and checked
+(`capture.js:477-483`). A payload that fails can therefore never reach a release
+directory, partial or otherwise.
+
+### An unusable payload that is not JSON
+
+The validation distinguishes *empty or unparseable* from *wrong shape*, because
+the two mean different things when a run aborts.
+
+axios' default `transformResponse` **swallows the `JSON.parse` SyntaxError** and
+returns the unparsed body as a string, rather than throwing. Verified against a
+local server: a truncated body, an empty body and a 200 carrying an HTML error
+page all reach the caller as `typeof data === "string"`, with no error raised.
+`unparseableBodyReason` (`capture.js:146-159`) is written for that case, and
+both `validateArmyPayload` and `validateCommonRules` check it first.
+
+| Response body | Reported as |
+| --- | --- |
+| `""` or whitespace only | `payload failed JSON parse: empty response body` |
+| `{"uid":"x","units":[` | `payload failed JSON parse: body is not JSON (25 bytes starting …)` |
+| `<!DOCTYPE html>…` | `payload failed JSON parse: body is not JSON (43 bytes starting …)` |
+| `{}` | `empty object` |
+| `null` / `[]` / `42` | `expected an object, got null` / `array` / `number` |
+
+Without that first check all four string cases collapse into a single
+`expected an object, got string`, which reads like the site changed its payload
+shape rather than like a truncated transfer. A test
+(`axios hands back an unparseable body as a string instead of throwing`) pins
+the axios behaviour itself against a local HTTP server, so the string branch
+cannot be deleted on the assumption that a bad body always throws.
+
+### The abort error states what happened
+
+A capture that aborts throws an error whose message is the specific reason,
+newline, and then the guarantee (`NOTHING_WRITTEN`, `capture.js:47-51`):
+
+```
+payload for Battle/Brothers (bbb222) in grimdark-future is unusable: payload failed JSON parse: body is not JSON (25 bytes starting "{\"uid\":\"bbb222\",\"units\":[")
+No release directory was created, no release directory was modified, and the staging directory was removed.
+```
+
+The reason names the army by list name, uid and system. The guarantee is part of
+the error rather than only the CLI banner, so a caller that catches it knows the
+`releases/` directory is untouched. The original error is preserved as `cause`.
+
+`main` returns an exit code instead of calling `process.exit` itself, so the
+abort path is testable without a network run; the `require.main` wrapper assigns
+it to `process.exitCode` rather than exiting, so a run that aborts late still
+flushes the stderr naming the army that failed.
 
 ## Manifest
 
